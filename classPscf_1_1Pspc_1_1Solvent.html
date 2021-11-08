@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">PSCF
-   &#160;<span id="projectnumber">v1.50</span>
+   &#160;<span id="projectnumber">v1.7.2</span>
    </div>
   </td>
  </tr>
@@ -54,13 +54,14 @@
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classPscf_1_1Pspc_1_1Solvent-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Pscf::Pspc::Solvent&lt; D &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Pspc__Module.html">Pseudo-Spectral Periodic (CPU)</a> &raquo; <a class="el" href="group__Pspc__Solver__Module.html">Solvers</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Class representing a solvent species.  
+<p>Solver and descriptor for a solvent species.  
  <a href="classPscf_1_1Pspc_1_1Solvent.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="pspc_2solvers_2Solvent_8h_source.html">Solvent.h</a>&gt;</code></p>
@@ -70,8 +71,9 @@ Inheritance diagram for Pscf::Pspc::Solvent&lt; D &gt;:</div>
  <div class="center">
   <img src="classPscf_1_1Pspc_1_1Solvent.png" usemap="#Pscf::Pspc::Solvent_3C_20D_20_3E_map" alt=""/>
   <map id="Pscf::Pspc::Solvent_3C_20D_20_3E_map" name="Pscf::Pspc::Solvent&lt; D &gt;_map">
-<area href="classPscf_1_1Species.html" title="Base class for a molecular species (polymer or solvent). " alt="Pscf::Species" shape="rect" coords="0,112,152,136"/>
+<area href="classPscf_1_1SolventDescriptor.html" title="Chemical description of a solvent species. " alt="Pscf::SolventDescriptor" shape="rect" coords="0,112,152,136"/>
 <area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file. " alt="Util::ParamComposite" shape="rect" coords="162,112,314,136"/>
+<area href="classPscf_1_1Species.html" title="Base class for a molecular species (polymer or solvent). " alt="Pscf::Species" shape="rect" coords="0,56,152,80"/>
 <area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file. " alt="Util::ParamComponent" shape="rect" coords="162,56,314,80"/>
 <area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects. " alt="Util::Serializable" shape="rect" coords="81,0,233,24"/>
 <area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O. " alt="Util::MpiFileIo" shape="rect" coords="243,0,395,24"/>
@@ -81,10 +83,10 @@ Inheritance diagram for Pscf::Pspc::Solvent&lt; D &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a4dca279c7c70b4668fc1c9fbdaa2bb06"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#a4dca279c7c70b4668fc1c9fbdaa2bb06">CField</a></td></tr>
-<tr class="memdesc:a4dca279c7c70b4668fc1c9fbdaa2bb06"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer or particle type. ">Monomer</a> concentration field.  <a href="#a4dca279c7c70b4668fc1c9fbdaa2bb06">More...</a><br /></td></tr>
+<tr class="memdesc:a4dca279c7c70b4668fc1c9fbdaa2bb06"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer or particle type. ">Monomer</a> concentration field type.  <a href="#a4dca279c7c70b4668fc1c9fbdaa2bb06">More...</a><br /></td></tr>
 <tr class="separator:a4dca279c7c70b4668fc1c9fbdaa2bb06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1c705ac1babb04324426160dbc3a5d2"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#ae1c705ac1babb04324426160dbc3a5d2">WField</a></td></tr>
-<tr class="memdesc:ae1c705ac1babb04324426160dbc3a5d2"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer or particle type. ">Monomer</a> chemical potential field.  <a href="#ae1c705ac1babb04324426160dbc3a5d2">More...</a><br /></td></tr>
+<tr class="memdesc:ae1c705ac1babb04324426160dbc3a5d2"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer or particle type. ">Monomer</a> chemical potential field type.  <a href="#ae1c705ac1babb04324426160dbc3a5d2">More...</a><br /></td></tr>
 <tr class="separator:ae1c705ac1babb04324426160dbc3a5d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classPscf_1_1Species"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classPscf_1_1Species')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classPscf_1_1Species.html">Pscf::Species</a></td></tr>
 <tr class="inherit_header pub_types_classUtil_1_1Serializable"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classUtil_1_1Serializable')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classUtil_1_1Serializable.html">Util::Serializable</a></td></tr>
@@ -103,12 +105,40 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adc695abec647e91a55775b5e17f0e9ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#adc695abec647e91a55775b5e17f0e9ac">~Solvent</a> ()</td></tr>
 <tr class="memdesc:adc695abec647e91a55775b5e17f0e9ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#adc695abec647e91a55775b5e17f0e9ac">More...</a><br /></td></tr>
 <tr class="separator:adc695abec647e91a55775b5e17f0e9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6093b29f3b4002598917ed6a9c903613"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#a6093b29f3b4002598917ed6a9c903613">compute</a> (<a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#ae1c705ac1babb04324426160dbc3a5d2">WField</a> const &amp;wField)</td></tr>
-<tr class="memdesc:a6093b29f3b4002598917ed6a9c903613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute monomer concentration field and phi and/or mu.  <a href="#a6093b29f3b4002598917ed6a9c903613">More...</a><br /></td></tr>
-<tr class="separator:a6093b29f3b4002598917ed6a9c903613"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15d48de686afcaed006c0415f4a0fd17"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#a4dca279c7c70b4668fc1c9fbdaa2bb06">CField</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#a15d48de686afcaed006c0415f4a0fd17">concentration</a> () const </td></tr>
-<tr class="memdesc:a15d48de686afcaed006c0415f4a0fd17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get monomer concentration field for this solvent.  <a href="#a15d48de686afcaed006c0415f4a0fd17">More...</a><br /></td></tr>
-<tr class="separator:a15d48de686afcaed006c0415f4a0fd17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b315cf91a1c73e2076a30e023def349"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#a6b315cf91a1c73e2076a30e023def349">setPhi</a> (double <a class="el" href="classPscf_1_1Species.html#a17b19e25332bc7b711a65cef71e0a478">phi</a>)</td></tr>
+<tr class="memdesc:a6b315cf91a1c73e2076a30e023def349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value of phi (volume fraction), if ensemble is closed.  <a href="#a6b315cf91a1c73e2076a30e023def349">More...</a><br /></td></tr>
+<tr class="separator:a6b315cf91a1c73e2076a30e023def349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23c9badae666b2e4b0081b28150b6a4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#a23c9badae666b2e4b0081b28150b6a4e">setMu</a> (double <a class="el" href="classPscf_1_1Species.html#a4f93b20d96620694a1ce3c26c0cceb6f">mu</a>)</td></tr>
+<tr class="memdesc:a23c9badae666b2e4b0081b28150b6a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value of mu (chemical potential), if ensemble is closed.  <a href="#a23c9badae666b2e4b0081b28150b6a4e">More...</a><br /></td></tr>
+<tr class="separator:a23c9badae666b2e4b0081b28150b6a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace2321f7cf95a2ae27e105b2571b645c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#ace2321f7cf95a2ae27e105b2571b645c">setMesh</a> (<a class="el" href="classPscf_1_1Mesh.html">Mesh</a>&lt; D &gt; const &amp;mesh)</td></tr>
+<tr class="memdesc:ace2321f7cf95a2ae27e105b2571b645c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set association with <a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain. ">Mesh</a> and allocate concentration field array.  <a href="#ace2321f7cf95a2ae27e105b2571b645c">More...</a><br /></td></tr>
+<tr class="separator:ace2321f7cf95a2ae27e105b2571b645c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15471cfda2782d5e47b6ed7a1cf818e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#a15471cfda2782d5e47b6ed7a1cf818e5">compute</a> (<a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#ae1c705ac1babb04324426160dbc3a5d2">WField</a> const &amp;wField)</td></tr>
+<tr class="memdesc:a15471cfda2782d5e47b6ed7a1cf818e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute monomer concentration field and phi and/or mu.  <a href="#a15471cfda2782d5e47b6ed7a1cf818e5">More...</a><br /></td></tr>
+<tr class="separator:a15471cfda2782d5e47b6ed7a1cf818e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc274d62e1eebb9ee50a4e598b0def72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#adc274d62e1eebb9ee50a4e598b0def72">compute</a> (<a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#ae1c705ac1babb04324426160dbc3a5d2">WField</a> &gt; const &amp;wFields)</td></tr>
+<tr class="memdesc:adc274d62e1eebb9ee50a4e598b0def72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute monomer concentration field and phi and/or mu.  <a href="#adc274d62e1eebb9ee50a4e598b0def72">More...</a><br /></td></tr>
+<tr class="separator:adc274d62e1eebb9ee50a4e598b0def72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classPscf_1_1SolventDescriptor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classPscf_1_1SolventDescriptor')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classPscf_1_1SolventDescriptor.html">Pscf::SolventDescriptor</a></td></tr>
+<tr class="memitem:a654f730095d37c16a4797f8716aed264 inherit pub_methods_classPscf_1_1SolventDescriptor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventDescriptor.html#a654f730095d37c16a4797f8716aed264">SolventDescriptor</a> ()</td></tr>
+<tr class="memdesc:a654f730095d37c16a4797f8716aed264 inherit pub_methods_classPscf_1_1SolventDescriptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a654f730095d37c16a4797f8716aed264">More...</a><br /></td></tr>
+<tr class="separator:a654f730095d37c16a4797f8716aed264 inherit pub_methods_classPscf_1_1SolventDescriptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af94a83634122f945e61ff223447d1197 inherit pub_methods_classPscf_1_1SolventDescriptor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventDescriptor.html#af94a83634122f945e61ff223447d1197">~SolventDescriptor</a> ()</td></tr>
+<tr class="memdesc:af94a83634122f945e61ff223447d1197 inherit pub_methods_classPscf_1_1SolventDescriptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#af94a83634122f945e61ff223447d1197">More...</a><br /></td></tr>
+<tr class="separator:af94a83634122f945e61ff223447d1197 inherit pub_methods_classPscf_1_1SolventDescriptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefc5129c772fb33b6fe11172a49565e8 inherit pub_methods_classPscf_1_1SolventDescriptor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventDescriptor.html#aefc5129c772fb33b6fe11172a49565e8">setMonomerId</a> (int <a class="el" href="classPscf_1_1SolventDescriptor.html#a6fddd960e15ae79dd0bf165b5a2a42fb">monomerId</a>)</td></tr>
+<tr class="memdesc:aefc5129c772fb33b6fe11172a49565e8 inherit pub_methods_classPscf_1_1SolventDescriptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the monomer id for this solvent.  <a href="#aefc5129c772fb33b6fe11172a49565e8">More...</a><br /></td></tr>
+<tr class="separator:aefc5129c772fb33b6fe11172a49565e8 inherit pub_methods_classPscf_1_1SolventDescriptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c7cdc7953139ebd8afde01d78a2ea03 inherit pub_methods_classPscf_1_1SolventDescriptor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventDescriptor.html#a9c7cdc7953139ebd8afde01d78a2ea03">setSize</a> (double <a class="el" href="classPscf_1_1SolventDescriptor.html#aad9f30acdd2bb177ea6506a20a5966ef">size</a>)</td></tr>
+<tr class="memdesc:a9c7cdc7953139ebd8afde01d78a2ea03 inherit pub_methods_classPscf_1_1SolventDescriptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the size or volume of this solvent species.  <a href="#a9c7cdc7953139ebd8afde01d78a2ea03">More...</a><br /></td></tr>
+<tr class="separator:a9c7cdc7953139ebd8afde01d78a2ea03 inherit pub_methods_classPscf_1_1SolventDescriptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fddd960e15ae79dd0bf165b5a2a42fb inherit pub_methods_classPscf_1_1SolventDescriptor"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventDescriptor.html#a6fddd960e15ae79dd0bf165b5a2a42fb">monomerId</a> () const </td></tr>
+<tr class="memdesc:a6fddd960e15ae79dd0bf165b5a2a42fb inherit pub_methods_classPscf_1_1SolventDescriptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the monomer type id.  <a href="#a6fddd960e15ae79dd0bf165b5a2a42fb">More...</a><br /></td></tr>
+<tr class="separator:a6fddd960e15ae79dd0bf165b5a2a42fb inherit pub_methods_classPscf_1_1SolventDescriptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad9f30acdd2bb177ea6506a20a5966ef inherit pub_methods_classPscf_1_1SolventDescriptor"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventDescriptor.html#aad9f30acdd2bb177ea6506a20a5966ef">size</a> () const </td></tr>
+<tr class="memdesc:aad9f30acdd2bb177ea6506a20a5966ef inherit pub_methods_classPscf_1_1SolventDescriptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size (number of monomers) in this solvent.  <a href="#aad9f30acdd2bb177ea6506a20a5966ef">More...</a><br /></td></tr>
+<tr class="separator:aad9f30acdd2bb177ea6506a20a5966ef inherit pub_methods_classPscf_1_1SolventDescriptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classPscf_1_1Species"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classPscf_1_1Species')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classPscf_1_1Species.html">Pscf::Species</a></td></tr>
 <tr class="memitem:af697d1f9ab74d40e20717a229fc2e5f3 inherit pub_methods_classPscf_1_1Species"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#af697d1f9ab74d40e20717a229fc2e5f3">Species</a> ()</td></tr>
 <tr class="memdesc:af697d1f9ab74d40e20717a229fc2e5f3 inherit pub_methods_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#af697d1f9ab74d40e20717a229fc2e5f3">More...</a><br /></td></tr>
@@ -363,18 +393,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aeadef78f34eee3090a34dd5b6373b8b6 inherit pub_methods_classUtil_1_1MpiFileIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the MPI communicator by reference.  <a href="#aeadef78f34eee3090a34dd5b6373b8b6">More...</a><br /></td></tr>
 <tr class="separator:aeadef78f34eee3090a34dd5b6373b8b6 inherit pub_methods_classUtil_1_1MpiFileIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_static_methods_classUtil_1_1ParamComponent"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classUtil_1_1ParamComponent')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComponent.html">Util::ParamComponent</a></td></tr>
-<tr class="memitem:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a5350c0432130f7feba8392f5b3a75cb4">initStatic</a> ()</td></tr>
-<tr class="memdesc:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize static echo member to false.  <a href="#a5350c0432130f7feba8392f5b3a75cb4">More...</a><br /></td></tr>
-<tr class="separator:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#add72ad7add98e0b90979ee2638c7468d">setEcho</a> (bool <a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a>=true)</td></tr>
-<tr class="memdesc:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable echoing for all subclasses of <a class="el" href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file. ">ParamComponent</a>.  <a href="#add72ad7add98e0b90979ee2638c7468d">More...</a><br /></td></tr>
-<tr class="separator:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a> ()</td></tr>
-<tr class="memdesc:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get echo parameter.  <a href="#ac5808de278115409092e94f9c72362c2">More...</a><br /></td></tr>
-<tr class="separator:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a15d48de686afcaed006c0415f4a0fd17"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#a4dca279c7c70b4668fc1c9fbdaa2bb06">CField</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#a15d48de686afcaed006c0415f4a0fd17">concentration</a> () const </td></tr>
+<tr class="memdesc:a15d48de686afcaed006c0415f4a0fd17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get monomer concentration field for this solvent.  <a href="#a15d48de686afcaed006c0415f4a0fd17">More...</a><br /></td></tr>
+<tr class="separator:a15d48de686afcaed006c0415f4a0fd17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classUtil_1_1ParamComposite"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classUtil_1_1ParamComposite')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUtil_1_1ParamComposite.html">Util::ParamComposite</a></td></tr>
 <tr class="memitem:a30752567fd7b8b93e5c8476bbe8592c5 inherit pro_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">setClassName</a> (const char *<a class="el" href="classUtil_1_1ParamComposite.html#a91607e45fdcacc919a9fe66418dd05a4">className</a>)</td></tr>
 <tr class="memdesc:a30752567fd7b8b93e5c8476bbe8592c5 inherit pro_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set class name string.  <a href="#a30752567fd7b8b93e5c8476bbe8592c5">More...</a><br /></td></tr>
@@ -422,6 +445,19 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ae979e22ecef3a94c0e826224b3761df9 inherit pro_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ae979e22ecef3a94c0e826224b3761df9">ParamComponent</a> (const <a class="el" href="classUtil_1_1ParamComponent.html">ParamComponent</a> &amp;other)</td></tr>
 <tr class="memdesc:ae979e22ecef3a94c0e826224b3761df9 inherit pro_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#ae979e22ecef3a94c0e826224b3761df9">More...</a><br /></td></tr>
 <tr class="separator:ae979e22ecef3a94c0e826224b3761df9 inherit pro_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classUtil_1_1ParamComponent"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classUtil_1_1ParamComponent')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComponent.html">Util::ParamComponent</a></td></tr>
+<tr class="memitem:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a5350c0432130f7feba8392f5b3a75cb4">initStatic</a> ()</td></tr>
+<tr class="memdesc:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize static echo member to false.  <a href="#a5350c0432130f7feba8392f5b3a75cb4">More...</a><br /></td></tr>
+<tr class="separator:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#add72ad7add98e0b90979ee2638c7468d">setEcho</a> (bool <a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a>=true)</td></tr>
+<tr class="memdesc:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable echoing for all subclasses of <a class="el" href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file. ">ParamComponent</a>.  <a href="#add72ad7add98e0b90979ee2638c7468d">More...</a><br /></td></tr>
+<tr class="separator:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a> ()</td></tr>
+<tr class="memdesc:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get echo parameter.  <a href="#ac5808de278115409092e94f9c72362c2">More...</a><br /></td></tr>
+<tr class="separator:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classPscf_1_1Species"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classPscf_1_1Species')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classPscf_1_1Species.html">Pscf::Species</a></td></tr>
 <tr class="memitem:a85698b28e7c686183e4cd5af22d58fb2 inherit pro_attribs_classPscf_1_1Species"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#a85698b28e7c686183e4cd5af22d58fb2">phi_</a></td></tr>
 <tr class="memdesc:a85698b28e7c686183e4cd5af22d58fb2 inherit pro_attribs_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Volume fraction, set by either setPhi or compute function.  <a href="#a85698b28e7c686183e4cd5af22d58fb2">More...</a><br /></td></tr>
@@ -443,9 +479,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><h3>template&lt;int D&gt;<br />
 class Pscf::Pspc::Solvent&lt; D &gt;</h3>
 
-<p>Class representing a solvent species. </p>
+<p>Solver and descriptor for a solvent species. </p>
 
-<p>Definition at line <a class="el" href="pspc_2solvers_2Solvent_8h_source.html#l00026">26</a> of file <a class="el" href="pspc_2solvers_2Solvent_8h_source.html">pspc/solvers/Solvent.h</a>.</p>
+<p>Definition at line <a class="el" href="pspc_2solvers_2Solvent_8h_source.html#l00028">28</a> of file <a class="el" href="pspc_2solvers_2Solvent_8h_source.html">pspc/solvers/Solvent.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a4dca279c7c70b4668fc1c9fbdaa2bb06"></a>
 <div class="memitem">
@@ -459,9 +495,9 @@ template&lt;int D&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer or particle type. ">Monomer</a> concentration field. </p>
+<p><a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer or particle type. ">Monomer</a> concentration field type. </p>
 
-<p>Definition at line <a class="el" href="pspc_2solvers_2Solvent_8h_source.html#l00033">33</a> of file <a class="el" href="pspc_2solvers_2Solvent_8h_source.html">pspc/solvers/Solvent.h</a>.</p>
+<p>Definition at line <a class="el" href="pspc_2solvers_2Solvent_8h_source.html#l00035">35</a> of file <a class="el" href="pspc_2solvers_2Solvent_8h_source.html">pspc/solvers/Solvent.h</a>.</p>
 
 </div>
 </div>
@@ -477,9 +513,9 @@ template&lt;int D&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer or particle type. ">Monomer</a> chemical potential field. </p>
+<p><a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer or particle type. ">Monomer</a> chemical potential field type. </p>
 
-<p>Definition at line <a class="el" href="pspc_2solvers_2Solvent_8h_source.html#l00038">38</a> of file <a class="el" href="pspc_2solvers_2Solvent_8h_source.html">pspc/solvers/Solvent.h</a>.</p>
+<p>Definition at line <a class="el" href="pspc_2solvers_2Solvent_8h_source.html#l00040">40</a> of file <a class="el" href="pspc_2solvers_2Solvent_8h_source.html">pspc/solvers/Solvent.h</a>.</p>
 
 </div>
 </div>
@@ -489,9 +525,6 @@ template&lt;int D&gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classPscf_1_1Pspc_1_1Solvent.html">Pscf::Pspc::Solvent</a>&lt; D &gt;::<a class="el" href="classPscf_1_1Pspc_1_1Solvent.html">Solvent</a> </td>
@@ -500,16 +533,11 @@ template&lt;int D&gt; </div>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Constructor. </p>
 
-<p>Definition at line <a class="el" href="pspc_2solvers_2Solvent_8h_source.html#l00043">43</a> of file <a class="el" href="pspc_2solvers_2Solvent_8h_source.html">pspc/solvers/Solvent.h</a>.</p>
+<p>Definition at line <a class="el" href="Solvent_8tpp_source.html#l00018">18</a> of file <a class="el" href="Solvent_8tpp_source.html">Solvent.tpp</a>.</p>
 
 </div>
 </div>
@@ -518,9 +546,6 @@ template&lt;int D&gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classPscf_1_1Pspc_1_1Solvent.html">Pscf::Pspc::Solvent</a>&lt; D &gt;::~<a class="el" href="classPscf_1_1Pspc_1_1Solvent.html">Solvent</a> </td>
@@ -529,54 +554,170 @@ template&lt;int D&gt; </div>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Constructor. </p>
 
-<p>Definition at line <a class="el" href="pspc_2solvers_2Solvent_8h_source.html#l00049">49</a> of file <a class="el" href="pspc_2solvers_2Solvent_8h_source.html">pspc/solvers/Solvent.h</a>.</p>
+<p>Definition at line <a class="el" href="Solvent_8tpp_source.html#l00022">22</a> of file <a class="el" href="Solvent_8tpp_source.html">Solvent.tpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a6093b29f3b4002598917ed6a9c903613"></a>
+<a class="anchor" id="a6b315cf91a1c73e2076a30e023def349"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html">Pscf::Pspc::Solvent</a>&lt; D &gt;::compute </td>
+          <td class="memname">void <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html">Pscf::Pspc::Solvent</a>&lt; D &gt;::setPhi </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>phi</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set value of phi (volume fraction), if ensemble is closed. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>if ensemble is open </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">phi</td><td>volume fraction for this species (input) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="Solvent_8tpp_source.html#l00026">26</a> of file <a class="el" href="Solvent_8tpp_source.html">Solvent.tpp</a>.</p>
+
+<p>References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a23c9badae666b2e4b0081b28150b6a4e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int D&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html">Pscf::Pspc::Solvent</a>&lt; D &gt;::setMu </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>mu</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set value of mu (chemical potential), if ensemble is closed. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>if ensemble is closed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mu</td><td>chemical potential for this species (input) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="Solvent_8tpp_source.html#l00035">35</a> of file <a class="el" href="Solvent_8tpp_source.html">Solvent.tpp</a>.</p>
+
+<p>References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ace2321f7cf95a2ae27e105b2571b645c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int D&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html">Pscf::Pspc::Solvent</a>&lt; D &gt;::setMesh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1Mesh.html">Mesh</a>&lt; D &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set association with <a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain. ">Mesh</a> and allocate concentration field array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>associated Mesh&lt;D&gt; object to describe spatial discretization. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="Solvent_8tpp_source.html#l00042">42</a> of file <a class="el" href="Solvent_8tpp_source.html">Solvent.tpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a15471cfda2782d5e47b6ed7a1cf818e5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int D&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html">Pscf::Pspc::Solvent</a>&lt; D &gt;::compute </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#ae1c705ac1babb04324426160dbc3a5d2">WField</a> const &amp;&#160;</td>
           <td class="paramname"><em>wField</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Compute monomer concentration field and phi and/or mu. </p>
-<p>Pure virtual function: Must be implemented by subclasses. Upon return, concentration field, phi and mu are all set.</p>
+<p>Upon return, concentration field, phi, mu, and q are all set.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">wField</td><td>monomer chemical potential field. </td></tr>
+    <tr><td class="paramname">wField</td><td>chemical potential field of relevant monomer type (input) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="pspc_2solvers_2Solvent_8h_source.html#l00060">60</a> of file <a class="el" href="pspc_2solvers_2Solvent_8h_source.html">pspc/solvers/Solvent.h</a>.</p>
+<p>Definition at line <a class="el" href="Solvent_8tpp_source.html#l00052">52</a> of file <a class="el" href="Solvent_8tpp_source.html">Solvent.tpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adc274d62e1eebb9ee50a4e598b0def72"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int D&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html">Pscf::Pspc::Solvent</a>&lt; D &gt;::compute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#ae1c705ac1babb04324426160dbc3a5d2">WField</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>wFields</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute monomer concentration field and phi and/or mu. </p>
+<p>Takes array of wFields for all monomer types as an argument, but uses only the one with the correct monomer id for this solvent, by calling compute(wFields[monomerId()]) internally.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wFields</td><td>array of monomer chemical potential fields (input) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="Solvent_8tpp_source.html#l00061">61</a> of file <a class="el" href="Solvent_8tpp_source.html">Solvent.tpp</a>.</p>
 
 </div>
 </div>
@@ -598,24 +739,27 @@ template&lt;int D&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Get monomer concentration field for this solvent. </p>
 
-<p>Definition at line <a class="el" href="pspc_2solvers_2Solvent_8h_source.html#l00066">66</a> of file <a class="el" href="pspc_2solvers_2Solvent_8h_source.html">pspc/solvers/Solvent.h</a>.</p>
+<p>Definition at line <a class="el" href="pspc_2solvers_2Solvent_8h_source.html#l00108">108</a> of file <a class="el" href="pspc_2solvers_2Solvent_8h_source.html">pspc/solvers/Solvent.h</a>.</p>
+
+<p>References <a class="el" href="Species_8h_source.html#l00064">Pscf::Species::mu_</a>, and <a class="el" href="Species_8h_source.html#l00059">Pscf::Species::phi_</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="pspc_2solvers_2Solvent_8h_source.html">pspc/solvers/Solvent.h</a></li>
+<li><a class="el" href="Solvent_8tpp_source.html">Solvent.tpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 25 2020 17:49:34 for PSCF by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 7 2021 19:49:50 for PSCF by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

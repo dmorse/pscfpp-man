@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">PSCF
-   &#160;<span id="projectnumber">v1.50</span>
+   &#160;<span id="projectnumber">v1.7.2</span>
    </div>
   </td>
  </tr>
@@ -118,13 +118,13 @@
 , <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html#a80c7a45745dffc802df027d865c91a7d">Pscf::Pspc::Mixture&lt; D &gt;</a>
 , <a class="el" href="classPscf_1_1Pspc_1_1Propagator.html#a1f0fa3bad025e87c8336dce22f38d2de">Pscf::Pspc::Propagator&lt; D &gt;</a>
 , <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#ae1c705ac1babb04324426160dbc3a5d2">Pscf::Pspc::Solvent&lt; D &gt;</a>
-, <a class="el" href="classPscf_1_1Pspc_1_1System.html#a67ba8b6bfb4b5fa4b60204c464039181">Pscf::Pspc::System&lt; D &gt;</a>
 </li>
 <li>wField()
 : <a class="el" href="classPscf_1_1Pspc_1_1System.html#a9cdb9b552f23967dfe6f55fcf0cd540f">Pscf::Pspc::System&lt; D &gt;</a>
 </li>
 <li>WField
-: <a class="el" href="classPscf_1_1Pspg_1_1Block.html#a7e388ed511abba05f841ef3215125b61">Pscf::Pspg::Block&lt; D &gt;</a>
+: <a class="el" href="classPscf_1_1Pspc_1_1System.html#a67ba8b6bfb4b5fa4b60204c464039181">Pscf::Pspc::System&lt; D &gt;</a>
+, <a class="el" href="classPscf_1_1Pspg_1_1Block.html#a7e388ed511abba05f841ef3215125b61">Pscf::Pspg::Block&lt; D &gt;</a>
 , <a class="el" href="classPscf_1_1Pspg_1_1Mixture.html#acb730ba19534015fe6777f4261bd65de">Pscf::Pspg::Mixture&lt; D &gt;</a>
 , <a class="el" href="classPscf_1_1Pspg_1_1Propagator.html#a2d1c6d392c8a5dfec513499b06d7f116">Pscf::Pspg::Propagator&lt; D &gt;</a>
 , <a class="el" href="classPscf_1_1Pspg_1_1Solvent.html#ab2a893f0c7c622da0b7c485b1f6231e8">Pscf::Pspg::Solvent&lt; D &gt;</a>
@@ -132,9 +132,6 @@
 </li>
 <li>wField()
 : <a class="el" href="classPscf_1_1Pspg_1_1System.html#a94c58277beb5dd4623ca5172833f902f">Pscf::Pspg::System&lt; D &gt;</a>
-</li>
-<li>WField
-: <a class="el" href="classPscf_1_1SolventTmpl.html#a78e24ff0c72c6240f5138c289f7571e8">Pscf::SolventTmpl&lt; TP &gt;</a>
 </li>
 <li>wFieldKGrid()
 : <a class="el" href="classPscf_1_1Pspc_1_1System.html#a124a9f0c6d9db6957c79ee33aff902eb">Pscf::Pspc::System&lt; D &gt;</a>
@@ -171,10 +168,17 @@
 : <a class="el" href="classUtil_1_1Parameter.html#af4db8fd5ca850496e8e599bae93aa2f2">Util::Parameter</a>
 </li>
 <li>write()
-: <a class="el" href="classUtil_1_1Exception.html#a5c23a11b300603bf2b0796118848eac5">Util::Exception</a>
+: <a class="el" href="classTestException.html#a82eac00a19d3815d3e2f12c6ef99f824">TestException</a>
+, <a class="el" href="classUtil_1_1Exception.html#a5c23a11b300603bf2b0796118848eac5">Util::Exception</a>
 </li>
 <li>writeBlockCFields()
 : <a class="el" href="classPscf_1_1Fd1d_1_1FieldIo.html#af317041a3e62c9d46fd705b42ec46444">Pscf::Fd1d::FieldIo</a>
+</li>
+<li>writeCBasis()
+: <a class="el" href="classPscf_1_1Pspc_1_1System.html#a9e831eb31e2328b014c3b0a69eaae808">Pscf::Pspc::System&lt; D &gt;</a>
+</li>
+<li>writeCRGrid()
+: <a class="el" href="classPscf_1_1Pspc_1_1System.html#a5e7497ae8e831e476c1322266ac323b5">Pscf::Pspc::System&lt; D &gt;</a>
 </li>
 <li>writeFieldHeader()
 : <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#ade7c6fcc1d85adfb23d5e4970e9343f2">Pscf::Pspc::FieldIo&lt; D &gt;</a>
@@ -184,16 +188,16 @@
 : <a class="el" href="classPscf_1_1Fd1d_1_1FieldIo.html#a24fa1f411cfe044c119ef32c3da513c5">Pscf::Fd1d::FieldIo</a>
 </li>
 <li>writeFieldsBasis()
-: <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#a02610569aeb19a01a2f0166984cbb5cd">Pscf::Pspc::FieldIo&lt; D &gt;</a>
+: <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#a36e427fcbeed0f88d089601e934a7949">Pscf::Pspc::FieldIo&lt; D &gt;</a>
 , <a class="el" href="classPscf_1_1Pspg_1_1FieldIo.html#aeab4a68b7c538e3095eabbf473fd4e21">Pscf::Pspg::FieldIo&lt; D &gt;</a>
 </li>
 <li>writeFieldsKGrid()
 : <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#a1dadbc29b80df84e31b0ed24886775e3">Pscf::Pspc::FieldIo&lt; D &gt;</a>
-, <a class="el" href="classPscf_1_1Pspg_1_1FieldIo.html#a3b52005ba738f74cb9926db249ada9fe">Pscf::Pspg::FieldIo&lt; D &gt;</a>
+, <a class="el" href="classPscf_1_1Pspg_1_1FieldIo.html#a4798c1776599fb1455b05c386fe22ac4">Pscf::Pspg::FieldIo&lt; D &gt;</a>
 </li>
 <li>writeFieldsRGrid()
-: <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#a6f1fcfcbbe646f89aabda8af5e9d3bdf">Pscf::Pspc::FieldIo&lt; D &gt;</a>
-, <a class="el" href="classPscf_1_1Pspg_1_1FieldIo.html#a10d02082d8139fdbf28ae699be5afe75">Pscf::Pspg::FieldIo&lt; D &gt;</a>
+: <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#acc0bda9aa77c2b20dfe9560ce98e70f4">Pscf::Pspc::FieldIo&lt; D &gt;</a>
+, <a class="el" href="classPscf_1_1Pspg_1_1FieldIo.html#a07bdd52376c9f984d44a579db56741c4">Pscf::Pspg::FieldIo&lt; D &gt;</a>
 </li>
 <li>writeParam()
 : <a class="el" href="classUtil_1_1Begin.html#a3e6bf2e4c32cd9665de186a2499f9fb4">Util::Begin</a>
@@ -217,11 +221,17 @@
 <li>writeVertexQ()
 : <a class="el" href="classPscf_1_1Fd1d_1_1FieldIo.html#ad4dbe5951d0d290491bc5f6a370570c7">Pscf::Fd1d::FieldIo</a>
 </li>
+<li>writeWBasis()
+: <a class="el" href="classPscf_1_1Pspc_1_1System.html#a1646b0b9378cd346cbcc9f53fa654889">Pscf::Pspc::System&lt; D &gt;</a>
+</li>
+<li>writeWRGrid()
+: <a class="el" href="classPscf_1_1Pspc_1_1System.html#a63b6d5dd9e0139aaa143e09d4ec48357">Pscf::Pspc::System&lt; D &gt;</a>
+</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 25 2020 17:49:52 for PSCF by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 7 2021 19:49:55 for PSCF by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

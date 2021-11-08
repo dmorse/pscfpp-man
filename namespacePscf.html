@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">PSCF
-   &#160;<span id="projectnumber">v1.50</span>
+   &#160;<span id="projectnumber">v1.7.2</span>
    </div>
   </td>
  </tr>
@@ -116,8 +116,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1RealVec.html">RealVec</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A RealVec&lt;D, T&gt; is D-component vector with elements of floating type T.  <a href="classPscf_1_1RealVec.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventTmpl.html">SolventTmpl</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template for a class representing a solvent species.  <a href="classPscf_1_1SolventTmpl.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventDescriptor.html">SolventDescriptor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chemical description of a solvent species.  <a href="classPscf_1_1SolventDescriptor.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SpaceGroup.html">SpaceGroup</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crystallographic space group.  <a href="classPscf_1_1SpaceGroup.html#details">More...</a><br /></td></tr>
@@ -385,7 +385,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="BlockDescriptor_8cpp_source.html#l00053">53</a> of file <a class="el" href="BlockDescriptor_8cpp_source.html">BlockDescriptor.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="SolventTmpl_8h_source.html#l00147">Pscf::SolventTmpl&lt; TP &gt;::concentration()</a>, <a class="el" href="Species_8h_source.html#l00098">Pscf::Species::ensemble()</a>, and <a class="el" href="SolventTmpl_8h_source.html#l00052">Pscf::SolventTmpl&lt; Propagator &gt;::~SolventTmpl()</a>.</p>
+<p>Referenced by <a class="el" href="Species_8h_source.html#l00098">Pscf::Species::ensemble()</a>, <a class="el" href="SolventDescriptor_8h_source.html#l00102">Pscf::SolventDescriptor::size()</a>, and <a class="el" href="SolventDescriptor_8h_source.html#l00036">Pscf::SolventDescriptor::~SolventDescriptor()</a>.</p>
 
 </div>
 </div>
@@ -425,7 +425,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="BlockDescriptor_8cpp_source.html#l00066">66</a> of file <a class="el" href="BlockDescriptor_8cpp_source.html">BlockDescriptor.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Species_8h_source.html#l00098">Pscf::Species::ensemble()</a>.</p>
+<p>Referenced by <a class="el" href="Species_8h_source.html#l00098">Pscf::Species::ensemble()</a>, <a class="el" href="SolventDescriptor_8h_source.html#l00102">Pscf::SolventDescriptor::size()</a>, and <a class="el" href="SolventDescriptor_8h_source.html#l00036">Pscf::SolventDescriptor::~SolventDescriptor()</a>.</p>
 
 </div>
 </div>
@@ -1475,9 +1475,9 @@ template&lt;int D&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>modified input stream </dd></dl>
 
-<p>Definition at line <a class="el" href="Mesh_8tpp_source.html#l00136">136</a> of file <a class="el" href="Mesh_8tpp_source.html">Mesh.tpp</a>.</p>
+<p>Definition at line <a class="el" href="Mesh_8tpp_source.html#l00157">157</a> of file <a class="el" href="Mesh_8tpp_source.html">Mesh.tpp</a>.</p>
 
-<p>References <a class="el" href="Mesh_8h_source.html#l00202">Pscf::Mesh&lt; D &gt;::dimensions()</a>, <a class="el" href="Mesh_8tpp_source.html#l00040">Pscf::Mesh&lt; D &gt;::setDimensions()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p>References <a class="el" href="Mesh_8h_source.html#l00209">Pscf::Mesh&lt; D &gt;::dimensions()</a>, <a class="el" href="Mesh_8tpp_source.html#l00057">Pscf::Mesh&lt; D &gt;::setDimensions()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -1517,14 +1517,14 @@ template&lt;int D&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>modified output stream </dd></dl>
 
-<p>Definition at line <a class="el" href="Mesh_8tpp_source.html#l00149">149</a> of file <a class="el" href="Mesh_8tpp_source.html">Mesh.tpp</a>.</p>
+<p>Definition at line <a class="el" href="Mesh_8tpp_source.html#l00170">170</a> of file <a class="el" href="Mesh_8tpp_source.html">Mesh.tpp</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 25 2020 17:49:33 for PSCF by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 7 2021 19:49:48 for PSCF by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

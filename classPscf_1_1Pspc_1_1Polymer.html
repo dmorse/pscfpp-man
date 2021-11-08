@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">PSCF
-   &#160;<span id="projectnumber">v1.50</span>
+   &#160;<span id="projectnumber">v1.7.2</span>
    </div>
   </td>
  </tr>
@@ -599,7 +599,7 @@ template&lt;int D&gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">phi</td><td>desired chemical potential for this species </td></tr>
+    <tr><td class="paramname">mu</td><td>desired chemical potential for this species </td></tr>
   </table>
   </dd>
 </dl>
@@ -656,7 +656,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Compute solution to MDE and block concentrations. </p>
-<p>This function sets up w-fields in the MDE solvers for all blocks and then calls the base class <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Descriptor and MDE solver for an acyclic block polymer. ">PolymerTmpl</a>&lt; Block&lt;D&gt; &gt;::solve() function. The base class solv efunction solves the MDE for all propagators and computes the properly scaled volume fraction fields for all blocks. After this function is called, the associated <a class="el" href="classPscf_1_1Pspc_1_1Block.html" title="Block within a branched polymer. ">Block</a> objects store pre-computed propagator solutions and block volume fraction fields.</p>
+<p>This function sets up w-fields in the MDE solvers for all blocks and then calls the base class <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Descriptor and MDE solver for an acyclic block polymer. ">PolymerTmpl</a>&lt; Block&lt;D&gt; &gt;::solve function. The base class solv efunction solves the MDE for all propagators and computes the properly scaled volume fraction fields for all blocks. After this function is called, the associated <a class="el" href="classPscf_1_1Pspc_1_1Block.html" title="Block within a branched polymer. ">Block</a> objects store pre-computed propagator solutions and block volume fraction fields.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">wFields</td><td>array of chemical potential fields. </td></tr>
@@ -735,7 +735,7 @@ template&lt;int D&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 25 2020 17:49:34 for PSCF by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 7 2021 19:49:50 for PSCF by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">PSCF
-   &#160;<span id="projectnumber">v1.50</span>
+   &#160;<span id="projectnumber">v1.7.2</span>
    </div>
   </td>
  </tr>
@@ -254,7 +254,7 @@
 : <a class="el" href="classUtil_1_1Format.html#ac74f4b64bc83811fcd5e5f1a13b1e87f">Util::Format</a>
 </li>
 <li>setDimensions()
-: <a class="el" href="classPscf_1_1Mesh.html#a7fbf6342d2cb4b7d3bb12bb79a91bf23">Pscf::Mesh&lt; D &gt;</a>
+: <a class="el" href="classPscf_1_1Mesh.html#ace57b55aafc841e990edaee630962498">Pscf::Mesh&lt; D &gt;</a>
 , <a class="el" href="classPscf_1_1MeshIterator.html#a916f087b67a9e86a40b3ba55b5742277">Pscf::MeshIterator&lt; D &gt;</a>
 , <a class="el" href="classUtil_1_1Grid.html#ad7dae1f5e841c9ccbd515922deeb17bb">Util::Grid</a>
 </li>
@@ -286,6 +286,9 @@
 </li>
 <li>setFile()
 : <a class="el" href="classUtil_1_1Log.html#a4d40ebcfa31f857e1cd57734419dbbde">Util::Log</a>
+</li>
+<li>setFilePrefix()
+: <a class="el" href="classUnitTest.html#a9acbdd2c77de1cf92835eda1f30697db">UnitTest</a>
 </li>
 <li>setId()
 : <a class="el" href="classPscf_1_1BlockDescriptor.html#a425c0ead6ab355b97a465b71fbf9251c">Pscf::BlockDescriptor</a>
@@ -328,15 +331,17 @@
 </li>
 <li>setMesh()
 : <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html#a8bcb61384011fa55d5865993722d5f3b">Pscf::Pspc::Mixture&lt; D &gt;</a>
+, <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#ace2321f7cf95a2ae27e105b2571b645c">Pscf::Pspc::Solvent&lt; D &gt;</a>
 , <a class="el" href="classPscf_1_1Pspg_1_1Mixture.html#aae0d9041f8b4d40cc05774f2c70cee8f">Pscf::Pspg::Mixture&lt; D &gt;</a>
 </li>
 <li>setMonomerId()
 : <a class="el" href="classPscf_1_1BlockDescriptor.html#ae9dfbf2184bff9d4538c0ec969013233">Pscf::BlockDescriptor</a>
 , <a class="el" href="classPscf_1_1Homogeneous_1_1Clump.html#ac309f4bc48a1a5d0f1217fe46e6b8bdd">Pscf::Homogeneous::Clump</a>
-, <a class="el" href="classPscf_1_1SolventTmpl.html#abb710ee159042caabc0cf291147d2147">Pscf::SolventTmpl&lt; TP &gt;</a>
+, <a class="el" href="classPscf_1_1SolventDescriptor.html#aefc5129c772fb33b6fe11172a49565e8">Pscf::SolventDescriptor</a>
 </li>
 <li>setMu()
 : <a class="el" href="classPscf_1_1Pspc_1_1Polymer.html#a63f609025b0c3d64c2678364108e69ab">Pscf::Pspc::Polymer&lt; D &gt;</a>
+, <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#a23c9badae666b2e4b0081b28150b6a4e">Pscf::Pspc::Solvent&lt; D &gt;</a>
 </li>
 <li>setNClump()
 : <a class="el" href="classPscf_1_1Homogeneous_1_1Molecule.html#a513071324e4aa0883a47f3a5df628246">Pscf::Homogeneous::Molecule</a>
@@ -394,13 +399,15 @@
 : <a class="el" href="classUtil_1_1FileMaster.html#aaa8beea67ced5beb8f92d8bba48a6bae">Util::FileMaster</a>
 </li>
 <li>setParent()
-: <a class="el" href="classUtil_1_1ParamComposite.html#ad99740d4a40314f7d87a381339caf502">Util::ParamComposite</a>
+: <a class="el" href="classTestRunner.html#af6ef606de6b797e933f224f636078ef0">TestRunner</a>
+, <a class="el" href="classUtil_1_1ParamComposite.html#ad99740d4a40314f7d87a381339caf502">Util::ParamComposite</a>
 </li>
 <li>setPartner()
 : <a class="el" href="classPscf_1_1PropagatorTmpl.html#adeac58f52fe90fe96c0ffe9e485e75ce">Pscf::PropagatorTmpl&lt; TP &gt;</a>
 </li>
 <li>setPhi()
 : <a class="el" href="classPscf_1_1Pspc_1_1Polymer.html#a001e06b6e9bcadec7492109b27f89c5a">Pscf::Pspc::Polymer&lt; D &gt;</a>
+, <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#a6b315cf91a1c73e2076a30e023def349">Pscf::Pspc::Solvent&lt; D &gt;</a>
 </li>
 <li>setPlanarParameters()
 : <a class="el" href="classPscf_1_1Fd1d_1_1Domain.html#aac95bdd97bb3756d2144e7725f3f77d4">Pscf::Fd1d::Domain</a>
@@ -428,7 +435,7 @@
 </li>
 <li>setSize()
 : <a class="el" href="classPscf_1_1Homogeneous_1_1Clump.html#a280c3f34fc40b1fb6e43cbc0390df05a">Pscf::Homogeneous::Clump</a>
-, <a class="el" href="classPscf_1_1SolventTmpl.html#aaa248f58edea71c24c0f62f4e6cd1ef0">Pscf::SolventTmpl&lt; TP &gt;</a>
+, <a class="el" href="classPscf_1_1SolventDescriptor.html#a9c7cdc7953139ebd8afde01d78a2ea03">Pscf::SolventDescriptor</a>
 </li>
 <li>setSphereParameters()
 : <a class="el" href="classPscf_1_1Fd1d_1_1Domain.html#a871d4ab92d1c109cad4a68ec4722df74">Pscf::Fd1d::Domain</a>
@@ -460,7 +467,12 @@
 , <a class="el" href="classPscf_1_1Pspc_1_1FFT.html#a366318f43aeb01576d7c16ea8ac94905">Pscf::Pspc::FFT&lt; D &gt;</a>
 , <a class="el" href="classPscf_1_1Pspg_1_1FFT.html#ac993b2a3461c3a0570fdda618d101c35">Pscf::Pspg::FFT&lt; D &gt;</a>
 , <a class="el" href="classPscf_1_1Pspg_1_1FFTBatched.html#a9f390cf515fc8aa7cfc29d6b7e03e1f3">Pscf::Pspg::FFTBatched&lt; D &gt;</a>
-, <a class="el" href="classUtil_1_1Binomial.html#acbdcceb86156d332bd28f1d07910c9bf">Util::Binomial</a>
+</li>
+<li>setUp()
+: <a class="el" href="classUnitTest.html#af74ce9087f71d9dfc8c59618e90eff90">UnitTest</a>
+</li>
+<li>setup()
+: <a class="el" href="classUtil_1_1Binomial.html#acbdcceb86156d332bd28f1d07910c9bf">Util::Binomial</a>
 </li>
 <li>setupFFT()
 : <a class="el" href="classPscf_1_1Pspg_1_1Block.html#adab57be566ebbe76926f2ddcfe4c1bad">Pscf::Pspg::Block&lt; D &gt;</a>
@@ -484,6 +496,9 @@
 , <a class="el" href="classUtil_1_1Lng.html#a67232e002aeff5a71a8b47d0371f6dbc">Util::Lng</a>
 , <a class="el" href="classUtil_1_1ScalarParam.html#a55e1724dd061dd1b7ade4932085cfccf">Util::ScalarParam&lt; Type &gt;</a>
 </li>
+<li>setVerbose()
+: <a class="el" href="classUnitTest.html#a676172166daf298b5a254dea943727c6">UnitTest</a>
+</li>
 <li>setVertexIds()
 : <a class="el" href="classPscf_1_1BlockDescriptor.html#ade41946abd1ca05ff74d41822d2de716">Pscf::BlockDescriptor</a>
 </li>
@@ -493,8 +508,8 @@
 , <a class="el" href="classUtil_1_1Lng.html#a6461f9f0e4d57e693f59a6a5d3da8790">Util::Lng</a>
 </li>
 <li>shift()
-: <a class="el" href="classPscf_1_1Mesh.html#a83ca232724e760327d61170be754b20e">Pscf::Mesh&lt; D &gt;</a>
-, <a class="el" href="classUtil_1_1Grid.html#a75b4038d94e2885d6b95b74e646fe555">Util::Grid</a>
+: <a class="el" href="classPscf_1_1Mesh.html#af00e9413845b8c2312df73e4ac4d4b98">Pscf::Mesh&lt; D &gt;</a>
+, <a class="el" href="classUtil_1_1Grid.html#ad7011256593cbf91951072ce0e976d9a">Util::Grid</a>
 , <a class="el" href="classUtil_1_1GridArray.html#a5c8df9631cbca8d193e3e066263886a1">Util::GridArray&lt; Data &gt;</a>
 , <a class="el" href="classUtil_1_1Polynomial.html#a0907b4464a3fd8544122c4fe1372727a">Util::Polynomial&lt; T &gt;</a>
 </li>
@@ -506,7 +521,7 @@
 : <a class="el" href="classPscf_1_1Homogeneous_1_1Clump.html#af21de376885b9f01712cd03b1c2932f6">Pscf::Homogeneous::Clump</a>
 , <a class="el" href="classPscf_1_1Homogeneous_1_1Molecule.html#a2c8e8ae02f474fba69648a1e4c4be028">Pscf::Homogeneous::Molecule</a>
 , <a class="el" href="classPscf_1_1Mesh.html#a2d49b9aaeacea444e48b04275a2b5c8c">Pscf::Mesh&lt; D &gt;</a>
-, <a class="el" href="classPscf_1_1SolventTmpl.html#a0768f4611217d8cc3d8dfb39b638a280">Pscf::SolventTmpl&lt; TP &gt;</a>
+, <a class="el" href="classPscf_1_1SolventDescriptor.html#aad9f30acdd2bb177ea6506a20a5966ef">Pscf::SolventDescriptor</a>
 , <a class="el" href="classPscf_1_1SymmetryGroup.html#a57b1e2a807dcd1b2fd82a3c7522f3479">Pscf::SymmetryGroup&lt; Symmetry &gt;</a>
 , <a class="el" href="classPscf_1_1Vertex.html#a5664460c7f97b8c66b9eb36c6b0bbaaa">Pscf::Vertex</a>
 , <a class="el" href="classUtil_1_1ArrayStack.html#a73b541a2272aa61a84d76b6558fa93f8">Util::ArrayStack&lt; Data &gt;</a>
@@ -531,16 +546,16 @@
 <li>solve()
 : <a class="el" href="classPscf_1_1Fd1d_1_1Iterator.html#af0c2ffea40a444b6bd1e7ce3dbc3fa49">Pscf::Fd1d::Iterator</a>
 , <a class="el" href="classPscf_1_1Fd1d_1_1NrIterator.html#a64461b69c2b8efae2727c47cab7a9723">Pscf::Fd1d::NrIterator</a>
-, <a class="el" href="classPscf_1_1Fd1d_1_1Propagator.html#a771d858c603920bb58ead90dd2d2a7fd">Pscf::Fd1d::Propagator</a>
+, <a class="el" href="classPscf_1_1Fd1d_1_1Propagator.html#a2e240139552d770403799dbb46df03c4">Pscf::Fd1d::Propagator</a>
 , <a class="el" href="classPscf_1_1Fd1d_1_1Sweep.html#a0abbb75634965a91d014cb06394115fb">Pscf::Fd1d::Sweep</a>
 , <a class="el" href="classPscf_1_1LuSolver.html#abd6b9fff59e00ecdd9509afb97b34b09">Pscf::LuSolver</a>
 , <a class="el" href="classPscf_1_1PolymerTmpl.html#a723466d0f7535df23e92bc18bc904871">Pscf::PolymerTmpl&lt; Block &gt;</a>
 , <a class="el" href="classPscf_1_1Pspc_1_1AmIterator.html#a2f15cee2cd79f4d976b6434e485bd381">Pscf::Pspc::AmIterator&lt; D &gt;</a>
 , <a class="el" href="classPscf_1_1Pspc_1_1Iterator.html#ae703de6987d3cbfdd4d26e8b39c7968b">Pscf::Pspc::Iterator&lt; D &gt;</a>
-, <a class="el" href="classPscf_1_1Pspc_1_1Propagator.html#a56b5a907675919bb6d1c26780741401c">Pscf::Pspc::Propagator&lt; D &gt;</a>
+, <a class="el" href="classPscf_1_1Pspc_1_1Propagator.html#a80685b03ca68750d8c90e6451f34b7d3">Pscf::Pspc::Propagator&lt; D &gt;</a>
 , <a class="el" href="classPscf_1_1Pspg_1_1AmIterator.html#ac34478a2e6191ddaad510dbd3ad5eb43">Pscf::Pspg::AmIterator&lt; D &gt;</a>
 , <a class="el" href="classPscf_1_1Pspg_1_1Iterator.html#ae3a9a9d61838a13e6196be32a118649c">Pscf::Pspg::Iterator&lt; D &gt;</a>
-, <a class="el" href="classPscf_1_1Pspg_1_1Propagator.html#a6375b644bb43d8025c1672071d3da49b">Pscf::Pspg::Propagator&lt; D &gt;</a>
+, <a class="el" href="classPscf_1_1Pspg_1_1Propagator.html#a10a8a57a5963ed5c52b2ef3b266442af">Pscf::Pspg::Propagator&lt; D &gt;</a>
 , <a class="el" href="classPscf_1_1TridiagonalSolver.html#a7c956970c91f7e90c660ed0c10ec6ebe">Pscf::TridiagonalSolver</a>
 </li>
 <li>Solvent()
@@ -553,8 +568,8 @@
 : <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html#af384f3f3bb6c6e23916a8747544a6a06">Pscf::Pspc::Solvent&lt; D &gt;</a>
 , <a class="el" href="classPscf_1_1Pspg_1_1Solvent.html#a88d1f8cefb1210a2f8c1f0d0b562cb83">Pscf::Pspg::Solvent&lt; D &gt;</a>
 </li>
-<li>SolventTmpl()
-: <a class="el" href="classPscf_1_1SolventTmpl.html#a5061a48840a2e1f6cd2a378b4235da40">Pscf::SolventTmpl&lt; TP &gt;</a>
+<li>SolventDescriptor()
+: <a class="el" href="classPscf_1_1SolventDescriptor.html#a654f730095d37c16a4797f8716aed264">Pscf::SolventDescriptor</a>
 </li>
 <li>source()
 : <a class="el" href="classPscf_1_1PropagatorTmpl.html#abba0b93e803fe0163d1f2460ddc34b9f">Pscf::PropagatorTmpl&lt; TP &gt;</a>
@@ -573,7 +588,7 @@
 , <a class="el" href="classUtil_1_1Vector.html#ad3c4e4b143f8c8e45b3fe189af6437cb">Util::Vector</a>
 </li>
 <li>SSet()
-: <a class="el" href="classUtil_1_1SSet.html#adc80e364de544a8a54aa04026ebaf205">Util::SSet&lt; Data, Capacity &gt;</a>
+: <a class="el" href="classUtil_1_1SSet.html#a2b191b1d3f7c33b6cdc1b70c6104f044">Util::SSet&lt; Data, Capacity &gt;</a>
 </li>
 <li>stageInterval()
 : <a class="el" href="classUtil_1_1AutoCorrStage.html#a39ef55e48bdacd637dc050c1478c77f2">Util::AutoCorrStage&lt; Data, Product &gt;</a>
@@ -595,10 +610,10 @@
 , <a class="el" href="classPscf_1_1Pspg_1_1Block.html#a34884c0a3ba234df806fe07de1c5f1c0">Pscf::Pspg::Block&lt; D &gt;</a>
 </li>
 <li>stop()
-: <a class="el" href="classUtil_1_1Timer.html#a462dc6312e69bbf03e169fff832bd562">Util::Timer</a>
+: <a class="el" href="classUtil_1_1Timer.html#ae1884c49bc5f2a21d1b426655247b645">Util::Timer</a>
 </li>
 <li>Str()
-: <a class="el" href="classUtil_1_1Str.html#a389bbf7735b729155f0a40812f55bfdf">Util::Str</a>
+: <a class="el" href="classUtil_1_1Str.html#a4f76794713df0d02cfb747fd247282d7">Util::Str</a>
 </li>
 <li>stress()
 : <a class="el" href="classPscf_1_1Pspc_1_1Block.html#ac1c44d58a3a102325d7d2568ef447cda">Pscf::Pspc::Block&lt; D &gt;</a>
@@ -619,7 +634,7 @@
 , <a class="el" href="classUtil_1_1Vector.html#a7e6de9bb77beddc412ab6055957656cc">Util::Vector</a>
 </li>
 <li>Sweep()
-: <a class="el" href="classPscf_1_1Fd1d_1_1Sweep.html#a310d6dc5dd98e4363923165741893402">Pscf::Fd1d::Sweep</a>
+: <a class="el" href="classPscf_1_1Fd1d_1_1Sweep.html#a913f8f0cdcf4f08ca23724530aa4b8f6">Pscf::Fd1d::Sweep</a>
 </li>
 <li>SweepFactory()
 : <a class="el" href="classPscf_1_1Fd1d_1_1SweepFactory.html#a9364cdfeb4c618d55311f4300689e419">Pscf::Fd1d::SweepFactory</a>
@@ -650,7 +665,7 @@
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 25 2020 17:49:52 for PSCF by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 7 2021 19:49:55 for PSCF by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">PSCF
-   &#160;<span id="projectnumber">v1.50</span>
+   &#160;<span id="projectnumber">v1.7.2</span>
    </div>
   </td>
  </tr>
@@ -455,11 +455,12 @@ Additional Inherited Members</h2></td></tr>
 class Pscf::Pspc::Mixture&lt; D &gt;</h3>
 
 <p>Solver for a mixture of polymers and solvents. </p>
-<p>A <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html" title="Solver for a mixture of polymers and solvents. ">Mixture</a> contains a list of <a class="el" href="classPscf_1_1Pspc_1_1Polymer.html" title="Descriptor and solver for one polymer species. ">Polymer</a> and <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html" title="Class representing a solvent species. ">Solvent</a> objects. Each such object can solve the single-molecule statistical mechanics problem for an ideal gas of the associated species in a set of specified chemical potential fields, and thereby compute concentrations and single-molecule partition functions. A <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html" title="Solver for a mixture of polymers and solvents. ">Mixture</a> is thus both a chemistry descriptor and an ideal-gas solver.</p>
-<p>A <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html" title="Solver for a mixture of polymers and solvents. ">Mixture</a> is associated with a Mesh&lt;D&gt; object, which models a spatial discretization mesh.</p>
+<p>A <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html" title="Solver for a mixture of polymers and solvents. ">Mixture</a> contains a list of <a class="el" href="classPscf_1_1Pspc_1_1Polymer.html" title="Descriptor and solver for one polymer species. ">Polymer</a> and <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html" title="Solver and descriptor for a solvent species. ">Solvent</a> objects. Each such object can solve the single-molecule statistical mechanics problem for an ideal gas of the associated species in a set of specified chemical potential fields, and thereby compute concentrations and and single-molecule partition functions. A <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html" title="Solver for a mixture of polymers and solvents. ">Mixture</a> is thus both a a chemistry descriptor and an ideal-gas solver.</p>
+<p>The single-molecule partition functions and concentrations for a non-interacting mixture of polymer and solvent species are computed by invoking the <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html#a8ed2416f8f5e0fcca99d195da2e08df5" title="Compute partition functions and concentrations. ">Mixture::compute</a> function. The <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html#a8ed2416f8f5e0fcca99d195da2e08df5" title="Compute partition functions and concentrations. ">Mixture::compute</a> function takes an arrays of monomer chemical potential fields (w fields) as an input argument and an array of monomer concentration fields (c fields) as an output. The objects that store these fields are owned by the parent <a class="el" href="classPscf_1_1Pspc_1_1System.html" title="Main class in SCFT simulation of one system. ">System</a>.</p>
+<p>A <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html" title="Solver for a mixture of polymers and solvents. ">Mixture</a> is associated with a Mesh&lt;D&gt; object, which models a spatial discretization mesh, and a UnitCell&lt;D&gt; object, which describes the the periodic unit cell. The <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html#a8525a6e73cd0d23b7872fc64b69f940f" title="Set unit cell parameters used in solver. ">Mixture::setupUnitCell</a> function sets up all parameters that depend on the unit cell, and must be called once once after every time the unit cell is initialized or modified, before the next call to <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html#a8ed2416f8f5e0fcca99d195da2e08df5" title="Compute partition functions and concentrations. ">Mixture::compute</a>.</p>
 <p>Note: Point-like solvents are not yet implemented. Currently, a <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html" title="Solver for a mixture of polymers and solvents. ">Mixture</a> can only be a mixture of <a class="el" href="classPscf_1_1Pspc_1_1Polymer.html" title="Descriptor and solver for one polymer species. ">Polymer</a> species. </p>
 
-<p>Definition at line <a class="el" href="pspc_2solvers_2Mixture_8h_source.html#l00046">46</a> of file <a class="el" href="pspc_2solvers_2Mixture_8h_source.html">pspc/solvers/Mixture.h</a>.</p>
+<p>Definition at line <a class="el" href="pspc_2solvers_2Mixture_8h_source.html#l00057">57</a> of file <a class="el" href="pspc_2solvers_2Mixture_8h_source.html">pspc/solvers/Mixture.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a80c7a45745dffc802df027d865c91a7d"></a>
 <div class="memitem">
@@ -475,7 +476,7 @@ template&lt;int D&gt; </div>
 
 <p><a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer or particle type. ">Monomer</a> chemical potential field type. </p>
 
-<p>Definition at line <a class="el" href="pspc_2solvers_2Mixture_8h_source.html#l00056">56</a> of file <a class="el" href="pspc_2solvers_2Mixture_8h_source.html">pspc/solvers/Mixture.h</a>.</p>
+<p>Definition at line <a class="el" href="pspc_2solvers_2Mixture_8h_source.html#l00067">67</a> of file <a class="el" href="pspc_2solvers_2Mixture_8h_source.html">pspc/solvers/Mixture.h</a>.</p>
 
 </div>
 </div>
@@ -493,7 +494,7 @@ template&lt;int D&gt; </div>
 
 <p><a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer or particle type. ">Monomer</a> concentration or volume fraction field type. </p>
 
-<p>Definition at line <a class="el" href="pspc_2solvers_2Mixture_8h_source.html#l00061">61</a> of file <a class="el" href="pspc_2solvers_2Mixture_8h_source.html">pspc/solvers/Mixture.h</a>.</p>
+<p>Definition at line <a class="el" href="pspc_2solvers_2Mixture_8h_source.html#l00072">72</a> of file <a class="el" href="pspc_2solvers_2Mixture_8h_source.html">pspc/solvers/Mixture.h</a>.</p>
 
 </div>
 </div>
@@ -675,7 +676,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Compute partition functions and concentrations. </p>
-<p>This function calls the compute function of every molecular species, and then adds the resulting block concentration fields for blocks of the same monomer type to compute a total monomer concentration (or volume fraction) for each monomer type. Upon return, values are set for volume fraction and chemical potential (mu) members of each species, and for the concentration fields for each <a class="el" href="classPscf_1_1Pspc_1_1Block.html" title="Block within a branched polymer. ">Block</a> and <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html" title="Class representing a solvent species. ">Solvent</a>. The total concentration for each monomer type is returned in the cFields output parameter. <a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer or particle type. ">Monomer</a> "concentrations" are returned in units of inverse steric volume per monomer in an incompressible mixture, and are thus also volume fractions.</p>
+<p>This function calls the compute function of every molecular species, and then adds the resulting block concentration fields for blocks of the same monomer type to compute a total monomer concentration (or volume fraction) for each monomer type. Upon return, values are set for volume fraction and chemical potential (mu) members of each species, and for the concentration fields for each <a class="el" href="classPscf_1_1Pspc_1_1Block.html" title="Block within a branched polymer. ">Block</a> and <a class="el" href="classPscf_1_1Pspc_1_1Solvent.html" title="Solver and descriptor for a solvent species. ">Solvent</a>. The total concentration for each monomer type is returned in the cFields output parameter. <a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer or particle type. ">Monomer</a> "concentrations" are returned in units of inverse steric volume per monomer in an incompressible mixture, and are thus also volume fractions.</p>
 <p>The arrays wFields and cFields must each have capacity <a class="el" href="classPscf_1_1MixtureTmpl.html#a2f3a0566896ae3e575a978218c8f095e" title="Get number of monomer types. ">nMonomer()</a>, and contain fields that are indexed by monomer type index.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -706,7 +707,7 @@ template&lt;int D&gt; </div>
 
 <p>Compute derivatives of free energy w/ respect to cell parameters. </p>
 
-<p>Definition at line <a class="el" href="pspc_2solvers_2Mixture_8tpp_source.html#l00131">131</a> of file <a class="el" href="pspc_2solvers_2Mixture_8tpp_source.html">pspc/solvers/Mixture.tpp</a>.</p>
+<p>Definition at line <a class="el" href="pspc_2solvers_2Mixture_8tpp_source.html#l00129">129</a> of file <a class="el" href="pspc_2solvers_2Mixture_8tpp_source.html">pspc/solvers/Mixture.tpp</a>.</p>
 
 <p>References <a class="el" href="classPscf_1_1MixtureTmpl.html#aa73de7499afafeff9ba0f0be2e7d2c11">Pscf::MixtureTmpl&lt; Polymer&lt; D &gt;, Solvent&lt; D &gt; &gt;::nPolymer()</a>, and <a class="el" href="classPscf_1_1MixtureTmpl.html#a2eb8c0525f3a6e04ceea240e04c8fdfc">Pscf::MixtureTmpl&lt; Polymer&lt; D &gt;, Solvent&lt; D &gt; &gt;::polymer()</a>.</p>
 
@@ -745,7 +746,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="pspc_2solvers_2Mixture_8h_source.html#l00199">199</a> of file <a class="el" href="pspc_2solvers_2Mixture_8h_source.html">pspc/solvers/Mixture.h</a>.</p>
+<p>Definition at line <a class="el" href="pspc_2solvers_2Mixture_8h_source.html#l00210">210</a> of file <a class="el" href="pspc_2solvers_2Mixture_8h_source.html">pspc/solvers/Mixture.h</a>.</p>
 
 <p>References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
@@ -776,7 +777,7 @@ template&lt;int D&gt; </div>
 
 <p>Get monomer reference volume. </p>
 
-<p>Definition at line <a class="el" href="pspc_2solvers_2Mixture_8h_source.html#l00194">194</a> of file <a class="el" href="pspc_2solvers_2Mixture_8h_source.html">pspc/solvers/Mixture.h</a>.</p>
+<p>Definition at line <a class="el" href="pspc_2solvers_2Mixture_8h_source.html#l00205">205</a> of file <a class="el" href="pspc_2solvers_2Mixture_8h_source.html">pspc/solvers/Mixture.h</a>.</p>
 
 </div>
 </div>
@@ -787,7 +788,7 @@ template&lt;int D&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 25 2020 17:49:34 for PSCF by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 7 2021 19:49:50 for PSCF by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
