@@ -1,5 +1,12 @@
 \documentclass{article}
+\usepackage{ifthen}
 \usepackage{epsfig}
+\usepackage[utf8]{inputenc}
+\usepackage{newunicodechar}
+  \newunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \newunicodechar{²}{${}^{2}$}% Superscript two
+  \newunicodechar{³}{${}^{3}$}% Superscript three
+
 \pagestyle{empty}
 \begin{document}
 $i$
@@ -135,6 +142,9 @@ $0 \leq n_{i} < N_{i}$
 \pagebreak
 
 $n_{1}$
+\pagebreak
+
+$Im\overline{3}m$
 \pagebreak
 
 \end{document}
