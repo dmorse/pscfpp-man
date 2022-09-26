@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -211,7 +211,7 @@ $(function() {
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment">   * Execute inverse (complex-to-real) transform without destroying input.</span></div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="comment">   */</span></div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="classPscf_1_1Pspc_1_1FFT.html#a707bf3f2049555fc72288c750694427c">  166</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Pspc_1_1FFT.html#a707bf3f2049555fc72288c750694427c">FFT&lt;D&gt;::inverseTransformSafe</a>(<a class="code hl_class" href="classPscf_1_1Pspc_1_1RFieldDft.html">RFieldDft&lt;D&gt;</a> <span class="keyword">const</span> &amp; kField, <a class="code hl_class" href="classPscf_1_1Pspc_1_1RField.html">RField&lt;D&gt;</a>&amp; rField)<span class="keyword"> </span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="classPscf_1_1Pspc_1_1FFT.html#a8f7325e88c966d0fdd2a149c3ee994ba">  166</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Pspc_1_1FFT.html#a8f7325e88c966d0fdd2a149c3ee994ba">FFT&lt;D&gt;::inverseTransformSafe</a>(<a class="code hl_class" href="classPscf_1_1Pspc_1_1RFieldDft.html">RFieldDft&lt;D&gt;</a> <span class="keyword">const</span> &amp; kField, <a class="code hl_class" href="classPscf_1_1Pspc_1_1RField.html">RField&lt;D&gt;</a>&amp; rField)<span class="keyword"> </span></div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="keyword">   const</span></div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="keyword">   </span>{</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(kFieldCopy_.capacity()==kField.<a class="code hl_function" href="classUtil_1_1Array.html#a66a4be07c83c3b49eae3536a3afd9fb0">capacity</a>());</div>
@@ -227,7 +227,7 @@ $(function() {
 <div class="ttc" id="aclassPscf_1_1Pspc_1_1FFT_html_a0508f243722dfc7f464cf28575297aa1"><div class="ttname"><a href="classPscf_1_1Pspc_1_1FFT.html#a0508f243722dfc7f464cf28575297aa1">Pscf::Pspc::FFT::forwardTransform</a></div><div class="ttdeci">void forwardTransform(RField&lt; D &gt; const &amp;in, RFieldDft&lt; D &gt; &amp;out) const</div><div class="ttdoc">Compute forward (real-to-complex) Fourier transform.</div><div class="ttdef"><b>Definition:</b> <a href="pspc_2field_2FFT_8tpp_source.html#l00125">pspc/field/FFT.tpp:125</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Pspc_1_1FFT_html_a23ac79f33e79b7efc247b06ee6734cdf"><div class="ttname"><a href="classPscf_1_1Pspc_1_1FFT.html#a23ac79f33e79b7efc247b06ee6734cdf">Pscf::Pspc::FFT::~FFT</a></div><div class="ttdeci">virtual ~FFT()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="pspc_2field_2FFT_8tpp_source.html#l00037">pspc/field/FFT.tpp:37</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Pspc_1_1FFT_html_a58c6c2c358b5de2413846214e8a73fb8"><div class="ttname"><a href="classPscf_1_1Pspc_1_1FFT.html#a58c6c2c358b5de2413846214e8a73fb8">Pscf::Pspc::FFT::FFT</a></div><div class="ttdeci">FFT()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> <a href="pspc_2field_2FFT_8tpp_source.html#l00023">pspc/field/FFT.tpp:23</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Pspc_1_1FFT_html_a707bf3f2049555fc72288c750694427c"><div class="ttname"><a href="classPscf_1_1Pspc_1_1FFT.html#a707bf3f2049555fc72288c750694427c">Pscf::Pspc::FFT::inverseTransformSafe</a></div><div class="ttdeci">void inverseTransformSafe(RFieldDft&lt; D &gt; const &amp;kField, RField&lt; D &gt; &amp;rField) const</div><div class="ttdoc">Compute inverse (complex-to-real) Fourier transform without destroying input.</div><div class="ttdef"><b>Definition:</b> <a href="pspc_2field_2FFT_8tpp_source.html#l00166">pspc/field/FFT.tpp:166</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Pspc_1_1FFT_html_a8f7325e88c966d0fdd2a149c3ee994ba"><div class="ttname"><a href="classPscf_1_1Pspc_1_1FFT.html#a8f7325e88c966d0fdd2a149c3ee994ba">Pscf::Pspc::FFT::inverseTransformSafe</a></div><div class="ttdeci">void inverseTransformSafe(RFieldDft&lt; D &gt; const &amp;in, RField&lt; D &gt; &amp;out) const</div><div class="ttdoc">Compute inverse (complex-to-real) Fourier transform without destroying input.</div><div class="ttdef"><b>Definition:</b> <a href="pspc_2field_2FFT_8tpp_source.html#l00166">pspc/field/FFT.tpp:166</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Pspc_1_1FFT_html_ab2adee4bf698a689b8aa76302c554d31"><div class="ttname"><a href="classPscf_1_1Pspc_1_1FFT.html#ab2adee4bf698a689b8aa76302c554d31">Pscf::Pspc::FFT::inverseTransform</a></div><div class="ttdeci">void inverseTransform(RFieldDft&lt; D &gt; &amp;in, RField&lt; D &gt; &amp;out) const</div><div class="ttdoc">Compute inverse (complex-to-real) Fourier transform.</div><div class="ttdef"><b>Definition:</b> <a href="pspc_2field_2FFT_8tpp_source.html#l00149">pspc/field/FFT.tpp:149</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Pspc_1_1FFT_html_af54c87434f5554cf2e897e4b310beb79"><div class="ttname"><a href="classPscf_1_1Pspc_1_1FFT.html#af54c87434f5554cf2e897e4b310beb79">Pscf::Pspc::FFT::setup</a></div><div class="ttdeci">void setup(IntVec&lt; D &gt; const &amp;meshDimensions)</div><div class="ttdoc">Setup grid dimensions, plans and work space.</div><div class="ttdef"><b>Definition:</b> <a href="pspc_2field_2FFT_8tpp_source.html#l00051">pspc/field/FFT.tpp:51</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Pspc_1_1RFieldDft_html"><div class="ttname"><a href="classPscf_1_1Pspc_1_1RFieldDft.html">Pscf::Pspc::RFieldDft</a></div><div class="ttdoc">Fourier transform of a real field on an FFT mesh.</div><div class="ttdef"><b>Definition:</b> <a href="RFieldDft_8h_source.html#l00030">RFieldDft.h:31</a></div></div>
@@ -243,7 +243,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:41 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

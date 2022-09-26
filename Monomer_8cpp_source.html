@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -60,51 +60,47 @@ $(function() {
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classPscf_1_1Monomer.html#a8c983cc8501ad757a26aed87223ac85b">   13</a></span>   <a class="code hl_function" href="classPscf_1_1Monomer.html#a8c983cc8501ad757a26aed87223ac85b">Monomer::Monomer</a>()</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    : id_(-1),</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>      kuhn_(0.0),</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>      name_()</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>   {}</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classPscf_1_1Monomer.html#a7cd4f3a1c5a359c6411d0aefcad955c3">   19</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Monomer.html#a7cd4f3a1c5a359c6411d0aefcad955c3">Monomer::setId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>   {  id_ = <a class="code hl_function" href="classPscf_1_1Monomer.html#abc264a0b568f51b9ac38fad47bfe1a83">id</a>; }</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>   <span class="comment">/* </span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">   * Extract a Monomer from an istream.</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classPscf_1_1Monomer.html#aad48cd340f75da94223b8b7ae96708e1">   25</a></span>   std::istream&amp; <a class="code hl_function" href="namespacePscf.html#af3acfd9252c655770b47d1ca2428fc09">operator &gt;&gt; </a>(std::istream&amp; in, <a class="code hl_class" href="classPscf_1_1Monomer.html">Monomer</a>&amp; monomer)</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>   {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      <span class="comment">// in &gt;&gt; monomer.id_;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      in &gt;&gt; monomer.name_;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      in &gt;&gt; monomer.kuhn_;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      <span class="keywordflow">return</span> in;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>   }</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>   </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>   <span class="comment">/* </span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">   * Output a Monomer to an ostream, without line breaks.</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classPscf_1_1Monomer.html#accf23e79d81e684eb4ad0dca9ff9d4cf">   36</a></span>   std::ostream&amp; <a class="code hl_function" href="namespacePscf.html#afce117557303a64ccd6097215d9fddf6">operator &lt;&lt; </a>(std::ostream&amp; out, <span class="keyword">const</span> <a class="code hl_class" href="classPscf_1_1Monomer.html">Monomer</a>&amp; monomer) </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>   {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      <span class="comment">// out &lt;&lt; monomer.id_;</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      out &lt;&lt; monomer.name_;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      out &lt;&lt; <span class="stringliteral">&quot;  &quot;</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      out.setf(std::ios::scientific);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      out.width(15);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      out.precision(8);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      out &lt;&lt; monomer.kuhn_;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      <span class="keywordflow">return</span> out;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>   }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>} </div>
-<div class="ttc" id="aclassPscf_1_1Monomer_html"><div class="ttname"><a href="classPscf_1_1Monomer.html">Pscf::Monomer</a></div><div class="ttdoc">Descriptor for a monomer or particle type.</div><div class="ttdef"><b>Definition:</b> <a href="Monomer_8h_source.html#l00022">Monomer.h:23</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Monomer_html_a7cd4f3a1c5a359c6411d0aefcad955c3"><div class="ttname"><a href="classPscf_1_1Monomer.html#a7cd4f3a1c5a359c6411d0aefcad955c3">Pscf::Monomer::setId</a></div><div class="ttdeci">void setId(int id)</div><div class="ttdoc">Set the integer index for this monomer type.</div><div class="ttdef"><b>Definition:</b> <a href="Monomer_8cpp_source.html#l00019">Monomer.cpp:19</a></div></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>      kuhn_(0.0)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>   {}</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classPscf_1_1Monomer.html#a7cd4f3a1c5a359c6411d0aefcad955c3">   18</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Monomer.html#a7cd4f3a1c5a359c6411d0aefcad955c3">Monomer::setId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>   {  id_ = <a class="code hl_function" href="classPscf_1_1Monomer.html#abc264a0b568f51b9ac38fad47bfe1a83">id</a>; }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>   <span class="comment">/* </span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">   * Extract a Monomer from an istream.</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classPscf_1_1Monomer.html#aad48cd340f75da94223b8b7ae96708e1">   24</a></span>   std::istream&amp; <a class="code hl_function" href="namespacePscf.html#af3acfd9252c655770b47d1ca2428fc09">operator &gt;&gt; </a>(std::istream&amp; in, <a class="code hl_class" href="classPscf_1_1Monomer.html">Monomer</a>&amp; monomer)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>   {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>      <span class="comment">// in &gt;&gt; monomer.id_;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      in &gt;&gt; monomer.kuhn_;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      <span class="keywordflow">return</span> in;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>   }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>   </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>   <span class="comment">/* </span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">   * Output a Monomer to an ostream, without line breaks.</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classPscf_1_1Monomer.html#accf23e79d81e684eb4ad0dca9ff9d4cf">   34</a></span>   std::ostream&amp; <a class="code hl_function" href="namespacePscf.html#afce117557303a64ccd6097215d9fddf6">operator &lt;&lt; </a>(std::ostream&amp; out, <span class="keyword">const</span> <a class="code hl_class" href="classPscf_1_1Monomer.html">Monomer</a>&amp; monomer) </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>   {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <span class="comment">// out &lt;&lt; monomer.id_;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      out.setf(std::ios::scientific);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      out.width(15);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      out.precision(8);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      out &lt;&lt; monomer.kuhn_;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      <span class="keywordflow">return</span> out;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>   }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>} </div>
+<div class="ttc" id="aclassPscf_1_1Monomer_html"><div class="ttname"><a href="classPscf_1_1Monomer.html">Pscf::Monomer</a></div><div class="ttdoc">Descriptor for a monomer or particle type.</div><div class="ttdef"><b>Definition:</b> <a href="Monomer_8h_source.html#l00031">Monomer.h:32</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Monomer_html_a7cd4f3a1c5a359c6411d0aefcad955c3"><div class="ttname"><a href="classPscf_1_1Monomer.html#a7cd4f3a1c5a359c6411d0aefcad955c3">Pscf::Monomer::setId</a></div><div class="ttdeci">void setId(int id)</div><div class="ttdoc">Set the integer index for this monomer type.</div><div class="ttdef"><b>Definition:</b> <a href="Monomer_8cpp_source.html#l00018">Monomer.cpp:18</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Monomer_html_a8c983cc8501ad757a26aed87223ac85b"><div class="ttname"><a href="classPscf_1_1Monomer.html#a8c983cc8501ad757a26aed87223ac85b">Pscf::Monomer::Monomer</a></div><div class="ttdeci">Monomer()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="Monomer_8cpp_source.html#l00013">Monomer.cpp:13</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Monomer_html_abc264a0b568f51b9ac38fad47bfe1a83"><div class="ttname"><a href="classPscf_1_1Monomer.html#abc264a0b568f51b9ac38fad47bfe1a83">Pscf::Monomer::id</a></div><div class="ttdeci">int id() const</div><div class="ttdoc">Unique integer index for monomer type.</div><div class="ttdef"><b>Definition:</b> <a href="Monomer_8h_source.html#l00111">Monomer.h:111</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Monomer_html_abc264a0b568f51b9ac38fad47bfe1a83"><div class="ttname"><a href="classPscf_1_1Monomer.html#abc264a0b568f51b9ac38fad47bfe1a83">Pscf::Monomer::id</a></div><div class="ttdeci">int id() const</div><div class="ttdoc">Unique integer index for monomer type.</div><div class="ttdef"><b>Definition:</b> <a href="Monomer_8h_source.html#l00112">Monomer.h:112</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">Classes for polymer self-consistent field theory.</div><div class="ttdef"><b>Definition:</b> <a href="BlockDescriptor_8cpp_source.html#l00010">BlockDescriptor.cpp:11</a></div></div>
 <div class="ttc" id="anamespacePscf_html_af3acfd9252c655770b47d1ca2428fc09"><div class="ttname"><a href="namespacePscf.html#af3acfd9252c655770b47d1ca2428fc09">Pscf::operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;in, BlockDescriptor &amp;block)</div><div class="ttdoc">istream extractor for a BlockDescriptor.</div><div class="ttdef"><b>Definition:</b> <a href="BlockDescriptor_8cpp_source.html#l00070">BlockDescriptor.cpp:70</a></div></div>
 <div class="ttc" id="anamespacePscf_html_afce117557303a64ccd6097215d9fddf6"><div class="ttname"><a href="namespacePscf.html#afce117557303a64ccd6097215d9fddf6">Pscf::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, BlockDescriptor const &amp;block)</div><div class="ttdoc">ostream inserter for a BlockDescriptor.</div><div class="ttdef"><b>Definition:</b> <a href="BlockDescriptor_8cpp_source.html#l00084">BlockDescriptor.cpp:84</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:41 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

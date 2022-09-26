@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -52,8 +52,8 @@ $(function() {
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;IteratorFactory.h&quot;</span>  </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// Subclasses of Iterator </span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;AmIterator.h&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;AmIteratorOld.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;AmIteratorBasis.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;AmIteratorGrid.h&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>Pspg {</div>
@@ -81,30 +81,31 @@ $(function() {
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      <span class="keywordflow">if</span> (ptr) <span class="keywordflow">return</span> ptr;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <span class="comment">// Try to match classname</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <span class="keywordflow">if</span> (className == <span class="stringliteral">&quot;AmIterator&quot;</span>) {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>         ptr = <span class="keyword">new</span> <a class="code hl_class" href="classPscf_1_1Pspg_1_1AmIterator.html">AmIterator&lt;D&gt;</a>(*sysPtr_);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (className == <span class="stringliteral">&quot;AmIteratorOld&quot;</span>) {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>         ptr = <span class="keyword">new</span> <a class="code hl_class" href="classPscf_1_1Pspg_1_1AmIteratorOld.html">AmIteratorOld&lt;D&gt;</a>(*sysPtr_);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <span class="keywordflow">return</span> ptr;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>   }</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <span class="keywordflow">if</span> (className == <span class="stringliteral">&quot;Iterator&quot;</span> || className == <span class="stringliteral">&quot;AmIteratorBasis&quot;</span>) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>         ptr = <span class="keyword">new</span> <a class="code hl_class" href="classPscf_1_1Pspg_1_1AmIteratorBasis.html">AmIteratorBasis&lt;D&gt;</a>(*sysPtr_);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      } <span class="keywordflow">else</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      <span class="keywordflow">if</span> (className == <span class="stringliteral">&quot;AmIteratorGrid&quot;</span>) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>         ptr = <span class="keyword">new</span> <a class="code hl_class" href="classPscf_1_1Pspg_1_1AmIteratorGrid.html">AmIteratorGrid&lt;D&gt;</a>(*sysPtr_);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      } </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="keywordflow">return</span> ptr;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>   }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassPscf_1_1Pspg_1_1AmIteratorOld_html"><div class="ttname"><a href="classPscf_1_1Pspg_1_1AmIteratorOld.html">Pscf::Pspg::AmIteratorOld</a></div><div class="ttdoc">Anderson mixing iterator for the pseudo spectral method.</div><div class="ttdef"><b>Definition:</b> <a href="AmIteratorOld_8h_source.html#l00039">AmIteratorOld.h:40</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Pspg_1_1AmIterator_html"><div class="ttname"><a href="classPscf_1_1Pspg_1_1AmIterator.html">Pscf::Pspg::AmIterator</a></div><div class="ttdoc">Pspg implementation of the Anderson Mixing iterator.</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2iterator_2AmIterator_8h_source.html#l00029">pspg/iterator/AmIterator.h:30</a></div></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassPscf_1_1Pspg_1_1AmIteratorBasis_html"><div class="ttname"><a href="classPscf_1_1Pspg_1_1AmIteratorBasis.html">Pscf::Pspg::AmIteratorBasis</a></div><div class="ttdoc">Pspg implementation of the Anderson Mixing iterator.</div><div class="ttdef"><b>Definition:</b> <a href="AmIteratorBasis_8h_source.html#l00029">AmIteratorBasis.h:30</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Pspg_1_1AmIteratorGrid_html"><div class="ttname"><a href="classPscf_1_1Pspg_1_1AmIteratorGrid.html">Pscf::Pspg::AmIteratorGrid</a></div><div class="ttdoc">Pspg implementation of the Anderson Mixing iterator.</div><div class="ttdef"><b>Definition:</b> <a href="AmIteratorGrid_8h_source.html#l00029">AmIteratorGrid.h:30</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Pspg_1_1IteratorFactory_html_ae9fe4994b0126d448c8b1edf9bc5d3db"><div class="ttname"><a href="classPscf_1_1Pspg_1_1IteratorFactory.html#ae9fe4994b0126d448c8b1edf9bc5d3db">Pscf::Pspg::IteratorFactory::IteratorFactory</a></div><div class="ttdeci">IteratorFactory(System&lt; D &gt; &amp;system)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2iterator_2IteratorFactory_8tpp_source.html#l00019">pspg/iterator/IteratorFactory.tpp:19</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Pspg_1_1IteratorFactory_html_af61e0b9c150792d9dadca59fabe42f15"><div class="ttname"><a href="classPscf_1_1Pspg_1_1IteratorFactory.html#af61e0b9c150792d9dadca59fabe42f15">Pscf::Pspg::IteratorFactory::factory</a></div><div class="ttdeci">Iterator&lt; D &gt; * factory(const std::string &amp;className) const</div><div class="ttdoc">Method to create any Iterator supplied with PSCF.</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2iterator_2IteratorFactory_8tpp_source.html#l00027">pspg/iterator/IteratorFactory.tpp:27</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Pspg_1_1Iterator_html"><div class="ttname"><a href="classPscf_1_1Pspg_1_1Iterator.html">Pscf::Pspg::Iterator</a></div><div class="ttdoc">Base class for iterative solvers for SCF equations.</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2iterator_2Iterator_8h_source.html#l00032">pspg/iterator/Iterator.h:33</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Pspg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Pspg_1_1System.html">Pscf::Pspg::System</a></div><div class="ttdoc">Main class in SCFT simulation of one system.</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2System_8h_source.html#l00047">pspg/System.h:48</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Pspg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Pspg_1_1System.html">Pscf::Pspg::System</a></div><div class="ttdoc">Main class in SCFT simulation of one system.</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2System_8h_source.html#l00046">pspg/System.h:47</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">Classes for polymer self-consistent field theory.</div><div class="ttdef"><b>Definition:</b> <a href="BlockDescriptor_8cpp_source.html#l00010">BlockDescriptor.cpp:11</a></div></div>
 <div class="ttc" id="anamespaceUtil_html"><div class="ttname"><a href="namespaceUtil.html">Util</a></div><div class="ttdoc">Utility classes for scientific computation.</div><div class="ttdef"><b>Definition:</b> <a href="accumulators_8mod_source.html#l00001">accumulators.mod:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:41 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

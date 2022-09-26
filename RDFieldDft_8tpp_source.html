@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -87,43 +87,45 @@ $(function() {
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    : <a class="code hl_class" href="classPscf_1_1Pspg_1_1DField.html">DField</a>&lt;cudaComplex&gt;(other)</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>   {</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      meshDimensions_ = other.meshDimensions_;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>   }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">   * Assignment, element-by-element.</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">   *</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">   * This operator will allocate memory if not allocated previously.</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">   *</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">   * \throw Exception if other Field is not allocated.</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">   * \throw Exception if both Fields are allocated with unequal capacities.</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">   *</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">   * \param other the rhs Field</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classPscf_1_1Pspg_1_1RDFieldDft.html#ac8938135f0f6e3c2787c02a94d63489d">   58</a></span>   <a class="code hl_class" href="classPscf_1_1Pspg_1_1RDFieldDft.html">RDFieldDft&lt;D&gt;</a>&amp; <a class="code hl_function" href="classPscf_1_1Pspg_1_1RDFieldDft.html#ac8938135f0f6e3c2787c02a94d63489d">RDFieldDft&lt;D&gt;::operator = </a>(<span class="keyword">const</span> <a class="code hl_class" href="classPscf_1_1Pspg_1_1RDFieldDft.html">RDFieldDft&lt;D&gt;</a>&amp; other)</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>   {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      <a class="code hl_function" href="classPscf_1_1Pspg_1_1DField.html#a30e5b62187918bcb4844eaa4986ab722">DField&lt;cudaComplex&gt;::operator = </a>(other);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      meshDimensions_ = other.meshDimensions_;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>   }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassPscf_1_1Pspg_1_1DField_html"><div class="ttname"><a href="classPscf_1_1Pspg_1_1DField.html">Pscf::Pspg::DField</a></div><div class="ttdoc">Dynamic array with aligned data, for use with cufftw library/device code.</div><div class="ttdef"><b>Definition:</b> <a href="DField_8h_source.html#l00026">DField.h:27</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Pspg_1_1DField_html_a30e5b62187918bcb4844eaa4986ab722"><div class="ttname"><a href="classPscf_1_1Pspg_1_1DField.html#a30e5b62187918bcb4844eaa4986ab722">Pscf::Pspg::DField::operator=</a></div><div class="ttdeci">virtual DField&lt; Data &gt; &amp; operator=(const DField&lt; Data &gt; &amp;other)</div><div class="ttdoc">Assignment operator.</div><div class="ttdef"><b>Definition:</b> <a href="DField_8tpp_source.html#l00108">DField.tpp:108</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Pspg_1_1RDFieldDft_html"><div class="ttname"><a href="classPscf_1_1Pspg_1_1RDFieldDft.html">Pscf::Pspg::RDFieldDft</a></div><div class="ttdoc">Fourier transform of a real field on an FFT mesh.</div><div class="ttdef"><b>Definition:</b> <a href="RDFieldDft_8h_source.html#l00031">RDFieldDft.h:32</a></div></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      dftDimensions_ = other.dftDimensions_;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>   }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">   * Assignment, element-by-element.</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">   *</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">   * This operator will allocate memory if not allocated previously.</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">   *</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">   * \throw Exception if other Field is not allocated.</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">   * \throw Exception if both Fields are allocated with unequal capacities.</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">   *</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">   * \param other the rhs Field</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classPscf_1_1Pspg_1_1RDFieldDft.html#ac8938135f0f6e3c2787c02a94d63489d">   59</a></span>   <a class="code hl_class" href="classPscf_1_1Pspg_1_1RDFieldDft.html">RDFieldDft&lt;D&gt;</a>&amp; <a class="code hl_function" href="classPscf_1_1Pspg_1_1RDFieldDft.html#ac8938135f0f6e3c2787c02a94d63489d">RDFieldDft&lt;D&gt;::operator = </a>(<span class="keyword">const</span> <a class="code hl_class" href="classPscf_1_1Pspg_1_1RDFieldDft.html">RDFieldDft&lt;D&gt;</a>&amp; other)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>   {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <a class="code hl_function" href="classPscf_1_1Pspg_1_1DField.html#a30e5b62187918bcb4844eaa4986ab722">DField&lt;cudaComplex&gt;::operator = </a>(other);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      meshDimensions_ = other.meshDimensions_;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      dftDimensions_ = other.dftDimensions_;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>   }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassPscf_1_1Pspg_1_1DField_html"><div class="ttname"><a href="classPscf_1_1Pspg_1_1DField.html">Pscf::Pspg::DField</a></div><div class="ttdoc">Dynamic array on the GPU with alligned data.</div><div class="ttdef"><b>Definition:</b> <a href="DField_8h_source.html#l00029">DField.h:30</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Pspg_1_1DField_html_a30e5b62187918bcb4844eaa4986ab722"><div class="ttname"><a href="classPscf_1_1Pspg_1_1DField.html#a30e5b62187918bcb4844eaa4986ab722">Pscf::Pspg::DField::operator=</a></div><div class="ttdeci">virtual DField&lt; Data &gt; &amp; operator=(const DField&lt; Data &gt; &amp;other)</div><div class="ttdoc">Assignment operator.</div><div class="ttdef"><b>Definition:</b> <a href="DField_8tpp_source.html#l00110">DField.tpp:110</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Pspg_1_1RDFieldDft_html"><div class="ttname"><a href="classPscf_1_1Pspg_1_1RDFieldDft.html">Pscf::Pspg::RDFieldDft</a></div><div class="ttdoc">Discrete Fourier Transform (DFT) of a real field on an FFT mesh.</div><div class="ttdef"><b>Definition:</b> <a href="RDFieldDft_8h_source.html#l00034">RDFieldDft.h:35</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Pspg_1_1RDFieldDft_html_a05d5a073debaa549077192ae2280d6d4"><div class="ttname"><a href="classPscf_1_1Pspg_1_1RDFieldDft.html#a05d5a073debaa549077192ae2280d6d4">Pscf::Pspg::RDFieldDft::~RDFieldDft</a></div><div class="ttdeci">virtual ~RDFieldDft()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="RDFieldDft_8tpp_source.html#l00030">RDFieldDft.tpp:30</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Pspg_1_1RDFieldDft_html_ac8938135f0f6e3c2787c02a94d63489d"><div class="ttname"><a href="classPscf_1_1Pspg_1_1RDFieldDft.html#ac8938135f0f6e3c2787c02a94d63489d">Pscf::Pspg::RDFieldDft::operator=</a></div><div class="ttdeci">RDFieldDft&lt; D &gt; &amp; operator=(const RDFieldDft&lt; D &gt; &amp;other)</div><div class="ttdoc">Assignment operator.</div><div class="ttdef"><b>Definition:</b> <a href="RDFieldDft_8tpp_source.html#l00058">RDFieldDft.tpp:58</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Pspg_1_1RDFieldDft_html_ac8938135f0f6e3c2787c02a94d63489d"><div class="ttname"><a href="classPscf_1_1Pspg_1_1RDFieldDft.html#ac8938135f0f6e3c2787c02a94d63489d">Pscf::Pspg::RDFieldDft::operator=</a></div><div class="ttdeci">RDFieldDft&lt; D &gt; &amp; operator=(const RDFieldDft&lt; D &gt; &amp;other)</div><div class="ttdoc">Assignment operator.</div><div class="ttdef"><b>Definition:</b> <a href="RDFieldDft_8tpp_source.html#l00059">RDFieldDft.tpp:59</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Pspg_1_1RDFieldDft_html_ace1c1a6f3f0d685bffb4ca91e10c1a4d"><div class="ttname"><a href="classPscf_1_1Pspg_1_1RDFieldDft.html#ace1c1a6f3f0d685bffb4ca91e10c1a4d">Pscf::Pspg::RDFieldDft::RDFieldDft</a></div><div class="ttdeci">RDFieldDft()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> <a href="RDFieldDft_8tpp_source.html#l00022">RDFieldDft.tpp:22</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">Classes for polymer self-consistent field theory.</div><div class="ttdef"><b>Definition:</b> <a href="BlockDescriptor_8cpp_source.html#l00010">BlockDescriptor.cpp:11</a></div></div>
 <div class="ttc" id="anamespaceUtil_html"><div class="ttname"><a href="namespaceUtil.html">Util</a></div><div class="ttdoc">Utility classes for scientific computation.</div><div class="ttdef"><b>Definition:</b> <a href="accumulators_8mod_source.html#l00001">accumulators.mod:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:41 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

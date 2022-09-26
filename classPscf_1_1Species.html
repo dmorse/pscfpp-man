@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -63,13 +63,14 @@ Inheritance diagram for Pscf::Species:</div>
   <img src="classPscf_1_1Species.png" usemap="#Pscf::Species_map" alt=""/>
   <map id="Pscf::Species_map" name="Pscf::Species_map">
 <area href="classPscf_1_1PolymerTmpl.html" alt="Pscf::PolymerTmpl&lt; Block&lt; D &gt; &gt;" shape="rect" coords="106,56,309,80"/>
-<area href="classPscf_1_1Fd1d_1_1Solvent.html" title="Solver and descriptor for a solvent species." alt="Pscf::Fd1d::Solvent" shape="rect" coords="319,56,522,80"/>
-<area href="classPscf_1_1PolymerTmpl.html" title="Descriptor and MDE solver for an acyclic block polymer." alt="Pscf::PolymerTmpl&lt; Block &gt;" shape="rect" coords="532,56,735,80"/>
-<area href="classPscf_1_1Pspc_1_1Solvent.html" title="Solver and descriptor for a solvent species." alt="Pscf::Pspc::Solvent&lt; D &gt;" shape="rect" coords="745,56,948,80"/>
-<area href="classPscf_1_1Pspg_1_1Solvent.html" title="Class representing a solvent species." alt="Pscf::Pspg::Solvent&lt; D &gt;" shape="rect" coords="958,56,1161,80"/>
+<area href="classPscf_1_1PolymerTmpl.html" title="Descriptor and MDE solver for an acyclic block polymer." alt="Pscf::PolymerTmpl&lt; Block &gt;" shape="rect" coords="426,56,629,80"/>
+<area href="classPscf_1_1SolventDescriptor.html" title="Descriptor for a solvent species." alt="Pscf::SolventDescriptor" shape="rect" coords="852,56,1055,80"/>
 <area href="classPscf_1_1Pspc_1_1Polymer.html" title="Descriptor and solver for one polymer species." alt="Pscf::Pspc::Polymer&lt; D &gt;" shape="rect" coords="0,112,203,136"/>
 <area href="classPscf_1_1Pspg_1_1Polymer.html" title="Descriptor and solver for a branched polymer species." alt="Pscf::Pspg::Polymer&lt; D &gt;" shape="rect" coords="213,112,416,136"/>
-<area href="classPscf_1_1Fd1d_1_1Polymer.html" title="Descriptor and solver for a branched polymer species." alt="Pscf::Fd1d::Polymer" shape="rect" coords="532,112,735,136"/>
+<area href="classPscf_1_1Fd1d_1_1Polymer.html" title="Descriptor and solver for a branched polymer species." alt="Pscf::Fd1d::Polymer" shape="rect" coords="426,112,629,136"/>
+<area href="classPscf_1_1Fd1d_1_1Solvent.html" title="Solver and descriptor for a solvent species." alt="Pscf::Fd1d::Solvent" shape="rect" coords="639,112,842,136"/>
+<area href="classPscf_1_1Pspc_1_1Solvent.html" title="Solver and descriptor for a solvent species." alt="Pscf::Pspc::Solvent&lt; D &gt;" shape="rect" coords="852,112,1055,136"/>
+<area href="classPscf_1_1Pspg_1_1Solvent.html" title="Solver and descriptor for a solvent species." alt="Pscf::Pspg::Solvent&lt; D &gt;" shape="rect" coords="1065,112,1268,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -187,7 +188,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="Species_8h_source.html#l00059">phi_</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00337">Pscf::Fd1d::System::computeFreeEnergy()</a>, <a class="el" href="pspc_2System_8tpp_source.html#l00464">Pscf::Pspc::System&lt; D &gt;::computeFreeEnergy()</a>, <a class="el" href="pspg_2System_8tpp_source.html#l00562">Pscf::Pspg::System&lt; D &gt;::computeFreeEnergy()</a>, <a class="el" href="fd1d_2solvers_2Polymer_8cpp_source.html#l00020">Pscf::Fd1d::Polymer::setPhi()</a>, and <a class="el" href="fd1d_2solvers_2Solvent_8cpp_source.html#l00038">Pscf::Fd1d::Solvent::setPhi()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00459">Pscf::Fd1d::System::computeFreeEnergy()</a>, <a class="el" href="pspc_2System_8tpp_source.html#l00712">Pscf::Pspc::System&lt; D &gt;::computeFreeEnergy()</a>, <a class="el" href="pspg_2System_8tpp_source.html#l00576">Pscf::Pspg::System&lt; D &gt;::computeFreeEnergy()</a>, <a class="el" href="fd1d_2solvers_2Polymer_8cpp_source.html#l00020">Pscf::Fd1d::Polymer::setPhi()</a>, and <a class="el" href="SolventDescriptor_8cpp_source.html#l00046">Pscf::SolventDescriptor::setPhi()</a>.</p>
 
 </div>
 </div>
@@ -220,7 +221,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="Species_8h_source.html#l00064">mu_</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00337">Pscf::Fd1d::System::computeFreeEnergy()</a>, <a class="el" href="pspc_2System_8tpp_source.html#l00464">Pscf::Pspc::System&lt; D &gt;::computeFreeEnergy()</a>, <a class="el" href="pspg_2System_8tpp_source.html#l00562">Pscf::Pspg::System&lt; D &gt;::computeFreeEnergy()</a>, <a class="el" href="fd1d_2solvers_2Polymer_8cpp_source.html#l00028">Pscf::Fd1d::Polymer::setMu()</a>, and <a class="el" href="fd1d_2solvers_2Solvent_8cpp_source.html#l00046">Pscf::Fd1d::Solvent::setMu()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00459">Pscf::Fd1d::System::computeFreeEnergy()</a>, <a class="el" href="pspc_2System_8tpp_source.html#l00712">Pscf::Pspc::System&lt; D &gt;::computeFreeEnergy()</a>, <a class="el" href="pspg_2System_8tpp_source.html#l00576">Pscf::Pspg::System&lt; D &gt;::computeFreeEnergy()</a>, <a class="el" href="fd1d_2solvers_2Polymer_8cpp_source.html#l00028">Pscf::Fd1d::Polymer::setMu()</a>, and <a class="el" href="SolventDescriptor_8cpp_source.html#l00054">Pscf::SolventDescriptor::setMu()</a>.</p>
 
 </div>
 </div>
@@ -272,7 +273,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="Species_8h_source.html#l00074">ensemble_</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2solvers_2Polymer_8cpp_source.html#l00028">Pscf::Fd1d::Polymer::setMu()</a>, <a class="el" href="fd1d_2solvers_2Solvent_8cpp_source.html#l00046">Pscf::Fd1d::Solvent::setMu()</a>, <a class="el" href="fd1d_2solvers_2Polymer_8cpp_source.html#l00020">Pscf::Fd1d::Polymer::setPhi()</a>, and <a class="el" href="fd1d_2solvers_2Solvent_8cpp_source.html#l00038">Pscf::Fd1d::Solvent::setPhi()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2solvers_2Polymer_8cpp_source.html#l00028">Pscf::Fd1d::Polymer::setMu()</a>, <a class="el" href="SolventDescriptor_8cpp_source.html#l00054">Pscf::SolventDescriptor::setMu()</a>, <a class="el" href="fd1d_2solvers_2Polymer_8cpp_source.html#l00020">Pscf::Fd1d::Polymer::setPhi()</a>, and <a class="el" href="SolventDescriptor_8cpp_source.html#l00046">Pscf::SolventDescriptor::setPhi()</a>.</p>
 
 </div>
 </div>
@@ -301,7 +302,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Species_8h_source.html#l00059">59</a> of file <a class="el" href="Species_8h_source.html">Species.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2solvers_2Solvent_8cpp_source.html#l00079">Pscf::Fd1d::Solvent::compute()</a>, <a class="el" href="Species_8h_source.html#l00081">phi()</a>, <a class="el" href="fd1d_2solvers_2Solvent_8cpp_source.html#l00023">Pscf::Fd1d::Solvent::readParameters()</a>, <a class="el" href="fd1d_2solvers_2Polymer_8cpp_source.html#l00020">Pscf::Fd1d::Polymer::setPhi()</a>, and <a class="el" href="fd1d_2solvers_2Solvent_8cpp_source.html#l00038">Pscf::Fd1d::Solvent::setPhi()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2solvers_2Solvent_8cpp_source.html#l00039">Pscf::Fd1d::Solvent::compute()</a>, <a class="el" href="Species_8h_source.html#l00081">phi()</a>, <a class="el" href="SolventDescriptor_8cpp_source.html#l00021">Pscf::SolventDescriptor::readParameters()</a>, <a class="el" href="fd1d_2solvers_2Polymer_8cpp_source.html#l00020">Pscf::Fd1d::Polymer::setPhi()</a>, and <a class="el" href="SolventDescriptor_8cpp_source.html#l00046">Pscf::SolventDescriptor::setPhi()</a>.</p>
 
 </div>
 </div>
@@ -329,7 +330,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Species_8h_source.html#l00064">64</a> of file <a class="el" href="Species_8h_source.html">Species.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2solvers_2Solvent_8cpp_source.html#l00079">Pscf::Fd1d::Solvent::compute()</a>, <a class="el" href="Species_8h_source.html#l00087">mu()</a>, <a class="el" href="fd1d_2solvers_2Solvent_8cpp_source.html#l00023">Pscf::Fd1d::Solvent::readParameters()</a>, <a class="el" href="fd1d_2solvers_2Polymer_8cpp_source.html#l00028">Pscf::Fd1d::Polymer::setMu()</a>, and <a class="el" href="fd1d_2solvers_2Solvent_8cpp_source.html#l00046">Pscf::Fd1d::Solvent::setMu()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2solvers_2Solvent_8cpp_source.html#l00039">Pscf::Fd1d::Solvent::compute()</a>, <a class="el" href="Species_8h_source.html#l00087">mu()</a>, <a class="el" href="SolventDescriptor_8cpp_source.html#l00021">Pscf::SolventDescriptor::readParameters()</a>, <a class="el" href="fd1d_2solvers_2Polymer_8cpp_source.html#l00028">Pscf::Fd1d::Polymer::setMu()</a>, and <a class="el" href="SolventDescriptor_8cpp_source.html#l00054">Pscf::SolventDescriptor::setMu()</a>.</p>
 
 </div>
 </div>
@@ -357,7 +358,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Species_8h_source.html#l00069">69</a> of file <a class="el" href="Species_8h_source.html">Species.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2solvers_2Solvent_8cpp_source.html#l00079">Pscf::Fd1d::Solvent::compute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2solvers_2Solvent_8cpp_source.html#l00039">Pscf::Fd1d::Solvent::compute()</a>.</p>
 
 </div>
 </div>
@@ -385,7 +386,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Species_8h_source.html#l00074">74</a> of file <a class="el" href="Species_8h_source.html">Species.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2solvers_2Solvent_8cpp_source.html#l00079">Pscf::Fd1d::Solvent::compute()</a>, <a class="el" href="Species_8h_source.html#l00093">ensemble()</a>, and <a class="el" href="fd1d_2solvers_2Solvent_8cpp_source.html#l00023">Pscf::Fd1d::Solvent::readParameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2solvers_2Solvent_8cpp_source.html#l00039">Pscf::Fd1d::Solvent::compute()</a>, <a class="el" href="Species_8h_source.html#l00093">ensemble()</a>, and <a class="el" href="SolventDescriptor_8cpp_source.html#l00021">Pscf::SolventDescriptor::readParameters()</a>.</p>
 
 </div>
 </div>
@@ -396,7 +397,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

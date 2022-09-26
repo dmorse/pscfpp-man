@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -60,9 +60,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a4d0a4a186314c1b6216bc1c1d8da4b8f"><td class="memItemLeft" align="right" valign="top">std::complex&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Basis_1_1Wave.html#a4d0a4a186314c1b6216bc1c1d8da4b8f">coeff</a></td></tr>
 <tr class="memdesc:a4d0a4a186314c1b6216bc1c1d8da4b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coefficient of wave within the associated star basis function.  <a href="classPscf_1_1Basis_1_1Wave.html#a4d0a4a186314c1b6216bc1c1d8da4b8f">More...</a><br /></td></tr>
 <tr class="separator:a4d0a4a186314c1b6216bc1c1d8da4b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2097c7835363c7b6d9d8b279f751da6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Basis_1_1Wave.html#ad2097c7835363c7b6d9d8b279f751da6">sqNorm</a></td></tr>
-<tr class="memdesc:ad2097c7835363c7b6d9d8b279f751da6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Square magnitude of associated wavevector.  <a href="classPscf_1_1Basis_1_1Wave.html#ad2097c7835363c7b6d9d8b279f751da6">More...</a><br /></td></tr>
-<tr class="separator:ad2097c7835363c7b6d9d8b279f751da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2cf7395deaff3bcc9db739a2a0f6f18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Basis_1_1Wave.html#ae2cf7395deaff3bcc9db739a2a0f6f18">indicesDft</a></td></tr>
 <tr class="memdesc:ae2cf7395deaff3bcc9db739a2a0f6f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer indices of wave, on a discrete Fourier transform mesh.  <a href="classPscf_1_1Basis_1_1Wave.html#ae2cf7395deaff3bcc9db739a2a0f6f18">More...</a><br /></td></tr>
 <tr class="separator:ae2cf7395deaff3bcc9db739a2a0f6f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -100,27 +97,7 @@ template&lt;int D&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00361">361</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00981">Pscf::Pspc::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00643">Pscf::Pspg::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00760">Pscf::Pspg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01082">Pscf::Pspc::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, and <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01272">Pscf::Pspc::FieldIo&lt; D &gt;::hasSymmetry()</a>.</p>
-
-</div>
-</div>
-<a id="ad2097c7835363c7b6d9d8b279f751da6" name="ad2097c7835363c7b6d9d8b279f751da6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2097c7835363c7b6d9d8b279f751da6">&#9670;&nbsp;</a></span>sqNorm</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="classPscf_1_1Basis.html">Pscf::Basis</a>&lt; D &gt;::Wave::sqNorm</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Square magnitude of associated wavevector. </p>
-
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00366">366</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00834">Pscf::Pspg::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00985">Pscf::Pspc::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00959">Pscf::Pspg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01086">Pscf::Pspc::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, and <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01276">Pscf::Pspc::FieldIo&lt; D &gt;::hasSymmetry()</a>.</p>
 
 </div>
 </div>
@@ -141,9 +118,9 @@ template&lt;int D&gt; </div>
 <p>Integer indices of wave, on a discrete Fourier transform mesh. </p>
 <p >Components of this IntVec&lt;D&gt; are non-negative. Component i lies within the range [0, meshDimension(i)], where meshDimension(i) is the number of grid points. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00375">375</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00370">370</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00981">Pscf::Pspc::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00643">Pscf::Pspg::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00760">Pscf::Pspg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01082">Pscf::Pspc::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, and <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01272">Pscf::Pspc::FieldIo&lt; D &gt;::hasSymmetry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00834">Pscf::Pspg::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00985">Pscf::Pspc::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00959">Pscf::Pspg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01086">Pscf::Pspc::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, and <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01276">Pscf::Pspc::FieldIo&lt; D &gt;::hasSymmetry()</a>.</p>
 
 </div>
 </div>
@@ -164,7 +141,7 @@ template&lt;int D&gt; </div>
 <p>Integer indices of wave, in first Brillouin zone. </p>
 <p >Components of this IntVec&lt;D&gt; may be negative or positive, and differ from corresponding components of indicesDft by integer multiples of a corresponding mesh dimension, so that indicesBz and indicesDft correspond to equivalent aliased wavevectors for functions evaluated on the chosen discretization mesh. The shifts relative to indicesDft are chosen so as to minimize the norm of the Cartesian wavevector constructed by taking a linear combination of Bravais lattice basis vectors multiplied by components of indicesBz. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00390">390</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00385">385</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
 </div>
 </div>
@@ -184,9 +161,9 @@ template&lt;int D&gt; </div>
 
 <p>Index of the star that contains this wavevector. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00395">395</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00390">390</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00760">Pscf::Pspg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, and <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01082">Pscf::Pspc::FieldIo&lt; D &gt;::convertKGridToBasis()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00959">Pscf::Pspg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, and <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01086">Pscf::Pspc::FieldIo&lt; D &gt;::convertKGridToBasis()</a>.</p>
 
 </div>
 </div>
@@ -207,9 +184,9 @@ template&lt;int D&gt; </div>
 <p>Is this wave represented implicitly in DFT of real field? </p>
 <p >In the discrete Fourier transform (DFT) of a real function, the coefficients of nonzero wavevector G and -G must be complex conjugates. As a result, only one of these two coefficients is stored in the container RFieldDft used to store the DFT of a real function. For each such pair, the member variable <a class="el" href="classPscf_1_1Basis_1_1Wave.html#a3da062471881a1453f3b2568159ad2c8" title="Is this wave represented implicitly in DFT of real field?">Basis::Wave::implicit</a> is set false for the the wavevector whose coefficient is represented explicitly, and is set true for the wavevector whose coefficient is left implicit. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00410">410</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00405">405</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00981">Pscf::Pspc::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00643">Pscf::Pspg::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00760">Pscf::Pspg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01082">Pscf::Pspc::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, and <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01272">Pscf::Pspc::FieldIo&lt; D &gt;::hasSymmetry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00834">Pscf::Pspg::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00985">Pscf::Pspc::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00959">Pscf::Pspg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01086">Pscf::Pspc::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, and <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01276">Pscf::Pspc::FieldIo&lt; D &gt;::hasSymmetry()</a>.</p>
 
 </div>
 </div>
@@ -219,7 +196,7 @@ template&lt;int D&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

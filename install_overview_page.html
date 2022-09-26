@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -56,9 +56,9 @@ $(function() {
 <li><b>Setup:</b> Invoke the "setup" script from the pscfpp/ root directory. Enter the command <div class="fragment"><div class="line">&gt; ./setup</div>
 </div><!-- fragment --> to setup the build system with default compiler options. Alternatively, invoke the setup script with a filename argument that is the name of a compiler configuration file that contains non-default compiler options, as discussed <a class="el" href="install_setup_page.html">here</a>).</li>
 <li><b>Compile all cpu programs:</b> From the pscfpp/ directory, enter <div class="fragment"><div class="line">&gt; make all-cpu</div>
-</div><!-- fragment --> If successful, this will install executables named "pscf_fd", "pscf_pc1d", "pscf_pc2d" and "pscf_pc3d" in the pscfpp/bin directory.</li>
+</div><!-- fragment --> If successful, this will install executables named "pscf_fd", "pscf_pc1", "pscf_pc2" and "pscf_pc3" in the pscfpp/bin directory.</li>
 <li><b>Compile GPU accelerated programs:</b> To compile the GPU accelerated executables on a machine with an appropriate NVIDIA GPU and a CUDA compiler, invoke <div class="fragment"><div class="line">&gt; make pspg</div>
-</div><!-- fragment --> from within the pscfpp/ root directory. If successful, this will install executables named "pscf_pg1d", "pscf_pg2d" and "pscf_pg3d" in the pscfpp/bin directory.</li>
+</div><!-- fragment --> from within the pscfpp/ root directory. If successful, this will install executables named "pscf_pg1", "pscf_pg2" and "pscf_pg3" in the pscfpp/bin directory.</li>
 </ul>
 <p >The "make all-cpu" and "make pspg" commands will each also create a large number of intermediate object (*.o), dependency (*.d) and library (*.a) files in subdirectories of the pscfpp/bld directory (the default build directory).</p>
 <p >Each of the above steps is discussed in more detail in the following pages.</p>
@@ -69,7 +69,7 @@ $(function() {
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

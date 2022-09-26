@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -60,14 +60,15 @@ Inheritance diagram for Pscf::Fd1d::SystemAccess:</div>
  <div class="center">
   <img src="classPscf_1_1Fd1d_1_1SystemAccess.png" usemap="#Pscf::Fd1d::SystemAccess_map" alt=""/>
   <map id="Pscf::Fd1d::SystemAccess_map" name="Pscf::Fd1d::SystemAccess_map">
-<area href="classPscf_1_1Fd1d_1_1FieldIo.html" title="Read and write fields to file." alt="Pscf::Fd1d::FieldIo" shape="rect" coords="0,56,225,80"/>
-<area href="classPscf_1_1Fd1d_1_1HomogeneousComparison.html" title="Command to compute properties of homogeneous reference system." alt="Pscf::Fd1d::HomogeneousComparison" shape="rect" coords="235,56,460,80"/>
-<area href="classPscf_1_1Fd1d_1_1Iterator.html" title="Base class for iterative solvers for SCF equations." alt="Pscf::Fd1d::Iterator" shape="rect" coords="470,56,695,80"/>
+<area href="classPscf_1_1Fd1d_1_1HomogeneousComparison.html" title="Command to compute properties of homogeneous reference system." alt="Pscf::Fd1d::HomogeneousComparison" shape="rect" coords="0,56,225,80"/>
+<area href="classPscf_1_1Fd1d_1_1Iterator.html" title="Base class for iterative solvers for SCF equations." alt="Pscf::Fd1d::Iterator" shape="rect" coords="235,56,460,80"/>
 <area href="classPscf_1_1Fd1d_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space." alt="Pscf::Fd1d::Sweep" shape="rect" coords="940,56,1165,80"/>
-<area href="classPscf_1_1Fd1d_1_1NrIterator.html" title="Newton-Raphson Iterator for SCF equations." alt="Pscf::Fd1d::NrIterator" shape="rect" coords="470,112,695,136"/>
-<area href="classPscf_1_1Fd1d_1_1CompositionSweep.html" title="Base class for solution along a line in parameter space." alt="Pscf::Fd1d::CompositionSweep" shape="rect" coords="705,112,930,136"/>
-<area href="classPscf_1_1Fd1d_1_1LengthSweep.html" title="Base class for solution along a line in parameter space." alt="Pscf::Fd1d::LengthSweep" shape="rect" coords="940,112,1165,136"/>
-<area href="classPscf_1_1Fd1d_1_1MuSweep.html" title="Base class for solution along a line in parameter space." alt="Pscf::Fd1d::MuSweep" shape="rect" coords="1175,112,1400,136"/>
+<area href="classPscf_1_1Fd1d_1_1FdIterator.html" title="Fd relaxation Iterator for SCF equations." alt="Pscf::Fd1d::FdIterator" shape="rect" coords="117,112,342,136"/>
+<area href="classPscf_1_1Fd1d_1_1NrIterator.html" title="Newton-Raphson Iterator for SCF equations." alt="Pscf::Fd1d::NrIterator" shape="rect" coords="352,112,577,136"/>
+<area href="classPscf_1_1Fd1d_1_1CompositionSweep.html" title="Base class for solution along a line in parameter space." alt="Pscf::Fd1d::CompositionSweep" shape="rect" coords="587,112,812,136"/>
+<area href="classPscf_1_1Fd1d_1_1LengthSweep.html" title="Base class for solution along a line in parameter space." alt="Pscf::Fd1d::LengthSweep" shape="rect" coords="822,112,1047,136"/>
+<area href="classPscf_1_1Fd1d_1_1LinearSweep.html" title="Base class for a sweep in parameter space where parameters change linearly with the sweep variable." alt="Pscf::Fd1d::LinearSweep" shape="rect" coords="1057,112,1282,136"/>
+<area href="classPscf_1_1Fd1d_1_1MuSweep.html" title="Base class for solution along a line in parameter space." alt="Pscf::Fd1d::MuSweep" shape="rect" coords="1292,112,1517,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -119,18 +120,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8afe1f41f5c8d1b44d7c884e4144ed00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1FileMaster.html">FileMaster</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Fd1d_1_1SystemAccess.html#a8afe1f41f5c8d1b44d7c884e4144ed00">fileMaster</a> ()</td></tr>
 <tr class="memdesc:a8afe1f41f5c8d1b44d7c884e4144ed00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get FileMaster by reference.  <a href="classPscf_1_1Fd1d_1_1SystemAccess.html#a8afe1f41f5c8d1b44d7c884e4144ed00">More...</a><br /></td></tr>
 <tr class="separator:a8afe1f41f5c8d1b44d7c884e4144ed00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">Fields</h2></td></tr>
-<tr class="memitem:a8eb89c66a10c15e1f40caeb39cb10d78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Fd1d_1_1System.html#ade0543632b4a78050b459a93b8ee4d55">System::WField</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Fd1d_1_1SystemAccess.html#a8eb89c66a10c15e1f40caeb39cb10d78">wFields</a> ()</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Fields</div></td></tr>
+<tr class="memitem:a8eb89c66a10c15e1f40caeb39cb10d78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Fd1d_1_1System.html#af89c031c090a814a250cb72eb9f79daa">System::WField</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Fd1d_1_1SystemAccess.html#a8eb89c66a10c15e1f40caeb39cb10d78">wFields</a> ()</td></tr>
 <tr class="memdesc:a8eb89c66a10c15e1f40caeb39cb10d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get array of all chemical potential fields.  <a href="classPscf_1_1Fd1d_1_1SystemAccess.html#a8eb89c66a10c15e1f40caeb39cb10d78">More...</a><br /></td></tr>
 <tr class="separator:a8eb89c66a10c15e1f40caeb39cb10d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4703ae5b45b9e9c67e636c63be6be9e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Fd1d_1_1System.html#ade0543632b4a78050b459a93b8ee4d55">System::WField</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Fd1d_1_1SystemAccess.html#a4703ae5b45b9e9c67e636c63be6be9e0">wField</a> (int monomerId)</td></tr>
+<tr class="memitem:a4703ae5b45b9e9c67e636c63be6be9e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Fd1d_1_1System.html#af89c031c090a814a250cb72eb9f79daa">System::WField</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Fd1d_1_1SystemAccess.html#a4703ae5b45b9e9c67e636c63be6be9e0">wField</a> (int monomerId)</td></tr>
 <tr class="memdesc:a4703ae5b45b9e9c67e636c63be6be9e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get chemical potential field for a specific monomer type.  <a href="classPscf_1_1Fd1d_1_1SystemAccess.html#a4703ae5b45b9e9c67e636c63be6be9e0">More...</a><br /></td></tr>
 <tr class="separator:a4703ae5b45b9e9c67e636c63be6be9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a223ee317d138f0d216f30bdfcbf22003"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Fd1d_1_1System.html#a466cf3c56a784fd1218623e4769ce502">System::CField</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Fd1d_1_1SystemAccess.html#a223ee317d138f0d216f30bdfcbf22003">cFields</a> ()</td></tr>
+<tr class="memitem:a223ee317d138f0d216f30bdfcbf22003"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Fd1d_1_1System.html#a145a0f3aa8bb812d7a83ae2f6023db27">System::CField</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Fd1d_1_1SystemAccess.html#a223ee317d138f0d216f30bdfcbf22003">cFields</a> ()</td></tr>
 <tr class="memdesc:a223ee317d138f0d216f30bdfcbf22003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get array of all chemical potential fields.  <a href="classPscf_1_1Fd1d_1_1SystemAccess.html#a223ee317d138f0d216f30bdfcbf22003">More...</a><br /></td></tr>
 <tr class="separator:a223ee317d138f0d216f30bdfcbf22003"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c8003d76a5869236b7429152cacc872"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Fd1d_1_1System.html#a466cf3c56a784fd1218623e4769ce502">System::CField</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Fd1d_1_1SystemAccess.html#a1c8003d76a5869236b7429152cacc872">cField</a> (int monomerId)</td></tr>
+<tr class="memitem:a1c8003d76a5869236b7429152cacc872"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Fd1d_1_1System.html#a145a0f3aa8bb812d7a83ae2f6023db27">System::CField</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Fd1d_1_1SystemAccess.html#a1c8003d76a5869236b7429152cacc872">cField</a> (int monomerId)</td></tr>
 <tr class="memdesc:a1c8003d76a5869236b7429152cacc872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get chemical potential field for a specific monomer type.  <a href="classPscf_1_1Fd1d_1_1SystemAccess.html#a1c8003d76a5869236b7429152cacc872">More...</a><br /></td></tr>
 <tr class="separator:a1c8003d76a5869236b7429152cacc872"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -230,13 +230,11 @@ Public Member Functions</h2></td></tr>
 
 <p>Set the system after construction. </p>
 
-<p>Reimplemented in <a class="el" href="classPscf_1_1Fd1d_1_1Sweep.html#a1e2c083c4e0dfa0dc680ad29507e25c5">Pscf::Fd1d::Sweep</a>.</p>
-
 <p class="definition">Definition at line <a class="el" href="SystemAccess_8cpp_source.html#l00038">38</a> of file <a class="el" href="SystemAccess_8cpp_source.html">SystemAccess.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="SystemAccess_8h_source.html#l00154">system()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00050">Pscf::Fd1d::Sweep::setSystem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00168">Pscf::Fd1d::System::readParameters()</a>.</p>
 
 </div>
 </div>
@@ -269,7 +267,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="NrIterator_8cpp_source.html#l00137">Pscf::Fd1d::NrIterator::computeJacobian()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00078">Pscf::Fd1d::NrIterator::computeResidual()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00208">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00196">Pscf::Fd1d::Sweep::outputSolution()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00072">Pscf::Fd1d::CompositionSweep::outputSummary()</a>, <a class="el" href="MuSweep_8cpp_source.html#l00073">Pscf::Fd1d::MuSweep::outputSummary()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00225">Pscf::Fd1d::Sweep::outputSummary()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00050">Pscf::Fd1d::Sweep::setSystem()</a>, <a class="el" href="SystemAccess_8cpp_source.html#l00038">setSystem()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00158">Pscf::Fd1d::Sweep::solve()</a>, and <a class="el" href="NrIterator_8cpp_source.html#l00223">Pscf::Fd1d::NrIterator::solve()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="NrIterator_8cpp_source.html#l00137">Pscf::Fd1d::NrIterator::computeJacobian()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00078">Pscf::Fd1d::NrIterator::computeResidual()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00207">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00186">Pscf::Fd1d::Sweep::outputSolution()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00093">Pscf::Fd1d::CompositionSweep::outputSummary()</a>, <a class="el" href="MuSweep_8cpp_source.html#l00075">Pscf::Fd1d::MuSweep::outputSummary()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00215">Pscf::Fd1d::Sweep::outputSummary()</a>, <a class="el" href="SystemAccess_8cpp_source.html#l00038">setSystem()</a>, <a class="el" href="fd1d_2sweep_2LinearSweep_8cpp_source.html#l00047">Pscf::Fd1d::LinearSweep::setup()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00148">Pscf::Fd1d::Sweep::solve()</a>, <a class="el" href="FdIterator_8cpp_source.html#l00140">Pscf::Fd1d::FdIterator::solve()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00223">Pscf::Fd1d::NrIterator::solve()</a>, and <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00030">Pscf::Fd1d::Sweep::Sweep()</a>.</p>
 
 </div>
 </div>
@@ -331,9 +329,9 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SystemAccess_8h_source.html#l00172">172</a> of file <a class="el" href="SystemAccess_8h_source.html">SystemAccess.h</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00316">Pscf::Fd1d::System::mixture()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00438">Pscf::Fd1d::System::mixture()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00070">Pscf::Fd1d::Sweep::checkAllocation()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00139">Pscf::Fd1d::HomogeneousComparison::compute()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00137">Pscf::Fd1d::NrIterator::computeJacobian()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00078">Pscf::Fd1d::NrIterator::computeResidual()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00260">Pscf::Fd1d::FieldIo::extend()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00122">Pscf::Fd1d::Sweep::extrapolate()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00208">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00072">Pscf::Fd1d::CompositionSweep::outputSummary()</a>, <a class="el" href="MuSweep_8cpp_source.html#l00073">Pscf::Fd1d::MuSweep::outputSummary()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00056">Pscf::Fd1d::FieldIo::readFields()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00036">Pscf::Fd1d::CompositionSweep::readParameters()</a>, <a class="el" href="MuSweep_8cpp_source.html#l00036">Pscf::Fd1d::MuSweep::readParameters()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00197">Pscf::Fd1d::FieldIo::remesh()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00207">Pscf::Fd1d::NrIterator::residualNorm()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00062">Pscf::Fd1d::CompositionSweep::setParameters()</a>, <a class="el" href="LengthSweep_8cpp_source.html#l00058">Pscf::Fd1d::LengthSweep::setParameters()</a>, <a class="el" href="MuSweep_8cpp_source.html#l00063">Pscf::Fd1d::MuSweep::setParameters()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00050">Pscf::Fd1d::CompositionSweep::setup()</a>, <a class="el" href="LengthSweep_8cpp_source.html#l00049">Pscf::Fd1d::LengthSweep::setup()</a>, <a class="el" href="MuSweep_8cpp_source.html#l00050">Pscf::Fd1d::MuSweep::setup()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00223">Pscf::Fd1d::NrIterator::solve()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00121">Pscf::Fd1d::FieldIo::writeBlockCFields()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00092">Pscf::Fd1d::FieldIo::writeFields()</a>, and <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00156">Pscf::Fd1d::FieldIo::writeVertexQ()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00060">Pscf::Fd1d::Sweep::checkAllocation()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00138">Pscf::Fd1d::HomogeneousComparison::compute()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00137">Pscf::Fd1d::NrIterator::computeJacobian()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00078">Pscf::Fd1d::NrIterator::computeResidual()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00112">Pscf::Fd1d::Sweep::extrapolate()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00207">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00093">Pscf::Fd1d::CompositionSweep::outputSummary()</a>, <a class="el" href="MuSweep_8cpp_source.html#l00075">Pscf::Fd1d::MuSweep::outputSummary()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00039">Pscf::Fd1d::CompositionSweep::readParameters()</a>, <a class="el" href="MuSweep_8cpp_source.html#l00038">Pscf::Fd1d::MuSweep::readParameters()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00207">Pscf::Fd1d::NrIterator::residualNorm()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00074">Pscf::Fd1d::CompositionSweep::setParameters()</a>, <a class="el" href="LengthSweep_8cpp_source.html#l00060">Pscf::Fd1d::LengthSweep::setParameters()</a>, <a class="el" href="MuSweep_8cpp_source.html#l00065">Pscf::Fd1d::MuSweep::setParameters()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00054">Pscf::Fd1d::CompositionSweep::setup()</a>, <a class="el" href="LengthSweep_8cpp_source.html#l00051">Pscf::Fd1d::LengthSweep::setup()</a>, <a class="el" href="MuSweep_8cpp_source.html#l00052">Pscf::Fd1d::MuSweep::setup()</a>, <a class="el" href="FdIterator_8cpp_source.html#l00140">Pscf::Fd1d::FdIterator::solve()</a>, and <a class="el" href="NrIterator_8cpp_source.html#l00223">Pscf::Fd1d::NrIterator::solve()</a>.</p>
 
 </div>
 </div>
@@ -364,7 +362,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SystemAccess_8h_source.html#l00181">181</a> of file <a class="el" href="SystemAccess_8h_source.html">SystemAccess.h</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00316">Pscf::Fd1d::System::mixture()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00438">Pscf::Fd1d::System::mixture()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
 </div>
 </div>
@@ -395,9 +393,9 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SystemAccess_8h_source.html#l00190">190</a> of file <a class="el" href="SystemAccess_8h_source.html">SystemAccess.h</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00322">Pscf::Fd1d::System::domain()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00444">Pscf::Fd1d::System::domain()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00070">Pscf::Fd1d::Sweep::checkAllocation()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00139">Pscf::Fd1d::HomogeneousComparison::compute()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00137">Pscf::Fd1d::NrIterator::computeJacobian()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00078">Pscf::Fd1d::NrIterator::computeResidual()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00260">Pscf::Fd1d::FieldIo::extend()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00122">Pscf::Fd1d::Sweep::extrapolate()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00208">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00072">Pscf::Fd1d::CompositionSweep::outputSummary()</a>, <a class="el" href="MuSweep_8cpp_source.html#l00073">Pscf::Fd1d::MuSweep::outputSummary()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00225">Pscf::Fd1d::Sweep::outputSummary()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00056">Pscf::Fd1d::FieldIo::readFields()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00042">Pscf::Fd1d::NrIterator::readParameters()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00197">Pscf::Fd1d::FieldIo::remesh()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00207">Pscf::Fd1d::NrIterator::residualNorm()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00223">Pscf::Fd1d::NrIterator::solve()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00121">Pscf::Fd1d::FieldIo::writeBlockCFields()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00092">Pscf::Fd1d::FieldIo::writeFields()</a>, and <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00156">Pscf::Fd1d::FieldIo::writeVertexQ()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00060">Pscf::Fd1d::Sweep::checkAllocation()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00138">Pscf::Fd1d::HomogeneousComparison::compute()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00137">Pscf::Fd1d::NrIterator::computeJacobian()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00078">Pscf::Fd1d::NrIterator::computeResidual()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00112">Pscf::Fd1d::Sweep::extrapolate()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00207">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00093">Pscf::Fd1d::CompositionSweep::outputSummary()</a>, <a class="el" href="MuSweep_8cpp_source.html#l00075">Pscf::Fd1d::MuSweep::outputSummary()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00215">Pscf::Fd1d::Sweep::outputSummary()</a>, <a class="el" href="FdIterator_8cpp_source.html#l00043">Pscf::Fd1d::FdIterator::readParameters()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00042">Pscf::Fd1d::NrIterator::readParameters()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00207">Pscf::Fd1d::NrIterator::residualNorm()</a>, <a class="el" href="FdIterator_8cpp_source.html#l00140">Pscf::Fd1d::FdIterator::solve()</a>, and <a class="el" href="NrIterator_8cpp_source.html#l00223">Pscf::Fd1d::NrIterator::solve()</a>.</p>
 
 </div>
 </div>
@@ -428,7 +426,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SystemAccess_8h_source.html#l00199">199</a> of file <a class="el" href="SystemAccess_8h_source.html">SystemAccess.h</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00322">Pscf::Fd1d::System::domain()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00444">Pscf::Fd1d::System::domain()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
 </div>
 </div>
@@ -459,9 +457,9 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SystemAccess_8h_source.html#l00208">208</a> of file <a class="el" href="SystemAccess_8h_source.html">SystemAccess.h</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00341">Pscf::Fd1d::System::interaction()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00463">Pscf::Fd1d::System::interaction()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00139">Pscf::Fd1d::HomogeneousComparison::compute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00138">Pscf::Fd1d::HomogeneousComparison::compute()</a>.</p>
 
 </div>
 </div>
@@ -492,7 +490,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SystemAccess_8h_source.html#l00217">217</a> of file <a class="el" href="SystemAccess_8h_source.html">SystemAccess.h</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00341">Pscf::Fd1d::System::interaction()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00463">Pscf::Fd1d::System::interaction()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
 </div>
 </div>
@@ -513,7 +511,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get homogeneous mixture (for reference calculations). </p>
 
-<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00139">Pscf::Fd1d::HomogeneousComparison::compute()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00208">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00072">Pscf::Fd1d::CompositionSweep::outputSummary()</a>, and <a class="el" href="MuSweep_8cpp_source.html#l00073">Pscf::Fd1d::MuSweep::outputSummary()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00138">Pscf::Fd1d::HomogeneousComparison::compute()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00207">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00093">Pscf::Fd1d::CompositionSweep::outputSummary()</a>, and <a class="el" href="MuSweep_8cpp_source.html#l00075">Pscf::Fd1d::MuSweep::outputSummary()</a>.</p>
 
 </div>
 </div>
@@ -544,7 +542,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SystemAccess_8h_source.html#l00236">236</a> of file <a class="el" href="SystemAccess_8h_source.html">SystemAccess.h</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00335">Pscf::Fd1d::System::homogeneous()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00457">Pscf::Fd1d::System::homogeneous()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
 </div>
 </div>
@@ -575,9 +573,9 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SystemAccess_8h_source.html#l00226">226</a> of file <a class="el" href="SystemAccess_8h_source.html">SystemAccess.h</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00328">Pscf::Fd1d::System::fileMaster()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00450">Pscf::Fd1d::System::fileMaster()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00247">Pscf::Fd1d::FieldIo::extend()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00196">Pscf::Fd1d::Sweep::outputSolution()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00047">Pscf::Fd1d::FieldIo::readFields()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00184">Pscf::Fd1d::FieldIo::remesh()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00097">Pscf::Fd1d::Sweep::setup()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00110">Pscf::Fd1d::FieldIo::writeBlockCFields()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00083">Pscf::Fd1d::FieldIo::writeFields()</a>, and <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00144">Pscf::Fd1d::FieldIo::writeVertexQ()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00186">Pscf::Fd1d::Sweep::outputSolution()</a>, and <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00087">Pscf::Fd1d::Sweep::setup()</a>.</p>
 
 </div>
 </div>
@@ -591,7 +589,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Fd1d_1_1System.html#ade0543632b4a78050b459a93b8ee4d55">System::WField</a> &gt; &amp; Pscf::Fd1d::SystemAccess::wFields </td>
+          <td class="memname"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Fd1d_1_1System.html#af89c031c090a814a250cb72eb9f79daa">System::WField</a> &gt; &amp; Pscf::Fd1d::SystemAccess::wFields </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -609,9 +607,9 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SystemAccess_8h_source.html#l00246">246</a> of file <a class="el" href="SystemAccess_8h_source.html">SystemAccess.h</a>.</p>
 
-<p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>, and <a class="el" href="fd1d_2System_8h_source.html#l00360">Pscf::Fd1d::System::wFields()</a>.</p>
+<p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>, and <a class="el" href="fd1d_2System_8h_source.html#l00482">Pscf::Fd1d::System::wFields()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="NrIterator_8cpp_source.html#l00078">Pscf::Fd1d::NrIterator::computeResidual()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00177">Pscf::Fd1d::Sweep::getSolution()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00196">Pscf::Fd1d::Sweep::outputSolution()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00167">Pscf::Fd1d::Sweep::reset()</a>, and <a class="el" href="NrIterator_8cpp_source.html#l00223">Pscf::Fd1d::NrIterator::solve()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="NrIterator_8cpp_source.html#l00078">Pscf::Fd1d::NrIterator::computeResidual()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00167">Pscf::Fd1d::Sweep::getSolution()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00186">Pscf::Fd1d::Sweep::outputSolution()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00157">Pscf::Fd1d::Sweep::reset()</a>, <a class="el" href="FdIterator_8cpp_source.html#l00140">Pscf::Fd1d::FdIterator::solve()</a>, and <a class="el" href="NrIterator_8cpp_source.html#l00223">Pscf::Fd1d::NrIterator::solve()</a>.</p>
 
 </div>
 </div>
@@ -625,7 +623,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Fd1d_1_1System.html#ade0543632b4a78050b459a93b8ee4d55">System::WField</a> &amp; Pscf::Fd1d::SystemAccess::wField </td>
+          <td class="memname"><a class="el" href="classPscf_1_1Fd1d_1_1System.html#af89c031c090a814a250cb72eb9f79daa">System::WField</a> &amp; Pscf::Fd1d::SystemAccess::wField </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>monomerId</em></td><td>)</td>
@@ -649,9 +647,9 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SystemAccess_8h_source.html#l00256">256</a> of file <a class="el" href="SystemAccess_8h_source.html">SystemAccess.h</a>.</p>
 
-<p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>, and <a class="el" href="fd1d_2System_8h_source.html#l00367">Pscf::Fd1d::System::wField()</a>.</p>
+<p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>, and <a class="el" href="fd1d_2System_8h_source.html#l00489">Pscf::Fd1d::System::wField()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="NrIterator_8cpp_source.html#l00137">Pscf::Fd1d::NrIterator::computeJacobian()</a>, and <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00122">Pscf::Fd1d::Sweep::extrapolate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="NrIterator_8cpp_source.html#l00137">Pscf::Fd1d::NrIterator::computeJacobian()</a>, and <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00112">Pscf::Fd1d::Sweep::extrapolate()</a>.</p>
 
 </div>
 </div>
@@ -665,7 +663,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Fd1d_1_1System.html#a466cf3c56a784fd1218623e4769ce502">System::CField</a> &gt; &amp; Pscf::Fd1d::SystemAccess::cFields </td>
+          <td class="memname"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Fd1d_1_1System.html#a145a0f3aa8bb812d7a83ae2f6023db27">System::CField</a> &gt; &amp; Pscf::Fd1d::SystemAccess::cFields </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -683,9 +681,9 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SystemAccess_8h_source.html#l00266">266</a> of file <a class="el" href="SystemAccess_8h_source.html">SystemAccess.h</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00374">Pscf::Fd1d::System::cFields()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00496">Pscf::Fd1d::System::cFields()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="NrIterator_8cpp_source.html#l00078">Pscf::Fd1d::NrIterator::computeResidual()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00196">Pscf::Fd1d::Sweep::outputSolution()</a>, and <a class="el" href="NrIterator_8cpp_source.html#l00223">Pscf::Fd1d::NrIterator::solve()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="NrIterator_8cpp_source.html#l00078">Pscf::Fd1d::NrIterator::computeResidual()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00186">Pscf::Fd1d::Sweep::outputSolution()</a>, <a class="el" href="FdIterator_8cpp_source.html#l00140">Pscf::Fd1d::FdIterator::solve()</a>, and <a class="el" href="NrIterator_8cpp_source.html#l00223">Pscf::Fd1d::NrIterator::solve()</a>.</p>
 
 </div>
 </div>
@@ -699,7 +697,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Fd1d_1_1System.html#a466cf3c56a784fd1218623e4769ce502">System::CField</a> &amp; Pscf::Fd1d::SystemAccess::cField </td>
+          <td class="memname"><a class="el" href="classPscf_1_1Fd1d_1_1System.html#a145a0f3aa8bb812d7a83ae2f6023db27">System::CField</a> &amp; Pscf::Fd1d::SystemAccess::cField </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>monomerId</em></td><td>)</td>
@@ -723,7 +721,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SystemAccess_8h_source.html#l00275">275</a> of file <a class="el" href="SystemAccess_8h_source.html">SystemAccess.h</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00380">Pscf::Fd1d::System::cField()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00502">Pscf::Fd1d::System::cField()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
 </div>
 </div>
@@ -734,7 +732,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

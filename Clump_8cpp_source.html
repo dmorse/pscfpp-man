@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -56,7 +56,7 @@ $(function() {
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Clump.h&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> { </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>Homogeneous { </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="namespacePscf_1_1Homogeneous.html">   11</a></span><span class="keyword">namespace </span>Homogeneous { </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">   * Constructor.</span></div>
@@ -81,7 +81,7 @@ $(function() {
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>   <span class="comment">/* </span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">   * Extract a Clump from an istream.</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classPscf_1_1Homogeneous_1_1Clump.html#a94867118290ad03f5f748509383ffe3f">   36</a></span>   std::istream&amp; <a class="code hl_function" href="namespacePscf.html#af3acfd9252c655770b47d1ca2428fc09">operator&gt;&gt;</a>(std::istream&amp; in, <a class="code hl_class" href="classPscf_1_1Homogeneous_1_1Clump.html">Clump</a> &amp;block)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classPscf_1_1Homogeneous_1_1Clump.html#a94867118290ad03f5f748509383ffe3f">   36</a></span>   std::istream&amp; <a class="code hl_function" href="namespacePscf_1_1Homogeneous.html#ad03a5acef1c04073a94785d4352dc990">operator&gt;&gt;</a>(std::istream&amp; in, <a class="code hl_class" href="classPscf_1_1Homogeneous_1_1Clump.html">Clump</a> &amp;block)</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>   {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      in &gt;&gt; block.monomerId_;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      in &gt;&gt; block.size_;</div>
@@ -91,7 +91,7 @@ $(function() {
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>   <span class="comment">/* </span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">   * Output a Clump to an ostream, without line breaks.</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classPscf_1_1Homogeneous_1_1Clump.html#a15665e7308195c6770cb07fa6f98646c">   46</a></span>   std::ostream&amp; <a class="code hl_function" href="namespacePscf.html#afce117557303a64ccd6097215d9fddf6">operator&lt;&lt;</a>(std::ostream&amp; out, <span class="keyword">const</span> <a class="code hl_class" href="classPscf_1_1Homogeneous_1_1Clump.html">Clump</a> &amp;block) </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classPscf_1_1Homogeneous_1_1Clump.html#a15665e7308195c6770cb07fa6f98646c">   46</a></span>   std::ostream&amp; <a class="code hl_function" href="namespacePscf_1_1Homogeneous.html#abf9048d9d08a33f63bac156a3143c9ae">operator&lt;&lt;</a>(std::ostream&amp; out, <span class="keyword">const</span> <a class="code hl_class" href="classPscf_1_1Homogeneous_1_1Clump.html">Clump</a> &amp;block) </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>   {</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      out &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; block.monomerId_;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      out &lt;&lt; <span class="stringliteral">&quot;  &quot;</span>;</div>
@@ -110,13 +110,13 @@ $(function() {
 <div class="ttc" id="aclassPscf_1_1Homogeneous_1_1Clump_html_a79238aa64733680f5e971e9beee095ca"><div class="ttname"><a href="classPscf_1_1Homogeneous_1_1Clump.html#a79238aa64733680f5e971e9beee095ca">Pscf::Homogeneous::Clump::size</a></div><div class="ttdeci">double size() const</div><div class="ttdoc">Get the size (number of monomers) in this block.</div><div class="ttdef"><b>Definition:</b> <a href="Clump_8h_source.html#l00133">Clump.h:133</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Homogeneous_1_1Clump_html_ac309f4bc48a1a5d0f1217fe46e6b8bdd"><div class="ttname"><a href="classPscf_1_1Homogeneous_1_1Clump.html#ac309f4bc48a1a5d0f1217fe46e6b8bdd">Pscf::Homogeneous::Clump::setMonomerId</a></div><div class="ttdeci">void setMonomerId(int monomerId)</div><div class="ttdoc">Set the monomer id.</div><div class="ttdef"><b>Definition:</b> <a href="Clump_8cpp_source.html#l00024">Clump.cpp:24</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Homogeneous_1_1Clump_html_ad686da7f9637008ef7cc013aa262e4c8"><div class="ttname"><a href="classPscf_1_1Homogeneous_1_1Clump.html#ad686da7f9637008ef7cc013aa262e4c8">Pscf::Homogeneous::Clump::Clump</a></div><div class="ttdeci">Clump()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="Clump_8cpp_source.html#l00016">Clump.cpp:16</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Homogeneous_html_abf9048d9d08a33f63bac156a3143c9ae"><div class="ttname"><a href="namespacePscf_1_1Homogeneous.html#abf9048d9d08a33f63bac156a3143c9ae">Pscf::Homogeneous::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const Clump &amp;block)</div><div class="ttdoc">ostream inserter for a Clump.</div><div class="ttdef"><b>Definition:</b> <a href="Clump_8cpp_source.html#l00046">Clump.cpp:46</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Homogeneous_html_ad03a5acef1c04073a94785d4352dc990"><div class="ttname"><a href="namespacePscf_1_1Homogeneous.html#ad03a5acef1c04073a94785d4352dc990">Pscf::Homogeneous::operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;in, Clump &amp;block)</div><div class="ttdoc">istream extractor for a Clump.</div><div class="ttdef"><b>Definition:</b> <a href="Clump_8cpp_source.html#l00036">Clump.cpp:36</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">Classes for polymer self-consistent field theory.</div><div class="ttdef"><b>Definition:</b> <a href="BlockDescriptor_8cpp_source.html#l00010">BlockDescriptor.cpp:11</a></div></div>
-<div class="ttc" id="anamespacePscf_html_af3acfd9252c655770b47d1ca2428fc09"><div class="ttname"><a href="namespacePscf.html#af3acfd9252c655770b47d1ca2428fc09">Pscf::operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;in, BlockDescriptor &amp;block)</div><div class="ttdoc">istream extractor for a BlockDescriptor.</div><div class="ttdef"><b>Definition:</b> <a href="BlockDescriptor_8cpp_source.html#l00070">BlockDescriptor.cpp:70</a></div></div>
-<div class="ttc" id="anamespacePscf_html_afce117557303a64ccd6097215d9fddf6"><div class="ttname"><a href="namespacePscf.html#afce117557303a64ccd6097215d9fddf6">Pscf::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, BlockDescriptor const &amp;block)</div><div class="ttdoc">ostream inserter for a BlockDescriptor.</div><div class="ttdef"><b>Definition:</b> <a href="BlockDescriptor_8cpp_source.html#l00084">BlockDescriptor.cpp:84</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:41 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

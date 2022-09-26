@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -66,7 +66,7 @@ Inheritance diagram for Pscf::Pspc::Sweep&lt; D &gt;:</div>
 <area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="130,56,380,80"/>
 <area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="0,0,250,24"/>
 <area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="260,0,510,24"/>
-<area href="classPscf_1_1Pspc_1_1LinearSweep.html" title="Base class for a sweep in parameter space where parameters change linearly with the sweep variable." alt="Pscf::Pspc::LinearSweep&lt; D &gt;" shape="rect" coords="130,280,380,304"/>
+<area href="classPscf_1_1Pspc_1_1LinearSweep.html" title="A sweep in parameter space where one or more parameters change linearly with the sweep variable." alt="Pscf::Pspc::LinearSweep&lt; D &gt;" shape="rect" coords="130,280,380,304"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -116,9 +116,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aba5de04c5db452000b044e0331ad5182 inherit pub_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#aba5de04c5db452000b044e0331ad5182">readParamOptional</a> (std::istream &amp;in)</td></tr>
 <tr class="memdesc:aba5de04c5db452000b044e0331ad5182 inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read optional parameter file block.  <a href="classUtil_1_1ParamComposite.html#aba5de04c5db452000b044e0331ad5182">More...</a><br /></td></tr>
 <tr class="separator:aba5de04c5db452000b044e0331ad5182 inherit pub_methods_classUtil_1_1ParamComposite"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addf0c36c3560471bfe47f0be008575b9 inherit pub_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#addf0c36c3560471bfe47f0be008575b9">writeParam</a> (std::ostream &amp;out)</td></tr>
-<tr class="memdesc:addf0c36c3560471bfe47f0be008575b9 inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write all parameters to an output stream.  <a href="classUtil_1_1ParamComposite.html#addf0c36c3560471bfe47f0be008575b9">More...</a><br /></td></tr>
-<tr class="separator:addf0c36c3560471bfe47f0be008575b9 inherit pub_methods_classUtil_1_1ParamComposite"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c288fc3f8cd3f3777c2aa872114cb0c inherit pub_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a5c288fc3f8cd3f3777c2aa872114cb0c">writeParam</a> (std::ostream &amp;out) const</td></tr>
+<tr class="memdesc:a5c288fc3f8cd3f3777c2aa872114cb0c inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write all parameters to an output stream.  <a href="classUtil_1_1ParamComposite.html#a5c288fc3f8cd3f3777c2aa872114cb0c">More...</a><br /></td></tr>
+<tr class="separator:a5c288fc3f8cd3f3777c2aa872114cb0c inherit pub_methods_classUtil_1_1ParamComposite"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02a1172d7cd86d4015be8d9e65fe750f inherit pub_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a02a1172d7cd86d4015be8d9e65fe750f">load</a> (<a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">Serializable::IArchive</a> &amp;ar)</td></tr>
 <tr class="memdesc:a02a1172d7cd86d4015be8d9e65fe750f inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load all parameters from an input archive.  <a href="classUtil_1_1ParamComposite.html#a02a1172d7cd86d4015be8d9e65fe750f">More...</a><br /></td></tr>
 <tr class="separator:a02a1172d7cd86d4015be8d9e65fe750f inherit pub_methods_classUtil_1_1ParamComposite"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -295,9 +295,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5234b604f9e852f53eedd7de7c354a1e inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a5234b604f9e852f53eedd7de7c354a1e">readParam</a> (std::istream &amp;in)=0</td></tr>
 <tr class="memdesc:a5234b604f9e852f53eedd7de7c354a1e inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter(s) from file.  <a href="classUtil_1_1ParamComponent.html#a5234b604f9e852f53eedd7de7c354a1e">More...</a><br /></td></tr>
 <tr class="separator:a5234b604f9e852f53eedd7de7c354a1e inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac17d6ab63f9b0e5f966d6a3cfbc26d86 inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ac17d6ab63f9b0e5f966d6a3cfbc26d86">writeParam</a> (std::ostream &amp;out)=0</td></tr>
-<tr class="memdesc:ac17d6ab63f9b0e5f966d6a3cfbc26d86 inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter(s) to file.  <a href="classUtil_1_1ParamComponent.html#ac17d6ab63f9b0e5f966d6a3cfbc26d86">More...</a><br /></td></tr>
-<tr class="separator:ac17d6ab63f9b0e5f966d6a3cfbc26d86 inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c9b5abc1f5cf4a07b5f8089020a8ce inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#aa0c9b5abc1f5cf4a07b5f8089020a8ce">writeParam</a> (std::ostream &amp;out) const =0</td></tr>
+<tr class="memdesc:aa0c9b5abc1f5cf4a07b5f8089020a8ce inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter(s) to file.  <a href="classUtil_1_1ParamComponent.html#aa0c9b5abc1f5cf4a07b5f8089020a8ce">More...</a><br /></td></tr>
+<tr class="separator:aa0c9b5abc1f5cf4a07b5f8089020a8ce inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7925e60ccaf7ecf2ea866e689983124d inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a7925e60ccaf7ecf2ea866e689983124d">load</a> (<a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">Serializable::IArchive</a> &amp;ar)</td></tr>
 <tr class="memdesc:a7925e60ccaf7ecf2ea866e689983124d inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load internal state from an archive.  <a href="classUtil_1_1ParamComponent.html#a7925e60ccaf7ecf2ea866e689983124d">More...</a><br /></td></tr>
 <tr class="separator:a7925e60ccaf7ecf2ea866e689983124d inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -508,6 +508,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a3751653f74fa721d9a5b14c9fbc0e613 inherit pro_attribs_classPscf_1_1SweepTmpl"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#a3751653f74fa721d9a5b14c9fbc0e613">baseFileName_</a></td></tr>
 <tr class="memdesc:a3751653f74fa721d9a5b14c9fbc0e613 inherit pro_attribs_classPscf_1_1SweepTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base name for output files.  <a href="classPscf_1_1SweepTmpl.html#a3751653f74fa721d9a5b14c9fbc0e613">More...</a><br /></td></tr>
 <tr class="separator:a3751653f74fa721d9a5b14c9fbc0e613 inherit pro_attribs_classPscf_1_1SweepTmpl"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7729c72eac1669d94c59d8148325a83 inherit pro_attribs_classPscf_1_1SweepTmpl"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#ab7729c72eac1669d94c59d8148325a83">writeRhoRGrid_</a></td></tr>
+<tr class="memdesc:ab7729c72eac1669d94c59d8148325a83 inherit pro_attribs_classPscf_1_1SweepTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to write real space concentration field files.  <a href="classPscf_1_1SweepTmpl.html#ab7729c72eac1669d94c59d8148325a83">More...</a><br /></td></tr>
+<tr class="separator:ab7729c72eac1669d94c59d8148325a83 inherit pro_attribs_classPscf_1_1SweepTmpl"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
@@ -531,7 +534,7 @@ template&lt;int D&gt; </div>
 
 <p>Default Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="Sweep_8tpp_source.html#l00028">28</a> of file <a class="el" href="Sweep_8tpp_source.html">Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html#l00028">28</a> of file <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html">pspc/sweep/Sweep.tpp</a>.</p>
 
 </div>
 </div>
@@ -555,7 +558,7 @@ template&lt;int D&gt; </div>
 
 <p>Constructor, creates assocation with parent system. </p>
 
-<p class="definition">Definition at line <a class="el" href="Sweep_8tpp_source.html#l00037">37</a> of file <a class="el" href="Sweep_8tpp_source.html">Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html#l00037">37</a> of file <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html">pspc/sweep/Sweep.tpp</a>.</p>
 
 </div>
 </div>
@@ -575,7 +578,7 @@ template&lt;int D&gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="Sweep_8tpp_source.html#l00046">46</a> of file <a class="el" href="Sweep_8tpp_source.html">Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html#l00046">46</a> of file <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html">pspc/sweep/Sweep.tpp</a>.</p>
 
 </div>
 </div>
@@ -600,7 +603,7 @@ template&lt;int D&gt; </div>
 
 <p>Set association with parent <a class="el" href="classPscf_1_1Pspc_1_1System.html" title="Main class for SCFT simulation of one system.">System</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="Sweep_8tpp_source.html#l00053">53</a> of file <a class="el" href="Sweep_8tpp_source.html">Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html#l00053">53</a> of file <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html">pspc/sweep/Sweep.tpp</a>.</p>
 
 </div>
 </div>
@@ -638,9 +641,9 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Sweep_8tpp_source.html#l00060">60</a> of file <a class="el" href="Sweep_8tpp_source.html">Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html#l00060">60</a> of file <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html">pspc/sweep/Sweep.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="BasisFieldState_8tpp_source.html#l00048">Pscf::Pspc::BasisFieldState&lt; D &gt;::allocate()</a>, <a class="el" href="FieldState_8tpp_source.html#l00060">Pscf::Pspc::FieldState&lt; D, FT &gt;::setSystem()</a>, <a class="el" href="FieldState_8h_source.html#l00177">Pscf::Pspc::FieldState&lt; D, FT &gt;::unitCell()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="pspc_2sweep_2BasisFieldState_8tpp_source.html#l00048">Pscf::Pspc::BasisFieldState&lt; D &gt;::allocate()</a>, <a class="el" href="pspc_2sweep_2FieldState_8tpp_source.html#l00060">Pscf::Pspc::FieldState&lt; D, FT &gt;::setSystem()</a>, <a class="el" href="pspc_2sweep_2FieldState_8h_source.html#l00177">Pscf::Pspc::FieldState&lt; D, FT &gt;::unitCell()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -672,9 +675,9 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classPscf_1_1Pspc_1_1LinearSweep.html#a17a0c8787a981cc47eb053861cac1c15">Pscf::Pspc::LinearSweep&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Sweep_8tpp_source.html#l00072">72</a> of file <a class="el" href="Sweep_8tpp_source.html">Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html#l00072">72</a> of file <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html">pspc/sweep/Sweep.tpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LinearSweep_8tpp_source.html#l00050">Pscf::Pspc::LinearSweep&lt; D &gt;::setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pspc_2sweep_2LinearSweep_8tpp_source.html#l00050">Pscf::Pspc::LinearSweep&lt; D &gt;::setup()</a>.</p>
 
 </div>
 </div>
@@ -716,7 +719,7 @@ template&lt;int D&gt; </div>
 
 <p>Implemented in <a class="el" href="classPscf_1_1Pspc_1_1LinearSweep.html#a4b420ae9c24eb222a66151d97f6dd364">Pscf::Pspc::LinearSweep&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Sweep_8tpp_source.html#l00089">89</a> of file <a class="el" href="Sweep_8tpp_source.html">Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html#l00091">91</a> of file <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html">pspc/sweep/Sweep.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
@@ -758,9 +761,9 @@ template&lt;int D&gt; </div>
 
 <p>Implements <a class="el" href="classPscf_1_1SweepTmpl.html#a204d5f1b29a41a92ed149168c8b76e94">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Sweep_8tpp_source.html#l00099">99</a> of file <a class="el" href="Sweep_8tpp_source.html">Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html#l00101">101</a> of file <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html">pspc/sweep/Sweep.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="FSArray_8h_source.html#l00207">Util::FSArray&lt; Data, Capacity &gt;::size()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -795,7 +798,7 @@ template&lt;int D&gt; </div>
 
 <p>Implements <a class="el" href="classPscf_1_1SweepTmpl.html#abddfa9c19dad8cfbd5ff20691da6d440">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Sweep_8tpp_source.html#l00183">183</a> of file <a class="el" href="Sweep_8tpp_source.html">Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html#l00197">197</a> of file <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html">pspc/sweep/Sweep.tpp</a>.</p>
 
 </div>
 </div>
@@ -826,7 +829,7 @@ template&lt;int D&gt; </div>
 
 <p>Implements <a class="el" href="classPscf_1_1SweepTmpl.html#af36b40cbf32dde6b3dfa3eb0321c4e2a">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Sweep_8tpp_source.html#l00193">193</a> of file <a class="el" href="Sweep_8tpp_source.html">Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html#l00207">207</a> of file <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html">pspc/sweep/Sweep.tpp</a>.</p>
 
 </div>
 </div>
@@ -857,7 +860,7 @@ template&lt;int D&gt; </div>
 
 <p>Implements <a class="el" href="classPscf_1_1SweepTmpl.html#a068b815a618e98f8873a8ec87d952785">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Sweep_8tpp_source.html#l00207">207</a> of file <a class="el" href="Sweep_8tpp_source.html">Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html#l00221">221</a> of file <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html">pspc/sweep/Sweep.tpp</a>.</p>
 
 </div>
 </div>
@@ -887,7 +890,7 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classPscf_1_1SweepTmpl.html#a47c747feb697f7f2f560b87098f03c0f">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Sweep_8tpp_source.html#l00271">271</a> of file <a class="el" href="Sweep_8tpp_source.html">Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html#l00290">290</a> of file <a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html">pspc/sweep/Sweep.tpp</a>.</p>
 
 </div>
 </div>
@@ -955,12 +958,12 @@ template&lt;int D&gt; </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="pspc_2sweep_2Sweep_8h_source.html">pspc/sweep/Sweep.h</a></li>
-<li><a class="el" href="Sweep_8tpp_source.html">Sweep.tpp</a></li>
+<li><a class="el" href="pspc_2sweep_2Sweep_8tpp_source.html">pspc/sweep/Sweep.tpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

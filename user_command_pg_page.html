@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: 3.3.3 Commands for pscf_pgNd (CPU)</title>
+<title>PSCF: 3.4.3 Commands for pscf_pg (GPU)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -39,27 +39,32 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="index.html">PSCF - Polymer Self-Consistent Field Theory</a></li><li class="navelem"><a class="el" href="user_page.html">3 User Guide</a></li><li class="navelem"><a class="el" href="user_command_page.html">3.3 Command Files</a></li>  </ul>
+<li class="navelem"><a class="el" href="index.html">PSCF - Polymer Self-Consistent Field Theory</a></li><li class="navelem"><a class="el" href="user_page.html">3 User Guide</a></li><li class="navelem"><a class="el" href="user_command_page.html">3.4 Command Files</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">3.3.3 Commands for pscf_pgNd (CPU) </div></div>
+  <div class="headertitle"><div class="title">3.4.3 Commands for pscf_pg (GPU) </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="el" href="user_command_pc_page.html">3.3.2 Commands for pscf_pcNd (CPU)</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_example_page.html">3.4 Examples</a> (Next) <br  />
+<div class="textblock"><p ><a class="el" href="user_command_pc_page.html">3.4.2 Commands for pscf_pc (CPU)</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_example_page.html">3.5 Examples</a> (Next) <br  />
 </p>
-<p >Most of the available commands for the pscf_pgNd programs GPU programs are similar to those used by the pscf_pcNd CPU programs. Both GPU and CPU programs for periodic structures use the same set of file formats.</p>
-<p >The most important difference in functionality of the GPU and CPU codes is a difference in the treatment of space group symmetry. The pscf_pgNd GPU can read and write fields in symmetry-adapted basis format, but uses an algorithm to solve the SCFT equations that does not explicitly enforce a specified space group symmetry during the search for a solution. By specifying a space group in the parameter file and then using the READ_W_BASIS command to read in a w field with that symmetry in a symmetry adapted basis format, users may start from an initial guess with a known space group symmetry. If such an initial guess is near a stable or metastable solution with the desired symmetry, the iterator will generally preserve that space group symmetry during iteration and converge to a solution with the same space group. It is also possible, however, for the iterator to produce a solution that does not have the assumed symmetry. Using the WRITE_W_BASIS or WRITE_C_BASIS commands to write out w or c files in symmetry-adapted basis format after obtaining a converged solution is thus somewhat dangerous, since it will yield output files that are equivalent to the files obtained by outputting these fields in r-grid format only if the solution does in fact have the assumed space group symmetry.</p>
-<p >The following table shows a list of available commands for the pscf_pgNd GPU accelerated programs periodic microstructures (i.e., pscf_pg1d, pscf_pg2d, and pscf_pg3d).</p>
+<p >Most of the available commands for the pscf_pg programs GPU programs are similar to those used by the pscf_pc CPU programs. The GPU and CPU programs for periodic structures use the same set of file formats.</p>
+<h1><a class="anchor" id="user_command_pg_commands_section"></a>
+Commands</h1>
+<p >The following table shows a list of available commands for the pscf_pg GPU accelerated programs periodic microstructures (i.e., pscf_pg1, pscf_pg2, and pscf_pg3). Almost all of the commands are identical to those available for the pscf_pc CPU-based programs.</p>
 <table class="doxtable">
 <tr>
 <td><b>command </b>  </td><td><b>parameter(s)</b>  </td><td><b>description </b>   </td></tr>
 <tr>
 <td>READ_W_BASIS  </td><td>filename [string]  </td><td>Read w fields from file filename, in symmetry-adapted basis format   </td></tr>
 <tr>
-<td>READ_W_RGRID  </td><td>filename [string]  </td><td>Read w fields from file filename, in real-space grid (r-grid) format.   </td></tr>
+<td>READ_W_RGRID  </td><td>filename [string]  </td><td>Read w fields from file filename, in real-space grid (r-grid) format   </td></tr>
 <tr>
-<td>ITERATE  </td><td>filename [string] (conditional)  </td><td>Iteratively solve SCFT equations (after reading initial w fields)   </td></tr>
+<td>COMPUTE  </td><td></td><td>Solve modified diffusion equation for the current w fields   </td></tr>
+<tr>
+<td>ITERATE  </td><td></td><td>Iteratively solve SCFT equations (after initializing w fields)   </td></tr>
+<tr>
+<td>SWEEP  </td><td></td><td>Perform a sweep, as specified by the Sweep object in the param file.   </td></tr>
 <tr>
 <td>WRITE_W_BASIS  </td><td>filename [string]  </td><td>Write w fields to file filename, in symmetry-adapted basis format   </td></tr>
 <tr>
@@ -69,21 +74,47 @@ $(function() {
 <tr>
 <td>WRITE_C_RGRID  </td><td>filename [string]  </td><td>Write monomer volume fraction fields (c fields) to file filename, in r-grid format   </td></tr>
 <tr>
-<td>RGRID_TO_BASIS  </td><td>inFile [string], outFile[string  </td><td>Read fields from file inFile in real-space grid (r-grid) format, write to file outFile in symmetry-adapted basis format   </td></tr>
+<td>WRITE_C_BLOCK_RGRID  </td><td>filename [string]  </td><td>Write all individual block and solvent volume fraction fields (c fields) to file filename, in r-grid format. The block c fields are given in the order that the blocks appear in the param file, followed by the solvent fields in the order that the solvents appear in the param file   </td></tr>
 <tr>
-<td>BASIS_TO_RGRID  </td><td>inFile [string], outFile[string  </td><td>Read fields from file inFile in symmetry-adapted basis format, write to file outFile in real-space grid (r-grid) format   </td></tr>
+<td>WRITE_Q_SLICE  </td><td>filename [string], ip[int], ib[int], id[int], is[int]  </td><td>Write a "slice" of a propagator at fixed contour variable to file, in real-space grid (r-grid) format. This command writes the slice at contour step is, for direction id (id=0 or 1), of block ib of polymer ip to file named filename.   </td></tr>
 <tr>
-<td>KGRID_TO_RGRID  </td><td>inFile [string], outFile[string  </td><td>Read fields from file inFile in discrete Fourier expansion (k-grid) format, write to file outFile in r-grid format   </td></tr>
+<td>WRITE_Q_TAIL  </td><td>filename [string], ip[int], ib[int], id[int]  </td><td>Write the final "slice" (or tail) of a propagator to a file, in real-space grid (r-grid) format. This command writes the final slice of a propagor for direction id (id=0 or 1), of block ib of polymer ip to file named filename.   </td></tr>
 <tr>
-<td>RGRID_TO_KGRID  </td><td>inFile [string], outFile[string  </td><td>Read fields from file inFile in real-space (r-grid) format, write to outFile in discrete Fourier expansion (k-grid) format   </td></tr>
+<td>WRITE_Q  </td><td>filename [string], ip[int], ib[int], id[int]  </td><td>Write all "slice" of a specific propagator to a file, in real-space grid (r-grid) format. This command writes a single file containing all slices for direction id (id=0 or 1), of block ib of polymer ip to file named filename.   </td></tr>
+<tr>
+<td>WRITE_Q_ALL  </td><td>basename [string]  </td><td>Write all propagators for both directions of all blocks of all propagators to file, with each propagator in a different file, in real-space grid (r-grid) format. This file containing the propagator for polymer ip, block ib, and direction id has a name of the form (basename)_ip_ib_id.rf.   </td></tr>
+<tr>
+<td>WRITE_PARAM  </td><td>filename [string]  </td><td>Write version of the param file associated with the current that omits any Sweep block.   </td></tr>
+<tr>
+<td>WRITE_THERMO  </td><td>filename [string]  </td><td>Write thermodynamic data (free energy, pressure, phi, and mu for each species) to a file. If file already exists, this command will append thermodynamic data to the end of the file, rather than overwriting the file.   </td></tr>
+<tr>
+<td>WRITE_STARS  </td><td>filename [string]  </td><td>Write a list of all stars to file filename.   </td></tr>
+<tr>
+<td>WRITE_WAVES  </td><td>filename [string]  </td><td>Write a list of all waves to file filename.   </td></tr>
+<tr>
+<td>RGRID_TO_BASIS  </td><td>inFile [string], outFile [string]  </td><td>Read fields from file inFile in real-space grid (r-grid) format, write to file outFile in symmetry-adapted basis format   </td></tr>
+<tr>
+<td>BASIS_TO_RGRID  </td><td>inFile [string], outFile [string]  </td><td>Read fields from file inFile in symmetry-adapted basis format, write to file outFile in real-space grid (r-grid) format   </td></tr>
+<tr>
+<td>KGRID_TO_RGRID  </td><td>inFile [string], outFile [string]  </td><td>Read fields from file inFile in discrete Fourier expansion (k-grid) format, write to file outFile in r-grid format   </td></tr>
+<tr>
+<td>RGRID_TO_KGRID  </td><td>inFile [string], outFile [string]  </td><td>Read fields from file inFile in real-space (r-grid) format, write to outFile in discrete Fourier expansion (k-grid) format   </td></tr>
+<tr>
+<td>KGRID_TO_BASIS  </td><td>inFile [string], outFile [string]  </td><td>Read fields from file inFile in discrete Fourier expansion (k-grid) format, write to file outFile in symmetry-adapted basis format   </td></tr>
+<tr>
+<td>BASIS_TO_KGRID  </td><td>inFile [string], outFile [string]  </td><td>Read fields from file inFile in symmetry-adapted basis format, write to outFile in discrete Fourier expansion (k-grid) format   </td></tr>
+<tr>
+<td>CHECK_RGRID_SYMMETRY  </td><td>inFile [string]  </td><td>Read fields from file inFile in real-space (r-grid) format, check whether the fields have symmetry that matches the space group specified in the param file.   </td></tr>
+<tr>
+<td>GUESS_W_FROM_C  </td><td>inFile [string], outFile [string]  </td><td>Read monomer concentration fields in symmetry-adapted basis format from file inFile, generate chemical potential fields using the concentration fields and chi values, and write the potential fields to outFile in symmetry-adapted basis format. Also stores potential fields to be used by future commands (e.g., ITERATE or SWEEP).   </td></tr>
 </table>
 <p ><br  />
- <a class="el" href="user_command_pc_page.html">3.3.2 Commands for pscf_pcNd (CPU)</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_command_page.html">3.3 Command Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_example_page.html">3.4 Examples</a> (Next) </p>
+ <a class="el" href="user_command_pc_page.html">3.4.2 Commands for pscf_pc (CPU)</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_command_page.html">3.4 Command Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_example_page.html">3.5 Examples</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

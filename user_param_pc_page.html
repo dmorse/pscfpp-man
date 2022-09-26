@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: 3.2.3 Parameter files for pscf_pcNd</title>
+<title>PSCF: 3.3.7 pscf_pc (Periodic Problems, CPU)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -39,136 +39,106 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="index.html">PSCF - Polymer Self-Consistent Field Theory</a></li><li class="navelem"><a class="el" href="user_page.html">3 User Guide</a></li><li class="navelem"><a class="el" href="user_param_page.html">3.2 Parameter Files</a></li>  </ul>
+<li class="navelem"><a class="el" href="index.html">PSCF - Polymer Self-Consistent Field Theory</a></li><li class="navelem"><a class="el" href="user_page.html">3 User Guide</a></li><li class="navelem"><a class="el" href="user_param_page.html">3.3 Parameter Files</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">3.2.3 Parameter files for pscf_pcNd </div></div>
+  <div class="headertitle"><div class="title">3.3.7 pscf_pc (Periodic Problems, CPU) </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="el" href="user_param_fd_page.html">3.2.2 Parameter Files for pscf_fd</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_param_pg_page.html">3.2.3 Parameter files for pscf_pgNd</a> (Next) <br  />
+<div class="textblock"><p ><a class="el" href="user_param_fd_page.html">3.3.6 pscf_fd (1D Problems)</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_param_pg_page.html">3.3.8 pscf_pg (Periodic Problems, GPU)</a> (Next) <br  />
 </p>
-<h1><a class="anchor" id="user_param_pc_section"></a>
+<p >The pscf_pc and pscf_pg programs for periodic systems use nearly identical parameter file formats, and so are discussed together here.</p>
+<h1><a class="anchor" id="user_param_pc_example_sec"></a>
 Example</h1>
 <p >An example of a parameter file for the program pscf_pc3D is shown below.</p>
 <div class="fragment"><div class="line">System{</div>
 <div class="line">  Mixture{</div>
 <div class="line">    nMonomer  2</div>
-<div class="line">    monomers  A   1.0  </div>
+<div class="line">    monomers[</div>
+<div class="line">              A   1.0  </div>
 <div class="line">              B   1.0 </div>
+<div class="line">    ]</div>
 <div class="line">    nPolymer  1</div>
 <div class="line">    Polymer{</div>
 <div class="line">      type    linear</div>
 <div class="line">      nBlock  2</div>
-<div class="line">      blocks  0  0.25</div>
+<div class="line">      blocks[</div>
+<div class="line">              0  0.25</div>
 <div class="line">              1  0.75</div>
+<div class="line">      ]</div>
 <div class="line">      phi     1.0</div>
 <div class="line">    }</div>
 <div class="line">    ds   0.01</div>
 <div class="line">  }</div>
-<div class="line">  ChiInteraction{</div>
-<div class="line">    chi   1   0   20.0</div>
-<div class="line">          0   0    0.0</div>
-<div class="line">          1   1    0.0</div>
+<div class="line">  Interaction{</div>
+<div class="line">    chi(</div>
+<div class="line">          1   0   20.0</div>
+<div class="line">    )</div>
 <div class="line">  }</div>
 <div class="line">  Domain{</div>
-<div class="line">    unitCell  cubic   1.9254998725</div>
-<div class="line">    mesh              32  32  32</div>
-<div class="line">    groupName         I_m_-3_m</div>
+<div class="line">    unitCell         cubic       1.9254998725</div>
+<div class="line">    mesh             32  32  32</div>
+<div class="line">    groupName        I_m_-3_m</div>
 <div class="line">  }</div>
-<div class="line">  AmIterator{</div>
+<div class="line">  Iterator{</div>
 <div class="line">    maxItr       100</div>
 <div class="line">    epsilon      1e-10</div>
 <div class="line">    maxHist      50</div>
 <div class="line">    isFlexible   1</div>
 <div class="line">  }</div>
 <div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="user_param_pc_overview_section"></a>
-File Structure</h1>
-<p >The structure of a pscf_pcNd parameter file is shown below in skeleton form below. </p><div class="fragment"><div class="line">System{</div>
-<div class="line">  Mixture{</div>
-<div class="line">     ...</div>
-<div class="line">  }</div>
-<div class="line">  ChiInteraction{</div>
-<div class="line">    ...</div>
-<div class="line">  }</div>
-<div class="line">  Domain{</div>
-<div class="line">    ...</div>
-<div class="line">  }</div>
-<div class="line">  AmIterator{</div>
-<div class="line">    ...</div>
-<div class="line">  }</div>
+</div><!-- fragment --><h1><a class="anchor" id="user_param_pc_system_sec"></a>
+File Format</h1>
+<p >The main System block of a parameter file for any of the pscf_pc and pscf_pg programs for has the same overall structure as that used by pscf_fd program, and is described by the same format skeleton: </p><div class="fragment"><div class="line">System{</div>
+<div class="line">  Mixture{ ...  }</div>
+<div class="line">  Interaction{ ...  }</div>
+<div class="line">  Domain{ ...  }</div>
+<div class="line">  Iterator#{ ... }</div>
+<div class="line">  Sweepr#*{ ... }</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> The purpose of each subblock and parameter in the main System block is as follows: </p><ul>
-<li>
-Mixture: Description of molecular species and composition of the mixture.  </li>
-<li>
-ChiInteraction: Values of Flory-Huggins (chi) interaction parameters  </li>
-<li>
-Domain: Description of crystallographic unit cell and discretization mesh  </li>
-<li>
-AmIterator: Parameters required by the iterator  </li>
-</ul>
-<p >The Mixture and ChiInteration subblocks are identical in structure to those used in the pscf_fd program, and so are not described separately below. See the documentation of the parameter file format for that program (<a class="el" href="user_param_fd_page.html">3.2.2 Parameter Files for pscf_fd</a>) for discussions of the formats for these two blocks.</p>
-<h1><a class="anchor" id="user_param_pc_Domain_section"></a>
-Domain Section</h1>
-<p >The Domain block contains information required to describe both the unit cell of the periodic structure and the regular mesh that is used to discretize fields within each unit cell.</p>
+</div><!-- fragment --><p> As for pscf_fd, the Sweep block is optional, and Iterator and Sweep blocks (if present) are both selectable blocks. The purposes of these top-level blocks have all been discussed previously in the discussion of pscf_fd, and will not be repeated here. Formats of the Mixture and Interaction blocks are the same for all PSCF programs, and so have also been discussed previously. Below, we discuss the contents of the Domain, Iterator, and Sweep blocks.</p>
+<h1><a class="anchor" id="user_param_pc_domain_sec"></a>
+Domain Block</h1>
+<p >The Domain block contains information required to describe both unit cell of the periodic structure, the regular mesh that is used to discretize fields within each unit cell, and the space group of the desired solution. The parameter file format is discussed below, as well as in separate page <a class="el" href="pspc_Domain_page.html">here</a>.</p>
 <p >An example of the format of this block is shown below: </p><div class="fragment"><div class="line">Domain{</div>
-<div class="line">  unitCell     cubic   1.9254998725</div>
-<div class="line">  mesh         32  32  32</div>
-<div class="line">  groupName    I_m_-3_m</div>
+<div class="line">  unitCell    cubic   1.9254998725</div>
+<div class="line">  mesh        32  32  32</div>
+<div class="line">  groupName   I_m_-3_m</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> The unitCell, mesh and groupName parameter lines are discussed separately below.</p>
-<h2><a class="anchor" id="user_param_pc_UnitCell_sub"></a>
-unitCell</h2>
-<p >The line that begins with the label unitCell contains information required to specify an initial value of the crystal unit cell. The data on this line contains a string that specifies the desired crystal system followed by one or more unit cell parameters. The format is thus </p><div class="fragment"><div class="line">unitCell   crystalSystem  parmam[0] ..... param[m]</div>
+<p ><b> unitCell </b></p>
+<p >The line that begins with the label unitCell contains information required to specify an initial value of the crystal unit cell. The data on this line contains a string that specifies the desired crystal system followed by one or more unit cell parameters. The format is thus </p><div class="fragment"><div class="line">unitCell   crystalSystem  param[0] ..... param[m]</div>
 </div><!-- fragment --><p> where m denotes the number of independent parameters required to describe a unit cell of the specified crystal system. The allowed values of the crystalSystem string for a 3D structure currently include "cubic", "tetragonal" and "orthorhombic". The cubic crystal system used in the parameter file only requires one unit cell parameter, which is the length of each axis of a simple cubic unit cell.</p>
-<p >The unit cell parameter that is input in the parameter file is actually used only within an algorithm that constructs a set of symmetry adapted Fourier basis functions, and then discarded. Values for the initial unit cell dimensions of a system for which we wish to solve a self-consistent field problem are are obtained later by reading a file that contains an initial guess for the monomer chemical potential fields (w-fields), which also contains the corresponding unit cell dimensions.</p>
-<h2><a class="anchor" id="user_param_pc_Mesh_sub"></a>
-mesh</h2>
-<p >The line that begins with the label "mesh" specifies the number of grid points along each direction of the uniform spatial mesh used to discretize an unit cell. The format is </p><div class="fragment"><div class="line">mesh   N[1] .... N[D]</div>
-</div><!-- fragment --><p> where D is the dimension of space (i.e., the number of periodic directions), and N[i] is the number of grid points along axis number i, for i=1,...,D.</p>
-<h2><a class="anchor" id="user_param_pc_SpaceGroup_sub"></a>
-spaceGroup</h2>
-<p >The line that begins with the label "spaceGroup" specifies a label for the crystallographic space group for the desired structure. The format is </p><div class="fragment"><div class="line">spaceGroup groupName</div>
-</div><!-- fragment --><p> in which groupName denotes a string that identifies the desired space group.</p>
-<p >Each of the allowed values of the groupName string corresponds to a modified version of the name of the space group, as listed in the international tables of crystallogrphay. In the above example, the groupName string I_m_-3_m is a modified form of the name <img class="formulaInl" alt="$Im\overline{3}m$" src="form_45.png"/> for the space group for a BCC lattice. Space group names used here are derived from the names in the international tables, modified by the use of underbars to separate distinct symbols, replacement of overbars by a hyphen (-) prefix, and a few other systematic modifications.</p>
-<p >Descriptions of all crystallographic space groups are distributed with PSCF as files the directory pscfpp/data/groups directory. Files containing descriptions of 1, 2, and 3 dimensional groups are placed in subdirectories 1/, 2/, and 3/, respectively. The description of each space group is in a single file with a file name corresponding to the label used in the parameter file. Each space group description file contains a list of all symmetry operations in the group, in which each symmetry operation is represented as a matrix with integer elements, which represents a point group operation, and a vector of rational (i.e., fraction) coordinates, which represents a translation by a fraction of a unit cell. The conventions used to construct the group names from international table names (such as the use of underscore symbols to separate symbols) are designed to allow each space group name to be converted into a string with no white space that is a valid file name for a unix file system. The names used in the older Fortran PSCF program were similar except for the use of space rather than underscores to separate symbols.</p>
-<h1><a class="anchor" id="user_param_pc_AmIterator_section"></a>
-AmIterator Block</h1>
-<p >The AmIterator block provides parameters required by the Anderson-Mixing (AM) iterator that is used to solve the nonlinear self-consistent field (SCFT) equations. An example of the format is shown below: </p><div class="fragment"><div class="line">AmIterator{</div>
-<div class="line">  maxItr       100</div>
-<div class="line">  epsilon      1e-10</div>
-<div class="line">  maxHist      50</div>
-<div class="line">  errorType    relNormResid</div>
-<div class="line">  isFlexible   1</div>
-<div class="line">  scaleStress  10.0 </div>
-<div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="user_param_pc_maxItr_sub"></a>
-maxItr</h2>
-<p >Parameter maxItr is an integer whose value gives the maximum number of allowed iterations that will be attempted in the search for a solution.</p>
-<h2><a class="anchor" id="user_param_pc_epsilon_sub"></a>
-epsilon</h2>
-<p >Parameter epsilon gives the desired tolerance in the solution of the SCFT equations. The iterative loop exits if the maximum error drops below epsilon or if the number of iterations exceeds maxItr.</p>
-<h2><a class="anchor" id="user_param_pc_maxHist_sub"></a>
-maxHist</h2>
-<p >The value of maxHist gives the number of previous trial solutions that will be retained in memory by the Anderson-Mixing (AM) algorithm. The AM algorithm uses knowledge of previous trials to guide the search for a solution, but only makes use of the previous maxHist trials when the total number of iterations exceeds maxHist.</p>
-<h2><a class="anchor" id="user_param_pc_errorType_sub"></a>
-errorType</h2>
-<p >The optional errorType parameter specifies the error criterion used for determining termination. It can accept three different values: "maxResid", "normResid", and "relNormResid". By default, it is set to to "relNormResid". The "maxResid" type uses the maximum element of the vector of residuals to assess error. The "normResid" type uses the L2 norm of the vector of residuals to assess error. The "relNormResid" error type uses the L2 norm of the vector of residuals divided by the L2 norm of the vector of omega field elements, as in Stasiak and Matsen, EPJE, 2011.</p>
-<h2><a class="anchor" id="user_param_pc_isFlexible_sub"></a>
-isFlexible</h2>
-<p >The optional isFlexible parameter is a boolean variable that can be used to enable or disable optimization of the unit cell. Setting isFlexible = 0 gives a rigid unit cell with dimensions that remain constant during iteration. Setting isFlexible to 1 instructs the program to adjust the unit cell parameters during iteration so as to minimize the free energy. If not set, isFlexible is set to 0 by default.</p>
-<h2><a class="anchor" id="user_param_pc_scaleStress_sub"></a>
-scaleStress</h2>
-<p >The optional scaleStress parameter is the degree to which stress residuals should be weighted against self-consistent field residuals when calculating the error and updating the fields. The default value of this parameter is scaleStress = 10.0. Setting scaleStress only has an impact of isFlexible is set to 1.</p>
+<p >Note: The list of unit cell parameters that is input in the parameter file is actually only used within an algorithm that constructs a set of symmetry adapted Fourier basis functions, and then discarded. Values of initial guesses for initial unit cell dimensions of a system to which we want to apply self-consistent field theory are obtained later by reading a file that contains an initial guess for the monomer chemical potential fields (w-fields), which also contains corresponding unit cell dimensions.</p>
+<p ><b> mesh </b></p>
+<p >The value is the variable "mesh" is a vector of integers that specifies the number of grid points along each direction of the uniform spatial mesh used to discretize fields within each unit cell. The format is </p><div class="fragment"><div class="line">mesh   N[0] .... N[D-1]</div>
+</div><!-- fragment --><p> where D is the dimension of space (i.e., the number of periodic directions), and N[i] is the number of grid points along axis number i, for i = 0,...,D-1.</p>
+<p ><b> groupName </b>:</p>
+<p >The value of the string parameter "spaceGroup" must be an standard identifier for the crystallographic space group of the desired structure. Each of the allowed values of the groupName string corresponds to a modified version of the name of the space group, as listed in the international tables of crystallography. In the above example, the groupName string I_m_-3_m is a modified form of the name <img class="formulaInl" alt="$Im\overline{3}m$" src="form_50.png" width="36" height="11"/> for the space group for a BCC lattice. <br  />
+ Identifiers for crystallographic space groups are discussed and listed <a class="el" href="user_groups_page.html">here</a>.</p>
+<h1><a class="anchor" id="user_param_pc_Iterator_section"></a>
+Iterators</h1>
+<p >The default Iterator for the pscf_pc and pscf_pg programs uses an Anderson-Mixing (AM) iterator algorithm. This can be invoked using either the generic label "Iterator" or the specific label "AmIterator". <br  />
+ The only iterator currently available is an Anderson-Mixing iterator designed specifically for problems in which a polymer melt or mixture is confined to a thin film.</p>
+<p >Descriptions of the parameter file formats for the available iterators can be found by following the links in the table below: </p><table class="doxtable">
+<tr>
+<td>Label  </td><td>Description   </td></tr>
+<tr>
+<td><a class="el" href="pspc_AmIterator_page.html">AmIterator</a>  </td><td>Anderson Mixing iterator for periodic structures.   </td></tr>
+<tr>
+<td><a class="el" href="pspc_AmIteratorFilm_page.html">AmIteratorFilm</a>  </td><td>Thin Film Anderson Mixing iterator. Uses the Anderson Mixing algorithm to solve the SCFT equations for a system that is confined to a thin film.   </td></tr>
+</table>
+<h1><a class="anchor" id="user_param_pc_sweep_sec"></a>
+Sweep</h1>
+<p >The default sweep for the pscf_pc programs is a linear sweep algorithm that can be invoked using a block that starts either with the generic label Sweep or the specific label LinearSweep. The required parameter file format has been described <a class="el" href="user_param_sweep_page.html#user_param_sweep_linear_sec">here</a>.</p>
 <p ><br  />
- <a class="el" href="user_param_fd_page.html">3.2.2 Parameter Files for pscf_fd</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_param_page.html">3.2 Parameter Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_param_pg_page.html">3.2.3 Parameter files for pscf_pgNd</a> (Next) </p>
+ <a class="el" href="user_param_fd_page.html">3.3.6 pscf_fd (1D Problems)</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_param_page.html">3.3 Parameter Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_param_pg_page.html">3.3.8 pscf_pg (Periodic Problems, GPU)</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

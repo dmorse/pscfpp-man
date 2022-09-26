@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: Util::FArrayParam&lt; Type, N &gt; Class Template Reference</title>
+<title>PSCF: Util::FArrayParam&lt; Type, Capacity &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -47,7 +47,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classUtil_1_1FArrayParam-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Util::FArrayParam&lt; Type, N &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Util__NS__Module.html">Util namespace</a> &raquo; <a class="el" href="group__Param__Module.html">Parameter File IO</a></div></div></div>
+  <div class="headertitle"><div class="title">Util::FArrayParam&lt; Type, Capacity &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Util__NS__Module.html">Util namespace</a> &raquo; <a class="el" href="group__Param__Module.html">Parameter File IO</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -56,24 +56,27 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="FArrayParam_8h_source.html">FArrayParam.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Util::FArrayParam&lt; Type, N &gt;:</div>
+Inheritance diagram for Util::FArrayParam&lt; Type, Capacity &gt;:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classUtil_1_1FArrayParam.png" usemap="#Util::FArrayParam_3C_20Type_2C_20N_20_3E_map" alt=""/>
-  <map id="Util::FArrayParam_3C_20Type_2C_20N_20_3E_map" name="Util::FArrayParam_3C_20Type_2C_20N_20_3E_map">
-<area href="classUtil_1_1ArrayParam.html" title="An array-valued parameter in a parameter file." alt="Util::ArrayParam&lt; Type &gt;" shape="rect" coords="96,168,278,192"/>
-<area href="classUtil_1_1Parameter.html" title="A single variable in a parameter file." alt="Util::Parameter" shape="rect" coords="96,112,278,136"/>
-<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="96,56,278,80"/>
-<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="0,0,182,24"/>
-<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="192,0,374,24"/>
+  <img src="classUtil_1_1FArrayParam.png" usemap="#Util::FArrayParam_3C_20Type_2C_20Capacity_20_3E_map" alt=""/>
+  <map id="Util::FArrayParam_3C_20Type_2C_20Capacity_20_3E_map" name="Util::FArrayParam_3C_20Type_2C_20Capacity_20_3E_map">
+<area href="classUtil_1_1ArrayParam.html" title="An array-valued parameter in a parameter file." alt="Util::ArrayParam&lt; Type &gt;" shape="rect" coords="116,168,339,192"/>
+<area href="classUtil_1_1Parameter.html" title="A single variable in a parameter file." alt="Util::Parameter" shape="rect" coords="116,112,339,136"/>
+<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="116,56,339,80"/>
+<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="0,0,223,24"/>
+<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="233,0,456,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af59fb0017ecc2955cabf5634940129f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1FArrayParam.html#af59fb0017ecc2955cabf5634940129f8">FArrayParam</a> (const char *<a class="el" href="classUtil_1_1ArrayParam.html#a2e6a63d5a0827ee3de51d481aee38174">label</a>, <a class="el" href="classUtil_1_1FArray.html">FArray</a>&lt; Type, N &gt; &amp;array, bool <a class="el" href="classUtil_1_1ArrayParam.html#accdc4c9c774b9394b387277543c1ba74">isRequired</a>=true)</td></tr>
-<tr class="memdesc:af59fb0017ecc2955cabf5634940129f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classUtil_1_1FArrayParam.html#af59fb0017ecc2955cabf5634940129f8">More...</a><br /></td></tr>
-<tr class="separator:af59fb0017ecc2955cabf5634940129f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6faacc81669356cbfe502586a486269f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1FArrayParam.html#a6faacc81669356cbfe502586a486269f">FArrayParam</a> (const char *<a class="el" href="classUtil_1_1ArrayParam.html#a2e6a63d5a0827ee3de51d481aee38174">label</a>, <a class="el" href="classUtil_1_1FArray.html">FArray</a>&lt; Type, Capacity &gt; &amp;array, bool <a class="el" href="classUtil_1_1ArrayParam.html#accdc4c9c774b9394b387277543c1ba74">isRequired</a>=true)</td></tr>
+<tr class="memdesc:a6faacc81669356cbfe502586a486269f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classUtil_1_1FArrayParam.html#a6faacc81669356cbfe502586a486269f">More...</a><br /></td></tr>
+<tr class="separator:a6faacc81669356cbfe502586a486269f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65721140e7fd3ec08c6a612a1924be82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1FArrayParam.html#a65721140e7fd3ec08c6a612a1924be82">writeParam</a> (std::ostream &amp;out) const</td></tr>
+<tr class="memdesc:a65721140e7fd3ec08c6a612a1924be82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write parameter to stream.  <a href="classUtil_1_1FArrayParam.html#a65721140e7fd3ec08c6a612a1924be82">More...</a><br /></td></tr>
+<tr class="separator:a65721140e7fd3ec08c6a612a1924be82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classUtil_1_1ArrayParam"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classUtil_1_1ArrayParam')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classUtil_1_1ArrayParam.html">Util::ArrayParam&lt; Type &gt;</a></td></tr>
 <tr class="memitem:a054f20a51257f3494a9a060696bcc97e inherit pub_methods_classUtil_1_1ArrayParam"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#a054f20a51257f3494a9a060696bcc97e">ArrayParam</a> (const char *<a class="el" href="classUtil_1_1ArrayParam.html#a2e6a63d5a0827ee3de51d481aee38174">label</a>, int <a class="el" href="classUtil_1_1ArrayParam.html#a0154c57ca8366ab705cf1837a2cbf94f">n</a>, bool <a class="el" href="classUtil_1_1ArrayParam.html#accdc4c9c774b9394b387277543c1ba74">isRequired</a>=true)</td></tr>
 <tr class="memdesc:a054f20a51257f3494a9a060696bcc97e inherit pub_methods_classUtil_1_1ArrayParam"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classUtil_1_1ArrayParam.html#a054f20a51257f3494a9a060696bcc97e">More...</a><br /></td></tr>
@@ -81,9 +84,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aadf724264376c62174ce45aa2a2d9489 inherit pub_methods_classUtil_1_1ArrayParam"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#aadf724264376c62174ce45aa2a2d9489">~ArrayParam</a> ()</td></tr>
 <tr class="memdesc:aadf724264376c62174ce45aa2a2d9489 inherit pub_methods_classUtil_1_1ArrayParam"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classUtil_1_1ArrayParam.html#aadf724264376c62174ce45aa2a2d9489">More...</a><br /></td></tr>
 <tr class="separator:aadf724264376c62174ce45aa2a2d9489 inherit pub_methods_classUtil_1_1ArrayParam"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74f648f4a7cfcba8a2a1e4b6e400b861 inherit pub_methods_classUtil_1_1ArrayParam"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#a74f648f4a7cfcba8a2a1e4b6e400b861">writeParam</a> (std::ostream &amp;out)</td></tr>
-<tr class="memdesc:a74f648f4a7cfcba8a2a1e4b6e400b861 inherit pub_methods_classUtil_1_1ArrayParam"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write parameter to stream.  <a href="classUtil_1_1ArrayParam.html#a74f648f4a7cfcba8a2a1e4b6e400b861">More...</a><br /></td></tr>
-<tr class="separator:a74f648f4a7cfcba8a2a1e4b6e400b861 inherit pub_methods_classUtil_1_1ArrayParam"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a500e8ed7dcff369427bc19764f320c8d inherit pub_methods_classUtil_1_1ArrayParam"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#a500e8ed7dcff369427bc19764f320c8d">writeParam</a> (std::ostream &amp;out) const</td></tr>
+<tr class="memdesc:a500e8ed7dcff369427bc19764f320c8d inherit pub_methods_classUtil_1_1ArrayParam"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write an array-valued parameter to stream.  <a href="classUtil_1_1ArrayParam.html#a500e8ed7dcff369427bc19764f320c8d">More...</a><br /></td></tr>
+<tr class="separator:a500e8ed7dcff369427bc19764f320c8d inherit pub_methods_classUtil_1_1ArrayParam"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0154c57ca8366ab705cf1837a2cbf94f inherit pub_methods_classUtil_1_1ArrayParam"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#a0154c57ca8366ab705cf1837a2cbf94f">n</a> () const</td></tr>
 <tr class="memdesc:a0154c57ca8366ab705cf1837a2cbf94f inherit pub_methods_classUtil_1_1ArrayParam"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the logical array dimension.  <a href="classUtil_1_1ArrayParam.html#a0154c57ca8366ab705cf1837a2cbf94f">More...</a><br /></td></tr>
 <tr class="separator:a0154c57ca8366ab705cf1837a2cbf94f inherit pub_methods_classUtil_1_1ArrayParam"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,9 +140,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5234b604f9e852f53eedd7de7c354a1e inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a5234b604f9e852f53eedd7de7c354a1e">readParam</a> (std::istream &amp;in)=0</td></tr>
 <tr class="memdesc:a5234b604f9e852f53eedd7de7c354a1e inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter(s) from file.  <a href="classUtil_1_1ParamComponent.html#a5234b604f9e852f53eedd7de7c354a1e">More...</a><br /></td></tr>
 <tr class="separator:a5234b604f9e852f53eedd7de7c354a1e inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac17d6ab63f9b0e5f966d6a3cfbc26d86 inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ac17d6ab63f9b0e5f966d6a3cfbc26d86">writeParam</a> (std::ostream &amp;out)=0</td></tr>
-<tr class="memdesc:ac17d6ab63f9b0e5f966d6a3cfbc26d86 inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter(s) to file.  <a href="classUtil_1_1ParamComponent.html#ac17d6ab63f9b0e5f966d6a3cfbc26d86">More...</a><br /></td></tr>
-<tr class="separator:ac17d6ab63f9b0e5f966d6a3cfbc26d86 inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c9b5abc1f5cf4a07b5f8089020a8ce inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#aa0c9b5abc1f5cf4a07b5f8089020a8ce">writeParam</a> (std::ostream &amp;out) const =0</td></tr>
+<tr class="memdesc:aa0c9b5abc1f5cf4a07b5f8089020a8ce inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter(s) to file.  <a href="classUtil_1_1ParamComponent.html#aa0c9b5abc1f5cf4a07b5f8089020a8ce">More...</a><br /></td></tr>
+<tr class="separator:aa0c9b5abc1f5cf4a07b5f8089020a8ce inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7925e60ccaf7ecf2ea866e689983124d inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a7925e60ccaf7ecf2ea866e689983124d">load</a> (<a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">Serializable::IArchive</a> &amp;ar)</td></tr>
 <tr class="memdesc:a7925e60ccaf7ecf2ea866e689983124d inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load internal state from an archive.  <a href="classUtil_1_1ParamComponent.html#a7925e60ccaf7ecf2ea866e689983124d">More...</a><br /></td></tr>
 <tr class="separator:a7925e60ccaf7ecf2ea866e689983124d inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,30 +197,42 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a0fec632aba99b461ef410d4248e2c91b"><td class="memItemLeft" align="right" valign="top">Type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1FArrayParam.html#a0fec632aba99b461ef410d4248e2c91b">element</a> (int i)</td></tr>
-<tr class="memdesc:a0fec632aba99b461ef410d4248e2c91b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return one element by reference.  <a href="classUtil_1_1FArrayParam.html#a0fec632aba99b461ef410d4248e2c91b">More...</a><br /></td></tr>
-<tr class="separator:a0fec632aba99b461ef410d4248e2c91b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4212b1eef135a3a7b9ab4169f8b7e7cb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1FArrayParam.html#a4212b1eef135a3a7b9ab4169f8b7e7cb">loadValue</a> (<a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">Serializable::IArchive</a> &amp;ar)</td></tr>
-<tr class="memdesc:a4212b1eef135a3a7b9ab4169f8b7e7cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load bare parameter value from an archive.  <a href="classUtil_1_1FArrayParam.html#a4212b1eef135a3a7b9ab4169f8b7e7cb">More...</a><br /></td></tr>
-<tr class="separator:a4212b1eef135a3a7b9ab4169f8b7e7cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1737f859cff068584f812fd9e279342"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1FArrayParam.html#ad1737f859cff068584f812fd9e279342">saveValue</a> (<a class="el" href="classUtil_1_1Serializable.html#aca43a1eea5ec5f13189a57892a7a6d04">Serializable::OArchive</a> &amp;ar)</td></tr>
-<tr class="memdesc:ad1737f859cff068584f812fd9e279342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save parameter value to an archive.  <a href="classUtil_1_1FArrayParam.html#ad1737f859cff068584f812fd9e279342">More...</a><br /></td></tr>
-<tr class="separator:ad1737f859cff068584f812fd9e279342"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3aee8175a45ea44b57fb5a2135f8957d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1FArrayParam.html#a3aee8175a45ea44b57fb5a2135f8957d">bcastValue</a> ()</td></tr>
-<tr class="memdesc:a3aee8175a45ea44b57fb5a2135f8957d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broadcast parameter value within the ioCommunicator.  <a href="classUtil_1_1FArrayParam.html#a3aee8175a45ea44b57fb5a2135f8957d">More...</a><br /></td></tr>
-<tr class="separator:a3aee8175a45ea44b57fb5a2135f8957d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80adb1a2cb00e44aee7ad37bc2662adb"><td class="memItemLeft" align="right" valign="top">Type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1FArrayParam.html#a80adb1a2cb00e44aee7ad37bc2662adb">element</a> (int i)</td></tr>
+<tr class="memdesc:a80adb1a2cb00e44aee7ad37bc2662adb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reference to one element of the array (non-const).  <a href="classUtil_1_1FArrayParam.html#a80adb1a2cb00e44aee7ad37bc2662adb">More...</a><br /></td></tr>
+<tr class="separator:a80adb1a2cb00e44aee7ad37bc2662adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd47e1a8d1c04587c4a00557df798965"><td class="memItemLeft" align="right" valign="top">Type const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1FArrayParam.html#afd47e1a8d1c04587c4a00557df798965">element</a> (int i) const</td></tr>
+<tr class="memdesc:afd47e1a8d1c04587c4a00557df798965"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reference to one element of the array (const).  <a href="classUtil_1_1FArrayParam.html#afd47e1a8d1c04587c4a00557df798965">More...</a><br /></td></tr>
+<tr class="separator:afd47e1a8d1c04587c4a00557df798965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d2645b5bd9f2d960a23028f479ccd66"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1FArrayParam.html#a7d2645b5bd9f2d960a23028f479ccd66">readValue</a> (std::istream &amp;in)</td></tr>
+<tr class="memdesc:a7d2645b5bd9f2d960a23028f479ccd66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter value from an input stream.  <a href="classUtil_1_1FArrayParam.html#a7d2645b5bd9f2d960a23028f479ccd66">More...</a><br /></td></tr>
+<tr class="separator:a7d2645b5bd9f2d960a23028f479ccd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a976b136b36e28d9c4f6a0ddb0b3bca17"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1FArrayParam.html#a976b136b36e28d9c4f6a0ddb0b3bca17">loadValue</a> (<a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">Serializable::IArchive</a> &amp;ar)</td></tr>
+<tr class="memdesc:a976b136b36e28d9c4f6a0ddb0b3bca17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load bare parameter value from an archive.  <a href="classUtil_1_1FArrayParam.html#a976b136b36e28d9c4f6a0ddb0b3bca17">More...</a><br /></td></tr>
+<tr class="separator:a976b136b36e28d9c4f6a0ddb0b3bca17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f0ffdd42c275efa4ad9db390d0e5185"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1FArrayParam.html#a4f0ffdd42c275efa4ad9db390d0e5185">saveValue</a> (<a class="el" href="classUtil_1_1Serializable.html#aca43a1eea5ec5f13189a57892a7a6d04">Serializable::OArchive</a> &amp;ar)</td></tr>
+<tr class="memdesc:a4f0ffdd42c275efa4ad9db390d0e5185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save parameter value to an archive.  <a href="classUtil_1_1FArrayParam.html#a4f0ffdd42c275efa4ad9db390d0e5185">More...</a><br /></td></tr>
+<tr class="separator:a4f0ffdd42c275efa4ad9db390d0e5185"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a149dd7a5990ad9d5c972e849eefa28b1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1FArrayParam.html#a149dd7a5990ad9d5c972e849eefa28b1">bcastValue</a> ()</td></tr>
+<tr class="memdesc:a149dd7a5990ad9d5c972e849eefa28b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broadcast parameter value within the ioCommunicator.  <a href="classUtil_1_1FArrayParam.html#a149dd7a5990ad9d5c972e849eefa28b1">More...</a><br /></td></tr>
+<tr class="separator:a149dd7a5990ad9d5c972e849eefa28b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classUtil_1_1ArrayParam"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classUtil_1_1ArrayParam')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUtil_1_1ArrayParam.html">Util::ArrayParam&lt; Type &gt;</a></td></tr>
 <tr class="memitem:afbd9e4692ef7ea31c0b3f89b8e51d651 inherit pro_methods_classUtil_1_1ArrayParam"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#afbd9e4692ef7ea31c0b3f89b8e51d651">readLabel</a> (std::istream &amp;in)</td></tr>
 <tr class="memdesc:afbd9e4692ef7ea31c0b3f89b8e51d651 inherit pro_methods_classUtil_1_1ArrayParam"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter label from an input stream.  <a href="classUtil_1_1ArrayParam.html#afbd9e4692ef7ea31c0b3f89b8e51d651">More...</a><br /></td></tr>
 <tr class="separator:afbd9e4692ef7ea31c0b3f89b8e51d651 inherit pro_methods_classUtil_1_1ArrayParam"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b1a037b3819742b4137214316d6a1f7 inherit pro_methods_classUtil_1_1ArrayParam"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#a7b1a037b3819742b4137214316d6a1f7">readValue</a> (std::istream &amp;in)</td></tr>
-<tr class="memdesc:a7b1a037b3819742b4137214316d6a1f7 inherit pro_methods_classUtil_1_1ArrayParam"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter value from an input stream.  <a href="classUtil_1_1ArrayParam.html#a7b1a037b3819742b4137214316d6a1f7">More...</a><br /></td></tr>
+<tr class="memdesc:a7b1a037b3819742b4137214316d6a1f7 inherit pro_methods_classUtil_1_1ArrayParam"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read array of element values from an input stream.  <a href="classUtil_1_1ArrayParam.html#a7b1a037b3819742b4137214316d6a1f7">More...</a><br /></td></tr>
 <tr class="separator:a7b1a037b3819742b4137214316d6a1f7 inherit pro_methods_classUtil_1_1ArrayParam"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab445616297b6af8f0b59f2f95316080a inherit pro_methods_classUtil_1_1ArrayParam"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#ab445616297b6af8f0b59f2f95316080a">readEndBracket</a> (std::istream &amp;in)</td></tr>
+<tr class="memdesc:ab445616297b6af8f0b59f2f95316080a inherit pro_methods_classUtil_1_1ArrayParam"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a closing bracket, if necessary.  <a href="classUtil_1_1ArrayParam.html#ab445616297b6af8f0b59f2f95316080a">More...</a><br /></td></tr>
+<tr class="separator:ab445616297b6af8f0b59f2f95316080a inherit pro_methods_classUtil_1_1ArrayParam"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a575373758fb6c9b65367553003b421f7 inherit pro_methods_classUtil_1_1ArrayParam"><td class="memItemLeft" align="right" valign="top">virtual Type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#a575373758fb6c9b65367553003b421f7">element</a> (int i)=0</td></tr>
-<tr class="memdesc:a575373758fb6c9b65367553003b421f7 inherit pro_methods_classUtil_1_1ArrayParam"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reference to one element.  <a href="classUtil_1_1ArrayParam.html#a575373758fb6c9b65367553003b421f7">More...</a><br /></td></tr>
+<tr class="memdesc:a575373758fb6c9b65367553003b421f7 inherit pro_methods_classUtil_1_1ArrayParam"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a non-const reference to one element of the array.  <a href="classUtil_1_1ArrayParam.html#a575373758fb6c9b65367553003b421f7">More...</a><br /></td></tr>
 <tr class="separator:a575373758fb6c9b65367553003b421f7 inherit pro_methods_classUtil_1_1ArrayParam"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b77fe1fa6207d10711a1791b1cc6686 inherit pro_methods_classUtil_1_1ArrayParam"><td class="memItemLeft" align="right" valign="top">virtual Type const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#a8b77fe1fa6207d10711a1791b1cc6686">element</a> (int i) const =0</td></tr>
+<tr class="memdesc:a8b77fe1fa6207d10711a1791b1cc6686 inherit pro_methods_classUtil_1_1ArrayParam"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a non-const reference to one element of the array.  <a href="classUtil_1_1ArrayParam.html#a8b77fe1fa6207d10711a1791b1cc6686">More...</a><br /></td></tr>
+<tr class="separator:a8b77fe1fa6207d10711a1791b1cc6686 inherit pro_methods_classUtil_1_1ArrayParam"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2954118a293c2f52a6bc0c941efae489 inherit pro_methods_classUtil_1_1ArrayParam"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#a2954118a293c2f52a6bc0c941efae489">hasBrackets</a> () const</td></tr>
-<tr class="memdesc:a2954118a293c2f52a6bc0c941efae489 inherit pro_methods_classUtil_1_1ArrayParam"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are brackets used as delimiters?  <a href="classUtil_1_1ArrayParam.html#a2954118a293c2f52a6bc0c941efae489">More...</a><br /></td></tr>
+<tr class="memdesc:a2954118a293c2f52a6bc0c941efae489 inherit pro_methods_classUtil_1_1ArrayParam"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are square brackets being used as delimiters?  <a href="classUtil_1_1ArrayParam.html#a2954118a293c2f52a6bc0c941efae489">More...</a><br /></td></tr>
 <tr class="separator:a2954118a293c2f52a6bc0c941efae489 inherit pro_methods_classUtil_1_1ArrayParam"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cb12eaf9752eae8cc2a83cce43c7c5e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Parameter.html#a2cb12eaf9752eae8cc2a83cce43c7c5e">readLabel</a> (std::istream &amp;in)</td></tr>
 <tr class="memdesc:a2cb12eaf9752eae8cc2a83cce43c7c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and attempt to match label string.  <a href="classUtil_1_1Parameter.html#a2cb12eaf9752eae8cc2a83cce43c7c5e">More...</a><br /></td></tr>
@@ -294,21 +309,21 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a66cdcb38f67b300eb0508d5e3f5949b0 inherit pro_attribs_classUtil_1_1Parameter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;class Type, int N&gt;<br />
-class Util::FArrayParam&lt; Type, N &gt;</div><p >A <a class="el" href="classUtil_1_1Parameter.html" title="A single variable in a parameter file.">Parameter</a> associated with a <a class="el" href="classUtil_1_1FArray.html" title="A fixed size (static) contiguous array template.">FArray</a> container. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename Type, int Capacity&gt;<br />
+class Util::FArrayParam&lt; Type, Capacity &gt;</div><p >A <a class="el" href="classUtil_1_1Parameter.html" title="A single variable in a parameter file.">Parameter</a> associated with a <a class="el" href="classUtil_1_1FArray.html" title="A fixed size (static) contiguous array template.">FArray</a> container. </p>
 
 <p class="definition">Definition at line <a class="el" href="FArrayParam_8h_source.html#l00026">26</a> of file <a class="el" href="FArrayParam_8h_source.html">FArrayParam.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af59fb0017ecc2955cabf5634940129f8" name="af59fb0017ecc2955cabf5634940129f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af59fb0017ecc2955cabf5634940129f8">&#9670;&nbsp;</a></span>FArrayParam()</h2>
+<a id="a6faacc81669356cbfe502586a486269f" name="a6faacc81669356cbfe502586a486269f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6faacc81669356cbfe502586a486269f">&#9670;&nbsp;</a></span>FArrayParam()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type , int N&gt; </div>
+template&lt;typename Type , int Capacity&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classUtil_1_1FArrayParam.html">Util::FArrayParam</a>&lt; Type, N &gt;::FArrayParam </td>
+          <td class="memname"><a class="el" href="classUtil_1_1FArrayParam.html">Util::FArrayParam</a>&lt; Type, Capacity &gt;::FArrayParam </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>label</em>, </td>
@@ -316,7 +331,7 @@ template&lt;class Type , int N&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classUtil_1_1FArray.html">FArray</a>&lt; Type, N &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classUtil_1_1FArray.html">FArray</a>&lt; Type, Capacity &gt; &amp;&#160;</td>
           <td class="paramname"><em>array</em>, </td>
         </tr>
         <tr>
@@ -336,31 +351,73 @@ template&lt;class Type , int N&gt; </div>
 <p>Constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>label string for parameter file </td></tr>
-    <tr><td class="paramname">array</td><td>associated <a class="el" href="classUtil_1_1FArray.html" title="A fixed size (static) contiguous array template.">FArray</a> variable </td></tr>
-    <tr><td class="paramname">isRequired</td><td>Is this a required parameter? </td></tr>
+    <tr><td class="paramname">label</td><td>label for array </td></tr>
+    <tr><td class="paramname">array</td><td>associated <a class="el" href="classUtil_1_1FArray.html">FArray&lt;Type, Capacity&gt;</a> container </td></tr>
+    <tr><td class="paramname">isRequired</td><td>Is this a required parameter (true) or optional ? </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="FArrayParam_8h_source.html#l00087">87</a> of file <a class="el" href="FArrayParam_8h_source.html">FArrayParam.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FArrayParam_8h_source.html#l00105">105</a> of file <a class="el" href="FArrayParam_8h_source.html">FArrayParam.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0fec632aba99b461ef410d4248e2c91b" name="a0fec632aba99b461ef410d4248e2c91b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0fec632aba99b461ef410d4248e2c91b">&#9670;&nbsp;</a></span>element()</h2>
+<a id="a65721140e7fd3ec08c6a612a1924be82" name="a65721140e7fd3ec08c6a612a1924be82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65721140e7fd3ec08c6a612a1924be82">&#9670;&nbsp;</a></span>writeParam()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type , int N&gt; </div>
+template&lt;typename Type , int Capacity&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Type &amp; <a class="el" href="classUtil_1_1FArrayParam.html">Util::FArrayParam</a>&lt; Type, N &gt;::element </td>
+          <td class="memname">void <a class="el" href="classUtil_1_1FArrayParam.html">Util::FArrayParam</a>&lt; Type, Capacity &gt;::writeParam </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write parameter to stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>output stream </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classUtil_1_1ArrayParam.html#a500e8ed7dcff369427bc19764f320c8d">Util::ArrayParam&lt; Type &gt;</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="FArrayParam_8h_source.html#l00116">116</a> of file <a class="el" href="FArrayParam_8h_source.html">FArrayParam.h</a>.</p>
+
+<p class="reference">References <a class="el" href="Parameter_8cpp_source.html#l00176">Util::Parameter::isActive()</a>, <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>, and <a class="el" href="ArrayParam_8tpp_source.html#l00151">Util::ArrayParam&lt; Type &gt;::writeParam()</a>.</p>
+
+</div>
+</div>
+<a id="a80adb1a2cb00e44aee7ad37bc2662adb" name="a80adb1a2cb00e44aee7ad37bc2662adb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80adb1a2cb00e44aee7ad37bc2662adb">&#9670;&nbsp;</a></span>element() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , int Capacity&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Type &amp; <a class="el" href="classUtil_1_1FArrayParam.html">Util::FArrayParam</a>&lt; Type, Capacity &gt;::element </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -374,33 +431,103 @@ template&lt;class Type , int N&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Return one element by reference. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">i</td><td>array element index </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Return a reference to one element of the array (non-const). </p>
 
 <p>Implements <a class="el" href="classUtil_1_1ArrayParam.html#a575373758fb6c9b65367553003b421f7">Util::ArrayParam&lt; Type &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="FArrayParam_8h_source.html#l00052">52</a> of file <a class="el" href="FArrayParam_8h_source.html">FArrayParam.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FArrayParam_8h_source.html#l00055">55</a> of file <a class="el" href="FArrayParam_8h_source.html">FArrayParam.h</a>.</p>
 
 </div>
 </div>
-<a id="a4212b1eef135a3a7b9ab4169f8b7e7cb" name="a4212b1eef135a3a7b9ab4169f8b7e7cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4212b1eef135a3a7b9ab4169f8b7e7cb">&#9670;&nbsp;</a></span>loadValue()</h2>
+<a id="afd47e1a8d1c04587c4a00557df798965" name="afd47e1a8d1c04587c4a00557df798965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd47e1a8d1c04587c4a00557df798965">&#9670;&nbsp;</a></span>element() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type , int N&gt; </div>
+template&lt;typename Type , int Capacity&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classUtil_1_1FArrayParam.html">Util::FArrayParam</a>&lt; Type, N &gt;::loadValue </td>
+          <td class="memname">Type const  &amp; <a class="el" href="classUtil_1_1FArrayParam.html">Util::FArrayParam</a>&lt; Type, Capacity &gt;::element </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a reference to one element of the array (const). </p>
+
+<p>Implements <a class="el" href="classUtil_1_1ArrayParam.html#a8b77fe1fa6207d10711a1791b1cc6686">Util::ArrayParam&lt; Type &gt;</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="FArrayParam_8h_source.html#l00061">61</a> of file <a class="el" href="FArrayParam_8h_source.html">FArrayParam.h</a>.</p>
+
+</div>
+</div>
+<a id="a7d2645b5bd9f2d960a23028f479ccd66" name="a7d2645b5bd9f2d960a23028f479ccd66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d2645b5bd9f2d960a23028f479ccd66">&#9670;&nbsp;</a></span>readValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , int Capacity&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classUtil_1_1FArrayParam.html">Util::FArrayParam</a>&lt; Type, Capacity &gt;::readValue </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read parameter value from an input stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>input stream from which to read </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classUtil_1_1ArrayParam.html#a7b1a037b3819742b4137214316d6a1f7">Util::ArrayParam&lt; Type &gt;</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="FArrayParam_8h_source.html#l00130">130</a> of file <a class="el" href="FArrayParam_8h_source.html">FArrayParam.h</a>.</p>
+
+<p class="reference">References <a class="el" href="ArrayParam_8tpp_source.html#l00103">Util::ArrayParam&lt; Type &gt;::readValue()</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
+
+</div>
+</div>
+<a id="a976b136b36e28d9c4f6a0ddb0b3bca17" name="a976b136b36e28d9c4f6a0ddb0b3bca17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a976b136b36e28d9c4f6a0ddb0b3bca17">&#9670;&nbsp;</a></span>loadValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , int Capacity&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classUtil_1_1FArrayParam.html">Util::FArrayParam</a>&lt; Type, Capacity &gt;::loadValue </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">Serializable::IArchive</a> &amp;&#160;</td>
           <td class="paramname"><em>ar</em></td><td>)</td>
@@ -424,23 +551,25 @@ template&lt;class Type , int N&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classUtil_1_1Parameter.html#a9e3d8dbd2198974017cd8711ae9c990d">Util::Parameter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="FArrayParam_8h_source.html#l00098">98</a> of file <a class="el" href="FArrayParam_8h_source.html">FArrayParam.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FArrayParam_8h_source.html#l00142">142</a> of file <a class="el" href="FArrayParam_8h_source.html">FArrayParam.h</a>.</p>
+
+<p class="reference">References <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
 </div>
 </div>
-<a id="ad1737f859cff068584f812fd9e279342" name="ad1737f859cff068584f812fd9e279342"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1737f859cff068584f812fd9e279342">&#9670;&nbsp;</a></span>saveValue()</h2>
+<a id="a4f0ffdd42c275efa4ad9db390d0e5185" name="a4f0ffdd42c275efa4ad9db390d0e5185"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f0ffdd42c275efa4ad9db390d0e5185">&#9670;&nbsp;</a></span>saveValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type , int N&gt; </div>
+template&lt;typename Type , int Capacity&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classUtil_1_1FArrayParam.html">Util::FArrayParam</a>&lt; Type, N &gt;::saveValue </td>
+          <td class="memname">void <a class="el" href="classUtil_1_1FArrayParam.html">Util::FArrayParam</a>&lt; Type, Capacity &gt;::saveValue </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classUtil_1_1Serializable.html#aca43a1eea5ec5f13189a57892a7a6d04">Serializable::OArchive</a> &amp;&#160;</td>
           <td class="paramname"><em>ar</em></td><td>)</td>
@@ -464,23 +593,25 @@ template&lt;class Type , int N&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classUtil_1_1Parameter.html#a61858c5163b492f2618689a35ff05044">Util::Parameter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="FArrayParam_8h_source.html#l00105">105</a> of file <a class="el" href="FArrayParam_8h_source.html">FArrayParam.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FArrayParam_8h_source.html#l00154">154</a> of file <a class="el" href="FArrayParam_8h_source.html">FArrayParam.h</a>.</p>
+
+<p class="reference">References <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
 </div>
 </div>
-<a id="a3aee8175a45ea44b57fb5a2135f8957d" name="a3aee8175a45ea44b57fb5a2135f8957d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3aee8175a45ea44b57fb5a2135f8957d">&#9670;&nbsp;</a></span>bcastValue()</h2>
+<a id="a149dd7a5990ad9d5c972e849eefa28b1" name="a149dd7a5990ad9d5c972e849eefa28b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a149dd7a5990ad9d5c972e849eefa28b1">&#9670;&nbsp;</a></span>bcastValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type , int N&gt; </div>
+template&lt;typename Type , int Capacity&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classUtil_1_1FArrayParam.html">Util::FArrayParam</a>&lt; Type, N &gt;::bcastValue</td>
+          <td class="memname">void <a class="el" href="classUtil_1_1FArrayParam.html">Util::FArrayParam</a>&lt; Type, Capacity &gt;::bcastValue</td>
         </tr>
       </table>
   </td>
@@ -494,7 +625,7 @@ template&lt;class Type , int N&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classUtil_1_1Parameter.html#ad93ad2700686a5a32755fdb67b2a0792">Util::Parameter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="FArrayParam_8h_source.html#l00113">113</a> of file <a class="el" href="FArrayParam_8h_source.html">FArrayParam.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FArrayParam_8h_source.html#l00167">167</a> of file <a class="el" href="FArrayParam_8h_source.html">FArrayParam.h</a>.</p>
 
 </div>
 </div>
@@ -504,7 +635,7 @@ template&lt;class Type , int N&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:19 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:43 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

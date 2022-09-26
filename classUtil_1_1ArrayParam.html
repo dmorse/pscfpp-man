@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -62,13 +62,13 @@ Inheritance diagram for Util::ArrayParam&lt; Type &gt;:</div>
  <div class="center">
   <img src="classUtil_1_1ArrayParam.png" usemap="#Util::ArrayParam_3C_20Type_20_3E_map" alt=""/>
   <map id="Util::ArrayParam_3C_20Type_20_3E_map" name="Util::ArrayParam_3C_20Type_20_3E_map">
-<area href="classUtil_1_1Parameter.html" title="A single variable in a parameter file." alt="Util::Parameter" shape="rect" coords="192,112,374,136"/>
-<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="192,56,374,80"/>
-<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="96,0,278,24"/>
-<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="288,0,470,24"/>
-<area href="classUtil_1_1CArrayParam.html" title="A Parameter associated with a 1D C array." alt="Util::CArrayParam&lt; Type &gt;" shape="rect" coords="0,224,182,248"/>
-<area href="classUtil_1_1DArrayParam.html" title="A Parameter associated with a DArray container." alt="Util::DArrayParam&lt; Type &gt;" shape="rect" coords="192,224,374,248"/>
-<area href="classUtil_1_1FArrayParam.html" title="A Parameter associated with a FArray container." alt="Util::FArrayParam&lt; Type, N &gt;" shape="rect" coords="384,224,566,248"/>
+<area href="classUtil_1_1Parameter.html" title="A single variable in a parameter file." alt="Util::Parameter" shape="rect" coords="233,112,456,136"/>
+<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="233,56,456,80"/>
+<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="116,0,339,24"/>
+<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="349,0,572,24"/>
+<area href="classUtil_1_1CArrayParam.html" title="A Parameter associated with a 1D C array." alt="Util::CArrayParam&lt; Type &gt;" shape="rect" coords="0,224,223,248"/>
+<area href="classUtil_1_1DArrayParam.html" title="A Parameter associated with a DArray container." alt="Util::DArrayParam&lt; Type &gt;" shape="rect" coords="233,224,456,248"/>
+<area href="classUtil_1_1FArrayParam.html" title="A Parameter associated with a FArray container." alt="Util::FArrayParam&lt; Type, Capacity &gt;" shape="rect" coords="466,224,689,248"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -80,9 +80,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aadf724264376c62174ce45aa2a2d9489"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#aadf724264376c62174ce45aa2a2d9489">~ArrayParam</a> ()</td></tr>
 <tr class="memdesc:aadf724264376c62174ce45aa2a2d9489"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classUtil_1_1ArrayParam.html#aadf724264376c62174ce45aa2a2d9489">More...</a><br /></td></tr>
 <tr class="separator:aadf724264376c62174ce45aa2a2d9489"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74f648f4a7cfcba8a2a1e4b6e400b861"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#a74f648f4a7cfcba8a2a1e4b6e400b861">writeParam</a> (std::ostream &amp;out)</td></tr>
-<tr class="memdesc:a74f648f4a7cfcba8a2a1e4b6e400b861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write parameter to stream.  <a href="classUtil_1_1ArrayParam.html#a74f648f4a7cfcba8a2a1e4b6e400b861">More...</a><br /></td></tr>
-<tr class="separator:a74f648f4a7cfcba8a2a1e4b6e400b861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a500e8ed7dcff369427bc19764f320c8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#a500e8ed7dcff369427bc19764f320c8d">writeParam</a> (std::ostream &amp;out) const</td></tr>
+<tr class="memdesc:a500e8ed7dcff369427bc19764f320c8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write an array-valued parameter to stream.  <a href="classUtil_1_1ArrayParam.html#a500e8ed7dcff369427bc19764f320c8d">More...</a><br /></td></tr>
+<tr class="separator:a500e8ed7dcff369427bc19764f320c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0154c57ca8366ab705cf1837a2cbf94f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#a0154c57ca8366ab705cf1837a2cbf94f">n</a> () const</td></tr>
 <tr class="memdesc:a0154c57ca8366ab705cf1837a2cbf94f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the logical array dimension.  <a href="classUtil_1_1ArrayParam.html#a0154c57ca8366ab705cf1837a2cbf94f">More...</a><br /></td></tr>
 <tr class="separator:a0154c57ca8366ab705cf1837a2cbf94f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,9 +136,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5234b604f9e852f53eedd7de7c354a1e inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a5234b604f9e852f53eedd7de7c354a1e">readParam</a> (std::istream &amp;in)=0</td></tr>
 <tr class="memdesc:a5234b604f9e852f53eedd7de7c354a1e inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter(s) from file.  <a href="classUtil_1_1ParamComponent.html#a5234b604f9e852f53eedd7de7c354a1e">More...</a><br /></td></tr>
 <tr class="separator:a5234b604f9e852f53eedd7de7c354a1e inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac17d6ab63f9b0e5f966d6a3cfbc26d86 inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ac17d6ab63f9b0e5f966d6a3cfbc26d86">writeParam</a> (std::ostream &amp;out)=0</td></tr>
-<tr class="memdesc:ac17d6ab63f9b0e5f966d6a3cfbc26d86 inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter(s) to file.  <a href="classUtil_1_1ParamComponent.html#ac17d6ab63f9b0e5f966d6a3cfbc26d86">More...</a><br /></td></tr>
-<tr class="separator:ac17d6ab63f9b0e5f966d6a3cfbc26d86 inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c9b5abc1f5cf4a07b5f8089020a8ce inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#aa0c9b5abc1f5cf4a07b5f8089020a8ce">writeParam</a> (std::ostream &amp;out) const =0</td></tr>
+<tr class="memdesc:aa0c9b5abc1f5cf4a07b5f8089020a8ce inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter(s) to file.  <a href="classUtil_1_1ParamComponent.html#aa0c9b5abc1f5cf4a07b5f8089020a8ce">More...</a><br /></td></tr>
+<tr class="separator:aa0c9b5abc1f5cf4a07b5f8089020a8ce inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7925e60ccaf7ecf2ea866e689983124d inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a7925e60ccaf7ecf2ea866e689983124d">load</a> (<a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">Serializable::IArchive</a> &amp;ar)</td></tr>
 <tr class="memdesc:a7925e60ccaf7ecf2ea866e689983124d inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load internal state from an archive.  <a href="classUtil_1_1ParamComponent.html#a7925e60ccaf7ecf2ea866e689983124d">More...</a><br /></td></tr>
 <tr class="separator:a7925e60ccaf7ecf2ea866e689983124d inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,13 +197,19 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:afbd9e4692ef7ea31c0b3f89b8e51d651"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter label from an input stream.  <a href="classUtil_1_1ArrayParam.html#afbd9e4692ef7ea31c0b3f89b8e51d651">More...</a><br /></td></tr>
 <tr class="separator:afbd9e4692ef7ea31c0b3f89b8e51d651"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b1a037b3819742b4137214316d6a1f7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#a7b1a037b3819742b4137214316d6a1f7">readValue</a> (std::istream &amp;in)</td></tr>
-<tr class="memdesc:a7b1a037b3819742b4137214316d6a1f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter value from an input stream.  <a href="classUtil_1_1ArrayParam.html#a7b1a037b3819742b4137214316d6a1f7">More...</a><br /></td></tr>
+<tr class="memdesc:a7b1a037b3819742b4137214316d6a1f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read array of element values from an input stream.  <a href="classUtil_1_1ArrayParam.html#a7b1a037b3819742b4137214316d6a1f7">More...</a><br /></td></tr>
 <tr class="separator:a7b1a037b3819742b4137214316d6a1f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab445616297b6af8f0b59f2f95316080a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#ab445616297b6af8f0b59f2f95316080a">readEndBracket</a> (std::istream &amp;in)</td></tr>
+<tr class="memdesc:ab445616297b6af8f0b59f2f95316080a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a closing bracket, if necessary.  <a href="classUtil_1_1ArrayParam.html#ab445616297b6af8f0b59f2f95316080a">More...</a><br /></td></tr>
+<tr class="separator:ab445616297b6af8f0b59f2f95316080a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a575373758fb6c9b65367553003b421f7"><td class="memItemLeft" align="right" valign="top">virtual Type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#a575373758fb6c9b65367553003b421f7">element</a> (int i)=0</td></tr>
-<tr class="memdesc:a575373758fb6c9b65367553003b421f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reference to one element.  <a href="classUtil_1_1ArrayParam.html#a575373758fb6c9b65367553003b421f7">More...</a><br /></td></tr>
+<tr class="memdesc:a575373758fb6c9b65367553003b421f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a non-const reference to one element of the array.  <a href="classUtil_1_1ArrayParam.html#a575373758fb6c9b65367553003b421f7">More...</a><br /></td></tr>
 <tr class="separator:a575373758fb6c9b65367553003b421f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b77fe1fa6207d10711a1791b1cc6686"><td class="memItemLeft" align="right" valign="top">virtual Type const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#a8b77fe1fa6207d10711a1791b1cc6686">element</a> (int i) const =0</td></tr>
+<tr class="memdesc:a8b77fe1fa6207d10711a1791b1cc6686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a non-const reference to one element of the array.  <a href="classUtil_1_1ArrayParam.html#a8b77fe1fa6207d10711a1791b1cc6686">More...</a><br /></td></tr>
+<tr class="separator:a8b77fe1fa6207d10711a1791b1cc6686"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2954118a293c2f52a6bc0c941efae489"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ArrayParam.html#a2954118a293c2f52a6bc0c941efae489">hasBrackets</a> () const</td></tr>
-<tr class="memdesc:a2954118a293c2f52a6bc0c941efae489"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are brackets used as delimiters?  <a href="classUtil_1_1ArrayParam.html#a2954118a293c2f52a6bc0c941efae489">More...</a><br /></td></tr>
+<tr class="memdesc:a2954118a293c2f52a6bc0c941efae489"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are square brackets being used as delimiters?  <a href="classUtil_1_1ArrayParam.html#a2954118a293c2f52a6bc0c941efae489">More...</a><br /></td></tr>
 <tr class="separator:a2954118a293c2f52a6bc0c941efae489"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classUtil_1_1Parameter"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classUtil_1_1Parameter')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUtil_1_1Parameter.html">Util::Parameter</a></td></tr>
 <tr class="memitem:a2cb12eaf9752eae8cc2a83cce43c7c5e inherit pro_methods_classUtil_1_1Parameter"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Parameter.html#a2cb12eaf9752eae8cc2a83cce43c7c5e">readLabel</a> (std::istream &amp;in)</td></tr>
@@ -285,9 +291,21 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename Type&gt;<br />
 class Util::ArrayParam&lt; Type &gt;</div><p >An array-valued parameter in a parameter file. </p>
-<p ><a class="el" href="classUtil_1_1ArrayParam.html" title="An array-valued parameter in a parameter file.">ArrayParam</a> is a base class for objects that read and write the value of an array containing a list of parameters of the same type. The parameter file format for a parameter contains a string label followed by values of the elements of the array. </p>
+<p ><a class="el" href="classUtil_1_1ArrayParam.html" title="An array-valued parameter in a parameter file.">ArrayParam</a> is a base class for objects that read and write the value of an array containing a list of parameters of the same type. The parameter file format for a parameter contains a string label followed by values of the elements of the array.</p>
+<p >Arrays can be read and written in either of two formats:</p>
+<ul>
+<li>Bracketed format begins with a label immediately followed by an opening left bracket "[" on a line by itself, followed by several data lines, and ends with a closing bracket ("]") on a line by itself.</li>
+<li>Bracket-free format begins with a label on the same line as the first line of data, with no opening or closing delimit</li>
+</ul>
+<p >The choice of whether to use bracketed or bracket-free format is determined by the value of the global policy returned by the function <a class="el" href="namespaceUtil_1_1BracketPolicy.html#a3304a9bf70c6f0a80ada90c0b24d4282" title="Get value of bracket policy.">Util::BracketPolicy::get()</a> :</p>
+<ul>
+<li>If the policy is BracketPolicy::Required, the bracketed format must be used for both reading and writing.</li>
+<li>If the policy is BracketPolicy::Forbidden, the bracket-free format must be used for both reading and writing.</li>
+<li>If the policy is BracketPolicy::Optional, then either format can be read, but the bracketed format is used for writing.</li>
+</ul>
+<p >If the bracket policy is optional, the code determines if brackets are being used on input by looking for an opening bracket at the end of the label. A closing bracket is then required if an opening bracket is found, and forbidden if no opening bracket is found. </p>
 
-<p class="definition">Definition at line <a class="el" href="ArrayParam_8h_source.html#l00027">27</a> of file <a class="el" href="ArrayParam_8h_source.html">ArrayParam.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ArrayParam_8h_source.html#l00055">55</a> of file <a class="el" href="ArrayParam_8h_source.html">ArrayParam.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a054f20a51257f3494a9a060696bcc97e" name="a054f20a51257f3494a9a060696bcc97e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a054f20a51257f3494a9a060696bcc97e">&#9670;&nbsp;</a></span>ArrayParam()</h2>
@@ -328,14 +346,14 @@ template&lt;typename Type &gt; </div>
   <table class="params">
     <tr><td class="paramname">label</td><td>label string preceding value in file format </td></tr>
     <tr><td class="paramname">n</td><td>logical array dimension </td></tr>
-    <tr><td class="paramname">isRequired</td><td>Is this a required parameter? </td></tr>
+    <tr><td class="paramname">isRequired</td><td>Is this a required array-valued parameter? </td></tr>
   </table>
   </dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="ArrayParam_8tpp_source.html#l00024">24</a> of file <a class="el" href="ArrayParam_8tpp_source.html">ArrayParam.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="BracketPolicy_8cpp_source.html#l00034">Util::BracketPolicy::get()</a>, <a class="el" href="Parameter_8h_source.html#l00185">Util::ArrayParam&lt; Type &gt;::label_</a>, and <a class="el" href="Label_8cpp_source.html#l00083">Util::Label::setString()</a>.</p>
+<p class="reference">References <a class="el" href="BracketPolicy_8cpp_source.html#l00034">Util::BracketPolicy::get()</a>, <a class="el" href="Parameter_8h_source.html#l00185">Util::ArrayParam&lt; Type &gt;::label_</a>, and <a class="el" href="Label_8cpp_source.html#l00099">Util::Label::setString()</a>.</p>
 
 </div>
 </div>
@@ -368,8 +386,8 @@ template&lt;typename Type &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a74f648f4a7cfcba8a2a1e4b6e400b861" name="a74f648f4a7cfcba8a2a1e4b6e400b861"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74f648f4a7cfcba8a2a1e4b6e400b861">&#9670;&nbsp;</a></span>writeParam()</h2>
+<a id="a500e8ed7dcff369427bc19764f320c8d" name="a500e8ed7dcff369427bc19764f320c8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a500e8ed7dcff369427bc19764f320c8d">&#9670;&nbsp;</a></span>writeParam()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -384,7 +402,7 @@ template&lt;class Type &gt; </div>
           <td>(</td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
           <td class="paramname"><em>out</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -394,7 +412,8 @@ template&lt;class Type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Write parameter to stream. </p>
+<p>Write an array-valued parameter to stream. </p>
+<p >The array is written if and only if <a class="el" href="classUtil_1_1ArrayParam.html#ae8c6d89210cc4d3eb3eb4eb8dd3e0ff9" title="Is this parameter active?">isActive()</a> is true.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">out</td><td>output stream </td></tr>
@@ -402,15 +421,15 @@ template&lt;class Type &gt; </div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classUtil_1_1ParamComponent.html#ac17d6ab63f9b0e5f966d6a3cfbc26d86">Util::ParamComponent</a>.</p>
+<p>Implements <a class="el" href="classUtil_1_1ParamComponent.html#aa0c9b5abc1f5cf4a07b5f8089020a8ce">Util::ParamComponent</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classUtil_1_1DArrayParam.html#aab8066ee6857f293866b4753de196473">Util::DArrayParam&lt; Type &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classUtil_1_1DArrayParam.html#aa17d09c2695f76d1340c0c3b50114fb6">Util::DArrayParam&lt; Type &gt;</a>, and <a class="el" href="classUtil_1_1FArrayParam.html#a65721140e7fd3ec08c6a612a1924be82">Util::FArrayParam&lt; Type, Capacity &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ArrayParam_8tpp_source.html#l00132">132</a> of file <a class="el" href="ArrayParam_8tpp_source.html">ArrayParam.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ArrayParam_8tpp_source.html#l00151">151</a> of file <a class="el" href="ArrayParam_8tpp_source.html">ArrayParam.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Parameter_8h_source.html#l00185">Util::Parameter::label_</a>, <a class="el" href="Parameter_8h_source.html#l00056">Util::Parameter::Precision</a>, <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>, and <a class="el" href="Parameter_8h_source.html#l00053">Util::Parameter::Width</a>.</p>
+<p class="reference">References <a class="el" href="Parameter_8h_source.html#l00185">Util::Parameter::label_</a>, <a class="el" href="Parameter_8h_source.html#l00056">Util::Parameter::Precision</a>, and <a class="el" href="Parameter_8h_source.html#l00053">Util::Parameter::Width</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DArrayParam_8h_source.html#l00111">Util::DArrayParam&lt; Type &gt;::writeParam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DArrayParam_8h_source.html#l00117">Util::DArrayParam&lt; Type &gt;::writeParam()</a>, and <a class="el" href="FArrayParam_8h_source.html#l00116">Util::FArrayParam&lt; Type, Capacity &gt;::writeParam()</a>.</p>
 
 </div>
 </div>
@@ -441,7 +460,7 @@ template&lt;typename Type &gt; </div>
 
 <p>Get the logical array dimension. </p>
 
-<p class="definition">Definition at line <a class="el" href="ArrayParam_8h_source.html#l00056">56</a> of file <a class="el" href="ArrayParam_8h_source.html">ArrayParam.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ArrayParam_8h_source.html#l00086">86</a> of file <a class="el" href="ArrayParam_8h_source.html">ArrayParam.h</a>.</p>
 
 </div>
 </div>
@@ -483,7 +502,7 @@ template&lt;typename Type &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="ArrayParam_8tpp_source.html#l00050">50</a> of file <a class="el" href="ArrayParam_8tpp_source.html">ArrayParam.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="BracketPolicy_8cpp_source.html#l00034">Util::BracketPolicy::get()</a>, and <a class="el" href="Label_8h_source.html#l00210">Util::Label::isMatched()</a>.</p>
+<p class="reference">References <a class="el" href="BracketPolicy_8cpp_source.html#l00034">Util::BracketPolicy::get()</a>, and <a class="el" href="Label_8h_source.html#l00274">Util::Label::isMatched()</a>.</p>
 
 </div>
 </div>
@@ -513,7 +532,8 @@ template&lt;class Type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Read parameter value from an input stream. </p>
+<p>Read array of element values from an input stream. </p>
+<p >This function should be called after readLabel. It reads all the elements and then calls readEndBracket to read the final bracket, if any.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">in</td><td>input stream from which to read </td></tr>
@@ -523,18 +543,59 @@ template&lt;class Type &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classUtil_1_1Parameter.html#a5817fa95bf2e32808d384a66e272dc37">Util::Parameter</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classUtil_1_1DArrayParam.html#ad550c2aadf45f68c24f69ddf54b6b2c7">Util::DArrayParam&lt; Type &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classUtil_1_1DArrayParam.html#ad550c2aadf45f68c24f69ddf54b6b2c7">Util::DArrayParam&lt; Type &gt;</a>, and <a class="el" href="classUtil_1_1FArrayParam.html#a7d2645b5bd9f2d960a23028f479ccd66">Util::FArrayParam&lt; Type, Capacity &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ArrayParam_8tpp_source.html#l00103">103</a> of file <a class="el" href="ArrayParam_8tpp_source.html">ArrayParam.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="BracketPolicy_8cpp_source.html#l00034">Util::BracketPolicy::get()</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="BracketPolicy_8cpp_source.html#l00034">Util::BracketPolicy::get()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DArrayParam_8h_source.html#l00128">Util::DArrayParam&lt; Type &gt;::readValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DArrayParam_8h_source.html#l00134">Util::DArrayParam&lt; Type &gt;::readValue()</a>, and <a class="el" href="FArrayParam_8h_source.html#l00130">Util::FArrayParam&lt; Type, Capacity &gt;::readValue()</a>.</p>
+
+</div>
+</div>
+<a id="ab445616297b6af8f0b59f2f95316080a" name="ab445616297b6af8f0b59f2f95316080a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab445616297b6af8f0b59f2f95316080a">&#9670;&nbsp;</a></span>readEndBracket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classUtil_1_1ArrayParam.html">Util::ArrayParam</a>&lt; Type &gt;::readEndBracket </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read a closing bracket, if necessary. </p>
+<p >This function attempts to read the closing "]" bracket if and only if hasBrackets is true. An <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a> is thrown if hasBrackets is true and no bracket is found. Before returning, the format is also reset to the appropriate default format for output.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>input stream from which to read </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ArrayParam_8tpp_source.html#l00127">127</a> of file <a class="el" href="ArrayParam_8tpp_source.html">ArrayParam.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="BracketPolicy_8cpp_source.html#l00034">Util::BracketPolicy::get()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
 <a id="a575373758fb6c9b65367553003b421f7" name="a575373758fb6c9b65367553003b421f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a575373758fb6c9b65367553003b421f7">&#9670;&nbsp;</a></span>element()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a575373758fb6c9b65367553003b421f7">&#9670;&nbsp;</a></span>element() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -559,9 +620,55 @@ template&lt;typename Type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Return reference to one element. </p>
+<p>Return a non-const reference to one element of the array. </p>
+<p >This function is used to access individual elements within the readValue function. It must be implemented by subclasses.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>array element index </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implemented in <a class="el" href="classUtil_1_1CArrayParam.html#a830eb20ae93f88f676033fc2aeb46024">Util::CArrayParam&lt; Type &gt;</a>, <a class="el" href="classUtil_1_1DArrayParam.html#a09379ed139da44a1620d5707b2f8d6f7">Util::DArrayParam&lt; Type &gt;</a>, and <a class="el" href="classUtil_1_1FArrayParam.html#a0fec632aba99b461ef410d4248e2c91b">Util::FArrayParam&lt; Type, N &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classUtil_1_1CArrayParam.html#a830eb20ae93f88f676033fc2aeb46024">Util::CArrayParam&lt; Type &gt;</a>, <a class="el" href="classUtil_1_1DArrayParam.html#a09379ed139da44a1620d5707b2f8d6f7">Util::DArrayParam&lt; Type &gt;</a>, and <a class="el" href="classUtil_1_1FArrayParam.html#a80adb1a2cb00e44aee7ad37bc2662adb">Util::FArrayParam&lt; Type, Capacity &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a8b77fe1fa6207d10711a1791b1cc6686" name="a8b77fe1fa6207d10711a1791b1cc6686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b77fe1fa6207d10711a1791b1cc6686">&#9670;&nbsp;</a></span>element() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Type const  &amp; <a class="el" href="classUtil_1_1ArrayParam.html">Util::ArrayParam</a>&lt; Type &gt;::element </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a non-const reference to one element of the array. </p>
+<p >This function is used to access individual elements within the readValue function. It must be implemented by subclasses.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>array element index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classUtil_1_1CArrayParam.html#a297b926eb0270a489ca7cd5ac8b33f79">Util::CArrayParam&lt; Type &gt;</a>, <a class="el" href="classUtil_1_1DArrayParam.html#ab62904edc4ba55d2ecaf5ecde8dbf3be">Util::DArrayParam&lt; Type &gt;</a>, and <a class="el" href="classUtil_1_1FArrayParam.html#afd47e1a8d1c04587c4a00557df798965">Util::FArrayParam&lt; Type, Capacity &gt;</a>.</p>
 
 </div>
 </div>
@@ -590,9 +697,9 @@ template&lt;typename Type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Are brackets used as delimiters? </p>
+<p>Are square brackets being used as delimiters? </p>
 
-<p class="definition">Definition at line <a class="el" href="ArrayParam_8h_source.html#l00090">90</a> of file <a class="el" href="ArrayParam_8h_source.html">ArrayParam.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ArrayParam_8h_source.html#l00151">151</a> of file <a class="el" href="ArrayParam_8h_source.html">ArrayParam.h</a>.</p>
 
 </div>
 </div>
@@ -702,7 +809,7 @@ template&lt;typename Type &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="Parameter_8cpp_source.html#l00165">165</a> of file <a class="el" href="Parameter_8cpp_source.html">Parameter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Parameter_8h_source.html#l00185">Util::Parameter::label_</a>, and <a class="el" href="Label_8cpp_source.html#l00095">Util::Label::string()</a>.</p>
+<p class="reference">References <a class="el" href="Parameter_8h_source.html#l00185">Util::Parameter::label_</a>, and <a class="el" href="Label_8cpp_source.html#l00111">Util::Label::string()</a>.</p>
 
 </div>
 </div>
@@ -813,7 +920,7 @@ template&lt;typename Type &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:19 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

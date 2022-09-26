@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -127,7 +127,7 @@ $(function() {
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>   {</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      computeHead();</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iStep = 0; iStep &lt; ns_ - 1; ++iStep) {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>         block().<a class="code hl_function" href="classPscf_1_1Fd1d_1_1Block.html#a29a7be9f9e350c531d90c2c935a21c08">step</a>(qFields_[iStep], qFields_[iStep + 1]);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>         block().<a class="code hl_function" href="classPscf_1_1Fd1d_1_1Block.html#a42155373808ce61a357f62d44b03e56f">step</a>(qFields_[iStep], qFields_[iStep + 1]);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      }</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      <a class="code hl_function" href="classPscf_1_1PropagatorTmpl.html#a05315758e7567ff08d1aea4166dbbc93">setIsSolved</a>(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>   }</div>
@@ -145,7 +145,7 @@ $(function() {
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      <span class="comment">// Setup solver and solve</span></div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iStep = 0; iStep &lt; ns_ - 1; ++iStep) {</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>         block().<a class="code hl_function" href="classPscf_1_1Fd1d_1_1Block.html#a29a7be9f9e350c531d90c2c935a21c08">step</a>(qFields_[iStep], qFields_[iStep + 1]);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>         block().<a class="code hl_function" href="classPscf_1_1Fd1d_1_1Block.html#a42155373808ce61a357f62d44b03e56f">step</a>(qFields_[iStep], qFields_[iStep + 1]);</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      }</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <a class="code hl_function" href="classPscf_1_1PropagatorTmpl.html#a05315758e7567ff08d1aea4166dbbc93">setIsSolved</a>(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>   }</div>
@@ -171,9 +171,9 @@ $(function() {
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>}</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>}</div>
-<div class="ttc" id="aclassPscf_1_1Fd1d_1_1Block_html_a139512b9fc3bc289dfccbedc195acbb0"><div class="ttname"><a href="classPscf_1_1Fd1d_1_1Block.html#a139512b9fc3bc289dfccbedc195acbb0">Pscf::Fd1d::Block::domain</a></div><div class="ttdeci">Domain const &amp; domain() const</div><div class="ttdoc">Return associated domain by reference.</div><div class="ttdef"><b>Definition:</b> <a href="fd1d_2solvers_2Block_8h_source.html#l00162">fd1d/solvers/Block.h:162</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Fd1d_1_1Block_html_a29a7be9f9e350c531d90c2c935a21c08"><div class="ttname"><a href="classPscf_1_1Fd1d_1_1Block.html#a29a7be9f9e350c531d90c2c935a21c08">Pscf::Fd1d::Block::step</a></div><div class="ttdeci">void step(QField const &amp;q, QField &amp;qNew)</div><div class="ttdoc">Compute one step of integration loop, from i to i+1.</div><div class="ttdef"><b>Definition:</b> <a href="fd1d_2solvers_2Block_8cpp_source.html#l00277">fd1d/solvers/Block.cpp:277</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Fd1d_1_1Domain_html_af7011ab85e51c158a67f381373d7935d"><div class="ttname"><a href="classPscf_1_1Fd1d_1_1Domain.html#af7011ab85e51c158a67f381373d7935d">Pscf::Fd1d::Domain::innerProduct</a></div><div class="ttdeci">double innerProduct(Field const &amp;f, Field const &amp;g) const</div><div class="ttdoc">Compute inner product of two real fields.</div><div class="ttdef"><b>Definition:</b> <a href="fd1d_2domain_2Domain_8cpp_source.html#l00199">fd1d/domain/Domain.cpp:199</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Fd1d_1_1Block_html_a139512b9fc3bc289dfccbedc195acbb0"><div class="ttname"><a href="classPscf_1_1Fd1d_1_1Block.html#a139512b9fc3bc289dfccbedc195acbb0">Pscf::Fd1d::Block::domain</a></div><div class="ttdeci">Domain const &amp; domain() const</div><div class="ttdoc">Return associated domain by reference.</div><div class="ttdef"><b>Definition:</b> <a href="fd1d_2solvers_2Block_8h_source.html#l00145">fd1d/solvers/Block.h:145</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Fd1d_1_1Block_html_a42155373808ce61a357f62d44b03e56f"><div class="ttname"><a href="classPscf_1_1Fd1d_1_1Block.html#a42155373808ce61a357f62d44b03e56f">Pscf::Fd1d::Block::step</a></div><div class="ttdeci">void step(DArray&lt; double &gt; const &amp;q, DArray&lt; double &gt; &amp;qNew)</div><div class="ttdoc">Compute one step of integration loop, from i to i+1.</div><div class="ttdef"><b>Definition:</b> <a href="fd1d_2solvers_2Block_8cpp_source.html#l00278">fd1d/solvers/Block.cpp:278</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Fd1d_1_1Domain_html_af7011ab85e51c158a67f381373d7935d"><div class="ttname"><a href="classPscf_1_1Fd1d_1_1Domain.html#af7011ab85e51c158a67f381373d7935d">Pscf::Fd1d::Domain::innerProduct</a></div><div class="ttdeci">double innerProduct(Field const &amp;f, Field const &amp;g) const</div><div class="ttdoc">Compute inner product of two real fields.</div><div class="ttdef"><b>Definition:</b> <a href="fd1d_2domain_2Domain_8cpp_source.html#l00201">fd1d/domain/Domain.cpp:201</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Fd1d_1_1Propagator_html_a0678ce8c62b9571edd2592ee05a8ccbf"><div class="ttname"><a href="classPscf_1_1Fd1d_1_1Propagator.html#a0678ce8c62b9571edd2592ee05a8ccbf">Pscf::Fd1d::Propagator::QField</a></div><div class="ttdeci">DArray&lt; double &gt; QField</div><div class="ttdoc">Propagator q-field type.</div><div class="ttdef"><b>Definition:</b> <a href="fd1d_2solvers_2Propagator_8h_source.html#l00051">fd1d/solvers/Propagator.h:51</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Fd1d_1_1Propagator_html_a2e240139552d770403799dbb46df03c4"><div class="ttname"><a href="classPscf_1_1Fd1d_1_1Propagator.html#a2e240139552d770403799dbb46df03c4">Pscf::Fd1d::Propagator::solve</a></div><div class="ttdeci">void solve()</div><div class="ttdoc">Solve the modified diffusion equation (MDE) for this block.</div><div class="ttdef"><b>Definition:</b> <a href="fd1d_2solvers_2Propagator_8cpp_source.html#l00078">fd1d/solvers/Propagator.cpp:78</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Fd1d_1_1Propagator_html_a4cc0ee79acb3e70cd73c6ebf10812c55"><div class="ttname"><a href="classPscf_1_1Fd1d_1_1Propagator.html#a4cc0ee79acb3e70cd73c6ebf10812c55">Pscf::Fd1d::Propagator::computeQ</a></div><div class="ttdeci">double computeQ()</div><div class="ttdoc">Compute and return partition function for the molecule.</div><div class="ttdef"><b>Definition:</b> <a href="fd1d_2solvers_2Propagator_8cpp_source.html#l00108">fd1d/solvers/Propagator.cpp:108</a></div></div>
@@ -195,7 +195,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:41 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

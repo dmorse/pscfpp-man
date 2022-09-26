@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -46,11 +46,11 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classPscf_1_1Interaction-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Pscf::Interaction Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Base__Module.html">Pscf Common</a> &raquo; <a class="el" href="group__Pscf__Inter__Module.html">Interactions</a></div></div></div>
+  <div class="headertitle"><div class="title">Pscf::Interaction Class Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Base__Module.html">Pscf Common</a> &raquo; <a class="el" href="group__Pscf__Inter__Module.html">Interactions</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Base class for excess free energy models.  
+<p>Flory-Huggins excess free energy model.  
  <a href="classPscf_1_1Interaction.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Interaction_8h_source.html">Interaction.h</a>&gt;</code></p>
@@ -64,7 +64,6 @@ Inheritance diagram for Pscf::Interaction:</div>
 <area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="72,56,206,80"/>
 <area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="0,0,134,24"/>
 <area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="144,0,278,24"/>
-<area href="classPscf_1_1ChiInteraction.html" title="Flory-Huggins excess free energy model." alt="Pscf::ChiInteraction" shape="rect" coords="72,224,206,248"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -79,21 +78,39 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab62a4747d748f9465f5844833331d7fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Interaction.html#ab62a4747d748f9465f5844833331d7fa">setNMonomer</a> (int <a class="el" href="classPscf_1_1Interaction.html#acdc4ce924e6998c50d291295d3cda0a1">nMonomer</a>)</td></tr>
 <tr class="memdesc:ab62a4747d748f9465f5844833331d7fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of monomer types.  <a href="classPscf_1_1Interaction.html#ab62a4747d748f9465f5844833331d7fa">More...</a><br /></td></tr>
 <tr class="separator:ab62a4747d748f9465f5844833331d7fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ec2bef30f4763bf5b64e4d12fc65acd"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Interaction.html#a3ec2bef30f4763bf5b64e4d12fc65acd">fHelmholtz</a> (<a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; const &amp;c) const =0</td></tr>
-<tr class="memdesc:a3ec2bef30f4763bf5b64e4d12fc65acd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute excess Helmholtz free energy per monomer.  <a href="classPscf_1_1Interaction.html#a3ec2bef30f4763bf5b64e4d12fc65acd">More...</a><br /></td></tr>
-<tr class="separator:a3ec2bef30f4763bf5b64e4d12fc65acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa04ae1ec8eecdcece17b04137c73b9a7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Interaction.html#aa04ae1ec8eecdcece17b04137c73b9a7">computeW</a> (<a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; const &amp;c, <a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; &amp;w) const =0</td></tr>
-<tr class="memdesc:aa04ae1ec8eecdcece17b04137c73b9a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute interaction contributions to chemical potentials.  <a href="classPscf_1_1Interaction.html#aa04ae1ec8eecdcece17b04137c73b9a7">More...</a><br /></td></tr>
-<tr class="separator:aa04ae1ec8eecdcece17b04137c73b9a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af89cdbdd9a054d5bfe33bbbfcabffa77"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Interaction.html#af89cdbdd9a054d5bfe33bbbfcabffa77">computeC</a> (<a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; const &amp;w, <a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; &amp;c, double &amp;xi) const =0</td></tr>
-<tr class="memdesc:af89cdbdd9a054d5bfe33bbbfcabffa77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute concentration and xi from chemical potentials.  <a href="classPscf_1_1Interaction.html#af89cdbdd9a054d5bfe33bbbfcabffa77">More...</a><br /></td></tr>
-<tr class="separator:af89cdbdd9a054d5bfe33bbbfcabffa77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab77996b50808f636b0bdb7b6ed7c8d0f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Interaction.html#ab77996b50808f636b0bdb7b6ed7c8d0f">computeXi</a> (<a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; const &amp;w, double &amp;xi) const =0</td></tr>
-<tr class="memdesc:ab77996b50808f636b0bdb7b6ed7c8d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute Langrange multiplier xi from chemical potentials.  <a href="classPscf_1_1Interaction.html#ab77996b50808f636b0bdb7b6ed7c8d0f">More...</a><br /></td></tr>
-<tr class="separator:ab77996b50808f636b0bdb7b6ed7c8d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a979231dcf58ef659e167ddbb397b0514"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Interaction.html#a979231dcf58ef659e167ddbb397b0514">computeDwDc</a> (<a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; const &amp;c, <a class="el" href="classUtil_1_1Matrix.html">Matrix</a>&lt; double &gt; &amp;dWdC) const =0</td></tr>
-<tr class="memdesc:a979231dcf58ef659e167ddbb397b0514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute matrix of derivatives of w fields w/ respect to c fields.  <a href="classPscf_1_1Interaction.html#a979231dcf58ef659e167ddbb397b0514">More...</a><br /></td></tr>
-<tr class="separator:a979231dcf58ef659e167ddbb397b0514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ece65b688cfaa0191e2cffb3724c92d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Interaction.html#a7ece65b688cfaa0191e2cffb3724c92d">readParameters</a> (std::istream &amp;in)</td></tr>
+<tr class="memdesc:a7ece65b688cfaa0191e2cffb3724c92d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read chi parameters.  <a href="classPscf_1_1Interaction.html#a7ece65b688cfaa0191e2cffb3724c92d">More...</a><br /></td></tr>
+<tr class="separator:a7ece65b688cfaa0191e2cffb3724c92d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f11a1b65ca11eb6a4c469aea5f132f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Interaction.html#a8f11a1b65ca11eb6a4c469aea5f132f0">setChi</a> (int i, int j, double <a class="el" href="classPscf_1_1Interaction.html#a34432b74fa717b55a0211fc814258218">chi</a>)</td></tr>
+<tr class="memdesc:a8f11a1b65ca11eb6a4c469aea5f132f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change one element of the chi matrix.  <a href="classPscf_1_1Interaction.html#a8f11a1b65ca11eb6a4c469aea5f132f0">More...</a><br /></td></tr>
+<tr class="separator:a8f11a1b65ca11eb6a4c469aea5f132f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e2fb07d55197819f2c216a8121a6278"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Interaction.html#a0e2fb07d55197819f2c216a8121a6278">fHelmholtz</a> (<a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; const &amp;c) const</td></tr>
+<tr class="memdesc:a0e2fb07d55197819f2c216a8121a6278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute excess Helmholtz free energy per monomer.  <a href="classPscf_1_1Interaction.html#a0e2fb07d55197819f2c216a8121a6278">More...</a><br /></td></tr>
+<tr class="separator:a0e2fb07d55197819f2c216a8121a6278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a894566c172d6741cf02818ec77849fb2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Interaction.html#a894566c172d6741cf02818ec77849fb2">computeW</a> (<a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; const &amp;c, <a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; &amp;w) const</td></tr>
+<tr class="memdesc:a894566c172d6741cf02818ec77849fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute chemical potential from concentration.  <a href="classPscf_1_1Interaction.html#a894566c172d6741cf02818ec77849fb2">More...</a><br /></td></tr>
+<tr class="separator:a894566c172d6741cf02818ec77849fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aaa5d7b07cd18eaa492b2c9ba4b4c69"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Interaction.html#a8aaa5d7b07cd18eaa492b2c9ba4b4c69">computeC</a> (<a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; const &amp;w, <a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; &amp;c, double &amp;xi) const</td></tr>
+<tr class="memdesc:a8aaa5d7b07cd18eaa492b2c9ba4b4c69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute concentration from chemical potential fields.  <a href="classPscf_1_1Interaction.html#a8aaa5d7b07cd18eaa492b2c9ba4b4c69">More...</a><br /></td></tr>
+<tr class="separator:a8aaa5d7b07cd18eaa492b2c9ba4b4c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8454351cbe954bf2670c019f1fc7cae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Interaction.html#ae8454351cbe954bf2670c019f1fc7cae">computeXi</a> (<a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; const &amp;w, double &amp;xi) const</td></tr>
+<tr class="memdesc:ae8454351cbe954bf2670c019f1fc7cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute Langrange multiplier xi from chemical potential fields.  <a href="classPscf_1_1Interaction.html#ae8454351cbe954bf2670c019f1fc7cae">More...</a><br /></td></tr>
+<tr class="separator:ae8454351cbe954bf2670c019f1fc7cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127b6b15505e7224aa138063ee51a73b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Interaction.html#a127b6b15505e7224aa138063ee51a73b">computeDwDc</a> (<a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; const &amp;c, <a class="el" href="classUtil_1_1Matrix.html">Matrix</a>&lt; double &gt; &amp;dWdC) const</td></tr>
+<tr class="memdesc:a127b6b15505e7224aa138063ee51a73b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute second derivatives of free energy.  <a href="classPscf_1_1Interaction.html#a127b6b15505e7224aa138063ee51a73b">More...</a><br /></td></tr>
+<tr class="separator:a127b6b15505e7224aa138063ee51a73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34432b74fa717b55a0211fc814258218"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Interaction.html#a34432b74fa717b55a0211fc814258218">chi</a> (int i, int j) const</td></tr>
+<tr class="memdesc:a34432b74fa717b55a0211fc814258218"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return one element of the chi matrix.  <a href="classPscf_1_1Interaction.html#a34432b74fa717b55a0211fc814258218">More...</a><br /></td></tr>
+<tr class="separator:a34432b74fa717b55a0211fc814258218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7774dcdc76b40fe911b8d4cd7ad0d63d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Interaction.html#a7774dcdc76b40fe911b8d4cd7ad0d63d">chiInverse</a> (int i, int j) const</td></tr>
+<tr class="memdesc:a7774dcdc76b40fe911b8d4cd7ad0d63d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return one element of the inverse chi matrix.  <a href="classPscf_1_1Interaction.html#a7774dcdc76b40fe911b8d4cd7ad0d63d">More...</a><br /></td></tr>
+<tr class="separator:a7774dcdc76b40fe911b8d4cd7ad0d63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae480ebdd6656510bb59b2ad153e7d583"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Interaction.html#ae480ebdd6656510bb59b2ad153e7d583">idemp</a> (int i, int j) const</td></tr>
+<tr class="memdesc:ae480ebdd6656510bb59b2ad153e7d583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return one element of the idempotent matrix.  <a href="classPscf_1_1Interaction.html#ae480ebdd6656510bb59b2ad153e7d583">More...</a><br /></td></tr>
+<tr class="separator:ae480ebdd6656510bb59b2ad153e7d583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab175c9ef756d5e65479936aa1fcd2699"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Interaction.html#ab175c9ef756d5e65479936aa1fcd2699">sum_inv</a> () const</td></tr>
+<tr class="memdesc:ab175c9ef756d5e65479936aa1fcd2699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return sum of elements of chiInverse.  <a href="classPscf_1_1Interaction.html#ab175c9ef756d5e65479936aa1fcd2699">More...</a><br /></td></tr>
+<tr class="separator:ab175c9ef756d5e65479936aa1fcd2699"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdc4ce924e6998c50d291295d3cda0a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Interaction.html#acdc4ce924e6998c50d291295d3cda0a1">nMonomer</a> () const</td></tr>
 <tr class="memdesc:acdc4ce924e6998c50d291295d3cda0a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of monomer types.  <a href="classPscf_1_1Interaction.html#acdc4ce924e6998c50d291295d3cda0a1">More...</a><br /></td></tr>
 <tr class="separator:acdc4ce924e6998c50d291295d3cda0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -119,12 +136,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aba5de04c5db452000b044e0331ad5182 inherit pub_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#aba5de04c5db452000b044e0331ad5182">readParamOptional</a> (std::istream &amp;in)</td></tr>
 <tr class="memdesc:aba5de04c5db452000b044e0331ad5182 inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read optional parameter file block.  <a href="classUtil_1_1ParamComposite.html#aba5de04c5db452000b044e0331ad5182">More...</a><br /></td></tr>
 <tr class="separator:aba5de04c5db452000b044e0331ad5182 inherit pub_methods_classUtil_1_1ParamComposite"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a172a3a656b5829c8d758424ad09a22a6 inherit pub_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a172a3a656b5829c8d758424ad09a22a6">readParameters</a> (std::istream &amp;in)</td></tr>
-<tr class="memdesc:a172a3a656b5829c8d758424ad09a22a6 inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the body of parameter block, without begin and end lines.  <a href="classUtil_1_1ParamComposite.html#a172a3a656b5829c8d758424ad09a22a6">More...</a><br /></td></tr>
-<tr class="separator:a172a3a656b5829c8d758424ad09a22a6 inherit pub_methods_classUtil_1_1ParamComposite"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addf0c36c3560471bfe47f0be008575b9 inherit pub_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#addf0c36c3560471bfe47f0be008575b9">writeParam</a> (std::ostream &amp;out)</td></tr>
-<tr class="memdesc:addf0c36c3560471bfe47f0be008575b9 inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write all parameters to an output stream.  <a href="classUtil_1_1ParamComposite.html#addf0c36c3560471bfe47f0be008575b9">More...</a><br /></td></tr>
-<tr class="separator:addf0c36c3560471bfe47f0be008575b9 inherit pub_methods_classUtil_1_1ParamComposite"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c288fc3f8cd3f3777c2aa872114cb0c inherit pub_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a5c288fc3f8cd3f3777c2aa872114cb0c">writeParam</a> (std::ostream &amp;out) const</td></tr>
+<tr class="memdesc:a5c288fc3f8cd3f3777c2aa872114cb0c inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write all parameters to an output stream.  <a href="classUtil_1_1ParamComposite.html#a5c288fc3f8cd3f3777c2aa872114cb0c">More...</a><br /></td></tr>
+<tr class="separator:a5c288fc3f8cd3f3777c2aa872114cb0c inherit pub_methods_classUtil_1_1ParamComposite"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02a1172d7cd86d4015be8d9e65fe750f inherit pub_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a02a1172d7cd86d4015be8d9e65fe750f">load</a> (<a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">Serializable::IArchive</a> &amp;ar)</td></tr>
 <tr class="memdesc:a02a1172d7cd86d4015be8d9e65fe750f inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load all parameters from an input archive.  <a href="classUtil_1_1ParamComposite.html#a02a1172d7cd86d4015be8d9e65fe750f">More...</a><br /></td></tr>
 <tr class="separator:a02a1172d7cd86d4015be8d9e65fe750f inherit pub_methods_classUtil_1_1ParamComposite"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -301,9 +315,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5234b604f9e852f53eedd7de7c354a1e inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a5234b604f9e852f53eedd7de7c354a1e">readParam</a> (std::istream &amp;in)=0</td></tr>
 <tr class="memdesc:a5234b604f9e852f53eedd7de7c354a1e inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter(s) from file.  <a href="classUtil_1_1ParamComponent.html#a5234b604f9e852f53eedd7de7c354a1e">More...</a><br /></td></tr>
 <tr class="separator:a5234b604f9e852f53eedd7de7c354a1e inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac17d6ab63f9b0e5f966d6a3cfbc26d86 inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ac17d6ab63f9b0e5f966d6a3cfbc26d86">writeParam</a> (std::ostream &amp;out)=0</td></tr>
-<tr class="memdesc:ac17d6ab63f9b0e5f966d6a3cfbc26d86 inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter(s) to file.  <a href="classUtil_1_1ParamComponent.html#ac17d6ab63f9b0e5f966d6a3cfbc26d86">More...</a><br /></td></tr>
-<tr class="separator:ac17d6ab63f9b0e5f966d6a3cfbc26d86 inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c9b5abc1f5cf4a07b5f8089020a8ce inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#aa0c9b5abc1f5cf4a07b5f8089020a8ce">writeParam</a> (std::ostream &amp;out) const =0</td></tr>
+<tr class="memdesc:aa0c9b5abc1f5cf4a07b5f8089020a8ce inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter(s) to file.  <a href="classUtil_1_1ParamComponent.html#aa0c9b5abc1f5cf4a07b5f8089020a8ce">More...</a><br /></td></tr>
+<tr class="separator:aa0c9b5abc1f5cf4a07b5f8089020a8ce inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7925e60ccaf7ecf2ea866e689983124d inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a7925e60ccaf7ecf2ea866e689983124d">load</a> (<a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">Serializable::IArchive</a> &amp;ar)</td></tr>
 <tr class="memdesc:a7925e60ccaf7ecf2ea866e689983124d inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load internal state from an archive.  <a href="classUtil_1_1ParamComponent.html#a7925e60ccaf7ecf2ea866e689983124d">More...</a><br /></td></tr>
 <tr class="separator:a7925e60ccaf7ecf2ea866e689983124d inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -424,7 +438,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ae979e22ecef3a94c0e826224b3761df9 inherit pro_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Base class for excess free energy models. </p>
+<div class="textblock"><p >Flory-Huggins excess free energy model. </p>
 
 <p class="definition">Definition at line <a class="el" href="Interaction_8h_source.html#l00025">25</a> of file <a class="el" href="Interaction_8h_source.html">Interaction.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -445,7 +459,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="Interaction_8cpp_source.html#l00014">14</a> of file <a class="el" href="Interaction_8cpp_source.html">Interaction.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Interaction_8cpp_source.html#l00018">18</a> of file <a class="el" href="Interaction_8cpp_source.html">Interaction.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ParamComposite_8cpp_source.html#l00377">Util::ParamComposite::setClassName()</a>.</p>
 
@@ -476,7 +490,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="Interaction_8cpp_source.html#l00018">18</a> of file <a class="el" href="Interaction_8cpp_source.html">Interaction.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Interaction_8cpp_source.html#l00025">25</a> of file <a class="el" href="Interaction_8cpp_source.html">Interaction.cpp</a>.</p>
 
 </div>
 </div>
@@ -505,16 +519,16 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Interaction_8cpp_source.html#l00021">21</a> of file <a class="el" href="Interaction_8cpp_source.html">Interaction.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Interaction_8cpp_source.html#l00031">31</a> of file <a class="el" href="Interaction_8cpp_source.html">Interaction.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Interaction_8h_source.html#l00118">nMonomer()</a>.</p>
+<p class="reference">References <a class="el" href="Interaction_8h_source.html#l00181">nMonomer()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00145">Pscf::Fd1d::System::readParameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00168">Pscf::Fd1d::System::readParameters()</a>.</p>
 
 </div>
 </div>
-<a id="a3ec2bef30f4763bf5b64e4d12fc65acd" name="a3ec2bef30f4763bf5b64e4d12fc65acd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ec2bef30f4763bf5b64e4d12fc65acd">&#9670;&nbsp;</a></span>fHelmholtz()</h2>
+<a id="a7ece65b688cfaa0191e2cffb3724c92d" name="a7ece65b688cfaa0191e2cffb3724c92d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ece65b688cfaa0191e2cffb3724c92d">&#9670;&nbsp;</a></span>readParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -523,7 +537,90 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual double Pscf::Interaction::fHelmholtz </td>
+          <td class="memname">void Pscf::Interaction::readParameters </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read chi parameters. </p>
+<p >Must be called after setNMonomer. </p>
+
+<p>Reimplemented from <a class="el" href="classUtil_1_1ParamComposite.html#a172a3a656b5829c8d758424ad09a22a6">Util::ParamComposite</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="Interaction_8cpp_source.html#l00037">37</a> of file <a class="el" href="Interaction_8cpp_source.html">Interaction.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="DMatrix_8h_source.html#l00170">Util::DMatrix&lt; Data &gt;::allocate()</a>, <a class="el" href="Interaction_8h_source.html#l00181">nMonomer()</a>, <a class="el" href="ParamComposite_8h_source.html#l01603">Util::ParamComposite::readDSymmMatrix()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+
+</div>
+</div>
+<a id="a8f11a1b65ca11eb6a4c469aea5f132f0" name="a8f11a1b65ca11eb6a4c469aea5f132f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f11a1b65ca11eb6a4c469aea5f132f0">&#9670;&nbsp;</a></span>setChi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pscf::Interaction::setChi </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>chi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change one element of the chi matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>row index </td></tr>
+    <tr><td class="paramname">j</td><td>column index </td></tr>
+    <tr><td class="paramname">chi</td><td>input value of chi </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Interaction_8cpp_source.html#l00099">99</a> of file <a class="el" href="Interaction_8cpp_source.html">Interaction.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="Interaction_8h_source.html#l00184">chi()</a>.</p>
+
+</div>
+</div>
+<a id="a0e2fb07d55197819f2c216a8121a6278" name="a0e2fb07d55197819f2c216a8121a6278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e2fb07d55197819f2c216a8121a6278">&#9670;&nbsp;</a></span>fHelmholtz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Pscf::Interaction::fHelmholtz </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; const &amp;&#160;</td>
           <td class="paramname"><em>c</em></td><td>)</td>
@@ -532,7 +629,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -545,14 +642,16 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classPscf_1_1ChiInteraction.html#a9ebc634b8b5b8834c61d29ac75896bfa">Pscf::ChiInteraction</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Interaction_8cpp_source.html#l00113">113</a> of file <a class="el" href="Interaction_8cpp_source.html">Interaction.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00337">Pscf::Fd1d::System::computeFreeEnergy()</a>, and <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00372">Pscf::Homogeneous::Mixture::computeFreeEnergy()</a>.</p>
+<p class="reference">References <a class="el" href="Interaction_8h_source.html#l00181">nMonomer()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00459">Pscf::Fd1d::System::computeFreeEnergy()</a>, and <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00372">Pscf::Homogeneous::Mixture::computeFreeEnergy()</a>.</p>
 
 </div>
 </div>
-<a id="aa04ae1ec8eecdcece17b04137c73b9a7" name="aa04ae1ec8eecdcece17b04137c73b9a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa04ae1ec8eecdcece17b04137c73b9a7">&#9670;&nbsp;</a></span>computeW()</h2>
+<a id="a894566c172d6741cf02818ec77849fb2" name="a894566c172d6741cf02818ec77849fb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a894566c172d6741cf02818ec77849fb2">&#9670;&nbsp;</a></span>computeW()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -561,7 +660,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Pscf::Interaction::computeW </td>
+          <td class="memname">void Pscf::Interaction::computeW </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; const &amp;&#160;</td>
           <td class="paramname"><em>c</em>, </td>
@@ -580,29 +679,30 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compute interaction contributions to chemical potentials. </p>
-<p >The resulting chemical potential fields are those obtained with a vanishing Lagrange multiplier / pressure field, xi = 0.</p>
+<p>Compute chemical potential from concentration. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">c</td><td>array of concentrations, for each type (input) </td></tr>
-    <tr><td class="paramname">w</td><td>array of chemical potentials, for each type (output) </td></tr>
+    <tr><td class="paramname">w</td><td>array of chemical potentials for types (ouptut) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classPscf_1_1ChiInteraction.html#a1609f12544f165c29f3542cf6ec544ac">Pscf::ChiInteraction</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Interaction_8cpp_source.html#l00129">129</a> of file <a class="el" href="Interaction_8cpp_source.html">Interaction.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="Interaction_8h_source.html#l00181">nMonomer()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00149">Pscf::Homogeneous::Mixture::computeMu()</a>, and <a class="el" href="NrIterator_8cpp_source.html#l00078">Pscf::Fd1d::NrIterator::computeResidual()</a>.</p>
 
 </div>
 </div>
-<a id="af89cdbdd9a054d5bfe33bbbfcabffa77" name="af89cdbdd9a054d5bfe33bbbfcabffa77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af89cdbdd9a054d5bfe33bbbfcabffa77">&#9670;&nbsp;</a></span>computeC()</h2>
+<a id="a8aaa5d7b07cd18eaa492b2c9ba4b4c69" name="a8aaa5d7b07cd18eaa492b2c9ba4b4c69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aaa5d7b07cd18eaa492b2c9ba4b4c69">&#9670;&nbsp;</a></span>computeC()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -611,7 +711,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Pscf::Interaction::computeC </td>
+          <td class="memname">void Pscf::Interaction::computeC </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; const &amp;&#160;</td>
           <td class="paramname"><em>w</em>, </td>
@@ -636,27 +736,29 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compute concentration and xi from chemical potentials. </p>
+<p>Compute concentration from chemical potential fields. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">w</td><td>array of chemical potentials, for each type (input) </td></tr>
-    <tr><td class="paramname">c</td><td>array of concentrations, for each type (output) </td></tr>
-    <tr><td class="paramname">xi</td><td>Lagrange multiplier pressure (output) </td></tr>
+    <tr><td class="paramname">w</td><td>array of chemical potentials for types (inut) </td></tr>
+    <tr><td class="paramname">c</td><td>array of vol. fractions, for each type (output) </td></tr>
+    <tr><td class="paramname">xi</td><td>Langrange multiplier pressure (output) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classPscf_1_1ChiInteraction.html#a8c7f57c8ca96a643fe1914d994df5ccc">Pscf::ChiInteraction</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Interaction_8cpp_source.html#l00145">145</a> of file <a class="el" href="Interaction_8cpp_source.html">Interaction.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="Interaction_8h_source.html#l00181">nMonomer()</a>.</p>
 
 </div>
 </div>
-<a id="ab77996b50808f636b0bdb7b6ed7c8d0f" name="ab77996b50808f636b0bdb7b6ed7c8d0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab77996b50808f636b0bdb7b6ed7c8d0f">&#9670;&nbsp;</a></span>computeXi()</h2>
+<a id="ae8454351cbe954bf2670c019f1fc7cae" name="ae8454351cbe954bf2670c019f1fc7cae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8454351cbe954bf2670c019f1fc7cae">&#9670;&nbsp;</a></span>computeXi()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -665,7 +767,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Pscf::Interaction::computeXi </td>
+          <td class="memname">void Pscf::Interaction::computeXi </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; const &amp;&#160;</td>
           <td class="paramname"><em>w</em>, </td>
@@ -684,26 +786,28 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compute Langrange multiplier xi from chemical potentials. </p>
+<p>Compute Langrange multiplier xi from chemical potential fields. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">w</td><td>array of chemical potentials, for each type (input) </td></tr>
-    <tr><td class="paramname">xi</td><td>Lagrange multiplier pressure (output) </td></tr>
+    <tr><td class="paramname">w</td><td>array of chemical potentials for types (inut) </td></tr>
+    <tr><td class="paramname">xi</td><td>Langrange multiplier pressure (output) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classPscf_1_1ChiInteraction.html#a5a4fbcd72ead10de48b0eddf59bd2eef">Pscf::ChiInteraction</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Interaction_8cpp_source.html#l00171">171</a> of file <a class="el" href="Interaction_8cpp_source.html">Interaction.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="Interaction_8h_source.html#l00181">nMonomer()</a>.</p>
 
 </div>
 </div>
-<a id="a979231dcf58ef659e167ddbb397b0514" name="a979231dcf58ef659e167ddbb397b0514"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a979231dcf58ef659e167ddbb397b0514">&#9670;&nbsp;</a></span>computeDwDc()</h2>
+<a id="a127b6b15505e7224aa138063ee51a73b" name="a127b6b15505e7224aa138063ee51a73b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a127b6b15505e7224aa138063ee51a73b">&#9670;&nbsp;</a></span>computeDwDc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -712,7 +816,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Pscf::Interaction::computeDwDc </td>
+          <td class="memname">void Pscf::Interaction::computeDwDc </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classUtil_1_1Array.html">Array</a>&lt; double &gt; const &amp;&#160;</td>
           <td class="paramname"><em>c</em>, </td>
@@ -731,24 +835,198 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compute matrix of derivatives of w fields w/ respect to c fields. </p>
-<p >Upon return, the elements of the matrix dWdC are given by derivatives elements dWdC(i,j) = dW(i)/dC(j), which are also second derivatives of fHelmholtz with respect to concentrations.</p>
+<p>Compute second derivatives of free energy. </p>
+<p >Upon return, the elements of the square matrix dWdC, are given by derivatives dWdC(i,j) = dW(i)/dC(j), which are also second derivatives of the interaction free energy. For this Flory-Huggins chi parameter model, this is simply given by the chi matrix dWdC(i,j) = chi(i, j).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">c</td><td>array of concentrations, for each type (input) </td></tr>
-    <tr><td class="paramname">dWdC</td><td>square symmetric matrix of derivatives (output) </td></tr>
+    <tr><td class="paramname">dWdC</td><td>matrix of derivatives (output) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classPscf_1_1ChiInteraction.html#a62ebea2ebb240a0ec101555b37eba3bc">Pscf::ChiInteraction</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Interaction_8cpp_source.html#l00190">190</a> of file <a class="el" href="Interaction_8cpp_source.html">Interaction.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="Interaction_8h_source.html#l00181">nMonomer()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00178">Pscf::Homogeneous::Mixture::computePhi()</a>.</p>
+
+</div>
+</div>
+<a id="a34432b74fa717b55a0211fc814258218" name="a34432b74fa717b55a0211fc814258218"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34432b74fa717b55a0211fc814258218">&#9670;&nbsp;</a></span>chi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Pscf::Interaction::chi </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return one element of the chi matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>row index </td></tr>
+    <tr><td class="paramname">j</td><td>column index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Interaction_8h_source.html#l00184">184</a> of file <a class="el" href="Interaction_8h_source.html">Interaction.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Interaction_8cpp_source.html#l00099">setChi()</a>.</p>
+
+</div>
+</div>
+<a id="a7774dcdc76b40fe911b8d4cd7ad0d63d" name="a7774dcdc76b40fe911b8d4cd7ad0d63d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7774dcdc76b40fe911b8d4cd7ad0d63d">&#9670;&nbsp;</a></span>chiInverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Pscf::Interaction::chiInverse </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return one element of the inverse chi matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>row index </td></tr>
+    <tr><td class="paramname">j</td><td>column index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Interaction_8h_source.html#l00187">187</a> of file <a class="el" href="Interaction_8h_source.html">Interaction.h</a>.</p>
+
+</div>
+</div>
+<a id="ae480ebdd6656510bb59b2ad153e7d583" name="ae480ebdd6656510bb59b2ad153e7d583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae480ebdd6656510bb59b2ad153e7d583">&#9670;&nbsp;</a></span>idemp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Pscf::Interaction::idemp </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return one element of the idempotent matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>row index </td></tr>
+    <tr><td class="paramname">j</td><td>column index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Interaction_8h_source.html#l00190">190</a> of file <a class="el" href="Interaction_8h_source.html">Interaction.h</a>.</p>
+
+</div>
+</div>
+<a id="ab175c9ef756d5e65479936aa1fcd2699" name="ab175c9ef756d5e65479936aa1fcd2699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab175c9ef756d5e65479936aa1fcd2699">&#9670;&nbsp;</a></span>sum_inv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Pscf::Interaction::sum_inv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return sum of elements of chiInverse. </p>
+
+<p class="definition">Definition at line <a class="el" href="Interaction_8h_source.html#l00193">193</a> of file <a class="el" href="Interaction_8h_source.html">Interaction.h</a>.</p>
 
 </div>
 </div>
@@ -777,9 +1055,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get number of monomer types. </p>
 
-<p class="definition">Definition at line <a class="el" href="Interaction_8h_source.html#l00118">118</a> of file <a class="el" href="Interaction_8h_source.html">Interaction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Interaction_8h_source.html#l00181">181</a> of file <a class="el" href="Interaction_8h_source.html">Interaction.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ChiInteraction_8cpp_source.html#l00140">Pscf::ChiInteraction::computeC()</a>, <a class="el" href="ChiInteraction_8cpp_source.html#l00185">Pscf::ChiInteraction::computeDwDc()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00149">Pscf::Homogeneous::Mixture::computeMu()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00178">Pscf::Homogeneous::Mixture::computePhi()</a>, <a class="el" href="ChiInteraction_8cpp_source.html#l00124">Pscf::ChiInteraction::computeW()</a>, <a class="el" href="ChiInteraction_8cpp_source.html#l00166">Pscf::ChiInteraction::computeXi()</a>, <a class="el" href="ChiInteraction_8cpp_source.html#l00108">Pscf::ChiInteraction::fHelmholtz()</a>, <a class="el" href="ChiInteraction_8cpp_source.html#l00031">Pscf::ChiInteraction::readParameters()</a>, and <a class="el" href="Interaction_8cpp_source.html#l00021">setNMonomer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Interaction_8cpp_source.html#l00145">computeC()</a>, <a class="el" href="Interaction_8cpp_source.html#l00190">computeDwDc()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00149">Pscf::Homogeneous::Mixture::computeMu()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00178">Pscf::Homogeneous::Mixture::computePhi()</a>, <a class="el" href="Interaction_8cpp_source.html#l00129">computeW()</a>, <a class="el" href="Interaction_8cpp_source.html#l00171">computeXi()</a>, <a class="el" href="Interaction_8cpp_source.html#l00113">fHelmholtz()</a>, <a class="el" href="Interaction_8cpp_source.html#l00037">readParameters()</a>, and <a class="el" href="Interaction_8cpp_source.html#l00031">setNMonomer()</a>.</p>
 
 </div>
 </div>
@@ -790,7 +1068,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

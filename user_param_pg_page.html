@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: 3.2.3 Parameter files for pscf_pgNd</title>
+<title>PSCF: 3.3.8 pscf_pg (Periodic Problems, GPU)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -39,26 +39,38 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="index.html">PSCF - Polymer Self-Consistent Field Theory</a></li><li class="navelem"><a class="el" href="user_page.html">3 User Guide</a></li><li class="navelem"><a class="el" href="user_param_page.html">3.2 Parameter Files</a></li>  </ul>
+<li class="navelem"><a class="el" href="index.html">PSCF - Polymer Self-Consistent Field Theory</a></li><li class="navelem"><a class="el" href="user_page.html">3 User Guide</a></li><li class="navelem"><a class="el" href="user_param_page.html">3.3 Parameter Files</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">3.2.3 Parameter files for pscf_pgNd </div></div>
+  <div class="headertitle"><div class="title">3.3.8 pscf_pg (Periodic Problems, GPU) </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="el" href="user_param_pc_page.html">3.2.3 Parameter files for pscf_pcNd</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_command_page.html">3.3 Command Files</a> (Next) <br  />
+<div class="textblock"><p ><a class="el" href="user_param_pc_page.html">3.3.7 pscf_pc (Periodic Problems, CPU)</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_command_page.html">3.4 Command Files</a> (Next) <br  />
 </p>
-<h1><a class="anchor" id="user_param_pg_section"></a>
-Example</h1>
-<p >The format of the parameter file used by a pscf_pgNd GPU-accelerated program is almost identical to that used by a corresponding pscf_pcNd CPU-based program.</p>
-<p >The few differences in allowed parameter file elements are results of differences in features available in the two programs. Currently, the main relevant difference is that the pscf_pgNd programs do not yet provide the sweep or continuation feature provided by the pscf_pcNd programs. As a result, a pscf_pgNd parameter file may thus not contain a Sweep{....} block, which is an optional element of a pcscf_pcNd parameter file.</p>
+<p >The parameter file format for SCFT calculations using the pscf_pg GPU-accelerated programs is almost identical to that for the pscf_pc programs. The Mixture and Interaction blocks use the same format as the other PSCF programs, and the Domain block has the same format as that used by the pscf_pc programs. The only differences are differences in the available iterators.</p>
+<h1><a class="anchor" id="user_param_pg_iterator_sec"></a>
+Iterators</h1>
+<p >The default iterator for pscf_pg programs uses an Anderson-Mixing (AM) algorithm closely analogous to that used by the default AM iterator for pscf_pc programs, <a class="el" href="pspc_AmIterator_page.html">Pspc::AmIterator</a>. Like the pscf_pc AmIterator, this algorithm applies the Anderson mixing algorithm to a residual that is defined using an expansion in symmetry-adapted basis functins, and updates the chemical potential fields by modifying the coefficients in this expansion. This algorithm may be invoked in the parameter file for a pscf_pg program using either the generic block label "Iterator" or a specific label "AmIteratorBasis".</p>
+<p >The only other iterator currently provided for use with the pscf_pg programs is an Anderson mixing in which the residual vector and changes in the w fields are instead formulated using vectors whose elements represent values of fields on the nodes of a regular spatial grid, rather than coefficients in a symmetry-adapated expansion. This iterator is invoked using the label AmIteratorGrid.</p>
+<p >Descriptions of the parameter file formats for the available iterators can be found by following the links in the table below: </p><table class="doxtable">
+<tr>
+<td>Label  </td><td>Description   </td></tr>
+<tr>
+<td><a class="el" href="pspg_AmIteratorBasis_page.html">AmIteratorBasis</a>  </td><td>Anderson Mixing iterator for periodic structures, formulated using a symmetry-adapted basis.   </td></tr>
+<tr>
+<td><a class="el" href="pspg_AmIteratorGrid_page.html">AmIteratorGrid</a>  </td><td>Anderson Mixing iterator for periodic structures, formulated using values defined a spatial grid.   </td></tr>
+</table>
+<h1><a class="anchor" id="user_param_pg_sweep_sec"></a>
+Sweep</h1>
+<p >The default sweep algorithm for the pscf_pg programs is a general linear sweep that can be invoked using a block that starts either with the generic label Sweep or the specific label LinearSweep. The required parameter file format has been described <a class="el" href="user_param_sweep_page.html#user_param_sweep_linear_sec">here</a>.</p>
 <p ><br  />
- <a class="el" href="user_param_pc_page.html">3.2.3 Parameter files for pscf_pcNd</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_param_page.html">3.2 Parameter Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_command_page.html">3.3 Command Files</a> (Next) </p>
+ <a class="el" href="user_param_pc_page.html">3.3.7 pscf_pc (Periodic Problems, CPU)</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_param_page.html">3.3 Parameter Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_command_page.html">3.4 Command Files</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

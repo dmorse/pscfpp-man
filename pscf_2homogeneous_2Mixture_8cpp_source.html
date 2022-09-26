@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -201,7 +201,7 @@ $(function() {
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(hasComposition_);</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>      <span class="comment">// Compute monomer excess chemical potentials</span></div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>      interaction.<a class="code hl_function" href="classPscf_1_1Interaction.html#aa04ae1ec8eecdcece17b04137c73b9a7">computeW</a>(c_, w_);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>      interaction.<a class="code hl_function" href="classPscf_1_1Interaction.html#a894566c172d6741cf02818ec77849fb2">computeW</a>(c_, w_);</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>      <span class="keywordtype">int</span> m; <span class="comment">// molecule index</span></div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1Homogeneous_1_1Mixture.html#a08976bd9c4e3954f1c619b418c966b98">c</a>; <span class="comment">// clump index</span></div>
@@ -274,7 +274,7 @@ $(function() {
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> it = 0; it &lt; 50; ++it) {</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>         <span class="comment">// Compute matrix of derivative dWdC (C = monomer fraction)</span></div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>         interaction.<a class="code hl_function" href="classPscf_1_1Interaction.html#a979231dcf58ef659e167ddbb397b0514">computeDwDc</a>(c_, dWdC_);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>         interaction.<a class="code hl_function" href="classPscf_1_1Interaction.html#a127b6b15505e7224aa138063ee51a73b">computeDwDc</a>(c_, dWdC_);</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>         <span class="comment">// Compute matrix derivative dWdPhi (Phi = molecule fraction)</span></div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>         <span class="keywordflow">for</span> (t1 = 0; t1 &lt; nMonomer_; ++t1) {</div>
@@ -429,7 +429,7 @@ $(function() {
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>      }</div>
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span> </div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>      <span class="comment">// Add average interaction free energy density per monomer</span></div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>      fHelmholtz_ += interaction.<a class="code hl_function" href="classPscf_1_1Interaction.html#a3ec2bef30f4763bf5b64e4d12fc65acd">fHelmholtz</a>(c_);</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>      fHelmholtz_ += interaction.<a class="code hl_function" href="classPscf_1_1Interaction.html#a0e2fb07d55197819f2c216a8121a6278">fHelmholtz</a>(c_);</div>
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span> </div>
 <div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>      <span class="comment">// Compute pressure</span></div>
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>      pressure_ = -fHelmholtz_;</div>
@@ -480,11 +480,11 @@ $(function() {
 <div class="ttc" id="aclassPscf_1_1Homogeneous_1_1Molecule_html_a2b5ae4b8552b36bf7b83364e42dacae6"><div class="ttname"><a href="classPscf_1_1Homogeneous_1_1Molecule.html#a2b5ae4b8552b36bf7b83364e42dacae6">Pscf::Homogeneous::Molecule::nClump</a></div><div class="ttdeci">int nClump() const</div><div class="ttdoc">Number of monomer clumps (monomer types).</div><div class="ttdef"><b>Definition:</b> <a href="Molecule_8h_source.html#l00126">Molecule.h:126</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Homogeneous_1_1Molecule_html_a329de9c343102959cd4c60f498e3ca15"><div class="ttname"><a href="classPscf_1_1Homogeneous_1_1Molecule.html#a329de9c343102959cd4c60f498e3ca15">Pscf::Homogeneous::Molecule::clump</a></div><div class="ttdeci">Clump &amp; clump(int id)</div><div class="ttdoc">Get a specified Clump.</div><div class="ttdef"><b>Definition:</b> <a href="Molecule_8h_source.html#l00141">Molecule.h:141</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Homogeneous_1_1Molecule_html_aec45a17689c0b7767f75517daf91f529"><div class="ttname"><a href="classPscf_1_1Homogeneous_1_1Molecule.html#aec45a17689c0b7767f75517daf91f529">Pscf::Homogeneous::Molecule::size</a></div><div class="ttdeci">double size() const</div><div class="ttdoc">Total molecule size = volume / reference volume.</div><div class="ttdef"><b>Definition:</b> <a href="Molecule_8h_source.html#l00132">Molecule.h:132</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Interaction_html"><div class="ttname"><a href="classPscf_1_1Interaction.html">Pscf::Interaction</a></div><div class="ttdoc">Base class for excess free energy models.</div><div class="ttdef"><b>Definition:</b> <a href="Interaction_8h_source.html#l00025">Interaction.h:26</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Interaction_html_a3ec2bef30f4763bf5b64e4d12fc65acd"><div class="ttname"><a href="classPscf_1_1Interaction.html#a3ec2bef30f4763bf5b64e4d12fc65acd">Pscf::Interaction::fHelmholtz</a></div><div class="ttdeci">virtual double fHelmholtz(Array&lt; double &gt; const &amp;c) const =0</div><div class="ttdoc">Compute excess Helmholtz free energy per monomer.</div></div>
-<div class="ttc" id="aclassPscf_1_1Interaction_html_a979231dcf58ef659e167ddbb397b0514"><div class="ttname"><a href="classPscf_1_1Interaction.html#a979231dcf58ef659e167ddbb397b0514">Pscf::Interaction::computeDwDc</a></div><div class="ttdeci">virtual void computeDwDc(Array&lt; double &gt; const &amp;c, Matrix&lt; double &gt; &amp;dWdC) const =0</div><div class="ttdoc">Compute matrix of derivatives of w fields w/ respect to c fields.</div></div>
-<div class="ttc" id="aclassPscf_1_1Interaction_html_aa04ae1ec8eecdcece17b04137c73b9a7"><div class="ttname"><a href="classPscf_1_1Interaction.html#aa04ae1ec8eecdcece17b04137c73b9a7">Pscf::Interaction::computeW</a></div><div class="ttdeci">virtual void computeW(Array&lt; double &gt; const &amp;c, Array&lt; double &gt; &amp;w) const =0</div><div class="ttdoc">Compute interaction contributions to chemical potentials.</div></div>
-<div class="ttc" id="aclassPscf_1_1Interaction_html_acdc4ce924e6998c50d291295d3cda0a1"><div class="ttname"><a href="classPscf_1_1Interaction.html#acdc4ce924e6998c50d291295d3cda0a1">Pscf::Interaction::nMonomer</a></div><div class="ttdeci">int nMonomer() const</div><div class="ttdoc">Get number of monomer types.</div><div class="ttdef"><b>Definition:</b> <a href="Interaction_8h_source.html#l00118">Interaction.h:118</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Interaction_html"><div class="ttname"><a href="classPscf_1_1Interaction.html">Pscf::Interaction</a></div><div class="ttdoc">Flory-Huggins excess free energy model.</div><div class="ttdef"><b>Definition:</b> <a href="Interaction_8h_source.html#l00025">Interaction.h:26</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Interaction_html_a0e2fb07d55197819f2c216a8121a6278"><div class="ttname"><a href="classPscf_1_1Interaction.html#a0e2fb07d55197819f2c216a8121a6278">Pscf::Interaction::fHelmholtz</a></div><div class="ttdeci">virtual double fHelmholtz(Array&lt; double &gt; const &amp;c) const</div><div class="ttdoc">Compute excess Helmholtz free energy per monomer.</div><div class="ttdef"><b>Definition:</b> <a href="Interaction_8cpp_source.html#l00113">Interaction.cpp:113</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Interaction_html_a127b6b15505e7224aa138063ee51a73b"><div class="ttname"><a href="classPscf_1_1Interaction.html#a127b6b15505e7224aa138063ee51a73b">Pscf::Interaction::computeDwDc</a></div><div class="ttdeci">virtual void computeDwDc(Array&lt; double &gt; const &amp;c, Matrix&lt; double &gt; &amp;dWdC) const</div><div class="ttdoc">Compute second derivatives of free energy.</div><div class="ttdef"><b>Definition:</b> <a href="Interaction_8cpp_source.html#l00190">Interaction.cpp:190</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Interaction_html_a894566c172d6741cf02818ec77849fb2"><div class="ttname"><a href="classPscf_1_1Interaction.html#a894566c172d6741cf02818ec77849fb2">Pscf::Interaction::computeW</a></div><div class="ttdeci">virtual void computeW(Array&lt; double &gt; const &amp;c, Array&lt; double &gt; &amp;w) const</div><div class="ttdoc">Compute chemical potential from concentration.</div><div class="ttdef"><b>Definition:</b> <a href="Interaction_8cpp_source.html#l00129">Interaction.cpp:129</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Interaction_html_acdc4ce924e6998c50d291295d3cda0a1"><div class="ttname"><a href="classPscf_1_1Interaction.html#acdc4ce924e6998c50d291295d3cda0a1">Pscf::Interaction::nMonomer</a></div><div class="ttdeci">int nMonomer() const</div><div class="ttdoc">Get number of monomer types.</div><div class="ttdef"><b>Definition:</b> <a href="Interaction_8h_source.html#l00181">Interaction.h:181</a></div></div>
 <div class="ttc" id="aclassPscf_1_1LuSolver_html"><div class="ttname"><a href="classPscf_1_1LuSolver.html">Pscf::LuSolver</a></div><div class="ttdoc">Solve Ax=b by LU decomposition of A.</div><div class="ttdef"><b>Definition:</b> <a href="LuSolver_8h_source.html#l00030">LuSolver.h:31</a></div></div>
 <div class="ttc" id="aclassPscf_1_1LuSolver_html_a446e26c34c43c7f317d9d6567a235ab3"><div class="ttname"><a href="classPscf_1_1LuSolver.html#a446e26c34c43c7f317d9d6567a235ab3">Pscf::LuSolver::allocate</a></div><div class="ttdeci">void allocate(int n)</div><div class="ttdoc">Allocate memory.</div><div class="ttdef"><b>Definition:</b> <a href="LuSolver_8cpp_source.html#l00046">LuSolver.cpp:46</a></div></div>
 <div class="ttc" id="aclassPscf_1_1LuSolver_html_abd6b9fff59e00ecdd9509afb97b34b09"><div class="ttname"><a href="classPscf_1_1LuSolver.html#abd6b9fff59e00ecdd9509afb97b34b09">Pscf::LuSolver::solve</a></div><div class="ttdeci">void solve(Array&lt; double &gt; &amp;b, Array&lt; double &gt; &amp;x)</div><div class="ttdoc">Solve Ax = b for known b to compute x.</div><div class="ttdef"><b>Definition:</b> <a href="LuSolver_8cpp_source.html#l00083">LuSolver.cpp:83</a></div></div>
@@ -504,7 +504,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:41 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

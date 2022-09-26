@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -64,32 +64,32 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceUtil.html">Util</a>;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structPscf_1_1PolymerType.html">   24</a></span>   <span class="keyword">struct </span><a class="code hl_struct" href="structPscf_1_1PolymerType.html">PolymerType</a> {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      <span class="keyword">enum</span> Enum {Branched, Linear};</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>   };</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>   std::istream&amp; <a class="code hl_function" href="namespacePscf.html#af3acfd9252c655770b47d1ca2428fc09">operator &gt;&gt; </a>(std::istream&amp; in, PolymerType::Enum&amp; type); </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>   std::ostream&amp; <a class="code hl_function" href="namespacePscf.html#afce117557303a64ccd6097215d9fddf6">operator &lt;&lt; </a>(std::ostream&amp; out, PolymerType::Enum&amp; type); </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Archive&gt;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>   <span class="keyword">inline</span> <span class="keywordtype">void</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="namespacePscf.html#a6f09562c22095c94fc893b87bace92da">   53</a></span>   <a class="code hl_function" href="namespacePscf.html#a6f09562c22095c94fc893b87bace92da">serialize</a>(Archive&amp; ar, PolymerType::Enum&amp; data, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> version)</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>   {  <a class="code hl_function" href="group__Serialize__Module.html#ga965cecf6693616b058003471cbd786de">serializeEnum</a>(ar, data, version); }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structPscf_1_1PolymerType.html">   27</a></span>   <span class="keyword">struct </span><a class="code hl_struct" href="structPscf_1_1PolymerType.html">PolymerType</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      <span class="keyword">enum</span> Enum {Branched, Linear};</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>   };</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>   std::istream&amp; <a class="code hl_function" href="namespacePscf.html#af3acfd9252c655770b47d1ca2428fc09">operator &gt;&gt; </a>(std::istream&amp; in, PolymerType::Enum&amp; type); </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>   std::ostream&amp; <a class="code hl_function" href="namespacePscf.html#afce117557303a64ccd6097215d9fddf6">operator &lt;&lt; </a>(std::ostream&amp; out, PolymerType::Enum&amp; type); </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Archive&gt;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>   <span class="keyword">inline</span> <span class="keywordtype">void</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="namespacePscf.html#a6f09562c22095c94fc893b87bace92da">   56</a></span>   <a class="code hl_function" href="namespacePscf.html#a6f09562c22095c94fc893b87bace92da">serialize</a>(Archive&amp; ar, PolymerType::Enum&amp; data, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> version)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>   {  <a class="code hl_function" href="group__Serialize__Module.html#ga965cecf6693616b058003471cbd786de">serializeEnum</a>(ar, data, version); }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="agroup__Serialize__Module_html_ga965cecf6693616b058003471cbd786de"><div class="ttname"><a href="group__Serialize__Module.html#ga965cecf6693616b058003471cbd786de">Util::serializeEnum</a></div><div class="ttdeci">void serializeEnum(Archive &amp;ar, T &amp;data, const unsigned int version=0)</div><div class="ttdoc">Serialize an enumeration value.</div><div class="ttdef"><b>Definition:</b> <a href="serialize_8h_source.html#l00042">serialize.h:42</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">Classes for polymer self-consistent field theory.</div><div class="ttdef"><b>Definition:</b> <a href="BlockDescriptor_8cpp_source.html#l00010">BlockDescriptor.cpp:11</a></div></div>
-<div class="ttc" id="anamespacePscf_html_a6f09562c22095c94fc893b87bace92da"><div class="ttname"><a href="namespacePscf.html#a6f09562c22095c94fc893b87bace92da">Pscf::serialize</a></div><div class="ttdeci">void serialize(Archive &amp;ar, PolymerType::Enum &amp;data, const unsigned int version)</div><div class="ttdoc">Input stream extractor for a PolymerType enumeration.</div><div class="ttdef"><b>Definition:</b> <a href="PolymerType_8h_source.html#l00053">PolymerType.h:53</a></div></div>
+<div class="ttc" id="anamespacePscf_html_a6f09562c22095c94fc893b87bace92da"><div class="ttname"><a href="namespacePscf.html#a6f09562c22095c94fc893b87bace92da">Pscf::serialize</a></div><div class="ttdeci">void serialize(Archive &amp;ar, PolymerType::Enum &amp;data, const unsigned int version)</div><div class="ttdoc">Serialize a PolymerType::Enum enumeration.</div><div class="ttdef"><b>Definition:</b> <a href="PolymerType_8h_source.html#l00056">PolymerType.h:56</a></div></div>
 <div class="ttc" id="anamespacePscf_html_af3acfd9252c655770b47d1ca2428fc09"><div class="ttname"><a href="namespacePscf.html#af3acfd9252c655770b47d1ca2428fc09">Pscf::operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;in, BlockDescriptor &amp;block)</div><div class="ttdoc">istream extractor for a BlockDescriptor.</div><div class="ttdef"><b>Definition:</b> <a href="BlockDescriptor_8cpp_source.html#l00070">BlockDescriptor.cpp:70</a></div></div>
 <div class="ttc" id="anamespacePscf_html_afce117557303a64ccd6097215d9fddf6"><div class="ttname"><a href="namespacePscf.html#afce117557303a64ccd6097215d9fddf6">Pscf::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, BlockDescriptor const &amp;block)</div><div class="ttdoc">ostream inserter for a BlockDescriptor.</div><div class="ttdef"><b>Definition:</b> <a href="BlockDescriptor_8cpp_source.html#l00084">BlockDescriptor.cpp:84</a></div></div>
 <div class="ttc" id="anamespaceUtil_html"><div class="ttname"><a href="namespaceUtil.html">Util</a></div><div class="ttdoc">Utility classes for scientific computation.</div><div class="ttdef"><b>Definition:</b> <a href="accumulators_8mod_source.html#l00001">accumulators.mod:1</a></div></div>
-<div class="ttc" id="astructPscf_1_1PolymerType_html"><div class="ttname"><a href="structPscf_1_1PolymerType.html">Pscf::PolymerType</a></div><div class="ttdoc">Struct containing an enumeration of polymer structure types.</div><div class="ttdef"><b>Definition:</b> <a href="PolymerType_8h_source.html#l00024">PolymerType.h:24</a></div></div>
+<div class="ttc" id="astructPscf_1_1PolymerType_html"><div class="ttname"><a href="structPscf_1_1PolymerType.html">Pscf::PolymerType</a></div><div class="ttdoc">Struct containing an enumeration of polymer structure types.</div><div class="ttdef"><b>Definition:</b> <a href="PolymerType_8h_source.html#l00027">PolymerType.h:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:41 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

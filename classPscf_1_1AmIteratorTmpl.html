@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -76,9 +76,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a13d68b293bff2afa744b721dfd68b329"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a13d68b293bff2afa744b721dfd68b329">setup</a> ()</td></tr>
 <tr class="memdesc:a13d68b293bff2afa744b721dfd68b329"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup and allocate required memory.  <a href="classPscf_1_1AmIteratorTmpl.html#a13d68b293bff2afa744b721dfd68b329">More...</a><br /></td></tr>
 <tr class="separator:a13d68b293bff2afa744b721dfd68b329"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e2400e279373a0a23a9cc570847a6be"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a5e2400e279373a0a23a9cc570847a6be">solve</a> ()</td></tr>
-<tr class="memdesc:a5e2400e279373a0a23a9cc570847a6be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate to a solution.  <a href="classPscf_1_1AmIteratorTmpl.html#a5e2400e279373a0a23a9cc570847a6be">More...</a><br /></td></tr>
-<tr class="separator:a5e2400e279373a0a23a9cc570847a6be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae73358fa1ae70ca7c4c1e81216a48b3d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#ae73358fa1ae70ca7c4c1e81216a48b3d">solve</a> (bool isContinuation=false)</td></tr>
+<tr class="memdesc:ae73358fa1ae70ca7c4c1e81216a48b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate to a solution.  <a href="classPscf_1_1AmIteratorTmpl.html#ae73358fa1ae70ca7c4c1e81216a48b3d">More...</a><br /></td></tr>
+<tr class="separator:ae73358fa1ae70ca7c4c1e81216a48b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -94,8 +94,10 @@ Protected Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename Iterator, typename T&gt;<br />
 class Pscf::AmIteratorTmpl&lt; Iterator, T &gt;</div><p >Template for Anderson mixing iterator algorithm. </p>
+<p >Anderson mixing is an algorithm for solving a system of N nonlinear equations of the form g_{i}(x) = 0 for i = 0, ..., N-1, where x denotes a vector or array of unknown coordinate values. A vector or array of unknowns is referred here a "field", while a vector or array of values of the errors g_{0},..., g_{N-1} is referred to as a residual.</p>
+<p >The type T is the type of the data structure used to store both field residual vectors. </p>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00029">29</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00038">38</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab33190953cf8dca75fd34f881779dc82" name="ab33190953cf8dca75fd34f881779dc82"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab33190953cf8dca75fd34f881779dc82">&#9670;&nbsp;</a></span>AmIteratorTmpl()</h2>
@@ -184,12 +186,12 @@ template&lt;typename Iterator , typename T &gt; </div>
 
 <p>Setup and allocate required memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00064">64</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00065">65</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
 
 </div>
 </div>
-<a id="a5e2400e279373a0a23a9cc570847a6be" name="a5e2400e279373a0a23a9cc570847a6be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e2400e279373a0a23a9cc570847a6be">&#9670;&nbsp;</a></span>solve()</h2>
+<a id="ae73358fa1ae70ca7c4c1e81216a48b3d" name="ae73358fa1ae70ca7c4c1e81216a48b3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae73358fa1ae70ca7c4c1e81216a48b3d">&#9670;&nbsp;</a></span>solve()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,14 +199,25 @@ template&lt;typename Iterator , typename T &gt; </div>
 template&lt;typename Iterator , typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::solve</td>
+          <td class="memname">int <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::solve </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isContinuation</em> = <code>false</code></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Iterate to a solution. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isContinuation</td><td>true iff continuation within a sweep </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 for convergence, 1 for failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00090">90</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00091">91</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="Timer_8h_source.html#l00134">Util::Timer::start()</a>, <a class="el" href="Timer_8h_source.html#l00159">Util::Timer::stop()</a>, <a class="el" href="Timer_8cpp_source.html#l00023">Util::Timer::time()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -335,7 +348,7 @@ template&lt;typename Type &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

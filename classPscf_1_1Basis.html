@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -79,9 +79,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a91c789313454bb814bd35382966e7ff6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Basis.html#a91c789313454bb814bd35382966e7ff6">makeBasis</a> (<a class="el" href="classPscf_1_1Mesh.html">Mesh</a>&lt; D &gt; const &amp;mesh, <a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;unitCell, std::string groupName)</td></tr>
 <tr class="memdesc:a91c789313454bb814bd35382966e7ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct basis for a specific mesh and space group name.  <a href="classPscf_1_1Basis.html#a91c789313454bb814bd35382966e7ff6">More...</a><br /></td></tr>
 <tr class="separator:a91c789313454bb814bd35382966e7ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4c60265e2031cf0bd9b72a42cd1aa00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Basis.html#aa4c60265e2031cf0bd9b72a42cd1aa00">update</a> ()</td></tr>
-<tr class="memdesc:aa4c60265e2031cf0bd9b72a42cd1aa00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update values after change in unit cell parameters.  <a href="classPscf_1_1Basis.html#aa4c60265e2031cf0bd9b72a42cd1aa00">More...</a><br /></td></tr>
-<tr class="separator:aa4c60265e2031cf0bd9b72a42cd1aa00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9a597de566186cf18cd1e3f32557a99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Basis.html#af9a597de566186cf18cd1e3f32557a99">outputWaves</a> (std::ostream &amp;out, bool outputAll=false) const</td></tr>
 <tr class="memdesc:af9a597de566186cf18cd1e3f32557a99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a list of all waves to an output stream.  <a href="classPscf_1_1Basis.html#af9a597de566186cf18cd1e3f32557a99">More...</a><br /></td></tr>
 <tr class="separator:af9a597de566186cf18cd1e3f32557a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,11 +100,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a13ed27641b796e2e077d443fb7458b7b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Basis.html#a13ed27641b796e2e077d443fb7458b7b">nBasis</a> () const</td></tr>
 <tr class="memdesc:a13ed27641b796e2e077d443fb7458b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of nonzero symmetry-adapted basis functions.  <a href="classPscf_1_1Basis.html#a13ed27641b796e2e077d443fb7458b7b">More...</a><br /></td></tr>
 <tr class="separator:a13ed27641b796e2e077d443fb7458b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18abe6defc0690b023f1dcdf61a49e92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Basis_1_1Wave.html">Wave</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Basis.html#a18abe6defc0690b023f1dcdf61a49e92">wave</a> (int i) const</td></tr>
-<tr class="memdesc:a18abe6defc0690b023f1dcdf61a49e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a specific <a class="el" href="classPscf_1_1Basis_1_1Wave.html" title="Wavevector used to construct a basis function.">Wave</a>, access by integer index.  <a href="classPscf_1_1Basis.html#a18abe6defc0690b023f1dcdf61a49e92">More...</a><br /></td></tr>
-<tr class="separator:a18abe6defc0690b023f1dcdf61a49e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6d08c063fd4569aa2474c293fb3f819"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Basis_1_1Wave.html">Wave</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Basis.html#ad6d08c063fd4569aa2474c293fb3f819">wave</a> (int id) const</td></tr>
+<tr class="memdesc:ad6d08c063fd4569aa2474c293fb3f819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a specific <a class="el" href="classPscf_1_1Basis_1_1Wave.html" title="Wavevector used to construct a basis function.">Wave</a>, access by integer index.  <a href="classPscf_1_1Basis.html#ad6d08c063fd4569aa2474c293fb3f819">More...</a><br /></td></tr>
+<tr class="separator:ad6d08c063fd4569aa2474c293fb3f819"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c6784cf472af9b28c773b1e8e3841b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Basis_1_1Star.html">Star</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Basis.html#a1c6784cf472af9b28c773b1e8e3841b8">star</a> (int id) const</td></tr>
-<tr class="memdesc:a1c6784cf472af9b28c773b1e8e3841b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a <a class="el" href="classPscf_1_1Basis_1_1Star.html" title="A list of wavevectors that are related by space-group symmetries.">Star</a>, accessed by integer index.  <a href="classPscf_1_1Basis.html#a1c6784cf472af9b28c773b1e8e3841b8">More...</a><br /></td></tr>
+<tr class="memdesc:a1c6784cf472af9b28c773b1e8e3841b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a <a class="el" href="classPscf_1_1Basis_1_1Star.html" title="A list of wavevectors that are related by space-group symmetries.">Star</a>, accessed by integer star index.  <a href="classPscf_1_1Basis.html#a1c6784cf472af9b28c773b1e8e3841b8">More...</a><br /></td></tr>
 <tr class="separator:a1c6784cf472af9b28c773b1e8e3841b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1c8e2310f8c04b61da3960fe488d812"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Basis_1_1Star.html">Star</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Basis.html#af1c8e2310f8c04b61da3960fe488d812">basisFunction</a> (int id) const</td></tr>
 <tr class="memdesc:af1c8e2310f8c04b61da3960fe488d812"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an uncancelled <a class="el" href="classPscf_1_1Basis_1_1Star.html" title="A list of wavevectors that are related by space-group symmetries.">Star</a>, accessed by basis function index.  <a href="classPscf_1_1Basis.html#af1c8e2310f8c04b61da3960fe488d812">More...</a><br /></td></tr>
@@ -456,27 +453,7 @@ template&lt;int D&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="Basis_8tpp_source.html#l00050">50</a> of file <a class="el" href="Basis_8tpp_source.html">Basis.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00110">Pscf::SymmetryGroup&lt; Symmetry &gt;::makeCompleteGroup()</a>, <a class="el" href="groupFile_8cpp_source.html#l00027">Pscf::makeGroupFileName()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
-
-</div>
-</div>
-<a id="aa4c60265e2031cf0bd9b72a42cd1aa00" name="aa4c60265e2031cf0bd9b72a42cd1aa00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4c60265e2031cf0bd9b72a42cd1aa00">&#9670;&nbsp;</a></span>update()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Basis.html">Pscf::Basis</a>&lt; D &gt;::update</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Update values after change in unit cell parameters. </p>
-
-<p class="definition">Definition at line <a class="el" href="Basis_8tpp_source.html#l00875">875</a> of file <a class="el" href="Basis_8tpp_source.html">Basis.tpp</a>.</p>
+<p class="reference">References <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00110">Pscf::SymmetryGroup&lt; Symmetry &gt;::makeCompleteGroup()</a>, <a class="el" href="groupFile_8cpp_source.html#l00025">Pscf::makeGroupFileName()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
 </div>
 </div>
@@ -517,7 +494,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8tpp_source.html#l00900">900</a> of file <a class="el" href="Basis_8tpp_source.html">Basis.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8tpp_source.html#l00877">877</a> of file <a class="el" href="Basis_8tpp_source.html">Basis.tpp</a>.</p>
 
 </div>
 </div>
@@ -558,7 +535,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8tpp_source.html#l00935">935</a> of file <a class="el" href="Basis_8tpp_source.html">Basis.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8tpp_source.html#l00907">907</a> of file <a class="el" href="Basis_8tpp_source.html">Basis.tpp</a>.</p>
 
 </div>
 </div>
@@ -578,7 +555,7 @@ template&lt;int D&gt; </div>
 
 <p>Returns true if valid, false otherwise. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8tpp_source.html#l00972">972</a> of file <a class="el" href="Basis_8tpp_source.html">Basis.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8tpp_source.html#l00942">942</a> of file <a class="el" href="Basis_8tpp_source.html">Basis.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="MeshIterator_8h_source.html#l00141">Pscf::MeshIterator&lt; D &gt;::atEnd()</a>, <a class="el" href="MeshIterator_8tpp_source.html#l00061">Pscf::MeshIterator&lt; D &gt;::begin()</a>, <a class="el" href="Vec_8h_source.html#l00520">Pscf::Vec&lt; D, T &gt;::negate()</a>, and <a class="el" href="MeshIterator_8h_source.html#l00122">Pscf::MeshIterator&lt; D &gt;::position()</a>.</p>
 
@@ -608,7 +585,7 @@ template&lt;int D&gt; </div>
 
 <p>Total number of wavevectors. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00794">794</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00786">786</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
 </div>
 </div>
@@ -636,7 +613,7 @@ template&lt;int D&gt; </div>
 
 <p>Total number of wavevectors in uncancelled stars. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00798">798</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00790">790</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
 </div>
 </div>
@@ -664,7 +641,7 @@ template&lt;int D&gt; </div>
 
 <p>Total number of stars. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00802">802</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00794">794</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
 </div>
 </div>
@@ -684,12 +661,12 @@ template&lt;int D&gt; </div>
 
 <p>Total number of nonzero symmetry-adapted basis functions. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8tpp_source.html#l00895">895</a> of file <a class="el" href="Basis_8tpp_source.html">Basis.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8tpp_source.html#l00872">872</a> of file <a class="el" href="Basis_8tpp_source.html">Basis.tpp</a>.</p>
 
 </div>
 </div>
-<a id="a18abe6defc0690b023f1dcdf61a49e92" name="a18abe6defc0690b023f1dcdf61a49e92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18abe6defc0690b023f1dcdf61a49e92">&#9670;&nbsp;</a></span>wave()</h2>
+<a id="ad6d08c063fd4569aa2474c293fb3f819" name="ad6d08c063fd4569aa2474c293fb3f819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6d08c063fd4569aa2474c293fb3f819">&#9670;&nbsp;</a></span>wave()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -703,7 +680,7 @@ template&lt;int D&gt; </div>
           <td class="memname"><a class="el" href="classPscf_1_1Basis.html">Basis</a>&lt; D &gt;::Wave const  &amp; <a class="el" href="classPscf_1_1Basis.html">Pscf::Basis</a>&lt; D &gt;::wave </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -715,9 +692,14 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Get a specific <a class="el" href="classPscf_1_1Basis_1_1Wave.html" title="Wavevector used to construct a basis function.">Wave</a>, access by integer index. </p>
-<p >\int id index for a wave vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>index for a wave vector. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00807">807</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00799">799</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
 </div>
 </div>
@@ -747,10 +729,16 @@ template&lt;int D&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get a <a class="el" href="classPscf_1_1Basis_1_1Star.html" title="A list of wavevectors that are related by space-group symmetries.">Star</a>, accessed by integer index. </p>
-<p >\int id index for a star </p>
+<p>Get a <a class="el" href="classPscf_1_1Basis_1_1Star.html" title="A list of wavevectors that are related by space-group symmetries.">Star</a>, accessed by integer star index. </p>
+<p >This function return both cancelled and un-cancelled stars.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>index for a star </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00812">812</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00804">804</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
 </div>
 </div>
@@ -781,9 +769,14 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Get an uncancelled <a class="el" href="classPscf_1_1Basis_1_1Star.html" title="A list of wavevectors that are related by space-group symmetries.">Star</a>, accessed by basis function index. </p>
-<p >\int id index for a basis function, or an uncancelled star. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>index for a basis function, or an uncancelled star. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00817">817</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00809">809</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
 </div>
 </div>
@@ -815,7 +808,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00821">821</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00813">813</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
 </div>
 </div>
@@ -826,7 +819,7 @@ template&lt;int D&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

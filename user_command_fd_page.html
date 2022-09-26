@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: 3.3.1 Commands for pscf_fd</title>
+<title>PSCF: 3.4.1 Commands for pscf_fd</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -39,43 +39,53 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="index.html">PSCF - Polymer Self-Consistent Field Theory</a></li><li class="navelem"><a class="el" href="user_page.html">3 User Guide</a></li><li class="navelem"><a class="el" href="user_command_page.html">3.3 Command Files</a></li>  </ul>
+<li class="navelem"><a class="el" href="index.html">PSCF - Polymer Self-Consistent Field Theory</a></li><li class="navelem"><a class="el" href="user_page.html">3 User Guide</a></li><li class="navelem"><a class="el" href="user_command_page.html">3.4 Command Files</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">3.3.1 Commands for pscf_fd </div></div>
+  <div class="headertitle"><div class="title">3.4.1 Commands for pscf_fd </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="el" href="user_command_page.html">3.3 Command Files</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_command_pc_page.html">3.3.2 Commands for pscf_pcNd (CPU)</a> (Next) <br  />
+<div class="textblock"><p ><a class="el" href="user_command_page.html">3.4 Command Files</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_command_pc_page.html">3.4.2 Commands for pscf_pc (CPU)</a> (Next) <br  />
 </p>
-<p >Here is a example of a minimal command file for pscf_fd: </p><div class="fragment"><div class="line">ITERATE          in/w</div>
-<div class="line">WRITE_W    out/w.bf</div>
-<div class="line">WRITE_C    out/c.bf</div>
+<p >Here is a example of a minimal command file for pscf_fd: </p><div class="fragment"><div class="line">ITERATE       in/w</div>
+<div class="line">WRITE_W       out/w</div>
+<div class="line">WRITE_C       out/c</div>
+<div class="line">WRITE_PARAM   out/data</div>
+<div class="line">WRITE_THERMO  out/data</div>
 <div class="line">FINISH</div>
-</div><!-- fragment --><p> The command "ITERATE in/w.bf" instructs the program to read the file in/w.bf, which contains an initial guess for the chemical potential field, then iteratively solve the self-consistent field equations start from this initial guess. The command "WRITE_W out/w.bf" writes the resulting converged set of chemical potential fields to the file out/w.bf. The command "WRITE_C out/c.bf" writes the corresponding monomer volume fraction fields to the file out/c.bf. The script stops execution when it encounters the FINISH command.</p>
+</div><!-- fragment --><p> The command "ITERATE in/w" instructs the program to read the file in/w, which contains an initial guess for the chemical potential field, then iteratively solve the self-consistent field equations start from this initial guess. The command "WRITE_W out/w" writes the resulting converged set of chemical potential fields to the file out/w. The command "WRITE_C out/c" writes the corresponding monomer volume fraction fields to the file out/c. The command WRITE_PARAM writes the parameter file for this solution to the file out/data, and the subsequent command WRITE_THERMO appends thermodynamic data of the converged solution to the end of out/data. The script stops execution when it encounters the FINISH ommand.</p>
 <p >The following table shows a list of available commands for pscf_fd: </p><table class="doxtable">
 <tr>
 <td><b>command </b>  </td><td><b>parameter(s)</b>  </td><td><b>description </b>   </td></tr>
 <tr>
-<td>ITERATE  </td><td>filename [string]  </td><td>Read initial w field from file filename, iterate to convergence   </td></tr>
+<td>READ_W  </td><td>filename [string]  </td><td>Read w fields from file filename   </td></tr>
+<tr>
+<td>ITERATE  </td><td>filename [string] (conditional)  </td><td>Iteratively solve SCFT equations (after reading initial w fields)   </td></tr>
+<tr>
+<td>SWEEP  </td><td></td><td>Perform a sweep, as specified by the Sweep object in the param file.   </td></tr>
 <tr>
 <td>WRITE_W  </td><td>filename [string]  </td><td>Write chemical potential (w) fields to file filename   </td></tr>
 <tr>
 <td>WRITE_C  </td><td>filename [string]  </td><td>Write monomer volume fraction (c) fields to file filename   </td></tr>
 <tr>
-<td>WRITE_BLOCK_C  </td><td>filename [string]  </td><td>Write monomer volume fractions for each block to file filename   </td></tr>
+<td>WRITE_BLOCK_C  </td><td>filename [string]  </td><td>Write individual block/solvent volume fraction (c) fields to file filename. The block c fields are given in the order that the blocks appear in the param file, followed by the solvent fields in the order that the solvents appear in the param file   </td></tr>
+<tr>
+<td>WRITE_PARAM  </td><td>filename [string]  </td><td>Write param file associated with the current system. Sweep blocks are omitted.   </td></tr>
+<tr>
+<td>WRITE_THERMO  </td><td>filename [string]  </td><td>Write thermodynamic data (free energy, pressure, phi, and mu for each species) to a file. If file already exists, this command will append thermodynamic data to the end of the file, rather than overwriting what is currently stored there.  </td></tr>
 <tr>
 <td>COMPARE_HOMOGENEOUS  </td><td>mode [int]  </td><td>Compare solution to homogeneous solution(s)   </td></tr>
 <tr>
-<td>WRITE_VERTEX_Q  </td><td>filename [string], polymerId[int], vertex[Id]  </td><td>Compare solution to homogeneous solution(s)   </td></tr>
+<td>WRITE_VERTEX_Q  </td><td>filename [string], polymerId [int], vertexId [int]  </td><td>Write propagator (q) field to a file for a specified vertex (vertexId) in a specified polymer (polymerId).   </td></tr>
 </table>
 <p ><br  />
- <a class="el" href="user_command_page.html">3.3 Command Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_command_pc_page.html">3.3.2 Commands for pscf_pcNd (CPU)</a> (Next) </p>
+ <a class="el" href="user_command_page.html">3.4 Command Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_command_pc_page.html">3.4.2 Commands for pscf_pc (CPU)</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

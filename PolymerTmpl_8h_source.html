@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -345,12 +345,12 @@ $(function() {
 <div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>      <span class="comment">// should be computed when solving the MDE.</span></div>
 <div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>      makePlan();</div>
 <div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span> </div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>      <span class="comment">// Read the species ensemble, and either phi or mu</span></div>
-<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>      ensemble_ = Species::Closed;</div>
-<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>      readOptional&lt;Species::Ensemble&gt;(in, <span class="stringliteral">&quot;ensemble&quot;</span>, ensemble_);</div>
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>      <span class="keywordflow">if</span> (ensemble_ == Species::Closed) {</div>
-<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>         read(in, <span class="stringliteral">&quot;phi&quot;</span>, phi_);</div>
-<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>      <span class="comment">// Read phi or mu (but not both)</span></div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>      <span class="keywordtype">bool</span> hasPhi = readOptional(in, <span class="stringliteral">&quot;phi&quot;</span>, phi_).isActive();</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>      <span class="keywordflow">if</span> (hasPhi) {</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>         ensemble_ = Species::Closed;</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>         ensemble_ = Species::Open;</div>
 <div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>         read(in, <span class="stringliteral">&quot;mu&quot;</span>, mu_);</div>
 <div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>      }</div>
 <div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span> </div>
@@ -508,7 +508,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:41 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

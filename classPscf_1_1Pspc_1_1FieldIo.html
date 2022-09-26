@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -50,7 +50,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>File input/output operations for fields in several file formats.  
+<p>File input/output operations and format conversions for fields.  
  <a href="classPscf_1_1Pspc_1_1FieldIo.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="pspc_2field_2FieldIo_8h_source.html">FieldIo.h</a>&gt;</code></p>
@@ -66,7 +66,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa278d198ad169e151134fab0d15995d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#aa278d198ad169e151134fab0d15995d0">associate</a> (<a class="el" href="classPscf_1_1Mesh.html">Mesh</a>&lt; D &gt; const &amp;mesh, <a class="el" href="classPscf_1_1Pspc_1_1FFT.html">FFT</a>&lt; D &gt; const &amp;fft, std::string const &amp;groupName, <a class="el" href="classPscf_1_1Basis.html">Basis</a>&lt; D &gt; const &amp;basis, <a class="el" href="classUtil_1_1FileMaster.html">FileMaster</a> const &amp;fileMaster)</td></tr>
 <tr class="memdesc:aa278d198ad169e151134fab0d15995d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get and store addresses of associated objects.  <a href="classPscf_1_1Pspc_1_1FieldIo.html#aa278d198ad169e151134fab0d15995d0">More...</a><br /></td></tr>
 <tr class="separator:aa278d198ad169e151134fab0d15995d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Field File IO</div></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Field File IO - Symmetry Adapted Basis Format</div></td></tr>
 <tr class="memitem:aedfb25f07fbe80a739ad4fe6d8c654be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#aedfb25f07fbe80a739ad4fe6d8c654be">readFieldsBasis</a> (std::istream &amp;in, <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; &gt; &amp;fields, <a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; &amp;unitCell) const</td></tr>
 <tr class="memdesc:aedfb25f07fbe80a739ad4fe6d8c654be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read concentration or chemical potential field components from file.  <a href="classPscf_1_1Pspc_1_1FieldIo.html#aedfb25f07fbe80a739ad4fe6d8c654be">More...</a><br /></td></tr>
 <tr class="separator:aedfb25f07fbe80a739ad4fe6d8c654be"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -79,30 +79,32 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adc4b4e08500d7eba15531899da0e7e69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#adc4b4e08500d7eba15531899da0e7e69">writeFieldsBasis</a> (std::string filename, <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; &gt; const &amp;fields, <a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;unitCell) const</td></tr>
 <tr class="memdesc:adc4b4e08500d7eba15531899da0e7e69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write concentration or chemical potential field components to file.  <a href="classPscf_1_1Pspc_1_1FieldIo.html#adc4b4e08500d7eba15531899da0e7e69">More...</a><br /></td></tr>
 <tr class="separator:adc4b4e08500d7eba15531899da0e7e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Field File IO - Real Space Grid Format</div></td></tr>
+<tr class="memitem:a127626de327a647c9f930c52c5c7a873"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#a127626de327a647c9f930c52c5c7a873">readFieldRGrid</a> (std::istream &amp;in, <a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt; &amp;field, <a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; &amp;unitCell) const</td></tr>
+<tr class="memdesc:a127626de327a647c9f930c52c5c7a873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read single <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> (field on an r-space grid) from istream.  <a href="classPscf_1_1Pspc_1_1FieldIo.html#a127626de327a647c9f930c52c5c7a873">More...</a><br /></td></tr>
+<tr class="separator:a127626de327a647c9f930c52c5c7a873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb02505570a8ac9a3366c4869f5cd3f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#acb02505570a8ac9a3366c4869f5cd3f7">readFieldRGrid</a> (std::string filename, <a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt; &amp;field, <a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; &amp;unitCell) const</td></tr>
+<tr class="memdesc:acb02505570a8ac9a3366c4869f5cd3f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read single <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> (field on an r-space grid) from named file.  <a href="classPscf_1_1Pspc_1_1FieldIo.html#acb02505570a8ac9a3366c4869f5cd3f7">More...</a><br /></td></tr>
+<tr class="separator:acb02505570a8ac9a3366c4869f5cd3f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8df1673ca42a85c6fbbb49658f18eda9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#a8df1673ca42a85c6fbbb49658f18eda9">readFieldsRGrid</a> (std::istream &amp;in, <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt; &gt; &amp;fields, <a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; &amp;unitCell) const</td></tr>
-<tr class="memdesc:a8df1673ca42a85c6fbbb49658f18eda9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read array of <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> objects (fields on an r-space grid) from file.  <a href="classPscf_1_1Pspc_1_1FieldIo.html#a8df1673ca42a85c6fbbb49658f18eda9">More...</a><br /></td></tr>
+<tr class="memdesc:a8df1673ca42a85c6fbbb49658f18eda9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read array of <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> objects (fields on r-space grid) from istream.  <a href="classPscf_1_1Pspc_1_1FieldIo.html#a8df1673ca42a85c6fbbb49658f18eda9">More...</a><br /></td></tr>
 <tr class="separator:a8df1673ca42a85c6fbbb49658f18eda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a110694778dc93e554a0e33b2592e969d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#a110694778dc93e554a0e33b2592e969d">readFieldsRGrid</a> (std::string filename, <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt; &gt; &amp;fields, <a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; &amp;unitCell) const</td></tr>
 <tr class="memdesc:a110694778dc93e554a0e33b2592e969d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read array of <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> objects (fields on an r-space grid) from file.  <a href="classPscf_1_1Pspc_1_1FieldIo.html#a110694778dc93e554a0e33b2592e969d">More...</a><br /></td></tr>
 <tr class="separator:a110694778dc93e554a0e33b2592e969d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94903530debe2070f51bb0ffda486eb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#a94903530debe2070f51bb0ffda486eb0">writeFieldRGrid</a> (std::ostream &amp;out, <a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt; const &amp;field, <a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;unitCell, bool writeHeader=true) const</td></tr>
+<tr class="memdesc:a94903530debe2070f51bb0ffda486eb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a single <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> (field on an r-space grid) to ostream.  <a href="classPscf_1_1Pspc_1_1FieldIo.html#a94903530debe2070f51bb0ffda486eb0">More...</a><br /></td></tr>
+<tr class="separator:a94903530debe2070f51bb0ffda486eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bf2f55c40abb0feb511071296a7d0c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#a6bf2f55c40abb0feb511071296a7d0c3">writeFieldRGrid</a> (std::string filename, <a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt; const &amp;field, <a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;unitCell) const</td></tr>
+<tr class="memdesc:a6bf2f55c40abb0feb511071296a7d0c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a single <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> (fields on an r-space grid) to a file.  <a href="classPscf_1_1Pspc_1_1FieldIo.html#a6bf2f55c40abb0feb511071296a7d0c3">More...</a><br /></td></tr>
+<tr class="separator:a6bf2f55c40abb0feb511071296a7d0c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae82f03ed94f20650f2cd69ceb8846ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#aae82f03ed94f20650f2cd69ceb8846ea">writeFieldsRGrid</a> (std::ostream &amp;out, <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt; &gt; const &amp;fields, <a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;unitCell) const</td></tr>
-<tr class="memdesc:aae82f03ed94f20650f2cd69ceb8846ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write array of <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> objects (fields on an r-space grid) to file.  <a href="classPscf_1_1Pspc_1_1FieldIo.html#aae82f03ed94f20650f2cd69ceb8846ea">More...</a><br /></td></tr>
+<tr class="memdesc:aae82f03ed94f20650f2cd69ceb8846ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write array of <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> objects (fields on r-space grid) to ostream.  <a href="classPscf_1_1Pspc_1_1FieldIo.html#aae82f03ed94f20650f2cd69ceb8846ea">More...</a><br /></td></tr>
 <tr class="separator:aae82f03ed94f20650f2cd69ceb8846ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b3fdd28a11bdd889ef4427d14791975"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#a2b3fdd28a11bdd889ef4427d14791975">writeFieldsRGrid</a> (std::string filename, <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt; &gt; const &amp;fields, <a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;unitCell) const</td></tr>
 <tr class="memdesc:a2b3fdd28a11bdd889ef4427d14791975"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write array of <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> objects (fields on an r-space grid) to file.  <a href="classPscf_1_1Pspc_1_1FieldIo.html#a2b3fdd28a11bdd889ef4427d14791975">More...</a><br /></td></tr>
 <tr class="separator:a2b3fdd28a11bdd889ef4427d14791975"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a127626de327a647c9f930c52c5c7a873"><td class="memItemLeft" align="right" valign="top"><a id="a127626de327a647c9f930c52c5c7a873" name="a127626de327a647c9f930c52c5c7a873"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>readFieldRGrid</b> (std::istream &amp;in, <a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt; &amp;field, <a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; &amp;unitCell) const</td></tr>
-<tr class="separator:a127626de327a647c9f930c52c5c7a873"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb02505570a8ac9a3366c4869f5cd3f7"><td class="memItemLeft" align="right" valign="top"><a id="acb02505570a8ac9a3366c4869f5cd3f7" name="acb02505570a8ac9a3366c4869f5cd3f7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>readFieldRGrid</b> (std::string filename, <a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt; &amp;field, <a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; &amp;unitCell) const</td></tr>
-<tr class="separator:acb02505570a8ac9a3366c4869f5cd3f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a369566080a616bc8de6b85137c487631"><td class="memItemLeft" align="right" valign="top"><a id="a369566080a616bc8de6b85137c487631" name="a369566080a616bc8de6b85137c487631"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>writeFieldRGrid</b> (std::ostream &amp;out, <a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt; const &amp;field, <a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;unitCell) const</td></tr>
-<tr class="separator:a369566080a616bc8de6b85137c487631"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bf2f55c40abb0feb511071296a7d0c3"><td class="memItemLeft" align="right" valign="top"><a id="a6bf2f55c40abb0feb511071296a7d0c3" name="a6bf2f55c40abb0feb511071296a7d0c3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>writeFieldRGrid</b> (std::string filename, <a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt; const &amp;field, <a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;unitCell) const</td></tr>
-<tr class="separator:a6bf2f55c40abb0feb511071296a7d0c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Field File IO - Fourier Space (K-Space) Grid Format</div></td></tr>
 <tr class="memitem:a3bf8749b5b679685564564560d891ea0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#a3bf8749b5b679685564564560d891ea0">readFieldsKGrid</a> (std::istream &amp;in, <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Pspc_1_1RFieldDft.html">RFieldDft</a>&lt; D &gt; &gt; &amp;fields, <a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; &amp;unitCell) const</td></tr>
 <tr class="memdesc:a3bf8749b5b679685564564560d891ea0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read array of <a class="el" href="classPscf_1_1Pspc_1_1RFieldDft.html" title="Fourier transform of a real field on an FFT mesh.">RFieldDft</a> objects (k-space fields) from file.  <a href="classPscf_1_1Pspc_1_1FieldIo.html#a3bf8749b5b679685564564560d891ea0">More...</a><br /></td></tr>
 <tr class="separator:a3bf8749b5b679685564564560d891ea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,6 +117,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeFieldRGrid</b> (
 <tr class="memitem:a8a275a54ae4ff3f3003900e31f196d5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#a8a275a54ae4ff3f3003900e31f196d5f">writeFieldsKGrid</a> (std::string filename, <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Pspc_1_1RFieldDft.html">RFieldDft</a>&lt; D &gt; &gt; const &amp;fields, <a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;unitCell) const</td></tr>
 <tr class="memdesc:a8a275a54ae4ff3f3003900e31f196d5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write array of <a class="el" href="classPscf_1_1Pspc_1_1RFieldDft.html" title="Fourier transform of a real field on an FFT mesh.">RFieldDft</a> objects (k-space fields) to a file.  <a href="classPscf_1_1Pspc_1_1FieldIo.html#a8a275a54ae4ff3f3003900e31f196d5f">More...</a><br /></td></tr>
 <tr class="separator:a8a275a54ae4ff3f3003900e31f196d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">File IO Utilities</div></td></tr>
 <tr class="memitem:a46ba1a360680a9c1ce499658bdb0af71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#a46ba1a360680a9c1ce499658bdb0af71">readFieldHeader</a> (std::istream &amp;in, int &amp;nMonomer, <a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; &amp;unitCell) const</td></tr>
 <tr class="memdesc:a46ba1a360680a9c1ce499658bdb0af71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reader header of field file (fortran pscf format)  <a href="classPscf_1_1Pspc_1_1FieldIo.html#a46ba1a360680a9c1ce499658bdb0af71">More...</a><br /></td></tr>
 <tr class="separator:a46ba1a360680a9c1ce499658bdb0af71"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,8 +149,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeFieldRGrid</b> (
 <tr class="memitem:ae5837f7b02dc996f79bd59fa211d0c4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#ae5837f7b02dc996f79bd59fa211d0c4c">convertRGridToKGrid</a> (<a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt; &gt; const &amp;in, <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Pspc_1_1RFieldDft.html">RFieldDft</a>&lt; D &gt; &gt; &amp;out) const</td></tr>
 <tr class="memdesc:ae5837f7b02dc996f79bd59fa211d0c4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert fields from spatial grid (rgrid) to k-grid format.  <a href="classPscf_1_1Pspc_1_1FieldIo.html#ae5837f7b02dc996f79bd59fa211d0c4c">More...</a><br /></td></tr>
 <tr class="separator:ae5837f7b02dc996f79bd59fa211d0c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">Test Space Group Symmetry</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Test Space Group Symmetry</div></td></tr>
 <tr class="memitem:a2de7e94705e56e5e05f0fd0352359565"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html#a2de7e94705e56e5e05f0fd0352359565">hasSymmetry</a> (<a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt; const &amp;in) const</td></tr>
 <tr class="memdesc:a2de7e94705e56e5e05f0fd0352359565"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if an r-grid field has the declared space group symmetry.  <a href="classPscf_1_1Pspc_1_1FieldIo.html#a2de7e94705e56e5e05f0fd0352359565">More...</a><br /></td></tr>
 <tr class="separator:a2de7e94705e56e5e05f0fd0352359565"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,9 +159,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeFieldRGrid</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
-class Pscf::Pspc::FieldIo&lt; D &gt;</div><p >File input/output operations for fields in several file formats. </p>
+class Pscf::Pspc::FieldIo&lt; D &gt;</div><p >File input/output operations and format conversions for fields. </p>
+<p >This class provides functions to read and write arrays that contain fields in any of three representations (symmetry-adapted basis, r-space grid, or Fourier k-space grid), and to convert among these representations. The functions that implement IO operations define file formats for these field representations. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8h_source.html#l00035">35</a> of file <a class="el" href="pspc_2field_2FieldIo_8h_source.html">pspc/field/FieldIo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8h_source.html#l00041">41</a> of file <a class="el" href="pspc_2field_2FieldIo_8h_source.html">pspc/field/FieldIo.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aaf2a50c909270bba3e79d81553f24ece" name="aaf2a50c909270bba3e79d81553f24ece"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf2a50c909270bba3e79d81553f24ece">&#9670;&nbsp;</a></span>FieldIo()</h2>
@@ -177,7 +180,7 @@ template&lt;int D&gt; </div>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00034">34</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00035">35</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
 </div>
 </div>
@@ -197,7 +200,7 @@ template&lt;int D&gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00046">46</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00047">47</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
 </div>
 </div>
@@ -260,7 +263,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00053">53</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00054">54</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
 </div>
 </div>
@@ -305,14 +308,14 @@ template&lt;int D&gt; </div>
   <table class="params">
     <tr><td class="paramname">in</td><td>input stream (i.e., input file) </td></tr>
     <tr><td class="paramname">fields</td><td>array of fields (symmetry adapted basis components) </td></tr>
-    <tr><td class="paramname">unitCell</td><td>associated crystallographic UnitCell&lt;D&gt; </td></tr>
+    <tr><td class="paramname">unitCell</td><td>associated crystallographic unit cell </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00067">67</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00068">68</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="Basis_8h_source.html#l00521">Pscf::Basis&lt; D &gt;::Star::basisId</a>, <a class="el" href="Basis_8h_source.html#l00455">Pscf::Basis&lt; D &gt;::Star::beginId</a>, <a class="el" href="Basis_8h_source.html#l00536">Pscf::Basis&lt; D &gt;::Star::cancel</a>, <a class="el" href="Basis_8h_source.html#l00489">Pscf::Basis&lt; D &gt;::Star::invertFlag</a>, <a class="el" href="Vec_8h_source.html#l00520">Pscf::Vec&lt; D, T &gt;::negate()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00950">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldHeader()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>, and <a class="el" href="Basis_8h_source.html#l00502">Pscf::Basis&lt; D &gt;::Star::waveBz</a>.</p>
+<p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="Basis_8h_source.html#l00517">Pscf::Basis&lt; D &gt;::Star::basisId</a>, <a class="el" href="Basis_8h_source.html#l00451">Pscf::Basis&lt; D &gt;::Star::beginId</a>, <a class="el" href="Basis_8h_source.html#l00532">Pscf::Basis&lt; D &gt;::Star::cancel</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="Basis_8h_source.html#l00485">Pscf::Basis&lt; D &gt;::Star::invertFlag</a>, <a class="el" href="Vec_8h_source.html#l00520">Pscf::Vec&lt; D, T &gt;::negate()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00954">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldHeader()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>, and <a class="el" href="Basis_8h_source.html#l00498">Pscf::Basis&lt; D &gt;::Star::waveBz</a>.</p>
 
 </div>
 </div>
@@ -356,12 +359,14 @@ template&lt;int D&gt; </div>
   <table class="params">
     <tr><td class="paramname">filename</td><td>name of input file </td></tr>
     <tr><td class="paramname">fields</td><td>array of fields (symmetry adapted basis components) </td></tr>
-    <tr><td class="paramname">unitCell</td><td>associated crystallographic UnitCell&lt;D&gt; </td></tr>
+    <tr><td class="paramname">unitCell</td><td>associated crystallographic unit cell </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00332">332</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00333">333</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="FileMaster_8cpp_source.html#l00273">Util::FileMaster::openInputFile()</a>.</p>
 
 </div>
 </div>
@@ -405,12 +410,12 @@ template&lt;int D&gt; </div>
   <table class="params">
     <tr><td class="paramname">out</td><td>output stream (i.e., output file) </td></tr>
     <tr><td class="paramname">fields</td><td>array of fields (symmetry adapted basis components) </td></tr>
-    <tr><td class="paramname">unitCell</td><td>associated crystallographic UnitCell&lt;D&gt; </td></tr>
+    <tr><td class="paramname">unitCell</td><td>associated crystallographic unit cell </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00345">345</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00346">346</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -456,12 +461,115 @@ template&lt;int D&gt; </div>
   <table class="params">
     <tr><td class="paramname">filename</td><td>name of input file </td></tr>
     <tr><td class="paramname">fields</td><td>array of fields (symmetry adapted basis components) </td></tr>
-    <tr><td class="paramname">unitCell</td><td>associated crystallographic UnitCell&lt;D&gt; </td></tr>
+    <tr><td class="paramname">unitCell</td><td>associated crystallographic unit cell </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00380">380</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00381">381</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="FileMaster_8cpp_source.html#l00290">Util::FileMaster::openOutputFile()</a>.</p>
+
+</div>
+</div>
+<a id="a127626de327a647c9f930c52c5c7a873" name="a127626de327a647c9f930c52c5c7a873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a127626de327a647c9f930c52c5c7a873">&#9670;&nbsp;</a></span>readFieldRGrid() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int D&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html">Pscf::Pspc::FieldIo</a>&lt; D &gt;::readFieldRGrid </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>unitCell</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read single <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> (field on an r-space grid) from istream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>input stream (i.e., input file) </td></tr>
+    <tr><td class="paramname">field</td><td>fields defined on r-space grid </td></tr>
+    <tr><td class="paramname">unitCell</td><td>associated crystallographic unit cell </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00628">628</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="RField_8tpp_source.html#l00097">Pscf::Pspc::RField&lt; D &gt;::allocate()</a>, <a class="el" href="MeshIterator_8h_source.html#l00141">Pscf::MeshIterator&lt; D &gt;::atEnd()</a>, <a class="el" href="MeshIterator_8tpp_source.html#l00061">Pscf::MeshIterator&lt; D &gt;::begin()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="DArray_8h_source.html#l00247">Util::DArray&lt; Data &gt;::isAllocated()</a>, <a class="el" href="RField_8h_source.html#l00102">Pscf::Pspc::RField&lt; D &gt;::meshDimensions()</a>, <a class="el" href="MeshIterator_8h_source.html#l00136">Pscf::MeshIterator&lt; D &gt;::rank()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00954">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldHeader()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+
+</div>
+</div>
+<a id="acb02505570a8ac9a3366c4869f5cd3f7" name="acb02505570a8ac9a3366c4869f5cd3f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb02505570a8ac9a3366c4869f5cd3f7">&#9670;&nbsp;</a></span>readFieldRGrid() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int D&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html">Pscf::Pspc::FieldIo</a>&lt; D &gt;::readFieldRGrid </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>unitCell</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read single <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> (field on an r-space grid) from named file. </p>
+<p >This function opens an input file with the specified filename, reads a field in RField&lt;D&gt; real-space grid format, and closes the file.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>name of input file </td></tr>
+    <tr><td class="paramname">field</td><td>fields defined on r-space grid </td></tr>
+    <tr><td class="paramname">unitCell</td><td>associated crystallographic unit cell </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00730">730</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="FileMaster_8cpp_source.html#l00273">Util::FileMaster::openInputFile()</a>.</p>
 
 </div>
 </div>
@@ -499,20 +607,20 @@ template&lt;int D&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Read array of <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> objects (fields on an r-space grid) from file. </p>
+<p>Read array of <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> objects (fields on r-space grid) from istream. </p>
 <p >The capacity of array fields is equal to nMonomer, and element fields[i] is the RField&lt;D&gt; associated with monomer type i.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">in</td><td>input stream (i.e., input file) </td></tr>
     <tr><td class="paramname">fields</td><td>array of <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> fields (r-space grid) </td></tr>
-    <tr><td class="paramname">unitCell</td><td>associated crystallographic UnitCell&lt;D&gt; </td></tr>
+    <tr><td class="paramname">unitCell</td><td>associated crystallographic unit cell </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00392">392</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00393">393</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="MeshIterator_8h_source.html#l00141">Pscf::MeshIterator&lt; D &gt;::atEnd()</a>, <a class="el" href="MeshIterator_8tpp_source.html#l00061">Pscf::MeshIterator&lt; D &gt;::begin()</a>, <a class="el" href="MeshIterator_8h_source.html#l00136">Pscf::MeshIterator&lt; D &gt;::rank()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00950">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldHeader()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="MeshIterator_8h_source.html#l00141">Pscf::MeshIterator&lt; D &gt;::atEnd()</a>, <a class="el" href="MeshIterator_8tpp_source.html#l00061">Pscf::MeshIterator&lt; D &gt;::begin()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="MeshIterator_8h_source.html#l00136">Pscf::MeshIterator&lt; D &gt;::rank()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00954">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldHeader()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -557,12 +665,122 @@ template&lt;int D&gt; </div>
   <table class="params">
     <tr><td class="paramname">filename</td><td>name of input file </td></tr>
     <tr><td class="paramname">fields</td><td>array of <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> fields (r-space grid) </td></tr>
-    <tr><td class="paramname">unitCell</td><td>associated crystallographic UnitCell&lt;D&gt; </td></tr>
+    <tr><td class="paramname">unitCell</td><td>associated crystallographic unit cell </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00514">514</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00515">515</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="FileMaster_8cpp_source.html#l00273">Util::FileMaster::openInputFile()</a>.</p>
+
+</div>
+</div>
+<a id="a94903530debe2070f51bb0ffda486eb0" name="a94903530debe2070f51bb0ffda486eb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94903530debe2070f51bb0ffda486eb0">&#9670;&nbsp;</a></span>writeFieldRGrid() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int D&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html">Pscf::Pspc::FieldIo</a>&lt; D &gt;::writeFieldRGrid </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>unitCell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>writeHeader</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write a single <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> (field on an r-space grid) to ostream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>output stream </td></tr>
+    <tr><td class="paramname">field</td><td>field defined on r-space grid </td></tr>
+    <tr><td class="paramname">unitCell</td><td>associated crystallographic unit cell </td></tr>
+    <tr><td class="paramname">writeHeader</td><td>should a file header be written? </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00742">742</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="RField_8tpp_source.html#l00097">Pscf::Pspc::RField&lt; D &gt;::allocate()</a>, <a class="el" href="MeshIterator_8h_source.html#l00141">Pscf::MeshIterator&lt; D &gt;::atEnd()</a>, <a class="el" href="MeshIterator_8tpp_source.html#l00061">Pscf::MeshIterator&lt; D &gt;::begin()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, and <a class="el" href="MeshIterator_8h_source.html#l00136">Pscf::MeshIterator&lt; D &gt;::rank()</a>.</p>
+
+</div>
+</div>
+<a id="a6bf2f55c40abb0feb511071296a7d0c3" name="a6bf2f55c40abb0feb511071296a7d0c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bf2f55c40abb0feb511071296a7d0c3">&#9670;&nbsp;</a></span>writeFieldRGrid() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int D&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html">Pscf::Pspc::FieldIo</a>&lt; D &gt;::writeFieldRGrid </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>unitCell</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write a single <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> (fields on an r-space grid) to a file. </p>
+<p >This function opens an output file with the specified filename, write a field in RField&lt;D&gt; real-space grid format to that file, and then closes the file.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>name of output file </td></tr>
+    <tr><td class="paramname">field</td><td>field defined on r-space grid </td></tr>
+    <tr><td class="paramname">unitCell</td><td>associated crystallographic unit cell </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00819">819</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="FileMaster_8cpp_source.html#l00290">Util::FileMaster::openOutputFile()</a>.</p>
 
 </div>
 </div>
@@ -600,19 +818,19 @@ template&lt;int D&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Write array of <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> objects (fields on an r-space grid) to file. </p>
+<p>Write array of <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> objects (fields on r-space grid) to ostream. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">out</td><td>output stream (i.e., output file) </td></tr>
     <tr><td class="paramname">fields</td><td>array of <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> fields (r-space grid) </td></tr>
-    <tr><td class="paramname">unitCell</td><td>associated crystallographic UnitCell&lt;D&gt; </td></tr>
+    <tr><td class="paramname">unitCell</td><td>associated crystallographic unit cell </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00526">526</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00527">527</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="MeshIterator_8h_source.html#l00141">Pscf::MeshIterator&lt; D &gt;::atEnd()</a>, <a class="el" href="MeshIterator_8tpp_source.html#l00061">Pscf::MeshIterator&lt; D &gt;::begin()</a>, <a class="el" href="MeshIterator_8h_source.html#l00136">Pscf::MeshIterator&lt; D &gt;::rank()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="MeshIterator_8h_source.html#l00141">Pscf::MeshIterator&lt; D &gt;::atEnd()</a>, <a class="el" href="MeshIterator_8tpp_source.html#l00061">Pscf::MeshIterator&lt; D &gt;::begin()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="MeshIterator_8h_source.html#l00136">Pscf::MeshIterator&lt; D &gt;::rank()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -656,12 +874,14 @@ template&lt;int D&gt; </div>
   <table class="params">
     <tr><td class="paramname">filename</td><td>name of output file </td></tr>
     <tr><td class="paramname">fields</td><td>array of <a class="el" href="classPscf_1_1Pspc_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField</a> fields (r-space grid) </td></tr>
-    <tr><td class="paramname">unitCell</td><td>associated crystallographic UnitCell&lt;D&gt; </td></tr>
+    <tr><td class="paramname">unitCell</td><td>associated crystallographic unit cell </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00615">615</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00616">616</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="FileMaster_8cpp_source.html#l00290">Util::FileMaster::openOutputFile()</a>.</p>
 
 </div>
 </div>
@@ -705,14 +925,14 @@ template&lt;int D&gt; </div>
   <table class="params">
     <tr><td class="paramname">in</td><td>input stream (i.e., input file) </td></tr>
     <tr><td class="paramname">fields</td><td>array of <a class="el" href="classPscf_1_1Pspc_1_1RFieldDft.html" title="Fourier transform of a real field on an FFT mesh.">RFieldDft</a> fields (k-space grid) </td></tr>
-    <tr><td class="paramname">unitCell</td><td>associated crystallographic UnitCell&lt;D&gt; </td></tr>
+    <tr><td class="paramname">unitCell</td><td>associated crystallographic unit cell </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00827">827</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00831">831</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="MeshIterator_8h_source.html#l00141">Pscf::MeshIterator&lt; D &gt;::atEnd()</a>, <a class="el" href="MeshIterator_8tpp_source.html#l00061">Pscf::MeshIterator&lt; D &gt;::begin()</a>, <a class="el" href="MeshIterator_8h_source.html#l00136">Pscf::MeshIterator&lt; D &gt;::rank()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00950">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldHeader()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="MeshIterator_8h_source.html#l00141">Pscf::MeshIterator&lt; D &gt;::atEnd()</a>, <a class="el" href="MeshIterator_8tpp_source.html#l00061">Pscf::MeshIterator&lt; D &gt;::begin()</a>, <a class="el" href="MeshIterator_8h_source.html#l00136">Pscf::MeshIterator&lt; D &gt;::rank()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00954">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldHeader()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -757,12 +977,14 @@ template&lt;int D&gt; </div>
   <table class="params">
     <tr><td class="paramname">filename</td><td>name of input file </td></tr>
     <tr><td class="paramname">fields</td><td>array of <a class="el" href="classPscf_1_1Pspc_1_1RFieldDft.html" title="Fourier transform of a real field on an FFT mesh.">RFieldDft</a> fields (k-space grid) </td></tr>
-    <tr><td class="paramname">unitCell</td><td>associated crystallographic UnitCell&lt;D&gt; </td></tr>
+    <tr><td class="paramname">unitCell</td><td>associated crystallographic unit cell </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00888">888</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00892">892</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="FileMaster_8cpp_source.html#l00273">Util::FileMaster::openInputFile()</a>.</p>
 
 </div>
 </div>
@@ -806,12 +1028,12 @@ template&lt;int D&gt; </div>
   <table class="params">
     <tr><td class="paramname">out</td><td>output stream (i.e., output file) </td></tr>
     <tr><td class="paramname">fields</td><td>array of <a class="el" href="classPscf_1_1Pspc_1_1RFieldDft.html" title="Fourier transform of a real field on an FFT mesh.">RFieldDft</a> fields </td></tr>
-    <tr><td class="paramname">unitCell</td><td>associated crystallographic UnitCell&lt;D&gt; </td></tr>
+    <tr><td class="paramname">unitCell</td><td>associated crystallographic unit cell </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00900">900</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00904">904</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="MeshIterator_8h_source.html#l00141">Pscf::MeshIterator&lt; D &gt;::atEnd()</a>, <a class="el" href="MeshIterator_8tpp_source.html#l00061">Pscf::MeshIterator&lt; D &gt;::begin()</a>, <a class="el" href="MeshIterator_8h_source.html#l00136">Pscf::MeshIterator&lt; D &gt;::rank()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -857,12 +1079,14 @@ template&lt;int D&gt; </div>
   <table class="params">
     <tr><td class="paramname">filename</td><td>name of output file. </td></tr>
     <tr><td class="paramname">fields</td><td>array of <a class="el" href="classPscf_1_1Pspc_1_1RFieldDft.html" title="Fourier transform of a real field on an FFT mesh.">RFieldDft</a> fields (k-space grid) </td></tr>
-    <tr><td class="paramname">unitCell</td><td>associated crystallographic UnitCell&lt;D&gt; </td></tr>
+    <tr><td class="paramname">unitCell</td><td>associated crystallographic unit cell </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00934">934</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00938">938</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="FileMaster_8cpp_source.html#l00290">Util::FileMaster::openOutputFile()</a>.</p>
 
 </div>
 </div>
@@ -907,15 +1131,16 @@ template&lt;int D&gt; </div>
   <table class="params">
     <tr><td class="paramname">in</td><td>input stream (i.e., input file) </td></tr>
     <tr><td class="paramname">nMonomer</td><td>expected value of nMonomer </td></tr>
-    <tr><td class="paramname">unitCell</td><td>associated crystallographic UnitCell&lt;D&gt; </td></tr>
-    <tr><td class="paramname">checkMonomer</td><td>depending on field type, check monomer number or not </td></tr>
+    <tr><td class="paramname">unitCell</td><td>associated crystallographic unit cell </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00950">950</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00954">954</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00067">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldsBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00827">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldsKGrid()</a>, and <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00392">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldsRGrid()</a>.</p>
+<p class="reference">References <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00628">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldRGrid()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00068">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldsBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00831">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldsKGrid()</a>, and <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00393">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldsRGrid()</a>.</p>
 
 </div>
 </div>
@@ -958,12 +1183,12 @@ template&lt;int D&gt; </div>
   <table class="params">
     <tr><td class="paramname">out</td><td>output stream (i.e., output file) </td></tr>
     <tr><td class="paramname">nMonomer</td><td>number of monomer types </td></tr>
-    <tr><td class="paramname">unitCell</td><td>associated crystallographic UnitCell&lt;D&gt; </td></tr>
+    <tr><td class="paramname">unitCell</td><td>associated crystallographic unit cell </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00970">970</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00974">974</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
 </div>
 </div>
@@ -1004,9 +1229,9 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00981">981</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00985">985</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Basis_8h_source.html#l00521">Pscf::Basis&lt; D &gt;::Star::basisId</a>, <a class="el" href="Basis_8h_source.html#l00455">Pscf::Basis&lt; D &gt;::Star::beginId</a>, <a class="el" href="Basis_8h_source.html#l00536">Pscf::Basis&lt; D &gt;::Star::cancel</a>, <a class="el" href="Basis_8h_source.html#l00361">Pscf::Basis&lt; D &gt;::Wave::coeff</a>, <a class="el" href="RFieldDft_8h_source.html#l00144">Pscf::Pspc::RFieldDft&lt; D &gt;::dftDimensions()</a>, <a class="el" href="Basis_8h_source.html#l00410">Pscf::Basis&lt; D &gt;::Wave::implicit</a>, <a class="el" href="Basis_8h_source.html#l00375">Pscf::Basis&lt; D &gt;::Wave::indicesDft</a>, <a class="el" href="Basis_8h_source.html#l00489">Pscf::Basis&lt; D &gt;::Star::invertFlag</a>, <a class="el" href="Mesh_8tpp_source.html#l00075">Pscf::Mesh&lt; D &gt;::rank()</a>, <a class="el" href="Mesh_8h_source.html#l00221">Pscf::Mesh&lt; D &gt;::size()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="Basis_8h_source.html#l00517">Pscf::Basis&lt; D &gt;::Star::basisId</a>, <a class="el" href="Basis_8h_source.html#l00451">Pscf::Basis&lt; D &gt;::Star::beginId</a>, <a class="el" href="Basis_8h_source.html#l00532">Pscf::Basis&lt; D &gt;::Star::cancel</a>, <a class="el" href="Basis_8h_source.html#l00361">Pscf::Basis&lt; D &gt;::Wave::coeff</a>, <a class="el" href="RFieldDft_8h_source.html#l00144">Pscf::Pspc::RFieldDft&lt; D &gt;::dftDimensions()</a>, <a class="el" href="Basis_8h_source.html#l00405">Pscf::Basis&lt; D &gt;::Wave::implicit</a>, <a class="el" href="Basis_8h_source.html#l00370">Pscf::Basis&lt; D &gt;::Wave::indicesDft</a>, <a class="el" href="Basis_8h_source.html#l00485">Pscf::Basis&lt; D &gt;::Star::invertFlag</a>, <a class="el" href="Mesh_8tpp_source.html#l00075">Pscf::Mesh&lt; D &gt;::rank()</a>, <a class="el" href="Mesh_8h_source.html#l00221">Pscf::Mesh&lt; D &gt;::size()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
 </div>
 </div>
@@ -1048,7 +1273,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01181">1181</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01185">1185</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
@@ -1091,9 +1316,9 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01082">1082</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01086">1086</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Basis_8h_source.html#l00521">Pscf::Basis&lt; D &gt;::Star::basisId</a>, <a class="el" href="Basis_8h_source.html#l00455">Pscf::Basis&lt; D &gt;::Star::beginId</a>, <a class="el" href="Basis_8h_source.html#l00536">Pscf::Basis&lt; D &gt;::Star::cancel</a>, <a class="el" href="Basis_8h_source.html#l00361">Pscf::Basis&lt; D &gt;::Wave::coeff</a>, <a class="el" href="RFieldDft_8h_source.html#l00144">Pscf::Pspc::RFieldDft&lt; D &gt;::dftDimensions()</a>, <a class="el" href="Basis_8h_source.html#l00460">Pscf::Basis&lt; D &gt;::Star::endId</a>, <a class="el" href="Basis_8h_source.html#l00410">Pscf::Basis&lt; D &gt;::Wave::implicit</a>, <a class="el" href="Basis_8h_source.html#l00375">Pscf::Basis&lt; D &gt;::Wave::indicesDft</a>, <a class="el" href="Basis_8h_source.html#l00489">Pscf::Basis&lt; D &gt;::Star::invertFlag</a>, <a class="el" href="Mesh_8tpp_source.html#l00075">Pscf::Mesh&lt; D &gt;::rank()</a>, <a class="el" href="Basis_8h_source.html#l00395">Pscf::Basis&lt; D &gt;::Wave::starId</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="Basis_8h_source.html#l00517">Pscf::Basis&lt; D &gt;::Star::basisId</a>, <a class="el" href="Basis_8h_source.html#l00451">Pscf::Basis&lt; D &gt;::Star::beginId</a>, <a class="el" href="Basis_8h_source.html#l00532">Pscf::Basis&lt; D &gt;::Star::cancel</a>, <a class="el" href="Basis_8h_source.html#l00361">Pscf::Basis&lt; D &gt;::Wave::coeff</a>, <a class="el" href="RFieldDft_8h_source.html#l00144">Pscf::Pspc::RFieldDft&lt; D &gt;::dftDimensions()</a>, <a class="el" href="Basis_8h_source.html#l00456">Pscf::Basis&lt; D &gt;::Star::endId</a>, <a class="el" href="Basis_8h_source.html#l00405">Pscf::Basis&lt; D &gt;::Wave::implicit</a>, <a class="el" href="Basis_8h_source.html#l00370">Pscf::Basis&lt; D &gt;::Wave::indicesDft</a>, <a class="el" href="Basis_8h_source.html#l00485">Pscf::Basis&lt; D &gt;::Star::invertFlag</a>, <a class="el" href="Mesh_8tpp_source.html#l00075">Pscf::Mesh&lt; D &gt;::rank()</a>, <a class="el" href="Basis_8h_source.html#l00390">Pscf::Basis&lt; D &gt;::Wave::starId</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
 </div>
 </div>
@@ -1135,7 +1360,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01192">1192</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01196">1196</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
@@ -1178,7 +1403,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01204">1204</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01208">1208</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
@@ -1221,7 +1446,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01219">1219</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01223">1223</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
@@ -1265,7 +1490,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01234">1234</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01238">1238</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
@@ -1308,7 +1533,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01246">1246</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01250">1250</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
@@ -1341,7 +1566,7 @@ template&lt;int D&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the field is symmetric, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01261">1261</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01265">1265</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
 </div>
 </div>
@@ -1372,9 +1597,9 @@ template&lt;int D&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the field is symmetric, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01272">1272</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01276">1276</a> of file <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html">pspc/field/FieldIo.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Basis_8h_source.html#l00455">Pscf::Basis&lt; D &gt;::Star::beginId</a>, <a class="el" href="Basis_8h_source.html#l00536">Pscf::Basis&lt; D &gt;::Star::cancel</a>, <a class="el" href="Basis_8h_source.html#l00361">Pscf::Basis&lt; D &gt;::Wave::coeff</a>, <a class="el" href="RFieldDft_8h_source.html#l00144">Pscf::Pspc::RFieldDft&lt; D &gt;::dftDimensions()</a>, <a class="el" href="Basis_8h_source.html#l00460">Pscf::Basis&lt; D &gt;::Star::endId</a>, <a class="el" href="Basis_8h_source.html#l00410">Pscf::Basis&lt; D &gt;::Wave::implicit</a>, <a class="el" href="Basis_8h_source.html#l00375">Pscf::Basis&lt; D &gt;::Wave::indicesDft</a>, and <a class="el" href="Mesh_8tpp_source.html#l00075">Pscf::Mesh&lt; D &gt;::rank()</a>.</p>
+<p class="reference">References <a class="el" href="Basis_8h_source.html#l00451">Pscf::Basis&lt; D &gt;::Star::beginId</a>, <a class="el" href="Basis_8h_source.html#l00532">Pscf::Basis&lt; D &gt;::Star::cancel</a>, <a class="el" href="Basis_8h_source.html#l00361">Pscf::Basis&lt; D &gt;::Wave::coeff</a>, <a class="el" href="RFieldDft_8h_source.html#l00144">Pscf::Pspc::RFieldDft&lt; D &gt;::dftDimensions()</a>, <a class="el" href="Basis_8h_source.html#l00456">Pscf::Basis&lt; D &gt;::Star::endId</a>, <a class="el" href="Basis_8h_source.html#l00405">Pscf::Basis&lt; D &gt;::Wave::implicit</a>, <a class="el" href="Basis_8h_source.html#l00370">Pscf::Basis&lt; D &gt;::Wave::indicesDft</a>, and <a class="el" href="Mesh_8tpp_source.html#l00075">Pscf::Mesh&lt; D &gt;::rank()</a>.</p>
 
 </div>
 </div>
@@ -1385,7 +1610,7 @@ template&lt;int D&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

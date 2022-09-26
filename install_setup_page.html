@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -63,24 +63,23 @@ Macs with Homebrew and Apple Silicon</h1>
 Customized configuration</h1>
 <p >To create the main config.mk files that are installed in pscfpp/bld and pscfpp/src, the setup script reads a compiler setup file from the pscfpp/make/compiler directory and concatenates it with other makefile fragments. The compiler configuration file is relatively short makefile fragment that contains definitions of makefile variables that define compiler names, compiler options and paths to external libraries.</p>
 <p >When the "setup" script is invoked with no argument, as indicated above, the setup script uses a file named pscfpp/make/compiler/default for this purpose. This file contains a default configuration appropriate for a system in which the gnu g++ C++ compiler is used to compile C++ files, the nVidia nvcc compiler is used to compile CUDA files, and paths to the gsl and fftw libraries are in common locations.</p>
-<p >When the "setup" script is invoked with one argument, that argument is interpreted as the name of a file in the pscfpp/make/compiler directory that should be used as the compiler configuration file. For example, the command "./setup homebrew-m1" causes the script system to read and copy the contents of the file pscfpp/make/compiler/homebrew-m1. <br  />
- The command "./setup", with no argument, is equivalent to "./setup default".</p>
-<p >Users can create customized compiler configuration files to adapt compiler options to their own computer. For example, suppose that a user created a file named pscfpp/make/compiler/local by making a copy of default file with that new name and then edited the variable definitions in that file as needed. Invoking the command </p><div class="fragment"><div class="line">\&gt; ./setup local</div>
-</div><!-- fragment --><p> would then cause the setup script to create a config.mk configuration files that include the contents of the user-created file pscfpp/make/compiler/local.</p>
+<p >When the "setup" script is invoked with one argument, that argument is interpreted as the name of a file in the pscfpp/make/compiler directory that should be used as the compiler configuration file. For example, the command "./setup homebrew-m1" causes the script system to read and copy the contents of the file pscfpp/make/compiler/homebrew-m1. The command "./setup", with no argument, is equivalent to "./setup default".</p>
+<p >Users can create customized compiler configuration files to adapt compiler options to their own computer. For example, suppose that a user created a file named pscfpp/make/compiler/local by making a copy of default file with that new name and then editing the variable definitions in that file. Invoking the command </p><div class="fragment"><div class="line">\&gt; ./setup local</div>
+</div><!-- fragment --><p> would then cause the setup script to create config.mk configuration files in the src/ and bld/ directories that both include the contents of the new file make/compiler/local.</p>
 <p >In order to create a customized compiler configuration file, a user will need to understand the meanings of some of the variables defined in such files. Toward this end, we recommend that you first run the setup script with no argument and then read the comments in the file bld/config.mk that is created by the setup script. These comments briefly explain the meaning and use of each of the makefile variables. If you compare the resulting file to the file make/compiler/default, you will see that the "default" compiler setup file will have simply been copied into the middle part of the bld/config.mk file.</p>
-<p >Users may change values of variables defined in the main configuration file either by making a customized compiler setup file in the make/compiler directory before running the setup script, as described above, or by directly editing the bld/config.mk and/or src/config.mk files after running the setup script, or both. The advantages of storing required customizations in a compiler setup file in the make/compiler directory are that:</p>
+<p >Users may change values of variables defined in the main configuration file either by creating a customized compiler setup file in the make/compiler directory before running the setup script, as described above, or by directly editing the files bld/config.mk and/or src/config.mk files after running the setup script. The advantages of creating a custom compiler setup file in the make/compiler directory are that:</p>
 <ul>
 <li>Changes made in customized compiler setup file will be copied to both src/config.mk and bld/config.mk and will thus be used in both in-source and out-of-source builds.</li>
-<li>The files src/config.mk and bld/config.mk will be erased if you invoke "make veryclean" to start over with a fresh configuration, but files in the make/compiler directory are not be erased by this makefile target.</li>
+<li>The files src/config.mk and bld/config.mk will be erased if you invoke "make veryclean" to start over with a fresh configuration, but setup files in the make/compiler directory are not erased by the "veryclean" target.</li>
 </ul>
-<p >Once you have figured out what changes to the default configuration are required in your environment, we thus recommend that you store them in a new file in the pscfpp/make/compiler directory.</p>
+<p >We thus recommend that users who need to customize the main config.mk file do so, if possible, by creating a customized compiler setup file.</p>
 <p ><br  />
  <a class="el" href="install_environment_page.html">2.4 Environment Variables</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="install_page.html">2 Installation</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="install_inout_page.html">2.6 Compiling Out-of-Source vs. In-Source</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -102,9 +102,18 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a74038f835fddffd3f35fe49251bc5fd5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Label.html#a74038f835fddffd3f35fe49251bc5fd5">read</a> (std::istream &amp;in)</td></tr>
+<tr class="memdesc:a74038f835fddffd3f35fe49251bc5fd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a string without checking its value.  <a href="classUtil_1_1Label.html#a74038f835fddffd3f35fe49251bc5fd5">More...</a><br /></td></tr>
+<tr class="separator:a74038f835fddffd3f35fe49251bc5fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76b850aaf2279e0be0379b604d82009f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Label.html#a76b850aaf2279e0be0379b604d82009f">clear</a> ()</td></tr>
-<tr class="memdesc:a76b850aaf2279e0be0379b604d82009f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset buffer and flags to initial state.  <a href="classUtil_1_1Label.html#a76b850aaf2279e0be0379b604d82009f">More...</a><br /></td></tr>
+<tr class="memdesc:a76b850aaf2279e0be0379b604d82009f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the input buffer.  <a href="classUtil_1_1Label.html#a76b850aaf2279e0be0379b604d82009f">More...</a><br /></td></tr>
 <tr class="separator:a76b850aaf2279e0be0379b604d82009f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae43fb810ec3d6368dfe5d649249fae7a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Label.html#ae43fb810ec3d6368dfe5d649249fae7a">setIsMatched</a> (bool <a class="el" href="classUtil_1_1Label.html#a5bfbef02f5d1b14a8591db86c24abb7f">isMatched</a>)</td></tr>
+<tr class="memdesc:ae43fb810ec3d6368dfe5d649249fae7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicitly set the isMatched flag.  <a href="classUtil_1_1Label.html#ae43fb810ec3d6368dfe5d649249fae7a">More...</a><br /></td></tr>
+<tr class="separator:ae43fb810ec3d6368dfe5d649249fae7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bf33f3184a7fdd3bda210754c4382fd"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Label.html#a2bf33f3184a7fdd3bda210754c4382fd">buffer</a> ()</td></tr>
+<tr class="memdesc:a2bf33f3184a7fdd3bda210754c4382fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the string that is currently in the input buffer.  <a href="classUtil_1_1Label.html#a2bf33f3184a7fdd3bda210754c4382fd">More...</a><br /></td></tr>
+<tr class="separator:a2bf33f3184a7fdd3bda210754c4382fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af44215d8ff6966dc0d8ed7ae7d034cba"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Label.html#af44215d8ff6966dc0d8ed7ae7d034cba">isClear</a> ()</td></tr>
 <tr class="memdesc:af44215d8ff6966dc0d8ed7ae7d034cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the input buffer clear?  <a href="classUtil_1_1Label.html#af44215d8ff6966dc0d8ed7ae7d034cba">More...</a><br /></td></tr>
 <tr class="separator:af44215d8ff6966dc0d8ed7ae7d034cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,9 +139,14 @@ Friends</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A label string in a file format. </p>
 <p >The operator &gt;&gt; for a label checks if the expected label was found. The operator &lt;&lt; outputs the expected label.</p>
-<p >The constructor takes a parameter isRequired that determines whether the label must be matched (isRequired == true), or if it is optional (isRequired == false). If the input value read by the &gt;&gt; operator does not match the expected value and isRequired is true, the &gt;&gt; operator will print an error message to the <a class="el" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817" title="Get log ostream by reference.">Log::file()</a> and then throw an <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a>. If the input value does not match and isRequired is false, the &gt;&gt; operator stores the input value in a string buffer, and will compare it to subsequent values until a match is found. </p>
+<p >Every <a class="el" href="classUtil_1_1Label.html" title="A label string in a file format.">Label</a> constructor takes an optional parameter isRequired that determines whether the label must be matched (isRequired == true), or if it is optional (isRequired == false). The isRequired parameter is true by default. If the input value read by the &gt;&gt; operator does not match the expected value and isRequired is true, the &gt;&gt; operator will print an error message to the <a class="el" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817" title="Get log ostream by reference.">Log::file()</a> and then throw an <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a>. If the input value does not match and isRequired is false, the &gt;&gt; operator stores the input value in a buffer string for later use. If the &gt;&gt; operator is invoked when the buffer is not clear (e.g., after a failed match to an optional label), the operator does not read from file and compares the expected label to the string in the buffer.</p>
+<p >The class is designed to allow either of two methods to be used to read and check a label, referred to below as cases A and B:</p>
+<p >Case A (the usual case, and concise) : The user constructs a <a class="el" href="classUtil_1_1Label.html" title="A label string in a file format.">Label</a> object using a constructor that takes an expected label string as as argument, then uses the &gt;&gt; operator to attempt to read a string from file into the <a class="el" href="classUtil_1_1Label.html" title="A label string in a file format.">Label</a>. For example, to read a required label that must match the expected label string "thing", one might use the line </p><div class="fragment"><div class="line">in &gt;&gt; <a class="code hl_function" href="classUtil_1_1Label.html#a1a826953c8e3ab859be7114be446e333">Label</a>(<span class="stringliteral">&quot;thing&quot;</span>);</div>
+<div class="ttc" id="aclassUtil_1_1Label_html_a1a826953c8e3ab859be7114be446e333"><div class="ttname"><a href="classUtil_1_1Label.html#a1a826953c8e3ab859be7114be446e333">Util::Label::Label</a></div><div class="ttdeci">Label(bool isRequired=true)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="Label_8cpp_source.html#l00061">Label.cpp:61</a></div></div>
+</div><!-- fragment --><p> where "in" is a symbol for an input stream. The overloaded "&gt;&gt;" operator reads a string from input stream into a buffer if and only if the buffer is empty. It then compares the string in the buffer to the label string (e.g., "thing"). If the strings match, the buffer is cleared and isMatch is set true. If the strings do not match and is isRequired is true, an <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a> is thrown. If the strings do not match but isRequired is false, the buffer is left unchanged and isMatched is set false.</p>
+<p >Case B (less common, and more verbose) : A user can use several static functions to perform a sequence of operations similar to those peformed by the &gt;&gt; operator. In this case, the user must call the static <a class="el" href="classUtil_1_1Label.html#a74038f835fddffd3f35fe49251bc5fd5" title="Read a string without checking its value.">Label::read</a> function to read a string from an input stream iff the buffer is empty, then call <a class="el" href="classUtil_1_1Label.html#a2bf33f3184a7fdd3bda210754c4382fd" title="Get the string that is currently in the input buffer.">Label::buffer</a> to retrieve the buffer string, and explicitly check if that string matches one or more allowed possible labels. If a match is found, call <a class="el" href="classUtil_1_1Label.html#a76b850aaf2279e0be0379b604d82009f" title="Clear the input buffer.">Label::clear</a> to clear the buffer and call <a class="el" href="classUtil_1_1Label.html#ae43fb810ec3d6368dfe5d649249fae7a" title="Explicitly set the isMatched flag.">Label::setIsMatched</a> to set isMatched false. This more verbose sequence of operations is used in the readObject function of the <a class="el" href="classUtil_1_1Factory.html" title="Factory template.">Factory</a> class template, in which a single input string is * compared to a list of several possible valid labels. </p>
 
-<p class="definition">Definition at line <a class="el" href="Label_8h_source.html#l00036">36</a> of file <a class="el" href="Label_8h_source.html">Label.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Label_8h_source.html#l00072">72</a> of file <a class="el" href="Label_8h_source.html">Label.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1a826953c8e3ab859be7114be446e333" name="a1a826953c8e3ab859be7114be446e333"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1a826953c8e3ab859be7114be446e333">&#9670;&nbsp;</a></span>Label() <span class="overload">[1/4]</span></h2>
@@ -166,7 +180,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00045">45</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00061">61</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
 
 </div>
 </div>
@@ -205,7 +219,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00053">53</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00069">69</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
 
 </div>
 </div>
@@ -244,7 +258,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00061">61</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00077">77</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
 
 </div>
 </div>
@@ -272,7 +286,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00069">69</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00085">85</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
 
 </div>
 </div>
@@ -301,11 +315,52 @@ Friends</h2></td></tr>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00077">77</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00093">93</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a74038f835fddffd3f35fe49251bc5fd5" name="a74038f835fddffd3f35fe49251bc5fd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74038f835fddffd3f35fe49251bc5fd5">&#9670;&nbsp;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Util::Label::read </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read a string without checking its value. </p>
+<p >This function reads a string from input stream in if and only if the buffer is empty. It does not compare the string to an expected value. If matching is desired, use &gt;&gt; operator.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>input stream </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00035">35</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Factory_8h_source.html#l00247">Util::Factory&lt; Data &gt;::readObject()</a>.</p>
+
+</div>
+</div>
 <a id="a76b850aaf2279e0be0379b604d82009f" name="a76b850aaf2279e0be0379b604d82009f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a76b850aaf2279e0be0379b604d82009f">&#9670;&nbsp;</a></span>clear()</h2>
 
@@ -329,10 +384,82 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reset buffer and flags to initial state. </p>
-<p >Clears buffer, sets isClear = true and isMatched = false. </p>
+<p>Clear the input buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00027">27</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00025">25</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Factory_8h_source.html#l00247">Util::Factory&lt; Data &gt;::readObject()</a>.</p>
+
+</div>
+</div>
+<a id="ae43fb810ec3d6368dfe5d649249fae7a" name="ae43fb810ec3d6368dfe5d649249fae7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae43fb810ec3d6368dfe5d649249fae7a">&#9670;&nbsp;</a></span>setIsMatched()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Util::Label::setIsMatched </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isMatched</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Explicitly set the isMatched flag. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isMatched</td><td>boolean value to store in isMatched_. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Label_8h_source.html#l00280">280</a> of file <a class="el" href="Label_8h_source.html">Label.h</a>.</p>
+
+<p class="reference">References <a class="el" href="Label_8h_source.html#l00274">isMatched()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Factory_8h_source.html#l00247">Util::Factory&lt; Data &gt;::readObject()</a>.</p>
+
+</div>
+</div>
+<a id="a2bf33f3184a7fdd3bda210754c4382fd" name="a2bf33f3184a7fdd3bda210754c4382fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bf33f3184a7fdd3bda210754c4382fd">&#9670;&nbsp;</a></span>buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Util::Label::buffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the string that is currently in the input buffer. </p>
+
+<p class="definition">Definition at line <a class="el" href="Label_8h_source.html#l00286">286</a> of file <a class="el" href="Label_8h_source.html">Label.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Factory_8h_source.html#l00247">Util::Factory&lt; Data &gt;::readObject()</a>.</p>
 
 </div>
 </div>
@@ -354,16 +481,16 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Is the input buffer clear? </p>
 
-<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00037">37</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Label_8h_source.html#l00267">267</a> of file <a class="el" href="Label_8h_source.html">Label.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Begin_8cpp_source.html#l00033">Util::Begin::readParam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Factory_8h_source.html#l00247">Util::Factory&lt; Data &gt;::readObject()</a>, and <a class="el" href="Begin_8cpp_source.html#l00033">Util::Begin::readParam()</a>.</p>
 
 </div>
 </div>
@@ -391,11 +518,11 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Did the most recent attempt to match a <a class="el" href="classUtil_1_1Label.html" title="A label string in a file format.">Label</a> succeed? </p>
-<p >Returns true after a succesful match by operator &gt;&gt; or the <a class="el" href="classUtil_1_1Label.html#a95aa094dff8d40d59be6bda42ed913f5" title="Read and attempt to match next word in an input stream.">match()</a> function. Returns false before any attempt to match any <a class="el" href="classUtil_1_1Label.html" title="A label string in a file format.">Label</a>, after a failed attempt with an an optional label. </p>
+<p >Returns true after a successful match by operator &gt;&gt; or the <a class="el" href="classUtil_1_1Label.html#a95aa094dff8d40d59be6bda42ed913f5" title="Read and attempt to match next word in an input stream.">match()</a> function. Returns false before any attempt to match any <a class="el" href="classUtil_1_1Label.html" title="A label string in a file format.">Label</a>, or after a failed attempt to match either a required or optional label. </p>
 
-<p class="definition">Definition at line <a class="el" href="Label_8h_source.html#l00210">210</a> of file <a class="el" href="Label_8h_source.html">Label.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Label_8h_source.html#l00274">274</a> of file <a class="el" href="Label_8h_source.html">Label.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ArrayParam_8tpp_source.html#l00050">Util::ArrayParam&lt; Type &gt;::readLabel()</a>, <a class="el" href="MatrixParam_8tpp_source.html#l00071">Util::MatrixParam&lt; Type &gt;::readLabel()</a>, and <a class="el" href="Parameter_8cpp_source.html#l00042">Util::Parameter::readParam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ArrayParam_8tpp_source.html#l00050">Util::ArrayParam&lt; Type &gt;::readLabel()</a>, <a class="el" href="MatrixParam_8tpp_source.html#l00076">Util::MatrixParam&lt; Type &gt;::readLabel()</a>, <a class="el" href="Parameter_8cpp_source.html#l00042">Util::Parameter::readParam()</a>, and <a class="el" href="Label_8h_source.html#l00280">setIsMatched()</a>.</p>
 
 </div>
 </div>
@@ -423,9 +550,9 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00083">83</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00099">99</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Label_8cpp_source.html#l00095">string()</a>.</p>
+<p class="reference">References <a class="el" href="Label_8cpp_source.html#l00111">string()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ArrayParam_8tpp_source.html#l00024">Util::ArrayParam&lt; Type &gt;::ArrayParam()</a>, <a class="el" href="Begin_8cpp_source.html#l00021">Util::Begin::Begin()</a>, and <a class="el" href="MatrixParam_8tpp_source.html#l00024">Util::MatrixParam&lt; Type &gt;::MatrixParam()</a>.</p>
 
@@ -455,9 +582,9 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00089">89</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00105">105</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Label_8h_source.html#l00204">isRequired()</a>.</p>
+<p class="reference">References <a class="el" href="Label_8h_source.html#l00261">isRequired()</a>.</p>
 
 </div>
 </div>
@@ -480,7 +607,7 @@ Friends</h2></td></tr>
 <p>Read and attempt to match next word in an input stream. </p>
 <p >This is a convenience function that invokes operator &gt;&gt; to read a word and then returns the value of <a class="el" href="classUtil_1_1Label.html#a5bfbef02f5d1b14a8591db86c24abb7f" title="Did the most recent attempt to match a Label succeed?">Label::isMatched()</a>. For an optional <a class="el" href="classUtil_1_1Label.html" title="A label string in a file format.">Label</a>, this returns true upon a successful match and false otherwise. For a required label, returns true upon a successful match or throws an <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00101">101</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00117">117</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
 
 </div>
 </div>
@@ -501,9 +628,9 @@ Friends</h2></td></tr>
 
 <p>Return label string. </p>
 
-<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00095">95</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00111">111</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Parameter_8cpp_source.html#l00151">Util::ArrayParam&lt; Type &gt;::save()</a>, <a class="el" href="Label_8cpp_source.html#l00083">setString()</a>, and <a class="el" href="Begin_8cpp_source.html#l00080">Util::Begin::writeParam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Parameter_8cpp_source.html#l00151">Util::ArrayParam&lt; Type &gt;::save()</a>, <a class="el" href="Label_8cpp_source.html#l00099">setString()</a>, and <a class="el" href="Begin_8cpp_source.html#l00080">Util::Begin::writeParam()</a>.</p>
 
 </div>
 </div>
@@ -532,9 +659,9 @@ Friends</h2></td></tr>
 
 <p>Is this the label for a required component? </p>
 
-<p class="definition">Definition at line <a class="el" href="Label_8h_source.html#l00204">204</a> of file <a class="el" href="Label_8h_source.html">Label.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Label_8h_source.html#l00261">261</a> of file <a class="el" href="Label_8h_source.html">Label.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Begin_8h_source.html#l00078">Util::Begin::isRequired()</a>, <a class="el" href="Parameter_8cpp_source.html#l00170">Util::Parameter::isRequired()</a>, and <a class="el" href="Label_8cpp_source.html#l00089">setIsRequired()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Begin_8h_source.html#l00078">Util::Begin::isRequired()</a>, <a class="el" href="Parameter_8cpp_source.html#l00170">Util::Parameter::isRequired()</a>, and <a class="el" href="Label_8cpp_source.html#l00105">setIsRequired()</a>.</p>
 
 </div>
 </div>
@@ -582,7 +709,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00110">110</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00126">126</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
 
 </div>
 </div>
@@ -629,7 +756,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00164">164</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Label_8cpp_source.html#l00169">169</a> of file <a class="el" href="Label_8cpp_source.html">Label.cpp</a>.</p>
 
 </div>
 </div>
@@ -656,7 +783,7 @@ Friends</h2></td></tr>
 
 <p>Width of label field in file output format. </p>
 
-<p class="definition">Definition at line <a class="el" href="Label_8h_source.html#l00044">44</a> of file <a class="el" href="Label_8h_source.html">Label.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Label_8h_source.html#l00080">80</a> of file <a class="el" href="Label_8h_source.html">Label.h</a>.</p>
 
 </div>
 </div>
@@ -667,7 +794,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:19 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:43 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

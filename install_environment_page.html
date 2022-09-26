@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -58,18 +58,22 @@ $(function() {
 <li>By default, executables files created by the PSCF build system are installed in the pscfpp/bin directory. The directory that contains these files must be added to the user's PATH variable in order to allow the unix shell to find these executable files when they are invoked by name in a command executed from any other directory.</li>
 <li>The pscfpp/lib/python directory contains a python script that is used by the build system during compilation to generate information about dependencies among C++ files. This directory must be added to the PYTHONPATH variable in order to allow the python interpreter to find this script for use during compilation.</li>
 </ul>
-<p >To make these changes using a bash shell, add some variant of the following lines to the .profile or .bash_profile file in your user home directory: </p><div class="fragment"><div class="line">PSCFPP_DIR=${HOME}/pscfpp</div>
+<p >To make these changes using a bash shell, add some variant of the following lines to the .profile or .bash_profile file in your user home directory (these files are run each time a new terminal window is opened): </p><div class="fragment"><div class="line">PSCFPP_DIR=${HOME}/pscfpp</div>
 <div class="line">export PATH=${PATH}:/${PSCFPP_DIR}/bin</div>
 <div class="line">export PYTHONPATH=${PYTHONPATH}:/${PSCFPP_DIR}/lib/python</div>
 </div><!-- fragment --><p> The value of PSCFPP_DIR should be set to the path to the pscfpp root directory (i.e., the root of the directory tree created by cloning the pscfpp git repository). In the above fragment, as an example, it is assumed that this is a subdirectory named pscfpp within the users home directory.</p>
-<p >After adding an appropriate variant of these lines to the .profile or .bash_profile, log out, log back in, and then enter "echo $PATH" and "echo $PYTHONPATH" to make sure that PATH and PYTHONPATH have been set correctly.</p>
+<p >After adding an appropriate variant of these lines to the .profile or .bash_profile, log out, log back in, and then enter "echo $PATH" and "echo $PYTHONPATH" to make sure that PATH and PYTHONPATH have been set correctly (they should contain full paths to the bin/ and python/ directories, respectively).</p>
+<p >NOTE FOR MAC USERS: The default terminal on a Mac is a zsh terminal, not a bash terminal. The distinction should not cause problems with pscfpp usage, but zsh terminal users may need to perform an additional step to set up the environment. The zsh terminal may not run .bash_profile or .profile upon opening a new terminal window. If you followed the steps above but the correct paths do not appear in your $PATH and $PYTHONPATH variables, you can add the following to the file titled .zshrc in your home directory: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> [ -f ~/.bash_profile ]; then </div>
+<div class="line">    . ~/.bash_profile;</div>
+<div class="line">fi</div>
+</div><!-- fragment --><p> This will ensure that .bash_profile is run each time a new terminal window is opened, and your $PATH and $PYTHONPATH variables should then be correct.</p>
 <p ><br  />
  <a class="el" href="install_overview_page.html">2.3 Installation Overview</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="install_page.html">2 Installation</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="install_setup_page.html">2.5 Setup Script</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

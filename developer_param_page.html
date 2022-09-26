@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -48,7 +48,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p ><a class="el" href="developer_standards_page.html">4.3 Coding Standards</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="developer_test_page.html">4.5 Unit Tests</a> (Next) <br  />
 </p>
-<p >The format of the parameter file (discussed in <a class="el" href="user_param_page.html">3.2 Parameter Files</a>) consists of a set of nested blocks, in which each block contains the data required to initialize an instance of a particular class. Each class that reads data from the parameter file is derived from the <a class="el" href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file.">Util::ParamComposite</a> base class, and must provide an implementation of one or the other (but not both) of the following two virtual functions: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> readParameters(std::istream&amp; in);</div>
+<p >The format of the parameter file (discussed in <a class="el" href="user_param_page.html">3.3 Parameter Files</a>) consists of a set of nested blocks, in which each block contains the data required to initialize an instance of a particular class. Each class that reads data from the parameter file is derived from the <a class="el" href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file.">Util::ParamComposite</a> base class, and must provide an implementation of one or the other (but not both) of the following two virtual functions: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> readParameters(std::istream&amp; in);</div>
 <div class="line"><span class="keywordtype">void</span> readParam(std::istream&amp; in);</div>
 </div><!-- fragment --><p> The readParameters() method to defines the file format for the body of a parameter file block, excluding the lines containing the opening and closing brackets. The readParam() method defines the file format for a parameter file block. The default implementation of ParamComposite::readParam() calls readParameters() and adds opening and closing lines. Most subclasses of ParamComposite re-implement the readParameters() method and rely on the default implementation of readParam() to provide the opening and closing lines. A few (including all the Manager classes) instead re-implement readParam().</p>
 <p >The source code for the readParameters() or readParam() method of a class is thus the most reliable documentation of the format of the associated parameter file block. It is thus useful for users, as well as developers, to be able to read the implementation of these method, so that they can check the source code to resolve any questions about the file format. In the examples below, we discuss the implementation of a readParameters() function.</p>
@@ -102,7 +102,7 @@ readParamComposite(std::istream&amp; in, ParamComposite&amp; child) invokes the 
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

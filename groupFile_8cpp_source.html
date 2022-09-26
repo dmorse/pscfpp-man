@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -67,36 +67,39 @@ $(function() {
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceUtil.html">Util</a>;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="namespacePscf.html#a5b918f86652c69b69ced3fc7d775d2a6">   27</a></span>   std::string <a class="code hl_function" href="namespacePscf.html#a5b918f86652c69b69ced3fc7d775d2a6">makeGroupFileName</a>(<span class="keywordtype">int</span> D, std::string groupName)</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>   {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      std::string filename = DAT_DIR_STRING ;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      filename += <span class="stringliteral">&quot;groups/&quot;</span>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <span class="keywordflow">if</span> (D==1) {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>         filename += <span class="stringliteral">&quot;1/&quot;</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      } <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      <span class="keywordflow">if</span> (D==2) {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>         filename += <span class="stringliteral">&quot;2/&quot;</span>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      } <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      <span class="keywordflow">if</span> (D==3) {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>         filename += <span class="stringliteral">&quot;3/&quot;</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Invalid dimension of space&quot;</span>);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      filename += groupName;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="keywordflow">return</span> filename;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>   }</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>} <span class="comment">// namespace Pscf</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">   * Generates the file name from a group name.</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespacePscf.html#a5b918f86652c69b69ced3fc7d775d2a6">   25</a></span>   std::string <a class="code hl_function" href="namespacePscf.html#a5b918f86652c69b69ced3fc7d775d2a6">makeGroupFileName</a>(<span class="keywordtype">int</span> D, std::string groupName)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>   {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      std::string filename = DAT_DIR_STRING ;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      filename += <span class="stringliteral">&quot;groups/&quot;</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <span class="keywordflow">if</span> (D==1) {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>         filename += <span class="stringliteral">&quot;1/&quot;</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      } <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>      <span class="keywordflow">if</span> (D==2) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>         filename += <span class="stringliteral">&quot;2/&quot;</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      } <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <span class="keywordflow">if</span> (D==3) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>         filename += <span class="stringliteral">&quot;3/&quot;</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Invalid dimension of space&quot;</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      filename += groupName;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      <span class="keywordflow">return</span> filename;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>   }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>} <span class="comment">// namespace Pscf</span></div>
 <div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="global_8h.html">global.h</a></div><div class="ttdoc">File containing preprocessor macros for error handling.</div></div>
 <div class="ttc" id="aglobal_8h_html_ad2512f8bd062d41d66799cf900151487"><div class="ttname"><a href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a></div><div class="ttdeci">#define UTIL_THROW(msg)</div><div class="ttdoc">Macro for throwing an Exception, reporting function, file and line number.</div><div class="ttdef"><b>Definition:</b> <a href="global_8h_source.html#l00051">global.h:51</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">Classes for polymer self-consistent field theory.</div><div class="ttdef"><b>Definition:</b> <a href="BlockDescriptor_8cpp_source.html#l00010">BlockDescriptor.cpp:11</a></div></div>
-<div class="ttc" id="anamespacePscf_html_a5b918f86652c69b69ced3fc7d775d2a6"><div class="ttname"><a href="namespacePscf.html#a5b918f86652c69b69ced3fc7d775d2a6">Pscf::makeGroupFileName</a></div><div class="ttdeci">std::string makeGroupFileName(int D, std::string groupName)</div><div class="ttdoc">Generates the file name from a group name.</div><div class="ttdef"><b>Definition:</b> <a href="groupFile_8cpp_source.html#l00027">groupFile.cpp:27</a></div></div>
+<div class="ttc" id="anamespacePscf_html_a5b918f86652c69b69ced3fc7d775d2a6"><div class="ttname"><a href="namespacePscf.html#a5b918f86652c69b69ced3fc7d775d2a6">Pscf::makeGroupFileName</a></div><div class="ttdeci">std::string makeGroupFileName(int D, std::string groupName)</div><div class="ttdoc">Generates the file name from a group name.</div><div class="ttdef"><b>Definition:</b> <a href="groupFile_8cpp_source.html#l00025">groupFile.cpp:25</a></div></div>
 <div class="ttc" id="anamespaceUtil_html"><div class="ttname"><a href="namespaceUtil.html">Util</a></div><div class="ttdoc">Utility classes for scientific computation.</div><div class="ttdef"><b>Definition:</b> <a href="accumulators_8mod_source.html#l00001">accumulators.mod:1</a></div></div>
 <div class="ttc" id="apaths_8h_html"><div class="ttname"><a href="paths_8h.html">paths.h</a></div><div class="ttdoc">File containing absolute paths to data, for use in code and tests.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:41 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

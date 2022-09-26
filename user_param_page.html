@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: 3.2 Parameter Files</title>
+<title>PSCF: 3.3 Parameter Files</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -43,28 +43,38 @@ $(function() {
 </div>
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">3.2 Parameter Files </div></div>
+  <div class="headertitle"><div class="title">3.3 Parameter Files </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="el" href="user_usage_page.html">3.1 Input File Types</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_command_page.html">3.3 Command Files</a> (Next) <br  />
+<div class="textblock"><p ><a class="el" href="user_usage_page.html">3.2 Running a Program</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_command_page.html">3.4 Command Files</a> (Next) <br  />
 </p>
-<p >The parameter files required by the different PSCF programs use a similar syntax, but contain somewhat different contents. The following three sections document parameter file formats for different programs. The documentation of the parameter file format for the pscf_fd 1D finite difference program includes a discussion of elements that are used for all programs, and thus should be read first. The discussion of the file format for pscf_pcNd focuses on parts of the file format that differ from that required for pscf_fd. The file formats for the pscf_pcNd and pscf_pgNd programs are almost identical, reflecting the fact that these are closely analogous programs designed to run on different hardware.</p>
-<h2>Parameter files for specific programs:</h2>
+<p >This section describes the format and contents of the parameter files used by all of the PSCF programs. The parameter files required by the different PSCF programs use a similar syntax, but differ in some details. In the following pages, we first describe elements that are common to the parameter file formats for all programs, starting with a simple example, and then describes the formats for particular programs in greater detail.</p>
+<h3>Contents:</h3>
 <ul style="list-style: none;">
 <li>
-<a class="el" href="user_param_fd_page.html">3.2.1 pscf_fd</a>  </li>
+<a class="el" href="user_param_example_page.html">3.3.1 Example</a>  </li>
 <li>
-<a class="el" href="user_param_pc_page.html">3.2.2 pscf_pcNd</a>  </li>
+<a class="el" href="user_param_syntax_page.html">3.3.2 Syntax</a>  </li>
 <li>
-<a class="el" href="user_param_pg_page.html">3.2.2 pscf_pgNd</a>  </li>
+<a class="el" href="user_param_format_page.html">3.3.3 Format Descriptions</a>  </li>
+<li>
+<a class="el" href="user_param_mixture_page.html">3.3.4 Mixture Block</a>  </li>
+<li>
+<a class="el" href="user_param_sweep_page.html">3.3.5 Parameter Sweeps</a>  </li>
+<li>
+<a class="el" href="user_param_fd_page.html">3.3.6 pscf_fd (1D Problems)</a>  </li>
+<li>
+<a class="el" href="user_param_pc_page.html">3.3.7 pscf_pc (Periodic Structures, CPU)</a>  </li>
+<li>
+<a class="el" href="user_param_pg_page.html">3.3.8 pscf_pg (Periodic Structures, GPU)</a>  </li>
 </ul>
 <p><br  />
- <a class="el" href="user_usage_page.html">3.1 Input File Types</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_page.html">3 User Guide</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_command_page.html">3.3 Command Files</a> (Next) </p>
+ <a class="el" href="user_usage_page.html">3.2 Running a Program</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_page.html">3 User Guide</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_command_page.html">3.4 Command Files</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

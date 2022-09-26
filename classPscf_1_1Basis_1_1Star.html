@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -57,9 +57,6 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:afe80d984857ca3e9bf0b755de7e5ecc1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Basis_1_1Star.html#afe80d984857ca3e9bf0b755de7e5ecc1">eigen</a></td></tr>
-<tr class="memdesc:afe80d984857ca3e9bf0b755de7e5ecc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Square magnitude of any wavevector in this star.  <a href="classPscf_1_1Basis_1_1Star.html#afe80d984857ca3e9bf0b755de7e5ecc1">More...</a><br /></td></tr>
-<tr class="separator:afe80d984857ca3e9bf0b755de7e5ecc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a244ffeaf0898eb42481fecf84b0d4896"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Basis_1_1Star.html#a244ffeaf0898eb42481fecf84b0d4896">size</a></td></tr>
 <tr class="memdesc:a244ffeaf0898eb42481fecf84b0d4896"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of wavevectors in this star.  <a href="classPscf_1_1Basis_1_1Star.html#a244ffeaf0898eb42481fecf84b0d4896">More...</a><br /></td></tr>
 <tr class="separator:a244ffeaf0898eb42481fecf84b0d4896"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -90,29 +87,8 @@ Public Attributes</h2></td></tr>
 class Pscf::Basis&lt; D &gt;::Star</div><p >A list of wavevectors that are related by space-group symmetries. </p>
 <p >The wavevectors in a star form a continuous block within the array waves defined by the <a class="el" href="classPscf_1_1Basis.html" title="Symmetry-adapted Fourier basis for pseudo-spectral scft.">Basis</a> classes. Within this block, waves are listed in descending lexigraphical order of their integer (ijk) indices as given by Basis::Wave::indexBz. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00434">434</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00438">438</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="afe80d984857ca3e9bf0b755de7e5ecc1" name="afe80d984857ca3e9bf0b755de7e5ecc1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe80d984857ca3e9bf0b755de7e5ecc1">&#9670;&nbsp;</a></span>eigen</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="classPscf_1_1Basis.html">Pscf::Basis</a>&lt; D &gt;::Star::eigen</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Square magnitude of any wavevector in this star. </p>
-<p >Equal to the negative of the eigenvalue of the Laplacian for the basis function associated with this star. </p>
-
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00445">445</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
-
-</div>
-</div>
 <a id="a244ffeaf0898eb42481fecf84b0d4896" name="a244ffeaf0898eb42481fecf84b0d4896"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a244ffeaf0898eb42481fecf84b0d4896">&#9670;&nbsp;</a></span>size</h2>
 
@@ -129,9 +105,7 @@ template&lt;int D&gt; </div>
 
 <p>Number of wavevectors in this star. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00450">450</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00760">Pscf::Pspg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00446">446</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
 </div>
 </div>
@@ -151,9 +125,9 @@ template&lt;int D&gt; </div>
 
 <p><a class="el" href="classPscf_1_1Basis_1_1Wave.html" title="Wavevector used to construct a basis function.">Wave</a> index of first wavevector in star. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00455">455</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00451">451</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00981">Pscf::Pspc::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00643">Pscf::Pspg::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00760">Pscf::Pspg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01082">Pscf::Pspc::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01272">Pscf::Pspc::FieldIo&lt; D &gt;::hasSymmetry()</a>, and <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00067">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldsBasis()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00834">Pscf::Pspg::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00985">Pscf::Pspc::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00959">Pscf::Pspg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01086">Pscf::Pspc::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01276">Pscf::Pspc::FieldIo&lt; D &gt;::hasSymmetry()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00068">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldsBasis()</a>, and <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00069">Pscf::Pspg::FieldIo&lt; D &gt;::readFieldsBasis()</a>.</p>
 
 </div>
 </div>
@@ -173,9 +147,9 @@ template&lt;int D&gt; </div>
 
 <p><a class="el" href="classPscf_1_1Basis_1_1Wave.html" title="Wavevector used to construct a basis function.">Wave</a> index of last wavevector in star. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00460">460</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00456">456</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00760">Pscf::Pspg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01082">Pscf::Pspc::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, and <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01272">Pscf::Pspc::FieldIo&lt; D &gt;::hasSymmetry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00959">Pscf::Pspg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01086">Pscf::Pspc::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, and <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01276">Pscf::Pspc::FieldIo&lt; D &gt;::hasSymmetry()</a>.</p>
 
 </div>
 </div>
@@ -200,9 +174,9 @@ template&lt;int D&gt; </div>
 <p >In a centro-symmetric group (i.e., a group that includes the inversion operation, with an inversion center at the origin of the coordinate system), all stars are closed under inversion. In this case, all stars in the basis must thus have starInvert = 0.</p>
 <p >In a non-centro-symmetric group, a stars may either be closed closed under inversion (starInvert = 0) or belong to a pair of consecutive stars that are related by inversion (starInver = +1 or -1). </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00489">489</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00485">485</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00981">Pscf::Pspc::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00643">Pscf::Pspg::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00760">Pscf::Pspg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01082">Pscf::Pspc::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, and <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00067">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldsBasis()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00834">Pscf::Pspg::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00985">Pscf::Pspc::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00959">Pscf::Pspg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01086">Pscf::Pspc::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00068">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldsBasis()</a>, and <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00069">Pscf::Pspg::FieldIo&lt; D &gt;::readFieldsBasis()</a>.</p>
 
 </div>
 </div>
@@ -224,9 +198,9 @@ template&lt;int D&gt; </div>
 <p ><a class="el" href="classPscf_1_1Basis_1_1Wave.html" title="Wavevector used to construct a basis function.">Wave</a> given here is the value of indexBz for a characteristic wave for the star. For invertFlag = 0 or 1, the characteristic wave is the first wave in the star. For invertFlag = -1, this is the negation of the waveBz of the partner star for which invertFlag = 1.</p>
 <p >The coefficient of wave waveBz is always real and positive. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00502">502</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00498">498</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00067">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldsBasis()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00068">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldsBasis()</a>, and <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00069">Pscf::Pspg::FieldIo&lt; D &gt;::readFieldsBasis()</a>.</p>
 
 </div>
 </div>
@@ -247,7 +221,7 @@ template&lt;int D&gt; </div>
 <p>Index of this star in ordered array of all stars. </p>
 <p >This is the index of this star within array stars_. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00509">509</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00505">505</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
 </div>
 </div>
@@ -269,9 +243,9 @@ template&lt;int D&gt; </div>
 <p >If this star is not cancelled (cancel == false), then basisId is set equal to the index of the associated basis function in in a list of nonzero basis functions or (equivalently) in a list of non-cancelled stars.</p>
 <p >If this star is cancelled (cancel == true), then basisId = -1. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00521">521</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00517">517</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00981">Pscf::Pspc::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01082">Pscf::Pspc::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, and <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00067">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldsBasis()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00834">Pscf::Pspg::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00985">Pscf::Pspc::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00959">Pscf::Pspg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01086">Pscf::Pspc::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00068">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldsBasis()</a>, and <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00069">Pscf::Pspg::FieldIo&lt; D &gt;::readFieldsBasis()</a>.</p>
 
 </div>
 </div>
@@ -293,9 +267,9 @@ template&lt;int D&gt; </div>
 <p >The cancel flag is true iff no nonzero basis function can be constructed from the waves of this star that is invariant under all elements of the space group. <a class="el" href="classPscf_1_1Basis.html" title="Symmetry-adapted Fourier basis for pseudo-spectral scft.">Basis</a> functions are thus associated only with stars for which cancel == false.</p>
 <p >Each cancelled star contains a set of waves that are related by symmetry for which the X-ray or neutron scattering intensity would exhibit a systematic cancellation required by the space group symmetry. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00536">536</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00532">532</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00981">Pscf::Pspc::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00643">Pscf::Pspg::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00760">Pscf::Pspg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01082">Pscf::Pspc::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01272">Pscf::Pspc::FieldIo&lt; D &gt;::hasSymmetry()</a>, and <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00067">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldsBasis()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00834">Pscf::Pspg::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00985">Pscf::Pspc::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00959">Pscf::Pspg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01086">Pscf::Pspc::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l01276">Pscf::Pspc::FieldIo&lt; D &gt;::hasSymmetry()</a>, <a class="el" href="pspc_2field_2FieldIo_8tpp_source.html#l00068">Pscf::Pspc::FieldIo&lt; D &gt;::readFieldsBasis()</a>, and <a class="el" href="pspg_2field_2FieldIo_8tpp_source.html#l00069">Pscf::Pspg::FieldIo&lt; D &gt;::readFieldsBasis()</a>.</p>
 
 </div>
 </div>
@@ -305,7 +279,7 @@ template&lt;int D&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

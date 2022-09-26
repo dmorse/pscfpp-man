@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: 3.5.2 R-Grid File Format</title>
+<title>PSCF: 3.6.2 R-Grid File Format</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -39,14 +39,14 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="index.html">PSCF - Polymer Self-Consistent Field Theory</a></li><li class="navelem"><a class="el" href="user_page.html">3 User Guide</a></li><li class="navelem"><a class="el" href="user_field_page.html">3.5 Field Files</a></li>  </ul>
+<li class="navelem"><a class="el" href="index.html">PSCF - Polymer Self-Consistent Field Theory</a></li><li class="navelem"><a class="el" href="user_page.html">3 User Guide</a></li><li class="navelem"><a class="el" href="user_field_page.html">3.6 Field Files</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">3.5.2 R-Grid File Format </div></div>
+  <div class="headertitle"><div class="title">3.6.2 R-Grid File Format </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="el" href="user_field_basis_page.html">3.5.1 Basis File Format</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_field_kgrid_page.html">3.5.3 K-Grid File Format</a> (Next) <br  />
+<div class="textblock"><p ><a class="el" href="user_field_basis_page.html">3.6.1 Basis File Format</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_field_kgrid_page.html">3.6.3 K-Grid File Format</a> (Next) <br  />
 </p>
 <p >PSCF can also output the values of set of fields in a format that gives values on the nodes of the regular grid that is used by the pseudo-spectral algorithm for solving the modified diffusion equation.</p>
 <h3>Example: 2D Hex Phase </h3>
@@ -79,11 +79,11 @@ $(function() {
 </div><!-- fragment --><h3>File Format </h3>
 <p >Like other field formats, this file format contains a header section with crystallographic information followed by a data section. The header section is similar that for the symmetry adapted format, except that the last variable is an array "ngrid" of integers giving the number of grid points in each direction. In this example, because it is a two-dimensional crystal (dim = 2), this array contains two numbers, both 24, indicating a grid in which there are 24 grid points along each coordinate axis. To describe a hexagonal phase, we use a non-orthogonal coordinate system in which each axis is parallel to one of the Bravais lattice vectors, which in a hexagonal phase have an angle of 60 degrees between them.</p>
 <p >The data section contains the values of fields associated with N_monomer monomer types at grid points given by </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \textbf{r}(n_1, \ldots, n_{D}) = \sum_{i=1}^{\textrm{D}} \frac{n_{i}}{N_{i}}\textbf{a}_{1} \]" src="form_41.png"/>
+<img class="formulaDsp" alt="\[ \textbf{r}(n_1, \ldots, n_{D}) = \sum_{i=1}^{\textrm{D}} \frac{n_{i}}{N_{i}}\textbf{a}_{1} \]" src="form_41.png" width="139" height="40"/>
 </p>
-<p> where <img class="formulaInl" alt="$D$" src="form_33.png"/> is the dimensionality of the crystal (denoted by "dim" in the header file), <img class="formulaInl" alt="$\textbf{a}_{i}$" src="form_42.png"/>is a Bravais lattice vector, <img class="formulaInl" alt="$N_{i}$" src="form_35.png"/> is the number of grid points along direction <img class="formulaInl" alt="$i$" src="form_0.png"/>, and <img class="formulaInl" alt="$n_{i}$" src="form_36.png"/> is an integer index in the range <img class="formulaInl" alt="$0 \leq n_{i} &lt; N_{i}$" src="form_43.png"/>. <br  />
- The number of rows in the data section is equal to the total number of grid points. Each row in this section contains values of all field components at a single grid point. The number of columns is equal to the number of monomer types, so that data in column <img class="formulaInl" alt="$\alpha$" src="form_1.png"/> contains the values of the field associated with monomer type <img class="formulaInl" alt="$\alpha$" src="form_1.png"/>.</p>
-<p >Grid points are listed in order using index <img class="formulaInl" alt="$n_{1}$" src="form_44.png"/> as the most rapidly varying (innermost) loop index. This is implemented in the field_io_mod module, in subroutines output_field_grid and input_field_grid as a fortran loop of the form::</p>
+<p> where <img class="formulaInl" alt="$D$" src="form_33.png" width="10" height="10"/> is the dimensionality of the crystal (denoted by "dim" in the header file), <img class="formulaInl" alt="$\textbf{a}_{i}$" src="form_42.png" width="11" height="9"/>is a Bravais lattice vector, <img class="formulaInl" alt="$N_{i}$" src="form_35.png" width="14" height="13"/> is the number of grid points along direction <img class="formulaInl" alt="$i$" src="form_0.png" width="5" height="9"/>, and <img class="formulaInl" alt="$n_{i}$" src="form_36.png" width="13" height="9"/> is an integer index in the range <img class="formulaInl" alt="$0 \leq n_{i} &lt; N_{i}$" src="form_43.png" width="66" height="13"/>. <br  />
+ The number of rows in the data section is equal to the total number of grid points. Each row in this section contains values of all field components at a single grid point. The number of columns is equal to the number of monomer types, so that data in column <img class="formulaInl" alt="$\alpha$" src="form_1.png" width="8" height="6"/> contains the values of the field associated with monomer type <img class="formulaInl" alt="$\alpha$" src="form_1.png" width="8" height="6"/>.</p>
+<p >Grid points are listed in order using index <img class="formulaInl" alt="$n_{1}$" src="form_44.png" width="13" height="9"/> as the most rapidly varying (innermost) loop index. This is implemented in the field_io_mod module, in subroutines output_field_grid and input_field_grid as a fortran loop of the form::</p>
 <div class="fragment"><div class="line"><span class="keywordflow">do</span> n3 = 0, ngrid(3) - 1</div>
 <div class="line">  <span class="keywordflow">do</span> n2 = 0, ngrid(2) - 1</div>
 <div class="line">    <span class="keywordflow">do</span> n1 = 0, ngrid(1) - 1</div>
@@ -93,12 +93,12 @@ $(function() {
 <div class="line">enddo</div>
 <div class="ttc" id="agroup__Format__Module_html_ga9ccb226b62d2b848cd3233c7cee9ba3f"><div class="ttname"><a href="group__Format__Module.html#ga9ccb226b62d2b848cd3233c7cee9ba3f">Util::write</a></div><div class="ttdeci">void write(std::ostream &amp;out, Type data)</div><div class="ttdoc">Function template for output in a standard format.</div><div class="ttdef"><b>Definition:</b> <a href="write_8h_source.html#l00080">write.h:80</a></div></div>
 </div><!-- fragment --><p ><br  />
- <a class="el" href="user_field_basis_page.html">3.5.1 Basis File Format</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_field_page.html">3.5 Field Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_field_kgrid_page.html">3.5.3 K-Grid File Format</a> (Next) </p>
+ <a class="el" href="user_field_basis_page.html">3.6.1 Basis File Format</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_field_page.html">3.6 Field Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_field_kgrid_page.html">3.6.3 K-Grid File Format</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

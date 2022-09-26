@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -70,9 +70,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a71b3e1c2dac1635d161f668529860764"><td class="memItemLeft" align="right" valign="top">virtual Data *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Factory.html#a71b3e1c2dac1635d161f668529860764">factory</a> (const std::string &amp;className) const =0</td></tr>
 <tr class="memdesc:a71b3e1c2dac1635d161f668529860764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to a new instance of specified subclass.  <a href="classUtil_1_1Factory.html#a71b3e1c2dac1635d161f668529860764">More...</a><br /></td></tr>
 <tr class="separator:a71b3e1c2dac1635d161f668529860764"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff55a134e6b770ca6f656417f4519fd5"><td class="memItemLeft" align="right" valign="top">Data *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Factory.html#aff55a134e6b770ca6f656417f4519fd5">readObject</a> (std::istream &amp;in, <a class="el" href="classUtil_1_1ParamComposite.html">ParamComposite</a> &amp;parent, std::string &amp;className, bool &amp;isEnd)</td></tr>
-<tr class="memdesc:aff55a134e6b770ca6f656417f4519fd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a class name, instantiate an object, and read its parameters.  <a href="classUtil_1_1Factory.html#aff55a134e6b770ca6f656417f4519fd5">More...</a><br /></td></tr>
-<tr class="separator:aff55a134e6b770ca6f656417f4519fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a086a9fde3c5983598792b2200147d6aa"><td class="memItemLeft" align="right" valign="top">Data *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Factory.html#a086a9fde3c5983598792b2200147d6aa">readObject</a> (std::istream &amp;in, <a class="el" href="classUtil_1_1ParamComposite.html">ParamComposite</a> &amp;parent, std::string &amp;className, bool &amp;isEnd, bool isRequired=true)</td></tr>
+<tr class="memdesc:a086a9fde3c5983598792b2200147d6aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a class name, instantiate an object, and read its parameters.  <a href="classUtil_1_1Factory.html#a086a9fde3c5983598792b2200147d6aa">More...</a><br /></td></tr>
+<tr class="separator:a086a9fde3c5983598792b2200147d6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e7d0ab8abb8141040b61289a6e948d0"><td class="memItemLeft" align="right" valign="top">Data *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Factory.html#a4e7d0ab8abb8141040b61289a6e948d0">readObjectOptional</a> (std::istream &amp;in, <a class="el" href="classUtil_1_1ParamComposite.html">ParamComposite</a> &amp;parent, std::string &amp;className, bool &amp;isEnd)</td></tr>
+<tr class="memdesc:a4e7d0ab8abb8141040b61289a6e948d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an optional class name, instantiate an object, and read its parameters.  <a href="classUtil_1_1Factory.html#a4e7d0ab8abb8141040b61289a6e948d0">More...</a><br /></td></tr>
+<tr class="separator:a4e7d0ab8abb8141040b61289a6e948d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1b7f10f4dc2adae114c4bcadb0b1b44"><td class="memItemLeft" align="right" valign="top">Data *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Factory.html#ac1b7f10f4dc2adae114c4bcadb0b1b44">loadObject</a> (<a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">Serializable::IArchive</a> &amp;ar, <a class="el" href="classUtil_1_1ParamComposite.html">ParamComposite</a> &amp;parent, std::string &amp;className)</td></tr>
 <tr class="memdesc:ac1b7f10f4dc2adae114c4bcadb0b1b44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a class name, instantiate an object, and load the object.  <a href="classUtil_1_1Factory.html#ac1b7f10f4dc2adae114c4bcadb0b1b44">More...</a><br /></td></tr>
 <tr class="separator:ac1b7f10f4dc2adae114c4bcadb0b1b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -93,7 +96,7 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename Data&gt;<br />
 class Util::Factory&lt; Data &gt;</div><p ><a class="el" href="classUtil_1_1Factory.html" title="Factory template.">Factory</a> template. </p>
 
-<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00032">32</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00033">33</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abed74f57b3e4aa935aa9c6ac00237bf4" name="abed74f57b3e4aa935aa9c6ac00237bf4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abed74f57b3e4aa935aa9c6ac00237bf4">&#9670;&nbsp;</a></span>Factory()</h2>
@@ -111,7 +114,7 @@ template&lt;typename Data &gt; </div>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00165">165</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00198">198</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
 
 </div>
 </div>
@@ -139,7 +142,7 @@ template&lt;typename Data &gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00173">173</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00206">206</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
 
 </div>
 </div>
@@ -170,7 +173,7 @@ template&lt;typename Data &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00204">204</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00237">237</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
 
 </div>
 </div>
@@ -211,12 +214,12 @@ template&lt;typename Data &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>base class pointer to new object, or a null pointer. </dd></dl>
 
-<p>Implemented in <a class="el" href="classPscf_1_1Pspc_1_1IteratorFactory.html#a7f1a4dac6a952f33f4330a888f46650e">Pscf::Pspc::IteratorFactory&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Pspg_1_1IteratorFactory.html#af61e0b9c150792d9dadca59fabe42f15">Pscf::Pspg::IteratorFactory&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Fd1d_1_1SweepFactory.html#a0100fa30dd58ecc11d948ef8a683d6cb">Pscf::Fd1d::SweepFactory</a>, and <a class="el" href="classPscf_1_1Pspc_1_1SweepFactory.html#a133c74897a2e0fe414bb25b841aabb7f">Pscf::Pspc::SweepFactory&lt; D &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classPscf_1_1Fd1d_1_1IteratorFactory.html#acc8be535e4f898932c595cc1cd435727">Pscf::Fd1d::IteratorFactory</a>, <a class="el" href="classPscf_1_1Pspc_1_1IteratorFactory.html#a7f1a4dac6a952f33f4330a888f46650e">Pscf::Pspc::IteratorFactory&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Pspg_1_1IteratorFactory.html#af61e0b9c150792d9dadca59fabe42f15">Pscf::Pspg::IteratorFactory&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Fd1d_1_1SweepFactory.html#a0100fa30dd58ecc11d948ef8a683d6cb">Pscf::Fd1d::SweepFactory</a>, <a class="el" href="classPscf_1_1Pspc_1_1SweepFactory.html#a133c74897a2e0fe414bb25b841aabb7f">Pscf::Pspc::SweepFactory&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Pspg_1_1SweepFactory.html#a0ca9fc881bae479a3b698b4f16fdf6f4">Pscf::Pspg::SweepFactory&lt; D &gt;</a>.</p>
 
 </div>
 </div>
-<a id="aff55a134e6b770ca6f656417f4519fd5" name="aff55a134e6b770ca6f656417f4519fd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff55a134e6b770ca6f656417f4519fd5">&#9670;&nbsp;</a></span>readObject()</h2>
+<a id="a086a9fde3c5983598792b2200147d6aa" name="a086a9fde3c5983598792b2200147d6aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a086a9fde3c5983598792b2200147d6aa">&#9670;&nbsp;</a></span>readObject()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -225,6 +228,87 @@ template&lt;typename Data &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">Data * <a class="el" href="classUtil_1_1Factory.html">Util::Factory</a>&lt; Data &gt;::readObject </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classUtil_1_1ParamComposite.html">ParamComposite</a> &amp;&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>className</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>isEnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isRequired</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read a class name, instantiate an object, and read its parameters. </p>
+<p >This method:</p><ul>
+<li>reads a comment line of the form className + {</li>
+<li>invokes the factory method to create an instance of className if className is recognized</li>
+<li>invokes the readParam() method of the new object</li>
+<li>throws an <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a> if className is not recognized if isRequired is true.</li>
+<li>returns a null pointer if className is not recognized if isRequired is false.</li>
+</ul>
+<p >When compiled with MPI, if the parent <a class="el" href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file.">ParamComposite</a> has a param communicator, this method reads the comment line on the Io processor, broadcasts it to all others, and then lets each processor independently match this string.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a></td><td>if className is not recognized but is required.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>input stream </td></tr>
+    <tr><td class="paramname">parent</td><td>parent <a class="el" href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file.">ParamComposite</a> object </td></tr>
+    <tr><td class="paramname">className</td><td>(output) name of subclass of Data </td></tr>
+    <tr><td class="paramname">isEnd</td><td>(output) is the input a closing bracket "}" ? </td></tr>
+    <tr><td class="paramname">isRequired</td><td>is this object required? Default is true. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to new instance of className </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00247">247</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
+
+<p class="reference">References <a class="el" href="ParamComposite_8cpp_source.html#l00249">Util::ParamComposite::addParamComposite()</a>, <a class="el" href="Label_8h_source.html#l00286">Util::Label::buffer()</a>, <a class="el" href="Label_8cpp_source.html#l00025">Util::Label::clear()</a>, <a class="el" href="ParamComponent_8cpp_source.html#l00068">Util::ParamComponent::echo()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="MpiFileIo_8h_source.html#l00099">Util::MpiFileIo::hasIoCommunicator()</a>, <a class="el" href="MpiFileIo_8h_source.html#l00105">Util::MpiFileIo::ioCommunicator()</a>, <a class="el" href="Label_8h_source.html#l00267">Util::Label::isClear()</a>, <a class="el" href="Label_8cpp_source.html#l00035">Util::Label::read()</a>, <a class="el" href="ParamComponent_8cpp_source.html#l00048">Util::ParamComponent::setIndent()</a>, <a class="el" href="Label_8h_source.html#l00280">Util::Label::setIsMatched()</a>, <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>, and <a class="el" href="Begin_8cpp_source.html#l00080">Util::Begin::writeParam()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00168">Pscf::Fd1d::System::readParameters()</a>.</p>
+
+</div>
+</div>
+<a id="a4e7d0ab8abb8141040b61289a6e948d0" name="a4e7d0ab8abb8141040b61289a6e948d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e7d0ab8abb8141040b61289a6e948d0">&#9670;&nbsp;</a></span>readObjectOptional()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Data &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Data * <a class="el" href="classUtil_1_1Factory.html">Util::Factory</a>&lt; Data &gt;::readObjectOptional </td>
           <td>(</td>
           <td class="paramtype">std::istream &amp;&#160;</td>
           <td class="paramname"><em>in</em>, </td>
@@ -255,19 +339,14 @@ template&lt;typename Data &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Read a class name, instantiate an object, and read its parameters. </p>
+<p>Read an optional class name, instantiate an object, and read its parameters. </p>
 <p >This method:</p><ul>
 <li>reads a comment line of the form className + {</li>
 <li>invokes the factory method to create an instance of className</li>
-<li>invokes the readParam() method of the new object</li>
+<li>invokes the readParam() method of the new object if className is recognized.</li>
+<li>returns a null pointer if className is not recognized.</li>
 </ul>
 <p >When compiled with MPI, if the parent <a class="el" href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file.">ParamComposite</a> has a param communicator, this method reads the comment line on the Io processor, broadcasts it to all others, and then lets each processor independently match this string.</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a></td><td>if className is not recognized.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">in</td><td>input stream </td></tr>
@@ -279,11 +358,9 @@ template&lt;typename Data &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>pointer to new instance of className </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00214">214</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00378">378</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
 
-<p class="reference">References <a class="el" href="ParamComposite_8cpp_source.html#l00249">Util::ParamComposite::addParamComposite()</a>, <a class="el" href="ParamComponent_8cpp_source.html#l00068">Util::ParamComponent::echo()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="MpiFileIo_8h_source.html#l00099">Util::MpiFileIo::hasIoCommunicator()</a>, <a class="el" href="MpiFileIo_8h_source.html#l00105">Util::MpiFileIo::ioCommunicator()</a>, <a class="el" href="ParamComponent_8cpp_source.html#l00048">Util::ParamComponent::setIndent()</a>, <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>, and <a class="el" href="Begin_8cpp_source.html#l00080">Util::Begin::writeParam()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00145">Pscf::Fd1d::System::readParameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00168">Pscf::Fd1d::System::readParameters()</a>.</p>
 
 </div>
 </div>
@@ -344,7 +421,7 @@ template&lt;typename Data &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>pointer to new instance of className </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00303">303</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00387">387</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
 
 <p class="reference">References <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="MpiFileIo_8h_source.html#l00099">Util::MpiFileIo::hasIoCommunicator()</a>, <a class="el" href="MpiFileIo_8h_source.html#l00105">Util::MpiFileIo::ioCommunicator()</a>, and <a class="el" href="ParamComposite_8cpp_source.html#l00282">Util::ParamComposite::loadParamComposite()</a>.</p>
 
@@ -386,7 +463,7 @@ template&lt;typename Data &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>base class pointer to new object, or a null pointer. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00340">340</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00425">425</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
 
 </div>
 </div>
@@ -425,7 +502,7 @@ template&lt;typename Data &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00181">181</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00214">214</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
@@ -455,7 +532,7 @@ template&lt;typename Data &gt; </div>
 
 <p>Does this factory have a param communicator? </p>
 
-<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00196">196</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Factory_8h_source.html#l00229">229</a> of file <a class="el" href="Factory_8h_source.html">Factory.h</a>.</p>
 
 </div>
 </div>
@@ -465,7 +542,7 @@ template&lt;typename Data &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:19 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:43 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

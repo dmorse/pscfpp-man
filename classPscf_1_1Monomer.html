@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -73,9 +73,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a224d8c9b24d4b5de65c1de8cbeeb0c90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Monomer.html#a224d8c9b24d4b5de65c1de8cbeeb0c90">setKuhn</a> (double <a class="el" href="classPscf_1_1Monomer.html#a97ec062e4f5d0ddf28bd1b9ffb2e9637">kuhn</a>)</td></tr>
 <tr class="memdesc:a224d8c9b24d4b5de65c1de8cbeeb0c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set statistical segment length.  <a href="classPscf_1_1Monomer.html#a224d8c9b24d4b5de65c1de8cbeeb0c90">More...</a><br /></td></tr>
 <tr class="separator:a224d8c9b24d4b5de65c1de8cbeeb0c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d46ea48a666c35635eb9bcef75fef66"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Monomer.html#a1d46ea48a666c35635eb9bcef75fef66">name</a> () const</td></tr>
-<tr class="memdesc:a1d46ea48a666c35635eb9bcef75fef66"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer or particle type.">Monomer</a> name string.  <a href="classPscf_1_1Monomer.html#a1d46ea48a666c35635eb9bcef75fef66">More...</a><br /></td></tr>
-<tr class="separator:a1d46ea48a666c35635eb9bcef75fef66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bd61716c26f37e7729685f09ebe17f8"><td class="memTemplParams" colspan="2">template&lt;class Archive &gt; </td></tr>
 <tr class="memitem:a7bd61716c26f37e7729685f09ebe17f8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPscf_1_1Monomer.html#a7bd61716c26f37e7729685f09ebe17f8">serialize</a> (Archive ar, const unsigned int version)</td></tr>
 <tr class="memdesc:a7bd61716c26f37e7729685f09ebe17f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to or from an archive.  <a href="classPscf_1_1Monomer.html#a7bd61716c26f37e7729685f09ebe17f8">More...</a><br /></td></tr>
@@ -92,8 +89,10 @@ Friends</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Descriptor for a monomer or particle type. </p>
+<p >Iostream extractor (&gt;&gt;) and inserter (&lt;&lt;) operators are defined for a <a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer or particle type.">Monomer</a>, allowing the description of a monomer to be read from or written to file like a primitive variable. The text representation contains only the value of the kuhn (statistical segment) length, as described <a class="el" href="pscf_Monomer_page.html">here</a>.</p>
+<p >Data for all monomers in a system is normally read from a parameter file into an array-valued parameter named "monomers". </p>
 
-<p class="definition">Definition at line <a class="el" href="Monomer_8h_source.html#l00022">22</a> of file <a class="el" href="Monomer_8h_source.html">Monomer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Monomer_8h_source.html#l00031">31</a> of file <a class="el" href="Monomer_8h_source.html">Monomer.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8c983cc8501ad757a26aed87223ac85b" name="a8c983cc8501ad757a26aed87223ac85b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8c983cc8501ad757a26aed87223ac85b">&#9670;&nbsp;</a></span>Monomer()</h2>
@@ -141,9 +140,9 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Monomer_8cpp_source.html#l00019">19</a> of file <a class="el" href="Monomer_8cpp_source.html">Monomer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Monomer_8cpp_source.html#l00018">18</a> of file <a class="el" href="Monomer_8cpp_source.html">Monomer.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Monomer_8h_source.html#l00111">id()</a>.</p>
+<p class="reference">References <a class="el" href="Monomer_8h_source.html#l00112">id()</a>.</p>
 
 </div>
 </div>
@@ -172,9 +171,9 @@ Friends</h2></td></tr>
 
 <p>Unique integer index for monomer type. </p>
 
-<p class="definition">Definition at line <a class="el" href="Monomer_8h_source.html#l00111">111</a> of file <a class="el" href="Monomer_8h_source.html">Monomer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Monomer_8h_source.html#l00112">112</a> of file <a class="el" href="Monomer_8h_source.html">Monomer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Monomer_8cpp_source.html#l00019">setId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Monomer_8cpp_source.html#l00018">setId()</a>.</p>
 
 </div>
 </div>
@@ -203,9 +202,9 @@ Friends</h2></td></tr>
 
 <p>Statistical segment length (random walk step size). </p>
 
-<p class="definition">Definition at line <a class="el" href="Monomer_8h_source.html#l00117">117</a> of file <a class="el" href="Monomer_8h_source.html">Monomer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Monomer_8h_source.html#l00118">118</a> of file <a class="el" href="Monomer_8h_source.html">Monomer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Monomer_8h_source.html#l00125">setKuhn()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Monomer_8h_source.html#l00126">setKuhn()</a>.</p>
 
 </div>
 </div>
@@ -235,38 +234,11 @@ Friends</h2></td></tr>
 
 <p>Set statistical segment length. </p>
 
-<p class="definition">Definition at line <a class="el" href="Monomer_8h_source.html#l00125">125</a> of file <a class="el" href="Monomer_8h_source.html">Monomer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Monomer_8h_source.html#l00126">126</a> of file <a class="el" href="Monomer_8h_source.html">Monomer.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Monomer_8h_source.html#l00117">kuhn()</a>.</p>
+<p class="reference">References <a class="el" href="Monomer_8h_source.html#l00118">kuhn()</a>.</p>
 
-</div>
-</div>
-<a id="a1d46ea48a666c35635eb9bcef75fef66" name="a1d46ea48a666c35635eb9bcef75fef66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d46ea48a666c35635eb9bcef75fef66">&#9670;&nbsp;</a></span>name()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string Pscf::Monomer::name </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer or particle type.">Monomer</a> name string. </p>
-
-<p class="definition">Definition at line <a class="el" href="Monomer_8h_source.html#l00131">131</a> of file <a class="el" href="Monomer_8h_source.html">Monomer.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2solvers_2Mixture_8cpp_source.html#l00067">Pscf::Fd1d::Mixture::setKuhn()</a>.</p>
 
 </div>
 </div>
@@ -307,7 +279,7 @@ template&lt;class Archive &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Monomer_8h_source.html#l00138">138</a> of file <a class="el" href="Monomer_8h_source.html">Monomer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Monomer_8h_source.html#l00133">133</a> of file <a class="el" href="Monomer_8h_source.html">Monomer.h</a>.</p>
 
 </div>
 </div>
@@ -356,7 +328,7 @@ template&lt;class Archive &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>modified input stream </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Monomer_8cpp_source.html#l00025">25</a> of file <a class="el" href="Monomer_8cpp_source.html">Monomer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Monomer_8cpp_source.html#l00024">24</a> of file <a class="el" href="Monomer_8cpp_source.html">Monomer.cpp</a>.</p>
 
 </div>
 </div>
@@ -404,7 +376,7 @@ template&lt;class Archive &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>modified output stream </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Monomer_8cpp_source.html#l00036">36</a> of file <a class="el" href="Monomer_8cpp_source.html">Monomer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Monomer_8cpp_source.html#l00034">34</a> of file <a class="el" href="Monomer_8cpp_source.html">Monomer.cpp</a>.</p>
 
 </div>
 </div>
@@ -415,7 +387,7 @@ template&lt;class Archive &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

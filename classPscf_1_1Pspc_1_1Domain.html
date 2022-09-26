@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -76,7 +76,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1b650b7f3e3d2ca1e3e1d3284e3b92c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classPscf_1_1Pspc_1_1Domain.html#a1b650b7f3e3d2ca1e3e1d3284e3b92c9">More...</a><br /></td></tr>
 <tr class="separator:a1b650b7f3e3d2ca1e3e1d3284e3b92c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a724cd50d1fb3f130576b47a2e9159b1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a724cd50d1fb3f130576b47a2e9159b1e">setFileMaster</a> (<a class="el" href="classUtil_1_1FileMaster.html">FileMaster</a> &amp;fileMaster)</td></tr>
-<tr class="memdesc:a724cd50d1fb3f130576b47a2e9159b1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create association with a FileMaster, needed by <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html" title="File input/output operations for fields in several file formats.">FieldIo</a>.  <a href="classPscf_1_1Pspc_1_1Domain.html#a724cd50d1fb3f130576b47a2e9159b1e">More...</a><br /></td></tr>
+<tr class="memdesc:a724cd50d1fb3f130576b47a2e9159b1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create association with a FileMaster, needed by <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">FieldIo</a>.  <a href="classPscf_1_1Pspc_1_1Domain.html#a724cd50d1fb3f130576b47a2e9159b1e">More...</a><br /></td></tr>
 <tr class="separator:a724cd50d1fb3f130576b47a2e9159b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f6ac8ac623952540bb9a4fd535c5d9d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a0f6ac8ac623952540bb9a4fd535c5d9d">readParameters</a> (std::istream &amp;in)</td></tr>
 <tr class="memdesc:a0f6ac8ac623952540bb9a4fd535c5d9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read body of parameter block (without opening and closing lines).  <a href="classPscf_1_1Pspc_1_1Domain.html#a0f6ac8ac623952540bb9a4fd535c5d9d">More...</a><br /></td></tr>
@@ -84,6 +84,40 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6625743217571d565231c24cfdc811a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a6625743217571d565231c24cfdc811a5">readFieldHeader</a> (std::istream &amp;in, int &amp;nMonomer)</td></tr>
 <tr class="memdesc:a6625743217571d565231c24cfdc811a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read initialization data from header of an r-grid field file.  <a href="classPscf_1_1Pspc_1_1Domain.html#a6625743217571d565231c24cfdc811a5">More...</a><br /></td></tr>
 <tr class="separator:a6625743217571d565231c24cfdc811a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Accessors</div></td></tr>
+<tr class="memitem:afd9aa81b0db617d8d3696676b768d9db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#afd9aa81b0db617d8d3696676b768d9db">unitCell</a> ()</td></tr>
+<tr class="memdesc:afd9aa81b0db617d8d3696676b768d9db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="classPscf_1_1UnitCell.html" title="Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.">UnitCell</a> (i.e., lattice type and parameters) by reference.  <a href="classPscf_1_1Pspc_1_1Domain.html#afd9aa81b0db617d8d3696676b768d9db">More...</a><br /></td></tr>
+<tr class="separator:afd9aa81b0db617d8d3696676b768d9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4deb4d8352c1118316cdf687772cf8bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a4deb4d8352c1118316cdf687772cf8bb">unitCell</a> () const</td></tr>
+<tr class="memdesc:a4deb4d8352c1118316cdf687772cf8bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="classPscf_1_1UnitCell.html" title="Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.">UnitCell</a> (i.e., lattice type and parameters) by reference.  <a href="classPscf_1_1Pspc_1_1Domain.html#a4deb4d8352c1118316cdf687772cf8bb">More...</a><br /></td></tr>
+<tr class="separator:a4deb4d8352c1118316cdf687772cf8bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92be00ab2cc32f4bdddc5ba008310f3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Mesh.html">Mesh</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a92be00ab2cc32f4bdddc5ba008310f3f">mesh</a> ()</td></tr>
+<tr class="memdesc:a92be00ab2cc32f4bdddc5ba008310f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get spatial discretization mesh by reference.  <a href="classPscf_1_1Pspc_1_1Domain.html#a92be00ab2cc32f4bdddc5ba008310f3f">More...</a><br /></td></tr>
+<tr class="separator:a92be00ab2cc32f4bdddc5ba008310f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8afa6d9970b9cd87c217a24fe39f0e4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Mesh.html">Mesh</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a8afa6d9970b9cd87c217a24fe39f0e4f">mesh</a> () const</td></tr>
+<tr class="memdesc:a8afa6d9970b9cd87c217a24fe39f0e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get spatial discretization mesh by const reference.  <a href="classPscf_1_1Pspc_1_1Domain.html#a8afa6d9970b9cd87c217a24fe39f0e4f">More...</a><br /></td></tr>
+<tr class="separator:a8afa6d9970b9cd87c217a24fe39f0e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33cb0c1d871a254ea3d13348b6946c31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Basis.html">Basis</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a33cb0c1d871a254ea3d13348b6946c31">basis</a> ()</td></tr>
+<tr class="memdesc:a33cb0c1d871a254ea3d13348b6946c31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get associated <a class="el" href="classPscf_1_1Basis.html" title="Symmetry-adapted Fourier basis for pseudo-spectral scft.">Basis</a> object by reference.  <a href="classPscf_1_1Pspc_1_1Domain.html#a33cb0c1d871a254ea3d13348b6946c31">More...</a><br /></td></tr>
+<tr class="separator:a33cb0c1d871a254ea3d13348b6946c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e78bf6b5332470767b7e4dc45201a8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Basis.html">Basis</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a2e78bf6b5332470767b7e4dc45201a8f">basis</a> () const</td></tr>
+<tr class="memdesc:a2e78bf6b5332470767b7e4dc45201a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get associated <a class="el" href="classPscf_1_1Basis.html" title="Symmetry-adapted Fourier basis for pseudo-spectral scft.">Basis</a> object by const reference.  <a href="classPscf_1_1Pspc_1_1Domain.html#a2e78bf6b5332470767b7e4dc45201a8f">More...</a><br /></td></tr>
+<tr class="separator:a2e78bf6b5332470767b7e4dc45201a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf1faf289a091672456a31cf6847b46d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Pspc_1_1FFT.html">FFT</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#adf1faf289a091672456a31cf6847b46d">fft</a> ()</td></tr>
+<tr class="memdesc:adf1faf289a091672456a31cf6847b46d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get associated <a class="el" href="classPscf_1_1Pspc_1_1FFT.html" title="Fourier transform wrapper for real data.">FFT</a> object.  <a href="classPscf_1_1Pspc_1_1Domain.html#adf1faf289a091672456a31cf6847b46d">More...</a><br /></td></tr>
+<tr class="separator:adf1faf289a091672456a31cf6847b46d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09b2bbd9e7e5302c7be9aa3832d14854"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Pspc_1_1FFT.html">FFT</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a09b2bbd9e7e5302c7be9aa3832d14854">fft</a> () const</td></tr>
+<tr class="memdesc:a09b2bbd9e7e5302c7be9aa3832d14854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get associated <a class="el" href="classPscf_1_1Pspc_1_1FFT.html" title="Fourier transform wrapper for real data.">FFT</a> object by const reference.  <a href="classPscf_1_1Pspc_1_1Domain.html#a09b2bbd9e7e5302c7be9aa3832d14854">More...</a><br /></td></tr>
+<tr class="separator:a09b2bbd9e7e5302c7be9aa3832d14854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17b49cc8e0c90211d5ce6a2efddd211c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a17b49cc8e0c90211d5ce6a2efddd211c">fieldIo</a> ()</td></tr>
+<tr class="memdesc:a17b49cc8e0c90211d5ce6a2efddd211c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get associated <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">FieldIo</a> object.  <a href="classPscf_1_1Pspc_1_1Domain.html#a17b49cc8e0c90211d5ce6a2efddd211c">More...</a><br /></td></tr>
+<tr class="separator:a17b49cc8e0c90211d5ce6a2efddd211c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb311a1ed4d610c6ff248f27310ef967"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html">FieldIo</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#abb311a1ed4d610c6ff248f27310ef967">fieldIo</a> () const</td></tr>
+<tr class="memdesc:abb311a1ed4d610c6ff248f27310ef967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get associated <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">FieldIo</a> object by const reference.  <a href="classPscf_1_1Pspc_1_1Domain.html#abb311a1ed4d610c6ff248f27310ef967">More...</a><br /></td></tr>
+<tr class="separator:abb311a1ed4d610c6ff248f27310ef967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bf03338a9f8c1f1991b5943074ae87c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a0bf03338a9f8c1f1991b5943074ae87c">groupName</a> () const</td></tr>
+<tr class="memdesc:a0bf03338a9f8c1f1991b5943074ae87c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get group name.  <a href="classPscf_1_1Pspc_1_1Domain.html#a0bf03338a9f8c1f1991b5943074ae87c">More...</a><br /></td></tr>
+<tr class="separator:a0bf03338a9f8c1f1991b5943074ae87c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classUtil_1_1ParamComposite"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classUtil_1_1ParamComposite')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComposite.html">Util::ParamComposite</a></td></tr>
 <tr class="memitem:a873eea7d2dbc19cde816d1bef602496c inherit pub_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a873eea7d2dbc19cde816d1bef602496c">ParamComposite</a> ()</td></tr>
 <tr class="memdesc:a873eea7d2dbc19cde816d1bef602496c inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classUtil_1_1ParamComposite.html#a873eea7d2dbc19cde816d1bef602496c">More...</a><br /></td></tr>
@@ -106,9 +140,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aba5de04c5db452000b044e0331ad5182 inherit pub_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#aba5de04c5db452000b044e0331ad5182">readParamOptional</a> (std::istream &amp;in)</td></tr>
 <tr class="memdesc:aba5de04c5db452000b044e0331ad5182 inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read optional parameter file block.  <a href="classUtil_1_1ParamComposite.html#aba5de04c5db452000b044e0331ad5182">More...</a><br /></td></tr>
 <tr class="separator:aba5de04c5db452000b044e0331ad5182 inherit pub_methods_classUtil_1_1ParamComposite"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addf0c36c3560471bfe47f0be008575b9 inherit pub_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#addf0c36c3560471bfe47f0be008575b9">writeParam</a> (std::ostream &amp;out)</td></tr>
-<tr class="memdesc:addf0c36c3560471bfe47f0be008575b9 inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write all parameters to an output stream.  <a href="classUtil_1_1ParamComposite.html#addf0c36c3560471bfe47f0be008575b9">More...</a><br /></td></tr>
-<tr class="separator:addf0c36c3560471bfe47f0be008575b9 inherit pub_methods_classUtil_1_1ParamComposite"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c288fc3f8cd3f3777c2aa872114cb0c inherit pub_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a5c288fc3f8cd3f3777c2aa872114cb0c">writeParam</a> (std::ostream &amp;out) const</td></tr>
+<tr class="memdesc:a5c288fc3f8cd3f3777c2aa872114cb0c inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write all parameters to an output stream.  <a href="classUtil_1_1ParamComposite.html#a5c288fc3f8cd3f3777c2aa872114cb0c">More...</a><br /></td></tr>
+<tr class="separator:a5c288fc3f8cd3f3777c2aa872114cb0c inherit pub_methods_classUtil_1_1ParamComposite"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02a1172d7cd86d4015be8d9e65fe750f inherit pub_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a02a1172d7cd86d4015be8d9e65fe750f">load</a> (<a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">Serializable::IArchive</a> &amp;ar)</td></tr>
 <tr class="memdesc:a02a1172d7cd86d4015be8d9e65fe750f inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load all parameters from an input archive.  <a href="classUtil_1_1ParamComposite.html#a02a1172d7cd86d4015be8d9e65fe750f">More...</a><br /></td></tr>
 <tr class="separator:a02a1172d7cd86d4015be8d9e65fe750f inherit pub_methods_classUtil_1_1ParamComposite"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -285,9 +319,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5234b604f9e852f53eedd7de7c354a1e inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a5234b604f9e852f53eedd7de7c354a1e">readParam</a> (std::istream &amp;in)=0</td></tr>
 <tr class="memdesc:a5234b604f9e852f53eedd7de7c354a1e inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter(s) from file.  <a href="classUtil_1_1ParamComponent.html#a5234b604f9e852f53eedd7de7c354a1e">More...</a><br /></td></tr>
 <tr class="separator:a5234b604f9e852f53eedd7de7c354a1e inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac17d6ab63f9b0e5f966d6a3cfbc26d86 inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ac17d6ab63f9b0e5f966d6a3cfbc26d86">writeParam</a> (std::ostream &amp;out)=0</td></tr>
-<tr class="memdesc:ac17d6ab63f9b0e5f966d6a3cfbc26d86 inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter(s) to file.  <a href="classUtil_1_1ParamComponent.html#ac17d6ab63f9b0e5f966d6a3cfbc26d86">More...</a><br /></td></tr>
-<tr class="separator:ac17d6ab63f9b0e5f966d6a3cfbc26d86 inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c9b5abc1f5cf4a07b5f8089020a8ce inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#aa0c9b5abc1f5cf4a07b5f8089020a8ce">writeParam</a> (std::ostream &amp;out) const =0</td></tr>
+<tr class="memdesc:aa0c9b5abc1f5cf4a07b5f8089020a8ce inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter(s) to file.  <a href="classUtil_1_1ParamComponent.html#aa0c9b5abc1f5cf4a07b5f8089020a8ce">More...</a><br /></td></tr>
+<tr class="separator:aa0c9b5abc1f5cf4a07b5f8089020a8ce inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7925e60ccaf7ecf2ea866e689983124d inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a7925e60ccaf7ecf2ea866e689983124d">load</a> (<a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">Serializable::IArchive</a> &amp;ar)</td></tr>
 <tr class="memdesc:a7925e60ccaf7ecf2ea866e689983124d inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load internal state from an archive.  <a href="classUtil_1_1ParamComponent.html#a7925e60ccaf7ecf2ea866e689983124d">More...</a><br /></td></tr>
 <tr class="separator:a7925e60ccaf7ecf2ea866e689983124d inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -339,41 +373,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a578f0ca38b85f2a97eee6b760d87246c inherit pub_methods_classUtil_1_1MpiFileIo"><td class="memItemLeft" align="right" valign="top">MPI::Intracomm &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1MpiFileIo.html#a578f0ca38b85f2a97eee6b760d87246c">ioCommunicator</a> () const</td></tr>
 <tr class="memdesc:a578f0ca38b85f2a97eee6b760d87246c inherit pub_methods_classUtil_1_1MpiFileIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the MPI communicator by reference.  <a href="classUtil_1_1MpiFileIo.html#a578f0ca38b85f2a97eee6b760d87246c">More...</a><br /></td></tr>
 <tr class="separator:a578f0ca38b85f2a97eee6b760d87246c inherit pub_methods_classUtil_1_1MpiFileIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">Accessors</h2></td></tr>
-<tr class="memitem:afd9aa81b0db617d8d3696676b768d9db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#afd9aa81b0db617d8d3696676b768d9db">unitCell</a> ()</td></tr>
-<tr class="memdesc:afd9aa81b0db617d8d3696676b768d9db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="classPscf_1_1UnitCell.html" title="Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.">UnitCell</a> (i.e., lattice type and parameters) by reference.  <a href="classPscf_1_1Pspc_1_1Domain.html#afd9aa81b0db617d8d3696676b768d9db">More...</a><br /></td></tr>
-<tr class="separator:afd9aa81b0db617d8d3696676b768d9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4deb4d8352c1118316cdf687772cf8bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a4deb4d8352c1118316cdf687772cf8bb">unitCell</a> () const</td></tr>
-<tr class="memdesc:a4deb4d8352c1118316cdf687772cf8bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="classPscf_1_1UnitCell.html" title="Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.">UnitCell</a> (i.e., lattice type and parameters) by reference.  <a href="classPscf_1_1Pspc_1_1Domain.html#a4deb4d8352c1118316cdf687772cf8bb">More...</a><br /></td></tr>
-<tr class="separator:a4deb4d8352c1118316cdf687772cf8bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92be00ab2cc32f4bdddc5ba008310f3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Mesh.html">Mesh</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a92be00ab2cc32f4bdddc5ba008310f3f">mesh</a> ()</td></tr>
-<tr class="memdesc:a92be00ab2cc32f4bdddc5ba008310f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get spatial discretization mesh by reference.  <a href="classPscf_1_1Pspc_1_1Domain.html#a92be00ab2cc32f4bdddc5ba008310f3f">More...</a><br /></td></tr>
-<tr class="separator:a92be00ab2cc32f4bdddc5ba008310f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8afa6d9970b9cd87c217a24fe39f0e4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Mesh.html">Mesh</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a8afa6d9970b9cd87c217a24fe39f0e4f">mesh</a> () const</td></tr>
-<tr class="memdesc:a8afa6d9970b9cd87c217a24fe39f0e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get spatial discretization mesh by const reference.  <a href="classPscf_1_1Pspc_1_1Domain.html#a8afa6d9970b9cd87c217a24fe39f0e4f">More...</a><br /></td></tr>
-<tr class="separator:a8afa6d9970b9cd87c217a24fe39f0e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33cb0c1d871a254ea3d13348b6946c31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Basis.html">Basis</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a33cb0c1d871a254ea3d13348b6946c31">basis</a> ()</td></tr>
-<tr class="memdesc:a33cb0c1d871a254ea3d13348b6946c31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get associated <a class="el" href="classPscf_1_1Basis.html" title="Symmetry-adapted Fourier basis for pseudo-spectral scft.">Basis</a> object by reference.  <a href="classPscf_1_1Pspc_1_1Domain.html#a33cb0c1d871a254ea3d13348b6946c31">More...</a><br /></td></tr>
-<tr class="separator:a33cb0c1d871a254ea3d13348b6946c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e78bf6b5332470767b7e4dc45201a8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Basis.html">Basis</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a2e78bf6b5332470767b7e4dc45201a8f">basis</a> () const</td></tr>
-<tr class="memdesc:a2e78bf6b5332470767b7e4dc45201a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get associated <a class="el" href="classPscf_1_1Basis.html" title="Symmetry-adapted Fourier basis for pseudo-spectral scft.">Basis</a> object by const reference.  <a href="classPscf_1_1Pspc_1_1Domain.html#a2e78bf6b5332470767b7e4dc45201a8f">More...</a><br /></td></tr>
-<tr class="separator:a2e78bf6b5332470767b7e4dc45201a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf1faf289a091672456a31cf6847b46d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Pspc_1_1FFT.html">FFT</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#adf1faf289a091672456a31cf6847b46d">fft</a> ()</td></tr>
-<tr class="memdesc:adf1faf289a091672456a31cf6847b46d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get associated <a class="el" href="classPscf_1_1Pspc_1_1FFT.html" title="Fourier transform wrapper for real data.">FFT</a> object.  <a href="classPscf_1_1Pspc_1_1Domain.html#adf1faf289a091672456a31cf6847b46d">More...</a><br /></td></tr>
-<tr class="separator:adf1faf289a091672456a31cf6847b46d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09b2bbd9e7e5302c7be9aa3832d14854"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Pspc_1_1FFT.html">FFT</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a09b2bbd9e7e5302c7be9aa3832d14854">fft</a> () const</td></tr>
-<tr class="memdesc:a09b2bbd9e7e5302c7be9aa3832d14854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get associated <a class="el" href="classPscf_1_1Pspc_1_1FFT.html" title="Fourier transform wrapper for real data.">FFT</a> object by const reference.  <a href="classPscf_1_1Pspc_1_1Domain.html#a09b2bbd9e7e5302c7be9aa3832d14854">More...</a><br /></td></tr>
-<tr class="separator:a09b2bbd9e7e5302c7be9aa3832d14854"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17b49cc8e0c90211d5ce6a2efddd211c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a17b49cc8e0c90211d5ce6a2efddd211c">fieldIo</a> ()</td></tr>
-<tr class="memdesc:a17b49cc8e0c90211d5ce6a2efddd211c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get associated <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html" title="File input/output operations for fields in several file formats.">FieldIo</a> object.  <a href="classPscf_1_1Pspc_1_1Domain.html#a17b49cc8e0c90211d5ce6a2efddd211c">More...</a><br /></td></tr>
-<tr class="separator:a17b49cc8e0c90211d5ce6a2efddd211c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb311a1ed4d610c6ff248f27310ef967"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html">FieldIo</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#abb311a1ed4d610c6ff248f27310ef967">fieldIo</a> () const</td></tr>
-<tr class="memdesc:abb311a1ed4d610c6ff248f27310ef967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get associated <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html" title="File input/output operations for fields in several file formats.">FieldIo</a> object by const reference.  <a href="classPscf_1_1Pspc_1_1Domain.html#abb311a1ed4d610c6ff248f27310ef967">More...</a><br /></td></tr>
-<tr class="separator:abb311a1ed4d610c6ff248f27310ef967"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bf03338a9f8c1f1991b5943074ae87c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1Domain.html#a0bf03338a9f8c1f1991b5943074ae87c">groupName</a> () const</td></tr>
-<tr class="memdesc:a0bf03338a9f8c1f1991b5943074ae87c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get group name.  <a href="classPscf_1_1Pspc_1_1Domain.html#a0bf03338a9f8c1f1991b5943074ae87c">More...</a><br /></td></tr>
-<tr class="separator:a0bf03338a9f8c1f1991b5943074ae87c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -449,10 +448,10 @@ class Pscf::Pspc::Domain&lt; D &gt;</div><p >Spatial domain and spatial discreti
 <ul>
 <li>a <a class="el" href="classPscf_1_1UnitCell.html" title="Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.">UnitCell</a></li>
 <li>a <a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh</a></li>
+<li>a groupName string</li>
 <li>a <a class="el" href="classPscf_1_1Basis.html" title="Symmetry-adapted Fourier basis for pseudo-spectral scft.">Basis</a></li>
-<li>an Fft</li>
-<li>a <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html" title="File input/output operations for fields in several file formats.">FieldIo</a></li>
-<li>a groupName string </li>
+<li>an <a class="el" href="classPscf_1_1Pspc_1_1FFT.html" title="Fourier transform wrapper for real data.">FFT</a></li>
+<li>a <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">FieldIo</a> </li>
 </ul>
 
 <p class="definition">Definition at line <a class="el" href="pspc_2field_2Domain_8h_source.html#l00043">43</a> of file <a class="el" href="pspc_2field_2Domain_8h_source.html">pspc/field/Domain.h</a>.</p>
@@ -518,7 +517,7 @@ template&lt;int D&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Create association with a FileMaster, needed by <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html" title="File input/output operations for fields in several file formats.">FieldIo</a>. </p>
+<p>Create association with a FileMaster, needed by <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">FieldIo</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fileMaster</td><td>associated FileMaster object. </td></tr>
@@ -861,7 +860,7 @@ template&lt;int D&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get associated <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html" title="File input/output operations for fields in several file formats.">FieldIo</a> object. </p>
+<p>Get associated <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">FieldIo</a> object. </p>
 
 <p class="definition">Definition at line <a class="el" href="pspc_2field_2Domain_8h_source.html#l00238">238</a> of file <a class="el" href="pspc_2field_2Domain_8h_source.html">pspc/field/Domain.h</a>.</p>
 
@@ -889,7 +888,7 @@ template&lt;int D&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get associated <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html" title="File input/output operations for fields in several file formats.">FieldIo</a> object by const reference. </p>
+<p>Get associated <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">FieldIo</a> object by const reference. </p>
 
 <p class="definition">Definition at line <a class="el" href="pspc_2field_2Domain_8h_source.html#l00243">243</a> of file <a class="el" href="pspc_2field_2Domain_8h_source.html">pspc/field/Domain.h</a>.</p>
 
@@ -930,7 +929,7 @@ template&lt;int D&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

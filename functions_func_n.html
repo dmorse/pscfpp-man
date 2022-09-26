@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -45,11 +45,10 @@ $(function() {
 <li>n()&#160;:&#160;<a class="el" href="classUtil_1_1ArrayParam.html#a0154c57ca8366ab705cf1837a2cbf94f">Util::ArrayParam&lt; Type &gt;</a>, <a class="el" href="classUtil_1_1MatrixParam.html#af8a11be44084265a3676e78a66ae7c35">Util::MatrixParam&lt; Type &gt;</a></li>
 <li>nAccept()&#160;:&#160;<a class="el" href="classPscf_1_1SweepTmpl.html#a7f8ddf99447ca320802ac85171c2c9fb">Pscf::SweepTmpl&lt; State &gt;</a></li>
 <li>nAllocate()&#160;:&#160;<a class="el" href="classUtil_1_1Memory.html#a8aa7aec77dc5cf6fe9da9c41ddc1293f">Util::Memory</a></li>
-<li>name()&#160;:&#160;<a class="el" href="classPscf_1_1Monomer.html#a1d46ea48a666c35635eb9bcef75fef66">Pscf::Monomer</a></li>
 <li>nBasis()&#160;:&#160;<a class="el" href="classPscf_1_1Basis.html#a13ed27641b796e2e077d443fb7458b7b">Pscf::Basis&lt; D &gt;</a></li>
 <li>nBasisWave()&#160;:&#160;<a class="el" href="classPscf_1_1Basis.html#a3479377a98886e6e160a04e09a06439c">Pscf::Basis&lt; D &gt;</a></li>
 <li>nBin()&#160;:&#160;<a class="el" href="classUtil_1_1Distribution.html#a0002fc72f0667b7be9f7465c3149853a">Util::Distribution</a>, <a class="el" href="classUtil_1_1IntDistribution.html#aa5d355085352720f0244ccd1ee08a3b6">Util::IntDistribution</a></li>
-<li>nBlock()&#160;:&#160;<a class="el" href="classPscf_1_1PolymerTmpl.html#a33c218694c2c53f2bea85bd68966ecd1">Pscf::PolymerTmpl&lt; Block &gt;</a></li>
+<li>nBlock()&#160;:&#160;<a class="el" href="classPscf_1_1MixtureTmpl.html#a3ab7cf5063e6e4062c9cc7489ca4ac0a">Pscf::MixtureTmpl&lt; TP, TS &gt;</a>, <a class="el" href="classPscf_1_1PolymerTmpl.html#a33c218694c2c53f2bea85bd68966ecd1">Pscf::PolymerTmpl&lt; Block &gt;</a></li>
 <li>nClump()&#160;:&#160;<a class="el" href="classPscf_1_1Homogeneous_1_1Molecule.html#a2b5ae4b8552b36bf7b83364e42dacae6">Pscf::Homogeneous::Molecule</a></li>
 <li>nDeallocate()&#160;:&#160;<a class="el" href="classUtil_1_1Memory.html#afbb82ff54c3b15e33e4c1ac7d7501dc9">Util::Memory</a></li>
 <li>negate()&#160;:&#160;<a class="el" href="classPscf_1_1Vec.html#aefa0c09b531d84005009bdfdb6de95ff">Pscf::Vec&lt; D, T &gt;</a></li>
@@ -64,6 +63,7 @@ $(function() {
 <li>node()&#160;:&#160;<a class="el" href="classUtil_1_1ListArray.html#a2f63c3fe99c544c18d5c8158b8f4424d">Util::ListArray&lt; Data &gt;</a></li>
 <li>Node()&#160;:&#160;<a class="el" href="classUtil_1_1Node.html#a375354517073d352ea602286eb41d3a2">Util::Node&lt; Data &gt;</a></li>
 <li>normalize()&#160;:&#160;<a class="el" href="classPscf_1_1SpaceSymmetry.html#a0ef0ce8b6dc8d04c5bef9fbd1061799e">Pscf::SpaceSymmetry&lt; D &gt;</a></li>
+<li>normalVecId()&#160;:&#160;<a class="el" href="classPscf_1_1Pspc_1_1FilmIteratorBase.html#ab5293f463420ce53fdffc72be3e2bbe1">Pscf::Pspc::FilmIteratorBase&lt; D, IteratorType &gt;</a></li>
 <li>notEnd()&#160;:&#160;<a class="el" href="classUtil_1_1ArrayIterator.html#a1f024d7a3b2e7bcb4e08ab53abe91ae4">Util::ArrayIterator&lt; Data &gt;</a>, <a class="el" href="classUtil_1_1ConstArrayIterator.html#a55d3b87801763f8e64d96941813a40fe">Util::ConstArrayIterator&lt; Data &gt;</a>, <a class="el" href="classUtil_1_1ConstPArrayIterator.html#a61351a835fbc479860e8b712139a4a5f">Util::ConstPArrayIterator&lt; Data &gt;</a>, <a class="el" href="classUtil_1_1PArrayIterator.html#ad4c0f1d2dea7b08907c0487c9768db08">Util::PArrayIterator&lt; Data &gt;</a></li>
 <li>notify()&#160;:&#160;<a class="el" href="classUtil_1_1Signal.html#ae4c8adf7cb5ed88454aa2a2ca19d330b">Util::Signal&lt; T &gt;</a>, <a class="el" href="classUtil_1_1Signal_3_01void_01_4.html#abcf8e082e4fb3284c36987f8593943a4">Util::Signal&lt; void &gt;</a></li>
 <li>notifyObservers()&#160;:&#160;<a class="el" href="classUtil_1_1Notifier.html#a789c7fe0ee38d5f6d5c675c4ded96c8c">Util::Notifier&lt; Event &gt;</a></li>
@@ -72,7 +72,7 @@ $(function() {
 <li>nPolymer()&#160;:&#160;<a class="el" href="classPscf_1_1MixtureTmpl.html#ae03e54c9c71458aedd91904b0ab98389">Pscf::MixtureTmpl&lt; TP, TS &gt;</a></li>
 <li>nPropagator()&#160;:&#160;<a class="el" href="classPscf_1_1PolymerTmpl.html#a513718536291ac70376a262aef4f6019">Pscf::PolymerTmpl&lt; Block &gt;</a></li>
 <li>NrIterator()&#160;:&#160;<a class="el" href="classPscf_1_1Fd1d_1_1NrIterator.html#a34d9816876a7bbc635578b5a749941f9">Pscf::Fd1d::NrIterator</a></li>
-<li>ns()&#160;:&#160;<a class="el" href="classPscf_1_1Fd1d_1_1Block.html#a6e8219f55d20ee1bc039fbe525e376ae">Pscf::Fd1d::Block</a>, <a class="el" href="classPscf_1_1Pspc_1_1Block.html#af0593cc40f3495fc2bfa88ba5a740db9">Pscf::Pspc::Block&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Pspg_1_1Block.html#aff6e77ef3b310d6a1f271a4f9adad334">Pscf::Pspg::Block&lt; D &gt;</a></li>
+<li>ns()&#160;:&#160;<a class="el" href="classPscf_1_1Fd1d_1_1Block.html#a6e8219f55d20ee1bc039fbe525e376ae">Pscf::Fd1d::Block</a>, <a class="el" href="classPscf_1_1Pspc_1_1Block.html#af0593cc40f3495fc2bfa88ba5a740db9">Pscf::Pspc::Block&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Pspc_1_1Propagator.html#a493aed73728f593d7ae1427e6190a712">Pscf::Pspc::Propagator&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Pspg_1_1Block.html#aff6e77ef3b310d6a1f271a4f9adad334">Pscf::Pspg::Block&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Pspg_1_1Propagator.html#a16235b50a93814adf1c0de45652985e7">Pscf::Pspg::Propagator&lt; D &gt;</a></li>
 <li>nSample()&#160;:&#160;<a class="el" href="classUtil_1_1AutoCorr.html#a53f07a97f60f50032c3d8dc24e271554">Util::AutoCorr&lt; Data, Product &gt;</a>, <a class="el" href="classUtil_1_1AutoCorrArray.html#ab8e8d53f2ede32a39621603dc5784378">Util::AutoCorrArray&lt; Data, Product &gt;</a>, <a class="el" href="classUtil_1_1AutoCorrStage.html#a8e73d3aea9a808379a6f4cdb1bd0a0c3">Util::AutoCorrStage&lt; Data, Product &gt;</a>, <a class="el" href="classUtil_1_1AverageStage.html#ad2c016a2244ef085973a723e37f96dad">Util::AverageStage</a>, <a class="el" href="classUtil_1_1MeanSqDispArray.html#abfa5be64ec9434a3ab1f3360664d7af4">Util::MeanSqDispArray&lt; Data &gt;</a></li>
 <li>nSamplePerBlock()&#160;:&#160;<a class="el" href="classUtil_1_1Average.html#a438f84be90697f8c8e339e96fbd659aa">Util::Average</a>, <a class="el" href="classUtil_1_1SymmTensorAverage.html#afbebd511272d73f2f06dcff4acf302a9">Util::SymmTensorAverage</a>, <a class="el" href="classUtil_1_1TensorAverage.html#a12b0e5bb210e78ac199eade38aaadcc4">Util::TensorAverage</a></li>
 <li>nSnapshot()&#160;:&#160;<a class="el" href="classUtil_1_1RadialDistribution.html#a5e07d559197804b3d67d64df35f81680">Util::RadialDistribution</a></li>
@@ -89,7 +89,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:19 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:43 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

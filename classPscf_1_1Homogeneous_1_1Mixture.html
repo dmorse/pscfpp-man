@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -39,7 +39,7 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacePscf.html">Pscf</a></li><li class="navelem"><b>Homogeneous</b></li><li class="navelem"><a class="el" href="classPscf_1_1Homogeneous_1_1Mixture.html">Mixture</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacePscf.html">Pscf</a></li><li class="navelem"><a class="el" href="namespacePscf_1_1Homogeneous.html">Homogeneous</a></li><li class="navelem"><a class="el" href="classPscf_1_1Homogeneous_1_1Mixture.html">Mixture</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -120,9 +120,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aba5de04c5db452000b044e0331ad5182 inherit pub_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#aba5de04c5db452000b044e0331ad5182">readParamOptional</a> (std::istream &amp;in)</td></tr>
 <tr class="memdesc:aba5de04c5db452000b044e0331ad5182 inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read optional parameter file block.  <a href="classUtil_1_1ParamComposite.html#aba5de04c5db452000b044e0331ad5182">More...</a><br /></td></tr>
 <tr class="separator:aba5de04c5db452000b044e0331ad5182 inherit pub_methods_classUtil_1_1ParamComposite"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addf0c36c3560471bfe47f0be008575b9 inherit pub_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#addf0c36c3560471bfe47f0be008575b9">writeParam</a> (std::ostream &amp;out)</td></tr>
-<tr class="memdesc:addf0c36c3560471bfe47f0be008575b9 inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write all parameters to an output stream.  <a href="classUtil_1_1ParamComposite.html#addf0c36c3560471bfe47f0be008575b9">More...</a><br /></td></tr>
-<tr class="separator:addf0c36c3560471bfe47f0be008575b9 inherit pub_methods_classUtil_1_1ParamComposite"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c288fc3f8cd3f3777c2aa872114cb0c inherit pub_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a5c288fc3f8cd3f3777c2aa872114cb0c">writeParam</a> (std::ostream &amp;out) const</td></tr>
+<tr class="memdesc:a5c288fc3f8cd3f3777c2aa872114cb0c inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write all parameters to an output stream.  <a href="classUtil_1_1ParamComposite.html#a5c288fc3f8cd3f3777c2aa872114cb0c">More...</a><br /></td></tr>
+<tr class="separator:a5c288fc3f8cd3f3777c2aa872114cb0c inherit pub_methods_classUtil_1_1ParamComposite"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02a1172d7cd86d4015be8d9e65fe750f inherit pub_methods_classUtil_1_1ParamComposite"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a02a1172d7cd86d4015be8d9e65fe750f">load</a> (<a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">Serializable::IArchive</a> &amp;ar)</td></tr>
 <tr class="memdesc:a02a1172d7cd86d4015be8d9e65fe750f inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load all parameters from an input archive.  <a href="classUtil_1_1ParamComposite.html#a02a1172d7cd86d4015be8d9e65fe750f">More...</a><br /></td></tr>
 <tr class="separator:a02a1172d7cd86d4015be8d9e65fe750f inherit pub_methods_classUtil_1_1ParamComposite"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -299,9 +299,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5234b604f9e852f53eedd7de7c354a1e inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a5234b604f9e852f53eedd7de7c354a1e">readParam</a> (std::istream &amp;in)=0</td></tr>
 <tr class="memdesc:a5234b604f9e852f53eedd7de7c354a1e inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter(s) from file.  <a href="classUtil_1_1ParamComponent.html#a5234b604f9e852f53eedd7de7c354a1e">More...</a><br /></td></tr>
 <tr class="separator:a5234b604f9e852f53eedd7de7c354a1e inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac17d6ab63f9b0e5f966d6a3cfbc26d86 inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ac17d6ab63f9b0e5f966d6a3cfbc26d86">writeParam</a> (std::ostream &amp;out)=0</td></tr>
-<tr class="memdesc:ac17d6ab63f9b0e5f966d6a3cfbc26d86 inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter(s) to file.  <a href="classUtil_1_1ParamComponent.html#ac17d6ab63f9b0e5f966d6a3cfbc26d86">More...</a><br /></td></tr>
-<tr class="separator:ac17d6ab63f9b0e5f966d6a3cfbc26d86 inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c9b5abc1f5cf4a07b5f8089020a8ce inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#aa0c9b5abc1f5cf4a07b5f8089020a8ce">writeParam</a> (std::ostream &amp;out) const =0</td></tr>
+<tr class="memdesc:aa0c9b5abc1f5cf4a07b5f8089020a8ce inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameter(s) to file.  <a href="classUtil_1_1ParamComponent.html#aa0c9b5abc1f5cf4a07b5f8089020a8ce">More...</a><br /></td></tr>
+<tr class="separator:aa0c9b5abc1f5cf4a07b5f8089020a8ce inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7925e60ccaf7ecf2ea866e689983124d inherit pub_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a7925e60ccaf7ecf2ea866e689983124d">load</a> (<a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">Serializable::IArchive</a> &amp;ar)</td></tr>
 <tr class="memdesc:a7925e60ccaf7ecf2ea866e689983124d inherit pub_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load internal state from an archive.  <a href="classUtil_1_1ParamComponent.html#a7925e60ccaf7ecf2ea866e689983124d">More...</a><br /></td></tr>
 <tr class="separator:a7925e60ccaf7ecf2ea866e689983124d inherit pub_methods_classUtil_1_1ParamComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -562,7 +562,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html#l00319">nMolecule()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00145">Pscf::Fd1d::System::readParameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00168">Pscf::Fd1d::System::readParameters()</a>.</p>
 
 </div>
 </div>
@@ -588,7 +588,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html#l00322">nMonomer()</a>, and <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00145">Pscf::Fd1d::System::readParameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00168">Pscf::Fd1d::System::readParameters()</a>.</p>
 
 </div>
 </div>
@@ -620,7 +620,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="reference">References <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html#l00299">phi()</a>, <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00398">validate()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00139">Pscf::Fd1d::HomogeneousComparison::compute()</a>, and <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00178">computePhi()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00138">Pscf::Fd1d::HomogeneousComparison::compute()</a>, and <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00178">computePhi()</a>.</p>
 
 </div>
 </div>
@@ -662,9 +662,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00149">149</a> of file <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html">pscf/homogeneous/Mixture.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html#l00306">c()</a>, <a class="el" href="Molecule_8h_source.html#l00141">Pscf::Homogeneous::Molecule::clump()</a>, <a class="el" href="classPscf_1_1Interaction.html#aa04ae1ec8eecdcece17b04137c73b9a7">Pscf::Interaction::computeW()</a>, <a class="el" href="Clump_8h_source.html#l00127">Pscf::Homogeneous::Clump::monomerId()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html#l00292">mu()</a>, <a class="el" href="Molecule_8h_source.html#l00126">Pscf::Homogeneous::Molecule::nClump()</a>, <a class="el" href="Interaction_8h_source.html#l00118">Pscf::Interaction::nMonomer()</a>, <a class="el" href="Clump_8h_source.html#l00133">Pscf::Homogeneous::Clump::size()</a>, <a class="el" href="Molecule_8h_source.html#l00132">Pscf::Homogeneous::Molecule::size()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html#l00306">c()</a>, <a class="el" href="Molecule_8h_source.html#l00141">Pscf::Homogeneous::Molecule::clump()</a>, <a class="el" href="Interaction_8cpp_source.html#l00129">Pscf::Interaction::computeW()</a>, <a class="el" href="Clump_8h_source.html#l00127">Pscf::Homogeneous::Clump::monomerId()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html#l00292">mu()</a>, <a class="el" href="Molecule_8h_source.html#l00126">Pscf::Homogeneous::Molecule::nClump()</a>, <a class="el" href="Interaction_8h_source.html#l00181">Pscf::Interaction::nMonomer()</a>, <a class="el" href="Clump_8h_source.html#l00133">Pscf::Homogeneous::Clump::size()</a>, <a class="el" href="Molecule_8h_source.html#l00132">Pscf::Homogeneous::Molecule::size()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00139">Pscf::Fd1d::HomogeneousComparison::compute()</a>, and <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00178">computePhi()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00138">Pscf::Fd1d::HomogeneousComparison::compute()</a>, and <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00178">computePhi()</a>.</p>
 
 </div>
 </div>
@@ -719,9 +719,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00178">178</a> of file <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html">pscf/homogeneous/Mixture.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="DMatrix_8h_source.html#l00170">Util::DMatrix&lt; Data &gt;::allocate()</a>, <a class="el" href="LuSolver_8cpp_source.html#l00046">Pscf::LuSolver::allocate()</a>, <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="Molecule_8h_source.html#l00141">Pscf::Homogeneous::Molecule::clump()</a>, <a class="el" href="classPscf_1_1Interaction.html#a979231dcf58ef659e167ddbb397b0514">Pscf::Interaction::computeDwDc()</a>, <a class="el" href="LuSolver_8cpp_source.html#l00063">Pscf::LuSolver::computeLU()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00149">computeMu()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html#l00285">molecule()</a>, <a class="el" href="Clump_8h_source.html#l00127">Pscf::Homogeneous::Clump::monomerId()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html#l00292">mu()</a>, <a class="el" href="Molecule_8h_source.html#l00126">Pscf::Homogeneous::Molecule::nClump()</a>, <a class="el" href="Interaction_8h_source.html#l00118">Pscf::Interaction::nMonomer()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html#l00299">phi()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00091">setComposition()</a>, <a class="el" href="Clump_8h_source.html#l00133">Pscf::Homogeneous::Clump::size()</a>, <a class="el" href="Molecule_8h_source.html#l00132">Pscf::Homogeneous::Molecule::size()</a>, <a class="el" href="LuSolver_8cpp_source.html#l00083">Pscf::LuSolver::solve()</a>, <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="DMatrix_8h_source.html#l00170">Util::DMatrix&lt; Data &gt;::allocate()</a>, <a class="el" href="LuSolver_8cpp_source.html#l00046">Pscf::LuSolver::allocate()</a>, <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="Molecule_8h_source.html#l00141">Pscf::Homogeneous::Molecule::clump()</a>, <a class="el" href="Interaction_8cpp_source.html#l00190">Pscf::Interaction::computeDwDc()</a>, <a class="el" href="LuSolver_8cpp_source.html#l00063">Pscf::LuSolver::computeLU()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00149">computeMu()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html#l00285">molecule()</a>, <a class="el" href="Clump_8h_source.html#l00127">Pscf::Homogeneous::Clump::monomerId()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html#l00292">mu()</a>, <a class="el" href="Molecule_8h_source.html#l00126">Pscf::Homogeneous::Molecule::nClump()</a>, <a class="el" href="Interaction_8h_source.html#l00181">Pscf::Interaction::nMonomer()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html#l00299">phi()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00091">setComposition()</a>, <a class="el" href="Clump_8h_source.html#l00133">Pscf::Homogeneous::Clump::size()</a>, <a class="el" href="Molecule_8h_source.html#l00132">Pscf::Homogeneous::Molecule::size()</a>, <a class="el" href="LuSolver_8cpp_source.html#l00083">Pscf::LuSolver::solve()</a>, <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00139">Pscf::Fd1d::HomogeneousComparison::compute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00138">Pscf::Fd1d::HomogeneousComparison::compute()</a>.</p>
 
 </div>
 </div>
@@ -756,9 +756,9 @@ computeMu must be called prior. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00372">372</a> of file <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html">pscf/homogeneous/Mixture.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="classPscf_1_1Interaction.html#a3ec2bef30f4763bf5b64e4d12fc65acd">Pscf::Interaction::fHelmholtz()</a>.</p>
+<p class="reference">References <a class="el" href="Interaction_8cpp_source.html#l00113">Pscf::Interaction::fHelmholtz()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00139">Pscf::Fd1d::HomogeneousComparison::compute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00138">Pscf::Fd1d::HomogeneousComparison::compute()</a>.</p>
 
 </div>
 </div>
@@ -878,7 +878,7 @@ computeMu must be called prior. </dd></dl>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00178">computePhi()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00208">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00072">Pscf::Fd1d::CompositionSweep::outputSummary()</a>, <a class="el" href="MuSweep_8cpp_source.html#l00073">Pscf::Fd1d::MuSweep::outputSummary()</a>, and <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00091">setComposition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00178">computePhi()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00207">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00093">Pscf::Fd1d::CompositionSweep::outputSummary()</a>, <a class="el" href="MuSweep_8cpp_source.html#l00075">Pscf::Fd1d::MuSweep::outputSummary()</a>, and <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00091">setComposition()</a>.</p>
 
 </div>
 </div>
@@ -949,7 +949,7 @@ computeMu must be called prior. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html#l00313">313</a> of file <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html">pscf/homogeneous/Mixture.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00208">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00072">Pscf::Fd1d::CompositionSweep::outputSummary()</a>, <a class="el" href="MuSweep_8cpp_source.html#l00073">Pscf::Fd1d::MuSweep::outputSummary()</a>, and <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00225">Pscf::Fd1d::Sweep::outputSummary()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00207">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00093">Pscf::Fd1d::CompositionSweep::outputSummary()</a>, <a class="el" href="MuSweep_8cpp_source.html#l00075">Pscf::Fd1d::MuSweep::outputSummary()</a>, and <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00215">Pscf::Fd1d::Sweep::outputSummary()</a>.</p>
 
 </div>
 </div>
@@ -980,7 +980,7 @@ computeMu must be called prior. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html#l00316">316</a> of file <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html">pscf/homogeneous/Mixture.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00208">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00072">Pscf::Fd1d::CompositionSweep::outputSummary()</a>, <a class="el" href="MuSweep_8cpp_source.html#l00073">Pscf::Fd1d::MuSweep::outputSummary()</a>, and <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00225">Pscf::Fd1d::Sweep::outputSummary()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00207">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="CompositionSweep_8cpp_source.html#l00093">Pscf::Fd1d::CompositionSweep::outputSummary()</a>, <a class="el" href="MuSweep_8cpp_source.html#l00075">Pscf::Fd1d::MuSweep::outputSummary()</a>, and <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00215">Pscf::Fd1d::Sweep::outputSummary()</a>.</p>
 
 </div>
 </div>
@@ -1011,7 +1011,7 @@ computeMu must be called prior. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html#l00319">319</a> of file <a class="el" href="pscf_2homogeneous_2Mixture_8h_source.html">pscf/homogeneous/Mixture.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00208">Pscf::Fd1d::HomogeneousComparison::output()</a>, and <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00071">setNMolecule()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00207">Pscf::Fd1d::HomogeneousComparison::output()</a>, and <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00071">setNMolecule()</a>.</p>
 
 </div>
 </div>
@@ -1079,7 +1079,7 @@ computeMu must be called prior. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

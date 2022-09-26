@@ -18,7 +18,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.8</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v0.9</span>
    </div>
   </td>
  </tr>
@@ -84,6 +84,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a77403ab547316b48cc5a761c8eee93d8"><td class="memItemLeft" align="right" valign="top">TP::CField &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1BlockTmpl.html#a77403ab547316b48cc5a761c8eee93d8">cField</a> ()</td></tr>
 <tr class="memdesc:a77403ab547316b48cc5a761c8eee93d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the associated monomer concentration field.  <a href="classPscf_1_1BlockTmpl.html#a77403ab547316b48cc5a761c8eee93d8">More...</a><br /></td></tr>
 <tr class="separator:a77403ab547316b48cc5a761c8eee93d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdb3a47f69228b051535701bac3ac41f"><td class="memItemLeft" align="right" valign="top">TP::CField const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1BlockTmpl.html#afdb3a47f69228b051535701bac3ac41f">cField</a> () const</td></tr>
+<tr class="memdesc:afdb3a47f69228b051535701bac3ac41f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the associated const monomer concentration field.  <a href="classPscf_1_1BlockTmpl.html#afdb3a47f69228b051535701bac3ac41f">More...</a><br /></td></tr>
+<tr class="separator:afdb3a47f69228b051535701bac3ac41f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a150e0213180f94ccfc6525a92bfdaacb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1BlockTmpl.html#a150e0213180f94ccfc6525a92bfdaacb">kuhn</a> () const</td></tr>
 <tr class="memdesc:a150e0213180f94ccfc6525a92bfdaacb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get monomer statistical segment length.  <a href="classPscf_1_1BlockTmpl.html#a150e0213180f94ccfc6525a92bfdaacb">More...</a><br /></td></tr>
 <tr class="separator:a150e0213180f94ccfc6525a92bfdaacb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,7 +148,7 @@ class Pscf::BlockTmpl&lt; TP &gt;</div><p >Class template for a block in a block
 <div class="line">{</div>
 <div class="line">  ....</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassPscf_1_1BlockTmpl_html_a3853efb61d318e2c6319d0d29554aced"><div class="ttname"><a href="classPscf_1_1BlockTmpl.html#a3853efb61d318e2c6319d0d29554aced">Pscf::BlockTmpl::BlockTmpl</a></div><div class="ttdeci">BlockTmpl()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="BlockTmpl_8h_source.html#l00201">BlockTmpl.h:201</a></div></div>
+<div class="ttc" id="aclassPscf_1_1BlockTmpl_html_a3853efb61d318e2c6319d0d29554aced"><div class="ttname"><a href="classPscf_1_1BlockTmpl.html#a3853efb61d318e2c6319d0d29554aced">Pscf::BlockTmpl::BlockTmpl</a></div><div class="ttdeci">BlockTmpl()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="BlockTmpl_8h_source.html#l00214">BlockTmpl.h:214</a></div></div>
 </div><!-- fragment --><p> The algorithms for taking one step of integration of the modified diffusion equation and for computing the monomer concentration field arising from monomers in one block must be implemented in the Block class. These algorithms must be implemented in member functions of the concrete Block class with the following interfaces: </p><div class="fragment"><div class="line"><span class="comment">// ---------------------------------------------------------------</span></div>
 <div class="line"><span class="comment">// Take one step of integration of the modified diffusion equation.</span></div>
 <div class="line"><span class="comment">// ---------------------------------------------------------------</span></div>
@@ -178,9 +181,9 @@ template&lt;class TP &gt; </div>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00201">201</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00214">214</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="BlockTmpl_8h_source.html#l00169">Pscf::BlockTmpl&lt; TP &gt;::propagator()</a>.</p>
+<p class="reference">References <a class="el" href="BlockTmpl_8h_source.html#l00174">Pscf::BlockTmpl&lt; TP &gt;::propagator()</a>.</p>
 
 </div>
 </div>
@@ -208,7 +211,7 @@ template&lt;class TP &gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00216">216</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00229">229</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
 
 </div>
 </div>
@@ -249,7 +252,7 @@ template&lt;class TP &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classPscf_1_1Pspc_1_1Block.html#ad5f11024be627e1dd2157cdf0b6df48b">Pscf::Pspc::Block&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Pspg_1_1Block.html#a14cf10905e5ee1c0c5738827686b33a0">Pscf::Pspg::Block&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00223">223</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00236">236</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
 
 </div>
 </div>
@@ -288,9 +291,9 @@ template&lt;class TP &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00169">169</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00174">174</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BlockTmpl_8h_source.html#l00201">Pscf::BlockTmpl&lt; TP &gt;::BlockTmpl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BlockTmpl_8h_source.html#l00214">Pscf::BlockTmpl&lt; TP &gt;::BlockTmpl()</a>.</p>
 
 </div>
 </div>
@@ -329,12 +332,12 @@ template&lt;class TP &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00177">177</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00182">182</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
 
 </div>
 </div>
 <a id="a77403ab547316b48cc5a761c8eee93d8" name="a77403ab547316b48cc5a761c8eee93d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77403ab547316b48cc5a761c8eee93d8">&#9670;&nbsp;</a></span>cField()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a77403ab547316b48cc5a761c8eee93d8">&#9670;&nbsp;</a></span>cField() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -357,7 +360,35 @@ template&lt;class TP &gt; </div>
 
 <p>Get the associated monomer concentration field. </p>
 
-<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00185">185</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00190">190</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
+
+</div>
+</div>
+<a id="afdb3a47f69228b051535701bac3ac41f" name="afdb3a47f69228b051535701bac3ac41f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdb3a47f69228b051535701bac3ac41f">&#9670;&nbsp;</a></span>cField() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TP &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TP::CField const  &amp; <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; TP &gt;::cField</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the associated const monomer concentration field. </p>
+
+<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00198">198</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
 
 </div>
 </div>
@@ -385,7 +416,7 @@ template&lt;class TP &gt; </div>
 
 <p>Get monomer statistical segment length. </p>
 
-<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00192">192</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00205">205</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
 
 </div>
 </div>
@@ -395,7 +426,7 @@ template&lt;class TP &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 31 2022 13:32:18 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Mon Sep 26 2022 14:10:42 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>
