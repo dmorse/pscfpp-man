@@ -213,71 +213,47 @@ Dependency Files (*.d Files)</h1>
 </div><!-- fragment --><p> This command attempts to include a *.d dependency file for each *.o object file in the object file list. The dash in front of "include" instructs "make" to continue quietly if no dependency file is found for any object file target.</p>
 <h1><a class="anchor" id="make_makefile"></a>
 Example: A Namespace Directory makefile</h1>
-<p >As an example of how the system works, here are the essential parts of the namespace level makefile from the directory bld/serial/inter. The actual makefile also includes "clean" and "veryclean" targets" that have been excluded for clarity. Corresponding makefiles in bld/parallel/inter and src/inter are identical:
-@code 
-
-BLD_DIR_REL =..
-include $(BLD_DIR_REL)/config.mk
-include $(BLD_DIR)/util/config.mk
-include $(BLD_DIR)/inter/config.mk
-include $(SRC_DIR)/inter/patterns.mk
-include $(SRC_DIR)/inter/sources.mk
-
-all: $(inter_OBJS) $(inter_LIB)
-
--include $(inter_OBJS:.o=.d)
-
-\endcode
-This simplified makefile contains three blocks:
-
-(1) The block of include statements at the top of this file include all of the relevant build configuration files, the appropriate patterns.mk file, and the appropriate source file lists. The main config.mk file must be included using a relative path BLD_DIR_REL_=.. to the parent build directory. The main config.mk file defines variables BLD_DIR and SRC_DIR that contain absolute paths to the object and source directories, which can be used in the remainder of this makefile, and in makefile fragments that it includes. Next, the makefile includes the namespace level config.mk files for this namespace and any namespaces that it depends on. In this example, it thus includes the inter/config.mk and util/config.mk files from the build directory, because the Pscf::Pspc namespace depends upon the Util namespace. Finally, the makefile includes the patterns.mk file and sources.mk file list from the associated namespace level source directory src/inter.
-
-(2) The "all" target builds all of the object files in the Pscf::Pscf namespace, which are listed in the variable inter_OBJS, and builds the associated library, whose name given by the variable inter_LIB.  The file inter/sources.mk defines both the object file list inter_OBJS and a target rule for building the library inter_LIB. The library name inter_LIB is defined in the namespace level configuration file inter/config.mk.
-
-(3) The last line of the above makefile fragment instructs make to include all of the dependency files for all of the source files in this namespace. The syntax $(inter_OBJS:.o=.d) creates a list of vfiles in which the .o extension of each object file is replaced by a .d extension. The dash in front of the -include command tells make to continue quietly if any dependency file does not exist.
-
-The first time "make all" is invoked in this directory, neither the object file nor the associated dependency files exist. In this case, since each object target file is absent, make knows that it must be built, and uses the pattern rule defined in inter/patterns.mk to create each object file listed in inter_OBJS.  If "make all" is a called again from the same directory, however, make can use the information in the dependency files to determine which object files needs to be rebuilt as a result in changes in C++ or configuration files.
-
-The target rule for library inter_LIB lists all of the object files in inter_OBJS as dependencies. The library will thus be built only after the object files are all built, and will automatically be rebuilt if any object file in the Pscf::Pspc namespace is rebuilt.
-
-@section make_makefile_executable Namespace Directory makefiles with Executable Targets
-
-The makefile for the inter/ namespace level directory, which we used above as an example, does not build any executable files. Corresponding makefiles for the mcMd/, ddMd/, and tools/ subdirectories of each build directory, however, also contain targets that that build executables. Each executable is built by linking an object file that is created by compiling a main program file to several namespace-level static libraries. For example, the mcSim and mdSim executables are created by compiling the main program source files src/mcMd/mcSim.cpp and src/mcMd/mdSim.cpp and then linking the resulting object files to static libraries from the mcMd/, inter/ and util/ build directories. The target rules for the final executables list the required static libraries as dependencies.
-
-The fact that executable targets depend on libraries that are defined in other namespaces requires the following further changes to the structure of makefiles that contain executable targets:
-
- - Each makefile with executable targets must include the sources.mk source file list from every namespace that contributes objects to the target executables.
-
- - Each such makefile must include all *.d dependency files from every namespace that contributes objects to the target executables.
-
-Thus, for example, the mcMd/makefile in each build directory must include the sources.mk files from the inter/ and util/ subdirectories of the src/ directory, and must include all dependency files from corresponding subdirectories of BLD_DIR, in addition to files from the mcMd/ subdirectory. Inclusion of these additional files from other namespace level directories allows make to decide when any required library needs to be rebuilt, and provides instructions how to rebuild any required source file or library if necessary.
-
-@section make_subdirectory Subdirectory Makefiles
-
-As a convenience for developers, every subdirectory src/ at the namespace level and below contains a makefile. The "all" target of each such src/ subdirectory makefile executes an in-source build of the files in that subdirectory and any descendant subdirectories. The structure of the makefiles in subdirectories of the namespace level directories is very similar to that of the namespace level makefiles, except for the absence of targets to build a library or executables.
-
-During development, the most convenient way to test whether a source file that you have just modified compiles correctly is usually to just enter
-@code 
-  &gt; make all
-\endcode
-from the directory that contains the new or newly modified source file. If automatic dependency generation is enabled, and if you only modify one class at a time, this will normally cause the build system to compile only the source file that you have just modified. If a directory contains more than one incomplete or broken file, you should temporarily comment out all but one of these files (the one you are working on) in the definition of the [directory]_ variable in the corresponding sources.mk file, and then uncomment each such file when you are ready to work on it.
-
-The file name conventions used in the PSCF build system make it awkward for a user to explictly request compilation of a specific source file. The build system uses absolute paths for all source and object files. The "make" program is not smart enough to recognize when an absolute and relative path are equivalent.  As a result, the only way explicitly request compilation of a specific source file is to use the absolute path to the object file as a makefile target. For example, if the absolute path to the root PSCF directory within a user account named "george" was "/home/george/pscfpp/", you (or George) could compile the source file src/mcMd/simulation/Simulation.cpp in-source by entering
-@code 
-  make /home/george/pscfpp/src/mcMd/simulation/Simulation.o
-\endcode
-or
-@code 
-  make ~/pscfpp/src/mcMd/simulation/Simulation.o
-\endcode
-from either the src/mcMd/simulation or src/mcMd/ directory. Most programmers, however, are unwilling to repeatedly type absolute paths. This is why we recommend getting in the habit of simply using "make all" from the directory that contains the file of interest, and working on only one file at a time.</p>
+<p >As an example of how the system works, here are the essential parts of the namespace level makefile from the directory bld/serial/inter. The actual makefile also includes "clean" and "veryclean" targets that have been excluded for clarity. Corresponding makefiles in bld/parallel/inter and src/inter are identical:</p>
+<div class="fragment"><div class="line">BLD_DIR_REL =..</div>
+<div class="line">include $(BLD_DIR_REL)/config.mk</div>
+<div class="line">include $(BLD_DIR)/util/config.mk</div>
+<div class="line">include $(BLD_DIR)/inter/config.mk</div>
+<div class="line">include $(SRC_DIR)/inter/patterns.mk</div>
+<div class="line">include $(SRC_DIR)/inter/sources.mk</div>
+<div class="line"> </div>
+<div class="line">all: $(inter_OBJS) $(inter_LIB)</div>
+<div class="line"> </div>
+<div class="line">-include $(inter_OBJS:.o=.d)</div>
+</div><!-- fragment --><p> This simplified makefile contains three blocks:</p>
+<p >(1) The block of include statements at the top of this file include all of the relevant build configuration files, the appropriate patterns.mk file, and the appropriate source file lists. The main config.mk file must be included using a relative path BLD_DIR_REL_=.. to the parent build directory. The main config.mk file defines variables BLD_DIR and SRC_DIR that contain absolute paths to the object and source directories, which can be used in the remainder of this makefile, and in makefile fragments that it includes. Next, the makefile includes the namespace level config.mk files for this namespace and any namespaces that it depends on. In this example, it thus includes the inter/config.mk and util/config.mk files from the build directory, because the <a class="el" href="namespacePscf_1_1Pspc.html" title="Pseudo-spectral SCFT for periodic boundary conditions.">Pscf::Pspc</a> namespace depends upon the <a class="el" href="namespaceUtil.html" title="Utility classes for scientific computation.">Util</a> namespace. Finally, the makefile includes the patterns.mk file and sources.mk file list from the associated namespace level source directory src/inter.</p>
+<p >(2) The "all" target builds all of the object files in the Pscf::Pscf namespace, which are listed in the variable inter_OBJS, and builds the associated library, whose name given by the variable inter_LIB. The file inter/sources.mk defines both the object file list inter_OBJS and a target rule for building the library inter_LIB. The library name inter_LIB is defined in the namespace level configuration file inter/config.mk.</p>
+<p >(3) The last line of the above makefile fragment instructs make to include all of the dependency files for all of the source files in this namespace. The syntax $(inter_OBJS:.o=.d) creates a list of vfiles in which the .o extension of each object file is replaced by a .d extension. The dash in front of the -include command tells make to continue quietly if any dependency file does not exist.</p>
+<p >The first time "make all" is invoked in this directory, neither the object file nor the associated dependency files exist. In this case, since each object target file is absent, make knows that it must be built, and uses the pattern rule defined in inter/patterns.mk to create each object file listed in inter_OBJS. If "make all" is a called again from the same directory, however, make can use the information in the dependency files to determine which object files needs to be rebuilt as a result in changes in C++ or configuration files.</p>
+<p >The target rule for library inter_LIB lists all of the object files in inter_OBJS as dependencies. The library will thus be built only after the object files are all built, and will automatically be rebuilt if any object file in the <a class="el" href="namespacePscf_1_1Pspc.html" title="Pseudo-spectral SCFT for periodic boundary conditions.">Pscf::Pspc</a> namespace is rebuilt.</p>
+<h1><a class="anchor" id="make_makefile_executable"></a>
+Namespace Directory makefiles with Executable Targets</h1>
+<p >The makefile for the inter/ namespace level directory, which we used above as an example, does not build any executable files. Corresponding makefiles for the mcMd/, ddMd/, and tools/ subdirectories of each build directory, however, also contain targets that that build executables. Each executable is built by linking an object file that is created by compiling a main program file to several namespace-level static libraries. For example, the mcSim and mdSim executables are created by compiling the main program source files src/mcMd/mcSim.cpp and src/mcMd/mdSim.cpp and then linking the resulting object files to static libraries from the mcMd/, inter/ and util/ build directories. The target rules for the final executables list the required static libraries as dependencies.</p>
+<p >The fact that executable targets depend on libraries that are defined in other namespaces requires the following further changes to the structure of makefiles that contain executable targets:</p>
+<ul>
+<li>Each makefile with executable targets must include the sources.mk source file list from every namespace that contributes objects to the target executables.</li>
+<li>Each such makefile must include all *.d dependency files from every namespace that contributes objects to the target executables.</li>
+</ul>
+<p >Thus, for example, the mcMd/makefile in each build directory must include the sources.mk files from the inter/ and util/ subdirectories of the src/ directory, and must include all dependency files from corresponding subdirectories of BLD_DIR, in addition to files from the mcMd/ subdirectory. Inclusion of these additional files from other namespace level directories allows make to decide when any required library needs to be rebuilt, and provides instructions how to rebuild any required source file or library if necessary.</p>
+<h1><a class="anchor" id="make_subdirectory"></a>
+Subdirectory Makefiles</h1>
+<p >As a convenience for developers, every subdirectory src/ at the namespace level and below contains a makefile. The "all" target of each such src/ subdirectory makefile executes an in-source build of the files in that subdirectory and any descendant subdirectories. The structure of the makefiles in subdirectories of the namespace level directories is very similar to that of the namespace level makefiles, except for the absence of targets to build a library or executables.</p>
+<p >During development, the most convenient way to test whether a source file that you have just modified compiles correctly is usually to just enter </p><div class="fragment"><div class="line">&gt; make all</div>
+</div><!-- fragment --><p> from the directory that contains the new or newly modified source file. If automatic dependency generation is enabled, and if you only modify one class at a time, this will normally cause the build system to compile only the source file that you have just modified. If a directory contains more than one incomplete or broken file, you should temporarily comment out all but one of these files (the one you are working on) in the definition of the [directory]_ variable in the corresponding sources.mk file, and then uncomment each such file when you are ready to work on it.</p>
+<p >The file name conventions used in the PSCF build system make it awkward for a user to explictly request compilation of a specific source file. The build system uses absolute paths for all source and object files. The "make" program is not smart enough to recognize when an absolute and relative path are equivalent. As a result, the only way explicitly request compilation of a specific source file is to use the absolute path to the object file as a makefile target. For example, if the absolute path to the root PSCF directory within a user account named "george" was "/home/george/pscfpp/", you (or George) could compile the source file src/mcMd/simulation/Simulation.cpp in-source by entering </p><div class="fragment"><div class="line">make /home/george/pscfpp/src/mcMd/simulation/Simulation.o</div>
+</div><!-- fragment --><p> or </p><div class="fragment"><div class="line">make ~/pscfpp/src/mcMd/simulation/Simulation.o</div>
+</div><!-- fragment --><p> from either the src/mcMd/simulation or src/mcMd/ directory. Most programmers, however, are unwilling to repeatedly type absolute paths. This is why we recommend getting in the habit of simply using "make all" from the directory that contains the file of interest, and working on only one file at a time.</p>
 <p ><br  />
  <a class="el" href="developer_source_page.html">Directory Structure</a> (Prev) <a class="el" href="developer_page.html">Developer Information</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="developer_standards_page.html">Coding Standards</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2023 20:55:59 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Sat Mar 4 2023 17:08:24 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

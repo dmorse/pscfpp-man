@@ -99,7 +99,7 @@ $(function() {
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      interaction_.<a class="code hl_function" href="classPscf_1_1AmbdInteraction.html#ab34dc09aca7ba301a9388791bc00e7ec">setNMonomer</a>(system().mixture().nMonomer());</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      <span class="comment">// Default parameter values</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      isFlexible_ = 0; </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      isFlexible_ = 1; </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      scaleStress_ = 10.0;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keywordtype">int</span> np = system().unitCell().nParameter();</div>
@@ -107,7 +107,7 @@ $(function() {
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(np &lt;= 6);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(system().unitCell().lattice() != <a class="code hl_class" href="classPscf_1_1UnitCell.html">UnitCell&lt;D&gt;::Null</a>);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <span class="comment">// Read optional isFlexible boolean</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <span class="comment">// Read optional isFlexible boolean (true by default)</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      readOptional(in, <span class="stringliteral">&quot;isFlexible&quot;</span>, isFlexible_);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <span class="comment">// Populate flexibleParams_ based on isFlexible_ (all 0s or all 1s),</span></div>
@@ -495,7 +495,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2023 20:55:58 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Sat Mar 4 2023 17:08:24 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

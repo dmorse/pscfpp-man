@@ -56,8 +56,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p ><a class="el" href="user_field_fd1d_page.html">Field File - 1D Fields (pscf_fd)</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_command_page.html">Command Files</a> (Next) <br  />
 </p>
-<p >The pscf_pcN and pscf_pgN programs are both designed to treat periodic structures, and use the same set of several field file formats. <br  />
-</p>
+<p >The pscf_pcN and pscf_pgN programs are both designed to treat periodic structures, and use the same set of several field file formats.</p>
 <h1><a class="anchor" id="user_field_periodic_formats_sec"></a>
 File Formats</h1>
 <p >The pscf_pc and pscf_pg programs can all read and write fields using following three field file formats:</p>
@@ -89,7 +88,7 @@ Example</h2>
 <div class="line">           I_ a_-3_d</div>
 <div class="line">N_monomer</div>
 <div class="line">                   2</div>
-<div class="line">mesh </div>
+<div class="line">mesh</div>
 <div class="line">                  32    32    32</div>
 </div><!-- fragment --><h2><a class="anchor" id="user_field_periodic_header_description_sub"></a>
 Description</h2>
@@ -101,8 +100,7 @@ Description</h2>
 <p ><b> cell_param </b>: The value of cell_param is a list of N_cell_param real numbers required to describe the unit cell, separated by spaces. These parameters generally specify lengths of Bravais basis vectors or unit cell edges and (when required) angles between those vectors. The number, order, and the meaning of those parameters depends upon the value of the crystal_system identifier, as discussed <a class="el" href="user_unitcell_page.html">here</a>.</p>
 <p ><b> group_name </b>: The parameter group_name is a string identifier for a crystallographic space group. Allowed values of this identifier string for each combination of values for dim and crystal_system are listed <a class="el" href="user_groups_page.html">here</a>.</p>
 <p ><b> N_monomer </b>: The parameter N_monomer is a positive integers that gives the number of distinct monomer types for which fields are reported.</p>
-<p ><b> N_basis </b>: The parameter N_basis is a positive integer that gives the number of basis functions used in a Fourier-adapted Fourier series representation of the fields. A label "N_star" will also be accepted as a synonym for "N_basis", to preserve backwards compatability with the label used by the older PSCF fortran program. <br  />
- This parameter only appears in the basis file format.</p>
+<p ><b> N_basis </b>: The parameter N_basis is a positive integer that gives the number of basis functions used in a Fourier-adapted Fourier series representation of the fields. A label "N_star" will also be accepted as a synonym for "N_basis", to preserve backwards compatability with the label used by the older PSCF fortran program. This parameter only appears in the basis file format.</p>
 <p ><b> mesh </b>: The mesh parameter is a list of dim positive integers that give the mesh dimensions used for numerical calculations, i.e., the number of grid points in each direction in the mesh that covers a single unit cell. A label "ngrid" will also be accepted as a synonym for "mesh", to allow backwards compatibility with the label used by the PSCF Fortran program. This list of values appears as the last parameter of the header for r-grid and k-grid file formats, but does not appear in the basis format.</p>
 <p >All of these parameters except mesh and N_basis are required elements of the header in all three file formats.</p>
 <h1><a class="anchor" id="user_field_periodic_contents_sub"></a>
@@ -122,7 +120,7 @@ Contents</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2023 20:55:59 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Sat Mar 4 2023 17:08:24 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

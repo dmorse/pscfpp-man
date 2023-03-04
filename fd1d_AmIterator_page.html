@@ -61,43 +61,43 @@ Parameter File</h1>
 <div class="line">  epsilon       1e-8</div>
 <div class="line">  maxItr        100</div>
 <div class="line">  maxHist       50</div>
-<div class="line">  verbose*      int (0-2, 0 by <span class="keywordflow">default</span>)</div>
-<div class="line">  errorType     relNormResid</div>
+<div class="line">  verbose       int (0-2, 0 by <span class="keywordflow">default</span>)</div>
+<div class="line">  errorType     relNorm</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> The format of this block is described more formally below: </p><div class="fragment"><div class="line"> AmIterator{</div>
 <div class="line">   epsilon       real </div>
-<div class="line">   maxItr        <span class="keywordtype">int</span></div>
-<div class="line">   maxHist       <span class="keywordtype">int</span>  </div>
+<div class="line">   maxItr*       int (200 by <span class="keywordflow">default</span>)</div>
+<div class="line">   maxHist*      int (50 by <span class="keywordflow">default</span>)</div>
 <div class="line">   verbose*      int (0-2, 0 by <span class="keywordflow">default</span>)</div>
 <div class="line">   outputTime*   bool (<span class="keyword">false</span> by <span class="keywordflow">default</span>)</div>
-<div class="line">   errorType*    enumeration (<span class="stringliteral">&quot;normResid&quot;</span>, <span class="stringliteral">&quot;maxResid&quot;</span>, or <span class="stringliteral">&quot;relNormResid&quot;</span>)</div>
-<div class="line">                    <span class="stringliteral">&quot;relNormResid&quot;</span> by <span class="keywordflow">default</span>)</div>
+<div class="line">   errorType*    string (<span class="stringliteral">&quot;norm&quot;</span>, <span class="stringliteral">&quot;rms&quot;</span>, <span class="stringliteral">&quot;max&quot;</span>, or <span class="stringliteral">&quot;relNorm&quot;</span>.</div>
+<div class="line">                    <span class="stringliteral">&quot;relNorm&quot;</span> by <span class="keywordflow">default</span>)</div>
 <div class="line">  </div>
 <div class="line">}</div>
 </div><!-- fragment --><p> Here, as elsewhere, labels followed by an asterisk (*) represent optional parameters. The meaning of the various parameters are described below: </p><table class="doxtable">
 <tr>
 <td><b> Label </b>  </td><td><b> Description </b>   </td></tr>
 <tr>
-<td>epsilon  </td><td>Desired tolerance for convergence - iteration stops if the magnitude of the error drops below epsilon.   </td></tr>
+<td>epsilon  </td><td>Desired tolerance for convergence - iteration stops if the magnitude of the error drops below epsilon   </td></tr>
 <tr>
-<td>maxItr  </td><td>Maximum number of iterations that will be attempted   </td></tr>
+<td>maxItr*  </td><td>Maximum number of iterations that will be attempted (200 by default)   </td></tr>
 <tr>
-<td>maxHist  </td><td>Maximum number of previous trial solultions that will be retained in memory for use by the AM algorithm.   </td></tr>
+<td>maxHist*  </td><td>Maximum number of previous trial solultions that will be retained in memory for use by the AM algorithm (50 by default)   </td></tr>
 <tr>
 <td>verbose*  </td><td>Optional integer with allowed values 0-2 for the level of verbosity of output to log file during iteration. <br  />
  Set to 0 (concise) by default.   </td></tr>
 <tr>
 <td>showTime*  </td><td>Optional boolean (0 or 1). Set true (1) to output a report of components of wall clock time during iteration, or (0) to skip. Set false (0) by default.   </td></tr>
 <tr>
-<td>errorType*  </td><td>Identifer for the type of scalar error compared to epsilon to test convergence. Allowed values are "maxResid", "normResid", "rmsResid" and "relNormResid", as discussed below. Optional, and equal to "relNormResid" by default.   </td></tr>
+<td>errorType*  </td><td>Identifer for the type of scalar error compared to epsilon to test convergence. Allowed values are "norm", "rms", "max" and "relNorm", as discussed below. Optional, and set to "relNorm" by default.   </td></tr>
 </table>
 <p>The iterative loop exits if the number of iterations has reached maxItr or if the magnitude of the scalar error is less than epsilon.</p>
 <p ><b> errorType </b>: Several different definitions may be used for the scalar error, depending on the value of the identifier errorType.</p>
 <ul>
-<li>If errorType == maxResid, then the scalar error is take to be the maximum of the absolute magnitude of the elements of the residual vector (the L infinity norm of the residual vector).</li>
-<li>If errorType == normResid, then the scalar error is take to be the L2 norm of the residual vector (i.e., the sum of the squares of all residual elements).</li>
-<li>If errorType == rmsResid, then the scalar error is the root mean squared magnitude per element. This is equal to the L2 norm over the square root of the number of elements.</li>
-<li>If errorType == normResid, then the scalar error is take to be the ratio of the L2 norm of the residual vector to the L2 norm of the w field, as in Stasiak and Matsen, Eur. Phys, Journel E, 2012.</li>
+<li>If errorType == norm, then the scalar error is take to be the L2 norm of the residual vector defined below (i.e., the sum of the squares of all residual elements).</li>
+<li>If errorType == rms, then the scalar error is the root mean squared magnitude per element. This is equal to the L2 norm over the square root of the number of elements.</li>
+<li>If errorType == max, then the scalar error is take to be the maximum of the absolute magnitude of the elements of the residual vector (the L infinity norm of the residual vector).</li>
+<li>If errorType == norm, then the scalar error is take to be the ratio of the L2 norm of the residual vector to the L2 norm of the w field, as in Stasiak and Matsen, Eur. Phys, Journel E, 2012.</li>
 </ul>
 <h1><a class="anchor" id="fd1d_AmIterator_residual_sec"></a>
 Residual Definition</h1>
@@ -125,7 +125,7 @@ Closed Systems (Canonical Ensemble)</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2023 20:55:59 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Sat Mar 4 2023 17:08:24 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

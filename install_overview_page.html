@@ -56,8 +56,8 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p ><a class="el" href="install_source_page.html">Source Code</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="install_environment_page.html">Environment Variables</a> (Next) <br  />
 </p>
-<p >Below is a brief overview of instructions for compiling all of the PSCF programs using default settings. The directions given here and in subsequent pages assume that you have already cloned the pscfpp repository and installed all required dependencies, and that the root directory of the repository is named pscfpp/.</p>
-<p >Instructions:</p>
+<p >Below is a brief overview of instructions for compiling all of the PSCF programs using default settings. The directions given here and in subsequent pages assume that you have already cloned the pscfpp repository and installed all required dependencies. The descriptions assume that the root directory of the repository is named pscfpp/. You are free to rename the root directory before running or rerunning the setup script.</p>
+<h2>Instructions </h2>
 <ul>
 <li><b>Set environment variables:</b> Modify the users PATH and PYTHONPATH unix environment variables, as discussed <a class="el" href="install_environment_page.html">here</a>.</li>
 <li><b>Navigate to root directory:</b> Change directory (cd) to the pscfpp/ root directory.</li>
@@ -71,15 +71,15 @@ $(function() {
 </ul>
 <p >The "make all-cpu" and "make pspg" commands will each also create a large number of intermediate object (*.o), dependency (*.d) and library (*.a) files in subdirectories of the pscfpp/bld directory (which is the default build directory).</p>
 <p >Each of the above steps is discussed in more detail in the following pages.</p>
-<p >The above instructions will perform an "out-of-source" build in which intermediate files created during compilation process are left in the pscfpp/bld directory tree. It is also possible to perform an "in-source" in which these files are created in the pscfpp/src directory that also contains all C++ and CUDA source code files. The option of in-source compilation is discussed in more detail <a class="el" href="install_inout_page.html">here</a>. <br  />
- We recommend the use of out-of-source compilation for package users who are not actively working on development. Some developers find in-source compilation convenient during development.</p>
+<h2>Out-of-source vs. In-Source Compilation </h2>
+<p >The above instructions will perform an "out-of-source" build in which intermediate files created during compilation process are left in the pscfpp/bld directory tree. It is also possible to perform an "in-source" build in which these files are created in the pscfpp/src directory that also contains all C++ and CUDA source code files. The option of in-source compilation is discussed in more detail <a class="el" href="install_inout_page.html">here</a>. We recommend the use of out-of-source compilation for package users who are not actively working on development. Developers may find in-source compilation more convenient during development.</p>
 <p ><br  />
  <a class="el" href="install_source_page.html">Source Code</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="install_page.html">Installation</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="install_environment_page.html">Environment Variables</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2023 20:55:58 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Sat Mar 4 2023 17:08:24 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

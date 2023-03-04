@@ -57,9 +57,9 @@ $(function() {
 <div class="textblock"><p >An AmIteratorFilm is an iterator that uses an Anderson Mixing (AM) algorithm to solve the SCFT equations for a thin film. For more information, see the detailed summary at <a class="el" href="user_thin_films_page.html">Thin Films</a> .</p>
 <p >The parameter file format for an AmIteratorFilm object is: </p><div class="fragment"><div class="line">AmIteratorFilm{</div>
 <div class="line">   epsilon             <span class="keywordtype">float</span></div>
-<div class="line">   maxItr              <span class="keywordtype">int</span></div>
-<div class="line">   maxHist             <span class="keywordtype">int</span>  </div>
-<div class="line">   errorType*          enumeration (<span class="stringliteral">&quot;normResid&quot;</span>, <span class="stringliteral">&quot;maxResid&quot;</span>, or <span class="stringliteral">&quot;relNormResid&quot;</span>, <span class="stringliteral">&quot;relNormResid&quot;</span> by <span class="keywordflow">default</span>)</div>
+<div class="line">   maxItr*             int (200 by <span class="keywordflow">default</span>)</div>
+<div class="line">   maxHist*            int (50 by <span class="keywordflow">default</span>) </div>
+<div class="line">   errorType*          string (<span class="stringliteral">&quot;norm&quot;</span>, <span class="stringliteral">&quot;rms&quot;</span>, <span class="stringliteral">&quot;max&quot;</span>, or <span class="stringliteral">&quot;relNorm&quot;</span>, <span class="stringliteral">&quot;relNorm&quot;</span> by <span class="keywordflow">default</span>)</div>
 <div class="line">   isFlexible*         bool (0 or 1, 0 by <span class="keywordflow">default</span>)   </div>
 <div class="line">   flexibleParams*     Array [ bool ] (nParameters elements, each element 0 or 1)</div>
 <div class="line">   scaleStress*        <span class="keywordtype">float</span> (10.0 by <span class="keywordflow">default</span>)</div>
@@ -73,11 +73,11 @@ $(function() {
 </div><!-- fragment --><p> Here, as elsewhere, labels followed by an asterisk (*) represent optional elements.</p>
 <p >Parameters and subblocks are described below: </p><table class="doxtable">
 <tr>
-<td>maxItr  </td><td>Maximum number of iterations that will be attempted   </td></tr>
-<tr>
 <td>epsilon  </td><td>Error tolerance. Iteration stops if the scalar error drops below this value.   </td></tr>
 <tr>
-<td>maxHist  </td><td>The number of histories (previous state space points) to use to construct a new trial state during each iteration.   </td></tr>
+<td>maxItr*  </td><td>Maximum number of iterations that will be attempted (200 by default)   </td></tr>
+<tr>
+<td>maxHist*  </td><td>The number of histories (previous state space points) to use to construct a new trial state during each iteration (50 by default)   </td></tr>
 <tr>
 <td>errorType*  </td><td>Error type to use to define the scalar error that is compared to epsilon to test for convergence. If "maxResid", use the maximum component of the residual vector. If "normResid", use the L2 norm of the residual vector. If "relNormResid", use the L2 norm of the vector of residuals divided by the L2 norm of the vector of omega field elements, as in Stasiak and Matsen, EPJE, 2011.   </td></tr>
 <tr>
@@ -103,7 +103,7 @@ $(function() {
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2023 20:55:59 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Sat Mar 4 2023 17:08:24 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

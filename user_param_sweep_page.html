@@ -140,7 +140,7 @@ SWEEP Command</h1>
 <h1><a class="anchor" id="user_param_sweep_linear_sec"></a>
 Class LinearSweep</h1>
 <p >The default implementation of sweep for all PSCF programs is a general linear sweep algorithm. This algorithm may be selected by using the label "Sweep" preceding a curly bracket in the first line of a sweep block, as done in the above example. A version of this algorithm is implemented for each PSCF program by a class named LinearSweep. This algorithm can be selected by including a Sweep block with the appropriate format that starts either with a line containing the generic name Sweep (to select the default algorithm) or LinearSweep (to explicitly select the implementation provided by this class).</p>
-<p ><em> Technical note: Source code files that are specific to different PSCF programs are defined in different C++ implementation level namespaces (i.e., in <a class="el" href="namespacePscf_1_1Fd1d.html" title="Finite-different one-dimensional SCFT.">Pscf::Fd1d</a>, <a class="el" href="namespacePscf_1_1Pspc.html" title="Pseudo-spectral SCFT for periodic boundary conditions.">Pscf::Pspc</a> and <a class="el" href="namespacePscf_1_1Pspg.html" title="Classes for pseudo-spectral algorithm for periodic boundary conditions.">Pscf::Pspg</a>). This allows classes that play analogous roles in different programs to be given the same name. The LinearSweep classes for the pscf_fd, pscf_pc and pscf_pg programs are actually different classes defined in different namespaces that have identical or nearly identical user interfaces and implement closely analogous algorithms. The common user interface for these classes is described here. </em></p>
+<p ><em>Technical note: </em> Source code files that are specific to different PSCF programs are defined in different C++ implementation level namespaces (i.e., in <a class="el" href="namespacePscf_1_1Fd1d.html" title="Finite-different one-dimensional SCFT.">Pscf::Fd1d</a>, <a class="el" href="namespacePscf_1_1Pspc.html" title="Pseudo-spectral SCFT for periodic boundary conditions.">Pscf::Pspc</a> and <a class="el" href="namespacePscf_1_1Pspg.html" title="Classes for pseudo-spectral algorithm for periodic boundary conditions.">Pscf::Pspg</a>). This allows classes that play analogous roles in different programs to be given the same name. The LinearSweep classes for the pscf_fd, pscf_pc and pscf_pg programs are actually different classes defined in different namespaces that have identical or nearly identical user interfaces and implement closely analogous algorithms. The common user interface for these classes is described here.</p>
 <h2><a class="anchor" id="user_param_sweep_linear_param_sub"></a>
 Parameter File Format</h2>
 <p >The parameter file format for a LinearSweep is summarized below: </p><div class="fragment"><div class="line">LinearSweep{</div>
@@ -233,7 +233,7 @@ Sweep Parameters</h2>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2023 20:55:59 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Sat Mar 4 2023 17:08:24 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

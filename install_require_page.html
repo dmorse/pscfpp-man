@@ -57,7 +57,7 @@ $(function() {
 <div class="textblock"><p ><a class="el" href="install_page.html">Installation</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="install_source_page.html">Source Code</a> (Next) <br  />
 </p>
 <p >PSCF is designed to be compiled and run in a unix-like environment. The package has been tested and used on systems running either linux or recent versions of the Mac OS X operating systems. Compilation is controlled by a system of unix makefiles.</p>
-<p >PSCF is distributed only as source code, and must be compiled by the user. All source code that is designed to run on a conventional CPU is written in ANSI 2011 C++ language standard. Code that is written for an NVIDIA graphics processing unit (GPU) is written in CUDA.</p>
+<p >PSCF is distributed only as source code, and must be compiled by the user. All source code that is designed to run on a conventional CPU is written in ANSI 2011 C++ language standard. Code that is run on an NVIDIA graphics processing unit (GPU) is written in CUDA.</p>
 <h1><a class="anchor" id="require_overview_section"></a>
 Overview</h1>
 <p >The PSCF package provides several programs that are designed to run on a conventional CPU, and others that are designed to also use an NVIDIA GPU. We distinguish these in what follows by referring to CPU programs and GPU-enabled programs</p>
@@ -68,7 +68,7 @@ Overview</h1>
 <li>the GNU Scientific Library (GSL) (header and library)</li>
 <li>the FFTW fast Fourier transform library (header and library)</li>
 </ul>
-<p >A git client is needed to obtain the source code, by cloning the git repository in which PSCF is maintained on the github.com site. A python interpreter is needed during compilation because the build system that compiles PSCF uses several python scripts that are provided in the source code repository. A git client, C++ compiler and python interpreter will normally come pre-installed in either the most common linux distributions or in a Mac OS operating system in which command line tools have been installed. The GNU scientific library is used by several programs within the package for linear algebra operations. The FFTW Fast Fourier transform library is used by the CPU version of the pseudo-spectral algorithm for periodic microstructures.</p>
+<p >A git client is needed to obtain the source code, by cloning the git repository in which PSCF is maintained on the github.com site. A python interpreter is needed during compilation because the build system that compiles PSCF uses several python scripts that are provided in the source code repository. A git client, C++ compiler and python interpreter will normally come pre-installed in either the most common linux distributions or in a Mac OS operating system in which <a class="el" href="install_require_page.html#require_mac_commandtools_section">command line tools</a> have been installed. The GNU scientific library is used by several programs within the package for linear algebra operations. The FFTW Fast Fourier transform library is used extensively by the pscf_pc programs for periodic microstructures.</p>
 <p >In order compile GPU-enabled programs, the system must also have:</p>
 <ul>
 <li>an NVidia graphics card</li>
@@ -128,7 +128,7 @@ Packages: Mac OS X</h1>
 <p >On Macs with Apple silicon, homebrew instead installs all files in /opt/homebrew. This requires users to add paths to this directory and/or some of its subdirectories to the search paths used by the compiler to find header and library files. A compiler configuration file that modifies these search paths is provided as part of pscf, as discussed <a class="el" href="install_setup_page.html#install_setup_homebrewm1_sec">here</a>.</p>
 <h1><a class="anchor" id="install_require_module"></a>
 Linux Software Modules</h1>
-<p >At the University of Minnesota, PSCF is often run on a cluster provided by the Minnesota Supercomputer Institute (MSI). The computer clusters at MSI, like many similar multi-user clusters, use the linux "module" command to allow users to load particular software packages, including particular choices of compiler. The "module" command is the user interface to the "Modules" package, which is a system for automating changes in a users unix shell environment that are required in order to use particular software packages.</p>
+<p >At the University of Minnesota, PSCF is often run on a cluster provided by the Minnesota Supercomputer Institute (MSI). The computer clusters at MSI, like many similar multi-user facilities, use the linux "module" command to allow users to load particular software packages, including particular choices of compiler. The "module" command is the user interface to the "Modules" package, which is a system for automating changes in a users unix shell environment that are required in order to use particular software packages.</p>
 <p >On a unix system that uses modules, the command </p><div class="fragment"><div class="line">module avail</div>
 </div><!-- fragment --><p> should give a listing of all software modules available for use on a particular system. The syntax for the command to load a particular module is </p><div class="fragment"><div class="line">module load  module-name</div>
 </div><!-- fragment --><p> where module-name represents the name of a particular software module, as listed by the "module avail" command.</p>
@@ -142,7 +142,7 @@ Linux Software Modules</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2023 20:55:59 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Sat Mar 4 2023 17:08:24 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

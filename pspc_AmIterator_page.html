@@ -58,21 +58,20 @@ $(function() {
 <p >The variant of this algorithm implemented here is almost identical to that described by Arora et al. [Arora, Morse, Bates, and Dorfman, J. Chem. Phys. vol. 146, 244902 (2017)], which described the implementation of this algorithm in the earlier Fortran version of PSCF. The version of this algorithm used here adjusts the fields by adjusting the compoments of the field in a basis of symmetry adapated basis functions, thus preserving the space-group symmetry of the fields throughout the iteration process. The algorithm can be used to either solve the SCFT equations for a rigid unit cell or to solve the SCFT equations and also optimize some or all of the unit cell parameters of a flexible unit cell so as to minimize the free energy density, depending on the value of "isFlexible" and "flexibleParams", as described below.</p>
 <h1><a class="anchor" id="pspc_AmIterator_parameter_sec"></a>
 Parameter File</h1>
-<p >A typcial example of the parameter file format for this iterator is shown below: </p><div class="fragment"><div class="line">AmIterator{</div>
+<p >A typical example of the parameter file format for this iterator is shown below: </p><div class="fragment"><div class="line">AmIterator{</div>
 <div class="line">  epsilon      1e-8</div>
 <div class="line">  maxItr       100</div>
 <div class="line">  maxHist      50</div>
-<div class="line">  errorType    relNormResid</div>
 <div class="line">  isFlexible   1</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> The format of this block is described more formally below: </p><div class="fragment"><div class="line">AmIterator{</div>
 <div class="line">   epsilon          real </div>
-<div class="line">   maxItr           <span class="keywordtype">int</span></div>
-<div class="line">   maxHist          <span class="keywordtype">int</span>  </div>
+<div class="line">   maxItr*          int (200 by <span class="keywordflow">default</span>)</div>
+<div class="line">   maxHist*         int (50 by <span class="keywordflow">default</span>)</div>
 <div class="line">   verbose*         int (0-2, 0 by <span class="keywordflow">default</span>)</div>
 <div class="line">   outputTime*      bool (<span class="keyword">false</span> by <span class="keywordflow">default</span>)</div>
-<div class="line">   errorType*       enumeration (<span class="stringliteral">&quot;normResid&quot;</span>, <span class="stringliteral">&quot;maxResid&quot;</span>, or <span class="stringliteral">&quot;relNormResid&quot;</span>, <span class="stringliteral">&quot;relNormResid&quot;</span> by <span class="keywordflow">default</span>)</div>
-<div class="line">   isFlexible*      bool (0 or 1, 0/<span class="keyword">false</span> by <span class="keywordflow">default</span>)</div>
+<div class="line">   errorType*       string (<span class="stringliteral">&quot;norm&quot;</span>, <span class="stringliteral">&quot;rms&quot;</span>, <span class="stringliteral">&quot;max&quot;</span>, or <span class="stringliteral">&quot;relNorm&quot;</span>, <span class="stringliteral">&quot;relNorm&quot;</span> by <span class="keywordflow">default</span>)</div>
+<div class="line">   isFlexible*      bool (0 or 1, 1/<span class="keyword">true</span> by <span class="keywordflow">default</span>)</div>
 <div class="line">   flexibleParams*  Array [ bool ] (nParameters elements)</div>
 <div class="line">   scaleStress*     real (10.0 by <span class="keywordflow">default</span>)</div>
 <div class="line">}</div>
@@ -82,17 +81,17 @@ Parameter File</h1>
 <tr>
 <td>epsilon  </td><td>Desired tolerance for convergence - iteration stops if the magnitude of the error drops below epsilon.   </td></tr>
 <tr>
-<td>maxItr  </td><td>Maximum number of iterations that will be attempted   </td></tr>
+<td>maxItr*  </td><td>Maximum number of iterations that will be attempted (200 by default)   </td></tr>
 <tr>
-<td>maxHist*  </td><td>Maximum number of previous trial solultions that will be retained in memory for used by the AM algorithm.   </td></tr>
+<td>maxHist*  </td><td>Maximum number of previous trial solultions that will be retained in memory for used by the AM algorithm (50 by default)   </td></tr>
 <tr>
 <td>verbose*  </td><td>Integer level 0, 1, 2 for verbosity of log output during iteration. Optional, and 0 (concise) by default.   </td></tr>
 <tr>
 <td>showTime*  </td><td>Set to 1 (true) to report wall clock time components in log file. Optional, and 0 (false) by default.   </td></tr>
 <tr>
-<td>errorType  </td><td>Identifer for the type of variable used to define scalar error . The only allowed values are "maxResid", "normResid", and "relNormResid", as discussed below. Optional, and equal to "relNormResid" by default.   </td></tr>
+<td>errorType*  </td><td>Identifer for the type of variable used to define scalar error . The only allowed values are "norm", "rms" "max", and "relNorm", as discussed below. Optional, and equal to "relNorm" by default.   </td></tr>
 <tr>
-<td>isFlexible  </td><td>Set isFlexible true to enable or false to disable iterative optimization of unit cell parameters so as to minimize the free energy density. Optional and false by default.   </td></tr>
+<td>isFlexible*  </td><td>Set isFlexible true to enable or false to disable iterative optimization of unit cell parameters so as to minimize the free energy density. Optional and true by default.   </td></tr>
 <tr>
 <td>flexibleParams*  </td><td>Use flexibleParams to declare only <em>some</em> lattice parameters as flexible. <b>This optional entry is allowed only if isFlexible is true.</b> This array must contain one entry for each lattice parameter, with a value 1 (true) if the parameter is flexible or 0 (false) if the parameter value is fixed. If isFlexible is true but flexibleParams is absent, then all all lattice parameters will be flexible.   </td></tr>
 <tr>
@@ -101,9 +100,10 @@ Parameter File</h1>
 <p>The iterative loop exits if the number of iterations has reached maxItr or if the magnitude of the scalar error drops below epsilon.</p>
 <p ><b> errorType </b>: Several different definitions may be used for the scalar error, depending on the value of the identifier errorType.</p>
 <ul>
-<li>If errorType == maxResid, then the scalar error is take to be the maximum of the absolute magnitude of the elements of the residual vector (the L infinity norm of the residual vector).</li>
-<li>If errorType == normResid, then the scalar error is take to be the L2 norm of the residual vector.</li>
-<li>If errorType == normResid, then the scalar error is take to be the ratio of the L2 norm of the residual vector to the L2 norm of the w field, as in Stasiak and Matsen, Eur. Phys, Journel E, 2012.</li>
+<li>If errorType == norm, then the scalar error is take to be the L2 norm of the residual vector (square-root of sum of squares of the elements) of the residual vector as defined below.</li>
+<li>If errorType == rms, then the scalar error is take to be the root-mean-square magnitude of elements of the residual vector (the L2 norm divided by the square root of the number of elements).</li>
+<li>If errorType == max, then the scalar error is take to be the maximum of the absolute magnitude of the elements of the residual vector (the L infinity norm of the residual vector).</li>
+<li>If errorType == relNorm, then the scalar error is take to be the ratio of the L2 norm of the residual vector to the L2 norm of the w field, as in Stasiak and Matsen, Eur. Phys, Journel E, 2012.</li>
 </ul>
 <p ><b> scaleStress </b>: If isFlexible is true, the choice of a value for the parameter scaleStress determines how strongly the definition of the scalar error weights errors that arise from nonzero derivatives of the free energy with respect to the unit cell parameters, relative to errors arising from errors in the SCFT equations for the w fields in a fixed unit cell. This variable is irrelevant if isFlexible is false, and should normally be ommitted in this case.</p>
 <h1><a class="anchor" id="pspc_AmIterator_residual_sec"></a>
@@ -139,7 +139,7 @@ Closed Systems (Canonical Ensemble)</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2023 20:55:59 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Sat Mar 4 2023 17:08:24 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
