@@ -98,12 +98,13 @@ Parameter File</h1>
 <td>scaleStress*  </td><td>Constant factor by which stress components are multiplied in the definition of the residual attempted if isFlexible is true (optional).   </td></tr>
 </table>
 <p>The iterative loop exits if the number of iterations has reached maxItr or if the magnitude of the scalar error drops below epsilon.</p>
-<p ><b> errorType </b>: Several different definitions may be used for the scalar error, depending on the value of the identifier errorType.</p>
+<p ><b> errorType </b>: Several different definitions may be used for the scalar error, depending on the value of the identifier errorType. <br  />
+ All of them ar based on computation of different types of norm of the residual vector, defined as discussed <a class="el" href="pspc_AmIterator_page.html#pspc_AmIterator_residual_sec">below</a>.</p>
 <ul>
 <li>If errorType == norm, then the scalar error is take to be the L2 norm of the residual vector (square-root of sum of squares of the elements) of the residual vector as defined below.</li>
 <li>If errorType == rms, then the scalar error is take to be the root-mean-square magnitude of elements of the residual vector (the L2 norm divided by the square root of the number of elements).</li>
 <li>If errorType == max, then the scalar error is take to be the maximum of the absolute magnitude of the elements of the residual vector (the L infinity norm of the residual vector).</li>
-<li>If errorType == relNorm, then the scalar error is take to be the ratio of the L2 norm of the residual vector to the L2 norm of the w field, as in Stasiak and Matsen, Eur. Phys, Journel E, 2012.</li>
+<li>If errorType == relNorm, then the scalar error is take to be the ratio of the L2 norm of the residual vector to the L2 norm of the w field, as in Stasiak and Matsen, Eur. Phys. J. E <b> 34 </b>, 110 (2011).</li>
 </ul>
 <p ><b> scaleStress </b>: If isFlexible is true, the choice of a value for the parameter scaleStress determines how strongly the definition of the scalar error weights errors that arise from nonzero derivatives of the free energy with respect to the unit cell parameters, relative to errors arising from errors in the SCFT equations for the w fields in a fixed unit cell. This variable is irrelevant if isFlexible is false, and should normally be ommitted in this case.</p>
 <h1><a class="anchor" id="pspc_AmIterator_residual_sec"></a>
@@ -139,7 +140,7 @@ Closed Systems (Canonical Ensemble)</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2023 17:08:24 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Sat Mar 4 2023 20:01:03 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
