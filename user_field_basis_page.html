@@ -177,397 +177,143 @@ Example: 1D Lamellar Phase</h1>
 \]
 </p>
 <p> This last basis function is somewhat special, as discussed below.</p>
-<p >The differences between the basis function with index \( n = N/2 = 20 \) and those with \( 0 &lt; n &lt; N/2 \) are a consequences of the fact that that periodic functions are defined internally in the pscf_pc and pscf_pg programs only on the nodes of a regular grid, rather than at arbitrary points in a continuum. The Fourier representation of each field is thus based on a discrete Fourier transform (DFT) with a finite number of waves rather than an infinite Fourier series. The function \( f_{N/2}(x) \) with an even value of \( N \) has alternating values of \( \pm 1 \) at values of \( x \) that lie on the nodes of a grid, corresponding to values \( x_{m} = m L / N \) for integers \( m = 0, \ldots, N -1 \). Values of this basis function at values of \( x \) that lie on the nodes of this grid can be expressed as a single complex exponential wave, rather than a sum of two distinct waves, because, on this grid, wavenumbers \( k_{n} \) and \( k_{-n} \) with \( n = N/2 \) are "aliases" or "images"\ 
-of one another that yield equal values for
- \_form#327 if evaluated at any
-position \_form#328 that corresponds to one of the nodes. Generally,
-wavenumbers (in 1D) or wavevectors (in 2D or 3D) for which the indices
-associated with a particular direction differ by integer multiples of 
-the number of grid points along each that direction are aliases of one
-another, and thus equivalent for this purpose, as discussed in more 
-detail in an \ref user_fourier_alias_sub "appendix".  Waves that are 
-aliases of one another in this sense are counted as equivalent by the 
-algorithm that constructs basis functions for functions that are 
-defined on a lattice.
-
-The integer that appears in the third column of each row in the data
-section of the above example gives the integer index \_form#329 for an 
-associated wavenumber \_form#325, which ranges from 0 to 20 in this 
-example.
-
-The integer that appears in the fourth colum of each row in this
-example is the number of inequivalent waves used in the expansion of
-the associated basis function. This number has a value of \_form#330 for
- \_form#312 (or \_form#331 ), a value of \_form#332 for the 19
-cosine basis functions with \_form#333, and a value of
- \_form#330 for the cosine function with \_form#319 as a
-result of aliasing of wavenumbers used in a discrete Fourier transform.
-
-@section user_field_basis_gyroid_sec Example: 3D Gyroid Phase
-
-Below is an example of a c field output from a simulation of a gyroid
-phase for a diblock copolymer melt. A long section of the middle of the 
-data section of this file has been removed, as indicated by vertical 
-dots.
-@code 
-
-    format  1  0
-   dim
-                      3
-   crystal_system
-                  cubic
-   N_cell_param
-                      1
-   cell_param
-       3.6735414146E+00
-   group_name
-              I_ a_-3_d
-   N_monomer
-                      2
-   N_basis
-                    235
-     3.000000000000E-01  7.000000000000E-01       0   0   0     1
-    -2.942897932802E-01  2.942897932848E-01       2   1   1    24
-    -9.425546329793E-02  9.425546327223E-02       2   2   0    12
-    -3.864399409689E-03  3.864399436086E-03       3   2   1    48
-    -1.483047814338E-02  1.483047815806E-02       4   0   0     6
-    -3.546446264855E-02  3.546446265383E-02       4   2   0    24
-     3.138519869858E-02 -3.138519870524E-02       3   3   2    24
-     2.003121375277E-02 -2.003121374994E-02       4   2   2    24
-     1.572048423239E-02 -1.572048424396E-02       4   3   1    48
-    -1.376822797257E-02  1.376822798292E-02       5   2   1    48
-    -1.063353913450E-02  1.063353913935E-02       4   4   0    12
-            .                   .                 .   .   .    .
-            .                   .                 .   .   .    .
-            .                   .                 .   .   .    .
-    -7.575067702553E-05  7.575067344206E-05      13  13  10    24
-    -2.570604494615E-05  2.570604263390E-05      14  12  10    24
-    -5.627606758688E-05  5.627606408758E-05      14  14   8     6
-     5.879116047898E-05 -5.879115755266E-05      14  14  12     6
-
-\endcode
-&lt;BR&gt;
-
-Data in the header section of this file is analogous to that given
-above in the simpler lamellar example. Because this is a cubic
-crystal, only a single unit cell parameter is again required to
-specify the size of the unit cell, and so N_cell_parameter is again
-equal to 1. The unit cell parameter for a cubic crystal is the
-length of any edges of a conventional cubic unit cell along any of
-three orthogonal directions. The group_name identifier I_a_-3_d is
-an ascii identifer for space group \_form#261, the
-space group of the gyroid phase.
-
-The \_form#261 space group is a centro-symmetric cubic
-group with an inversion center at the origin of space.  Each of the
-symmetry-adapted basis functions used to expand functions with this
-space group symmetry are superpositions of waves with wavevectors
-that belong to a family or star of wavevectors with integer indices
-are related to a set of integers {hkl} by permutations of the order
-in which indices are listed and/or changes in the sign of one or
-more indices. The number of wavevectors in each such star is less
-than or equal to 48, with 48 wavevectors in the star for stars in
-which the integers h, k, and l are all unequal and nonzero.
-
-Consider the above example of 3D gyroid phase for a system with
-N_monomer = 2.  The first two columns in the data section contain
-expansion coefficients.  In the first row of the data section,
-columns 3-5 contain the indices "0 0 0" of the wavevector k=0 that
-is associated with the homogeneous function, and column 6 contains
-a multiplicity of 1.  The second row contains the coefficients for
-the basis function associated with the {211} family or "star" of
-wavevectors, which is identified in columns 3-5 by the label
-"2 1 1".  This star contains 24 distinct wavevectors, which can
-be generated by allowing for changes in sign of each index and
-choosing from among 3 possible locations of the unique index of
-absolute magnitude 2.  As a result, column 6 contains a multiplicity
-of 24.
-
-The {211} family is the first star of non-zero wavevectors from
-which it possible to construct a nonzero basis function that is
-invariant under all of the symmetries of space group of the gyroid
-structure.  The stars that can be used to construct a nonzero
-basis function are precisely those that satisfy the reflection
-rules for allowed reflections in scattering from a crystal with
-a particular space group symmetry. For any crystal with space group
- \_form#225, {211} family gives the first allowed
-family of scattering reflections in small angle X-ray or neutron
-scattering. The symmetry-adapated Fourier series expansion for
-functions that are invariant under elements of a space groups
-that leads systematic cancellations only contains basis functions
-or "stars" that are not \"cancelled\" (i.e., those that obey the
-rules for allowed reflections).
-
-@section user_field_basis_star_sec Stars and Star Functions
-
-The algorithm that the PSCF programs for periodic structures uses to
-generate a symmetry-adapted Fourier basis is based on:
-
-  -  Grouping of all distinguishable wavevectors used in a
-     discrete Fourier transform (DFT) into sets of wavectors that
-     are related by symmetries of the space group, which we refer
-     to as "stars"
-
-  -  Construction of a symmetry-adapted basis function associated
-     with each such star, which we refer to as a "star function".
-
-Each star function is constructed as a superposition of plane waves
-with wavevectors that all belong to a single star, and that are thus
-related to each other by symmetry. The resulting set of star functions
-form an symmetry-adapted basis in which some functions may be complex
-rather than real functions of position. This basis of star functions
-is then used to construct a closely related basis real basis functions
-of the type described above.
-
-The remainder of this section summarizes the relationship between
-stars and symmetry-adapted basis functions in a form sufficient to
-allow users to understand the basis file format for field files.
-A more detailed discussion of the underlying mathematics is given 
-as an \ref user_basis_page "appendix". That appendix provides more 
-precise notation and definitions, and includes proofs of variety 
-of assertions about mathematical facts that are made here without 
-proof.
-
-@anchor user_field_basis_star_defn
-&lt;b&gt; Definition (Star) &lt;/b&gt;:
-A star \_form#50 of a space group \_form#7 is a set of reciprocal
-lattice wavevectors that are are all related to one another by
-symmetry operations in \_form#7. Every wavevevector belongs to one
-and only one star of a specified space group.
-
-Example: In the case of a cubic crystal such as the BCC or double
-gyroid phase, each star is a set of wavevectors with indices that
-are related to a triplet of integers \_form#334 with
- \_form#335 by permutations and changes in sign.
-In such a crystal, every wavevector belongs to one such star or
-family of wavevectors.
-
-@anchor user_field_basis_starfunc_defn
-&lt;b&gt; Definition (Star Function) &lt;/b&gt;:
-A star function associated with a star \_form#50 of a space group
- \_form#7 is a nonzero function of position that is a superposition of
-complex exponential plane waves with wavevectors in \_form#50 that yields
-a function that is invariant under all symmetry operations in \_form#7.
-If \_form#50 is a star with \_form#85 wavevectors
- \_form#336, then a star function
- \_form#87 associated with \_form#50 is a sum of the form
-\iline 446 \iline 447  \_form#337@_fakenl@_fakenl
-in which the coefficients \_form#89 are generally
-complex numbers.
-
-The requirement that a star function be invariant under all elements of
-a space group can be expressed as a a set of homogeneous linear equation
-that relate the coefficients \_form#89 of different
-waves in the above expansion.
-These relationships among coefficients are discussed in detail in the
-associated \ref user_basis_page "appendix".
-The form of these equations can be shown to require that these coefficients
-all have equal absolute magnitude
-\iline 460 \iline 461  \_form#338@_fakenl@_fakenl
-and impose relationships among the complex phases (arguments) of
-different coefficients.
-These symmetry relationships generally only define a star function
-associated with a particular star to within an arbitrary multiplicative
-constant: If \_form#87 is a nonzero function of the above
-form that is invariant under all elements of a space group, then so is
- \_form#176, for any complex constant \_form#11.
-
-In many common, relatively simple cases, it is possible to choose the
-coefficients \_form#89 to all be real numbers.
-In the case of a symmorphic space group, in which the symmetry elements
-only involve point group operations (i.e., reflections, rotations, and
-inversions) with no associated translations (i.e., no glide planes or
-screw axes), the coefficients associated with different wavevectors in
-a star must all be equal, and are always chosen by convention to be
-equal, positive real numbers. For any group with an inversion center
-at the origin, it is always possible to chose these coefficients to
-all be real. In the general case of a non-symmorphic space group with
-no inversion center at the origin, however, we must all these coefficients
-to be complex numbers of equal magnitude but generally unequal phase
-(complex argument).
-
-@subsection user_field_basis_cancelled_sub Cancelled Stars
-
-There exist some stars of some space groups for which the only solution
-to the set of homogeneous linear equations that relate the coefficients
-of waves in a star function is the trivial solution
-\iline 490 \iline 491  \_form#339@_fakenl@_fakenl
-When this occurs, it is not possible to define an associated star
-function. Such stars are said to be &lt;em&gt; cancelled &lt;/em&gt;.
-
-The uncancelled stars of a space group are always the same as those
-that obey the rules for allowed reflections in a scattering experiment.
-Conversely, the cancelled stars (if any) are those which exhibit
-systematic cancellations or absences in scattering experiments.
-
-One common situation that leads to the existence of cancelled stars
-is if the Bravais lattice for a face- or body-centered 3D lattice is
-defined so as to give a conventional non-primitive unit cell, e.g., by
-using a simple cubic Bravais lattice with orthogonal Bravais basis
-vectors to describe a body-centered or face-centered cubic lattice.
-When using such a convention for the Bravais lattice, the associated
-space group will contain one or more symmetry operations that simply
-translate the lattice by a fraction of a unit cell, thus translating
-the origin to a body- or face-centered lattice site.  The existence of
-this sort of purely translational symmetry generally yields selection
-rules that cause some stars of wavevectors in the Bravais lattice of
-the declared Bravais lattice to be cancelled. In this case, some
-families of wavevectors are cancelled because they are vectors that
-belong to the reciprocal lattice of the declared Bravais lattice
-(e.g., the simple cubic lattice) that actually do not belong to the
-reciprocal lattice of the primitive body- or face-centered lattice.
-The code used by pscf_pc and pscf_pg programs to generate basis
-functions currently uses a conventional Bravais lattice with orthogonal
-basis vectors by default for these sorts of centered lattices, which
-leads to the appearance of cancelled stars (i.e, systematic
-cancellation) of the space groups used to describe such lattices.
-
-In the above example of a field file for a gyroid phase with space
-group \_form#340, the {211} star of wavevectors is the
-first star of nonzero wavevectors that is not cancelled. Cancellation
-of the {100}, {111}, and {210} wavevectors can be understood as direct
-results of the fact that the \_form#340 is based on
-body-centered-cubic lattice. Other cancellations, such as the
-cancellation of the {110} star, are consequences of the existence of
-other symmetry operations in this space group.
-
-@subsection user_field_basis_uncancelled_sub Uncancelled Stars
-
-A basis for complex or real functions with the symmetry of a specified
-space group can be constructed from the star functions associated with
-all uncancelled stars of that space group.
-
-@anchor user_field_basis_closed_defn
-Uncancelled stars may be either closed or open under inversion:
-
-   - A star \_form#50 is &lt;em&gt; closed &lt;/em&gt; (or, more precisely, closed
-     under inversion) if, for every wavevector \_form#19 in
- \_form#50, the wavevector \_form#48 is also in \_form#50.
-
-   - A star \_form#50 is &lt;em&gt; open &lt;/em&gt; (or open under inversion) if,
-     for every wavevector \_form#19 in \_form#50, \_form#209
-     is not in \_form#50.
-
-The following theorems about uncancelled stars and star functions are
-proved in an \ref user_basis_page "appendix":
-
-   - Every wavevector belongs to exactly one star.
-
-   - If a star is not cancelled, there exists an associated star
-     function that is unique to within an arbitrary prefactor.
-
-   - Every uncancelled star is either open or closed.
-
-   - It is always possible to chose a prefactor for a star function
-     associated with an uncancelled closed star so as to obtain a
-     real function of position.
-
-   - If \_form#50 is an uncancelled open star, there exists another
-     star \_form#56 such that, for every wavevector
- \_form#174, \_form#341. Such pairs of
-     open stars are said to be related by inversion.
-
-   - If \_form#50 and \_form#56 are a pair of open stars that are
-     related by inversion, then it is possible to choose prefactors of
-     a star function \_form#87 associated with \_form#50
-     and a star function \_form#94 associated with
- \_form#56 such that \_form#94 and
- \_form#87 are complex conjugates of one another.
-
-@subsection user_field_basis_starbasis_sub Conventions for Star Functions
-
-The PSCF programs for periodic functions generates a sequence of
-uncancelled stars and associated star functions, such that each such
-star and its associated star function are both assigned an integer
-index in the range \_form#342.  We denote the
-resulting star functions here by
- \_form#343 .
-
-These functions are defined so as to obey the following conventions:
-
-   - All star functions associated with closed stars are real functions
-     of position.
-
-   - Star functions associated with pairs of open stars that are
-     related by inversion are assigned consecutive indices and are
-     defined to be complex conjugates of one another, such that, e.g.,
-\iline 592 \iline 593  \_form#344@_fakenl@_fakenl
-     for such a pair of stars with indices \_form#299 and \_form#345.
-
-   - All star functions satisfy an orthonormality relation:
-\iline 598 \iline 599 \iline 600 \iline 601  \_form#346@_fakenl@_fakenl@_fakenl@_fakenl
-     where the integral is taken over one unit cell and \_form#294 is
-     the generalized volume per unit cell. This normalization can be
-     shown to implies that every coefficient in the expansion of a
-     star function for a star with \_form#85 distinct waves is a
-     complex number of modulus \_form#347.
-
-   - The overall sign or phase of each basis function is fixed by
-     choosing a "characteristic wavevector" from among the
-     wavevectors in each star, and requiring that the coefficient
-     of the wave with that wavevector be a real positive number.
-
-   - The characteristic wavevectors of two stars that are related
-     by inversion must be chosen such that, if \_form#19 is
-     the characteristic wavevector of one star in such a pair,
-     then \_form#48 is the characteristic wavevector of
-     the other. This relationship is required to guarantee that
-     the star functions associated with two such stars be complex
-     conjugates.
-
-The conventions described above are sufficient to define a unique
-star function associated with each star if they are supplemented
-by a convention for choosing a "characteristic wavevector" from
-among the waves in each star. The convention for characteristic
-wavevectors used in PSCF is discussed below.
-
-Because each star functions is a superposition of plane waves
-with wavevectors of equal magnitude, each of them is also an
-eigenfunction of the Laplacian. Each such star function
- \_form#348 thus satisfies an eigenvalue equation
-\iline 632 \iline 633 \iline 634  \_form#349@_fakenl@_fakenl@_fakenl
-with an eigenvalue \_form#350 equal to the square
-magnitude \_form#351 of any of the wavevectors in
-the associated star.
-
-Any complex or real field \_form#352 that is invariant
-under all elements of space group \_form#7 can be expanded in
-a basis of such star functions as a Fourier series
-\iline 643 \iline 644  \_form#353@_fakenl@_fakenl
-with complex coefficients \_form#354,
-where \_form#283 denotes the number of basis functions
-used in the expansion.
-
-@subsection user_field_basis_waveofstar_sec Characteristic Wavevectors
-
-By convention, the characteristic wavevector for a closed star or the
-first of two open stars that are related by inversion is taken to be
-the reciprocal lattice wavevector in the star for which the integer
-components are "greatest" when lists of integer components are compared while treating components that appear earlier in the list as more
-signficant than indices that appear later. The components of such a
-wavevector are its components in a basis of reciprocal lattice basis
-vectors, which are integers for any wavevector that belongs to the
-reciprocal lattice (i.e., any wavevector with a periodicity commensurate with that of the crystal Bravais lattice).  According to this
-rule for ordering lists of integers, a list of integer components
- \_form#355 for a three-dimensional wavevector is "greater" than
-a list \_form#356 if \_form#357, while a list
- \_form#358 is greater than \_form#359 if \_form#360,
-etc. For example, the characteristic wavevector associated with a
-star of 48 wavevectors in a simple cubic lattice that are related
-to  (-2, 3, 1) by permutations and sign changes is thus the
-wavevector with indices (3, 2, 1).
-
-Wavevectors that are used in discrete Fourier transforms of
-functions that are defined only on the nodes of a regular grid
-are normally defined only modulo changes in indices by integer
-multiples of the number of grid points in each direction.
-To define a unique list of integer components for each such
-wavevector, we define the components of each reciprocal lattice
-wavevector to be the indices of an image or alias of the
-wavevector that yields the minimum possible value for the
-wavevector norm \_form#361.  If two or more aliases of
-a wavevector yield vectors of exactly equal norm, we choose
-the image for which the list of indices is "greatest" by the definition discussed above, in which indices that appear earlier in the list are treated as more signficant. This convention requires, for example, that in the case of a one-dimensional periodic structure with a period \(L\) that is defined on a regular grid of \( N \) grid points, for even \( N\), the distinct reciprocal lattice wavenumbers are defined to be \( G_{n} = n 2\pi /L \) where \( n \) is an integer in the range \( -N/2 &lt; n \leq N/2 \). The rules discussed above provide a natural generalization of this convention to periodic functions in two or three dimensions.</p>
+<p >The differences between the basis function with index \( n = N/2 = 20 \) and those with \( 0 &lt; n &lt; N/2 \) are a consequences of the fact that that periodic functions are defined internally in the pscf_pc and pscf_pg programs only on the nodes of a regular grid, rather than at arbitrary points in a continuum. The Fourier representation of each field is thus based on a discrete Fourier transform (DFT) with a finite number of waves rather than an infinite Fourier series. The function \( f_{N/2}(x) \) with an even value of \( N \) has alternating values of \( \pm 1 \) at values of \( x \) that lie on the nodes of a grid, corresponding to values \( x_{m} = m L / N \) for integers \( m = 0, \ldots, N -1 \). Values of this basis function at values of \( x \) that lie on the nodes of this grid can be expressed as a single complex exponential wave, rather than a sum of two distinct waves, because, on this grid, wavenumbers \( k_{n} \) and \( k_{-n} \) with \( n = N/2 \) are "aliases" or "images" of one another that yield equal values for \( e^{ik_{n}x_{m} } = e^{ -ik_{n}x_{m} } \) if evaluated at any position \( x_{m} \) that corresponds to one of the nodes. Generally, wavenumbers (in 1D) or wavevectors (in 2D or 3D) for which the indices associated with a particular direction differ by integer multiples of the number of grid points along each that direction are aliases of one another, and thus equivalent for this purpose, as discussed in more detail in <a class="el" href="user_fourier_page.html#user_fourier_dft_alias_sub">appendix</a>. Waves that are aliases of one another in this sense are counted as equivalent by the algorithm that constructs basis functions for functions that are defined on a lattice.</p>
+<p >The integer that appears in the third column of each row in the data section of the above example gives the integer index \( n \) for an associated wavenumber \( k_{n} \), which ranges from 0 to 20 in this example.</p>
+<p >The integer that appears in the fourth colum of each row in this example is the number of inequivalent waves used in the expansion of the associated basis function. This number has a value of \( 1 \) for \( n = 0 \) (or \( k_{n} = 0 \) ), a value of \( 2 \) for the 19 cosine basis functions with \( n =1, \ldots, 19 \), and a value of \( 1 \) for the cosine function with \( n = N/2 = 20 \) as a result of aliasing of wavenumbers used in a discrete Fourier transform.</p>
+<h1><a class="anchor" id="user_field_basis_gyroid_sec"></a>
+Example: 3D Gyroid Phase</h1>
+<p >Below is an example of a c field output from a simulation of a gyroid phase for a diblock copolymer melt. A long section of the middle of the data section of this file has been removed, as indicated by vertical dots. </p><div class="fragment"><div class="line"> format  1  0</div>
+<div class="line">dim</div>
+<div class="line">                   3</div>
+<div class="line">crystal_system</div>
+<div class="line">               cubic</div>
+<div class="line">N_cell_param</div>
+<div class="line">                   1</div>
+<div class="line">cell_param</div>
+<div class="line">    3.6735414146E+00</div>
+<div class="line">group_name</div>
+<div class="line">           I_ a_-3_d</div>
+<div class="line">N_monomer</div>
+<div class="line">                   2</div>
+<div class="line">N_basis</div>
+<div class="line">                 235</div>
+<div class="line">  3.000000000000E-01  7.000000000000E-01       0   0   0     1</div>
+<div class="line"> -2.942897932802E-01  2.942897932848E-01       2   1   1    24</div>
+<div class="line"> -9.425546329793E-02  9.425546327223E-02       2   2   0    12</div>
+<div class="line"> -3.864399409689E-03  3.864399436086E-03       3   2   1    48</div>
+<div class="line"> -1.483047814338E-02  1.483047815806E-02       4   0   0     6</div>
+<div class="line"> -3.546446264855E-02  3.546446265383E-02       4   2   0    24</div>
+<div class="line">  3.138519869858E-02 -3.138519870524E-02       3   3   2    24</div>
+<div class="line">  2.003121375277E-02 -2.003121374994E-02       4   2   2    24</div>
+<div class="line">  1.572048423239E-02 -1.572048424396E-02       4   3   1    48</div>
+<div class="line"> -1.376822797257E-02  1.376822798292E-02       5   2   1    48</div>
+<div class="line"> -1.063353913450E-02  1.063353913935E-02       4   4   0    12</div>
+<div class="line">         .                   .                 .   .   .    .</div>
+<div class="line">         .                   .                 .   .   .    .</div>
+<div class="line">         .                   .                 .   .   .    .</div>
+<div class="line"> -7.575067702553E-05  7.575067344206E-05      13  13  10    24</div>
+<div class="line"> -2.570604494615E-05  2.570604263390E-05      14  12  10    24</div>
+<div class="line"> -5.627606758688E-05  5.627606408758E-05      14  14   8     6</div>
+<div class="line">  5.879116047898E-05 -5.879115755266E-05      14  14  12     6</div>
+</div><!-- fragment --><p> <br  />
+</p>
+<p >Data in the header section of this file is analogous to that given above in the simpler lamellar example. Because this is a cubic crystal, only a single unit cell parameter is again required to specify the size of the unit cell, and so N_cell_parameter is again equal to 1. The unit cell parameter for a cubic crystal is the length of any edges of a conventional cubic unit cell along any of three orthogonal directions. The group_name identifier I_a_-3_d is an ascii identifer for space group \( Ia\overline{3}d \), the space group of the gyroid phase.</p>
+<p >The \( Ia\overline{3}d \) space group is a centro-symmetric cubic group with an inversion center at the origin of space. Each of the symmetry-adapted basis functions used to expand functions with this space group symmetry are superpositions of waves with wavevectors that belong to a family or star of wavevectors with integer indices are related to a set of integers {hkl} by permutations of the order in which indices are listed and/or changes in the sign of one or more indices. The number of wavevectors in each such star is less than or equal to 48, with 48 wavevectors in the star for stars in which the integers h, k, and l are all unequal and nonzero.</p>
+<p >Consider the above example of 3D gyroid phase for a system with N_monomer = 2. The first two columns in the data section contain expansion coefficients. In the first row of the data section, columns 3-5 contain the indices "0 0 0" of the wavevector k=0 that is associated with the homogeneous function, and column 6 contains a multiplicity of 1. The second row contains the coefficients for the basis function associated with the {211} family or "star" of wavevectors, which is identified in columns 3-5 by the label "2 1 1". This star contains 24 distinct wavevectors, which can be generated by allowing for changes in sign of each index and choosing from among 3 possible locations of the unique index of absolute magnitude 2. As a result, column 6 contains a multiplicity of 24.</p>
+<p >The {211} family is the first star of non-zero wavevectors from which it possible to construct a nonzero basis function that is invariant under all of the symmetries of space group of the gyroid structure. The stars that can be used to construct a nonzero basis function are precisely those that satisfy the reflection rules for allowed reflections in scattering from a crystal with a particular space group symmetry. For any crystal with space group \( Ia\overline{3}d\), {211} family gives the first allowed family of scattering reflections in small angle X-ray or neutron scattering. The symmetry-adapated Fourier series expansion for functions that are invariant under elements of a space groups that leads systematic cancellations only contains basis functions or "stars" that are not "cancelled" (i.e., those that obey the rules for allowed reflections).</p>
+<h1><a class="anchor" id="user_field_basis_star_sec"></a>
+Stars and Star Functions</h1>
+<p >The algorithm that the PSCF programs for periodic structures uses to generate a symmetry-adapted Fourier basis is based on:</p>
+<ul>
+<li>Grouping of all distinguishable wavevectors used in a discrete Fourier transform (DFT) into sets of wavectors that are related by symmetries of the space group, which we refer to as "stars"</li>
+<li>Construction of a symmetry-adapted basis function associated with each such star, which we refer to as a "star function".</li>
+</ul>
+<p >Each star function is constructed as a superposition of plane waves with wavevectors that all belong to a single star, and that are thus related to each other by symmetry. The resulting set of star functions form an symmetry-adapted basis in which some functions may be complex rather than real functions of position. This basis of star functions is then used to construct a closely related basis real basis functions of the type described above.</p>
+<p >The remainder of this section summarizes the relationship between stars and symmetry-adapted basis functions in a form sufficient to allow users to understand the basis file format for field files. A more detailed discussion of the underlying mathematics is given as an <a class="el" href="user_basis_page.html">appendix</a>. That appendix provides more precise notation and definitions, and includes proofs of variety of assertions about mathematical facts that are made here without proof.</p>
+<p ><a class="anchor" id="user_field_basis_star_defn"></a><b> Definition (Star) </b>: A star \( T \) of a space group \( S \) is a set of reciprocal lattice wavevectors that are are all related to one another by symmetry operations in \( S \). Every wavevevector belongs to one and only one star of a specified space group.</p>
+<p >Example: In the case of a cubic crystal such as the BCC or double gyroid phase, each star is a set of wavevectors with indices that are related to a triplet of integers \( (hkl) \) with \( h \geq k \geq l \geq 0 \) by permutations and changes in sign. In such a crystal, every wavevector belongs to one such star or family of wavevectors.</p>
+<p ><a class="anchor" id="user_field_basis_starfunc_defn"></a><b> Definition (Star Function) </b>: A star function associated with a star \( T \) of a space group \( S \) is a nonzero function of position that is a superposition of complex exponential plane waves with wavevectors in \( T \) that yields a function that is invariant under all symmetry operations in \( S \). If \( T \) is a star with \( M \) wavevectors \( {\bf G}_{0}, \ldots, {\bf G}_{M-1} \), then a star function \( \phi({\bf r}) \) associated with \( T \) is a sum of the form  </p><p class="formulaDsp">
+\[
+   \phi({\bf r}) = \sum_{i=0}^{M-1} c_{i} e^{i{\bf G}\cdot {\bf r}}
+\]
+</p>
+<p> in which the coefficients \( c_{0}, \ldots, c_{M-1} \) are generally complex numbers.</p>
+<p >The requirement that a star function be invariant under all elements of a space group can be expressed as a a set of homogeneous linear equation that relate the coefficients \( c_{0}, \ldots, c_{M-1} \) of different waves in the above expansion. These relationships among coefficients are discussed in detail in the associated <a class="el" href="user_basis_page.html">appendix</a>. The form of these equations can be shown to require that these coefficients all have equal absolute magnitude  </p><p class="formulaDsp">
+\[
+   |c_{0}| = |c_{1}| = \cdots |c_{M-1}| \quad,
+\]
+</p>
+<p> and impose relationships among the complex phases (arguments) of different coefficients. These symmetry relationships generally only define a star function associated with a particular star to within an arbitrary multiplicative constant: If \( \phi({\bf r}) \) is a nonzero function of the above form that is invariant under all elements of a space group, then so is \( c \phi({\bf r}) \), for any complex constant \( c \).</p>
+<p >In many common, relatively simple cases, it is possible to choose the coefficients \( c_{0}, \ldots, c_{M-1} \) to all be real numbers. In the case of a symmorphic space group, in which the symmetry elements only involve point group operations (i.e., reflections, rotations, and inversions) with no associated translations (i.e., no glide planes or screw axes), the coefficients associated with different wavevectors in a star must all be equal, and are always chosen by convention to be equal, positive real numbers. For any group with an inversion center at the origin, it is always possible to chose these coefficients to all be real. In the general case of a non-symmorphic space group with no inversion center at the origin, however, we must all these coefficients to be complex numbers of equal magnitude but generally unequal phase (complex argument).</p>
+<h2><a class="anchor" id="user_field_basis_cancelled_sub"></a>
+Cancelled Stars</h2>
+<p >There exist some stars of some space groups for which the only solution to the set of homogeneous linear equations that relate the coefficients of waves in a star function is the trivial solution  </p><p class="formulaDsp">
+\[
+   c_{0} = \cdots = c_{M-1} = 0 \quad
+\]
+</p>
+<p> When this occurs, it is not possible to define an associated star function. Such stars are said to be <em> cancelled </em>.</p>
+<p >The uncancelled stars of a space group are always the same as those that obey the rules for allowed reflections in a scattering experiment. Conversely, the cancelled stars (if any) are those which exhibit systematic cancellations or absences in scattering experiments.</p>
+<p >One common situation that leads to the existence of cancelled stars is if the Bravais lattice for a face- or body-centered 3D lattice is defined so as to give a conventional non-primitive unit cell, e.g., by using a simple cubic Bravais lattice with orthogonal Bravais basis vectors to describe a body-centered or face-centered cubic lattice. When using such a convention for the Bravais lattice, the associated space group will contain one or more symmetry operations that simply translate the lattice by a fraction of a unit cell, thus translating the origin to a body- or face-centered lattice site. The existence of this sort of purely translational symmetry generally yields selection rules that cause some stars of wavevectors in the Bravais lattice of the declared Bravais lattice to be cancelled. In this case, some families of wavevectors are cancelled because they are vectors that belong to the reciprocal lattice of the declared Bravais lattice (e.g., the simple cubic lattice) that actually do not belong to the reciprocal lattice of the primitive body- or face-centered lattice. The code used by pscf_pc and pscf_pg programs to generate basis functions currently uses a conventional Bravais lattice with orthogonal basis vectors by default for these sorts of centered lattices, which leads to the appearance of cancelled stars (i.e, systematic cancellation) of the space groups used to describe such lattices.</p>
+<p >In the above example of a field file for a gyroid phase with space group \( I a \overline{3} d \), the {211} star of wavevectors is the first star of nonzero wavevectors that is not cancelled. Cancellation of the {100}, {111}, and {210} wavevectors can be understood as direct results of the fact that the \( I a \overline{3} d \) is based on body-centered-cubic lattice. Other cancellations, such as the cancellation of the {110} star, are consequences of the existence of other symmetry operations in this space group.</p>
+<h2><a class="anchor" id="user_field_basis_uncancelled_sub"></a>
+Uncancelled Stars</h2>
+<p >A basis for complex or real functions with the symmetry of a specified space group can be constructed from the star functions associated with all uncancelled stars of that space group.</p>
+<p ><a class="anchor" id="user_field_basis_closed_defn"></a>Uncancelled stars may be either closed or open under inversion:</p>
+<ul>
+<li>A star \( T \) is <em> closed </em> (or, more precisely, closed under inversion) if, for every wavevector \( {\bf G} \) in \( T \), the wavevector \( -{\bf G} \) is also in \( T \).</li>
+<li>A star \( T \) is <em> open </em> (or open under inversion) if, for every wavevector \( {\bf G} \) in \( T \), \(-{\bf G}\) is not in \( T \).</li>
+</ul>
+<p >The following theorems about uncancelled stars and star functions are proved in an <a class="el" href="user_basis_page.html">appendix</a>:</p>
+<ul>
+<li>Every wavevector belongs to exactly one star.</li>
+<li>If a star is not cancelled, there exists an associated star function that is unique to within an arbitrary prefactor.</li>
+<li>Every uncancelled star is either open or closed.</li>
+<li>It is always possible to chose a prefactor for a star function associated with an uncancelled closed star so as to obtain a real function of position.</li>
+<li>If \( T \) is an uncancelled open star, there exists another star \( T&#39; \) such that, for every wavevector \( {\bf G} \in T \), \( -{\bf G} \in T&#39; \). Such pairs of open stars are said to be related by inversion.</li>
+<li>If \( T \) and \( T&#39; \) are a pair of open stars that are related by inversion, then it is possible to choose prefactors of a star function \( \phi({\bf r}) \) associated with \( T \) and a star function \( \phi&#39;({\bf r}) \) associated with \( T&#39; \) such that \( \phi&#39;({\bf r}) \) and \( \phi({\bf r}) \) are complex conjugates of one another.</li>
+</ul>
+<h2><a class="anchor" id="user_field_basis_starbasis_sub"></a>
+Conventions for Star Functions</h2>
+<p >The PSCF programs for periodic functions generates a sequence of uncancelled stars and associated star functions, such that each such star and its associated star function are both assigned an integer index in the range \( 0, \ldots , N_{\rm b} - 1 \). We denote the resulting star functions here by \( \phi_{0}({\bf r}), \ldots, \phi_{N_{\rm b}-1}({\bf r}) \) .</p>
+<p >These functions are defined so as to obey the following conventions:</p>
+<ul>
+<li>All star functions associated with closed stars are real functions of position.</li>
+<li>Star functions associated with pairs of open stars that are related by inversion are assigned consecutive indices and are defined to be complex conjugates of one another, such that, e.g.,  <p class="formulaDsp">
+\[
+         \phi_{i+1}({\bf r}) = \phi_{i}^{*}({\bf r})
+     \]
+</p>
+ for such a pair of stars with indices \( i \) and \( i+1 \).</li>
+<li>All star functions satisfy an orthonormality relation:  <p class="formulaDsp">
+\[
+        \frac{1}{V}\int d^{D}r \;
+        \phi^{*}_{i}({\bf r}) \phi_{j}({\bf r})
+        = \delta_{ij}
+     \]
+</p>
+ where the integral is taken over one unit cell and \( V \) is the generalized volume per unit cell. This normalization can be shown to implies that every coefficient in the expansion of a star function for a star with \( M \) distinct waves is a complex number of modulus \( 1/\sqrt{M} \).</li>
+<li>The overall sign or phase of each basis function is fixed by choosing a "characteristic wavevector" from among the wavevectors in each star, and requiring that the coefficient of the wave with that wavevector be a real positive number.</li>
+<li>The characteristic wavevectors of two stars that are related by inversion must be chosen such that, if \( {\bf G} \) is the characteristic wavevector of one star in such a pair, then \( -{\bf G} \) is the characteristic wavevector of the other. This relationship is required to guarantee that the star functions associated with two such stars be complex conjugates.</li>
+</ul>
+<p >The conventions described above are sufficient to define a unique star function associated with each star if they are supplemented by a convention for choosing a "characteristic wavevector" from among the waves in each star. The convention for characteristic wavevectors used in PSCF is discussed below.</p>
+<p >Because each star functions is a superposition of plane waves with wavevectors of equal magnitude, each of them is also an eigenfunction of the Laplacian. Each such star function \( \phi_{i}({\bf r}) \) thus satisfies an eigenvalue equation  </p><p class="formulaDsp">
+\[
+   -\nabla^{2}\phi_{i}(\textbf{r}) = \lambda_{i} \phi_{i}(\textbf{r})
+   \quad.
+\]
+</p>
+<p> with an eigenvalue \( \lambda_{i} \geq 0 \) equal to the square magnitude \( |{\bf G}|^{2} \) of any of the wavevectors in the associated star.</p>
+<p >Any complex or real field \( w({\bf r}) \) that is invariant under all elements of space group \( S \) can be expanded in a basis of such star functions as a Fourier series  </p><p class="formulaDsp">
+\[
+   w({\bf r}) = \sum_{i=0}^{N_{\rm b} -1 } c_{i} \phi_{i}({\bf r})
+\]
+</p>
+<p> with complex coefficients \( c_{0}, c_{1}, \ldots, c_{N-1} \), where \( N_{\rm b} \) denotes the number of basis functions used in the expansion.</p>
+<h2><a class="anchor" id="user_field_basis_waveofstar_sec"></a>
+Characteristic Wavevectors</h2>
+<p >By convention, the characteristic wavevector for a closed star or the first of two open stars that are related by inversion is taken to be the reciprocal lattice wavevector in the star for which the integer components are "greatest" when lists of integer components are compared while treating components that appear earlier in the list as more signficant than indices that appear later. The components of such a wavevector are its components in a basis of reciprocal lattice basis vectors, which are integers for any wavevector that belongs to the reciprocal lattice (i.e., any wavevector with a periodicity commensurate with that of the crystal Bravais lattice). According to this rule for ordering lists of integers, a list of integer components \( (i,j,k) \) for a three-dimensional wavevector is "greater" than a list \( (l,m,n) \) if \( i &gt;  l \), while a list \((i, j, k )\) is greater than \( (i, m, n) \) if \( j &gt;  m \), etc. For example, the characteristic wavevector associated with a star of 48 wavevectors in a simple cubic lattice that are related to (-2, 3, 1) by permutations and sign changes is thus the wavevector with indices (3, 2, 1).</p>
+<p >Wavevectors that are used in discrete Fourier transforms of functions that are defined only on the nodes of a regular grid are normally defined only modulo changes in indices by integer multiples of the number of grid points in each direction. To define a unique list of integer components for each such wavevector, we define the components of each reciprocal lattice wavevector to be the indices of an image or alias of the wavevector that yields the minimum possible value for the wavevector norm \(|{\bf G}| \). If two or more aliases of a wavevector yield vectors of exactly equal norm, we choose the image for which the list of indices is "greatest" by the definition discussed above, in which indices that appear earlier in the list are treated as more signficant. This convention requires, for example, that in the case of a one-dimensional periodic structure with a period \(L\) that is defined on a regular grid of \( N \) grid points, for even \( N\), the distinct reciprocal lattice wavenumbers are defined to be \( G_{n} = n 2\pi /L \) where \( n \) is an integer in the range \( -N/2 &lt; n \leq N/2 \). The rules discussed above provide a natural generalization of this convention to periodic functions in two or three dimensions.</p>
 <h1><a class="anchor" id="user_field_basis_real_sec"></a>
 Real Functions</h1>
 <p >The concentration and chemical potential fields that appear in SCFT calculations are real (rather than complex) functions of position. Such functions can be expanded in a basis of complex star functions, but the resulting expansion generally requires the use of complex coefficients for some star functions. It is more convenient for most purposes to express real fields as a linear combination of real basis functions.</p>
@@ -645,7 +391,7 @@ Ordering of Basis Functions</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2023 20:01:03 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Mar 15 2023 22:38:40 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

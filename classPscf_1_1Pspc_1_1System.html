@@ -52,7 +52,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="classPscf_1_1Pspc_1_1System-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Pscf::Pspc::System&lt; D &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Pspc__Module.html">Pseudo-Spectral Periodic (CPU)</a></div></div></div>
 </div><!--header-->
@@ -75,19 +74,6 @@ Inheritance diagram for Pscf::Pspc::System&lt; D &gt;:</div>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a4d4d1886b5d17d80bb0a70b7e75b7399"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1System.html#a4d4d1886b5d17d80bb0a70b7e75b7399">Field</a></td></tr>
-<tr class="memdesc:a4d4d1886b5d17d80bb0a70b7e75b7399"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Pspc_1_1Field.html" title="Dynamic array with aligned data, for use with FFTW library.">Field</a> defined on an real-space grid (an r-grid)  <a href="classPscf_1_1Pspc_1_1System.html#a4d4d1886b5d17d80bb0a70b7e75b7399">More...</a><br /></td></tr>
-<tr class="separator:a4d4d1886b5d17d80bb0a70b7e75b7399"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_classUtil_1_1Serializable"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classUtil_1_1Serializable')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classUtil_1_1Serializable.html">Util::Serializable</a></td></tr>
-<tr class="memitem:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileOArchive.html">BinaryFileOArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#aca43a1eea5ec5f13189a57892a7a6d04">OArchive</a></td></tr>
-<tr class="memdesc:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of output archive used by save method.  <a href="classUtil_1_1Serializable.html#aca43a1eea5ec5f13189a57892a7a6d04">More...</a><br /></td></tr>
-<tr class="separator:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileIArchive.html">BinaryFileIArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">IArchive</a></td></tr>
-<tr class="memdesc:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of input archive used by load method.  <a href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">More...</a><br /></td></tr>
-<tr class="separator:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Construction and Destruction</div></td></tr>
@@ -162,7 +148,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1401af1702638bbf7044f132ae839613"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1System.html#a1401af1702638bbf7044f132ae839613">pressure</a> () const</td></tr>
 <tr class="memdesc:a1401af1702638bbf7044f132ae839613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get precomputed pressure x monomer volume kT.  <a href="classPscf_1_1Pspc_1_1System.html#a1401af1702638bbf7044f132ae839613">More...</a><br /></td></tr>
 <tr class="separator:a1401af1702638bbf7044f132ae839613"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Output Operations (correspond to command file commands)</div></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Thermodynamic Data Output</div></td></tr>
+<tr class="memitem:a733aaf83370368bb07876915bbb492b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1System.html#a733aaf83370368bb07876915bbb492b1">writeParamNoSweep</a> (std::ostream &amp;out) const</td></tr>
+<tr class="memdesc:a733aaf83370368bb07876915bbb492b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write parameter file to an ostream, omitting any sweep block.  <a href="classPscf_1_1Pspc_1_1System.html#a733aaf83370368bb07876915bbb492b1">More...</a><br /></td></tr>
+<tr class="separator:a733aaf83370368bb07876915bbb492b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fb8d4a4d653c6af7d3afcbef566a1d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1System.html#a8fb8d4a4d653c6af7d3afcbef566a1d8">writeThermo</a> (std::ostream &amp;out)</td></tr>
+<tr class="memdesc:a8fb8d4a4d653c6af7d3afcbef566a1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write thermodynamic properties to a file.  <a href="classPscf_1_1Pspc_1_1System.html#a8fb8d4a4d653c6af7d3afcbef566a1d8">More...</a><br /></td></tr>
+<tr class="separator:a8fb8d4a4d653c6af7d3afcbef566a1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Field Output</div></td></tr>
 <tr class="memitem:ac38ec7af629c3e8b510ecc983fea42db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1System.html#ac38ec7af629c3e8b510ecc983fea42db">writeWBasis</a> (const std::string &amp;filename) const</td></tr>
 <tr class="memdesc:ac38ec7af629c3e8b510ecc983fea42db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write chemical potential fields in symmetrized basis format.  <a href="classPscf_1_1Pspc_1_1System.html#ac38ec7af629c3e8b510ecc983fea42db">More...</a><br /></td></tr>
 <tr class="separator:ac38ec7af629c3e8b510ecc983fea42db"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,6 +171,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6330ee49acfbd9e20765b9507a03e7c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1System.html#a6330ee49acfbd9e20765b9507a03e7c1">writeBlockCRGrid</a> (const std::string &amp;filename) const</td></tr>
 <tr class="memdesc:a6330ee49acfbd9e20765b9507a03e7c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write c-fields for all blocks and solvents in r-grid format.  <a href="classPscf_1_1Pspc_1_1System.html#a6330ee49acfbd9e20765b9507a03e7c1">More...</a><br /></td></tr>
 <tr class="separator:a6330ee49acfbd9e20765b9507a03e7c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Propagator Output</div></td></tr>
 <tr class="memitem:ad1c4f7670ec5c7a19e7053778cc24cb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1System.html#ad1c4f7670ec5c7a19e7053778cc24cb5">writeQSlice</a> (std::string const &amp;filename, int polymerId, int blockId, int directionId, int segmentId) const</td></tr>
 <tr class="memdesc:ad1c4f7670ec5c7a19e7053778cc24cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write slice of a propagator at fixed s in r-grid format.  <a href="classPscf_1_1Pspc_1_1System.html#ad1c4f7670ec5c7a19e7053778cc24cb5">More...</a><br /></td></tr>
 <tr class="separator:ad1c4f7670ec5c7a19e7053778cc24cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,19 +184,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab10b44eec23c2c5c48afbd34e72c49ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1System.html#ab10b44eec23c2c5c48afbd34e72c49ff">writeQAll</a> (std::string const &amp;basename)</td></tr>
 <tr class="memdesc:ab10b44eec23c2c5c48afbd34e72c49ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write all propagators of all blocks, each to a separate file.  <a href="classPscf_1_1Pspc_1_1System.html#ab10b44eec23c2c5c48afbd34e72c49ff">More...</a><br /></td></tr>
 <tr class="separator:ab10b44eec23c2c5c48afbd34e72c49ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a733aaf83370368bb07876915bbb492b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1System.html#a733aaf83370368bb07876915bbb492b1">writeParamNoSweep</a> (std::ostream &amp;out) const</td></tr>
-<tr class="memdesc:a733aaf83370368bb07876915bbb492b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write parameter file to an ostream, omitting any sweep block.  <a href="classPscf_1_1Pspc_1_1System.html#a733aaf83370368bb07876915bbb492b1">More...</a><br /></td></tr>
-<tr class="separator:a733aaf83370368bb07876915bbb492b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fb8d4a4d653c6af7d3afcbef566a1d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1System.html#a8fb8d4a4d653c6af7d3afcbef566a1d8">writeThermo</a> (std::ostream &amp;out)</td></tr>
-<tr class="memdesc:a8fb8d4a4d653c6af7d3afcbef566a1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write thermodynamic properties to a file.  <a href="classPscf_1_1Pspc_1_1System.html#a8fb8d4a4d653c6af7d3afcbef566a1d8">More...</a><br /></td></tr>
-<tr class="separator:a8fb8d4a4d653c6af7d3afcbef566a1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a378c53b360c57912fa5a02534a01aa3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1System.html#a378c53b360c57912fa5a02534a01aa3a">writeStars</a> (const std::string &amp;outFileName) const</td></tr>
-<tr class="memdesc:a378c53b360c57912fa5a02534a01aa3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output information about stars and symmetrized basis functions.  <a href="classPscf_1_1Pspc_1_1System.html#a378c53b360c57912fa5a02534a01aa3a">More...</a><br /></td></tr>
-<tr class="separator:a378c53b360c57912fa5a02534a01aa3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32a77b47eb92d555d839a258a9caa9b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1System.html#a32a77b47eb92d555d839a258a9caa9b7">writeWaves</a> (const std::string &amp;outFileName) const</td></tr>
-<tr class="memdesc:a32a77b47eb92d555d839a258a9caa9b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output information about waves.  <a href="classPscf_1_1Pspc_1_1System.html#a32a77b47eb92d555d839a258a9caa9b7">More...</a><br /></td></tr>
-<tr class="separator:a32a77b47eb92d555d839a258a9caa9b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Field Operations (correspond to command file commands)</div></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Crystallographic Information</div></td></tr>
+<tr class="memitem:abbaf0ab47b1b93eb288c33949aab59e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1System.html#abbaf0ab47b1b93eb288c33949aab59e8">writeStars</a> (std::string const &amp;filename) const</td></tr>
+<tr class="memdesc:abbaf0ab47b1b93eb288c33949aab59e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output information about stars and symmetrized basis functions.  <a href="classPscf_1_1Pspc_1_1System.html#abbaf0ab47b1b93eb288c33949aab59e8">More...</a><br /></td></tr>
+<tr class="separator:abbaf0ab47b1b93eb288c33949aab59e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d2b54c3adb3352cfa645a5f26cf83f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1System.html#ae3d2b54c3adb3352cfa645a5f26cf83f">writeWaves</a> (std::string const &amp;filename) const</td></tr>
+<tr class="memdesc:ae3d2b54c3adb3352cfa645a5f26cf83f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output information about waves.  <a href="classPscf_1_1Pspc_1_1System.html#ae3d2b54c3adb3352cfa645a5f26cf83f">More...</a><br /></td></tr>
+<tr class="separator:ae3d2b54c3adb3352cfa645a5f26cf83f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a228406b94ea987e676c140c66c88b788"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1System.html#a228406b94ea987e676c140c66c88b788">writeGroup</a> (std::string const &amp;filename) const</td></tr>
+<tr class="memdesc:a228406b94ea987e676c140c66c88b788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output all elements of the space group.  <a href="classPscf_1_1Pspc_1_1System.html#a228406b94ea987e676c140c66c88b788">More...</a><br /></td></tr>
+<tr class="separator:a228406b94ea987e676c140c66c88b788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Field File Manipulations</div></td></tr>
 <tr class="memitem:a75d54c8d4598d345a671175b43674ee0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1System.html#a75d54c8d4598d345a671175b43674ee0">basisToRGrid</a> (const std::string &amp;inFileName, const std::string &amp;outFileName)</td></tr>
 <tr class="memdesc:a75d54c8d4598d345a671175b43674ee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a field from symmetrized basis format to r-grid format.  <a href="classPscf_1_1Pspc_1_1System.html#a75d54c8d4598d345a671175b43674ee0">More...</a><br /></td></tr>
 <tr class="separator:a75d54c8d4598d345a671175b43674ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -580,6 +572,13 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classUtil_1_1Serializable"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classUtil_1_1Serializable')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classUtil_1_1Serializable.html">Util::Serializable</a></td></tr>
+<tr class="memitem:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileOArchive.html">BinaryFileOArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#aca43a1eea5ec5f13189a57892a7a6d04">OArchive</a></td></tr>
+<tr class="memdesc:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of output archive used by save method.  <a href="classUtil_1_1Serializable.html#aca43a1eea5ec5f13189a57892a7a6d04">More...</a><br /></td></tr>
+<tr class="separator:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileIArchive.html">BinaryFileIArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">IArchive</a></td></tr>
+<tr class="memdesc:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of input archive used by load method.  <a href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">More...</a><br /></td></tr>
+<tr class="separator:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classUtil_1_1ParamComponent"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classUtil_1_1ParamComponent')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComponent.html">Util::ParamComponent</a></td></tr>
 <tr class="memitem:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a5350c0432130f7feba8392f5b3a75cb4">initStatic</a> ()</td></tr>
 <tr class="memdesc:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize static echo member to false.  <a href="classUtil_1_1ParamComponent.html#a5350c0432130f7feba8392f5b3a75cb4">More...</a><br /></td></tr>
@@ -648,37 +647,27 @@ class Pscf::Pspc::System&lt; D &gt;</div><p >Main class for SCFT simulation of o
 <p >A <a class="el" href="classPscf_1_1Pspc_1_1System.html" title="Main class for SCFT simulation of one system.">System</a> has (among other components):</p>
 <ul>
 <li>a <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html" title="Solver for a mixture of polymers and solvents.">Mixture</a> (a container for polymer and solvent solvers)</li>
-<li>a <a class="el" href="classPscf_1_1Pspc_1_1Domain.html" title="Spatial domain and spatial discretization for a periodic structure.">Domain</a> (a description of the crystal domain and discretization)</li>
-<li>an <a class="el" href="classPscf_1_1Pspc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a></li>
-<li><a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer or particle type.">Monomer</a> chemical fields in both basis and grid formats</li>
-<li><a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer or particle type.">Monomer</a> concentration fields in both basis and grid formats</li>
+<li>an <a class="el" href="classPscf_1_1Interaction.html" title="Flory-Huggins excess free energy model.">Interaction</a> (list of binary chi parameters)</li>
+<li>a <a class="el" href="classPscf_1_1Pspc_1_1Domain.html" title="Spatial domain and spatial discretization for a periodic structure.">Domain</a> (description of the unit cell and discretization)</li>
+<li>a container of monomer chemical potential fields</li>
+<li>a container of monomer concentration fields</li>
 </ul>
-<p >In a parameter file format, the main block is a <a class="el" href="classPscf_1_1Pspc_1_1System.html" title="Main class for SCFT simulation of one system.">System</a>{...} block that contains subblocks for sub-objects.</p>
+<p >A system may also optionally contain <a class="el" href="classPscf_1_1Pspc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> and <a class="el" href="classPscf_1_1Pspc_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a> objects. In a parameter file format, the main block is a <a class="el" href="classPscf_1_1Pspc_1_1System.html" title="Main class for SCFT simulation of one system.">System</a>{...} block that contains subblocks for sub-objects.</p>
+<p >A minimal main program that uses this class template to implement a program for 3-dimensional structures (D=3) looks something like this: </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv) {</div>
+<div class="line">   <a class="code hl_class" href="classPscf_1_1Pspc_1_1System.html">Pscf::Pspc::System&lt;3&gt;</a> system;</div>
+<div class="line">   system.<a class="code hl_function" href="classPscf_1_1Pspc_1_1System.html#a11d3033015c703b8d03c0b142e4779da">setOptions</a>(argc, argv);</div>
+<div class="line">   system.<a class="code hl_function" href="classPscf_1_1Pspc_1_1System.html#a68cd051eb70108f5804b2a4bf46aed53">readParam</a>();</div>
+<div class="line">   system.<a class="code hl_function" href="classPscf_1_1Pspc_1_1System.html#a086083667b24f8b55e2c22f6c3592704">readCommands</a>();</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassPscf_1_1Pspc_1_1System_html"><div class="ttname"><a href="classPscf_1_1Pspc_1_1System.html">Pscf::Pspc::System</a></div><div class="ttdoc">Main class for SCFT simulation of one system.</div><div class="ttdef"><b>Definition:</b> <a href="pspc_2System_8h_source.html#l00075">pspc/System.h:76</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Pspc_1_1System_html_a086083667b24f8b55e2c22f6c3592704"><div class="ttname"><a href="classPscf_1_1Pspc_1_1System.html#a086083667b24f8b55e2c22f6c3592704">Pscf::Pspc::System::readCommands</a></div><div class="ttdeci">void readCommands(std::istream &amp;in)</div><div class="ttdoc">Read command script from a file.</div><div class="ttdef"><b>Definition:</b> <a href="pspc_2System_8tpp_source.html#l00255">pspc/System.tpp:255</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Pspc_1_1System_html_a11d3033015c703b8d03c0b142e4779da"><div class="ttname"><a href="classPscf_1_1Pspc_1_1System.html#a11d3033015c703b8d03c0b142e4779da">Pscf::Pspc::System::setOptions</a></div><div class="ttdeci">void setOptions(int argc, char **argv)</div><div class="ttdoc">Process command line options.</div><div class="ttdef"><b>Definition:</b> <a href="pspc_2System_8tpp_source.html#l00105">pspc/System.tpp:105</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Pspc_1_1System_html_a68cd051eb70108f5804b2a4bf46aed53"><div class="ttname"><a href="classPscf_1_1Pspc_1_1System.html#a68cd051eb70108f5804b2a4bf46aed53">Pscf::Pspc::System::readParam</a></div><div class="ttdeci">virtual void readParam(std::istream &amp;in)</div><div class="ttdoc">Read input parameters (with opening and closing lines).</div><div class="ttdef"><b>Definition:</b> <a href="pspc_2System_8tpp_source.html#l00237">pspc/System.tpp:237</a></div></div>
+</div><!-- fragment --><p> This main program is given for D=1, 2, and 3 dimensional structures in the files <a class="el" href="pscf__pc1_8cpp_source.html">pscf_pc1.cpp</a>, <a class="el" href="pscf__pc2_8cpp_source.html">pscf_pc2.cpp</a>, and <a class="el" href="pscf__pc3_8cpp_source.html">pscf_pc3.cpp</a></p>
 <p ><a class="el" href="user_param_pc_page.html">Parameter File Format</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00061">61</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a4d4d1886b5d17d80bb0a70b7e75b7399" name="a4d4d1886b5d17d80bb0a70b7e75b7399"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d4d1886b5d17d80bb0a70b7e75b7399">&#9670;&#160;</a></span>Field</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="classPscf_1_1Pspc_1_1RField.html">RField</a>&lt;D&gt; <a class="el" href="classPscf_1_1Pspc_1_1System.html">Pscf::Pspc::System</a>&lt; D &gt;::Field</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classPscf_1_1Pspc_1_1Field.html" title="Dynamic array with aligned data, for use with FFTW library.">Field</a> defined on an real-space grid (an r-grid) </p>
-
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00067">67</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00075">75</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a573f3e814a477a7b21ee148774246312" name="a573f3e814a477a7b21ee148774246312"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a573f3e814a477a7b21ee148774246312">&#9670;&#160;</a></span>System()</h2>
 
@@ -695,7 +684,7 @@ template&lt;int D&gt; </div>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00053">53</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00045">45</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="BracketPolicy_8cpp_source.html#l00028">Util::BracketPolicy::set()</a>, and <a class="el" href="ParamComposite_8cpp_source.html#l00377">Util::ParamComposite::setClassName()</a>.</p>
 
@@ -717,7 +706,7 @@ template&lt;int D&gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00090">90</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00082">82</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -751,8 +740,16 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Process command line options. </p>
+<p >This function takes the same arguments as any C/C++ main program function. The arguments of the main function should d be passed to this function unaltered, to allow this function to process the command line options.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>number of command line arguments </td></tr>
+    <tr><td class="paramname">argv</td><td>array of pointers to command line arguments </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00113">113</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00105">105</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="ParamComponent_8cpp_source.html#l00062">Util::ParamComponent::setEcho()</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
@@ -794,7 +791,7 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classUtil_1_1ParamComposite.html#a6fc094b057fd9a21641b089f6f063b39">Util::ParamComposite</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00245">245</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00237">237</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -813,8 +810,9 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Read input parameters from default param file. </p>
+<p >This function reads the parameter file set by the -p command line option. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00256">256</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00248">248</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -854,7 +852,7 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classUtil_1_1ParamComposite.html#a172a3a656b5829c8d758424ad09a22a6">Util::ParamComposite</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00186">186</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00178">178</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -886,7 +884,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00418">418</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00255">255</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -907,8 +905,9 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Read commands from default command file. </p>
+<p >This function reads the parameter file set by the -c command line option. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00710">710</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00546">546</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
@@ -933,7 +932,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Read chemical potential fields in symmetry adapted basis format. </p>
-<p >This function opens and reads the file with the name given by the "filename" string, which must contain chemical potential fields in symmetry-adapted basis format. The function copies these fields to set new values for the system w fields in basis format, and also computes and resets the system w fields in r-space format. On exit, both <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.<a class="el" href="classPscf_1_1Pspc_1_1System.html#a5c5ae1c0beb6da6af9b96a971d4b1cbd" title="Get associated Basis object by reference.">basis()</a> and <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.rgrid() have been reset, <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.hasData and <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.isSymmetric() are true, and <a class="el" href="classPscf_1_1Pspc_1_1System.html#ae5fab84d01f8c2ba92d028d625382b7f" title="Have c fields been computed from the current w fields?">hasCFields()</a> is false.</p>
+<p >This function opens and reads the file with the name given by the "filename" string parameter, which must contain chemical potential fields in symmetry-adapted basis format. The function sets the system w fields equal to those given in this file, by copying elements of the representation in basis format and computing the representation in r-grid format. On exit, both <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.<a class="el" href="classPscf_1_1Pspc_1_1System.html#a5c5ae1c0beb6da6af9b96a971d4b1cbd" title="Get associated Basis object by reference.">basis()</a> and <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.rgrid() have been reset, <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.hasData and <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.isSymmetric() are true, and <a class="el" href="classPscf_1_1Pspc_1_1System.html#ae5fab84d01f8c2ba92d028d625382b7f" title="Have c fields been computed from the current w fields?">hasCFields()</a> is false.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>name of input w-field basis file </td></tr>
@@ -941,7 +940,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00724">724</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00560">560</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -964,7 +963,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Read chemical potential fields in real space grid (r-grid) format. </p>
-<p >This function opens and reads the file with the name given by the "filename" string, which must contains chemical potential fields in real space grid (r-grid) format. The function sets values for system w fields in r-grid format. It does not set attempt to set field values in symmetry-adapted basis format, because it cannot be known whether the r-grid field exhibits the declared space group symmetry. On exit, <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.rgrid() is reset and <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.hasData() is true, while <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.isSymmetric() and <a class="el" href="classPscf_1_1Pspc_1_1System.html#ae5fab84d01f8c2ba92d028d625382b7f" title="Have c fields been computed from the current w fields?">hasCFields()</a> are false.</p>
+<p >This function opens and reads the file with the name given by the "filename" string, which must contain chemical potential fields in real space grid (r-grid) format. The function sets values for system w fields in r-grid format. It does not set attempt to set field values in symmetry-adapted basis format, because it cannot be known whether the r-grid field exhibits the declared space group symmetry. On exit, <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.rgrid() is reset and <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.hasData() is true, while <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.isSymmetric() and <a class="el" href="classPscf_1_1Pspc_1_1System.html#ae5fab84d01f8c2ba92d028d625382b7f" title="Have c fields been computed from the current w fields?">hasCFields()</a> are false.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>name of input w-field basis file </td></tr>
@@ -972,7 +971,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00744">744</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00580">580</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1003,7 +1002,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00765">765</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00601">601</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1028,7 +1027,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Set new w fields, in real-space (r-grid) format. </p>
-<p >This function set values for w fields in r-grid format, but does not set components the symmetry-adapted basis format. On exit, w.rgrid() is reset, <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.hasData() is true, <a class="el" href="classPscf_1_1Pspc_1_1System.html#ae5fab84d01f8c2ba92d028d625382b7f" title="Have c fields been computed from the current w fields?">hasCFields()</a> is false and <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.isSymmetric() is false.</p>
+<p >This function set values for w fields in r-grid format, but does not set components the symmetry-adapted basis format. On return, w.rgrid() is reset, <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.hasData() is true, <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.isSymmetric() is false, and <a class="el" href="classPscf_1_1Pspc_1_1System.html#ae5fab84d01f8c2ba92d028d625382b7f" title="Have c fields been computed from the current w fields?">hasCFields()</a> is false.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fields</td><td>array of new w (chemical potential) fields </td></tr>
@@ -1036,7 +1035,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00778">778</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00614">614</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1070,7 +1069,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01627">1627</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00628">628</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1095,6 +1094,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Set parameters of the associated unit cell. </p>
+<p >The lattice set in this <a class="el" href="classPscf_1_1UnitCell.html" title="Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.">UnitCell</a> must agree with any lattice value that was set previously in the parameter file.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">unitCell</td><td>new UnitCell&lt;D&gt; (i.e., new parameters) </td></tr>
@@ -1102,7 +1102,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00792">792</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00677">677</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1135,6 +1135,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Set state of the associated unit cell. </p>
+<p >The lattice parameter must agree with any lattice value that was set previously in the parameter file.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">lattice</td><td>lattice system </td></tr>
@@ -1143,7 +1144,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00806">806</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00691">691</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1166,6 +1167,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Set parameters of the associated unit cell. </p>
+<p >The size of the FSArray&lt;double&gt; parameters must match the expected number of parameters for the current lattice type.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">parameters</td><td>array of new unit cell parameters. </td></tr>
@@ -1173,7 +1175,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00820">820</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00705">705</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1196,8 +1198,9 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Solve the modified diffusion equation once, without iteration. </p>
-<p >This function calls the <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html#a97e4321fa5ab1c69b92387ad1ca97723" title="Compute partition functions and concentrations.">Mixture::compute()</a> function to solve the statistical mechanics problem for a non-interacting system subjected to the currrent chemical potential fields. This requires solution of the modified diffusion equation for all polymers, computation of Boltzmann weights for all solvents, computation of molecular partition * functions for all species, and computation of concentration fields for blocks and solvents, and computation of overall concentrations for all monomer types. This function does not compute the canonical (Helmholtz) free energy or grand-canonical free energy (i.e., pressure). Upon return, the flag hasCFields is set true.</p>
+<p >This function calls the <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html#a97e4321fa5ab1c69b92387ad1ca97723" title="Compute partition functions and concentrations.">Mixture::compute()</a> function to solve the statistical mechanics problem for a non-interacting system subjected to the currrent chemical potential fields. This requires solution of the modified diffusion equation for all polymers, computation of Boltzmann weights for all solvents, computation of molecular partition functions for all species, computation of concentration fields for blocks and solvents, and computation of overall concentrations for all monomer types. This function does not compute the canonical (Helmholtz) free energy or grand-canonical free energy (i.e., pressure). Upon return, the flag hasCFields is set true.</p>
 <p >If argument needStress == true, then this function also calls <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html#adb67a19bef1e4014c6f4d876bc9658f8" title="Compute derivatives of free energy w/ respect to cell parameters.">Mixture&lt;D&gt;::computeStress()</a> to compute the stress.</p>
+<dl class="section pre"><dt>Precondition</dt><dd>The <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.hasData() flag must be true on entry, to confirm that chemical potential fields have been set.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">needStress</td><td>true if stress is needed, false otherwise </td></tr>
@@ -1205,7 +1208,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00832">832</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00720">720</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1231,7 +1234,9 @@ template&lt;int D&gt; </div>
 
 <p>Iteratively solve a SCFT problem. </p>
 <p >This function calls the iterator to attempt to solve the SCFT problem for the current mixture and system parameters, using the current chemical potential fields and current unit cell parameter values as initial guesses. On exit, hasCFields is set true whether or not convergence is obtained to within the desired tolerance. The Helmholtz free energy and pressure are computed if and only if convergence is obtained.</p>
-<dl class="section pre"><dt>Precondition</dt><dd>The <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.hasData() flag must be true on entry.</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.hasData() flag must be true on entry, to confirm that chemical potential fields have been set.</dd>
+<dd>
+The <a class="el" href="classPscf_1_1Pspc_1_1System.html#aa31356967422ab23a22b096096621d17" title="Get all of the chemical potential fields (const reference).">w()</a>.isSymmetric() flag must be set true if the chosen iterator uses a basis representation, and thus requires this.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">isContinuation</td><td>true if continuation within a sweep. </td></tr>
@@ -1240,7 +1245,7 @@ template&lt;int D&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>returns 0 for successful convergence, 1 for failure. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00860">860</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00748">748</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1264,7 +1269,7 @@ template&lt;int D&gt; </div>
 <p >This function uses a <a class="el" href="classPscf_1_1Pspc_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a> object that was initialized in the parameter file to solve the SCF problem at a sequence of points along a line in parameter space. The nature of this sequence of points is determined by implementation of a subclass of <a class="el" href="classPscf_1_1Pspc_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a> and the parameters passed to the sweep object in the parameter file. The <a class="el" href="classPscf_1_1Pspc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> that is initialized in the parameter file is called at each state point.</p>
 <p >An Exception is thrown if this is called when no <a class="el" href="classPscf_1_1Pspc_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a> has been created (i.e., if <a class="el" href="classPscf_1_1Pspc_1_1System.html#aae96a1c41d702cf94109f8e232f547dd" title="Does this system have a Sweep object?">hasSweep()</a> == false). </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00889">889</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00777">777</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1285,9 +1290,9 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Compute free energy density and pressure for current fields. </p>
-<p >This function should be called after a successful call of <a class="el" href="classPscf_1_1Pspc_1_1Iterator.html#a3c08f1b17a92f935ebff06fb8645a806" title="Iterate to solution.">Iterator::solve()</a>. Resulting values are stored and then accessed by the <a class="el" href="classPscf_1_1Pspc_1_1System.html#a136e82694603e68c4671e2ccf084753d" title="Get precomputed Helmoltz free energy per monomer / kT.">fHelmholtz()</a> and <a class="el" href="classPscf_1_1Pspc_1_1System.html#a1401af1702638bbf7044f132ae839613" title="Get precomputed pressure x monomer volume kT.">pressure()</a> functions. </p>
+<p >This function should be called after a successful call of <a class="el" href="classPscf_1_1Pspc_1_1System.html#a082fb93fb8eb308f1765e96502fcf363" title="Iteratively solve a SCFT problem.">System::iterate()</a> or <a class="el" href="classPscf_1_1Pspc_1_1Iterator.html#a3c08f1b17a92f935ebff06fb8645a806" title="Iterate to solution.">Iterator::solve()</a>. Resulting values are stored and then accessed by the <a class="el" href="classPscf_1_1Pspc_1_1System.html#a136e82694603e68c4671e2ccf084753d" title="Get precomputed Helmoltz free energy per monomer / kT.">fHelmholtz()</a> and <a class="el" href="classPscf_1_1Pspc_1_1System.html#a1401af1702638bbf7044f132ae839613" title="Get precomputed pressure x monomer volume kT.">pressure()</a> functions. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00907">907</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00795">795</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="PolymerTmpl_8h_source.html#l00255">Pscf::PolymerTmpl&lt; Block &gt;::length()</a>, <a class="el" href="Species_8h_source.html#l00096">Pscf::Species::mu()</a>, <a class="el" href="Species_8h_source.html#l00090">Pscf::Species::phi()</a>, <a class="el" href="SolventDescriptor_8h_source.html#l00135">Pscf::SolventDescriptor::size()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1318,7 +1323,7 @@ template&lt;int D&gt; </div>
 <p>Get precomputed Helmoltz free energy per monomer / kT. </p>
 <p >The value retrieved by this function is computed by the <a class="el" href="classPscf_1_1Pspc_1_1System.html#ae6606d01203672d4344ee798e4dc14ac" title="Compute free energy density and pressure for current fields.">computeFreeEnergy()</a> function. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01029">1029</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01123">1123</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1349,9 +1354,72 @@ template&lt;int D&gt; </div>
 <p>Get precomputed pressure x monomer volume kT. </p>
 <p >The value retrieved by this function is computed by the <a class="el" href="classPscf_1_1Pspc_1_1System.html#ae6606d01203672d4344ee798e4dc14ac" title="Compute free energy density and pressure for current fields.">computeFreeEnergy()</a> function. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01037">1037</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01131">1131</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+
+</div>
+</div>
+<a id="a733aaf83370368bb07876915bbb492b1" name="a733aaf83370368bb07876915bbb492b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a733aaf83370368bb07876915bbb492b1">&#9670;&#160;</a></span>writeParamNoSweep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int D&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPscf_1_1Pspc_1_1System.html">Pscf::Pspc::System</a>&lt; D &gt;::writeParamNoSweep </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write parameter file to an ostream, omitting any sweep block. </p>
+<p >This function omits the <a class="el" href="classPscf_1_1Pspc_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a> block of the parameter file, if any, in order to allow the output produced during a sweep to refer only to parameters relevant to a single state point, and to be rerunnable as a parameter file for a single SCFT calculation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>output stream </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00935">935</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+
+</div>
+</div>
+<a id="a8fb8d4a4d653c6af7d3afcbef566a1d8" name="a8fb8d4a4d653c6af7d3afcbef566a1d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fb8d4a4d653c6af7d3afcbef566a1d8">&#9670;&#160;</a></span>writeThermo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int D&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPscf_1_1Pspc_1_1System.html">Pscf::Pspc::System</a>&lt; D &gt;::writeThermo </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write thermodynamic properties to a file. </p>
+<p >This function outputs Helmholtz free energy per monomer, pressure (in units of kT per monomer volume), the volume fraction and chemical potential of each species, and all unit cell parameters.</p>
+<p >If parameter "out" is a file that already exists, this function will append this information to the end of the file, rather than overwriting that file. Calling writeParamNoSweep and writeThermo in succession with the same file will thus produce a single file containing both input parameters and resulting thermodynanic properties.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>output stream </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00951">951</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1381,7 +1449,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01196">1196</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01014">1014</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1413,7 +1481,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01210">1210</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01028">1028</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1445,7 +1513,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01222">1222</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01040">1040</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1477,7 +1545,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01236">1236</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01054">1054</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1502,7 +1570,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Write c-fields for all blocks and solvents in r-grid format. </p>
-<p >Writes concentrations for all blocks of all polymers and all solvent species in r-grid format. Columns associated with blocks appear ordered by polymer id and then by block id, followed by solvent species ordered by solvent id.</p>
+<p >Writes concentrations for all blocks of all polymers and all solvent species in r-grid format. Columns associated with blocks appear ordered by polymer id and then by block id, with blocks of the same polymer listed sequentially, followed by columns associated with solvent species ordered by solvent id.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>name of output file </td></tr>
@@ -1510,7 +1578,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01249">1249</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01067">1067</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1574,7 +1642,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01272">1272</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01090">1090</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="PolymerTmpl_8h_source.html#l00241">Pscf::PolymerTmpl&lt; Block &gt;::nBlock()</a>, <a class="el" href="PolymerTmpl_8h_source.html#l00304">Pscf::PolymerTmpl&lt; Block &gt;::propagator()</a>, <a class="el" href="pspc_2solvers_2Propagator_8h_source.html#l00262">Pscf::Pspc::Propagator&lt; D &gt;::q()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1631,7 +1699,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01295">1295</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01113">1113</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="PolymerTmpl_8h_source.html#l00241">Pscf::PolymerTmpl&lt; Block &gt;::nBlock()</a>, <a class="el" href="PolymerTmpl_8h_source.html#l00304">Pscf::PolymerTmpl&lt; Block &gt;::propagator()</a>, <a class="el" href="pspc_2solvers_2Propagator_8h_source.html#l00254">Pscf::Pspc::Propagator&lt; D &gt;::tail()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1688,7 +1756,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01316">1316</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01134">1134</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="PolymerTmpl_8h_source.html#l00241">Pscf::PolymerTmpl&lt; Block &gt;::nBlock()</a>, <a class="el" href="pspc_2solvers_2Propagator_8h_source.html#l00280">Pscf::Pspc::Propagator&lt; D &gt;::ns()</a>, <a class="el" href="PolymerTmpl_8h_source.html#l00304">Pscf::PolymerTmpl&lt; Block &gt;::propagator()</a>, <a class="el" href="pspc_2solvers_2Propagator_8h_source.html#l00262">Pscf::Pspc::Propagator&lt; D &gt;::q()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1721,75 +1789,14 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01356">1356</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01174">1174</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ioUtil_8cpp_source.html#l00052">Util::toString()</a>.</p>
 
 </div>
 </div>
-<a id="a733aaf83370368bb07876915bbb492b1" name="a733aaf83370368bb07876915bbb492b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a733aaf83370368bb07876915bbb492b1">&#9670;&#160;</a></span>writeParamNoSweep()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Pspc_1_1System.html">Pscf::Pspc::System</a>&lt; D &gt;::writeParamNoSweep </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>out</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Write parameter file to an ostream, omitting any sweep block. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">out</td><td>output stream </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l00263">263</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
-
-</div>
-</div>
-<a id="a8fb8d4a4d653c6af7d3afcbef566a1d8" name="a8fb8d4a4d653c6af7d3afcbef566a1d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fb8d4a4d653c6af7d3afcbef566a1d8">&#9670;&#160;</a></span>writeThermo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Pspc_1_1System.html">Pscf::Pspc::System</a>&lt; D &gt;::writeThermo </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>out</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Write thermodynamic properties to a file. </p>
-<p >This function outputs Helmholtz free energy per monomer, pressure (in units of kT per monomer volume), and the volume fraction and chemical potential of each species.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">out</td><td>output stream </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01045">1045</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
-
-</div>
-</div>
-<a id="a378c53b360c57912fa5a02534a01aa3a" name="a378c53b360c57912fa5a02534a01aa3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a378c53b360c57912fa5a02534a01aa3a">&#9670;&#160;</a></span>writeStars()</h2>
+<a id="abbaf0ab47b1b93eb288c33949aab59e8" name="abbaf0ab47b1b93eb288c33949aab59e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbaf0ab47b1b93eb288c33949aab59e8">&#9670;&#160;</a></span>writeStars()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1799,8 +1806,8 @@ template&lt;int D&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classPscf_1_1Pspc_1_1System.html">Pscf::Pspc::System</a>&lt; D &gt;::writeStars </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>outFileName</em></td><td>)</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1810,19 +1817,19 @@ template&lt;int D&gt; </div>
 <p >This function opens a file with the specified filename, calls <a class="el" href="classPscf_1_1Basis.html#a585436ef20f1b89c6aab1ba3f97e15aa" title="Print a list of all stars to an output stream.">Basis&lt;D&gt;::outputStars</a>, and closes the file before returning.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">outFileName</td><td>name of output file </td></tr>
+    <tr><td class="paramname">filename</td><td>name of output file </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01383">1383</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01201">1201</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
-<a id="a32a77b47eb92d555d839a258a9caa9b7" name="a32a77b47eb92d555d839a258a9caa9b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32a77b47eb92d555d839a258a9caa9b7">&#9670;&#160;</a></span>writeWaves()</h2>
+<a id="ae3d2b54c3adb3352cfa645a5f26cf83f" name="ae3d2b54c3adb3352cfa645a5f26cf83f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d2b54c3adb3352cfa645a5f26cf83f">&#9670;&#160;</a></span>writeWaves()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1832,8 +1839,8 @@ template&lt;int D&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classPscf_1_1Pspc_1_1System.html">Pscf::Pspc::System</a>&lt; D &gt;::writeWaves </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>outFileName</em></td><td>)</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1843,14 +1850,44 @@ template&lt;int D&gt; </div>
 <p >This function opens a file with the specified filename, calls <a class="el" href="classPscf_1_1Basis.html#af9a597de566186cf18cd1e3f32557a99" title="Print a list of all waves to an output stream.">Basis&lt;D&gt;::outputWaves</a>, and closes the file before returning.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">outFileName</td><td>name of output file for wave data </td></tr>
+    <tr><td class="paramname">filename</td><td>name of output file </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01398">1398</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01216">1216</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+
+</div>
+</div>
+<a id="a228406b94ea987e676c140c66c88b788" name="a228406b94ea987e676c140c66c88b788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a228406b94ea987e676c140c66c88b788">&#9670;&#160;</a></span>writeGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int D&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPscf_1_1Pspc_1_1System.html">Pscf::Pspc::System</a>&lt; D &gt;::writeGroup </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Output all elements of the space group. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>name of output file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01231">1231</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1883,6 +1920,8 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Convert a field from symmetrized basis format to r-grid format. </p>
+<p >This function reads a field file in basis format, converts the fields to r-grid format, and writes the fields in r-grid format to a different file.</p>
+<p >This and other field conversion functions do not change the w or c fields stored by this <a class="el" href="classPscf_1_1Pspc_1_1System.html" title="Main class for SCFT simulation of one system.">System</a> - all required calculations are performed using temporary or mutable memory.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">inFileName</td><td>name of input file (basis format) </td></tr>
@@ -1891,7 +1930,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01415">1415</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01242">1242</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1924,6 +1963,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Convert a field from real-space grid to symmetrized basis format. </p>
+<p >This function checks if the input fields have the declared space group symmetry, and prints a warning if it detects deviations that exceed some small threshhold, but proceeds to attempt the conversion even if such an error is detected. Converting a field that does not have the declared space group symmetry to basis format is a destructive operation that modifies the field in unpredictable ways.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">inFileName</td><td>name of input file (r-grid format) </td></tr>
@@ -1932,7 +1972,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01437">1437</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01264">1264</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1973,7 +2013,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01458">1458</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01286">1286</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -2014,7 +2054,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01483">1483</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01311">1311</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -2047,6 +2087,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Convert fields from Fourier (k-grid) to symmetrized basis format. </p>
+<p >This function checks if the input fields have the declared space group symmetry, and prints a warning if it detects deviations that exceed some small threshhold, but proceeds to attempt the conversion even if such an error is detected. Converting a field that does not have the declared space group symmetry to basis format is a destructive operation that modifies the field in unpredictable ways.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">inFileName</td><td>name of input file (k-grid format) </td></tr>
@@ -2055,7 +2096,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01509">1509</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01337">1337</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -2096,7 +2137,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01533">1533</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01361">1361</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -2138,7 +2179,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01589">1589</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01417">1417</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="FieldComparison_8tpp_source.html#l00028">Pscf::FieldComparison&lt; FT &gt;::compare()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="FieldComparison_8h_source.html#l00076">Pscf::FieldComparison&lt; FT &gt;::maxDiff()</a>, and <a class="el" href="FieldComparison_8h_source.html#l00085">Pscf::FieldComparison&lt; FT &gt;::rmsDiff()</a>.</p>
 
@@ -2182,7 +2223,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01607">1607</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01435">1435</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="FieldComparison_8tpp_source.html#l00028">Pscf::FieldComparison&lt; FT &gt;::compare()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="FieldComparison_8h_source.html#l00076">Pscf::FieldComparison&lt; FT &gt;::maxDiff()</a>, and <a class="el" href="FieldComparison_8h_source.html#l00085">Pscf::FieldComparison&lt; FT &gt;::rmsDiff()</a>.</p>
 
@@ -2226,7 +2267,7 @@ template&lt;int D&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if fields all have symmetry, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01557">1557</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8tpp_source.html#l01385">1385</a> of file <a class="el" href="pspc_2System_8tpp_source.html">pspc/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -2254,7 +2295,7 @@ template&lt;int D&gt; </div>
 
 <p>Get all of the chemical potential fields (const reference). </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00988">988</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01082">1082</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2282,7 +2323,7 @@ template&lt;int D&gt; </div>
 
 <p>Get all of the monomer concentration fields (const reference). </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00994">994</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01088">1088</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2310,7 +2351,7 @@ template&lt;int D&gt; </div>
 
 <p>Get all of the external potential fields (reference). </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00999">999</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01093">1093</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2338,7 +2379,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the mask (the field to which the total density is constrained) (reference). </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01004">1004</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01098">1098</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2366,7 +2407,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html" title="Solver for a mixture of polymers and solvents.">Mixture</a> by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00905">905</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00999">999</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2394,7 +2435,7 @@ template&lt;int D&gt; </div>
 
 <p>Get <a class="el" href="classPscf_1_1Interaction.html" title="Flory-Huggins excess free energy model.">Interaction</a> (excess free energy model) by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00955">955</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01049">1049</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
@@ -2424,7 +2465,7 @@ template&lt;int D&gt; </div>
 
 <p>Get <a class="el" href="classPscf_1_1Interaction.html" title="Flory-Huggins excess free energy model.">Interaction</a> (excess free energy model) by const reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00963">963</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01057">1057</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
@@ -2454,7 +2495,7 @@ template&lt;int D&gt; </div>
 
 <p>Get <a class="el" href="classPscf_1_1Pspc_1_1Domain.html" title="Spatial domain and spatial discretization for a periodic structure.">Domain</a> by const reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00890">890</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00984">984</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2482,7 +2523,7 @@ template&lt;int D&gt; </div>
 
 <p>Get <a class="el" href="classPscf_1_1UnitCell.html" title="Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.">UnitCell</a> (i.e., type and parameters) by const reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00895">895</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00989">989</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2510,7 +2551,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the spatial discretization mesh by const reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00900">900</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00994">994</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2538,7 +2579,7 @@ template&lt;int D&gt; </div>
 
 <p>Get associated <a class="el" href="classPscf_1_1Basis.html" title="Symmetry-adapted Fourier basis for pseudo-spectral scft.">Basis</a> object by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00915">915</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01009">1009</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2566,7 +2607,7 @@ template&lt;int D&gt; </div>
 
 <p>Get associated <a class="el" href="classPscf_1_1Pspc_1_1FFT.html" title="Fourier transform wrapper for real data.">FFT</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00920">920</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01014">1014</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2594,7 +2635,7 @@ template&lt;int D&gt; </div>
 
 <p>Get associated <a class="el" href="classPscf_1_1Pspc_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">FieldIo</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00925">925</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01019">1019</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2622,7 +2663,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the <a class="el" href="classPscf_1_1Pspc_1_1Mixture.html" title="Solver for a mixture of polymers and solvents.">Mixture</a> by const reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00910">910</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01004">1004</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2650,7 +2691,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the iterator by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00971">971</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01065">1065</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
@@ -2680,7 +2721,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the iterator by const reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00979">979</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01073">1073</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
@@ -2710,7 +2751,7 @@ template&lt;int D&gt; </div>
 
 <p>Get homogeneous mixture (for reference calculations). </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00945">945</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01039">1039</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2738,7 +2779,7 @@ template&lt;int D&gt; </div>
 
 <p>Get const homogeneous mixture (for reference calculations). </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00950">950</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01044">1044</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2766,7 +2807,7 @@ template&lt;int D&gt; </div>
 
 <p>Get FileMaster by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00935">935</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01029">1029</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2794,7 +2835,7 @@ template&lt;int D&gt; </div>
 
 <p>Get const FileMaster by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00940">940</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01034">1034</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2822,7 +2863,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the group name string. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l00930">930</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01024">1024</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2850,7 +2891,7 @@ template&lt;int D&gt; </div>
 
 <p>Does this system have a <a class="el" href="classPscf_1_1Pspc_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a> object? </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01009">1009</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01103">1103</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2878,7 +2919,7 @@ template&lt;int D&gt; </div>
 
 <p>Does this system have external potential fields? </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01014">1014</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01108">1108</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2906,7 +2947,7 @@ template&lt;int D&gt; </div>
 
 <p>Does this system have a mask (field to which the total density is constrained)? </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01019">1019</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01113">1113</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2934,7 +2975,7 @@ template&lt;int D&gt; </div>
 
 <p>Have c fields been computed from the current w fields? </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01024">1024</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01118">1118</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2962,7 +3003,7 @@ template&lt;int D&gt; </div>
 
 <p>Has the free energy been computed from the current w fields? </p>
 
-<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01045">1045</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspc_2System_8h_source.html#l01139">1139</a> of file <a class="el" href="pspc_2System_8h_source.html">pspc/System.h</a>.</p>
 
 </div>
 </div>
@@ -2974,7 +3015,7 @@ template&lt;int D&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2023 20:01:05 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Mar 15 2023 22:38:45 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

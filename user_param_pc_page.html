@@ -102,7 +102,7 @@ File Format</h1>
 <div class="line">  Mixture{ ...  }</div>
 <div class="line">  Interaction{ ...  }</div>
 <div class="line">  Domain{ ...  }</div>
-<div class="line">  Iterator#{ ... }</div>
+<div class="line">  Iterator#*{ ... }</div>
 <div class="line">  Sweep#*{ ... }</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> As for pscf_fd, the Sweep block is optional, and Iterator and Sweep blocks (if present) are both selectable blocks. The purposes of these top-level blocks have all been discussed previously in the discussion of pscf_fd, and will not be repeated here. Formats of the Mixture and Interaction blocks are the same for all PSCF programs, and so have also been discussed previously. Below, we discuss the contents of the Domain, Iterator, and Sweep blocks.</p>
@@ -139,6 +139,7 @@ Iterators</h1>
 <tr>
 <td><a class="el" href="pspc_AmIteratorFilm_page.html">AmIteratorFilm</a>  </td><td>Thin Film Anderson Mixing iterator. Uses the Anderson Mixing algorithm to solve the SCFT equations for a system that is confined to a thin film.   </td></tr>
 </table>
+<p >The iterator class is formally optional (i.e., the program will finish reading the parameter file if is omitted), but it is needed to perform an iterative SCFT calculation.</p>
 <h1><a class="anchor" id="user_param_pc_sweep_sec"></a>
 Sweep</h1>
 <p >The only sweep algorithm currently avaiable for use with pspc_pc is a general linear sweep algorithm. This can be invoked by including a block that starts either with the generic label Sweep or the specific label LinearSweep. The required parameter file format for a linear sweep has been described <a class="el" href="user_param_sweep_page.html#user_param_sweep_linear_sec">here</a>.</p>
@@ -148,7 +149,7 @@ Sweep</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2023 20:01:03 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Mar 15 2023 22:38:40 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

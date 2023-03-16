@@ -58,10 +58,10 @@ $(function() {
 </p>
 <p >The first subblock of the main System block in every PSCF parameter file starts with a label "Mixture", and is referred to as the Mixture block. The Mixture block describes the chemical composition of the system that is being simulated, and includes a description of the chemical structure of each species in the mixture.</p>
 <p >PSCF programs are designed to treat a mixture that may contain one or more polymer species and zero or more solvent point-particle species. Each polymer may be either a linear or acyclic branched block polymer. Polymers and solvents are both constructed from a palette of several types of monomer.</p>
-<p >Each monomer type is assigned an integer index and a statistical segment length. Each copolymer block and each solvent species is assigned an integer parameter named monomerId that specifies the type of monomer from which it is constructed. The Mixture block contains information that specifies the structure of each polymer species within the mixture ( including information about the length and connectivity of the blocks), the monomer type and volume of each solvent species, and the composition of the mixture.</p>
-<h1><a class="anchor" id="user_param_mixture_sec"></a>
-Format (Overview)</h1>
-<p >Here is the Mixture block from the example parameter file shown previously </p><div class="fragment"><div class="line">Mixture{</div>
+<p >Each monomer type is assigned an integer index and a statistical segment length. Each copolymer block and each solvent species is assigned an integer parameter named monomerId that specifies the type of monomer from which it is constructed. The Mixture block contains information that specifies the structure of each polymer species within the mixture (including information about the length and connectivity of the blocks), the monomer type and volume of each solvent species, and the composition of the mixture.</p>
+<h1><a class="anchor" id="user_param_mixture_example_sec"></a>
+Example</h1>
+<p >For reference, here is the Mixture block from the example parameter file shown <a class="el" href="user_param_example_page.html">previously</a> : </p><div class="fragment"><div class="line">Mixture{</div>
 <div class="line">   nMonomer   2</div>
 <div class="line">   monomers[</div>
 <div class="line">              1.0</div>
@@ -85,7 +85,9 @@ Format (Overview)</h1>
 <div class="line">   }</div>
 <div class="line">   ds   0.01</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> The format for the mixture block in any PSCF parameter file is described somewhat more generally below: </p><div class="fragment"><div class="line">Mixture{</div>
+</div><!-- fragment --><h1><a class="anchor" id="user_param_mixture_format_sec"></a>
+Mixture Block Format</h1>
+<p >The format for the mixture block in any PSCF parameter file is described somewhat more generally below: </p><div class="fragment"><div class="line">Mixture{</div>
 <div class="line">  nMonomer   <span class="keywordtype">int</span></div>
 <div class="line">  monomers   Array [ real ]</div>
 <div class="line">  nPolymer   <span class="keywordtype">int</span></div>
@@ -97,7 +99,7 @@ Format (Overview)</h1>
 <div class="line">  vMonomer*  real (1.0 by <span class="keywordflow">default</span>)</div>
 <div class="line">  ds         real</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> The asterisk after nSolvent and vMonomer indicates that thse are optional parameters. The number of Polymer subblocks must equal nPolymer, and the number of Solvent subblocks must equal nSolvent. Note that the optional parameter nSolvent is set to 0 by default. There thus must be no Solvent subblocks if the Solvent parameter is absent.</p>
+</div><!-- fragment --><p> The asterisks after the nSolvent and vMonomer labels indicates that these are optional parameters. The number of Polymer subblocks must equal nPolymer, and the number of Solvent subblocks must equal nSolvent. Because the optional parameter nSolvent is set to 0 by default, there cannot be any Solvent subblocks if the nSolvent parameter is absent.</p>
 <p >The meanings of parameters and subblocks are described in the following table: </p><table class="doxtable">
 <tr>
 <td><b> Label </b>  </td><td><b> Description </b>   </td></tr>
@@ -125,7 +127,7 @@ Format (Overview)</h1>
 </ul>
 <p ><em> Technical comments (for users who examine the source code) </em>:</p>
 <p >The source code for PCSF is defined within a C++ namespace named <a class="el" href="namespacePscf.html" title="Classes for polymer self-consistent field theory.">Pscf</a>. This top-level namespace contains several enclosed sub-namespaces named Fd1d, Pspc, and Pspg that each contain code specific to a specific implementation of SCFT (i.e., a specific program or family of programs). We refer to these as implementation level namespaces. The segregation of code associated with different implementations allows the same name to be used for analogous classes in different implementations without name classes. When possible, identical or similar parameter file formats are used for the parameter blocks associated with analogous classes used in different implementations.</p>
-<p >Each implementation-level namespace contain a class or class template named Mixture. There is a class named Mixture in the Fd1d namespace, and a class template Mixture&lt;int D&gt; in the Pspc and Pspg namespaces, where D is the integer dimensionality of space. The mixture object in pscf_pc2 program for 2D periodic structures is an object of type Mixture&lt;2&gt;, where the dimensionality of space is defined by the template parameter D=2. All of the Mixture classes and class templates are derived from an instance of a class template named <a class="el" href="classPscf_1_1MixtureTmpl.html" title="A mixture of polymer and solvent species.">Pscf::MixtureTmpl</a>. All of these Mixture classes use the same parameter file format, which is described above. Most of that format is defined in the readParameters member function of the <a class="el" href="classPscf_1_1MixtureTmpl.html" title="A mixture of polymer and solvent species.">Pscf::MixtureTmpl</a> base class template.</p>
+<p >Each implementation-level namespace contain a class or class template named Mixture. There is a class named Mixture in the Fd1d namespace, and Mixture&lt;D&gt; class templates in the Pspc and Pspg namespaces, where D is the integer dimensionality of space. The mixture object in the pscf_pc2 program for 2D periodic structures is an object of type Mixture&lt;2&gt;, where the dimensionality of space is defined by the template parameter D=2. All of the Mixture classes and class templates are derived from an instance of a class template named <a class="el" href="classPscf_1_1MixtureTmpl.html" title="A mixture of polymer and solvent species.">Pscf::MixtureTmpl</a>. All of these Mixture classes use the same parameter file format, which is described above. Most of that format is defined in the readParameters member function of the <a class="el" href="classPscf_1_1MixtureTmpl.html" title="A mixture of polymer and solvent species.">Pscf::MixtureTmpl</a> base class template.</p>
 <p >The array "monomers" is implemented internally as an array of instances of the class <a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer or particle type.">Pscf::Monomer</a>, as discussed <a class="el" href="pscf_Monomer_page.html">here</a>.</p>
 <h1><a class="anchor" id="user_param_polymer_sec"></a>
 Polymer</h1>
@@ -144,19 +146,19 @@ Polymer</h1>
 <tr>
 <td>nBlock  </td><td>Number of blocks in a block polymer.   </td></tr>
 <tr>
-<td>blocks  </td><td>Array in which each element contains a description of one block, represented internally by an object of type "Block".   </td></tr>
+<td>blocks  </td><td>array in which each element contains a description of one block, represented internally by an object of type "Block".   </td></tr>
 <tr>
-<td>phi*  </td><td>Volume fraction of this species (real, optional).   </td></tr>
+<td>phi*  </td><td>volume fraction of this species (real, optional).   </td></tr>
 <tr>
-<td>mu  </td><td>Chemical potential of this species (real, must be present if and only if phi is absent).   </td></tr>
+<td>mu  </td><td>chemical potential of this species (real, must be present if and only if phi is absent).   </td></tr>
 </table>
 <p >Comments:</p>
 <ul>
-<li>The "type" parameter is an optional enumeration value that can be assigned values "linear", to specify a linear block polymer, or "branched" to specify a general acyclic branched block polymer. If absent, this parameter is set to "linear" by default.</li>
+<li>The "type" parameter is an optional enumeration value that can be assigned a value "linear", to specify a linear block polymer, or "branched" to specify a general acyclic branched block polymer. If absent, this parameter is set to "linear" by default.</li>
 <li>In the parameter file format for the array blocks, each line of data contains a description of one block of a block polymer, listed in the order of increasing block index. The description of each block is stored internally in an object of type "Block", as indicated by the notation "Array [ Block ]" in the above format description.</li>
-<li>The required text representation for each Block in the "blocks" array is different depending on whether the value of the type parameter for the polymer is <a class="el" href="user_param_mixture_page.html#user_param_block_linear_sub">linear</a> (the default) or <a class="el" href="user_param_mixture_page.html#user_param_block_branched_sub">branched</a>, as discussed below.</li>
-<li>The last parameter in a Polymer block must be either a value for phi, which is the volume fraction occupied by the polymer species, or mu, which is the chemical potential for that species. The block must contain either a phi parameter or a mu parameter in this location, but may not contain both.</li>
-<li>When the parameter phi is present, its value must lie in the range [0,1].</li>
+<li>The required text representation for each Block in the "blocks" array is different depending on whether the value of the type parameter for the polymer is <a class="el" href="user_param_mixture_page.html#user_param_block_linear_sub">linear</a> (the default) or <a class="el" href="user_param_mixture_page.html#user_param_block_branched_sub">branched</a>, as discussed <a class="el" href="user_param_mixture_page.html#user_param_block_sec">below</a> .</li>
+<li>The last parameter in a Polymer block must be either a value for phi, which is the volume fraction occupied by the polymer species, or a value for mu, which is the chemical potential for that species. The block must contain either a phi parameter or a mu parameter in this location, but may not contain both.</li>
+<li>When the volume fraction parameter phi is present, its value must lie in the range [0,1].</li>
 </ul>
 <p >Descriptions of parameter file formats for individual blocks of linear and branched polymers are discussed separately below.</p>
 <p ><em> Technical comment (for users who examine the source code)</em>: A Class or class template named Polymer is defined in each implementation-level namespace of the top-level <a class="el" href="namespacePscf.html" title="Classes for polymer self-consistent field theory.">Pscf</a> namespace (i.e., in the Fd1d, Pspc and Pspg sub-namespaces of <a class="el" href="namespacePscf.html" title="Classes for polymer self-consistent field theory.">Pscf</a>). These Polymer classes all use the same parameter file format, which is described above. Each of these Polymer classes is a subclass of an instances of a common class template named <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Descriptor and MDE solver for an acyclic block polymer.">Pscf::PolymerTmpl</a>. The readParameters function of this base class template defines the common file format.</p>
@@ -212,7 +214,7 @@ Solvent</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2023 20:01:03 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Mar 15 2023 22:38:40 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

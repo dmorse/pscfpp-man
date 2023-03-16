@@ -105,18 +105,18 @@ Domain Block</h1>
 Iterators</h1>
 <p >The Iterator block provides data required by the iterator used to solve the nonlinear self-consistent field (SCF) equations. <br  />
 </p>
-<p >The default iterator for pscf_fd is a Newton-Raphson iterator that is implemented by a class named NrIterator. Because this is the default iterator, it may be chosen by including an iterator block in which the first line contains either the generic label "Iterator" or the specific class name "NrIterator". <br  />
+<p >The default iterator for pscf_fd is an Anderson-mixing algorithm that is implemented by a class named AmIterator. Because this is the default iterator, it may be chosen by including an iterator block in which the first line contains either the generic label "Iterator" or the specific class name "AmIterator". <br  />
 </p>
-<p >The AmIterator class provides an Anderson-Mixing algorithm. Preliminary tests indicate that this is generally more efficient than the Newton-Raphson iterator, with an advantage that increases rapidly with increasing number of grid points.</p>
+<p >The NrIterator class implements a Newton-Raphson iterator. Under favorable conditions, this may converge in only a few steps, but the cost for step is high, and grows rapidly with increasing number of grid points. This iterator is not efficient for large problems (more than approxinately 1000 grid points).</p>
 <p >The BinaryRelaxiterator class implements a simple relaxation iterator for AB systems with only two types of monomer, as described by F. Drolet and G.H. Fredrickson (Phys. Rev. Lett, vol 83, 4317, 1999).</p>
 <p >More detailed documentation of the input format for each available iterator is given in the links in the table below:</p>
 <table class="doxtable">
 <tr>
 <td><b> Class </b>  </td><td><b> Description </b>   </td></tr>
 <tr>
-<td><a class="el" href="fd1d_NrIterator_page.html">NrIterator</a>  </td><td>Newton-Raphson iterator (default)   </td></tr>
+<td><a class="el" href="fd1d_AmIterator_page.html">AmIterator</a>  </td><td>Anderson-Mixing iterator (default)   </td></tr>
 <tr>
-<td><a class="el" href="fd1d_AmIterator_page.html">AmIterator</a>  </td><td>Anderson-Mixing iterator   </td></tr>
+<td><a class="el" href="fd1d_NrIterator_page.html">NrIterator</a>  </td><td>Newton-Raphson iterator   </td></tr>
 <tr>
 <td><a class="el" href="fd1d_BinaryRelaxIterator_page.html">BinaryRelaxIterator</a>  </td><td>Simple relaxation algorithm for AB (two monomer) systems, as described by Drolet and Fredrickson.   </td></tr>
 </table>
@@ -129,7 +129,7 @@ Sweep</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2023 20:01:03 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Mar 15 2023 22:38:40 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

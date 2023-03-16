@@ -67,8 +67,8 @@ Source code directory</h1>
 <li>src/util/ contains code in the <a class="el" href="namespaceUtil.html" title="Utility classes for scientific computation.">Util</a> namespace</li>
 <li>src/pscf/ contains code defined directly in the <a class="el" href="namespacePscf.html" title="Classes for polymer self-consistent field theory.">Pscf</a> namespace, which is accessible to all PSCF programs.</li>
 <li>src/fd1d/ contains all code in the <a class="el" href="namespacePscf_1_1Fd1d.html" title="Finite-different one-dimensional SCFT.">Pscf::Fd1d</a> namespace, which is only used by the pscf_fd 1D finite element program.</li>
-<li>src/pspc/ contains all code in the <a class="el" href="namespacePscf_1_1Pspc.html" title="Pseudo-spectral SCFT for periodic boundary conditions.">Pscf::Pspc</a> namespace, which is only used by the pscf_pcNd C++ CPU programs for periodic structures.</li>
-<li>src/pspg/ contains all code for the <a class="el" href="namespacePscf_1_1Pspc.html" title="Pseudo-spectral SCFT for periodic boundary conditions.">Pscf::Pspc</a> namespace, which is only used by the pscf_pgNd CUDA GPU programs for periodic structures.</li>
+<li>src/pspc/ contains all code in the <a class="el" href="namespacePscf_1_1Pspc.html" title="Pseudo-spectral SCFT for periodic boundary conditions.">Pscf::Pspc</a> namespace, which is only used by the pscf_pc C++ CPU programs for periodic structures.</li>
+<li>src/pspg/ contains all code for the <a class="el" href="namespacePscf_1_1Pspc.html" title="Pseudo-spectral SCFT for periodic boundary conditions.">Pscf::Pspc</a> namespace, which is only used by the pscf_pg CUDA GPU programs for periodic structures.</li>
 </ul>
 <p >These five directories will be referred to in what follows as "namespace" level subdirectories of src/. The PSCF makefile system constructs a static library in each of these namespace level directories that contains compiled code for all of the classes and global functions defined in that directory. The src/fd1d, src/pspc, and src/pspg each contain one or more main program source files that are also compiled and installed by the build system.</p>
 <p >Each of the five namespace level source directories contains a subdirectory named tests/ that contains unit tests for classes defined in the associated name space. These unit tests are not automatically compiled or run by the build system that compiles the source code.</p>
@@ -78,7 +78,7 @@ Source code directory</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2023 20:01:03 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Mar 15 2023 22:38:41 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

@@ -96,7 +96,7 @@ Commands</h1>
 <tr>
 <td><a class="el" href="user_command_pc_page.html#user_command_pc_sweep_sub">SWEEP</a>  </td><td></td><td>Perform a sweep, as specified by the Sweep object in the param file.   </td></tr>
 <tr>
-<td colspan="3" style="text-align:center"><a class="el" href="user_command_pc_page.html#user_command_pc_dataout_sec">Data Output</a>   </td></tr>
+<td colspan="3" style="text-align:center"><a class="el" href="user_command_pc_page.html#user_command_pc_dataout_sec">Thermodynamic Data Output</a>   </td></tr>
 <tr>
 <td><a class="el" href="user_command_pc_page.html#user_command_pc_param_sub">WRITE_PARAM</a>  </td><td>filename [string]  </td><td>Write the param file associated with the current computation to specified file "filename", excluding any Sweep block   </td></tr>
 <tr>
@@ -220,7 +220,7 @@ Propagator Output</h1>
 <p >Users may instead output the value of slice of a propagator corresponding to the vertex at which it originates (i.e., the propagator "head" rather than "tail"), by invoking WRITE_Q_SLICE with a contour variable index \( is = 0 \), corresponding to a contour variable \( s = 0 \),</p>
 <p ><a class="anchor" id="user_command_pc_writeq_sub"></a> <b> WRITE_Q </b>: The command WRITE_Q writes all slices of a specified propagator to a single file. This command name must be followed by the name of the output file and values for the polymer index \( ip \) and block index \( ib \), in that order.</p>
 <p >The output file produced by this command contains a header section followed by a sequence of data sections, in which each data section contains the data for a single slice at an integer value of the countour variable index. Data sections are listed in order of increasing countour variable index. The header section is similar to that of an r-grid file, except for the addition of line at the end that contain the word "nslice" followed by the value of the number of slices. Each data section begins with a line containing the word "slice" followed by value of the contour variable index for the slice represented by that section. The value of the slice index ranges from 0 for the first slice (the "head") to nslice - 1 for the last (the "tail"). The format of the remainder of each data section is the same as that of the data section of an r-grid field file for a system containing one monomer type, which consists of a single column of numbers containing the values of the associated propagator slice on the nodes of the regular spatial mesh used throughout the computation.</p>
-<p >For readers who inspect the source code*: This command calls the function Pspc::System&lt;D&gt;::writeQ, which defines the output format, and which is defined in the C++ file <a class="el" href="pspc_2System_8tpp_source.html">src/pspc/System.tpp</a>.</p>
+<p ><em> Comment for readers who read the source code </em>: This command calls the function Pspc::System::writeQ, which defines the output format, and is defined in the C++ file <a class="el" href="pspc_2System_8tpp_source.html">src/pspc/System.tpp</a>.</p>
 <p ><a class="anchor" id="user_command_pc_writeqall_sub"></a> <b> WRITE_Q_ALL </b>: The command WRITE_Q_ALL writes all slices of every propagator of every polymer to a set of files, with all the slices of each propagator written to a single file, but different propagators output in different files. This command name must be followed by the value of a string parameter "basename" that contains a common prefix for the names of the resulting file set of output files.</p>
 <p >Each of files created by this command has the same format as that of a file created by the <a class="el" href="user_command_pc_page.html#user_command_pc_writeq_sub">WRITE_Q</a> command. The name of the file containing the propagator associated with polymer ip, block ib, and direction id is given by a string of the form (basename)_(ip)_(ib)_(id).rf, where (basename) denotes the value of the basename command parameter, and where (ip), (ib), and (id) denote string representations of the values of the non-negative integers ip, ib, and id. Thus, for example, if the command is passed a basename parameter out/q, then the file out/q_0_2_1.rf will contain all slices of the propagator associated with polymer 0, block 2 and direction 1.</p>
 <h1><a class="anchor" id="user_command_pc_crystal_sec"></a>
@@ -291,7 +291,7 @@ Contents (Subpages)</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2023 20:01:03 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Mar 15 2023 22:38:40 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

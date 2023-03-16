@@ -99,7 +99,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename Data&gt;<br />
 class Util::ArrayIterator&lt; Data &gt;</div><p >Forward iterator for an <a class="el" href="classUtil_1_1Array.html" title="Array container class template.">Array</a> or a C array. </p>
 <p >An <a class="el" href="classUtil_1_1ArrayIterator.html" title="Forward iterator for an Array or a C array.">ArrayIterator</a> is an abstraction of a pointer, similar to an STL forward iterator. The * operator returns a reference to an associated Data object, the -&gt; operator returns a pointer to that object. The ++ operator increments the current pointer by one array element.</p>
-<p >Unlike an STL forward iterator, an <a class="el" href="classUtil_1_1ArrayIterator.html" title="Forward iterator for an Array or a C array.">ArrayIterator</a> contains the address of the end of the array. The <a class="el" href="classUtil_1_1ArrayIterator.html#a006c952467e85734bcf2f9ddc311938a" title="Has the end of the array been reached?">isEnd()</a> method can be used to test for termination of a for or while loop. When <a class="el" href="classUtil_1_1ArrayIterator.html#a006c952467e85734bcf2f9ddc311938a" title="Has the end of the array been reached?">isEnd()</a> is true, the current pointer is one past the end of the array, and thus the iterator has no current value, and cannot be incremented further.</p>
+<p >Unlike an STL forward iterator, an <a class="el" href="classUtil_1_1ArrayIterator.html" title="Forward iterator for an Array or a C array.">ArrayIterator</a> contains the address of the end of the array. The isEnd() method can be used to test for termination of a for or while loop. When isEnd() is true, the current pointer is one past the end of the array, and thus the iterator has no current value, and cannot be incremented further.</p>
 <p >An <a class="el" href="classUtil_1_1ArrayIterator.html" title="Forward iterator for an Array or a C array.">ArrayIterator</a> behave like a pointer to non-const data, and provides read-write access to the objects to which it points. A <a class="el" href="classUtil_1_1ConstArrayIterator.html" title="Forward const iterator for an Array or a C array.">ConstArrayIterator</a> behaves like a pointer to const, and provides read-only access </p>
 
 <p class="definition">Definition at line <a class="el" href="ArrayIterator_8h_source.html#l00036">36</a> of file <a class="el" href="ArrayIterator_8h_source.html">ArrayIterator.h</a>.</p>
@@ -415,7 +415,7 @@ template&lt;typename Data &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2023 20:01:06 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Mar 15 2023 22:38:46 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

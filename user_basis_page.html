@@ -140,7 +140,7 @@ Transformation of Plane Waves</h1>
 \]
 </p>
 <p> It is straightforward to show that, for two wavevectors \( {\bf G} \) and \( {\bf G}&#39; \) and a symmetry operation \( A \), the equations \( {\bf G}&#39; = {\bf G}A \) and \( {\bf G} = {\bf G}&#39;A^{-1} \) are equivalent. Two wavevectors that are related by in this way can said to be related by symmetry operation \( A \) or \( A^{-1} \).</p>
-<p >Observe that the notation defined above, which the operator appears to the right of the wavevector on which it acts, allows use to treat application of symmetry operators to wavevectors as an associative operation. That is, if \( A = (R_{A}, {\bf t}_{A} )\) and \( B=(R_{B}, {\bf t}_{B} ) \) are space group operations and \( {\bf G} \) is a wavevector, then  </p><p class="formulaDsp">
+<p >Observe that the notation defined above, in which the operator appears to the right of the wavevector on which it acts, allows us to treat application of symmetry operators to wavevectors as an associative operation. That is, if \( A = (R_{A}, {\bf t}_{A} )\) and \( B=(R_{B}, {\bf t}_{B} ) \) are space group operations and \( {\bf G} \) is a wavevector, then  </p><p class="formulaDsp">
 \[
    ({\bf G}A)B = R_{B}^{T}(R_{A}^{T}{\bf G}) = (R_{A}R_{B})^{T}{\bf G}
    = {\bf G}(AB) \quad,
@@ -189,9 +189,9 @@ Star Functions</h1>
 </p>
 <p> in which the eigenvalue \(\lambda\) is equal to the square magnitude of any of wavevectors in star \( T \).</p>
 <p ><em> Proof: </em> Each star function is a superposition of waves with wavevectors that are related by unitary point group operations, and are thus wavevectors of equal magnitude. Because these waves are all thus eigenfunctions of the Laplacian with equal eigenvalues, any superposition of these waves is also an eigenfunction of the Laplacian with the same eigenvalue.</p>
-<p ><b> Theorem 8 (Star Functions of Different Stars are Orthogonal ) </b>: If \( \phi({\bf r}) \) and \( \phi&#39;({\bf r}) \) are star functions associated with different stars of the same space group, then they are orthogonal, in the sense that  </p><p class="formulaDsp">
+<p ><b> Theorem 8 (Star Functions of Different Stars are Orthogonal ) </b>: If \( f({\bf r}) \) and \( g({\bf r}) \) are star functions associated with different stars of the same space group, then they are orthogonal, in the sense that  </p><p class="formulaDsp">
 \[
-    \int d^{D}r \; \phi^{*}({\bf r}) \phi&#39;({\bf r}) = 0 \quad,
+    \int d^{D}r \; f^{*}({\bf r}) g({\bf r}) = 0 \quad,
 \]
 </p>
 <p> where the integral is taken over one unit cell of the lattice.</p>
@@ -324,7 +324,7 @@ Cancelled Stars</h2>
 <p >The algorithm used by PSCF to identify cancelled stars tests for the existence of unary contradictions for any wave in the star.</p>
 <h2><a class="anchor" id="user_basis_noncancel_sub"></a>
 Uncancelled Stars</h2>
-<p ><a class="anchor" id="user_basis_starfunc_uniqueness_thrm"></a><b> Theorem 13 (Dimension of the System of Phase Relationships) </b>: If \( T \) is a star of space group \( S \) that contains \( M \) wavevectors, and the phase relationships among wavevectors in \( T \) do not contain any unary contradictions, than the star is not cancelled, and phase relationships among wavectors in \( T \) form a homogeneous system of \( M - 1 \) independent linear equations for the coefficients of waves in an associated star function. A full set of independent phase relationships is provided by the phase relatonships between any one wavevector in \( T \) and the other \( M - 1 \) wavevectors in \( T \).</p>
+<p ><a class="anchor" id="user_basis_starfunc_dimension_thrm"></a><b> Theorem 13 (Dimension of the System of Phase Relationships) </b>: If \( T \) is a star of space group \( S \) that contains \( M \) wavevectors, and the phase relationships among wavevectors in \( T \) do not contain any unary contradictions, than the star is not cancelled, and phase relationships among wavectors in \( T \) form a homogeneous system of \( M - 1 \) independent linear equations for the coefficients of waves in an associated star function. A full set of independent phase relationships is provided by the phase relatonships between any one wavevector in \( T \) and the other \( M - 1 \) wavevectors in \( T \).</p>
 <p ><em> Proof </em>: The assumption that there are no unary contradictions among the phase relationships between wavevectors in \( T \) implies that there are also no binary contradictions, by Theorem 12. Let \( {\bf G}_{0}, {\bf G}_{1}, \ldots, {\bf G}_{M-1} \) denote the wavevectors in \( T \), listed in some arbitrarily chosen order. Let \( c_{i} \) denote the coefficient of the wave with wavevector \( {\bf G}_{i} \) in the definition of an associated star function. For each \( i = 1, \ldots, M-1 \), there must exist a symmetry operation \( A_{i} = (R_{i}, {\bf t}_{i}) \) such that  </p><p class="formulaDsp">
 \[
    {\bf G}_{i} = {\bf G}_{0} A_{i}  \quad.
@@ -384,7 +384,7 @@ Open Stars</h1>
    \quad,
 \]
 </p>
-<p> which is a superposition of waves with wavevectors that belong to a set \( T&#39; = \{ -{\bf G}_{0}, \ldots, -{\bf G}_{M-1} \} \) that is the inverse of \( T \). Because \( \phi({\bf r}) \) is invariant under group \( S \), so is \( \phi^{*}({\bf r}) \), by <a class="anchor" id="user_basis_symmfunc_conj_thrm"></a>"Theorem 2". This implies that \( \phi^{*}({\bf r}) \) is a star function associated with \( T &#39;\), the inverse of star \( T \).</p>
+<p> which is a superposition of waves with wavevectors that belong to a set \( T&#39; = \{ -{\bf G}_{0}, \ldots, -{\bf G}_{M-1} \} \) that is the inverse of \( T \). Because \( \phi({\bf r}) \) is invariant under group \( S \), so is \( \phi^{*}({\bf r}) \), by <a class="el" href="user_basis_page.html#user_basis_symmfunc_conj_thrm">Theorem 2</a>. This implies that \( \phi^{*}({\bf r}) \) is a star function associated with \( T &#39;\), the inverse of star \( T \).</p>
 <h1><a class="anchor" id="user_basis_centro_sec"></a>
 Centrosymmetric Groups</h1>
 <p ><a class="anchor" id="user_basis_centro_def"></a><b> Definition (Centrosymmetric Groups) </b>: A space group is centro-symmetric if it contains an operation that represents inversion through some inversion center. Inversion through an inversion center located at position \( {\bf c} \) is explicitly by  </p><p class="formulaDsp">
@@ -416,7 +416,7 @@ Centrosymmetric Groups</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2023 20:01:03 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Mar 15 2023 22:38:40 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

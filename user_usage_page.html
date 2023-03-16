@@ -70,29 +70,22 @@ Echoing the Parameter File</h1>
 <p >PSCF parameter files are fixed-format files in which every element is preceded by a label string that gives the name of a parameter or a block of parameters. During processing of the parameter file, the program reads each such label and compares it to a label that it expects to appear next in the file. Error messages that are generated in response to parameter file syntax errors output both the expected label string and the label string that was actually read from file. This error message is usually enough to allow a user to identify and fix such an error.</p>
 <h1><a class="anchor" id="user_param_usage_options_sec"></a>
 Command Line Options</h1>
-<p >All PSCF programs can be invoked with any of the following command line options: </p><ul>
-<li>
--e: Activates echoing of the parameter file to standard output. </li>
-<li>
--p filename: Specifies the name of a parameter file  </li>
-<li>
--c filename: Specifies the name of a command file  </li>
-<li>
--i filename: Specifies a prefix string for input data files  </li>
-<li>
--o filename: Specifies a prefix string for output data files   </li>
-</ul>
-<p >Comments:</p>
-<ul>
-<li>The -p and -c options are required, while others are optional.</li>
-<li>The -p (parameter) option takes a string parameter, which is the name of a parameter file.</li>
-<li>The -c (command) option takes a string parameter, which is the name of a command file.</li>
-<li>The -i (input prefix) option takes a string parameter, which is a prefix that will be prepended to the names (i.e., paths) for all input data files.</li>
-<li>The -o (output prefix) option takes a string parameter, which is a prefix that will be prepended to the names (paths) for all output data files.</li>
-<li>Prefix strings that end in a directory separator (e.g., "out/") can be used to read all input files from a specific subdirectory or write all output files to a subdirectory.</li>
-</ul>
-<p >Example:</p>
-<p >The command </p><div class="fragment"><div class="line">pscf_pc3 -e -p param -c commands -i in/ -o out/ &gt; log</div>
+<p >All PSCF programs can be invoked with any of the following command line options listed in the table shown below. </p><table class="doxtable">
+<tr>
+<td><b> Option </b>  </td><td><b> Argument </b>  </td><td><b> Description </b>   </td></tr>
+<tr>
+<td>-e  </td><td></td><td>Activates echoing of the parameter file to standard output   </td></tr>
+<tr>
+<td>-p  </td><td>filename  </td><td>Gives the filename of the parameter file (required)   </td></tr>
+<tr>
+<td>-c  </td><td>filename  </td><td>Gives the filename of the command file (required)   </td></tr>
+<tr>
+<td>-i  </td><td>prefix  </td><td>Specifies a prefix string that will be prepended to the names paths all input data files   </td></tr>
+<tr>
+<td>-o  </td><td>prefix  </td><td>Specifies a prefix string that will be prepended to the the names (paths) for all output data files   </td></tr>
+</table>
+<p>Only the -p and -c options are required, while others may be omitted. The blank entry in the argument column for the -e option indicates that this option does not take an argument. The "prefix" arguments of the -i and -o options can be paths to directories that end in directory separator characters, such as "in/" or "out/", in order to place all input or output files in specified directories. These prefixes are prepended to names of input and output files whose names are given in the command file, but are not added to the names of the parameter and command files.</p>
+<p ><em> Example </em>: The command </p><div class="fragment"><div class="line">pscf_pc3 -e -p param -c commands -i in/ -o out/ &gt; log</div>
 </div><!-- fragment --><p> would run the program pscf_pc3 using a parameter file named "param" and a command file named "commands", while echoing the parameter file during initialization, and reading all input files from subdirectory "in/" and writing all output files to subdirectory "out/".</p>
 <p ><br  />
  <a class="el" href="user_files_page.html">Input Files</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_page.html">User Guide</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_param_page.html">Parameter Files</a> (Next) </p>
@@ -100,7 +93,7 @@ Command Line Options</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2023 20:01:03 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Mar 15 2023 22:38:41 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

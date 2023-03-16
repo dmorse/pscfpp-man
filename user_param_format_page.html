@@ -56,17 +56,19 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p ><a class="el" href="user_param_syntax_page.html">Parameter File - Syntax</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_param_mixture_page.html">Parameter File - Mixture Block</a> (Next) <br  />
 </p>
-<p >Users of PSCF require precise documentation of the required format for each block that can appear with a parameter file of a PSCF program. To describe such formats concisely, we use a representation in which the allowed format for each type of block is summarized using a form similar to that of the actual block, supplemented by notation to indicate the data types of parameter values and special symbols to indicate the existence of other syntactical elements such as array-valued parameters, optional parameters or subblocks and selectable subblocks.</p>
-<h1><a class="anchor" id="user_format_examples_sec"></a>
-Examples</h1>
-<p >As a simple first example of this sort of description, the overall syntax for a pscf_fd1d parameter file is shown below: </p><div class="fragment"><div class="line">System{</div>
+<p >Users of PSCF require precise documentation of the required format for each block that can appear with a parameter file of a PSCF program. This page describes a representation that we use to concisely indicate the format of each parameter file block. This format representation is similar to that of the actual block, supplemented by notation to indicate the data types of parameter values and the use of special symbols to indicate syntactical elements such as array-valued parameters, optional elements and selectable subblocks.</p>
+<h1><a class="anchor" id="user_format_example1_sec"></a>
+Example 1</h1>
+<p >As a simple first example of this sort of description, the overall syntax for a pscf_fd parameter file is shown below: </p><div class="fragment"><div class="line">System{</div>
 <div class="line">   Mixture{ ... }</div>
 <div class="line">   Interaction{ .... }</div>
 <div class="line">   Domain{ ... }</div>
-<div class="line">   Iterator#{ ... }</div>
+<div class="line">   Iterator#*{ ... }</div>
 <div class="line">   Sweep#*{ ... }</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> This description should look familiar, except for the inclusion of a Sweep{...} block, which is an optional element that was omitted from our example file. In such a description, the syntax Label{...} is used to indicate a nested subblock, for which the format of the subblock must be described separately separately. The appearance of an asterisk (*) after any block or parameter label is used to indicate that the element is optional (i.e., omittable). Parameters and subblock labels that are not followed by an asterisk are thus required elements. The appearance of a "\#" symbol after a subblock label is used to indicate that the subblock is selectable. The above description thus indicates that the Iterator block is a required selectable element, while the Sweep block is an optional selectable element.</p>
+</div><!-- fragment --><p> This description should look familiar, except for the inclusion of a Sweep{...} block, which is an optional element that was omitted from our example file. In such a description, the syntax Label{...} is used to indicate a nested subblock, for which the format of the subblock must be described separately somewhere else. The appearance of an asterisk (*) after any block or parameter label is used to indicate that the element is optional (i.e., omittable). Parameters and subblock labels that are not followed by an asterisk thus indicate required elements. The appearance of a "#" symbol after a block label indicate that the block is selectable. The above description thus indicates that the Iterator and Sweep blocks are both optional selectable elements.</p>
+<h1><a class="anchor" id="user_format_example2_sec"></a>
+Example 2</h1>
 <p >As a second example, the format for a Mixture block in any PSCF parameter file can be given compactly as follows: </p><div class="fragment"><div class="line">Mixture{</div>
 <div class="line">  nMonomer   <span class="keywordtype">int</span></div>
 <div class="line">  monomers   Array [ real ]</div>
@@ -89,7 +91,7 @@ Conventions</h1>
 </div><!-- fragment --> where "label" denotes the name (or label string) of the parameter and "type" is a string that identifies the data type of the parameter value (e.g., int, real, string, etc.).</li>
 <li><b> Subblocks </b>: The presence of a nested subblock is indicated using the syntax <div class="fragment"><div class="line">Label{ ... }</div>
 </div><!-- fragment --> where "Label" denote the label string for the subblock.</li>
-<li><b> Selectable blocks </b>: Selectable subblocks are indicated by adding a "\#" symbol after the subblock label and before the opening curly bracket, using the syntax <div class="fragment"><div class="line">Label#{ ... }</div>
+<li><b> Selectable blocks </b>: Selectable subblocks are indicated by adding a "#" symbol after the subblock label and before the opening curly bracket, using the syntax <div class="fragment"><div class="line">Label#{ ... }</div>
 </div><!-- fragment --> for a required but selectable subblock. The label for a selectable subblock in a format description should be the generic name for the subblock (e.g., "Iterator", rather than the name for a specific iteration algorithm). This generic name is also the block label that can be used to select the default choice for this block.</li>
 <li><b> Optional elements </b>: Optional subblocks and parameters (i.e., elements that may be omitted from the file) are indicated by an asterisk after the subblock or parameter label. The label for an optional simple parameter is thus <div class="fragment"><div class="line">label*   type</div>
 </div><!-- fragment --> where "label" denotes the actual label string. The label for an optional selectable subblock places the asterisk after the # symbol, giving Label#*{ .... }.</li>
@@ -105,7 +107,7 @@ Conventions</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2023 20:01:03 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Mar 15 2023 22:38:40 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
