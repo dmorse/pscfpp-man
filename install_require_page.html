@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
    </div>
   </td>
  </tr>
@@ -101,7 +101,7 @@ Git client</h1>
 Python</h1>
 <p >Similarly, one can check if a python interpreter is accessible by checking if the command </p><div class="fragment"><div class="line">which python</div>
 </div><!-- fragment --><p> returns a non-empty path. A python interpreter should be available from the command line in any common linux distribution (e.g., Fedora or Ubuntu) or in Mac OS X after installation of the command line tools package.</p>
-<h1><a class="anchor" id="install_require_compiler_serial"></a>
+<h1><a class="anchor" id="install_require_compiler_cpp"></a>
 C++ compiler</h1>
 <p >By default, the PSCF build system invokes a C++ compiler using the compiler commnd name "g++". On linux systems, this command normally invokes the gnu compiler collection (GCC) C++ compiler. On a MacIntosh running Mac OS X that is set up for C++ developent (see above), the "g++" command is normally a link to the Clang compiler, which is the default compiler for C++ development on Mac OS X. The Clang compiler accepts almost all the same command line options as the gnu compiler, and thus functions as a drop-in replacement for the gnu C++ compiler.</p>
 <p >It is possible to configure the build system during the initial setup process so as to instead use a different C++ compiler. When the GCC or Clang compiler is not used for compilation, however, the PSCF build system will still invoke the "g++" command with appropriate options to analyse dependencies among source files. The PSCF makefile system thus always requires that the "g++" command be available on the build system.</p>
@@ -123,7 +123,7 @@ Packages: Mac OS X</h1>
 <p >Using Homebrew, you may install the GSL and FFTW packages with the commands </p><div class="fragment"><div class="line">brew install gsl</div>
 <div class="line">brew install fftw</div>
 </div><!-- fragment --><p> To also install doxygen, issue the command </p><div class="fragment"><div class="line">brew install doxygen</div>
-</div><!-- fragment --><p >Mac users should be aware that homebrew installs files in different locations on newer Macs that use Apple silicon than the locations used on macs that use Intel cpus:</p>
+</div><!-- fragment --><p >Mac users should be aware that homebrew installs files in different locations on newer Macs that use Apple silicon than the file locations used by homebrew on older Macs that use Intel cpus:</p>
 <p >On Macs with Intel cpus, homebrew installed links to required header and library files in subdirectories of the /usr/local directory. Because /usr/local is one of the standard directories in which a unix shell normally looks for such files, PSCF can be installed on such machines using a default configuration for the makefile system that is the same as the default used on linux machines.</p>
 <p >On Macs with Apple silicon, homebrew instead installs all files in /opt/homebrew. This requires users to add paths to this directory and/or some of its subdirectories to the search paths used by the compiler to find header and library files. A compiler configuration file that modifies these search paths is provided as part of PSCF, as discussed <a class="el" href="install_setup_page.html#install_setup_homebrewm1_sec">here</a>.</p>
 <h1><a class="anchor" id="install_require_module"></a>
@@ -142,7 +142,7 @@ Linux Software Modules</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 15 2023 22:38:40 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Jul 6 2023 14:11:35 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

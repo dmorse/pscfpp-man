@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
    </div>
   </td>
  </tr>
@@ -71,10 +71,11 @@ File Format (Overview)</h1>
 <li>size is the number of waves in the star.</li>
 <li>beginId is the wave index (waveId) of the first wave in the star</li>
 <li>endId is one greater than the the wave index of the last wave in the star.</li>
-<li>starInvert is a integer that can have allowed values of 0, 1, -1. A value starInvert = 0 indicates that the star is closed under inversion. Value of starInvert = +1 or -1 indicates that the star is the first or second star, respectively, in a pair of open stars that are related to one another by inversion.</li>
+<li>starInvert is a integer that can have allowed values of 0, 1, -1. A value starInvert = 0 indicates that the star is closed under inversion. A value of starInvert = +1 or -1 indicates that the star is the first star (for starInvert = 1) or the second star (for starInvert = -1) in a pair of open stars that are related to one another by inversion.</li>
 <li>wave[D] is a vector of D integer wave components of a characteristic wave that belongs to the star, which can be used as an identifier for the star.</li>
 </ul>
 <p >The indices beginId and endId list indices of waves in an ordered list of all waves, including those that belong to cancelled stars, in which the waves that belong to a particular star are listed as a consecutive block with indices beginId, ...., endId - 1. Only non-cancelled stars are listed in this file format.</p>
+<p >Stars are listed in this file output in order of increasing starId. Pairs of open stars that are related to each other by inversion are always assigned sequential values for the starId, and thus always appear sequentially in this format, with the star with starInvert = +1 listed first.</p>
 <h1><a class="anchor" id="user_command_pc_star_gyroid_sec"></a>
 Example (Double Gyroid)</h1>
 <p >An example of the file created by a WRITE_STARS command is shown below for a system with space group \( I a\overline{3} d \), or PSCF space group identifier I_a_-3_d. This is the space group of the double gyroid phase of a diblock copolymer. Because this space group is centrosymmetric (i.e., has an inversion center), all stars are closed under inversion, and so a value of starInvert = 0 is thus listed for every star. An example of the output file created by the MAKE_WAVES command for the same system is shown <a class="el" href="user_command_pc_star_page.html#user_command_pc_star_gyroid_sec">here</a>.</p>
@@ -188,7 +189,7 @@ Example (Alternating Gyroid)</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 15 2023 22:38:40 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Jul 6 2023 14:11:35 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

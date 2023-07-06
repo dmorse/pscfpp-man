@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
    </div>
   </td>
  </tr>
@@ -141,7 +141,7 @@ $(function() {
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>      <span class="keyword">using </span><a class="code hl_class" href="classPscf_1_1Pspc_1_1Iterator.html">Iterator</a>&lt;D&gt;<a class="code hl_variable" href="classPscf_1_1Pspc_1_1Iterator.html#a4f7140eb5841880c82eee19d0b0a4cde">::isFlexible_</a>;</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>      <span class="keyword">using </span><a class="code hl_function" href="classUtil_1_1ParamComposite.html#a21c4ae1412ec944d4189cb7c7b6a3171">ParamComposite::read</a>;</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      <span class="keyword">using </span><a class="code hl_function" href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">ParamComposite::readOptional</a>;</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      <span class="keyword">using </span><a class="code hl_function" href="classUtil_1_1ParamComposite.html#a16d3c358ee160a8fbbbf415993f7beb5">ParamComposite::readOptionalDArray</a>;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      <span class="keyword">using </span><a class="code hl_function" href="classUtil_1_1ParamComposite.html#a1592472a30ff22139667f019b3e2026f">ParamComposite::readDArray</a>;</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      <span class="keyword">using </span><a class="code hl_function" href="classUtil_1_1ParamComposite.html#ad99740d4a40314f7d87a381339caf502">ParamComposite::setParent</a>;</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      <span class="keyword">using </span><a class="code hl_function" href="classUtil_1_1ParamComposite.html#ae01a90ae0958b05574e258ce730b1fe9">ParamComposite::addComponent</a>;</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
@@ -271,7 +271,7 @@ $(function() {
 <div class="ttc" id="aclassPscf_1_1Pspc_1_1System_html"><div class="ttname"><a href="classPscf_1_1Pspc_1_1System.html">Pscf::Pspc::System</a></div><div class="ttdoc">Main class for SCFT simulation of one system.</div><div class="ttdef"><b>Definition:</b> <a href="pspc_2System_8h_source.html#l00075">pspc/System.h:76</a></div></div>
 <div class="ttc" id="aclassUtil_1_1DArray_html"><div class="ttname"><a href="classUtil_1_1DArray.html">Util::DArray</a></div><div class="ttdoc">Dynamically allocatable contiguous array template.</div><div class="ttdef"><b>Definition:</b> <a href="DArray_8h_source.html#l00031">DArray.h:32</a></div></div>
 <div class="ttc" id="aclassUtil_1_1FSArray_html"><div class="ttname"><a href="classUtil_1_1FSArray.html">Util::FSArray</a></div><div class="ttdoc">A fixed capacity (static) contiguous array with a variable logical size.</div><div class="ttdef"><b>Definition:</b> <a href="FSArray_8h_source.html#l00037">FSArray.h:38</a></div></div>
-<div class="ttc" id="aclassUtil_1_1ParamComposite_html_a16d3c358ee160a8fbbbf415993f7beb5"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a16d3c358ee160a8fbbbf415993f7beb5">Util::ParamComposite::readOptionalDArray</a></div><div class="ttdeci">DArrayParam&lt; Type &gt; &amp; readOptionalDArray(std::istream &amp;in, const char *label, DArray&lt; Type &gt; &amp;array, int n)</div><div class="ttdoc">Add and read an optional DArray &lt; Type &gt; parameter.</div><div class="ttdef"><b>Definition:</b> <a href="ParamComposite_8h_source.html#l01410">ParamComposite.h:1410</a></div></div>
+<div class="ttc" id="aclassUtil_1_1ParamComposite_html_a1592472a30ff22139667f019b3e2026f"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a1592472a30ff22139667f019b3e2026f">Util::ParamComposite::readDArray</a></div><div class="ttdeci">DArrayParam&lt; Type &gt; &amp; readDArray(std::istream &amp;in, const char *label, DArray&lt; Type &gt; &amp;array, int n)</div><div class="ttdoc">Add and read a required DArray &lt; Type &gt; parameter.</div><div class="ttdef"><b>Definition:</b> <a href="ParamComposite_8h_source.html#l01400">ParamComposite.h:1400</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a21c4ae1412ec944d4189cb7c7b6a3171"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a21c4ae1412ec944d4189cb7c7b6a3171">Util::ParamComposite::read</a></div><div class="ttdeci">ScalarParam&lt; Type &gt; &amp; read(std::istream &amp;in, const char *label, Type &amp;value)</div><div class="ttdoc">Add and read a new required ScalarParam &lt; Type &gt; object.</div><div class="ttdef"><b>Definition:</b> <a href="ParamComposite_8h_source.html#l01248">ParamComposite.h:1248</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a30752567fd7b8b93e5c8476bbe8592c5"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">Util::ParamComposite::setClassName</a></div><div class="ttdeci">void setClassName(const char *className)</div><div class="ttdoc">Set class name string.</div><div class="ttdef"><b>Definition:</b> <a href="ParamComposite_8cpp_source.html#l00377">ParamComposite.cpp:377</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a5d9f133993e0aa0b18cd59938ccf8700"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">Util::ParamComposite::readOptional</a></div><div class="ttdeci">ScalarParam&lt; Type &gt; &amp; readOptional(std::istream &amp;in, const char *label, Type &amp;value)</div><div class="ttdoc">Add and read a new optional ScalarParam &lt; Type &gt; object.</div><div class="ttdef"><b>Definition:</b> <a href="ParamComposite_8h_source.html#l01256">ParamComposite.h:1256</a></div></div>
@@ -282,7 +282,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 15 2023 22:38:37 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Jul 6 2023 14:11:31 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

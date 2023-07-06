@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
    </div>
   </td>
  </tr>
@@ -67,9 +67,8 @@ $(function() {
 <div class="line">   normalVecId         int (0, 1, or 2)   </div>
 <div class="line">   interfaceThickness  <span class="keywordtype">float</span>  </div>
 <div class="line">   wallThickness       <span class="keywordtype">float</span> </div>
-<div class="line">   chi*                array[ <span class="keywordtype">float</span> float ] (<span class="keywordflow">default</span> is an array of zeros)</div>
-<div class="line">   wallBasisOutFile*   <span class="keywordtype">string</span></div>
-<div class="line">   wallRGridOutFile*   <span class="keywordtype">string</span></div>
+<div class="line">   chiBottom           Array [ float ] (nMonomer elements)</div>
+<div class="line">   chiTop              Array [ <span class="keywordtype">float</span> ] (nMonomer elements)</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> Here, as elsewhere, labels followed by an asterisk (*) represent optional elements.</p>
 <p >Parameters and subblocks are described below: </p><table class="doxtable">
@@ -94,17 +93,19 @@ $(function() {
 <tr>
 <td>wallThickness  </td><td>thickness of the wall (i.e., the region from which the mixture is excluded). Recommendation is to use at least twice the interfaceThickness value.   </td></tr>
 <tr>
-<td>chi*  </td><td>Array of values representing the relative strength of chemical interactions between the walls and the monomer species in the system, in the form of a Flory-Huggins-like chi value. Each row of the array corresponds to one monomer species in the system, and contains two values: the first represents the interaction between wall 1 and the monomer species (where wall 1 is the wall that contains the origin), and the second represents the interaction with wall 2. This array will have n_monomer rows and 2 columns. Large values represent unfavorable interactions.   </td></tr>
+<td>chiBottom  </td><td>Array of values representing the relative strengths of chemical interactions between the bottom wall and each monomer species in <br  />
+ the system, in the form of a Flory-Huggins-like chi value. Each <br  />
+ entry of the array gives the chi value that defines the chemical interactions of one monomer species with the wall. This array has nMonomer entries. Large values represent unfavorable interactions. The "bottom wall" here is defined as the wall that contains the origin.   </td></tr>
 <tr>
-<td>wallBasisOutFile*  </td><td>Optional filename to which a field file in symmetry-adapted basis format will be written representing the volume fraction of the wall (the mask imposed upon the iterator) throughout the unit cell.   </td></tr>
-<tr>
-<td>wallRGridOutFile*  </td><td>Optional filename to which an r-grid file will be written containing the volume fraction of the wall (the mask imposed upon the iterator) at each gridpoint.   </td></tr>
+<td>chiTop  </td><td>Array of values representing the relative strengths of chemical interactions between the top wall and each monomer species in <br  />
+ the system, in the form of a Flory-Huggins-like chi value. Each <br  />
+ entry of the array gives the chi value that defines the chemical interactions of one monomer species with the wall. This array has nMonomer entries. Large values represent unfavorable interactions. The "top wall" here is defined as the wall that does not contain the origin.   </td></tr>
 </table>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 15 2023 22:38:41 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Jul 6 2023 14:11:36 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

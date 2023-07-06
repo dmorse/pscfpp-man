@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
    </div>
   </td>
  </tr>
@@ -69,7 +69,7 @@ $(function() {
 <li><b>Compile GPU-enabled programs:</b> To compile the GPU enabled programs on a machine with an appropriate NVIDIA GPU and a CUDA compiler, enter <div class="fragment"><div class="line">make pspg</div>
 </div><!-- fragment --> from within the pscfpp/ root directory. If successful, this will install executables named "pscf_pg1", "pscf_pg2" and "pscf_pg3" in the pscfpp/bin directory.</li>
 </ul>
-<p >The "make all-cpu" and "make pspg" commands will each also create a large number of intermediate object (*.o), dependency (*.d) and library (*.a) files in subdirectories of the pscfpp/bld directory (which is the default build directory).</p>
+<p >It is also possible to compile all CPU and GPU-enabled programs with the single command "make all" on machines that are configured to compile CUDA programs. The "make all-cpu" and "make pspg" or "make all" commands will each create a large number of intermediate object (*.o), dependency (*.d) and library (*.a) files in subdirectories of the pscfpp/bld directory (which is the default build directory).</p>
 <p >Each of the above steps is discussed in more detail in the following pages.</p>
 <h2>Out-of-source vs. In-Source Compilation </h2>
 <p >The above instructions will perform an "out-of-source" build in which intermediate files created during compilation process are left in the pscfpp/bld directory tree. It is also possible to perform an "in-source" build in which these files are created in the pscfpp/src directory that also contains all C++ and CUDA source code files. The option of in-source compilation is discussed in more detail <a class="el" href="install_inout_page.html">here</a>. We recommend the use of out-of-source compilation for package users who are not actively working on development. Developers may find in-source compilation more convenient during development.</p>
@@ -79,7 +79,7 @@ $(function() {
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 15 2023 22:38:40 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Jul 6 2023 14:11:35 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
