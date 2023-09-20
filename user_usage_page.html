@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -80,20 +80,22 @@ Command Line Options</h1>
 <tr>
 <td>-c  </td><td>filename  </td><td>Gives the filename of the command file (required)   </td></tr>
 <tr>
-<td>-i  </td><td>prefix  </td><td>Specifies a prefix string that will be prepended to the names paths all input data files   </td></tr>
+<td>-i  </td><td>prefix  </td><td>Specifies a prefix string that is prepended to the names (paths) of all input data files   </td></tr>
 <tr>
-<td>-o  </td><td>prefix  </td><td>Specifies a prefix string that will be prepended to the the names (paths) for all output data files   </td></tr>
+<td>-o  </td><td>prefix  </td><td>Specifies a prefix string that is prepended to the the names (paths) for all output data files   </td></tr>
 </table>
-<p>Only the -p and -c options are required, while others may be omitted. The blank entry in the argument column for the -e option indicates that this option does not take an argument. The "prefix" arguments of the -i and -o options can be paths to directories that end in directory separator characters, such as "in/" or "out/", in order to place all input or output files in specified directories. These prefixes are prepended to names of input and output files whose names are given in the command file, but are not added to the names of the parameter and command files.</p>
+<p>Only the -p and -c options are required, while others may be omitted. <br  />
+ The blank entry in the argument column for the -e option indicates that this option does not take an argument.</p>
+<p >The "prefix" arguments of the -i and -o options can be used to specify directory for input and output files. To do so, set either of these arguments to the path to a directory, terminated by the directory separator charactor "/", giving a string such as "in/" or "out/". These prefix strings are prepended verbatim to names of input and output files that are specified in the command file, but are not added to the names of the parameter and command files.</p>
 <p ><em> Example </em>: The command </p><div class="fragment"><div class="line">pscf_pc3 -e -p param -c commands -i in/ -o out/ &gt; log</div>
-</div><!-- fragment --><p> would run the program pscf_pc3 using a parameter file named "param" and a command file named "commands", while echoing the parameter file during initialization, and reading all input files from subdirectory "in/" and writing all output files to subdirectory "out/".</p>
+</div><!-- fragment --><p> would run the program pscf_pc3 using a parameter file named "param" and a command file named "commands", while echoing the parameter file during initialization, writing all output files to subdirectory "out/" of the current working directory, and reading all input files other than the parameter and command files from subdirectory "in/".</p>
 <p ><br  />
  <a class="el" href="user_files_page.html">Input Files</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_page.html">User Guide</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_param_page.html">Parameter Files</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 6 2023 14:11:36 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Sep 20 2023 00:52:46 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -60,13 +60,13 @@ $(function() {
 <h1><a class="anchor" id="make_files"></a>
 Source directory</h1>
 <p >All C++ and CUDA files for PSCF, are in the pscfpp/src/ directory tree. The header and source file for each class are in the same directory. The name of each C++ file is the same as the class name, followed by an extension to indicate file type. We use extension .h to indicate a header file, .tpp to indicate the implementation of a class template, .cpp to indicate a C++ source file, and .cu to indicate a CUDA source file. All class names and corresponding file names are upper space camel (like <a class="el" href="classUtil_1_1Vector.html" title="A Vector is a Cartesian vector.">Util::Vector</a> or <a class="el" href="classPscf_1_1Basis.html" title="Symmetry-adapted Fourier basis for pseudo-spectral scft.">Pscf::Basis</a>).</p>
-<p >The source code in pscfpp/src is divided among two top-level namespaces, named <a class="el" href="namespaceUtil.html" title="Utility classes for scientific computation.">Util</a> and <a class="el" href="namespacePscf.html" title="Classes for polymer self-consistent field theory.">Pscf</a>.</p>
+<p >The source code in pscfpp/src is divided among two top-level namespaces, named <a class="el" href="namespaceUtil.html" title="Utility classes for scientific computation.">Util</a> and <a class="el" href="namespacePscf.html" title="C++ namespace for polymer self-consistent field theory (PSCF).">Pscf</a>.</p>
 <p >The <a class="el" href="namespaceUtil.html" title="Utility classes for scientific computation.">Util</a> namespace contains a collection of utilities for scientific computation that is also used by other projects. All code in the <a class="el" href="namespaceUtil.html" title="Utility classes for scientific computation.">Util</a> namespace is contained in the src/util directory. This directory contains the contents of a separate github git repository (repository dmorse/util) that is imported into the pscfpp as a submodule.</p>
-<p >The <a class="el" href="namespacePscf.html" title="Classes for polymer self-consistent field theory.">Pscf</a> namespace contains all C++ and CUDA code that is specific to the PSCF project. The <a class="el" href="namespacePscf.html" title="Classes for polymer self-consistent field theory.">Pscf</a> namespace contains several enclosed namespaces that each contain code that is used only by one program or set of closely related programs.</p>
+<p >The <a class="el" href="namespacePscf.html" title="C++ namespace for polymer self-consistent field theory (PSCF).">Pscf</a> namespace contains all C++ and CUDA code that is specific to the PSCF project. The <a class="el" href="namespacePscf.html" title="C++ namespace for polymer self-consistent field theory (PSCF).">Pscf</a> namespace contains several enclosed namespaces that each contain code that is used only by one program or set of closely related programs.</p>
 <p >The main subdirectories of src/ are:</p>
 <ul>
 <li>src/util/ contains code in the <a class="el" href="namespaceUtil.html" title="Utility classes for scientific computation.">Util</a> namespace</li>
-<li>src/pscf/ contains code defined directly in the <a class="el" href="namespacePscf.html" title="Classes for polymer self-consistent field theory.">Pscf</a> namespace, which is accessible to all PSCF programs.</li>
+<li>src/pscf/ contains code defined directly in the <a class="el" href="namespacePscf.html" title="C++ namespace for polymer self-consistent field theory (PSCF).">Pscf</a> namespace, which is accessible to all PSCF programs.</li>
 <li>src/fd1d/ contains all code in the <a class="el" href="namespacePscf_1_1Fd1d.html" title="Finite-different one-dimensional SCFT.">Pscf::Fd1d</a> namespace, which is only used by the pscf_fd 1D finite element program.</li>
 <li>src/pspc/ contains all code in the <a class="el" href="namespacePscf_1_1Pspc.html" title="Pseudo-spectral SCFT for periodic boundary conditions.">Pscf::Pspc</a> namespace, which is only used by the pscf_pc C++ CPU programs for periodic structures.</li>
 <li>src/pspg/ contains all code for the <a class="el" href="namespacePscf_1_1Pspc.html" title="Pseudo-spectral SCFT for periodic boundary conditions.">Pscf::Pspc</a> namespace, which is only used by the pscf_pg CUDA GPU programs for periodic structures.</li>
@@ -117,10 +117,11 @@ Main config.mk file</h2>
 <li>BLD_DIR contains the absolute path to the build directory.</li>
 <li>BIN_DIR contains the absolute path to the directory in which executables are installed.</li>
 </ul>
-<p >In the main config.mk in each build directory, BLD_DIR is given by the absolute path for that directory. By default, BIN_DIR is the absolute path to the pscfpp/bin directory. The values of the above three variables are expressed in terms of a variable ROOT_DIR that contains the absolute path to the pscfpp/ root directory. The correct value for ROOT_DIR is set by the setup script. Here is an example of the relevant part of the file bld/serial/config.mk: </p><div class="fragment"><div class="line">ROOT_DIR=${HOME}/pscfpp</div>
+<p >In the main config.mk in each build directory, BLD_DIR is given by the absolute path for that directory. By default, BIN_DIR is the absolute path to the pscfpp/bin directory. The values of the above three variables are expressed in terms of a variable ROOT_DIR that contains the absolute path to the pscfpp/ root directory. The correct value for ROOT_DIR is set by the setup script. Here is an example of the relevant part of the file bld/serial/config.mk: </p><div class="fragment"><div class="line">ROOT_DIR=${HOME}/<a class="code hl_namespace" href="namespacepscfpp.html">pscfpp</a></div>
 <div class="line">SRC_DIR=$(ROOT_DIR)/src</div>
 <div class="line">BLD_DIR=$(ROOT_DIR)/bld</div>
 <div class="line">BIN_DIR=$(ROOT_DIR)/bin</div>
+<div class="ttc" id="anamespacepscfpp_html"><div class="ttname"><a href="namespacepscfpp.html">pscfpp</a></div><div class="ttdoc">Python package of all python modules provided with PSCF.</div><div class="ttdef"><b>Definition:</b> <a href="____init_____8py_source.html#l00001">__init__.py:1</a></div></div>
 </div><!-- fragment --><p> Here, for simplicity, we have assumed that the pscfpp/ root directory is a subdirectory of the users home directory. In the actual file, this would be replaced by the literal absolute path to whatever parent directory contains the pscfpp/ directory.</p>
 <p >sub</p>
 <h1><a class="anchor" id="make_config_namespace"></a>
@@ -244,8 +245,8 @@ Subdirectory Makefiles</h1>
 <p >As a convenience for developers, every subdirectory src/ at the namespace level and below contains a makefile. The "all" target of each such src/ subdirectory makefile executes an in-source build of the files in that subdirectory and any descendant subdirectories. The structure of the makefiles in subdirectories of the namespace level directories is very similar to that of the namespace level makefiles, except for the absence of targets to build a library or executables.</p>
 <p >During development, the most convenient way to test whether a source file that you have just modified compiles correctly is usually to just enter </p><div class="fragment"><div class="line">&gt; make all</div>
 </div><!-- fragment --><p> from the directory that contains the new or newly modified source file. If automatic dependency generation is enabled, and if you only modify one class at a time, this will normally cause the build system to compile only the source file that you have just modified. If a directory contains more than one incomplete or broken file, you should temporarily comment out all but one of these files (the one you are working on) in the definition of the [directory]_ variable in the corresponding sources.mk file, and then uncomment each such file when you are ready to work on it.</p>
-<p >The file name conventions used in the PSCF build system make it awkward for a user to explictly request compilation of a specific source file. The build system uses absolute paths for all source and object files. The "make" program is not smart enough to recognize when an absolute and relative path are equivalent. As a result, the only way explicitly request compilation of a specific source file is to use the absolute path to the object file as a makefile target. For example, if the absolute path to the root PSCF directory within a user account named "george" was "/home/george/pscfpp/", you (or George) could compile the source file src/mcMd/simulation/Simulation.cpp in-source by entering </p><div class="fragment"><div class="line">make /home/george/pscfpp/src/mcMd/simulation/Simulation.o</div>
-</div><!-- fragment --><p> or </p><div class="fragment"><div class="line">make ~/pscfpp/src/mcMd/simulation/Simulation.o</div>
+<p >The file name conventions used in the PSCF build system make it awkward for a user to explictly request compilation of a specific source file. The build system uses absolute paths for all source and object files. The "make" program is not smart enough to recognize when an absolute and relative path are equivalent. As a result, the only way explicitly request compilation of a specific source file is to use the absolute path to the object file as a makefile target. For example, if the absolute path to the root PSCF directory within a user account named "george" was "/home/george/pscfpp/", you (or George) could compile the source file src/mcMd/simulation/Simulation.cpp in-source by entering </p><div class="fragment"><div class="line">make /home/george/<a class="code hl_namespace" href="namespacepscfpp.html">pscfpp</a>/src/mcMd/simulation/Simulation.o</div>
+</div><!-- fragment --><p> or </p><div class="fragment"><div class="line">make ~/<a class="code hl_namespace" href="namespacepscfpp.html">pscfpp</a>/src/mcMd/simulation/Simulation.o</div>
 </div><!-- fragment --><p> from either the src/mcMd/simulation or src/mcMd/ directory. Most programmers, however, are unwilling to repeatedly type absolute paths. This is why we recommend getting in the habit of simply using "make all" from the directory that contains the file of interest, and working on only one file at a time.</p>
 <p ><br  />
  <a class="el" href="developer_source_page.html">Directory Structure</a> (Prev) <a class="el" href="developer_page.html">Developer Information</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="developer_standards_page.html">Coding Standards</a> (Next) </p>
@@ -253,7 +254,7 @@ Subdirectory Makefiles</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 6 2023 14:11:36 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Sep 20 2023 00:52:46 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

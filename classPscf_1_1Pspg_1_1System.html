@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -219,7 +219,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aaa0aec4e1a210778e68e16dcf9859ac6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspg_1_1System.html#aaa0aec4e1a210778e68e16dcf9859ac6">basisToKGrid</a> (const std::string &amp;inFileName, const std::string &amp;outFileName)</td></tr>
 <tr class="memdesc:aaa0aec4e1a210778e68e16dcf9859ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert fields from symmetrized basis to Fourier (k-grid) format.  <a href="classPscf_1_1Pspg_1_1System.html#aaa0aec4e1a210778e68e16dcf9859ac6">More...</a><br /></td></tr>
 <tr class="separator:aaa0aec4e1a210778e68e16dcf9859ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Member Accessors</div></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Member Object Accessors</div></td></tr>
 <tr class="memitem:a78931ec54fc2182f694ee9640496a965"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Pspg_1_1WFieldContainer.html">WFieldContainer</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspg_1_1System.html#a78931ec54fc2182f694ee9640496a965">w</a> () const</td></tr>
 <tr class="memdesc:a78931ec54fc2182f694ee9640496a965"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get container of chemical potential fields.  <a href="classPscf_1_1Pspg_1_1System.html#a78931ec54fc2182f694ee9640496a965">More...</a><br /></td></tr>
 <tr class="separator:a78931ec54fc2182f694ee9640496a965"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -262,6 +262,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3a4dadb637592591a46944ec51c58a65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1FileMaster.html">FileMaster</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspg_1_1System.html#a3a4dadb637592591a46944ec51c58a65">fileMaster</a> ()</td></tr>
 <tr class="memdesc:a3a4dadb637592591a46944ec51c58a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get FileMaster by reference.  <a href="classPscf_1_1Pspg_1_1System.html#a3a4dadb637592591a46944ec51c58a65">More...</a><br /></td></tr>
 <tr class="separator:a3a4dadb637592591a46944ec51c58a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Queries</div></td></tr>
 <tr class="memitem:af1fd3d0764967ab286f7daf3cdc0534a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspg_1_1System.html#af1fd3d0764967ab286f7daf3cdc0534a">hasCFields</a> () const</td></tr>
 <tr class="memdesc:af1fd3d0764967ab286f7daf3cdc0534a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Have monomer concentration fields (c fields) been computed?  <a href="classPscf_1_1Pspg_1_1System.html#af1fd3d0764967ab286f7daf3cdc0534a">More...</a><br /></td></tr>
 <tr class="separator:af1fd3d0764967ab286f7daf3cdc0534a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -618,7 +619,6 @@ class Pscf::Pspg::System&lt; D &gt;</div><p >Main class in SCFT simulation of on
 <li>a <a class="el" href="classPscf_1_1Pspg_1_1Domain.html" title="Spatial domain and spatial discretization for a periodic structure.">Domain</a> (a description of the unit cell and discretization)</li>
 <li>a container of monomer chemical potential fields (w fields)</li>
 <li>a container of monomer concentration fields (c fields)</li>
-<li>an <a class="el" href="classPscf_1_1Pspg_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a></li>
 </ul>
 <p >A <a class="el" href="classPscf_1_1Pspg_1_1System.html" title="Main class in SCFT simulation of one system.">System</a> may also optionally contain <a class="el" href="classPscf_1_1Pspg_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> and <a class="el" href="classPscf_1_1Pspg_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a> objects.</p>
 <p >A minimal main program that uses this class template to implement a program for 3-dimensional structures (D=3) looks something like this: </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv) {</div>
@@ -627,13 +627,13 @@ class Pscf::Pspg::System&lt; D &gt;</div><p >Main class in SCFT simulation of on
 <div class="line">   system.<a class="code hl_function" href="classPscf_1_1Pspg_1_1System.html#a424e1948a8dcce5180d93a7866113023">readParam</a>();</div>
 <div class="line">   system.<a class="code hl_function" href="classPscf_1_1Pspg_1_1System.html#a72d03d8a229293039a3db0b9350fedbe">readCommands</a>();</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassPscf_1_1Pspg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Pspg_1_1System.html">Pscf::Pspg::System</a></div><div class="ttdoc">Main class in SCFT simulation of one system.</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2System_8h_source.html#l00071">pspg/System.h:72</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Pspg_1_1System_html_a424e1948a8dcce5180d93a7866113023"><div class="ttname"><a href="classPscf_1_1Pspg_1_1System.html#a424e1948a8dcce5180d93a7866113023">Pscf::Pspg::System::readParam</a></div><div class="ttdeci">virtual void readParam(std::istream &amp;in)</div><div class="ttdoc">Read input parameters (with opening and closing lines).</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2System_8tpp_source.html#l00185">pspg/System.tpp:185</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Pspg_1_1System_html_a72d03d8a229293039a3db0b9350fedbe"><div class="ttname"><a href="classPscf_1_1Pspg_1_1System.html#a72d03d8a229293039a3db0b9350fedbe">Pscf::Pspg::System::readCommands</a></div><div class="ttdeci">void readCommands(std::istream &amp;in)</div><div class="ttdoc">Read command script.</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2System_8tpp_source.html#l00283">pspg/System.tpp:283</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Pspg_1_1System_html_af5f6c8dfe84836bbbc074d3507626f29"><div class="ttname"><a href="classPscf_1_1Pspg_1_1System.html#af5f6c8dfe84836bbbc074d3507626f29">Pscf::Pspg::System::setOptions</a></div><div class="ttdeci">void setOptions(int argc, char **argv)</div><div class="ttdoc">Process command line options.</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2System_8tpp_source.html#l00101">pspg/System.tpp:101</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Pspg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Pspg_1_1System.html">Pscf::Pspg::System</a></div><div class="ttdoc">Main class in SCFT simulation of one system.</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2System_8h_source.html#l00070">pspg/System.h:71</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Pspg_1_1System_html_a424e1948a8dcce5180d93a7866113023"><div class="ttname"><a href="classPscf_1_1Pspg_1_1System.html#a424e1948a8dcce5180d93a7866113023">Pscf::Pspg::System::readParam</a></div><div class="ttdeci">virtual void readParam(std::istream &amp;in)</div><div class="ttdoc">Read input parameters (with opening and closing lines).</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2System_8tpp_source.html#l00187">pspg/System.tpp:187</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Pspg_1_1System_html_a72d03d8a229293039a3db0b9350fedbe"><div class="ttname"><a href="classPscf_1_1Pspg_1_1System.html#a72d03d8a229293039a3db0b9350fedbe">Pscf::Pspg::System::readCommands</a></div><div class="ttdeci">void readCommands(std::istream &amp;in)</div><div class="ttdoc">Read command script.</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2System_8tpp_source.html#l00285">pspg/System.tpp:285</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Pspg_1_1System_html_af5f6c8dfe84836bbbc074d3507626f29"><div class="ttname"><a href="classPscf_1_1Pspg_1_1System.html#af5f6c8dfe84836bbbc074d3507626f29">Pscf::Pspg::System::setOptions</a></div><div class="ttdeci">void setOptions(int argc, char **argv)</div><div class="ttdoc">Process command line options.</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2System_8tpp_source.html#l00103">pspg/System.tpp:103</a></div></div>
 </div><!-- fragment --><p> This main program is given for D=1, 2, and 3 dimensional structures in the files pscf_pg1.cpp, pscf_pg2.cpp, and pscf_pg3.cpp </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00071">71</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00070">70</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abef5a932da01e7c1d3cd9e9638ddc07f" name="abef5a932da01e7c1d3cd9e9638ddc07f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abef5a932da01e7c1d3cd9e9638ddc07f">&#9670;&#160;</a></span>System()</h2>
@@ -673,7 +673,7 @@ template&lt;int D&gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00078">78</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00080">80</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -716,7 +716,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00101">101</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00103">103</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="ParamComponent_8cpp_source.html#l00062">Util::ParamComponent::setEcho()</a>, <a class="el" href="ThreadGrid_8cu_source.html#l00048">Pscf::Pspg::ThreadGrid::setThreadsPerBlock()</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
@@ -758,7 +758,7 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classUtil_1_1ParamComposite.html#a6fc094b057fd9a21641b089f6f063b39">Util::ParamComposite</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00185">185</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00187">187</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -779,7 +779,7 @@ template&lt;int D&gt; </div>
 <p>Read input parameters from default param file. </p>
 <p >This function reads the parameter file set by the -p command line option. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00196">196</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00198">198</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -819,7 +819,7 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classUtil_1_1ParamComposite.html#a172a3a656b5829c8d758424ad09a22a6">Util::ParamComposite</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00202">202</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00204">204</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
@@ -851,7 +851,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00283">283</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00285">285</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -874,7 +874,7 @@ template&lt;int D&gt; </div>
 <p>Read commands from default command file. </p>
 <p >This function reads the parameter file set by the -c command line option. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00477">477</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00479">479</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
@@ -907,7 +907,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00491">491</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00493">493</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -938,7 +938,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00509">509</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00511">511</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -969,7 +969,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00529">529</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00531">531</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1000,7 +1000,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00539">539</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00541">541</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1031,7 +1031,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00549">549</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00551">551</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1052,7 +1052,7 @@ template&lt;int D&gt; </div>
 <p>Symmetrize r-grid w-fields, compute basis components. </p>
 <p >On exit, <a class="el" href="classPscf_1_1Pspg_1_1System.html#a78931ec54fc2182f694ee9640496a965" title="Get container of chemical potential fields.">w()</a>.hasData() and <a class="el" href="classPscf_1_1Pspg_1_1System.html#a78931ec54fc2182f694ee9640496a965" title="Get container of chemical potential fields.">w()</a>.isSymmetric() are true, while <a class="el" href="classPscf_1_1Pspg_1_1System.html#af1fd3d0764967ab286f7daf3cdc0534a" title="Have monomer concentration fields (c fields) been computed?">hasCFields()</a> is false. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00609">609</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00611">611</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1084,7 +1084,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00561">561</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00563">563</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1117,7 +1117,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00618">618</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00620">620</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1159,7 +1159,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00632">632</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00634">634</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1190,7 +1190,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00646">646</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00648">648</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1224,7 +1224,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00661">661</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00663">663</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1261,7 +1261,7 @@ The <a class="el" href="classPscf_1_1Pspg_1_1System.html#a78931ec54fc2182f694ee9
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>returns 0 for successful convergence, 1 for failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00683">683</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00685">685</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1287,9 +1287,11 @@ template&lt;int D&gt; </div>
 <dd>
 A sweep object must have been created in the parameter file. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00714">714</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00716">716</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="output_8py_source.html#l00701">pscfpp.output.Sweep::__getitem__()</a>, <a class="el" href="output_8py_source.html#l00492">pscfpp.output.Sweep::__init__()</a>, <a class="el" href="output_8py_source.html#l00707">pscfpp.output.Sweep::__len__()</a>, <a class="el" href="output_8py_source.html#l00573">pscfpp.output.Sweep::summary()</a>, and <a class="el" href="output_8py_source.html#l00627">pscfpp.output.Sweep::summaryString()</a>.</p>
 
 </div>
 </div>
@@ -1313,7 +1315,7 @@ template&lt;int D&gt; </div>
 <dd>
 hasCFields must be true. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00733">733</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00735">735</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="PolymerTmpl_8h_source.html#l00255">Pscf::PolymerTmpl&lt; Block &gt;::length()</a>, <a class="el" href="Species_8h_source.html#l00096">Pscf::Species::mu()</a>, <a class="el" href="Species_8h_source.html#l00090">Pscf::Species::phi()</a>, <a class="el" href="ThreadGrid_8cu_source.html#l00080">Pscf::Pspg::ThreadGrid::setThreadsLogical()</a>, <a class="el" href="SolventDescriptor_8h_source.html#l00135">Pscf::SolventDescriptor::size()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1344,7 +1346,9 @@ template&lt;int D&gt; </div>
 <p>Get precomputed Helmoltz free energy per monomer / kT. </p>
 <p >The value retrieved by this function is pre-computed by the <a class="el" href="classPscf_1_1Pspg_1_1System.html#afdfbb024dc2e1df2ec0ab88e91d73ad3" title="Compute free energy density and pressure for current fields.">computeFreeEnergy()</a> function. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00965">965</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00983">983</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="output_8py_source.html#l00148">pscfpp.output.Thermo::__init__()</a>, and <a class="el" href="output_8py_source.html#l00171">pscfpp.output.Thermo::read()</a>.</p>
 
 </div>
 </div>
@@ -1373,7 +1377,9 @@ template&lt;int D&gt; </div>
 <p>Get precomputed pressure times monomer volume / kT. </p>
 <p >The value retrieved by this function is pre-computed by the <a class="el" href="classPscf_1_1Pspg_1_1System.html#afdfbb024dc2e1df2ec0ab88e91d73ad3" title="Compute free energy density and pressure for current fields.">computeFreeEnergy()</a> function. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00970">970</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00988">988</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="output_8py_source.html#l00148">pscfpp.output.Thermo::__init__()</a>, and <a class="el" href="output_8py_source.html#l00171">pscfpp.output.Thermo::read()</a>.</p>
 
 </div>
 </div>
@@ -1398,7 +1404,7 @@ template&lt;int D&gt; </div>
 <p>Write parameter file to an ostream, omitting the sweep block. </p>
 <p >This function omits the <a class="el" href="classPscf_1_1Pspg_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a> block of the parameter file, if any, in order to allow the output produced during a sweep to refer only to parameters relevant to a single state point, and to be rerunnable as a parameter file for a single SCFT calculation. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00848">848</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00852">852</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1430,7 +1436,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00861">861</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00865">865</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1460,7 +1466,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00912">912</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00922">922</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1492,7 +1498,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00923">923</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00933">933</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1524,7 +1530,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00933">933</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00943">943</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1556,7 +1562,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00944">944</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00954">954</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1589,7 +1595,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00955">955</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00965">965</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1653,7 +1659,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00976">976</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l00986">986</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="RDField_8h_source.html#l00108">Pscf::Pspg::RDField&lt; D &gt;::allocate()</a>, <a class="el" href="DField_8h_source.html#l00119">Pscf::Pspg::DField&lt; Data &gt;::cDField()</a>, <a class="el" href="PolymerTmpl_8h_source.html#l00241">Pscf::PolymerTmpl&lt; Block &gt;::nBlock()</a>, <a class="el" href="PolymerTmpl_8h_source.html#l00304">Pscf::PolymerTmpl&lt; Block &gt;::propagator()</a>, <a class="el" href="pspg_2solvers_2Propagator_8h_source.html#l00232">Pscf::Pspg::Propagator&lt; D &gt;::q()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1710,7 +1716,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01001">1001</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01011">1011</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="RDField_8h_source.html#l00108">Pscf::Pspg::RDField&lt; D &gt;::allocate()</a>, <a class="el" href="DField_8h_source.html#l00119">Pscf::Pspg::DField&lt; Data &gt;::cDField()</a>, <a class="el" href="PolymerTmpl_8h_source.html#l00241">Pscf::PolymerTmpl&lt; Block &gt;::nBlock()</a>, <a class="el" href="PolymerTmpl_8h_source.html#l00304">Pscf::PolymerTmpl&lt; Block &gt;::propagator()</a>, <a class="el" href="pspg_2solvers_2Propagator_8h_source.html#l00224">Pscf::Pspg::Propagator&lt; D &gt;::tail()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1767,7 +1773,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01026">1026</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01036">1036</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="RDField_8h_source.html#l00108">Pscf::Pspg::RDField&lt; D &gt;::allocate()</a>, <a class="el" href="DField_8h_source.html#l00119">Pscf::Pspg::DField&lt; Data &gt;::cDField()</a>, <a class="el" href="PolymerTmpl_8h_source.html#l00241">Pscf::PolymerTmpl&lt; Block &gt;::nBlock()</a>, <a class="el" href="pspg_2solvers_2Propagator_8h_source.html#l00262">Pscf::Pspg::Propagator&lt; D &gt;::ns()</a>, <a class="el" href="PolymerTmpl_8h_source.html#l00304">Pscf::PolymerTmpl&lt; Block &gt;::propagator()</a>, <a class="el" href="pspg_2solvers_2Propagator_8h_source.html#l00232">Pscf::Pspg::Propagator&lt; D &gt;::q()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1800,7 +1806,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01069">1069</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01079">1079</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ioUtil_8cpp_source.html#l00052">Util::toString()</a>.</p>
 
@@ -1833,7 +1839,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01098">1098</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01108">1108</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1866,7 +1872,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01112">1112</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01122">1122</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1898,7 +1904,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01126">1126</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01136">1136</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1940,7 +1946,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01137">1137</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01147">1147</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -1982,7 +1988,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01159">1159</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01169">1169</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -2023,7 +2029,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01181">1181</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01191">1191</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -2064,7 +2070,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01205">1205</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01215">1215</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -2106,7 +2112,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01230">1230</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01240">1240</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -2147,7 +2153,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01252">1252</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8tpp_source.html#l01262">1262</a> of file <a class="el" href="pspg_2System_8tpp_source.html">pspg/System.tpp</a>.</p>
 
 </div>
 </div>
@@ -2175,7 +2181,7 @@ template&lt;int D&gt; </div>
 
 <p>Get container of chemical potential fields. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00954">954</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00972">972</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
 
 </div>
 </div>
@@ -2203,7 +2209,7 @@ template&lt;int D&gt; </div>
 
 <p>Get container of monomer concentration / volume fration fields. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00960">960</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00978">978</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
 
 </div>
 </div>
@@ -2231,7 +2237,7 @@ template&lt;int D&gt; </div>
 
 <p>Get <a class="el" href="classPscf_1_1Pspg_1_1Mixture.html" title="Solver for a mixture of polymers and solvents.">Mixture</a> by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00885">885</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00903">903</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
 
 </div>
 </div>
@@ -2259,7 +2265,7 @@ template&lt;int D&gt; </div>
 
 <p>Get interaction (i.e., excess free energy model) by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00890">890</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00908">908</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
@@ -2289,7 +2295,7 @@ template&lt;int D&gt; </div>
 
 <p>Get interaction (i.e., excess free energy model) by const ref. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00898">898</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00916">916</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
@@ -2319,7 +2325,7 @@ template&lt;int D&gt; </div>
 
 <p>Get <a class="el" href="classPscf_1_1Pspg_1_1Domain.html" title="Spatial domain and spatial discretization for a periodic structure.">Domain</a> by const reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00905">905</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00923">923</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
 
 </div>
 </div>
@@ -2347,7 +2353,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the iterator by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00934">934</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00952">952</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
@@ -2377,7 +2383,7 @@ template&lt;int D&gt; </div>
 
 <p>Get crystal <a class="el" href="classPscf_1_1UnitCell.html" title="Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.">UnitCell</a> by const reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00909">909</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00927">927</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
 
 </div>
 </div>
@@ -2405,7 +2411,7 @@ template&lt;int D&gt; </div>
 
 <p>Get spatial discretization <a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh</a> by const reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00914">914</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00932">932</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
 
 </div>
 </div>
@@ -2433,7 +2439,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the <a class="el" href="classPscf_1_1Basis.html" title="Symmetry-adapted Fourier basis for pseudo-spectral scft.">Basis</a> by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00919">919</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00937">937</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
 
 </div>
 </div>
@@ -2461,7 +2467,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the <a class="el" href="classPscf_1_1Pspg_1_1FieldIo.html" title="File input/output operations for fields in several file formats.">FieldIo</a> by const reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00929">929</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00947">947</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
 
 </div>
 </div>
@@ -2489,7 +2495,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the <a class="el" href="classPscf_1_1Pspg_1_1FFT.html" title="Fourier transform wrapper for real data.">FFT</a> object by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00924">924</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00942">942</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
 
 </div>
 </div>
@@ -2517,7 +2523,7 @@ template&lt;int D&gt; </div>
 
 <p>Get homogeneous mixture (for reference calculations). </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00948">948</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00966">966</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
 
 </div>
 </div>
@@ -2545,7 +2551,7 @@ template&lt;int D&gt; </div>
 
 <p>Get FileMaster by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00942">942</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00960">960</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
 
 </div>
 </div>
@@ -2574,7 +2580,7 @@ template&lt;int D&gt; </div>
 <p>Have monomer concentration fields (c fields) been computed? </p>
 <p >Returns true if and only if monomer concentration fields have been computed by solving the modified diffusion equation for the current w fields. </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00975">975</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00993">993</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
 
 </div>
 </div>
@@ -2602,7 +2608,7 @@ template&lt;int D&gt; </div>
 
 <p>Does this system have an associated <a class="el" href="classPscf_1_1Pspg_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a> object? </p>
 
-<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00980">980</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pspg_2System_8h_source.html#l00998">998</a> of file <a class="el" href="pspg_2System_8h_source.html">pspg/System.h</a>.</p>
 
 </div>
 </div>
@@ -2614,7 +2620,7 @@ template&lt;int D&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 6 2023 14:11:41 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Sep 20 2023 00:52:47 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

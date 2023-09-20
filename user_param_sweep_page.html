@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -87,8 +87,8 @@ Parameter File</h1>
 <div class="line">  Mixture{</div>
 <div class="line">     nMonomer   2</div>
 <div class="line">     monomers[</div>
-<div class="line">                1.0  </div>
-<div class="line">                1.0 </div>
+<div class="line">                1.0</div>
+<div class="line">                1.0</div>
 <div class="line">     ]</div>
 <div class="line">     nPolymer   2</div>
 <div class="line">     Polymer{</div>
@@ -186,8 +186,7 @@ Parameter File Format</h2>
 <p >The "parameters" array must contain exactly nParameter entries, each on a separate line. Each entry in this array describes how one input parameter should be modified.</p>
 <h2><a class="anchor" id="user_param_sweep_linear_parameters_sec"></a>
 Sweep Parameters</h2>
-<p >The file format each line of the "parameters" array (corresponding to a single parameter) in a LinearSweep contains an identifier for a specific input parameter followed by amount by which the value of that parameter should change over the course of the sweep. The parameter identifier in each such entry contains a name string that identifies the type of variable, such as "block" for a block length or "chi" for an interaction parameter. This string is followed by either one or two integer indices that specify which variable of that type should be changed. For example, the string "block" must be followed by two integers, the first being an index for the polymer species the block belongs to, and the second <br  />
- being an index for that block within that polymer. Some other types of parameter can be uniqued identified using only a single index. For example the description of a parameter that specifies a volume fraction or chemical potential of a polymer or solvent molecular species requires a single index to identify the polymer or solvent species of interest.</p>
+<p >The file format each line of the "parameters" array (corresponding to a single parameter) in a LinearSweep contains an identifier for a specific input parameter followed by amount by which the value of that parameter should change over the course of the sweep. The parameter identifier in each such entry contains a name string that identifies the type of variable, such as "block" for a block length or "chi" for an interaction parameter. This string is followed by either one or two integer indices that specify which variable of that type should be changed. For example, the string "block" must be followed by two integers, the first being an index for the polymer species the block belongs to, and the second being an index for that block within that polymer. Some other types of parameter can be uniqued identified using only a single index. For example the description of a parameter that specifies a volume fraction or chemical potential of a polymer or solvent molecular species requires a single index to identify the polymer or solvent species of interest.</p>
 <p >The general format for a line in the parameters array for a parameter that is specified by two indices is: </p><div class="fragment"><div class="line">type   id0    id1    change</div>
 </div><!-- fragment --><p> where "type" denotes the parameter type identifier string (e.g., block or chi), "id0" and "id1" denote associated integer indices, and "change" is a real number that specifies the total amount that the specified parameter should be changed over the course of the sweep. The format for a parameter that has only one associated index (such as a molecular volume fraction) simply omits the second integer index.</p>
 <p >The table shown below gives all allowed values for the parameter type string identifer for a LinearSweep for a periodic microstructure with with the number and meaning of any associated index or indices. All but one of these types of parameter are also valid in a linear sweep performed by pscf_fd one-dimensional finite difference program, as discussed below. To indicate the meaning of each index in this table, we use the following notation:</p>
@@ -224,16 +223,25 @@ Sweep Parameters</h2>
 <tr>
 <td>chi_top </td><td>thin film only, see <a class="el" href="user_thin_films_page.html">Thin Films</a>  </td><td>mId </td><td></td></tr>
 </table>
-<p>The two indices for a Flory-Huggins chi parameter refer to indices in the chi matrix maintained by Interaction. Changes to element chi(i, j) automatically also update chi(j, i) for i !\ j, thus maintaining the symmetry of the matrix.</p>
+<p>The two indices for a Flory-Huggins chi parameter refer to indices in the chi matrix maintained by Interaction. Changes to element chi(i, j) automatically also update chi(j, i) for \( i \neq j \), thus preserving the symmetry of the matrix.</p>
 <p >Parameters of type "cell_param" are only usable in simulations of periodic structure performed using a pscf_pc or pscf_pg program, for simulations with a rigid unit cell in which the parameters are not automatically optimized so as to minimize the free energy density. In this case, a "unit_cell" parameter is one of the parameters that determine the the size and shape of the crystal unit for a system of specified latttice type. Examples include the length of each edge of a cubic unit cell, the lengths of the three edges of an orthorhombic crystal, or the value of the angle between two edges for a non-orthogonal crystal lattice type. PSCF uses a set of standard conventions for a list of parameters required to describe each unit cell type for 1, 2 and 3 dimensional structures of various crystal lattice system types. These conventions are described <a class="el" href="user_unitcell_page.html">here</a>. The uid index for a cell_parameter is a zero based integer index that identifies which parameter in such a list is being varied.</p>
 <p >The chi_top and chi_bottom parameters are only applicable to simulations of thin films performed with pscf_pc program, as discussed <a class="el" href="user_thin_films_page.html">here</a>. These are used to vary the effective interaction parameters for interactions of a specific monomer type with the top or bottom surface of a thin film.</p>
+<h1><a class="anchor" id="user_param_sweep_output_sec"></a>
+Output Files</h1>
+<p >A parameter sweep will output several files for each state point in the sweep. The names of all output files associated with a particular state include an integer index for that state point within the sweep, numbered starting from 0. The name of each such file name is given by a concatenation of the baseFileName string given in the Sweep block (if any), the integer index of the relevant state point, and a postfix string or file extension that indicates the file type. If the optional baseFileName parameter is absent, the default value of this variable is any empty string, in which case these file names all start with an integer index.</p>
+<p >The first type of file that is output for each state in a parameter sweep is a "state file", which contains values for both the input parameters and the output thermodynamic properties for that state. Names for state files end with a file name extension ".stt", giving names of the form "0.stt", "1.stt", etc. See the linked page on <a class="el" href="user_thermo_page.html#user_thermo_state_sec">state files</a> for more information about the format of these files.</p>
+<p >The other files output for each state in a parameter sweep are field files. These always include a converged chemical potential field file (a w field file) and somtimes include a file containing monomer concentration (a c field file). Formats and file name extensions for these files are different for different programs.</p>
+<p >In the case of the pscf_fd program, both a chemical potential field and a monomer concentration field are always output, and are both output in the <a class="el" href="user_field_fd1d_page.html">1D field file</a> used by pscf_fd. Names for these files end with filename extension ".w" for chemical potential fields and ".c" for monomer concentration fields.</p>
+<p >In the case of the pscf_pc and pscf_pg programs, only the chemical potential fields are output by default, using <a class="el" href="user_field_basis_page.html">basis format</a>. Names for these files end with a postfix string "_w.bf", are thus of the form "0_w.bf", "1_w.bf", etc. Chemical potential fields in rgrid format and/or monomer concentration fields in basis or rgrid format can be output at each state point by adding the optional boolean input parameters writeWRGrid, writeCBasis, and writeCRGrid with values of 1, as described <a class="el" href="user_param_sweep_page.html#user_param_sweep_linear_param_sub">above</a>. Names for these files, when they are created, end with postfixes "_w.rf", "_c.bf" and "_c.rf", respectively, where "_w" or "_c" is used to indicate a chemical potential (w) or monomer concentration (c) field, while ".bf" or ".rf" is used to indicate a basis or rgrid field file format.</p>
+<p >In addition to files that are output for each state, a sweep command creates a single log file named "sweep.log" that contains a small table of with one row for each state point in the sweep. Each row in this file contains an integer index for a state point, the fractional position along the parameter sweep (denoted "ds"), the Helmholtz free energy and the non-dimensionalized pressure. Values for the Helmholtz free energy and pressure are reported using the same conventions as those used for the variables "fHelmholtz" and "pressure" reported in the <a class="el" href="user_thermo_page.html">thermo file block</a> of a state file.</p>
+<p >After a sweep is completed, the Python class pscfpp.output.sweep can be used to parse all of the state files produced by a sweep and produce Python lists or tables of data that contain any combination of input and output variables that the user wishes. See the manual page on <a class="el" href="user_python_page.html">Python Tools</a> for an overview of this and other Python postprocessing tools, in addition to the documentation for this specific class.</p>
 <p ><br  />
  <a class="el" href="user_param_mixture_page.html">Parameter File - Mixture Block</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_param_page.html">Parameter Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_param_fd_page.html">Parameter File - pscf_fd</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 6 2023 14:11:35 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Sep 20 2023 00:52:46 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -63,12 +63,14 @@ $(function() {
 </ul>
 <p >Rationale:</p>
 <ul>
-<li>By default, executables files created by the PSCF build system are installed in the pscfpp/bin directory. The directory that contains these files must be added to the user's PATH variable in order to allow the unix shell to find these executable files when they are invoked by name from the command line.</li>
-<li>The pscfpp/lib/python directory contains a python script that is used by the build system during compilation to generate information about dependencies among C++ files. This directory must be added to the PYTHONPATH variable in order to allow the python interpreter to find this script for use during compilation.</li>
+<li>By default, all executables files created by the PSCF build system are installed in the pscfpp/bin directory. The path to this directory must thus be added to the user's PATH variable in order to allow the unix shell to find these executable files when they are invoked by name from the command line.</li>
+<li>The pscfpp/lib/python directory contains several python modules that are used by the PSCF build to process information about dependencies among C++ files. The path to this directory must be added to the PYTHONPATH variable in order to allow a python interpreter to find these python modules.</li>
 </ul>
-<p >The required changes to a users shell environment should be made in a manner that guarantees that these changes are automatically in place whenever that user is logged on. To accomplish this, commands that apply the required modifications to PATH and PYTHON path should be added to a configuration file in the users home directory that is read and executed whenever the user launches a login shell (e.g., to the .profile or .bash_profile file on systems that use a bash shell or the .zprofile file on systems that use a zsh unix shell, as discussed in more detail below). An example of the required commands is shown below: </p><div class="fragment"><div class="line">PSCFPP_DIR=${HOME}/pscfpp</div>
+<p >The required changes to the user's shell environment should be made in a manner that guarantees that these changes are automatically put in place when a user is logs on. To accomplish this, commands that modify the PATH and PYTHON variables should be added to a configuration file in the users home directory that is read and executed whenever the user launches a login shell (e.g., to the .profile or .bash_profile file on systems that use a bash shell or the .zprofile file on systems that use a zsh unix shell, as discussed in more detail below).</p>
+<p >An example of the required commands is shown below: </p><div class="fragment"><div class="line">PSCFPP_DIR=${HOME}/<a class="code hl_namespace" href="namespacepscfpp.html">pscfpp</a></div>
 <div class="line">export PATH=${PATH}:/${PSCFPP_DIR}/bin</div>
 <div class="line">export PYTHONPATH=${PYTHONPATH}:/${PSCFPP_DIR}/lib/python</div>
+<div class="ttc" id="anamespacepscfpp_html"><div class="ttname"><a href="namespacepscfpp.html">pscfpp</a></div><div class="ttdoc">Python package of all python modules provided with PSCF.</div><div class="ttdef"><b>Definition:</b> <a href="____init_____8py_source.html#l00001">__init__.py:1</a></div></div>
 </div><!-- fragment --><p> The value of the shell variable PSCFPP_DIR that appears in this example should be set to the absolute path to the pscfpp root directory (i.e., the root of the directory tree created by cloning the pscfpp git repository). In the above example, it is assumed that this is a subdirectory named pscfpp within the users home directory, where ${HOME} is an environment variable that expands to the path to the users home directory.</p>
 <p >The name of the file to which these commands should be added depends on which unix shell is being used. Different unix shells are used by default in different linux and Mac OS X operatings systems.</p>
 <p >The bash shell is the default shell on most linux systems. The bash shell reads files named .profile and/or .bash_profile in the users home directory, if either exists, when the user opens a login shell by logging in to the system. Users who are using a bash shell should put these commands in one of these files.</p>
@@ -79,7 +81,7 @@ $(function() {
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 6 2023 14:11:35 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Sep 20 2023 00:52:46 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

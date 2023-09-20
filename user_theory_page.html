@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -54,31 +54,33 @@ $(function() {
   <div class="headertitle"><div class="title">Appendix: Self-Consistent Field Theory </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="el" href="user_thin_films_page.html">Thin Films</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_fourier_page.html">Appendix: Periodic Functions and Fourier Series</a> (Next) <br  />
+<div class="textblock"><p ><a class="el" href="user_python_page.html">Python Tools</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_fourier_page.html">Appendix: Periodic Functions and Fourier Series</a> (Next) <br  />
 </p>
 <p >Below, we describe the self-consistent field theory (SCFT) equations that are solved by PSCF, giving a complete overview of the mathematical system of equations that are solved by the software and summarizing their connection to corresponding physical properties. This is not intended to be an introduction to the field theory itself, and we do not provide a derivation of the SCFT equations. We assume readers are familiar with the principles of polymer physics and statistical mechanics.</p>
 <p >For readers looking to better understand the underlying theory and its applications to polymer science, we recommend the following references:</p><ul>
 <li>Fredrickson, Glenn H. <em>The Equilibrium Theory of Inhomogeneous Polymers</em>, Oxford University Press, <b>2006</b>.</li>
 <li>Arora, A., <em>et al.</em> "Broadly Accessible Self-Consistent Field Theory
 for Block Polymer Materials Discovery," <em>Macromolecules</em>, <b>2016</b>, <em>49</em>, 4675.</li>
-<li>Matsen, M. W. "The standard Gaussian model for block copolymer 
+<li>Matsen, M. W. "The standard Gaussian model for block copolymer
 melts," <em>J. Phys.: Condens. Matter</em>, <b>2001</b>, <em>14</em>, R21.</li>
 <li>Shi, A.-C. "Self-Consistent Field Theory of Inhomogeneous Polymeric
 Systems: A Variational Derivation," <em>Adv. Theory Simul.</em>, <b>2019</b>, <em>2</em>, 1800188.</li>
 </ul>
 <h1><a class="anchor" id="user_theory_setup_sec"></a>
-Setup</h1>
+Model and Notation</h1>
 <p >PSCF solves the SCFT equations for an incompressible mixture of any number of block polymer species and point-like solvent molecular species.</p>
 <p >In what follows, we consider a system with \( C \) distinct monomer types, \( P \) block polymer species, \( S\) solvent species. We use a convention in which the symbols \( \alpha, \beta = 0, \ldots, C-1\) are used as indices for monomer types, symbols \( a, b \) are used to denote indices for blocks within a specific block polymer species, and symbols \( i, j\) are used to denote molecular species indices. In these notes, we use a convention in which species indices are ordered with all polymeric species listed first, so that species index values in the range \( i, j = 0, \ldots, P-1\) denote polymeric species, and values in the range \( P,\ldots, P+S-1 \) denote solvent species. A zero-based indexing scheme for indices is used throughout the notes to facilitate comparison to C/C++ source code.</p>
 <p >To characterize inhomogeneous states, we consider the average number concentration \(\langle c_{\alpha}({\bf r}) \rangle\) for monomers of each type \( \alpha \) at each position \( {\bf r} \). In a model for an effectively incompressible liquid in which each monomer is assumed to occupy a volume \( v \), we may define a corresponding volume fraction  </p><p class="formulaDsp">
 \[
   \phi_{\alpha}(\textbf{r}) = v \langle c_{\alpha}({\bf r}) \rangle
   \quad,
+  \quad\quad\quad\quad\quad (A.1)
 \]
 </p>
 <p> for each monomer type, where \( v \) is a monomer reference volume that, by convention, has the same value for all monomer types. Incompressibility is imposed by requiring that <a class="anchor" id="user_theory_incompressibility_eqn"></a> </p><p class="formulaDsp">
 \[
    1 = \sum_{\alpha=0}^{C-1} \phi_{\alpha}({\bf r})
+   \quad\quad\quad\quad\quad (A.2)
 \]
 </p>
 <p> at every position \( {\bf r} \) within the problem domain.</p>
@@ -91,6 +93,7 @@ w_{0}, \ldots, w_{C-1} \) are assumed to depend upon volume fraction fields in a
    w_{\alpha}({\bf r})
    = \sum_{\beta=0}^{C-1} \chi_{\alpha\beta} \phi_{\beta}({\bf r})
    + \xi({\bf r})
+   \quad\quad\quad\quad\quad (A.3)
 \]
 </p>
 <p> for all \( \alpha = 0,\ldots,C-1 \), in which \( \chi_{\alpha\beta}\) is a binary Flory-Huggins dimensionless interaction parameter, defined such that \( \chi_{\alpha\beta} = \chi_{\beta\alpha} \). Here, \( \xi({\bf r}) \) is a dimensionless Lagrange multiplier pressure field that must be chosen so that the monomer concentrations in the ideal gas reference system satisfy the <a class="el" href="user_theory_page.html#user_theory_incompressibility_eqn">incompressibility constraint</a> given above.</p>
@@ -112,13 +115,15 @@ Modified Diffusion Equation (MDE)</h2>
 <p >Each propagator \( q(\textbf{r}, s) \) associated with a block of monomer type \( \alpha \) can be shown to obey a partial differential equation (PDE)<a class="anchor" id="user_theory_mde_eqn"></a> </p><p class="formulaDsp">
 \[
   \frac{\partial q}{\partial s} =  -H_{\alpha} q
+  \quad\quad\quad\quad\quad (A.4)
 \]
 </p>
-<p> in which \( H_{\alpha} \) is a linear differential operator whose action on any function \( f({\bf r}) \) of position is defined to be  </p><p class="formulaDsp">
+<p> in which \( H_{\alpha} \) is a linear differential operator whose action on any function \( f({\bf r}) \) of position is defined to be<a class="anchor" id="user_theory_hop_eqn"></a> </p><p class="formulaDsp">
 \[
   H_{\alpha} f({\bf r})
   = - \frac{b_{\alpha}^{2}}{6} \nabla^{2} f({\bf r})
     + w_{\alpha}(\textbf{r}) f({\bf r})
+  \quad\quad\quad\quad\quad (A.5)
 \]
 </p>
 <p> in which \( b_{\alpha} \) is the statistical segment length for monomers of type \( \alpha \) , and \( w_{\alpha}\) is the dimensionless SCF chemical potential field for such monomers. We refer to this PDE as the modified diffusion equation (MDE). Numerical solution of the MDE is the most computationally expensive operation in any SCFT program.</p>
@@ -126,6 +131,7 @@ Modified Diffusion Equation (MDE)</h2>
 <p >The initial condition for propagators that originate at a chain end requires that  </p><p class="formulaDsp">
 \[
    q(\textbf{r},s=0) = 1
+  \quad\quad\quad\quad\quad (A.6)
 \]
 </p>
 <p> for all \( \textbf{r} \) in the relevant spatial domain.</p>
@@ -133,6 +139,7 @@ Modified Diffusion Equation (MDE)</h2>
 \[
    q_{a}({\bf r}, 0) = \prod_{b \neq a}
    q^{\dagger}_{b}({\bf r})
+  \quad\quad\quad\quad\quad (A.7)
 \]
 </p>
 <p> where the product over \( b \) is taken over all \([0, \ldots, M-1] \) except the value \( a \) corresponding to the block associated with the outgoing propagator of interest.</p>
@@ -142,6 +149,7 @@ Modified Diffusion Equation (MDE)</h2>
     q_{0}(\textbf{r}, s=0) =
     q_{1}^{\dagger}(\textbf{r}, L_1)
     q_{2}^{\dagger}(\textbf{r}, L_2) \quad.
+    \quad\quad\quad\quad\quad (A.8)
 \]
 </p>
 <p> Initial conditions for \( q_{1} \) and \( q_{2} \) are analogous.</p>
@@ -155,6 +163,7 @@ Monomer Probability Densities (Unnormalized)</h2>
 \[
    \rho({\bf r}, s) \propto
    q({\bf r}, s) q^{\dagger}({\bf r}, L-s) \quad,
+    \quad\quad\quad\quad\quad (A.9)
 \]
 </p>
 <p> Here, \( q({\bf r}, s) \) and \( q^{\dagger}({\bf r}, L-s) \) are the two propagators associated with that block, which are also the two incoming propagators associated with a virtual vertex introduced at that point within the block. The two propagators in this product are evaluated at contour coordinates that correspond to the same point within the block, but are each evaluated at a value \( s \) or \( L - s \) that corresponds to the contour distance measured from the vertex at which that propagator originates. The more general expression for the probability density for the position of an M-fold vertex involves the product of the M incoming propagators, all evaluated at the same position \( r \), and at contour coordinate values that correspond to the lengths of the associated blocks.</p>
@@ -168,6 +177,7 @@ Theorems about Propagator Products</h2>
 \[
    I(s) \equiv
    \int d\textbf{r} \; q (\textbf{r},s) q^{\dagger}(\textbf{r},L-s)
+   \quad\quad\quad\quad\quad (A.10)
 \]
 </p>
 <p> of a product of two propagators that are both defined within a block of length \( L \), where \( s \) is the contour variable for a point within that block. If the propagators \( q \) and \( q^{\dagger} \) obey a modified diffusion equation within some domain, subject to periodic, Dirichlet, von Neumann or Robin boundary conditions, then the value of \(I(s)\) is independent of contour coordinate \( s \) for all \( s \in [0,L] \).</p>
@@ -189,6 +199,7 @@ Theorems about Propagator Products</h2>
   - q (\textbf{r},s) [\hat{H} q^{\dagger}(\textbf{r},L-s)]
   \right \}
   \quad.
+   \quad\quad\quad\quad\quad (A.11)
 \end{eqnarray*}
 </p>
 <p> We may then use the fact that the operator \( \hat{H} \) (like the analogous quantum mechanical Hamiltonian operator for a particle in a potential) can be shown to be a self-adjoint differential operator for any of the boundary conditions given in the theorem statement to show that  </p><p class="formulaDsp">
@@ -198,24 +209,25 @@ Theorems about Propagator Products</h2>
   =
   \int d\textbf{r} \;
   q (\textbf{r},s) [\hat{H} q^{\dagger}(\textbf{r},L-s) \quad,
+  \quad\quad\quad\quad\quad (A.12)
 \]
 </p>
 <p> implying a cancellation of the two terms in the integrand of the last expression for \( dI(s)/ds \). This thus gives  </p><p class="formulaDsp">
 \[
   dI(s)/ds = 0
+  \quad\quad\quad\quad\quad (A.13)
 \]
 </p>
-<p> for all \( s \in [0,L] \), implying that \( I(s) \) is independent of \( s \) within each block. <br  />
-</p>
+<p> for all \( s \in [0,L] \), implying that \( I(s) \) is independent of \( s \) within each block.</p>
 <p ><a class="anchor" id="user_theory_theorem3"></a><b> Theorem A.3 </b>: The value of the spatial integral of the product of incoming propagators associated with a vertex of an acyclic branched polymer has the same value for every vertex in the polymer, including any virtual 2-fold vertex inserted into any block of the polymer.</p>
-<p ><em> Proof </em>: <a class="el" href="user_theory_page.html#user_theory_theorem2">Theorem A.2</a> shows that the value of the spatial integral \( I(s) \) of the product of incoming propagators associated with a virtual 2-fold vertex inserted into any block of a polymer is independent of the coordinate \( s \) within the block. Combining this with <a class="el" href="user_theory_page.html#user_theory_theorem1">theorem 1</a>, we may show that the integral of the product of incoming propagators must have the same value for any vertices that are directly connected by a block. <br  />
- Because all vertices in a polymer are connected by some sequence of blocks, this implies that the value of this spatial integral must be the same for every vertex in any acyclic branched polymer, including virtual vertices that we insert at any point within any block.</p>
+<p ><em> Proof </em>: <a class="el" href="user_theory_page.html#user_theory_theorem2">Theorem A.2</a> shows that the value of the spatial integral \( I(s) \) of the product of incoming propagators associated with a virtual 2-fold vertex inserted into any block of a polymer is independent of the coordinate \( s \) within the block. Combining this with <a class="el" href="user_theory_page.html#user_theory_theorem1">theorem 1</a>, we may show that the integral of the product of incoming propagators must have the same value for any vertices that are directly connected by a block. Because all vertices in a polymer are connected by some sequence of blocks, this implies that the value of this spatial integral must be the same for every vertex in any acyclic branched polymer, including virtual vertices that we insert at any point within any block.</p>
 <h2><a class="anchor" id="user_theory_bigQ_sub"></a>
 Molecular Partition Function</h2>
 <p >Let \( Q_{i} \) denote a normalized single-chain partition function for a polymer molecule of species \( i \) within an ideal gas reference system that is subjected to a specified set of monomer potential fields. We define the value of \( Q_{i} \) to be equal to the spatial average (i.e., the integral over the entire spatial domain of the problem divided by the volume of this domain) of the product of the values of the incoming propagators evaluated at any vertex of the polymer. The statement of theorem A.3 implies that we should get the same value for \( Q_{i} \) by evaluating it using any vertex in a polymer of species \( i \). Different values for \( Q_{i} \) are, however, generally obtained for different species within a mixture.</p>
-<p >A particularly compact expression for this quantity may be obtained by evaluating it at any chain end that is attached to a single block of length \( L \). In this case, the above definition yields  </p><p class="formulaDsp">
+<p >A particularly compact expression for this quantity may be obtained by evaluating the incoming propagator at any chain end, for which the vertex is attached to a single block of length \( L \). In this case, the above definition yields <a class="anchor" id="user_theory_Qend_eqn"></a> </p><p class="formulaDsp">
 \[
    Q_{i} = \frac{1}{V} \int \! d\textbf{r} \; q^{\dagger}(\textbf{r},L)
+  \quad\quad\quad\quad\quad (A.14)
 \]
 </p>
 <p> where \( q^{\dagger}(\textbf{r}, L) \) denotes the final value of the single incoming propagator at that chain end. Here, the integral is taken over the entire spatial domain for the problem of interest, while \( V \) is the generalized volume of that domain. In the case of a periodic structure, the required spatial average may be evaluated by evaluating the integral over one crystallographic unit cell and then dividing by the generalized volume of that unit cell (i.e., the volume per unit cell for a 3D crystal, area per 2D unit cell for a 2D structure such as a hexagonal cylinder phase, or the length per unit cell in a 1D lamellar phase).</p>
@@ -223,6 +235,7 @@ Molecular Partition Function</h2>
 \[
    Q_{i} = \frac{1}{V}
    \int d\textbf{r} \; q (\textbf{r},s) q^{\dagger}(\textbf{r},L-s)
+  \quad\quad\quad\quad\quad (A.15)
 \]
 </p>
 <p> where \( L \) is the length of the chosen block, and where theorem A.3 guarantees that the value of the RHS of this equation is actually independent of the choice of values for \( s \) and block index \( a \).</p>
@@ -232,12 +245,14 @@ Monomer Probability Densities (Normalized)</h2>
 \[
    \rho_{ia}({\bf r}, s) = \frac{1}{I_{ia}(s)}
    q({\bf r}, s) q^{\dagger}({\bf r}, L_{ia} - s) \quad,
+  \quad\quad\quad\quad\quad (A.16)
 \]
 </p>
 <p> in which \( q \) and \( q^{\dagger} \) are the two propagators associated with the block of interest, \( L_{ia} \) is the length of this block, and \( I_{ia}(s) \) is the spatial integral defined in the statement of <a class="el" href="user_theory_page.html#user_theory_theorem2">theorem A.2</a>, defined here for monomer with contour coordinate \( s \) within block \( a \) of polymer species \( i \). Using the expression given <a class="el" href="user_theory_page.html#user_theory_Q2vertex">above</a> to relate \(Q_{i}\) and \( I_{ia}(s) \), we find that <a class="anchor" id="user_theory_rhoia_eqn"></a> </p><p class="formulaDsp">
 \[
    \rho_{ia} ({\bf r}, s) = \frac{1}{V Q_{i}}
    q({\bf r}, s) q^{\dagger}({\bf r}, L-s)
+  \quad\quad\quad\quad\quad (A.17)
 \]
 </p>
 <p> for any choice of block index \( a \) and contour coordinate \( s \).</p>
@@ -246,6 +261,7 @@ Block Volume Fractions</h2>
 <p >Consider a system that contains \( M_{i} \) chains of polymer species \( i \) within a total volume \( V \). The volume occupied by each such polymer is \( v L_{i} \), where \( L_{i} \) is the total length of polymer species \( i \), given by the sum of the length of all of the blocks of that polymer. Let \( \overline{\phi}_{i} \) denote the average overall volume fraction occupied by molecule species \( i \) within the mixture. This quantity is given by a ratio  </p><p class="formulaDsp">
 \[
    \overline{\phi}_{i} = \frac{M_{i} L_{i} v}{V}
+  \quad\quad\quad\quad\quad (A.18)
 \]
 </p>
 <p> where the numerator of the RHS is the total volume occupied by \( M_{i} \) such chains.</p>
@@ -253,14 +269,16 @@ Block Volume Fractions</h2>
 \[
    \phi_{ia}({\bf r}) = v M_{i}
    \int\limits_{0}^{L_{ia}} \! ds \; \rho_{ia}({\bf r}, s) \quad,
+  \quad\quad\quad\quad\quad (A.19)
 \]
 </p>
-<p> where \( M_{i} \) is the total number of chains of species \( i \) and \( L_{ia} \) is the length of the relevant block. Rewriting \( v M_{i} \) in terms of \( \overline{\phi}_{i} \) then yields  </p><p class="formulaDsp">
+<p> where \( M_{i} \) is the total number of chains of species \( i \) and \( L_{ia} \) is the length of the relevant block. Rewriting \( v M_{i} \) in terms of \( \overline{\phi}_{i} \) then yields <a class="anchor" id="user_theory_phiia_eqn"></a> </p><p class="formulaDsp">
 \[
    \phi_{ia}(\textbf{r}) =
    \frac{\overline{\phi}_{i}}{L_{i}Q_{i}}
    \int\limits_{0}^{L_{ia}} \! ds \;
     q(\textbf{r},s) q^{\dagger}(\textbf{r},s)
+  \quad\quad\quad\quad\quad (A.20)
 \]
 </p>
 <p> where \( L_{i} \) is the total contour length of all of the blocks of polymer species \( i \).</p>
@@ -273,6 +291,7 @@ Solvent Species</h1>
 \[
    Q_{i} = \frac{1}{V}
    \int \! d\textbf{r} \; \exp (-L_{i}w_{\alpha}(\textbf{r}) )
+  \quad\quad\quad\quad\quad (A.21)
 \]
 </p>
 <p> for all \( i = P, \ldots, P + S - 1\) . The local volume fraction \( \phi_{i}(\textbf{r}) \) for solvent species \( i \) is then given by a ratio  </p><p class="formulaDsp">
@@ -280,24 +299,27 @@ Solvent Species</h1>
    \phi_{i}(\textbf{r}) =
    \frac{\overline{\phi}_{i}}{Q_{i}}
    \exp(-L_{i}w_{\alpha}(\textbf{r}))
+   \quad\quad\quad\quad\quad (A.22)
 \]
 </p>
 <p> in which \( \overline{\phi}_{i} \) is the overall volume fraction of solvent species \( i \) within the mixture. Note that the prefactor in this expression is chosen to guarantee that the spatial average of \( \phi_{i}(\textbf{r})\) (the integral divided by total volume) is give by the parameter \( \overline{\phi}_{i} \).</p>
 <h1><a class="anchor" id="user_theory_ensemble_sec"></a>
 Open and Closed Ensembles</h1>
 <p >PSCF allows the user to choose either an open or closed statistical ensemble for each molecular species in the mixture, by allowing a user to enter a value for either the overall volume fraction for that species, denoted here by \( \overline{\phi}_{i} \), or a value for the chemical potential, denoted here by \( \mu_{i} \).</p>
-<p >To use an open ensemble for a particular species in SCFT, one uses an open (i.e., grand-canonical) ensemble to treat the behavior of that species when considering the hypothetical ideal gas of non-interacting molecules subjected to a potential. Use of a grand-canonical ensemble to describe to a gas of molecules of species \( i \) yields an overall concentration for that species and a corresponding overall volume fraction \( \overline{\phi}_{i} \) that are both proportional to the product \( e^{\mu_{i}/k_{B} T} Q_{i} \). The value of the constants of proportionality in the expressions depends upon arbitrary choices of convention for normalizing volume used to relate the configurational integral for a single chain to a dimensionless partition function and a choice of reference state used to define the chemical potential. In the equations used in PSCF, we set  </p><p class="formulaDsp">
+<p >To use an open ensemble for a particular species in SCFT, one uses an open (i.e., grand-canonical) ensemble to treat the behavior of that species when considering the hypothetical ideal gas of non-interacting molecules subjected to a potential. Use of a grand-canonical ensemble to describe to a gas of molecules of species \( i \) yields an overall concentration for that species and a corresponding overall volume fraction \( \overline{\phi}_{i} \) that are both proportional to the product \( e^{\mu_{i}/k_{B} T} Q_{i} \). The value of the constants of proportionality in the expressions depends upon arbitrary choices of convention for normalizing volume used to relate the configurational integral for a single chain to a dimensionless partition function and a choice of reference state used to define the chemical potential. In the equations used in PSCF, we set<a class="anchor" id="user_theory_phiofmu_eqn"></a> </p><p class="formulaDsp">
 \[
    \overline{\phi}_{i} = e^{\mu_{i}/k_{B} T} Q_{i} \quad,
+   \quad\quad\quad\quad\quad (A.23)
 \]
 </p>
 <p> as a matter of convention.</p>
 <p >Calculations of the local volume fractions for monomers within a specific block of a block copolymer and for the local volume fraction of a solvent species are thus performed for molecular species that are treated in an open ensemble, by simply replacing the parameter \( \overline{\phi}_{i} \) by the above expression in all expressions that involve \( \overline{\phi}_{i} \).</p>
-<p >The value of the chemical potential is computed for any species that is treated in a closed ensemble (i.e., any species for which a volume fraction is specified in the parameter file) by computing  </p><p class="formulaDsp">
+<p >The value of the chemical potential is computed for any species that is treated in a closed ensemble (i.e., any species for which a volume fraction is specified in the parameter file) by computing <a class="anchor" id="user_theory_mu_eqn"></a> </p><p class="formulaDsp">
 \[
    \frac{\mu_{i}}{k_{B}T }
    = \ln \left ( \overline{\phi}_{i} / Q_{i}  \right )
    \quad,
+   \quad\quad\quad\quad\quad (A.24)
 \]
 </p>
 <p> after computing \( Q_{i} \).</p>
@@ -308,11 +330,24 @@ Thermodynamic Properties</h1>
 <p >The SCFT prediction for the total Helmholtz free energy \( F \) can be expressed as a sum  </p><p class="formulaDsp">
 \[
     F = F_{\rm id} + F_{\rm int}
+   \quad\quad\quad\quad\quad (A.25)
 \]
 </p>
-<p> where \( F_{\rm id} \) is a "ideal" contribution that arises from polymer configurational entropy, and \( F_{\rm int} \) is an "interaction" contribution that arises directly from excess free energy of interaction that is characterized here in terms of binary interaction parameters. The ideal and interaction contributions to the free energy per monomer reference volume \( F v / V k_{B} T \), as reported in output files, are given by  </p><p class="formulaDsp">
+<p> where \( F_{\rm id} \) is a "ideal" contribution that arises from polymer configurational entropy, and \( F_{\rm int} \) is an "interaction" contribution that arises directly from excess free energy of interaction that is characterized here in terms of binary interaction parameters. The non-dimensionalized free energy that is reported as "fHelmholtz" in the PSCF <a class="el" href="user_thermo_page.html">thermo file block</a> format is the free energy per monomer reference volume in thermal energy units, also denoted by the symbol  </p><p class="formulaDsp">
+\[
+   \tilde{f} \equiv \frac{F v}{ V k_{B} T } \quad.
+   \quad\quad\quad\quad\quad (A.26)
+\]
+</p>
+<p> This quantity can be expressed as a sum <a class="anchor" id="user_theory_ftilde_sum_eqn"></a> </p><p class="formulaDsp">
+\[
+   \tilde{f} = \tilde{f}_{\rm id} + \tilde{f}_{\rm int}
+   \quad\quad\quad\quad\quad (A.27)
+\]
+</p>
+<p> in which the ideal and interaction contributions are given by <a class="anchor" id="user_theory_fidealint_eqns"></a> </p><p class="formulaDsp">
 \begin{eqnarray*}
-    \frac{F_{\rm id} v}{Vk_{B}T}
+    \tilde{f}_{\rm id}
     &amp; = &amp; \sum_{i=0}^{P+S-1} \frac{\overline{\phi}_{i}}{L_{i}}
     \left [ \ln ( \overline{\phi}_{i} / Q_{i} ) - 1 \right ]
      - \frac{1}{V}
@@ -320,30 +355,75 @@ Thermodynamic Properties</h1>
        \int \! d\textbf{r} \;
        w_{\alpha}(\textbf{r})
       \phi_{\alpha}(\textbf{r}) \\
-   \frac{F_{\rm int} v}{Vk_{B}T}
-     &amp; = &amp;  \frac{1}{2V} \sum_{\alpha, \beta =0}^{C-1}
-     \chi_{\alpha\beta} \int \! d\textbf{r} \;
-     \phi_{\alpha}(\textbf{r}) \phi_{\beta}(\textbf{r})
+    \tilde{f}_{\rm int}
+    &amp; = &amp;  \frac{1}{2V} \sum_{\alpha, \beta =0}^{C-1}
+    \chi_{\alpha\beta} \int \! d\textbf{r} \;
+    \phi_{\alpha}(\textbf{r}) \phi_{\beta}(\textbf{r})
+    \quad\quad\quad\quad\quad (A.28)
 \end{eqnarray*}
 </p>
-<p> Note that the sum over species in the first term in the definition of \( F_{\rm id} \) is a sum over all species, including polymeric and solvent species. Unified notation for both types of molecule has been made possible by using the symbol \( L_{i} \) to denote both the overall length per molecule for polymer species (the sum of the lengths of all blocks) and to denote the "size" parameter for solvent species.</p>
+<p> Note that the sum over species in the first term in the definition of \( F_{\rm id} \) is a sum over all species, including polymeric and solvent species. Unified notation for both types of molecule has been made possible by using the symbol \( L_{i} \) to denote a ratio of total molecular volume to monomer reference volume for species \( i \). This quantity is given by the overall length per molecule for block polymer species (the sum of the lengths of all blocks), or by the "size" parameter for solvent species.</p>
 <p >The macroscopic physical pressure \( P \) is computed from the identity  </p><p class="formulaDsp">
 \[
     P = - \frac{F}{V}
         + \sum_{i=0}^{P+S-1}
-        \frac{\mu_{i}\overline{\phi}_{i}}{N_{i}v}
+        \frac{\mu_{i}\overline{\phi}_{i}}{L_{i}v}
+    \quad\quad\quad\quad\quad (A.29)
 \]
 </p>
-<p> in which \( F / V \) is the Helmholtz free energy density and \( \overline{\phi}_{i}/(N_{i}v) \) is the average number of molecules of species \( i \) per unit volume. The value given in the output file is the dimensionless value \( Pv/k_{B}T \) .</p>
-<p >In grand-canonical and mixed ensembles, values for the Lagrange multiplier field \( \xi(\textbf{r}) \) and the macroscopic pressure \( P\) are uniquely determined by the values for the chemical potentials.</p>
-<p >In the special case of canonical ensemble, however, the value of the Lagrange multplier field \( \xi(\textbf{r}) \) is not uniquely determined by the SCF equations and incompressibility constraint. In this case, these equations can be shown to define \( \xi({\bf r}) \) only to within shifts by an arbitrary spatially homogeneous constant. As a result, the chemical potentials and the macroscopic pressure \( P \) are also undefined in this ensemble, unless an additional constraint is imposed to obtain a unique solution. The implementations of the pscf_pc and pscf_pg codes for periodic systems resolve this ambiguity by requiring, as a matter of convention, that the spatial average of \( \xi(\textbf{r}) \) vanish. The pscf_fd code for one-dimensional problems instead uses a convention that requires the value of \( w_{\alpha}({\bf r}) \) to vanish for the last monomer ( \( \alpha = C-1 \)) at the last grid point equal zero. When a calculation is performed in canonical ensemble (by providing values of volume fractions for all species in the parameter file), PSCF outputs values for the pressure, chemical potentials, and \( w \) fields that are all consistent with this arbitrary convention used to define a unique solution for \( \xi \). Results for the Helmholtz free energy density and volume fraction fields can, however, be shown to be independent of changes in the value of \( \xi \) by a homogeneous constant, and are thus independent of this choice of convention.</p>
+<p> in which \( F / V \) is the Helmholtz free energy density and \( \overline{\phi}_{i}/(L_{i}v) = M_{}/V\) is the average number of molecules of species \( i \) per unit volume. The value given in the <a class="el" href="user_thermo_page.html">thermo block</a> output file format, with the label "pressure", is the dimensionless quantity  </p><p class="formulaDsp">
+\[
+  \tilde{p} \equiv \frac{Pv}{k_{B}T} =
+  - \tilde{f} + \frac{\mu_{i}\overline{\phi}_{i}}{L_{i}k_{B}T}
+  \quad.
+   \quad\quad\quad\quad\quad (A.30)
+\]
+</p>
+<p> In Eqs. (A.29) and (A.30), the sum over species represents a sum over both polymeric and solvent species, and \( L_{i} \) denotes a ratio of molecular volume to monomer reference volume, exactly as in Eq. (A.28).</p>
+<h1><a class="anchor" id="user_theory_xi_sec"></a>
+Indeterminancy of Pressure in Canonical Ensemble</h1>
+<p >In grand-canonical and mixed ensembles, values for the Lagrange multiplier field \( \xi(\textbf{r}) \) and the macroscopic pressure \( P\) are uniquely determined by the values input for the chemical potentials.</p>
+<p >In the special case of canonical ensemble, however, the value of the Lagrange multplier field \( \xi(\textbf{r}) \) is <em>not</em> uniquely determined by the SCF equations and incompressibility constraint. In PSCF, a calculation is performed in canonical ensemble if the parameter file provides a volume fraction, rather than a chemical potential, as an input parameter for every polymer and solvent species. In this case, the relevant working equations can be shown to define \( \xi(\textbf{r}) \) only to within shifts by an arbitrary spatially homogeneous constant. Change in the value of \( \xi(\textbf{r}) \) by a homogeneous constant cause corresponding changes in values computed for \( w \) fields, chemical potentials and the non-dimensional pressure \( \tilde{p} \). As a result, values for these quantities are also not uniquely defined in this ensemble, unless an additional mathematical constraint is imposed by convention to obtain a unique solution for \( \xi({\bf r}) \).</p>
+<p >Different conventions for this additional constraint on \( \xi({\bf r}) \) are used in different PSCF programs. The implementations of the pscf_pc and pscf_pg programs for periodic microstructures obtain equations with a unique solution by requiring, as a matter of convention, that the spatial average of \( \xi(\textbf{r}) \) must vanish in canonical ensemble. The pscf_fd code for one-dimensional problems instead uses a convention that requires that, in canonical ensemble, the value of \( w_{\alpha}({\bf r}) \) must equal zero for the last monomer type ( \( \alpha = C-1 \)) at the last grid point.</p>
+<p >When an SCFT calculation is performed in canonical ensemble, each PSCF program outputs converted values for the pressure, chemical potentials, and \( w \) fields that are all consistent with the arbitrary convention used in that program to define a unique solution for \( \xi \). Numerical results for these quantities are thus sensitive to this choice of convention. Results for the Helmholtz free energy density and volume fraction fields can, however, be shown to be independent of changes in the value of \( \xi \) by a homogeneous constant, and are thus independent of this choice of convention.</p>
+<p >Results of a calculation that is initially carried out in canonical ensemble can be exactly reproduced in a subsequent calculation that is performed in a mixed or grand-canonical ensemble by using the values of some or all of the chemical potentials that were output by the canonical calculation as inputs to a calculation performed in mixed or grand-canonical ensemble. Attempting to reverse procedure, however, leads to more complicated relationship. Using the converged species volume fractions output by a calculation that is performed in a mixed or grand-canonical as inputs to a subsequent calculation that is performed in canonical ensemble will generally lead to results for values for the \( w \) fields, species chemical potentials and pressure that are different from those reported in the original calculation, because the value of \( \xi(\textbf{r}) \) will be shifted by a homogeneous constant in order to satisfy the convention that is imposed only in the special case of a canonical ensemble. Equal values for monomer volume fraction fields and Helmholtz free energies should, however, be obtained in any ensemble.</p>
+<h1><a class="anchor" id="user_theory_inputs_sec"></a>
+Overview: Working Equations, Inputs and Outputs</h1>
+<p >The above discussion provide a complete set of working equations for SCFT of an incompressible liquid in the form implemented in PSCF, for calculations in a fixed spatial domain. We simplify the discussion by restricting ourselves here to calculation that are carried out in a fixed one-dimensional or periodic spatial domain. Extension to SCFT calculations in a periodic unit cell with flexible parameters, as performed by pscf_pc or pscf_pg programs, would require an additional set of working equations to impose a requirement that the free energy density be minimized with respect to variation of the unit cell parameters. The working equations for a PSCF SCFT calculation in a fixed spatial domain are:</p>
+<ul>
+<li>The modified diffusion equation [Eqs. (A.4) and (A.5)]</li>
+<li>A definition of \( Q_{i} \) for each species [Eq. (A.14) for polymers and Eq. (A.21) for solvents]</li>
+<li>The relationship between \( \overline{\phi}_{i} \) and \( \mu_{i} \) [Eq. (A.23) or (A.24)]</li>
+<li>Expressions for block and solvent monomer volume fractions [Eq. (A.20) for a polymer block and (A.22) for a solvent]</li>
+<li>Self-consistent field condition [Eq. (A.3)]</li>
+<li>Incompressibility constraint [Eq. (A.2)]</li>
+<li>Expression for Helmholtz free energy per monomer \( \tilde{f} \) [Eqs. (A.26 - A.28)]</li>
+<li>Expression for non-dimensionalized pressure \( \tilde{p} \) [Eq. (A.30)]</li>
+</ul>
+<p >The key outputs from solution of this set of equations are:</p>
+<ul>
+<li>A converged monomer chemical potential fields \( w_{\alpha}({\bf r}) \) for each monomer type \( \alpha = 0, \ldots, C-1 \)</li>
+<li>A converged monomer volume fraction field \( \phi_{\alpha}({\bf r}) \) for each monomer type \( \alpha \)</li>
+<li>A computed chemical potential \( \mu_{i} \) or overall volume fraction \( \overline{\phi}_{i} \) for each polymer and solvent species \( i \) (depending on whether \( \overline{\phi}_{i} \) or \( \mu_{i} \) was provided as an input parameter for that species)</li>
+<li>Values for non-dimensionalized Helmholtz free energy \( \tilde{f} \) and pressure \( \tilde{p} \).</li>
+</ul>
+<p >The required inputs to such an SCFT calculation are:</p>
+<ul>
+<li>A statistical segment length for each monomer type</li>
+<li>A description of each block polymer type as a list of block lengths and vertex indices for attached vertices</li>
+<li>A size (volume relative to monomer reference volume) for each monomer type</li>
+<li>Values for all elements of the symmetric matrix of Flory-Huggins interaction parameters</li>
+<li>A description of the spatial domain and boundary conditions</li>
+</ul>
+<p >It is straightforward to confirm, however, that the monomer reference volume \( v \) does not appear as a parameter in any of the final working equations enumerated above, and is thus not a required input parameter for an SCFT calculation.</p>
+<p >PSCF allows the user to optionally input a value for \( v \) in the parameter file (labelled as "vMonomer") because a value for \( v \) can be used for some calculations other than the standard SCFT calculation described above. For example, a value of \( v \) is required as an input to compute the total excess free energy of a spherical micelle, which can be output by the pscf_fd program when used to simulate this geometry. A value of \( v \) will also be required as an input for stochastic field theoretic simulations that are currently under development as a planned addition to PSCF.</p>
 <p ><br  />
- <a class="el" href="user_thin_films_page.html">Thin Films</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_page.html">User Guide</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_fourier_page.html">Appendix: Periodic Functions and Fourier Series</a> (Next) </p>
+ <a class="el" href="user_python_page.html">Python Tools</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_page.html">User Guide</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_fourier_page.html">Appendix: Periodic Functions and Fourier Series</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 6 2023 14:11:35 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Sep 20 2023 00:52:46 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

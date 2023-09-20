@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -333,7 +333,7 @@ $(function() {
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>      <span class="comment">// Open parameter file, with thermodynamic properties at end</span></div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>      outFileName = baseFileName_;</div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>      outFileName += indexString;</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>      outFileName += <span class="stringliteral">&quot;.dat&quot;</span>;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>      outFileName += <span class="stringliteral">&quot;.stt&quot;</span>;</div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>      system().fileMaster().openOutputFile(outFileName, out);</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>      <span class="comment">// Write data file, with thermodynamic properties at end</span></div>
@@ -416,7 +416,7 @@ $(function() {
 <div class="ttc" id="aclassPscf_1_1Pspg_1_1Sweep_html_ad1843a22fc13c41dd9a18cec59d78430"><div class="ttname"><a href="classPscf_1_1Pspg_1_1Sweep.html#ad1843a22fc13c41dd9a18cec59d78430">Pscf::Pspg::Sweep::setSystem</a></div><div class="ttdeci">void setSystem(System&lt; D &gt; &amp;system)</div><div class="ttdoc">Set association with parent System.</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2sweep_2Sweep_8tpp_source.html#l00061">pspg/sweep/Sweep.tpp:61</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Pspg_1_1Sweep_html_ae4352713e198c30da8f5e660aba2f91e"><div class="ttname"><a href="classPscf_1_1Pspg_1_1Sweep.html#ae4352713e198c30da8f5e660aba2f91e">Pscf::Pspg::Sweep::Sweep</a></div><div class="ttdeci">Sweep()</div><div class="ttdoc">Default Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2sweep_2Sweep_8tpp_source.html#l00030">pspg/sweep/Sweep.tpp:30</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Pspg_1_1Sweep_html_ae6db9cda75d87403d0df7197a6c1aa67"><div class="ttname"><a href="classPscf_1_1Pspg_1_1Sweep.html#ae6db9cda75d87403d0df7197a6c1aa67">Pscf::Pspg::Sweep::extrapolate</a></div><div class="ttdeci">virtual void extrapolate(double sNew)</div><div class="ttdoc">Create a guess for adjustable variables by continuation.</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2sweep_2Sweep_8tpp_source.html#l00122">pspg/sweep/Sweep.tpp:122</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Pspg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Pspg_1_1System.html">Pscf::Pspg::System</a></div><div class="ttdoc">Main class in SCFT simulation of one system.</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2System_8h_source.html#l00071">pspg/System.h:72</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Pspg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Pspg_1_1System.html">Pscf::Pspg::System</a></div><div class="ttdoc">Main class in SCFT simulation of one system.</div><div class="ttdef"><b>Definition:</b> <a href="pspg_2System_8h_source.html#l00070">pspg/System.h:71</a></div></div>
 <div class="ttc" id="aclassPscf_1_1SweepTmpl_html"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html">Pscf::SweepTmpl</a></div><div class="ttdoc">Solve a sequence of problems along a path through parameter space.</div><div class="ttdef"><b>Definition:</b> <a href="SweepTmpl_8h_source.html#l00023">SweepTmpl.h:24</a></div></div>
 <div class="ttc" id="aclassUtil_1_1DArray_html"><div class="ttname"><a href="classUtil_1_1DArray.html">Util::DArray</a></div><div class="ttdoc">Dynamically allocatable contiguous array template.</div><div class="ttdef"><b>Definition:</b> <a href="DArray_8h_source.html#l00031">DArray.h:32</a></div></div>
 <div class="ttc" id="aclassUtil_1_1Dbl_html"><div class="ttname"><a href="classUtil_1_1Dbl.html">Util::Dbl</a></div><div class="ttdoc">Wrapper for a double precision number, for formatted ostream output.</div><div class="ttdef"><b>Definition:</b> <a href="Dbl_8h_source.html#l00039">Dbl.h:40</a></div></div>
@@ -426,12 +426,12 @@ $(function() {
 <div class="ttc" id="aglobal_8h_html_aaf3bc07accafc94019d126e4cffa81e7"><div class="ttname"><a href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a></div><div class="ttdeci">#define UTIL_CHECK(condition)</div><div class="ttdoc">Assertion macro suitable for serial or parallel production code.</div><div class="ttdef"><b>Definition:</b> <a href="global_8h_source.html#l00068">global.h:68</a></div></div>
 <div class="ttc" id="aglobal_8h_html_ad2512f8bd062d41d66799cf900151487"><div class="ttname"><a href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a></div><div class="ttdeci">#define UTIL_THROW(msg)</div><div class="ttdoc">Macro for throwing an Exception, reporting function, file and line number.</div><div class="ttdef"><b>Definition:</b> <a href="global_8h_source.html#l00051">global.h:51</a></div></div>
 <div class="ttc" id="agroup__Misc__Module_html_ga69d6f862289b96b4b0c0591357c8823e"><div class="ttname"><a href="group__Misc__Module.html#ga69d6f862289b96b4b0c0591357c8823e">Util::toString</a></div><div class="ttdeci">std::string toString(int n)</div><div class="ttdoc">Return string representation of an integer.</div><div class="ttdef"><b>Definition:</b> <a href="ioUtil_8cpp_source.html#l00052">ioUtil.cpp:52</a></div></div>
-<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">Classes for polymer self-consistent field theory.</div><div class="ttdef"><b>Definition:</b> <a href="BlockDescriptor_8cpp_source.html#l00010">BlockDescriptor.cpp:11</a></div></div>
+<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">C++ namespace for polymer self-consistent field theory (PSCF).</div><div class="ttdef"><b>Definition:</b> <a href="BlockDescriptor_8cpp_source.html#l00010">BlockDescriptor.cpp:11</a></div></div>
 <div class="ttc" id="anamespaceUtil_html"><div class="ttname"><a href="namespaceUtil.html">Util</a></div><div class="ttdoc">Utility classes for scientific computation.</div><div class="ttdef"><b>Definition:</b> <a href="accumulators_8mod_source.html#l00001">accumulators.mod:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 6 2023 14:11:31 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Sep 20 2023 00:52:46 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

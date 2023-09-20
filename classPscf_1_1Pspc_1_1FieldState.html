@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -52,6 +52,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classPscf_1_1Pspc_1_1FieldState-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Pscf::Pspc::FieldState&lt; D, FT &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Pspc__Module.html">Periodic (CPU)</a> &raquo; <a class="el" href="group__Pspc__Sweep__Module.html">Sweep</a></div></div></div>
 </div><!--header-->
@@ -77,8 +78,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac591cdeeab31b094c7e12a0b12e6f9d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldState.html#ac591cdeeab31b094c7e12a0b12e6f9d0">setSystem</a> (<a class="el" href="classPscf_1_1Pspc_1_1System.html">System</a>&lt; D &gt; &amp;<a class="el" href="classPscf_1_1Pspc_1_1FieldState.html#a98b9e016611a9c87766355e6e71420b3">system</a>)</td></tr>
 <tr class="memdesc:ac591cdeeab31b094c7e12a0b12e6f9d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set association with <a class="el" href="classPscf_1_1Pspc_1_1System.html" title="Main class for SCFT simulation of one system.">System</a>, after default construction.  <a href="classPscf_1_1Pspc_1_1FieldState.html#ac591cdeeab31b094c7e12a0b12e6f9d0">More...</a><br /></td></tr>
 <tr class="separator:ac591cdeeab31b094c7e12a0b12e6f9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">Accessors</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Accessors</div></td></tr>
 <tr class="memitem:a433458851750a8af4cbee4840e942e73"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; FT &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldState.html#a433458851750a8af4cbee4840e942e73">fields</a> () const</td></tr>
 <tr class="memdesc:a433458851750a8af4cbee4840e942e73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get array of all fields by const reference.  <a href="classPscf_1_1Pspc_1_1FieldState.html#a433458851750a8af4cbee4840e942e73">More...</a><br /></td></tr>
 <tr class="separator:a433458851750a8af4cbee4840e942e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -97,6 +97,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abfd50a35d3e2048b02ac4b5834b68207"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1UnitCell.html">UnitCell</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldState.html#abfd50a35d3e2048b02ac4b5834b68207">unitCell</a> ()</td></tr>
 <tr class="memdesc:abfd50a35d3e2048b02ac4b5834b68207"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classPscf_1_1UnitCell.html" title="Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.">UnitCell</a> by non-const reference.  <a href="classPscf_1_1Pspc_1_1FieldState.html#abfd50a35d3e2048b02ac4b5834b68207">More...</a><br /></td></tr>
 <tr class="separator:abfd50a35d3e2048b02ac4b5834b68207"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
 <tr class="memitem:a7824f75a2e05bc67f8c79fe7673e5d0a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Pspc_1_1FieldState.html#a7824f75a2e05bc67f8c79fe7673e5d0a">hasSystem</a> ()</td></tr>
 <tr class="memdesc:a7824f75a2e05bc67f8c79fe7673e5d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has a system been set?  <a href="classPscf_1_1Pspc_1_1FieldState.html#a7824f75a2e05bc67f8c79fe7673e5d0a">More...</a><br /></td></tr>
 <tr class="separator:a7824f75a2e05bc67f8c79fe7673e5d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -249,6 +252,8 @@ template&lt;int D, class FT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="pspc_2sweep_2FieldState_8h_source.html#l00154">154</a> of file <a class="el" href="pspc_2sweep_2FieldState_8h_source.html">pspc/sweep/FieldState.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="command_8py_source.html#l00160">pscfpp.command.Command::__init__()</a>, <a class="el" href="text_8py_source.html#l00097">pscfpp.text.Record::__init__()</a>, <a class="el" href="text_8py_source.html#l00131">pscfpp.text.Record::__str__()</a>, <a class="el" href="command_8py_source.html#l00167">pscfpp.command.Command::nParam()</a>, <a class="el" href="command_8py_source.html#l00175">pscfpp.command.Command::param()</a>, and <a class="el" href="command_8py_source.html#l00184">pscfpp.command.Command::setParam()</a>.</p>
+
 </div>
 </div>
 <a id="a3dfcd335bd19691e921f4c874cc3a4eb" name="a3dfcd335bd19691e921f4c874cc3a4eb"></a>
@@ -277,6 +282,8 @@ template&lt;int D, class FT &gt; </div>
 <p >The array capacity is equal to the number of monomer types. </p>
 
 <p class="definition">Definition at line <a class="el" href="pspc_2sweep_2FieldState_8h_source.html#l00160">160</a> of file <a class="el" href="pspc_2sweep_2FieldState_8h_source.html">pspc/sweep/FieldState.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="command_8py_source.html#l00160">pscfpp.command.Command::__init__()</a>, <a class="el" href="text_8py_source.html#l00097">pscfpp.text.Record::__init__()</a>, <a class="el" href="text_8py_source.html#l00131">pscfpp.text.Record::__str__()</a>, <a class="el" href="command_8py_source.html#l00167">pscfpp.command.Command::nParam()</a>, <a class="el" href="command_8py_source.html#l00175">pscfpp.command.Command::param()</a>, and <a class="el" href="command_8py_source.html#l00184">pscfpp.command.Command::setParam()</a>.</p>
 
 </div>
 </div>
@@ -479,7 +486,7 @@ template&lt;int D, class FT &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 6 2023 14:11:39 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Sep 20 2023 00:52:47 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

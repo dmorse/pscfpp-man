@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -54,7 +54,7 @@ $(function() {
   <div class="headertitle"><div class="title">Out-of-Source and In-Source Builds </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="el" href="install_setup_page.html">Setup Script</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="install_targets_page.html">Makefile targets</a> (Next) <br  />
+<div class="textblock"><p ><a class="el" href="install_setup_page.html">Setup Script</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="install_configure_page.html">Optional Features</a> (Next) <br  />
 </p>
 <h1><a class="anchor" id="install_inout_build"></a>
 Intermediate Files and Build Directories</h1>
@@ -70,19 +70,20 @@ Intermediate Files and Build Directories</h1>
 <p >By default, all executable program files are installed in the pscfpp/bin directory. This is true for both in-source or out-of-source compilation.</p>
 <h1><a class="anchor" id="install_inout_out"></a>
 Out-of-Source Builds</h1>
-<p >We recommend that most users build PSCF out-of source. The overview of instructions given in a <a class="el" href="install_overview_page.html">previous page</a> were instructions for performing an out-of-source build. An out-of-source build will be performed if commands "make all-cpu" and "make pspg" or "make all" are invoked from within either the root pscfpp/ directory (as recommended in those instructions) or from within the pscfpp/bld directory.</p>
+<p >We recommend that most users of PSCF who are not working on modifying or extending the code build the package out-of source. The overview of instructions given in a <a class="el" href="install_overview_page.html">previous page</a> gives instructions for an out-of-source build. An out-of-source build will be performed if "make all" is entered either from within either the root pscfpp/ directory (as recommended in those instructions) or from within the pscfpp/bld directory.</p>
 <h1><a class="anchor" id="install_inout_in"></a>
 In-Source Builds</h1>
-<p >Users who are actively working on development or modification of the PSCF source code may find it more convenient to build PSCF in-source during development. To build PSCF in-source, one simply invokes the make utility from within the pscfpp/src/ directory, rather than from within the pscfpp/ or pscfpp/bld/ directory. The names of the makefile targets used for this purpose are the same as those used to build out-of-source. Entering the command "make all-cpu" from the pscfpp/src directory will thus perform an in-source build all of CPU programs in the package, and install the resulting executable files in pscfpp/bin. Entering "make pspg" from pscfpp/src on a machine with a CUDA compiler will compile all GPU enabled executables, which are also installed in pscfpp/bin.</p>
-<p >When PSCF is compiled in-source, the make command can also be invoked from any subdirectory of the src/ directory. Invoking "make all" from any subdirectory of src/ will generally compile all recently modified files in that subdirectory, without compiling any files outside that subdirectory, and without recompiling files that have not been touched since they were last compiled. This usage, which is provided as a convenience for developers, is discussed in more detail <a class="el" href="install_targets_page.html#install_targets_makeall_sec">here</a>. <br  />
+<p >Users who are actively working on development or modification of the PSCF source code may find it more convenient to build PSCF in-source during development. To build PSCF in-source, one simply invokes the make utility from within the pscfpp/src/ directory, rather than from within the pscfpp/ or pscfpp/bld/ directory. The names of the makefile targets used for this purpose are the same as those used to build out-of-source. Entering the command "make all" from the pscfpp/src directory will thus perform an in-source build all of relevant programs in the package, and install the resulting executable files in pscfpp/bin. <br  />
+</p>
+<p >When PSCF is compiled in-source, the make command can also be invoked from any subdirectory of the src/ directory. Invoking "make all" from any subdirectory of src/ will generally compile all recently modified files in that subdirectory and its subdirectories, without attempting to compile any files outside that subdirectory, and without recompiling files that have not been touched since they were last compiled. This usage is discussed in more detail <a class="el" href="install_targets_page.html#install_targets_makeall_sec">here</a>. <br  />
 </p>
 <p ><br  />
- <a class="el" href="install_setup_page.html">Setup Script</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="install_page.html">Installation</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="install_targets_page.html">Makefile targets</a> (Next) </p>
+ <a class="el" href="install_setup_page.html">Setup Script</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="install_page.html">Installation</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="install_configure_page.html">Optional Features</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 6 2023 14:11:35 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Sep 20 2023 00:52:46 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

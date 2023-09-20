@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -56,7 +56,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p ><a class="el" href="user_page.html">User Guide</a> (Prev / Up) &#160; &#160; &#160; &#160; <a class="el" href="user_files_page.html">Input Files</a> (Next) <br  />
 </p>
-<p >This page provides an overview of the input parameters required by all of the programs in the PSCF package to characterize a physical system, as well as a discussion of the system of units and conventions used to define parameter values. The <a class="el" href="user_model_page.html#user_model_thermo_sec">last section</a> also discusses conventions used to define numerical values for thermodynamic properties (e.g., free energies) that are reported as outputs.</p>
+<p >This page provides an overview of the input parameters required by all of the programs in the PSCF package to characterize a physical system, as well as a discussion of the system of units and conventions used to define parameter values. A separate page, <a class="el" href="user_thermo_page.html">Thermodynamic Properties,</a> discusses conventions used to define numerical values for thermodynamic properties (e.g., free energies) that are reported as outputs.</p>
 <h1><a class="anchor" id="user_model_overview_sec"></a>
 Physical Model (Overview)</h1>
 <p >All of the programs in the PSCF software package are designed to compute properties of a system that contains an incompressible liquid mixture of one or more block polymers and zero or more small molecule solvents. Each polymer species in such a mixture may be either a linear block polymer or an acyclic branched block polymer with a user-specified connectivity. Homopolymers are treated as a special case of a block polymer with only one block. Conformations of individual polymers is treated using a model of linear polymer segments as continuous random walks, as discussed below. Solvent species, when present, are treated as structureless point-like particles that occupy a specified volume per particle.</p>
@@ -79,7 +79,7 @@ Physical Model (Overview)</h1>
 <p >Particular numerical algorithms may require a variety of other algorithmic parameter and options.</p>
 <h1><a class="anchor" id="user_model_energy_sec"></a>
 Energy Units</h1>
-<p >In all input parameter and output values with units that involve energy, PSCF uses "thermal" units for energy in which \( k_{B}T = 1\), where \( k_{B} \) is Boltmann's constant and \( T \) is absolute temperature.</p>
+<p >In all input parameter and output values with units that involve energy, PSCF uses "thermal" units for energy in which \( k_{B}T = 1\), where \( k_{B} \) is Boltmann's constant and \( T \) is absolute temperature. For instance, the chemical potential values reported in the parameter files are reported as \( \mu / k_{B}T \).</p>
 <h1><a class="anchor" id="user_model_length_sec"></a>
 Length Units</h1>
 <p >PSCF allows the user to use any system of units for quantities that involve units of length, as long as the same choice of units is used for all input parameters. The user is not asked to declare a specific choice of a unit of length, but is responsible for providing values that are have been chosen using some consistent choice of unit.</p>
@@ -137,43 +137,17 @@ Solvent Species</h1>
 <p >Each solvent species is assigned a monomer type that is selected from among the same set of monomer types that can be used to describe polymer blocks. A solvent that has properties that are distinct from those of any of the monomers used to construct the polymer species can be assigned an extra monomer type that is simply not used as the monomer type for any polymer block. A solvent species can instead be assigned a mononer type that is the same as that assigned to one or block polymer blocks if that solvent species represents a small oligomer of the specified monomer type, or another species with physical properties very similar to those of such an oligomer. The input file format for PSCF requires that a monomer type that this is only associated with a solvent species must must still be assigned a statistical segment length value, but in this case that segment length value is simply left unused.</p>
 <p >Each solvent species is also assigned a volume per molecule. This is specified in the PSCF input files by a dimensionless parameter labelled "size". The value of the size parameter is equal to the ratio of the solvent volume to that of a the mononer reference volume. The "size" parameter for a solvent species is thus closely analogous to the "length" parameter for a polymer block, since both are defined as volumes measured in units of the monomer reference volume.</p>
 <p >If one describes a polymer solution using "theorist" units in which the reference volume it defined to be equal to the total volume of some reference polymer species, then values for the solvent size parameter will usually much less than 1.0. Thus for example, a system with a homopolymer of length 1.0 and a solvent with a size equal to 0.01 could be used to describe a homopolymer solution in which the polymer volume is 100 times greater than that of the solvent. It is also valid, and sometimes more convenient, to describe a solution using a theorist convention in which the volume of the solvent species is taken as the reference volume. In this case, the solvent size wil be set equal to 1.0 by convention, and the lengths for polymer blocks will generally be much greater than 1.</p>
-<h1><a class="anchor" id="user_model_thermo_sec"></a>
-Thermodynamic Properties</h1>
-<p >The output produced by PSCF after finding a solution to a SCFT problem generally includes values for the Helmholtz free energy density and the thermodynamic pressure.</p>
-<h2><a class="anchor" id="user_model_helmholtz_sub"></a>
-Helmholtz Free Energy</h2>
-<p >The value of the Helmholtz free energy that is reported by PSCF in output files is indicated in those files by a label "fHelmholtz", which will be denoted here by the symbol \( \tilde{f} \). The reported value is actually the free energy per monomer reference volume in thermal energy units. That is, the value reported for "fHelmholtz" for a system with a total Helmholtz free energy \( F \) and associated volume \( V \) is given by ratio  </p><p class="formulaDsp">
-\[
-    \tilde{f} \equiv \frac{Fv}{Vk_{B}T}
-\]
-</p>
-<p> where \( v \) is the monomer reference volume.</p>
-<p >In the special case of a one-component block polymer melt for which the input parameters are given using the theorists convention that overall chain length is equal to 1.0, the monomer reference volume is equal to the volume per chain. In this case, the value reported for "fHelmholtz" is also the free energy per chain in thermal energy units, with \( k_{B}T = 1 \). More generally, in a mixture, one can obtain the free energy associated with the volume occupied by a molecular species by multiplying the overall contour length (for polymers) or size (for solvents) of the species by the value reported for "fHelmholtz".</p>
-<h2><a class="anchor" id="user_model_pressure_sub"></a>
-Pressure and Grand-Canonical Free Energy</h2>
-<p >The value of "pressure" reported by PSCF in output files system is a non-dimensionalized thermodynamic pressure that is computed from the value of the grand-canonical free energy density. Consider a system that contains a total of \( N_{a} \) molecules of molecular species \( a \), and let \( \mu_{a} \) denote the chemical potential of species \( a \), for each polymer and solvent species. Let \( \Phi \) denote the so-called "grand" or "grand-canonical" free energy  </p><p class="formulaDsp">
-\[
-   \Phi \equiv F - \sum_{a}\mu_{a}N_{a} \quad,
-\]
-</p>
-<p> in which the sum is taken over all polymer and solvent molecular species in the system. We define a thermodynamic pressure \( P \) via the identity  </p><p class="formulaDsp">
-\[
-    \Phi = -PV  \quad,
-\]
-</p>
-<p> where \( V \) is total system volume. The value reported by PSCF for the "pressure", which is denoted here by \( \tilde{p} \), is actually the value of the ratio  </p><p class="formulaDsp">
-\[
-    \tilde{p} = \frac{Pv}{k_{B}T} = -\frac{\Phi v}{Vk_{B}T} \quad.
-\]
-</p>
-<p> The value of pressure reported by PSCF is thus \( -1 \) times the grand-canonical free energy per monomer reference volume, in thermal energy units.</p>
+<h1><a class="anchor" id="user_model_vMonomer_sec"></a>
+Irrelevance of Monomer Volume in SCFT</h1>
+<p >As discussed <a class="el" href="user_model_page.html#user_model_continuous_sec">above</a>, when using SCFT to analyze a specific experimental system, one's choice of a convention for the monomer reference volume \( v \) determines the appropriate choice of values for several types of related parameters appropriate for a specific physical system. It turns out, however, that once the values of these related parameters are known, the value of the monomer volume \( v \) itself is actually not needed as an independent input to an SCFT calculation. It can be shown that changes in the value of \( v \) alone, without corresponding changes in the values assigned to related parameters (e.g., statistical segment lengths, block lengths and chi parameters) have no effect on SCFT predictions for values of any of the properties normally output by the PSCF programs. Specifically, changes in the value of \( v \) alone can be shown to have no effect on SCFT predictions for average monomer volume fraction fields, polymer or solvent chemical potential values, or the non-dimensionalized Helmholtz free energy that is reported by PSCF in its standard format for outputting <a class="el" href="user_thermo_page.html">thermodynamic properties</a>, which is a free energy per monomer. PSCF programs thus do not require the user to input a value for \( v \) as an input to an SCFT calculation.</p>
+<p >The role of \( v \) in SCFT is discussed in more detail in a separate discussion of the <a class="el" href="user_theory_page.html">working equations for SCFT</a>. There we show explicitly that the forms of these equations implemented in PSCF simply do not require a value for \( v \) as an independent input parameter.</p>
 <p ><br  />
  <a class="el" href="user_page.html">User Guide</a> (Prev / Up) &#160; &#160; &#160; &#160; <a class="el" href="user_files_page.html">Input Files</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 6 2023 14:11:35 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Sep 20 2023 00:52:46 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

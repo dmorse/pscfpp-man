@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -54,9 +54,9 @@ $(function() {
   <div class="headertitle"><div class="title">Thin Films </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="el" href="user_groups_page.html">Space Groups</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_theory_page.html">Appendix: Self-Consistent Field Theory</a> (Next) <br  />
+<div class="textblock"><p ><a class="el" href="user_groups_page.html">Space Groups</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_visualize_page.html">Visualization</a> (Next) <br  />
 </p>
-<h1><a class="anchor" id="autotoc_md0"></a>
+<h1><a class="anchor" id="autotoc_md4"></a>
 Overview</h1>
 <p >A "thin film constraint" can be imposed on the system by modifying the iterator block of the parameter file. On this page, we first explain the model used to represent thin film confinement, followed by an explanation of how a user can impose the constraint in PSCF.</p>
 <p >The thin film is modeled as a polymer melt confined between two parallel walls with a fixed distance between them. The walls are represented spatially in the unit cell as a mask which confines the polymers to certain regions of the cell according to a pre-defined functional form, forbidding any monomer species from existing in the space occupied by the walls. This mask technique allows for the periodic boundary conditions and MDE solver to be used without any modification; the modifications are contained entirely in the iterator.</p>
@@ -73,7 +73,7 @@ Overview</h1>
 <li>Matsen, M. W. (1997). <em>J. Chem. Phys.</em>, <b>106</b>, 7781.</li>
 <li>Khanna, V., <em>et al.</em> (2006). <em>Macromolecules</em>, <b>39</b>, 9346.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md1"></a>
+<h1><a class="anchor" id="autotoc_md5"></a>
 Parameter File Input</h1>
 <p >In the parameter file, the thin film constraint is included by modifying the iterator block. First, the word "Film" is appended to the end of the iterator name (e.g., "AmIteratorFilm" instead of "AmIterator"). Inside of the iterator block, the normal iterator parameters are listed first, followed by several additional parameters to define the mask. For now, AmIterator is the only iterator that has been implemented in the software, so the only thin film iterator is AmIteratorFilm. An example is given below to show how a thin film is written into the parameter file: </p><div class="fragment"><div class="line">System{</div>
 <div class="line">   Mixture{</div>
@@ -130,10 +130,10 @@ Parameter File Input</h1>
 <div class="line">   }</div>
 <div class="line">}</div>
 </div><!-- fragment --><p >In the example, we have constructed a parameter file that might be used to represent an AB diblock polymer self-assembled into a bcc structure confined to a thin film that is ~2 unit cells thick. This will be explained in more detail below. Also, see our parameter-level breakdown of the components of an <a class="el" href="pspc_AmIteratorFilm_page.html">Pspc::AmIteratorFilm</a> block.</p>
-<h2><a class="anchor" id="autotoc_md2"></a>
+<h2><a class="anchor" id="autotoc_md6"></a>
 Domain Block</h2>
 <p >First, we draw your attention to the <code>Domain</code> block. Notice that this differs significantly from the <code>Domain</code> block that would be expected for a bcc structure in a neat melt. The space group has been downgraded from the cubic <em>Im</em>-3<em>m</em> group to tetragonal <em>P</em>4/<em>mmm</em>. See the Space Groups section below for more information about determining the appropriate space group symmetry for a thin film. Also notice that we have chosen specific and intentional values for the <b>c</b> lattice vector and the mesh discretization in that direction, which will be discussed further below.</p>
-<h2><a class="anchor" id="autotoc_md3"></a>
+<h2><a class="anchor" id="autotoc_md7"></a>
 Iterator Block</h2>
 <p >Now, we proceed to the <code>AmIteratorFilm</code> block. The first four parameters in this block define the AmIterator object and do not pertain to the thin film constraint (from <code>maxItr</code> to <code>isFlexible</code>). Then we get to the variables that define the mask. The first required variable is <code>normalVecId</code>, indicating which of the 3 lattice basis vectors is oriented normal to the walls. The input should be either 0, 1, or 2, corresponding to the <b>a</b>, <b>b</b>, or <b>c</b> lattice vectors, respectively. In the example above, the <b>c</b> vector is normal to the wall. Importantly, the two vectors that are <em>not</em> normal to the wall (<b>a</b> and <b>b</b> in the example above) must be parallel to the wall. So, if <b>c</b> is normal to the wall, then the unit cell angles <em>&alpha;</em> and <em>&beta;</em> must both be 90&deg;. The software will throw an error if this condition is not met.</p>
 <p >The next required inputs are <code>interfaceThickness</code> and <code>wallThickness</code>, which correspond to <em>t</em> and <em>T</em> in the expression for &rho;*<sub>wall</sub>(<em>z</em>) above. These values are defined in the same units as other length inputs (unit cell parameters, segment lengths). In the example, we have chosen <em>t</em> to be 0.15, or ~0.36<em>R</em><sub>g</sub> based on information from the <code>Mixture</code> block, and we have chosen <em>T</em> to be 0.3, or ~0.73<em>R</em><sub>g</sub>.</p>
@@ -141,7 +141,7 @@ Iterator Block</h2>
 <p >Next, there are required input arrays <code>chiBottom</code> and <code>chiTop</code>. These allow the user to define a Flory-Huggins-like interaction parameter between each monomer species and the walls. For a system with <code>n</code> monomer species, the chi arrays will contain <code>n</code> entries each. Each entry corresponds to a single monomer species, in the same order that they are listed in the <code>monomers[</code> block. <code>chiBottom</code> defines the interaction between each species and the lower wall (defined as the wall that contains the origin of the unit cell), while 'chiTop' defines the interactions with the upper wall.</p>
 <p >In the example above, we have two monomer species, with species indices 0 and 1. Both walls interacts slightly more favorably with the monomer species with index 1. If <code>chiBottom</code> and <code>chiTop</code> are identical, as is the case in this example, then the walls are said to be "chemically identical."</p>
 <p >The section below gives more details about the way that these arrays are used in the calculation.</p>
-<h2><a class="anchor" id="autotoc_md4"></a>
+<h2><a class="anchor" id="autotoc_md8"></a>
 Converting "wall chi" values into external fields</h2>
 <p >We model these wall-monomer interactions by converting the <code>chiBottom</code> and <code>chiTop</code> arrays into a corresponding set of external fields that are imposed on the unit cell. We define the interaction to be Flory-Huggins-like, in the sense that the free energy contribution from these interactions, which we will call <em>F</em><sub>wall</sub>, should assume the following form:  </p><p class="formulaDsp">
 \[
@@ -160,13 +160,13 @@ Converting "wall chi" values into external fields</h2>
 <ul>
 <li>Hur, S.-M., Garcia-Cervera, C. J., &amp; Fredrickson, G. H. (2012). Macromolecules*, <b>45</b>, 2905.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md5"></a>
+<h2><a class="anchor" id="autotoc_md9"></a>
 Sweep block</h2>
 <p >We also briefly draw your attention to the Sweep block at the bottom of the example parameter file. To make it easier to efficiently explore the state space of thin film polymer systems, we have introduced three sweep parameters that are specific to thin film systems. First is <code>cell_param</code>, which allows for a sweep to be performed on any lattice parameter. The syntax for this sweep parameter is <code>cell_param i delta</code> where <code>i</code> is the index of the lattice parameter to be swept (starting from 0) and <code>delta</code> is the desired change in this parameter over the entire sweep. Note that <code>i</code> refers to the index of the parameter in the array that is input in the <code>unitCell</code> line of the parameter file. So, in the example above, <code>i</code> can only be 0 or 1 because there are only 2 lattice parameters specified on the <code>unitCell</code> line. Note that the lattice parameter being swept should be held rigid during the calculation, or else the iterator will allow that parameter to relax back to it's most optimal value at each step of the sweep.</p>
 <p >The second and third sweep parameters for thin films are <code>chi_bottom</code> and <code>chi_top</code>, which allow the user to sweep any of the values in the <code>chiBottom</code> and <code>chiTop</code> arrays. The syntax for the <code>chi_bottom</code> sweep parameter is <code>chi_bottom i delta</code> where <code>i</code> specifies the array index of the chi value that will be swept (indexing starting from 0), and <code>delta</code> is the desired change in this parameter over the entire sweep. <code>i</code> must be less than n_monomer. Replace <code>chi_bottom</code> with <code>chi_top</code> to sweep a value in the <code>chiTop</code> array instead.</p>
 <p >In the example parameter file above, we show how one would perform a sweep along all three thin film sweep parameters at once; we sweep the <em>c</em> lattice parameter from 4.3 to 5.3, and we sweep <code>chiBottom[1]</code> and <code>chiTop[1]</code> from 0 to 10. Note that we chose a sweep that keeps the walls chemically identical, because asymmetric walls would break the symmetry of the space group that we've chosen, so we'd need to switch to a different space group to model bcc with asymmetric walls.</p>
 <p >Finally, notice that there is an additional line in the Sweep block: <code>reuseState 0</code>. The reuseState feature typically improves convergence time for sweeps by using the last few iterations of the previous sweep step as the initial "histories" for the current sweep step. However, this feature actually worsens convergence time when paired with a thin film thickness (<code>cell_param</code>) sweep, and thus we include <code>reuseState 0</code> in the param file to turn off the feature when sweeping film thickness.</p>
-<h2><a class="anchor" id="autotoc_md6"></a>
+<h2><a class="anchor" id="autotoc_md10"></a>
 The effect of the parameter t</h2>
 <p >It is important to note that the equation for <em>F</em><sub>wall</sub> above has an inherent linear dependence on <em>t</em>. For instance, consider a homopolymer melt where <em>&rho;</em><sub>polymer</sub> = <em>&rho;</em><sub>mask</sub> everywhere, and both walls are chemically identical. Then,  </p><p class="formulaDsp">
 \[
@@ -175,7 +175,7 @@ The effect of the parameter t</h2>
 \]
 </p>
 <p> Using the expression for <em>&rho;</em><sub>mask</sub> above, one can show that the integral of <em>&rho;</em><sub>mask</sub>(1-<em>&rho;</em><sub>mask</sub>) is proportional to <em>t</em>. As such, the strength of the interactions between polymers/solvents and walls is dependent not only on &chi;<sub>&alpha;w</sub> but also on <em>t</em>. Because of this, it is strongly recommended to use the same value of <em>t</em> for all calculations that are to be compared to one another.</p>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 Variable Lattice Parameters</h2>
 <p >When walls are added into the system, the user can still choose whether to fix the unit cell parameters or allow some or all of them to vary, but the implementation is slightly different. Specifically, we require that the length of the lattice basis vector that is orthogonal to the wall (4.3 in the example above) is fixed regardless of the inputs provided in <code>isFlexible</code> and <code>flexibleParams</code>, in order to force the thin film to maintain a constant thickness throughout the iteration process. Furthermore, we require that the other lattice basis vector(s) remain parallel to the walls. This implies the following:</p><ul>
 <li>In 1D, the size of the unit cell is always fixed.</li>
@@ -183,30 +183,30 @@ Variable Lattice Parameters</h2>
 <li>In 3D, the lengths of the lattice basis vectors that are parallel to the walls may vary, as can the angle between them. The two vectors in question depend on the choice of <code>normalVecId</code>. The length of the lattice basis vector that is normal to the wall (the vector indicated by <code>normalVecId</code>) is held fixed, and the remaining two angles are fixed at 90&deg;.</li>
 </ul>
 <p >This behavior is implemented automatically. If the user specifies that some or all lattice parameters may vary, then the software will decide which lattice parameters are actually allowed to vary based on <code>normalVecId</code> and <code>unitCell</code>. If the user tries to define a unit cell that is incompatible with the rules above (<em>e.g.,</em> a 2D unit cell with <em>&alpha;</em> &ne; 90&deg;), the software will throw an error.</p>
-<h2><a class="anchor" id="autotoc_md8"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 A Note About The COMPUTE Command</h2>
 <p >When using PSCF for bulk systems (those without a thin film constraint), users can use the COMPUTE command in the command file to solve the MDEs and determine the concentration fields from a given set of potential (w) fields. Based on the way the thin film code is implemented, the COMPUTE command will currently give the wrong result if the system in question has a thin film constraint. This is because the code has to generate external fields and a mask field to represent the upper and lower walls, which alter the other calculations that happen within the system, and these fields are not generated until the ITERATE command is called.</p>
 <p >If the user wishes to simply solve the MDEs for a thin film system without iterating to a solution, we recommend the following workaround: instead of calling COMPUTE, set the epsilon value of the iterator to a very large number (say, 1e5) and call ITERATE. The MDE solution at Iteration 0 will be "converged" because it will have an error value that is lower than epsilon, and so the iteration procedure will terminate on Iteration 0 without ever updating the potential fields. Thus, the only operation performed by ITERATE will be solving the MDEs, which will then allow the user to write the resulting concentration fields to a file.</p>
-<h1><a class="anchor" id="autotoc_md9"></a>
+<h1><a class="anchor" id="autotoc_md13"></a>
 Space Groups</h1>
 <p >Although we are imposing a thin film constraint on the system, we still use periodic boundary conditions in all directions so that the symmetry-adapted basis functions used for bulk (non-thin film) calculations can be used without modification. However, the presence of two fixed walls in the system reduces the number of allowed symmetry operations for these unit cells, because the only allowed symmetry operations are those that leave the walls unchanged. Thus, the selection of the appropriate space group for a thin film requires more substantial thought than is the case for bulk systems.</p>
 <p >Worth noting briefly is the fact that a user could also avoid this problem entirely by simply using the <code>P_1</code> space group, enforcing no symmetry on the unit cell. This is fine, but we often prefer to enforce some symmetry requirements because it significantly reduces the size of the field in basis format, which accelerates the calculations and reduces file sizes, while ensuring that the resulting solution has the symmetry that is expected.</p>
-<h2><a class="anchor" id="autotoc_md10"></a>
+<h2><a class="anchor" id="autotoc_md14"></a>
 Identifying the Correct Space Group</h2>
 <p >The appropriate space group for a desired system can be identified by looking at the symmetry operations for the space group that describes the system in the bulk, removing those operations that are not allowed in the thin film (which differ depending on whether the walls are identical or not), and then finding the space group that contains only those symmetry operations that remain.</p>
 <p >If, for example, the walls are in the <em>x-y</em> plane (param file contains "<code>normalVecId&#160;&#160;2</code>.") and the two walls are chemically identical, then symmetry operations that change <em>z</em> to <em>-z</em> are allowed because the walls are mirror images of each other. All other changes in <em>z</em> (<em>e.g.</em>, from <em>z</em> to <em>z</em>+1/2 in reduced coordinates) are forbidden, because these operations would result in the wall being moved to a different location than where it started. If the walls are chemically dissimilar, then the only symmetry operations that are permitted are those that leave z* unchanged. The user is directed to online resources at <a href="https://www.cryst.ehu.es/">https://www.cryst.ehu.es/</a> and <a href="http://img.chem.ucl.ac.uk/sgp/mainmenu.htm">http://img.chem.ucl.ac.uk/sgp/mainmenu.htm</a> which provide, in great detail, tabulations of the symmetry operations for all space groups.</p>
 <p >We can clarify further with an example, again considering the parameter file above for a thin film bcc structure. The space group for bcc in the bulk is <em>Im</em>-3<em>m</em>. We are imposing a wall that is parallel to the x-y plane, so the allowed symmetry operations for our thin film can only have (z -&gt; z) or (z -&gt; -z) transformations of the z coordinate (and the latter is only allowed for chemically identical walls). On <a href="http://img.chem.ucl.ac.uk/sgp/large/229az1.htm">this page</a> we can see the 96 symmetry operations for the <em>Im</em>-3<em>m</em> space group, and only 16 of them are allowed for the system with the wall present.</p>
 <p >We then search for a space group with only these 16 symmetry operations. It will be in the tetragonal crystal system, because that is the shape of the unit cell that we expect for the thin film bcc structure. After searching through the tetragonal space groups, we find that <a href="http://img.chem.ucl.ac.uk/sgp/large/123az1.htm"><em>P</em>4/<em>mmm</em></a> is the space group we are looking for.</p>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md15"></a>
 Relationship Between Unit Cell and Space Group</h2>
 <p >An important detail to note is the difference between the space group and the unit cell. The unit cell shape only defines the lattice vectors along which the system has translational symmetry. By contrast, the space group defines all of the other allowed symmetry operations in the system, some of which are only allowed for unit cells of a certain shape. For example, a cubic space group (the highest possible symmetry) represents a set of symmetry operations that can only be applied to a cubic unit cell. However, this does not mean that a cubic <em>unit cell</em> must have cubic <em>symmetry</em>&mdash;it can also have the symmetry of any of the space groups associated with crystal systems of lower symmetry (<em>e.g.</em>, tetragonal). In the context of PSCF, this means that you can choose a unit cell and a space group that belong to different crystal systems, as long as the symmetry operations of that space group are all applicable to that unit cell. For example, a tetragonal unit cell could be used with a monoclinic space group. As another example, the triclinic space group <code>P_1</code>, which has no symmetry operations other than the identity, can be used alongside all possible choices of unit cell.</p>
 <p >In the thin-film bcc example discussed above, it would be fine to declare a cubic unit cell with the <em>P</em>4/<em>mmm</em> space group; this would be used to simulate a bcc structure that is slightly less than 1 unit cell thick (because of the space occupied by the walls). However, to model a film with different thickness, a tetragonal unit cell is required, which keeps the <b>a</b> and <b>b</b> lattice basis vectors the same length but allows <b>c</b> to vary. An orthorhombic unit cell, however, would be incompatible with the <em>P</em>4/<em>mmm</em> space group; <em>P</em>4/<em>mmm</em> requires that <b>a</b> and <b>b</b> are the same length.</p>
 <p >This brings up a final important consideration when setting up a PSCF system: the space group contains inherent choices of which lattice parameters are allowed to vary independently and which are not, which should be considered when choosing <code>normalVecId</code>. Tetragonal unit cells must have |<b>a</b>|=|<b>b</b>|, so the natural choice of <code>normalVecId</code> is 2, so that the lattice basis vector that is perpendicular to the film (<b>c</b>) is allowed to vary independently. In fact, the space group <em>P</em>4/<em>mmm</em> is not compatible with a <code>normalVecId</code> value of 0 or 1.</p>
 <p >In 3D systems, it is recommended to choose 2 for <code>normalVecId</code>, except in the case of a monoclinic unit cell, which is more compatible with a <code>normalVecId</code> value of 1. This is because &beta; is the only angle allowed to vary in a monoclinic unit cell, but a choice of 0 or 2 for <code>normalVecId</code> would force &beta; to be 90&deg; and thus force the unit cell to be stuck in an orthorhombic shape.</p>
-<h2><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md16"></a>
 Initial Guess</h2>
 <p >We intend to develop a tool to generate an initial guess for thin film geometries using the form factor method and the level set method (see Arora, et al.* (2016), <em>Macromolecules</em>, 49, 4675) for arbitrary particle and network phases. However, in the meantime, the recommended technique for generating an initial guess is to first converge the desired morphology as a bulk calculation, and generate a converged solution in rgrid format. Then, create a new rgrid with the desired mesh size/shape by duplicating the existing data periodically along any of the lattice basis vectors. For our bcc example above, we could take a 32x32x32 bcc solution in rgrid format, duplicate the data along the <em>z</em> direction to generate a 32x32x64 mesh of bcc data, and then add 4 more layers of data points in the <em>z</em> direction (2 on top and 2 on bottom) to represent the interior of the walls, all of which should have zero concentration for all species (as an initial guess). This leaves us with a 32x32x68 initial guess in rgrid format for the bcc thin film, which can subsequently be converted into an initial guess for the omega field in symmetry-adapted basis format by using the RGRID_TO_BASIS and GUESS_W_FROM_C commands in the command file.</p>
-<h2><a class="anchor" id="autotoc_md13"></a>
+<h2><a class="anchor" id="autotoc_md17"></a>
 Rules for Determining Allowed Space Groups</h2>
 <p >Here we present a comprehensive list of the rules determining permitted/forbidden choices of unit cell and space group in a thin film system, which have been alluded to in the above discussion.</p>
 <p >The systems that are compatible with the thin film constraint must obey the following rules:</p><ul>
@@ -229,7 +229,7 @@ Rules for Determining Allowed Space Groups</h2>
 <li>Inversion centers and rotoinversions are only permitted if the walls are chemically identical.</li>
 <li>The only allowed space groups in the trigonal crystal system are those with a hexagonal Bravais lattice (space groups starting with "P"). Trigonal space groups with a rhombohedral Bravais lattice (starting with "R") do not have any lattice vector that is normal to the other two. Although one can represent a rhombohedral Bravais lattice in a non-primitive hexagonal unit cell, this results in two Bravais lattice sites in the middle of the unit cell, which is not allowed. As such, neither representation of such a unit cell is compatible with thin film constraints. The distinction between crystal system, Bravais lattice, and unit cell can be confusing for the trigonal crystal system, so the reader is directed to the very helpful summary at <a href="https://en.wikipedia.org/wiki/Hexagonal_crystal_family">https://en.wikipedia.org/wiki/Hexagonal_crystal_family</a> for more details.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md14"></a>
+<h2><a class="anchor" id="autotoc_md18"></a>
 List of Allowed Space Groups</h2>
 <p >A comprehensive list of allowed space groups is given below. The entries that are listed in bold are those that are allowed for chemically dissimilar walls; all other entries are only allowed for chemically identical walls. Note that, in 3D, every bolded space group corresponds to a 2D plane group symmetry; there are exactly 17 space group symmetries for chemically dissimilar walls in 3D, just as there are 17 plane group symmetries for 2D unit cells.</p>
 <p >In constructing this list, we assumed that normalVecId is set to 2 for orthorhombic, tetragonal, trigonal, and hexagonal space groups. For other choices of normalVecId, the allowed space groups will likely differ.</p>
@@ -351,12 +351,12 @@ List of Allowed Space Groups</h2>
 </li>
 </ul>
 <p ><br  />
- <a class="el" href="user_groups_page.html">Space Groups</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_page.html">User Guide</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_theory_page.html">Appendix: Self-Consistent Field Theory</a> (Next) </p>
+ <a class="el" href="user_groups_page.html">Space Groups</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_page.html">User Guide</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_visualize_page.html">Visualization</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 6 2023 14:11:35 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Sep 20 2023 00:52:46 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

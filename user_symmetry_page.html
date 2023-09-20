@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -335,14 +335,14 @@ Symmetry Transformations on a Mesh</h1>
 <p >To apply arguments about space group symmetry to functions that are defined only on the nodes of a mesh, it is thus necessary to require that we consider a mesh that is invariant under the space group of interest. In practice, this requirement imposes two types constraints on the users choice of values for the number of mesh points along each direction, or each Bravais lattice vector:</p>
 <p >The first type of constraint requires that, if there exist symmetry operations in the space group for which the point group operation maps one Bravais lattice basis vector onto another of equal magnitude, an equal number of mesh points must be used along the two associated directions. Operations that can impose this type of constraint include diagonal reflections in cubic or tetragonal 3D lattices and 3 or 4 fold rotations. This requirement implies, for example, that equal numbers of mesh points must be used along all orthogonal directions in a 3D cubic or 2D square lattice, along directions associated with different Bravais basis vectors of a 2D hexagonal lattice, or along the two directions that are related by symmetry in a 3D tetragonal lattice.</p>
 <p >A second type of constraint requires that the number of mesh points along each direction must be chosen so that the mesh is invariant under all translations associated with elements of the space group. For example, if a space group contains any symmetry operation for which the translation vector \( {\bf t} \) has a component associated with a particular direction that is equal to 1/4 when expressed in a Bravais basis, then the number of mesh points along that direction must be a multiple of 4.</p>
-<p >The algorithm used by PSCF to construct symmetry-adapted basis functions can fail if the user enters a set of mesh dimensions in the parameter file that do not satisfy the compatibility conditions described above.</p>
+<p >PSCF requires that the user enter mesh dimensions that yield a mesh that is invariant under the space group, in the sense described above. If this condition is not satisfied, the function that constructs symmetry-adapted basis functions will print an error message indicating the nature of the problem and then halt execution.</p>
 <p ><br  />
  <a class="el" href="user_fourier_page.html">Appendix: Periodic Functions and Fourier Series</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_page.html">User Guide</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_basis_page.html">Appendix: Symmetry-Adapted Bases</a> (Next) &#160; &#160; &#160; &#160; </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 6 2023 14:11:35 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Sep 20 2023 00:52:46 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

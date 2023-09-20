@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -64,7 +64,7 @@ Overview</h1>
 <p >In order to compile all of the CPU programs in the PSCF package, the system on which the code is compiled and run must have:</p><ul>
 <li>a git version control client</li>
 <li>a C++ compiler</li>
-<li>a python interpreter</li>
+<li>a python interpreter, version 3 or greater</li>
 <li>the GNU Scientific Library (GSL) (header and library)</li>
 <li>the FFTW fast Fourier transform library (header and library)</li>
 </ul>
@@ -95,18 +95,19 @@ Git client</h1>
 <p >One can check whether a git client is already installed by entering </p><div class="fragment"><div class="line">git --version</div>
 </div><!-- fragment --><p> from the unix command line. If git is installed and functional, this should return a git version number, such as "git version 2.30.1".</p>
 <p >One can also perform a simpler check that the shell can find an exectuable named "git" by entering the command </p><div class="fragment"><div class="line">which git</div>
-</div><!-- fragment --><p> If the git executable is found, this should return a valid path, such as "/usr/bin/git". If this command does not return a valid path, you probably need to install git before proceeding.</p>
+</div><!-- fragment --><p> If the git executable is found, this should return a valid path, such as /usr/bin/git . If this command does not return a valid path, you probably need to install git before proceeding.</p>
 <p >Instructions for installing git on different platforms are given in the documentation on the <a href="http://git-scm.com">git web page</a>, and in chapter 1.5 of the <a href="https://git-scm.com/book/en/v2">Pro Git book </a> by Scott Chacon, which is available to be read for free online. If you are using linux, and git is not already installed, you should use the preferred package manager on your linux distribution to install a git client. If you are using Mac OS X, a git client should be installed as a component of the XCode Command Line Tools package, which is needed for many other purposes.</p>
 <h1><a class="anchor" id="install_require_python"></a>
 Python</h1>
-<p >Similarly, one can check if a python interpreter is accessible by checking if the command </p><div class="fragment"><div class="line">which python</div>
-</div><!-- fragment --><p> returns a non-empty path. A python interpreter should be available from the command line in any common linux distribution (e.g., Fedora or Ubuntu) or in Mac OS X after installation of the command line tools package.</p>
+<p >Similarly, one can check if a python 3 interpreter is accessible by issuing the command </p><div class="fragment"><div class="line">python3 --version</div>
+</div><!-- fragment --><p> and confirming that the command works, and returns a version number 3.0 or greater. Alternatively, one can issue the command </p><div class="fragment"><div class="line">which python</div>
+</div><!-- fragment --><p> and confirm that it returns a non-empty path such as /user/bin/python3. We recommend using of the command "python3" rather than "python" to make sure that you access a python 3 interpreter on any system in which python 2.* interpreter may still also are installed. A python 3 interpreter should be available from the command line in any common linux distribution (e.g., Fedora or Ubuntu), and should be available in Mac OS X after installation of the command line tools package.</p>
 <h1><a class="anchor" id="install_require_compiler_cpp"></a>
 C++ compiler</h1>
-<p >By default, the PSCF build system invokes a C++ compiler using the compiler commnd name "g++". On linux systems, this command normally invokes the gnu compiler collection (GCC) C++ compiler. On a MacIntosh running Mac OS X that is set up for C++ developent (see above), the "g++" command is normally a link to the Clang compiler, which is the default compiler for C++ development on Mac OS X. The Clang compiler accepts almost all the same command line options as the gnu compiler, and thus functions as a drop-in replacement for the gnu C++ compiler.</p>
-<p >It is possible to configure the build system during the initial setup process so as to instead use a different C++ compiler. When the GCC or Clang compiler is not used for compilation, however, the PSCF build system will still invoke the "g++" command with appropriate options to analyse dependencies among source files. The PSCF makefile system thus always requires that the "g++" command be available on the build system.</p>
+<p >By default, the PSCF build system invokes a C++ compiler using the compiler commnd name "g++". On linux systems, this command normally invokes the gnu compiler collection (GCC) C++ compiler. On a MacIntosh running Mac OS X that is set up for C++ developent (see above), the "g++" command is normally a link to the Clang compiler, which is the default compiler for C++ development on Mac OS X. The Clang compiler accepts almost all the same command line options as the gnu compiler, and so functions as a compatible replacement for the gnu C++ compiler.</p>
+<p >It is possible to configure the build system during the initial setup process so as to instead use a different C++ compiler, as discussed <a class="el" href="install_setup_page.html">here</a>. Even when a different compiler command is used to compile source code, however, the PSCF build system will still invoke the "g++" command with appropriate options to analyse dependencies among source files. The PSCF makefile system thus always requires that the "g++" command be available on the build system.</p>
 <p >One can check if the command "g++" exists by entering </p><div class="fragment"><div class="line">which g++</div>
-</div><!-- fragment --><p> from a terminal command line. If the "which" utility returns a valid nonempty path, such as /usr/bin/g++, then the command "g++" exists.</p>
+</div><!-- fragment --><p> from a terminal command line. If the "which" utility returns a valid nonempty path, such as /usr/bin/g++, then the command g++ exists and can be located by the operating system.</p>
 <p >The name of the command used to invoke the compiler when compiling C++ files and the choices of options passed to the compiler can be changed by modifying a compiler setup file that is read during initial setup of the build system. The setup process is described in more detail <a class="el" href="install_setup_page.html">here</a>.</p>
 <h1><a class="anchor" id="install_require_compiler_cuda"></a>
 CUDA compiler</h1>
@@ -116,14 +117,15 @@ Packages: Ubuntu and other Debian-based Linux Systems</h1>
 <p >The CPU-based programs in PSCF require access to development versions of the Gnu Scientific Library (GSL) and FFTW packages. These may be installed on Ubuntu or other Debian based linux distribution later on version 16.0 or later using the commands: </p><div class="fragment"><div class="line">sudo apt install libfftw3-dev  </div>
 <div class="line">sudo apt install libgsl-dev  </div>
 </div><!-- fragment --><p> To also install the doxygen documentation generator utility, use the command </p><div class="fragment"><div class="line">sudo apt install doxygen</div>
-</div><!-- fragment --><p> On older Debian-based systems, or as a lower level alternative, one may use the "apt-get" command rather than "apt" with the same arguments.</p>
+</div><!-- fragment --><p> Installing doxygen is not necessary to compile PSCF, but allows you to generate a local copy of this web documentation.</p>
+<p >On older Debian-based systems, or as a lower level alternative, one may use the "apt-get" command rather than "apt" with the same arguments.</p>
 <h1><a class="anchor" id="install_require_mac"></a>
 Packages: Mac OS X</h1>
 <p >We recommend using a package manager to install GSL and FFTW on Mac OS X. If you are not already using a package manager for managing unix programs on Max OS X, we recommend that you install the <a href="https://brew.sh/">Homebrew </a> package manager, following instructions given on the Homebrew web site. Possible alternatives include the older MacPorts or Fink package managers, or compiling the required packages directly from source files obtained from package home pages.</p>
 <p >Using Homebrew, you may install the GSL and FFTW packages with the commands </p><div class="fragment"><div class="line">brew install gsl</div>
 <div class="line">brew install fftw</div>
 </div><!-- fragment --><p> To also install doxygen, issue the command </p><div class="fragment"><div class="line">brew install doxygen</div>
-</div><!-- fragment --><p >Mac users should be aware that homebrew installs files in different locations on newer Macs that use Apple silicon than the file locations used by homebrew on older Macs that use Intel cpus:</p>
+</div><!-- fragment --><p >Mac users should be aware that homebrew installs files in different locations on newer Macs that use Apple silicon (e.g., an M1 or M2 chip) than the file locations used by homebrew on older Macs that use Intel cpus:</p>
 <p >On Macs with Intel cpus, homebrew installed links to required header and library files in subdirectories of the /usr/local directory. Because /usr/local is one of the standard directories in which a unix shell normally looks for such files, PSCF can be installed on such machines using a default configuration for the makefile system that is the same as the default used on linux machines.</p>
 <p >On Macs with Apple silicon, homebrew instead installs all files in /opt/homebrew. This requires users to add paths to this directory and/or some of its subdirectories to the search paths used by the compiler to find header and library files. A compiler configuration file that modifies these search paths is provided as part of PSCF, as discussed <a class="el" href="install_setup_page.html#install_setup_homebrewm1_sec">here</a>.</p>
 <h1><a class="anchor" id="install_require_module"></a>
@@ -142,7 +144,7 @@ Linux Software Modules</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 6 2023 14:11:35 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Sep 20 2023 00:52:46 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

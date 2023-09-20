@@ -26,7 +26,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.0.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -137,7 +137,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a351baa57e69144014d4536ab26341baa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute free energy density and pressure for current fields.  <a href="classPscf_1_1Fd1d_1_1System.html#a351baa57e69144014d4536ab26341baa">More...</a><br /></td></tr>
 <tr class="separator:a351baa57e69144014d4536ab26341baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84d7503deeb2f27edeeb3b0eed0dc01e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Fd1d_1_1System.html#a84d7503deeb2f27edeeb3b0eed0dc01e">fHelmholtz</a> () const</td></tr>
-<tr class="memdesc:a84d7503deeb2f27edeeb3b0eed0dc01e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get precomputed Helmoltz free energy per monomer / kT.  <a href="classPscf_1_1Fd1d_1_1System.html#a84d7503deeb2f27edeeb3b0eed0dc01e">More...</a><br /></td></tr>
+<tr class="memdesc:a84d7503deeb2f27edeeb3b0eed0dc01e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get precomputed Helmholtz free energy per monomer / kT.  <a href="classPscf_1_1Fd1d_1_1System.html#a84d7503deeb2f27edeeb3b0eed0dc01e">More...</a><br /></td></tr>
 <tr class="separator:a84d7503deeb2f27edeeb3b0eed0dc01e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3d291fb0d3db579a79e49903822e0ec"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Fd1d_1_1System.html#ad3d291fb0d3db579a79e49903822e0ec">pressure</a> () const</td></tr>
 <tr class="memdesc:ad3d291fb0d3db579a79e49903822e0ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get precomputed pressure x monomer volume kT.  <a href="classPscf_1_1Fd1d_1_1System.html#ad3d291fb0d3db579a79e49903822e0ec">More...</a><br /></td></tr>
@@ -159,6 +159,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9bd5fb02a72e4d270d84d732b167e8ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Fd1d_1_1System.html#a9bd5fb02a72e4d270d84d732b167e8ce">writeBlockC</a> (std::string const &amp;filename)</td></tr>
 <tr class="memdesc:a9bd5fb02a72e4d270d84d732b167e8ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write c-fields for all blocks and solvents in r-grid format.  <a href="classPscf_1_1Fd1d_1_1System.html#a9bd5fb02a72e4d270d84d732b167e8ce">More...</a><br /></td></tr>
 <tr class="separator:a9bd5fb02a72e4d270d84d732b167e8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5695063bacd0eb70f73b8c0295dd1a74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Fd1d_1_1System.html#a5695063bacd0eb70f73b8c0295dd1a74">writeQSlice</a> (std::string const &amp;filename, int polymerId, int blockId, int directionId, int segmentId) const</td></tr>
+<tr class="memdesc:a5695063bacd0eb70f73b8c0295dd1a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write slice of a propagator at fixed s in r-grid format.  <a href="classPscf_1_1Fd1d_1_1System.html#a5695063bacd0eb70f73b8c0295dd1a74">More...</a><br /></td></tr>
+<tr class="separator:a5695063bacd0eb70f73b8c0295dd1a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefee752db56a5701116e50181e9b3f8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Fd1d_1_1System.html#aefee752db56a5701116e50181e9b3f8f">writeQTail</a> (std::string const &amp;filename, int polymerId, int blockId, int directionId) const</td></tr>
+<tr class="memdesc:aefee752db56a5701116e50181e9b3f8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the final slice of a propagator in r-grid format.  <a href="classPscf_1_1Fd1d_1_1System.html#aefee752db56a5701116e50181e9b3f8f">More...</a><br /></td></tr>
+<tr class="separator:aefee752db56a5701116e50181e9b3f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae571f8027f15c85253f2b4bbf8dd259d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Fd1d_1_1System.html#ae571f8027f15c85253f2b4bbf8dd259d">writeQ</a> (std::string const &amp;filename, int polymerId, int blockId, int directionId) const</td></tr>
+<tr class="memdesc:ae571f8027f15c85253f2b4bbf8dd259d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write one propagator for one block, in r-grid format.  <a href="classPscf_1_1Fd1d_1_1System.html#ae571f8027f15c85253f2b4bbf8dd259d">More...</a><br /></td></tr>
+<tr class="separator:ae571f8027f15c85253f2b4bbf8dd259d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ee54b07bc11ac4484cc46a2c2d66f0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Fd1d_1_1System.html#a9ee54b07bc11ac4484cc46a2c2d66f0f">writeQAll</a> (std::string const &amp;basename)</td></tr>
+<tr class="memdesc:a9ee54b07bc11ac4484cc46a2c2d66f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write all propagators of all blocks, each to a separate file.  <a href="classPscf_1_1Fd1d_1_1System.html#a9ee54b07bc11ac4484cc46a2c2d66f0f">More...</a><br /></td></tr>
+<tr class="separator:a9ee54b07bc11ac4484cc46a2c2d66f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Field Accessors</div></td></tr>
 <tr class="memitem:a4a4aba88cb100428a0727146e759ea02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Fd1d_1_1System.html#af89c031c090a814a250cb72eb9f79daa">WField</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Fd1d_1_1System.html#a4a4aba88cb100428a0727146e759ea02">wFields</a> ()</td></tr>
 <tr class="memdesc:a4a4aba88cb100428a0727146e759ea02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get array of all chemical potential fields.  <a href="classPscf_1_1Fd1d_1_1System.html#a4a4aba88cb100428a0727146e759ea02">More...</a><br /></td></tr>
@@ -549,9 +561,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line">   system.<a class="code hl_function" href="classPscf_1_1Fd1d_1_1System.html#ad5754848ae43d226eff0d67f4f1dc8cb">readCommands</a>();</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassPscf_1_1Fd1d_1_1System_html"><div class="ttname"><a href="classPscf_1_1Fd1d_1_1System.html">Pscf::Fd1d::System</a></div><div class="ttdoc">Main class in SCFT simulation of one system.</div><div class="ttdef"><b>Definition:</b> <a href="fd1d_2System_8h_source.html#l00062">fd1d/System.h:63</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Fd1d_1_1System_html_a73aeec8cbede82d62b85c7c9d7dfa0f4"><div class="ttname"><a href="classPscf_1_1Fd1d_1_1System.html#a73aeec8cbede82d62b85c7c9d7dfa0f4">Pscf::Fd1d::System::readParam</a></div><div class="ttdeci">virtual void readParam(std::istream &amp;in)</div><div class="ttdoc">Read input parameters (with opening and closing lines).</div><div class="ttdef"><b>Definition:</b> <a href="fd1d_2System_8cpp_source.html#l00213">fd1d/System.cpp:213</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Fd1d_1_1System_html_a9b34e35bc6e731c4554b5cd6afb612fa"><div class="ttname"><a href="classPscf_1_1Fd1d_1_1System.html#a9b34e35bc6e731c4554b5cd6afb612fa">Pscf::Fd1d::System::setOptions</a></div><div class="ttdeci">void setOptions(int argc, char **argv)</div><div class="ttdoc">Process command line options.</div><div class="ttdef"><b>Definition:</b> <a href="fd1d_2System_8cpp_source.html#l00096">fd1d/System.cpp:96</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Fd1d_1_1System_html_ad5754848ae43d226eff0d67f4f1dc8cb"><div class="ttname"><a href="classPscf_1_1Fd1d_1_1System.html#ad5754848ae43d226eff0d67f4f1dc8cb">Pscf::Fd1d::System::readCommands</a></div><div class="ttdeci">void readCommands(std::istream &amp;in)</div><div class="ttdoc">Read command script.</div><div class="ttdef"><b>Definition:</b> <a href="fd1d_2System_8cpp_source.html#l00266">fd1d/System.cpp:266</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Fd1d_1_1System_html_a73aeec8cbede82d62b85c7c9d7dfa0f4"><div class="ttname"><a href="classPscf_1_1Fd1d_1_1System.html#a73aeec8cbede82d62b85c7c9d7dfa0f4">Pscf::Fd1d::System::readParam</a></div><div class="ttdeci">virtual void readParam(std::istream &amp;in)</div><div class="ttdoc">Read input parameters (with opening and closing lines).</div><div class="ttdef"><b>Definition:</b> <a href="fd1d_2System_8cpp_source.html#l00216">fd1d/System.cpp:216</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Fd1d_1_1System_html_a9b34e35bc6e731c4554b5cd6afb612fa"><div class="ttname"><a href="classPscf_1_1Fd1d_1_1System.html#a9b34e35bc6e731c4554b5cd6afb612fa">Pscf::Fd1d::System::setOptions</a></div><div class="ttdeci">void setOptions(int argc, char **argv)</div><div class="ttdoc">Process command line options.</div><div class="ttdef"><b>Definition:</b> <a href="fd1d_2System_8cpp_source.html#l00099">fd1d/System.cpp:99</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Fd1d_1_1System_html_ad5754848ae43d226eff0d67f4f1dc8cb"><div class="ttname"><a href="classPscf_1_1Fd1d_1_1System.html#ad5754848ae43d226eff0d67f4f1dc8cb">Pscf::Fd1d::System::readCommands</a></div><div class="ttdeci">void readCommands(std::istream &amp;in)</div><div class="ttdoc">Read command script.</div><div class="ttdef"><b>Definition:</b> <a href="fd1d_2System_8cpp_source.html#l00269">fd1d/System.cpp:269</a></div></div>
 </div><!-- fragment --><p> The actual main program is given in the file <a class="el" href="pscf__fd_8cpp_source.html">pscf_fd.cpp</a>.</p>
 <p ><a class="el" href="user_param_fd_page.html">Parameter File Format</a> </p>
 
@@ -629,7 +641,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00039">39</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00040">40</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00044">Pscf::Fd1d::FieldIo::associate()</a>, <a class="el" href="BracketPolicy_8cpp_source.html#l00028">Util::BracketPolicy::set()</a>, and <a class="el" href="ParamComposite_8cpp_source.html#l00377">Util::ParamComposite::setClassName()</a>.</p>
 
@@ -652,7 +664,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00074">74</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00077">77</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
 
 </div>
 </div>
@@ -685,9 +697,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Process command line options. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00096">96</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00099">99</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00520">fileMaster()</a>, <a class="el" href="FileMaster_8cpp_source.html#l00112">Util::FileMaster::setCommandFileName()</a>, <a class="el" href="ParamComponent_8cpp_source.html#l00062">Util::ParamComponent::setEcho()</a>, <a class="el" href="FileMaster_8cpp_source.html#l00094">Util::FileMaster::setInputPrefix()</a>, <a class="el" href="FileMaster_8cpp_source.html#l00100">Util::FileMaster::setOutputPrefix()</a>, <a class="el" href="FileMaster_8cpp_source.html#l00106">Util::FileMaster::setParamFileName()</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00589">fileMaster()</a>, <a class="el" href="FileMaster_8cpp_source.html#l00112">Util::FileMaster::setCommandFileName()</a>, <a class="el" href="ParamComponent_8cpp_source.html#l00062">Util::ParamComponent::setEcho()</a>, <a class="el" href="FileMaster_8cpp_source.html#l00094">Util::FileMaster::setInputPrefix()</a>, <a class="el" href="FileMaster_8cpp_source.html#l00100">Util::FileMaster::setOutputPrefix()</a>, <a class="el" href="FileMaster_8cpp_source.html#l00106">Util::FileMaster::setParamFileName()</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
 </div>
 </div>
@@ -725,9 +737,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classUtil_1_1ParamComposite.html#a6fc094b057fd9a21641b089f6f063b39">Util::ParamComposite</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00213">213</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00216">216</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ParamComposite_8h_source.html#l01195">Util::ParamComposite::className()</a>, <a class="el" href="ParamComposite_8cpp_source.html#l00316">Util::ParamComposite::readBegin()</a>, <a class="el" href="ParamComposite_8cpp_source.html#l00344">Util::ParamComposite::readEnd()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00168">readParameters()</a>.</p>
+<p class="reference">References <a class="el" href="ParamComposite_8h_source.html#l01195">Util::ParamComposite::className()</a>, <a class="el" href="ParamComposite_8cpp_source.html#l00316">Util::ParamComposite::readBegin()</a>, <a class="el" href="ParamComposite_8cpp_source.html#l00344">Util::ParamComposite::readEnd()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00171">readParameters()</a>.</p>
 
 </div>
 </div>
@@ -748,11 +760,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Read input parameters from default param file. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00223">223</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00226">226</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00520">fileMaster()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00223">readParam()</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00589">fileMaster()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00226">readParam()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00223">readParam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00226">readParam()</a>.</p>
 
 </div>
 </div>
@@ -790,11 +802,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classUtil_1_1ParamComposite.html#a172a3a656b5829c8d758424ad09a22a6">Util::ParamComposite</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00168">168</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00171">171</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ParamComposite_8h_source.html#l01195">Util::ParamComposite::className()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00498">domain()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00480">interaction()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00468">mixture()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00190">Pscf::MixtureTmpl&lt; TP, TS &gt;::nMonomer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00194">Pscf::MixtureTmpl&lt; TP, TS &gt;::nPolymer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00198">Pscf::MixtureTmpl&lt; TP, TS &gt;::nSolvent()</a>, <a class="el" href="Factory_8h_source.html#l00247">Util::Factory&lt; Data &gt;::readObject()</a>, <a class="el" href="Factory_8h_source.html#l00378">Util::Factory&lt; Data &gt;::readObjectOptional()</a>, <a class="el" href="ParamComposite_8cpp_source.html#l00260">Util::ParamComposite::readParamComposite()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00071">Pscf::Homogeneous::Mixture::setNMolecule()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00080">Pscf::Homogeneous::Mixture::setNMonomer()</a>, <a class="el" href="Interaction_8cpp_source.html#l00031">Pscf::Interaction::setNMonomer()</a>, <a class="el" href="SystemAccess_8cpp_source.html#l00038">Pscf::Fd1d::SystemAccess::setSystem()</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="ParamComposite_8h_source.html#l01195">Util::ParamComposite::className()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00567">domain()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00549">interaction()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00537">mixture()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00190">Pscf::MixtureTmpl&lt; TP, TS &gt;::nMonomer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00194">Pscf::MixtureTmpl&lt; TP, TS &gt;::nPolymer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00198">Pscf::MixtureTmpl&lt; TP, TS &gt;::nSolvent()</a>, <a class="el" href="Factory_8h_source.html#l00247">Util::Factory&lt; Data &gt;::readObject()</a>, <a class="el" href="Factory_8h_source.html#l00378">Util::Factory&lt; Data &gt;::readObjectOptional()</a>, <a class="el" href="ParamComposite_8cpp_source.html#l00260">Util::ParamComposite::readParamComposite()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00071">Pscf::Homogeneous::Mixture::setNMolecule()</a>, <a class="el" href="pscf_2homogeneous_2Mixture_8cpp_source.html#l00080">Pscf::Homogeneous::Mixture::setNMonomer()</a>, <a class="el" href="Interaction_8cpp_source.html#l00031">Pscf::Interaction::setNMonomer()</a>, <a class="el" href="SystemAccess_8cpp_source.html#l00038">Pscf::Fd1d::SystemAccess::setSystem()</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00213">readParam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00216">readParam()</a>.</p>
 
 </div>
 </div>
@@ -822,9 +834,9 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00266">266</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00269">269</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00541">cFields()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00414">compute()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00054">Pscf::Fd1d::HomogeneousComparison::compute()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00312">Pscf::Fd1d::FieldIo::extend()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00520">fileMaster()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00427">iterate()</a>, <a class="el" href="FileMaster_8cpp_source.html#l00290">Util::FileMaster::openOutputFile()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00117">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00060">Pscf::Fd1d::FieldIo::readFields()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00239">Pscf::Fd1d::FieldIo::remesh()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00450">sweep()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, <a class="el" href="fd1d_2System_8h_source.html#l00527">wFields()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00139">Pscf::Fd1d::FieldIo::writeBlockCFields()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00102">Pscf::Fd1d::FieldIo::writeFields()</a>, <a class="el" href="ParamComposite_8cpp_source.html#l00119">Util::ParamComposite::writeParam()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00637">writeThermo()</a>, and <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00186">Pscf::Fd1d::FieldIo::writeVertexQ()</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00610">cFields()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00457">compute()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00054">Pscf::Fd1d::HomogeneousComparison::compute()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00338">Pscf::Fd1d::FieldIo::extend()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00589">fileMaster()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00470">iterate()</a>, <a class="el" href="FileMaster_8cpp_source.html#l00290">Util::FileMaster::openOutputFile()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00117">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00060">Pscf::Fd1d::FieldIo::readFields()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00265">Pscf::Fd1d::FieldIo::remesh()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00493">sweep()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, <a class="el" href="fd1d_2System_8h_source.html#l00596">wFields()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00165">Pscf::Fd1d::FieldIo::writeBlockCFields()</a>, <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00127">Pscf::Fd1d::FieldIo::writeFields()</a>, <a class="el" href="ParamComposite_8cpp_source.html#l00119">Util::ParamComposite::writeParam()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00801">writeQ()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00839">writeQAll()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00761">writeQSlice()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00782">writeQTail()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00682">writeThermo()</a>, and <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00212">Pscf::Fd1d::FieldIo::writeVertexQ()</a>.</p>
 
 </div>
 </div>
@@ -845,11 +857,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Read commands from default command file. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00392">392</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00435">435</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00520">fileMaster()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00392">readCommands()</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00589">fileMaster()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00435">readCommands()</a>, and <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00392">readCommands()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00435">readCommands()</a>.</p>
 
 </div>
 </div>
@@ -871,11 +883,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Solve the modified diffusion equation once, without iteration. </p>
 <p >This function calls the <a class="el" href="classPscf_1_1Fd1d_1_1Mixture.html#a976bdf2fd5bd809d4b934cc7813f9d3d" title="Compute concentrations.">Mixture::compute()</a> function to solve the statistical mechanics problem for a non-interacting system subjected to the currrent chemical potential fields (wFields). This requires solution of the modified diffusion equation for all polymers, computation of Boltzmann weights for all solvents, computation of molecular partition functions for all species, computation of concentration fields for blocks and solvents, and computation of overall concentrations for all monomer types. This function does not compute the canonical (Helmholtz) free energy or grand-canonical free energy (i.e., pressure). Upon return, the flag hasCFields is set true. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00414">414</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00457">457</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2solvers_2Mixture_8cpp_source.html#l00085">Pscf::Fd1d::Mixture::compute()</a>, and <a class="el" href="fd1d_2System_8h_source.html#l00527">wFields()</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2solvers_2Mixture_8cpp_source.html#l00085">Pscf::Fd1d::Mixture::compute()</a>, and <a class="el" href="fd1d_2System_8h_source.html#l00596">wFields()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00266">readCommands()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00269">readCommands()</a>.</p>
 
 </div>
 </div>
@@ -905,11 +917,11 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>returns 0 for successful convergence, 1 for failure. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00427">427</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00470">470</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2System_8cpp_source.html#l00465">computeFreeEnergy()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00511">iterator()</a>, <a class="el" href="classPscf_1_1Fd1d_1_1Iterator.html#af0c2ffea40a444b6bd1e7ce3dbc3fa49">Pscf::Fd1d::Iterator::solve()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00637">writeThermo()</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2System_8cpp_source.html#l00508">computeFreeEnergy()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00580">iterator()</a>, <a class="el" href="classPscf_1_1Fd1d_1_1Iterator.html#af0c2ffea40a444b6bd1e7ce3dbc3fa49">Pscf::Fd1d::Iterator::solve()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00682">writeThermo()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00266">readCommands()</a>, and <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00148">Pscf::Fd1d::Sweep::solve()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00269">readCommands()</a>, and <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00148">Pscf::Fd1d::Sweep::solve()</a>.</p>
 
 </div>
 </div>
@@ -931,11 +943,11 @@ Additional Inherited Members</h2></td></tr>
 <p><a class="el" href="classPscf_1_1Fd1d_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a> in parameter space, solving an SCF problem at each point. </p>
 <p >This function uses a <a class="el" href="classPscf_1_1Fd1d_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a> object that was initialized in the parameter file to solve the SCF problem at a sequence of points along a line in parameter space. The nature of this sequence of points is determined by implementation of a subclass of <a class="el" href="classPscf_1_1Fd1d_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a> and the parameters passed to the sweep object in the parameter file. The <a class="el" href="classPscf_1_1Fd1d_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> that is initialized in the parameter file is called at each state point. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00450">450</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00493">493</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, <a class="el" href="SweepTmpl_8tpp_source.html#l00062">Pscf::SweepTmpl&lt; State &gt;::sweep()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00266">readCommands()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="output_8py_source.html#l00701">pscfpp.output.Sweep::__getitem__()</a>, <a class="el" href="output_8py_source.html#l00492">pscfpp.output.Sweep::__init__()</a>, <a class="el" href="output_8py_source.html#l00707">pscfpp.output.Sweep::__len__()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00269">readCommands()</a>, <a class="el" href="output_8py_source.html#l00573">pscfpp.output.Sweep::summary()</a>, and <a class="el" href="output_8py_source.html#l00627">pscfpp.output.Sweep::summaryString()</a>.</p>
 
 </div>
 </div>
@@ -957,11 +969,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Compute free energy density and pressure for current fields. </p>
 <p >This function should be called after a successful call of <a class="el" href="classPscf_1_1Fd1d_1_1System.html#a192bcd64e81e42019ef8bc5c4b8b4d2f" title="Get the Iterator by reference.">iterator()</a>.solve(). Resulting values are returned by the freeEnergy() and <a class="el" href="classPscf_1_1Fd1d_1_1System.html#ad3d291fb0d3db579a79e49903822e0ec" title="Get precomputed pressure x monomer volume kT.">pressure()</a> accessor functions. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00465">465</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00508">508</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00498">domain()</a>, <a class="el" href="Interaction_8cpp_source.html#l00092">Pscf::Interaction::fHelmholtz()</a>, <a class="el" href="fd1d_2domain_2Domain_8cpp_source.html#l00201">Pscf::Fd1d::Domain::innerProduct()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00480">interaction()</a>, <a class="el" href="DArray_8h_source.html#l00247">Util::DArray&lt; Data &gt;::isAllocated()</a>, <a class="el" href="PolymerTmpl_8h_source.html#l00255">Pscf::PolymerTmpl&lt; Block &gt;::length()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00468">mixture()</a>, <a class="el" href="Species_8h_source.html#l00096">Pscf::Species::mu()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00190">Pscf::MixtureTmpl&lt; TP, TS &gt;::nMonomer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00194">Pscf::MixtureTmpl&lt; TP, TS &gt;::nPolymer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00198">Pscf::MixtureTmpl&lt; TP, TS &gt;::nSolvent()</a>, <a class="el" href="fd1d_2domain_2Domain_8h_source.html#l00213">Pscf::Fd1d::Domain::nx()</a>, <a class="el" href="Species_8h_source.html#l00090">Pscf::Species::phi()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00220">Pscf::MixtureTmpl&lt; TP, TS &gt;::polymer()</a>, <a class="el" href="SolventDescriptor_8h_source.html#l00135">Pscf::SolventDescriptor::size()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00234">Pscf::MixtureTmpl&lt; TP, TS &gt;::solvent()</a>, and <a class="el" href="fd1d_2domain_2Domain_8cpp_source.html#l00119">Pscf::Fd1d::Domain::spatialAverage()</a>.</p>
+<p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00567">domain()</a>, <a class="el" href="Interaction_8cpp_source.html#l00092">Pscf::Interaction::fHelmholtz()</a>, <a class="el" href="fd1d_2domain_2Domain_8cpp_source.html#l00201">Pscf::Fd1d::Domain::innerProduct()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00549">interaction()</a>, <a class="el" href="DArray_8h_source.html#l00247">Util::DArray&lt; Data &gt;::isAllocated()</a>, <a class="el" href="PolymerTmpl_8h_source.html#l00255">Pscf::PolymerTmpl&lt; Block &gt;::length()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00537">mixture()</a>, <a class="el" href="Species_8h_source.html#l00096">Pscf::Species::mu()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00190">Pscf::MixtureTmpl&lt; TP, TS &gt;::nMonomer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00194">Pscf::MixtureTmpl&lt; TP, TS &gt;::nPolymer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00198">Pscf::MixtureTmpl&lt; TP, TS &gt;::nSolvent()</a>, <a class="el" href="fd1d_2domain_2Domain_8h_source.html#l00213">Pscf::Fd1d::Domain::nx()</a>, <a class="el" href="Species_8h_source.html#l00090">Pscf::Species::phi()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00220">Pscf::MixtureTmpl&lt; TP, TS &gt;::polymer()</a>, <a class="el" href="SolventDescriptor_8h_source.html#l00135">Pscf::SolventDescriptor::size()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00234">Pscf::MixtureTmpl&lt; TP, TS &gt;::solvent()</a>, and <a class="el" href="fd1d_2domain_2Domain_8cpp_source.html#l00119">Pscf::Fd1d::Domain::spatialAverage()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00427">iterate()</a>, <a class="el" href="BinaryRelaxIterator_8cpp_source.html#l00132">Pscf::Fd1d::BinaryRelaxIterator::solve()</a>, and <a class="el" href="NrIterator_8cpp_source.html#l00225">Pscf::Fd1d::NrIterator::solve()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00470">iterate()</a>, <a class="el" href="BinaryRelaxIterator_8cpp_source.html#l00132">Pscf::Fd1d::BinaryRelaxIterator::solve()</a>, and <a class="el" href="NrIterator_8cpp_source.html#l00225">Pscf::Fd1d::NrIterator::solve()</a>.</p>
 
 </div>
 </div>
@@ -988,12 +1000,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get precomputed Helmoltz free energy per monomer / kT. </p>
+<p>Get precomputed Helmholtz free energy per monomer / kT. </p>
 <p >The value retrieved by this function is computed by the <a class="el" href="classPscf_1_1Fd1d_1_1System.html#a351baa57e69144014d4536ab26341baa" title="Compute free energy density and pressure for current fields.">computeFreeEnergy()</a> function. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00553">553</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00622">622</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00117">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00215">Pscf::Fd1d::Sweep::outputSummary()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00637">writeThermo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="output_8py_source.html#l00148">pscfpp.output.Thermo::__init__()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00117">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00215">Pscf::Fd1d::Sweep::outputSummary()</a>, <a class="el" href="output_8py_source.html#l00171">pscfpp.output.Thermo::read()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00682">writeThermo()</a>.</p>
 
 </div>
 </div>
@@ -1023,9 +1035,9 @@ Additional Inherited Members</h2></td></tr>
 <p>Get precomputed pressure x monomer volume kT. </p>
 <p >The value retrieved by this function is computed by the <a class="el" href="classPscf_1_1Fd1d_1_1System.html#a351baa57e69144014d4536ab26341baa" title="Compute free energy density and pressure for current fields.">computeFreeEnergy()</a> function. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00559">559</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00628">628</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00117">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00215">Pscf::Fd1d::Sweep::outputSummary()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00637">writeThermo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="output_8py_source.html#l00148">pscfpp.output.Thermo::__init__()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00117">Pscf::Fd1d::HomogeneousComparison::output()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00215">Pscf::Fd1d::Sweep::outputSummary()</a>, <a class="el" href="output_8py_source.html#l00171">pscfpp.output.Thermo::read()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00682">writeThermo()</a>.</p>
 
 </div>
 </div>
@@ -1053,7 +1065,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00229">229</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00232">232</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ParamComposite_8cpp_source.html#l00119">Util::ParamComposite::writeParam()</a>.</p>
 
@@ -1084,11 +1096,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00637">637</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00682">682</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00553">fHelmholtz()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00468">mixture()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00194">Pscf::MixtureTmpl&lt; TP, TS &gt;::nPolymer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00198">Pscf::MixtureTmpl&lt; TP, TS &gt;::nSolvent()</a>, and <a class="el" href="fd1d_2System_8h_source.html#l00559">pressure()</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00622">fHelmholtz()</a>, <a class="el" href="fd1d_2System_8h_source.html#l00537">mixture()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00194">Pscf::MixtureTmpl&lt; TP, TS &gt;::nPolymer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00198">Pscf::MixtureTmpl&lt; TP, TS &gt;::nSolvent()</a>, and <a class="el" href="fd1d_2System_8h_source.html#l00628">pressure()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00427">iterate()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00186">Pscf::Fd1d::Sweep::outputSolution()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00266">readCommands()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00470">iterate()</a>, <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00186">Pscf::Fd1d::Sweep::outputSolution()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00269">readCommands()</a>.</p>
 
 </div>
 </div>
@@ -1116,9 +1128,9 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00685">685</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00733">733</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00527">wFields()</a>, and <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00102">Pscf::Fd1d::FieldIo::writeFields()</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00596">wFields()</a>, and <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00127">Pscf::Fd1d::FieldIo::writeFields()</a>.</p>
 
 </div>
 </div>
@@ -1146,9 +1158,9 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00694">694</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00742">742</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00541">cFields()</a>, and <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00102">Pscf::Fd1d::FieldIo::writeFields()</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2System_8h_source.html#l00610">cFields()</a>, and <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00127">Pscf::Fd1d::FieldIo::writeFields()</a>.</p>
 
 </div>
 </div>
@@ -1177,9 +1189,220 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00704">704</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00752">752</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00139">Pscf::Fd1d::FieldIo::writeBlockCFields()</a>.</p>
+<p class="reference">References <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00165">Pscf::Fd1d::FieldIo::writeBlockCFields()</a>.</p>
+
+</div>
+</div>
+<a id="a5695063bacd0eb70f73b8c0295dd1a74" name="a5695063bacd0eb70f73b8c0295dd1a74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5695063bacd0eb70f73b8c0295dd1a74">&#9670;&#160;</a></span>writeQSlice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pscf::Fd1d::System::writeQSlice </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>polymerId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blockId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>directionId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>segmentId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write slice of a propagator at fixed s in r-grid format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>name of output file </td></tr>
+    <tr><td class="paramname">polymerId</td><td>integer id of the polymer </td></tr>
+    <tr><td class="paramname">blockId</td><td>integer id of the block within the polymer </td></tr>
+    <tr><td class="paramname">directionId</td><td>integer id of the direction (0 or 1) </td></tr>
+    <tr><td class="paramname">segmentId</td><td>integer integration step index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00761">761</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="PolymerTmpl_8h_source.html#l00241">Pscf::PolymerTmpl&lt; Block &gt;::nBlock()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00194">Pscf::MixtureTmpl&lt; TP, TS &gt;::nPolymer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00220">Pscf::MixtureTmpl&lt; TP, TS &gt;::polymer()</a>, <a class="el" href="PolymerTmpl_8h_source.html#l00304">Pscf::PolymerTmpl&lt; Block &gt;::propagator()</a>, <a class="el" href="fd1d_2solvers_2Propagator_8h_source.html#l00209">Pscf::Fd1d::Propagator::q()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00102">Pscf::Fd1d::FieldIo::writeField()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00269">readCommands()</a>.</p>
+
+</div>
+</div>
+<a id="aefee752db56a5701116e50181e9b3f8f" name="aefee752db56a5701116e50181e9b3f8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefee752db56a5701116e50181e9b3f8f">&#9670;&#160;</a></span>writeQTail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pscf::Fd1d::System::writeQTail </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>polymerId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blockId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>directionId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write the final slice of a propagator in r-grid format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>name of output file </td></tr>
+    <tr><td class="paramname">polymerId</td><td>integer id of the polymer </td></tr>
+    <tr><td class="paramname">blockId</td><td>integer id of the block within the polymer </td></tr>
+    <tr><td class="paramname">directionId</td><td>integer id of the direction (0 or 1) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00782">782</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="PolymerTmpl_8h_source.html#l00241">Pscf::PolymerTmpl&lt; Block &gt;::nBlock()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00194">Pscf::MixtureTmpl&lt; TP, TS &gt;::nPolymer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00220">Pscf::MixtureTmpl&lt; TP, TS &gt;::polymer()</a>, <a class="el" href="PolymerTmpl_8h_source.html#l00304">Pscf::PolymerTmpl&lt; Block &gt;::propagator()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00102">Pscf::Fd1d::FieldIo::writeField()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00269">readCommands()</a>.</p>
+
+</div>
+</div>
+<a id="ae571f8027f15c85253f2b4bbf8dd259d" name="ae571f8027f15c85253f2b4bbf8dd259d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae571f8027f15c85253f2b4bbf8dd259d">&#9670;&#160;</a></span>writeQ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pscf::Fd1d::System::writeQ </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>polymerId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blockId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>directionId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write one propagator for one block, in r-grid format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>name of output file </td></tr>
+    <tr><td class="paramname">polymerId</td><td>integer id of the polymer </td></tr>
+    <tr><td class="paramname">blockId</td><td>integer id of the block within the polymer </td></tr>
+    <tr><td class="paramname">directionId</td><td>integer id of the direction (0 or 1) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00801">801</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="PolymerTmpl_8h_source.html#l00241">Pscf::PolymerTmpl&lt; Block &gt;::nBlock()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00194">Pscf::MixtureTmpl&lt; TP, TS &gt;::nPolymer()</a>, <a class="el" href="fd1d_2solvers_2Propagator_8h_source.html#l00224">Pscf::Fd1d::Propagator::ns()</a>, <a class="el" href="fd1d_2domain_2Domain_8h_source.html#l00213">Pscf::Fd1d::Domain::nx()</a>, <a class="el" href="FileMaster_8cpp_source.html#l00290">Util::FileMaster::openOutputFile()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00220">Pscf::MixtureTmpl&lt; TP, TS &gt;::polymer()</a>, <a class="el" href="PolymerTmpl_8h_source.html#l00304">Pscf::PolymerTmpl&lt; Block &gt;::propagator()</a>, <a class="el" href="fd1d_2solvers_2Propagator_8h_source.html#l00209">Pscf::Fd1d::Propagator::q()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="fd1d_2misc_2FieldIo_8cpp_source.html#l00102">Pscf::Fd1d::FieldIo::writeField()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00269">readCommands()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00839">writeQAll()</a>.</p>
+
+</div>
+</div>
+<a id="a9ee54b07bc11ac4484cc46a2c2d66f0f" name="a9ee54b07bc11ac4484cc46a2c2d66f0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ee54b07bc11ac4484cc46a2c2d66f0f">&#9670;&#160;</a></span>writeQAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pscf::Fd1d::System::writeQAll </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>basename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write all propagators of all blocks, each to a separate file. </p>
+<p >Write all propagators for both directions for all blocks of all polymers, with each propagator in a separate file. The function writeQ is called internally for each propagator, and is passed an automatically generated file name. The file name for each propagator is given by a string of the form (basename)_(ip)_(ib)_(id), where (basename) denotes the value of the std::string function parameter basename, and where (ip), (ib), and (id) denote the string representations of a polymer indiex ip, a block index ib, and direction index id, with id = 0 or 1. For example, if basename == "out/q", then the file name of the propagator for direction 1 of block 2 of polymer 0 would be "out/q_0_2_1".</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">basename</td><td>common prefix for output file names </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8cpp_source.html#l00839">839</a> of file <a class="el" href="fd1d_2System_8cpp_source.html">fd1d/System.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="MixtureTmpl_8h_source.html#l00194">Pscf::MixtureTmpl&lt; TP, TS &gt;::nPolymer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00220">Pscf::MixtureTmpl&lt; TP, TS &gt;::polymer()</a>, <a class="el" href="ioUtil_8cpp_source.html#l00052">Util::toString()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00801">writeQ()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00269">readCommands()</a>.</p>
 
 </div>
 </div>
@@ -1209,9 +1432,9 @@ Additional Inherited Members</h2></td></tr>
 <p>Get array of all chemical potential fields. </p>
 <p >The array capacity is equal to the number of monomer types. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00527">527</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00596">596</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00414">compute()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00266">readCommands()</a>, <a class="el" href="SystemAccess_8h_source.html#l00250">Pscf::Fd1d::SystemAccess::wFields()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00685">writeW()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00457">compute()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00269">readCommands()</a>, <a class="el" href="SystemAccess_8h_source.html#l00250">Pscf::Fd1d::SystemAccess::wFields()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00733">writeW()</a>.</p>
 
 </div>
 </div>
@@ -1247,7 +1470,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00534">534</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00603">603</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BinaryRelaxIterator_8cpp_source.html#l00132">Pscf::Fd1d::BinaryRelaxIterator::solve()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00225">Pscf::Fd1d::NrIterator::solve()</a>, and <a class="el" href="SystemAccess_8h_source.html#l00260">Pscf::Fd1d::SystemAccess::wField()</a>.</p>
 
@@ -1279,9 +1502,9 @@ Additional Inherited Members</h2></td></tr>
 <p>Get array of all chemical potential fields. </p>
 <p >The array capacity is equal to the number of monomer types. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00541">541</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00610">610</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SystemAccess_8h_source.html#l00270">Pscf::Fd1d::SystemAccess::cFields()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00266">readCommands()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00694">writeC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SystemAccess_8h_source.html#l00270">Pscf::Fd1d::SystemAccess::cFields()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00269">readCommands()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00742">writeC()</a>.</p>
 
 </div>
 </div>
@@ -1317,7 +1540,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00547">547</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00616">616</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SystemAccess_8h_source.html#l00279">Pscf::Fd1d::SystemAccess::cField()</a>, <a class="el" href="BinaryRelaxIterator_8cpp_source.html#l00132">Pscf::Fd1d::BinaryRelaxIterator::solve()</a>, and <a class="el" href="NrIterator_8cpp_source.html#l00225">Pscf::Fd1d::NrIterator::solve()</a>.</p>
 
@@ -1348,9 +1571,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get <a class="el" href="classPscf_1_1Fd1d_1_1Mixture.html" title="Mixture of polymers and solvents.">Mixture</a> by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00468">468</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00537">537</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00465">computeFreeEnergy()</a>, <a class="el" href="SystemAccess_8h_source.html#l00176">Pscf::Fd1d::SystemAccess::mixture()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00168">readParameters()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00225">Pscf::Fd1d::NrIterator::solve()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00637">writeThermo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00508">computeFreeEnergy()</a>, <a class="el" href="SystemAccess_8h_source.html#l00176">Pscf::Fd1d::SystemAccess::mixture()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00171">readParameters()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00225">Pscf::Fd1d::NrIterator::solve()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00682">writeThermo()</a>.</p>
 
 </div>
 </div>
@@ -1379,7 +1602,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get <a class="el" href="classPscf_1_1Fd1d_1_1Mixture.html" title="Mixture of polymers and solvents.">Mixture</a> by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00474">474</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00543">543</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
 
 </div>
 </div>
@@ -1408,11 +1631,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get interaction (i.e., excess free energy) by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00480">480</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00549">549</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00465">computeFreeEnergy()</a>, <a class="el" href="SystemAccess_8h_source.html#l00212">Pscf::Fd1d::SystemAccess::interaction()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00168">readParameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00508">computeFreeEnergy()</a>, <a class="el" href="SystemAccess_8h_source.html#l00212">Pscf::Fd1d::SystemAccess::interaction()</a>, and <a class="el" href="fd1d_2System_8cpp_source.html#l00171">readParameters()</a>.</p>
 
 </div>
 </div>
@@ -1441,7 +1664,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get interaction (i.e., excess free energy) by const reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00489">489</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00558">558</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
@@ -1472,9 +1695,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get spatial domain (including grid info) by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00498">498</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00567">567</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00465">computeFreeEnergy()</a>, <a class="el" href="SystemAccess_8h_source.html#l00194">Pscf::Fd1d::SystemAccess::domain()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00168">readParameters()</a>, and <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00030">Pscf::Fd1d::Sweep::Sweep()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00508">computeFreeEnergy()</a>, <a class="el" href="SystemAccess_8h_source.html#l00194">Pscf::Fd1d::SystemAccess::domain()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00171">readParameters()</a>, and <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00030">Pscf::Fd1d::Sweep::Sweep()</a>.</p>
 
 </div>
 </div>
@@ -1503,11 +1726,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the <a class="el" href="classPscf_1_1Fd1d_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00511">511</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00580">580</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00427">iterate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fd1d_2System_8cpp_source.html#l00470">iterate()</a>.</p>
 
 </div>
 </div>
@@ -1536,7 +1759,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get homogeneous mixture (for reference calculations). </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00505">505</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00574">574</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SystemAccess_8h_source.html#l00240">Pscf::Fd1d::SystemAccess::homogeneous()</a>, and <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00215">Pscf::Fd1d::Sweep::outputSummary()</a>.</p>
 
@@ -1567,9 +1790,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get FileMaster by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00520">520</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fd1d_2System_8h_source.html#l00589">589</a> of file <a class="el" href="fd1d_2System_8h_source.html">fd1d/System.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SystemAccess_8h_source.html#l00230">Pscf::Fd1d::SystemAccess::fileMaster()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00266">readCommands()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00223">readParam()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00096">setOptions()</a>, and <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00030">Pscf::Fd1d::Sweep::Sweep()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SystemAccess_8h_source.html#l00230">Pscf::Fd1d::SystemAccess::fileMaster()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00269">readCommands()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00226">readParam()</a>, <a class="el" href="fd1d_2System_8cpp_source.html#l00099">setOptions()</a>, and <a class="el" href="fd1d_2sweep_2Sweep_8cpp_source.html#l00030">Pscf::Fd1d::Sweep::Sweep()</a>.</p>
 
 </div>
 </div>
@@ -1580,7 +1803,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 6 2023 14:11:39 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Sep 20 2023 00:52:47 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
