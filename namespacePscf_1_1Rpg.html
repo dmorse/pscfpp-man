@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
    </div>
   </td>
  </tr>
@@ -326,6 +326,15 @@ Functions</h2></td></tr>
 <tr class="memitem:adb4257510496d6bd3adcca72b8aec318"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adb4257510496d6bd3adcca72b8aec318">operator&lt;&lt;</a> (std::ostream &amp;out, <a class="el" href="classPscf_1_1Rpg_1_1SweepParameter.html">SweepParameter</a>&lt; D &gt; const &amp;param)</td></tr>
 <tr class="memdesc:adb4257510496d6bd3adcca72b8aec318"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extractor for writing a <a class="el" href="classPscf_1_1Rpg_1_1SweepParameter.html" title="Class for storing data about an individual sweep parameter.">SweepParameter</a> to ostream.  <br /></td></tr>
 <tr class="separator:adb4257510496d6bd3adcca72b8aec318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57b247159a5044e46aab0fd38aa4dfec" id="r_a57b247159a5044e46aab0fd38aa4dfec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57b247159a5044e46aab0fd38aa4dfec">realMulVConjVV</a> (<a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; &amp;a, <a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaComplex &gt; const &amp;b, <a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaComplex &gt; const &amp;c, <a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; const &amp;d)</td></tr>
+<tr class="memdesc:a57b247159a5044e46aab0fd38aa4dfec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element-wise calculation of a = real(b * conj(c) * d), kernel wrapper.  <br /></td></tr>
+<tr class="separator:a57b247159a5044e46aab0fd38aa4dfec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45ecec04d4e58bfe60620524655eb76c" id="r_a45ecec04d4e58bfe60620524655eb76c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45ecec04d4e58bfe60620524655eb76c">richardsonEx</a> (<a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; &amp;qNew, <a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; const &amp;qr, <a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; const &amp;qr2, <a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; const &amp;expW2)</td></tr>
+<tr class="memdesc:a45ecec04d4e58bfe60620524655eb76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs qNew = (4 * (qr2 * expW2) - qr) / 3 elementwise, kernel wrapper.  <br /></td></tr>
+<tr class="separator:a45ecec04d4e58bfe60620524655eb76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab502b9661f61d6cef7e6533cfc5d5d71" id="r_ab502b9661f61d6cef7e6533cfc5d5d71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab502b9661f61d6cef7e6533cfc5d5d71">addEqMulVVc</a> (<a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; &amp;a, <a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; const &amp;b, <a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; const &amp;c, cudaReal const d)</td></tr>
+<tr class="memdesc:ab502b9661f61d6cef7e6533cfc5d5d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a[i] += b[i] * c[i] * d, kernel wrapper.  <br /></td></tr>
+<tr class="separator:ab502b9661f61d6cef7e6533cfc5d5d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>SCFT and PS-FTS with real periodic fields (GPU) </p>
@@ -470,10 +479,154 @@ template&lt;int D&gt; </div>
 
 </div>
 </div>
+<a id="a57b247159a5044e46aab0fd38aa4dfec" name="a57b247159a5044e46aab0fd38aa4dfec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57b247159a5044e46aab0fd38aa4dfec">&#9670;&#160;</a></span>realMulVConjVV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pscf::Rpg::realMulVConjVV </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaComplex &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaComplex &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>d</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Element-wise calculation of a = real(b * conj(c) * d), kernel wrapper. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>output array (real) </td></tr>
+    <tr><td class="paramname">b</td><td>input array 1 (complex) </td></tr>
+    <tr><td class="paramname">c</td><td>input array 2 (complex) </td></tr>
+    <tr><td class="paramname">d</td><td>input array 3 (real) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00087">87</a> of file <a class="el" href="rpg_2solvers_2Block_8tpp_source.html">rpg/solvers/Block.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00456">Pscf::Rpg::Block&lt; D &gt;::computeStress()</a>.</p>
+
+</div>
+</div>
+<a id="a45ecec04d4e58bfe60620524655eb76c" name="a45ecec04d4e58bfe60620524655eb76c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45ecec04d4e58bfe60620524655eb76c">&#9670;&#160;</a></span>richardsonEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pscf::Rpg::richardsonEx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>qNew</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>qr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>qr2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>expW2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs qNew = (4 * (qr2 * expW2) - qr) / 3 elementwise, kernel wrapper. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">qNew</td><td>output array (a propagator slice) </td></tr>
+    <tr><td class="paramname">qr</td><td>input array 1 (a propagator slice) </td></tr>
+    <tr><td class="paramname">qr2</td><td>input array 2 (a propagator slice) </td></tr>
+    <tr><td class="paramname">expW2</td><td>input array 3 (exp(-W[i]*ds/4) array) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00109">109</a> of file <a class="el" href="rpg_2solvers_2Block_8tpp_source.html">rpg/solvers/Block.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00414">Pscf::Rpg::Block&lt; D &gt;::step()</a>.</p>
+
+</div>
+</div>
+<a id="ab502b9661f61d6cef7e6533cfc5d5d71" name="ab502b9661f61d6cef7e6533cfc5d5d71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab502b9661f61d6cef7e6533cfc5d5d71">&#9670;&#160;</a></span>addEqMulVVc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pscf::Rpg::addEqMulVVc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cudaReal const</td>          <td class="paramname"><span class="paramname"><em>d</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs a[i] += b[i] * c[i] * d, kernel wrapper. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>output array </td></tr>
+    <tr><td class="paramname">b</td><td>input array 1 </td></tr>
+    <tr><td class="paramname">c</td><td>input array 2 </td></tr>
+    <tr><td class="paramname">d</td><td>input scalar </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00131">131</a> of file <a class="el" href="rpg_2solvers_2Block_8tpp_source.html">rpg/solvers/Block.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00378">Pscf::Rpg::Block&lt; D &gt;::computeConcentration()</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 14 2025 16:24:05 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:29:27 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

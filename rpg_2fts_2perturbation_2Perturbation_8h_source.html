@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
    </div>
   </td>
  </tr>
@@ -74,13 +74,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;util/param/ParamComposite.h&gt;</span>      <span class="comment">// base class</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceUtil.html">Util</a> {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span>DArray;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classUtil_1_1DArray.html">    7</a></span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code hl_class" href="classUtil_1_1DArray.html">DArray</a>;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>}</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>Prdc{</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span>Cuda{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt; <span class="keyword">class </span>RField;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">   13</a></span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt; <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
@@ -199,6 +199,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>}</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>}</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassPscf_1_1Prdc_1_1Cpu_1_1RField_html"><div class="ttname"><a href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">Pscf::Prdc::Cpu::RField</a></div><div class="ttdoc">Field of real double precision values on an FFT mesh.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2solvers_2Mixture_8h_source.html#l00026">rpc/solvers/Mixture.h:26</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html">Pscf::Rpg::Perturbation</a></div><div class="ttdoc">Base class for additive perturbations of standard FTS Hamiltonian.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2simulator_2Simulator_8h_source.html#l00026">rpg/fts/simulator/Simulator.h:26</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_a063ecf24bf003441cd9f9787dca28e0c"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#a063ecf24bf003441cd9f9787dca28e0c">Pscf::Rpg::Perturbation::incrementDc</a></div><div class="ttdeci">virtual void incrementDc(DArray&lt; RField&lt; D &gt; &gt; &amp;dc)</div><div class="ttdoc">Modify the generalized forces to include perturbation.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2perturbation_2Perturbation_8tpp_source.html#l00059">rpg/fts/perturbation/Perturbation.tpp:59</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_a0fcb0272ee75a858a718274e6d7a3259"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#a0fcb0272ee75a858a718274e6d7a3259">Pscf::Rpg::Perturbation::setLambda</a></div><div class="ttdeci">void setLambda(double lambda)</div><div class="ttdoc">Set the perturbation parameter value.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2perturbation_2Perturbation_8tpp_source.html#l00087">rpg/fts/perturbation/Perturbation.tpp:87</a></div></div>
@@ -214,16 +215,16 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_acba71b74af2c921a65c47e76054f5d4e"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#acba71b74af2c921a65c47e76054f5d4e">Pscf::Rpg::Perturbation::Perturbation</a></div><div class="ttdeci">Perturbation(Simulator&lt; D &gt; &amp;simulator)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2perturbation_2Perturbation_8tpp_source.html#l00020">rpg/fts/perturbation/Perturbation.tpp:20</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_ad94fc99e2c015ed9b7158b74e9564800"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#ad94fc99e2c015ed9b7158b74e9564800">Pscf::Rpg::Perturbation::setup</a></div><div class="ttdeci">virtual void setup()</div><div class="ttdoc">Complete any required initialization.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2perturbation_2Perturbation_8tpp_source.html#l00045">rpg/fts/perturbation/Perturbation.tpp:45</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_aeea41d39709050b1e720b6c1b2c3e97c"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#aeea41d39709050b1e720b6c1b2c3e97c">Pscf::Rpg::Perturbation::restoreState</a></div><div class="ttdeci">virtual void restoreState()</div><div class="ttdoc">Restore any required internal state variables.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2perturbation_2Perturbation_8tpp_source.html#l00073">rpg/fts/perturbation/Perturbation.tpp:73</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Simulator_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Simulator.html">Pscf::Rpg::Simulator</a></div><div class="ttdoc">Field theoretic simulator (base class).</div><div class="ttdef"><b>Definition</b> <a href="rpg_2System_8h_source.html#l00045">rpg/System.h:45</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a></div><div class="ttdoc">Main class for calculations that represent one system.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2System_8h_source.html#l00110">rpg/System.h:111</a></div></div>
-<div class="ttc" id="aclassUtil_1_1DArray_html"><div class="ttname"><a href="classUtil_1_1DArray.html">Util::DArray</a></div><div class="ttdoc">Dynamically allocatable contiguous array template.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2solvers_2Polymer_8h_source.html#l00019">rpg/solvers/Polymer.h:19</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Simulator_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Simulator.html">Pscf::Rpg::Simulator</a></div><div class="ttdoc">Field theoretic simulator (base class).</div><div class="ttdef"><b>Definition</b> <a href="rpg_2System_8h_source.html#l00041">rpg/System.h:41</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a></div><div class="ttdoc">Main class for calculations that represent one system.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2System_8h_source.html#l00106">rpg/System.h:107</a></div></div>
+<div class="ttc" id="aclassUtil_1_1DArray_html"><div class="ttname"><a href="classUtil_1_1DArray.html">Util::DArray</a></div><div class="ttdoc">Dynamically allocatable contiguous array template.</div><div class="ttdef"><b>Definition</b> <a href="#l00007">rpg/fts/perturbation/Perturbation.h:7</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html"><div class="ttname"><a href="classUtil_1_1ParamComposite.html">Util::ParamComposite</a></div><div class="ttdoc">An object that can read multiple parameters from file.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8h_source.html#l00090">ParamComposite.h:91</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
 <div class="ttc" id="anamespaceUtil_html"><div class="ttname"><a href="namespaceUtil.html">Util</a></div><div class="ttdoc">Utility classes for scientific computation.</div><div class="ttdef"><b>Definition</b> <a href="accumulators_8mod_source.html#l00001">accumulators.mod:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 14 2025 16:24:03 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:29:25 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

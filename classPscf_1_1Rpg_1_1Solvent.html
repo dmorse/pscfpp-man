@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
    </div>
   </td>
  </tr>
@@ -489,13 +489,13 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:aef5f00825455213823d34976dc9bed43 inherit pro_attribs_classPscf_1_1SolventSpecies"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classPscf_1_1Species"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classPscf_1_1Species')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classPscf_1_1Species.html">Pscf::Species</a></td></tr>
 <tr class="memitem:a85698b28e7c686183e4cd5af22d58fb2 inherit pro_attribs_classPscf_1_1Species" id="r_a85698b28e7c686183e4cd5af22d58fb2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#a85698b28e7c686183e4cd5af22d58fb2">phi_</a></td></tr>
-<tr class="memdesc:a85698b28e7c686183e4cd5af22d58fb2 inherit pro_attribs_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Volume fraction, set by either setPhi or a solve function.  <br /></td></tr>
+<tr class="memdesc:a85698b28e7c686183e4cd5af22d58fb2 inherit pro_attribs_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Volume fraction, set by either setPhi or a compute function.  <br /></td></tr>
 <tr class="separator:a85698b28e7c686183e4cd5af22d58fb2 inherit pro_attribs_classPscf_1_1Species"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94b3d0be084cc9343aeb8ca32e7391c7 inherit pro_attribs_classPscf_1_1Species" id="r_a94b3d0be084cc9343aeb8ca32e7391c7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#a94b3d0be084cc9343aeb8ca32e7391c7">mu_</a></td></tr>
-<tr class="memdesc:a94b3d0be084cc9343aeb8ca32e7391c7 inherit pro_attribs_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chemical potential, set by either setPhi or a solve function.  <br /></td></tr>
+<tr class="memdesc:a94b3d0be084cc9343aeb8ca32e7391c7 inherit pro_attribs_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chemical potential, set by either setPhi or a compute function.  <br /></td></tr>
 <tr class="separator:a94b3d0be084cc9343aeb8ca32e7391c7 inherit pro_attribs_classPscf_1_1Species"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e2d7336c4308b04eca3a7ed5f3f94e1 inherit pro_attribs_classPscf_1_1Species" id="r_a9e2d7336c4308b04eca3a7ed5f3f94e1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#a9e2d7336c4308b04eca3a7ed5f3f94e1">q_</a></td></tr>
-<tr class="memdesc:a9e2d7336c4308b04eca3a7ed5f3f94e1 inherit pro_attribs_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partition function, set in subclass by a solve function.  <br /></td></tr>
+<tr class="memdesc:a9e2d7336c4308b04eca3a7ed5f3f94e1 inherit pro_attribs_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partition function, set in subclass by a compute function.  <br /></td></tr>
 <tr class="separator:a9e2d7336c4308b04eca3a7ed5f3f94e1 inherit pro_attribs_classPscf_1_1Species"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2dedb312fd649efcf07f3a7cce592315 inherit pro_attribs_classPscf_1_1Species" id="r_a2dedb312fd649efcf07f3a7cce592315"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Species.html#aff5905c62129641e3d6f6a719bf9ec29">Ensemble</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#a2dedb312fd649efcf07f3a7cce592315">ensemble_</a></td></tr>
 <tr class="memdesc:a2dedb312fd649efcf07f3a7cce592315 inherit pro_attribs_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Statistical ensemble for this species (open or closed).  <br /></td></tr>
@@ -664,7 +664,7 @@ template&lt;int D&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Solvent_8tpp_source.html#l00031">31</a> of file <a class="el" href="rpg_2solvers_2Solvent_8tpp_source.html">rpg/solvers/Solvent.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOpMisc_8cu_source.html#l00393">Pscf::Prdc::Cuda::VecOp::expVc()</a>, <a class="el" href="VecOp_8cu_source.html#l01918">Pscf::Prdc::Cuda::VecOp::mulEqS()</a>, and <a class="el" href="Reduce_8cu_source.html#l00480">Pscf::Prdc::Cuda::Reduce::sum()</a>.</p>
+<p class="reference">References <a class="el" href="VecOpMisc_8cu_source.html#l00393">Pscf::Prdc::Cuda::VecOp::expVc()</a>, <a class="el" href="VecOp_8cu_source.html#l01875">Pscf::Prdc::Cuda::VecOp::mulEqS()</a>, and <a class="el" href="Reduce_8cu_source.html#l00480">Pscf::Prdc::Cuda::Reduce::sum()</a>.</p>
 
 </div>
 </div>
@@ -706,7 +706,7 @@ template&lt;int D&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 14 2025 16:24:05 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:29:28 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

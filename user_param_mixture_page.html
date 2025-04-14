@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
    </div>
   </td>
  </tr>
@@ -179,7 +179,7 @@ Polymer</h1>
 <li>When the volume fraction parameter phi is present, its value must lie in the range [0,1].</li>
 </ul>
 <p>Descriptions of parameter file formats for individual blocks of linear and branched polymers are discussed separately below.</p>
-<p><em> Technical comment (for users who examine the source code)</em>: A class or class template named Polymer is defined in each implementation-level namespace of the top-level <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a> namespace (i.e., in the R1d, Rpc and Rpg sub-namespaces of <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a>). These Polymer classes all use the same parameter file format, which is described above. Each of these Polymer classes is a subclass of an instances of a common class template named <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Descriptor and MDE solver for a block polymer.">Pscf::PolymerTmpl</a>. The readParameters function of this base class template defines the common file format.</p>
+<p><em> Technical comment (for users who examine the source code)</em>: A class or class template named Polymer is defined in each implementation-level namespace of the top-level <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a> namespace (i.e., in the R1d, Rpc and Rpg sub-namespaces of <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a>). These Polymer classes all use the same parameter file format, which is described above. Each of these Polymer classes is a subclass of an instances of a common class template named <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Descriptor and MDE solver for an acyclic branched block polymer.">Pscf::PolymerTmpl</a>. The readParameters function of this base class template defines the common file format.</p>
 <h1><a class="anchor" id="user_param_block_sec"></a>
 Block</h1>
 <p>The text representation of a block within the "blocks" array in a Polymer parameter file block is different depending on whether the polymer type is "linear" or "branched".</p>
@@ -232,7 +232,7 @@ Solvent</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 14 2025 16:24:04 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:29:26 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

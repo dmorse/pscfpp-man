@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
    </div>
   </td>
  </tr>
@@ -290,7 +290,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>      <span class="comment">// Rescale output data in-place</span></div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>      cudaReal scale = 1.0/cudaReal(rSize_);</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>      <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html#aa8a4917af7cb8ef1d7abaff2d8a1daa8">VecOp::mulEqS</a>(kFields, scale);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>      <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html#aa46ed95b8b11d31c485a63ec603016a0">VecOp::mulEqS</a>(kFields, scale);</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>   }</div>
 </div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
@@ -327,7 +327,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>}</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>}</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassPscf_1_1DeviceArray_html"><div class="ttname"><a href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a></div><div class="ttdoc">Dynamic array on the GPU device with aligned data.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2System_8h_source.html#l00036">rpg/System.h:36</a></div></div>
+<div class="ttc" id="aclassPscf_1_1DeviceArray_html"><div class="ttname"><a href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a></div><div class="ttdoc">Dynamic array on the GPU device with aligned data.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2System_8h_source.html#l00032">rpg/System.h:32</a></div></div>
 <div class="ttc" id="aclassPscf_1_1DeviceArray_html_aac902e929dc8df89b772d712aa7b7bca"><div class="ttname"><a href="classPscf_1_1DeviceArray.html#aac902e929dc8df89b772d712aa7b7bca">Pscf::DeviceArray::capacity</a></div><div class="ttdeci">int capacity() const</div><div class="ttdoc">Return allocated capacity.</div><div class="ttdef"><b>Definition</b> <a href="DeviceArray_8h_source.html#l00460">DeviceArray.h:460</a></div></div>
 <div class="ttc" id="aclassPscf_1_1DeviceArray_html_aedc681c6110fffabf4d72160619d0d45"><div class="ttname"><a href="classPscf_1_1DeviceArray.html#aedc681c6110fffabf4d72160619d0d45">Pscf::DeviceArray::cArray</a></div><div class="ttdeci">Data * cArray()</div><div class="ttdoc">Return pointer to underlying C array.</div><div class="ttdef"><b>Definition</b> <a href="DeviceArray_8h_source.html#l00412">DeviceArray.h:412</a></div></div>
 <div class="ttc" id="aclassPscf_1_1IntVec_html"><div class="ttname"><a href="classPscf_1_1IntVec.html">Pscf::IntVec</a></div><div class="ttdoc">An IntVec&lt;D, T&gt; is a D-component vector of elements of integer type T.</div><div class="ttdef"><b>Definition</b> <a href="IntVec_8h_source.html#l00026">IntVec.h:27</a></div></div>
@@ -340,13 +340,13 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassPscf_1_1Prdc_1_1Cuda_1_1FFTBatched_html_af2c12461a2c0f52b4958276caeafe3b6"><div class="ttname"><a href="classPscf_1_1Prdc_1_1Cuda_1_1FFTBatched.html#af2c12461a2c0f52b4958276caeafe3b6">Pscf::Prdc::Cuda::FFTBatched::resetBatchSize</a></div><div class="ttdeci">void resetBatchSize(int batchSize)</div><div class="ttdoc">Set the batch size to a new value.</div><div class="ttdef"><b>Definition</b> <a href="#l00124">FFTBatched.tpp:124</a></div></div>
 <div class="ttc" id="aglobal_8h_html_aaf3bc07accafc94019d126e4cffa81e7"><div class="ttname"><a href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a></div><div class="ttdeci">#define UTIL_CHECK(condition)</div><div class="ttdoc">Assertion macro suitable for serial or parallel production code.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00068">global.h:68</a></div></div>
 <div class="ttc" id="aglobal_8h_html_ad2512f8bd062d41d66799cf900151487"><div class="ttname"><a href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a></div><div class="ttdeci">#define UTIL_THROW(msg)</div><div class="ttdoc">Macro for throwing an Exception, reporting function, file and line number.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00051">global.h:51</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_1_1VecOp_html_aa8a4917af7cb8ef1d7abaff2d8a1daa8"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html#aa8a4917af7cb8ef1d7abaff2d8a1daa8">Pscf::Prdc::Cuda::VecOp::mulEqS</a></div><div class="ttdeci">void mulEqS(DeviceArray&lt; cudaReal &gt; &amp;a, const cudaReal b, const int beginIdA, const int n)</div><div class="ttdoc">Vector multiplication in-place, a[i] *= b, kernel wrapper (cudaReal).</div><div class="ttdef"><b>Definition</b> <a href="VecOp_8cu_source.html#l01918">VecOp.cu:1918</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_1_1VecOp_html_aa46ed95b8b11d31c485a63ec603016a0"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html#aa46ed95b8b11d31c485a63ec603016a0">Pscf::Prdc::Cuda::VecOp::mulEqS</a></div><div class="ttdeci">void mulEqS(DeviceArray&lt; cudaReal &gt; &amp;a, cudaReal const b, const int beginIdA, const int n)</div><div class="ttdoc">Vector multiplication in-place, a[i] *= b, kernel wrapper (cudaReal).</div><div class="ttdef"><b>Definition</b> <a href="VecOp_8cu_source.html#l01875">VecOp.cu:1875</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
 <div class="ttc" id="anamespaceUtil_html"><div class="ttname"><a href="namespaceUtil.html">Util</a></div><div class="ttdoc">Utility classes for scientific computation.</div><div class="ttdef"><b>Definition</b> <a href="accumulators_8mod_source.html#l00001">accumulators.mod:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 14 2025 16:24:02 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:29:24 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

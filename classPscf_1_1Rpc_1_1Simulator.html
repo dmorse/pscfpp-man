@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
    </div>
   </td>
  </tr>
@@ -668,7 +668,7 @@ class Pscf::Rpc::Simulator&lt; D &gt;</div><p>Field theoretic simulator (base cl
 <p>The analyzeChi function constructs and diagonalizes the projected chi matrix. This is a singular nMonomer x nMonomer matrix defined by evaluating the orthogonal projection of the chi matrix into the subspace of fluctuations that preserves total monomer concentration. The eigenvalues and eigenvectors of this matrix are accessed via the chiEvals and chiEvecs functions, respectively.</p>
 <p>The computeWc, computeCc and computeDc functions compute components of various types of multi-component fields (i.e., fields that are associated with a monomer type index) in a basis of eigenvectors of the projected chi matrix. Names such as wc, cc and dc that end with a suffix "c" refer to components of multi-component fields that are defined using this eigenvector basis. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2System_8h_source.html#l00043">43</a> of file <a class="el" href="rpc_2System_8h_source.html">rpc/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2System_8h_source.html#l00038">38</a> of file <a class="el" href="rpc_2System_8h_source.html">rpc/System.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a11cb45873c333600948052cd9121e7c7" name="a11cb45873c333600948052cd9121e7c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a11cb45873c333600948052cd9121e7c7">&#9670;&#160;</a></span>Simulator()</h2>
@@ -958,7 +958,7 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classPscf_1_1Rpc_1_1McSimulator.html#a75145aff4066f803e056ef4d4730c219">Pscf::Rpc::McSimulator&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00693">693</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00689">689</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -998,7 +998,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00703">703</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00699">699</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1034,7 +1034,7 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classPscf_1_1Rpc_1_1McSimulator.html#a84eaf98dee4a3d0709f6f7432b27f834">Pscf::Rpc::McSimulator&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00715">715</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00711">711</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1122,7 +1122,7 @@ template&lt;int D&gt; </div>
 <p>Perform eigenvalue analysis of projected chi matrix. </p>
 <p>Uses a chi matrix obtained from the <a class="el" href="classPscf_1_1Interaction.html" title="Flory-Huggins excess free energy model.">Interaction</a> member of the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class for SCFT or PS-FTS simulation of one system.">System</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00290">290</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00286">286</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; T &gt;::allocate()</a>, <a class="el" href="DMatrix_8h_source.html#l00170">Util::DMatrix&lt; Data &gt;::allocate()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1370,7 +1370,7 @@ template&lt;int D&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00185">185</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="PolymerModel_8cpp_source.html#l00064">Pscf::PolymerModel::isThread()</a>, <a class="el" href="PolymerSpecies_8cpp_source.html#l00422">Pscf::PolymerTmpl&lt; Block &gt;::length()</a>, <a class="el" href="rpc_2field_2Domain_8h_source.html#l00302">Pscf::Rpc::Domain&lt; D &gt;::mesh()</a>, <a class="el" href="Species_8h_source.html#l00096">Pscf::Rpc::Polymer&lt; D &gt;::mu()</a>, <a class="el" href="Species_8h_source.html#l00096">Pscf::Species::mu()</a>, <a class="el" href="PolymerSpecies_8cpp_source.html#l00435">Pscf::PolymerTmpl&lt; Block &gt;::nBead()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00201">Pscf::MixtureTmpl&lt; TP, TS &gt;::nMonomer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00205">Pscf::MixtureTmpl&lt; TP, TS &gt;::nPolymer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00209">Pscf::MixtureTmpl&lt; TP, TS &gt;::nSolvent()</a>, <a class="el" href="Species_8h_source.html#l00090">Pscf::Rpc::Polymer&lt; D &gt;::phi()</a>, <a class="el" href="Species_8h_source.html#l00090">Pscf::Species::phi()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00231">Pscf::MixtureTmpl&lt; TP, TS &gt;::polymer()</a>, <a class="el" href="SolventSpecies_8h_source.html#l00143">Pscf::SolventSpecies::size()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00245">Pscf::MixtureTmpl&lt; TP, TS &gt;::solvent()</a>, <a class="el" href="rpc_2field_2Domain_8h_source.html#l00292">Pscf::Rpc::Domain&lt; D &gt;::unitCell()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="MixtureTmpl_8h_source.html#l00259">Pscf::MixtureTmpl&lt; TP, TS &gt;::vMonomer()</a>.</p>
+<p class="reference">References <a class="el" href="PolymerSpecies_8cpp_source.html#l00407">Pscf::PolymerTmpl&lt; Block &gt;::length()</a>, <a class="el" href="rpc_2field_2Domain_8h_source.html#l00302">Pscf::Rpc::Domain&lt; D &gt;::mesh()</a>, <a class="el" href="Species_8h_source.html#l00096">Pscf::PolymerTmpl&lt; Block &gt;::mu()</a>, <a class="el" href="Species_8h_source.html#l00096">Pscf::Species::mu()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00201">Pscf::MixtureTmpl&lt; TP, TS &gt;::nMonomer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00205">Pscf::MixtureTmpl&lt; TP, TS &gt;::nPolymer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00209">Pscf::MixtureTmpl&lt; TP, TS &gt;::nSolvent()</a>, <a class="el" href="Species_8h_source.html#l00090">Pscf::PolymerTmpl&lt; Block &gt;::phi()</a>, <a class="el" href="Species_8h_source.html#l00090">Pscf::Species::phi()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00231">Pscf::MixtureTmpl&lt; TP, TS &gt;::polymer()</a>, <a class="el" href="SolventSpecies_8h_source.html#l00143">Pscf::SolventSpecies::size()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00245">Pscf::MixtureTmpl&lt; TP, TS &gt;::solvent()</a>, <a class="el" href="rpc_2field_2Domain_8h_source.html#l00292">Pscf::Rpc::Domain&lt; D &gt;::unitCell()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="MixtureTmpl_8h_source.html#l00259">Pscf::MixtureTmpl&lt; TP, TS &gt;::vMonomer()</a>.</p>
 
 </div>
 </div>
@@ -1565,7 +1565,7 @@ template&lt;int D&gt; </div>
 </p>
 <p> where \( w_{i}({\bf r}) \) is the w-field associated with monomer type \( i \), \( v_{ai} \) is eigenvector a of the projected chi matrix, and M = nMonomer. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00458">458</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00454">454</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1692,7 +1692,7 @@ template&lt;int D&gt; </div>
 <p>Compute eigenvector components of the current c fields. </p>
 <p>Compute and store the components of the values of the c fields on nodes of a real-space grid (r-grid) in a basis of the eigenvectors of the projected chi matrix. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00496">496</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00492">492</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1826,7 +1826,7 @@ template&lt;int D&gt; </div>
 <p>Compute functional derivatives of the Hamiltonian. </p>
 <p>Compute and store the functional derivatives of the field theoretic Hamiltonian with respect to eigenvector components of the w fields (i.e., with respect to components of wc). </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00536">536</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00532">532</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1952,7 +1952,7 @@ template&lt;int D&gt; </div>
 <p>Save a copy of the fts move state. </p>
 <p>This function and <a class="el" href="#aaf8cf46cacf966659dfbce0e40cb2d40" title="Restore the saved copy of the fts move state.">restoreState()</a> are intended for use in the implementation of field theoretic moves. This function stores the current w fields and the corresponding Hamiltonian value. Current cc fields and dc fields are saved based on save policy. This is normally the first step of a fts move, prior to an attempted modification of the fields stored in the system w field container. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00579">579</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00575">575</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1978,7 +1978,7 @@ template&lt;int D&gt; </div>
 <p>Restore the saved copy of the fts move state. </p>
 <p>This function and <a class="el" href="#ab70dc03b52652105819245b1a54b734d" title="Save a copy of the fts move state.">saveState()</a> are intended to be used together in the implementation of fts moves. If an attempted Monte-Carle move is rejected or an fts move fails to converge <a class="el" href="#aaf8cf46cacf966659dfbce0e40cb2d40" title="Restore the saved copy of the fts move state.">restoreState()</a> is called to restore the fields and Hamiltonian value that were saved by a previous call to the function <a class="el" href="#ab70dc03b52652105819245b1a54b734d" title="Save a copy of the fts move state.">saveState()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00635">635</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00631">631</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -2004,7 +2004,7 @@ template&lt;int D&gt; </div>
 <p>Clear the saved copy of the fts state. </p>
 <p>This function, <a class="el" href="#aaf8cf46cacf966659dfbce0e40cb2d40" title="Restore the saved copy of the fts move state.">restoreState()</a>, and <a class="el" href="#ab70dc03b52652105819245b1a54b734d" title="Save a copy of the fts move state.">saveState()</a> are intended to be used together in the implementation of reversible fts moves. If an attempted move is accepted, <a class="el" href="#a3136f95f66923dcd541a2923e11c00fe" title="Clear the saved copy of the fts state.">clearState()</a> is called to indicate the need to recompute some quantities. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00685">685</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00681">681</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
 
 </div>
 </div>
@@ -2363,7 +2363,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00727">727</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00723">723</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
 
 </div>
 </div>
@@ -2439,7 +2439,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00742">742</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00738">738</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ParamComponent_8cpp_source.html#l00068">Util::ParamComponent::echo()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -2517,7 +2517,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00762">762</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00758">758</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ParamComponent_8cpp_source.html#l00068">Util::ParamComponent::echo()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -2556,7 +2556,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00780">780</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00776">776</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -2634,7 +2634,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00792">792</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00788">788</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ParamComponent_8cpp_source.html#l00068">Util::ParamComponent::echo()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -2673,7 +2673,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00809">809</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00805">805</a> of file <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html">rpc/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -3161,7 +3161,7 @@ template&lt;int D&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 14 2025 16:24:05 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:29:27 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>
