@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
    </div>
   </td>
  </tr>
@@ -131,7 +131,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      }</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <span class="comment">// Normalize concentration </span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html#aa46ed95b8b11d31c485a63ec603016a0">VecOp::mulEqS</a>(cField_, prefactor);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html#aa8a4917af7cb8ef1d7abaff2d8a1daa8">VecOp::mulEqS</a>(cField_, prefactor);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>   }</div>
 </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
@@ -145,12 +145,12 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a30752567fd7b8b93e5c8476bbe8592c5"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">Util::ParamComposite::setClassName</a></div><div class="ttdeci">void setClassName(const char *className)</div><div class="ttdoc">Set class name string.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8cpp_source.html#l00379">ParamComposite.cpp:379</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_1_1Reduce_html_aaa9ec8c8b05b6474752129963eda8130"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda_1_1Reduce.html#aaa9ec8c8b05b6474752129963eda8130">Pscf::Prdc::Cuda::Reduce::sum</a></div><div class="ttdeci">cudaReal sum(DeviceArray&lt; cudaReal &gt; const &amp;in)</div><div class="ttdoc">Compute sum of array elements (GPU kernel wrapper).</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cu_source.html#l00480">Reduce.cu:480</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_1_1VecOp_html_a59a140a2129fe1866f0d5a5443c13b5c"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html#a59a140a2129fe1866f0d5a5443c13b5c">Pscf::Prdc::Cuda::VecOp::expVc</a></div><div class="ttdeci">void expVc(DeviceArray&lt; cudaReal &gt; &amp;a, DeviceArray&lt; cudaReal &gt; const &amp;b, cudaReal const c)</div><div class="ttdoc">Vector exponentiation w/ coefficient, a[i] = exp(b[i]*c), kernel wrapper.</div><div class="ttdef"><b>Definition</b> <a href="VecOpMisc_8cu_source.html#l00393">VecOpMisc.cu:393</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_1_1VecOp_html_aa46ed95b8b11d31c485a63ec603016a0"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html#aa46ed95b8b11d31c485a63ec603016a0">Pscf::Prdc::Cuda::VecOp::mulEqS</a></div><div class="ttdeci">void mulEqS(DeviceArray&lt; cudaReal &gt; &amp;a, cudaReal const b, const int beginIdA, const int n)</div><div class="ttdoc">Vector multiplication in-place, a[i] *= b, kernel wrapper (cudaReal).</div><div class="ttdef"><b>Definition</b> <a href="VecOp_8cu_source.html#l01875">VecOp.cu:1875</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_1_1VecOp_html_aa8a4917af7cb8ef1d7abaff2d8a1daa8"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html#aa8a4917af7cb8ef1d7abaff2d8a1daa8">Pscf::Prdc::Cuda::VecOp::mulEqS</a></div><div class="ttdeci">void mulEqS(DeviceArray&lt; cudaReal &gt; &amp;a, const cudaReal b, const int beginIdA, const int n)</div><div class="ttdoc">Vector multiplication in-place, a[i] *= b, kernel wrapper (cudaReal).</div><div class="ttdef"><b>Definition</b> <a href="VecOp_8cu_source.html#l01918">VecOp.cu:1918</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 28 2025 00:57:28 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:24:03 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

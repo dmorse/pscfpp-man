@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
    </div>
   </td>
  </tr>
@@ -140,7 +140,7 @@ class Util::FSArray&lt; T, N &gt;</div><p>A fixed capacity (static) contiguous a
 </p>
 <p>When compiled in debug mode (i.e., when NDEBUG is defined) the subcript operator [] checks that the index is less than the logical size, and not merely less than the capacity. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2System_8h_source.html#l00028">28</a> of file <a class="el" href="rpg_2System_8h_source.html">rpg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2System_8h_source.html#l00032">32</a> of file <a class="el" href="rpg_2System_8h_source.html">rpg/System.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a28374df579a3876bef32480e1207470d" name="a28374df579a3876bef32480e1207470d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a28374df579a3876bef32480e1207470d">&#9670;&#160;</a></span>FSArray() <span class="overload">[1/2]</span></h2>
@@ -471,7 +471,7 @@ template&lt;class Data , int Capacity&gt; </div>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00302">Pscf::Rpc::Block&lt; D &gt;::computeStress()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00456">Pscf::Rpg::Block&lt; D &gt;::computeStress()</a>, and <a class="el" href="UnitCellBase_8h_source.html#l00352">Pscf::Prdc::UnitCellBase&lt; D &gt;::parameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00644">Pscf::Rpc::Block&lt; D &gt;::computeStressBead()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00796">Pscf::Rpg::Block&lt; D &gt;::computeStressBead()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00567">Pscf::Rpc::Block&lt; D &gt;::computeStressThread()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00682">Pscf::Rpg::Block&lt; D &gt;::computeStressThread()</a>, <a class="el" href="UnitCellBase_8h_source.html#l00352">Pscf::Prdc::UnitCellBase&lt; D &gt;::parameters()</a>, <a class="el" href="replicateUnitCell_8cpp_source.html#l00023">Pscf::Prdc::replicateUnitCell()</a>, <a class="el" href="replicateUnitCell_8cpp_source.html#l00052">Pscf::Prdc::replicateUnitCell()</a>, and <a class="el" href="replicateUnitCell_8cpp_source.html#l00133">Pscf::Prdc::replicateUnitCell()</a>.</p>
 
 </div>
 </div>
@@ -503,6 +503,8 @@ template&lt;class Data , int Capacity&gt; </div>
 <p>Set logical size to zero. </p>
 
 <p class="definition">Definition at line <a class="el" href="FSArray_8h_source.html#l00271">271</a> of file <a class="el" href="FSArray_8h_source.html">FSArray.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00796">Pscf::Rpg::Block&lt; D &gt;::computeStressBead()</a>.</p>
 
 </div>
 </div>
@@ -648,7 +650,7 @@ template&lt;typename T , int N&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 28 2025 00:57:31 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:24:06 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

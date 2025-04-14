@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
    </div>
   </td>
  </tr>
@@ -73,16 +73,16 @@ $(function(){ initResizable(false); });
 <h1><a class="anchor" id="rpc_RealMove_algorithm_sec"></a>
 Step Algorithm</h1>
 <p>A general discussion of MC move algorithms for PS-FTS is given <a class="el" href="psfts_algorithm_page.html">here</a>. As discussed there, each move consists of an unconstrained change in the fields, followed by application of a compressor to re-impose the incompressibility constraint. The decision about whether to accept or reject the move is based on the value of the Hamiltonian after incompressibility has been restored.</p>
-<p>The <a class="el" href="classPscf_1_1Rpc_1_1RealMove.html" title="RealMove generates spatially uncorrelated random field changes.">RealMove</a> algorithm takes one parameter, denoted by stepsize in the parameter file. The unconstrained move changes each monomer field component by a random amount chosen from the range [-stepsize,+stepsize] with a uniform probability distribution.</p>
+<p>The <a class="el" href="classPscf_1_1Rpc_1_1RealMove.html" title="RealMove generates spatially uncorrelated random field changes.">RealMove</a> algorithm takes one parameter, denoted by sigma in the parameter file. The unconstrained move changes each monomer field component by a random amount chosen from the Gaussian distribution with zero mean and a standard deviation of a sigma.</p>
 <h1><a class="anchor" id="rpc_RealMove_parameter_sec"></a>
 Parameter File</h1>
-<p>The only parameter needed by this algorithm are the "probability" parameter, which determines the probability that a move of this type will be chosen on any step, and a required parameter named stepsize, as described above. A typical example of the contents of this is shown below. </p><div class="fragment"><div class="line">RealMove{</div>
+<p>The only parameter needed by this algorithm are the "probability" parameter, which determines the probability that a move of this type will be chosen on any step, and a required parameter named sigma, as described above. A typical example of the contents of this is shown below. </p><div class="fragment"><div class="line">RealMove{</div>
 <div class="line">  probability  0.05</div>
-<div class="line">  stepsize     0.005</div>
+<div class="line">  sigma     0.005</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> The parameter file format is thus: </p><div class="fragment"><div class="line">RealMove{</div>
 <div class="line">  probability  float (in range [0,1])</div>
-<div class="line">  stepsize     <span class="keywordtype">float</span></div>
+<div class="line">  sigma        <span class="keywordtype">float</span></div>
 <div class="line">}</div>
 </div><!-- fragment --><p> Meanings of both parameters are described briefly below: </p><table class="doxtable">
 <tr>
@@ -90,13 +90,13 @@ Parameter File</h1>
 <tr>
 <td>probability  </td><td>probability of attempting a step of this type   </td></tr>
 <tr>
-<td>stepsize  </td><td>Maximum field change magnitude for any monomer field   </td></tr>
+<td>sigma  </td><td>the standard deviation of the Gaussian distribution from which the step size is chosen   </td></tr>
 </table>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 28 2025 00:57:29 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:24:04 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

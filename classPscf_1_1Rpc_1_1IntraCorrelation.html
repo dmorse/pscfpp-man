@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
    </div>
   </td>
  </tr>
@@ -73,7 +73,7 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 
-<p>Base class for iterators that impose incompressibility.  
+<p>Intramolecular correlation analysis for LR compressors.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8h_source.html">IntraCorrelation.h</a>&gt;</code></p>
@@ -84,9 +84,13 @@ Inheritance diagram for Pscf::Rpc::IntraCorrelation&lt; D &gt;:</div>
   <img src="classPscf_1_1Rpc_1_1IntraCorrelation.png" usemap="#Pscf::Rpc::IntraCorrelation_3C_20D_20_3E_map" alt=""/>
   <map id="Pscf::Rpc::IntraCorrelation_3C_20D_20_3E_map" name="Pscf::Rpc::IntraCorrelation_3C_20D_20_3E_map">
 <area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="101,112,293,136"/>
+<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="505,112,697,136"/>
 <area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="101,56,293,80"/>
+<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="505,56,697,80"/>
 <area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="0,0,192,24"/>
 <area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="202,0,394,24"/>
+<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="404,0,596,24"/>
+<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="606,0,798,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -98,15 +102,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeb274ae04971cda5e7ba43f3b8a27b54" id="r_aeb274ae04971cda5e7ba43f3b8a27b54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb274ae04971cda5e7ba43f3b8a27b54">~IntraCorrelation</a> ()</td></tr>
 <tr class="memdesc:aeb274ae04971cda5e7ba43f3b8a27b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 <tr class="separator:aeb274ae04971cda5e7ba43f3b8a27b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73e0a49d5f78825f7bbd7ee13c1771fc" id="r_a73e0a49d5f78825f7bbd7ee13c1771fc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73e0a49d5f78825f7bbd7ee13c1771fc">computeDebye</a> (double x)</td></tr>
-<tr class="memdesc:a73e0a49d5f78825f7bbd7ee13c1771fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute Debye function.  <br /></td></tr>
-<tr class="separator:a73e0a49d5f78825f7bbd7ee13c1771fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab280cf6293d6080e3a88c3cb3ba01d2c" id="r_ab280cf6293d6080e3a88c3cb3ba01d2c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab280cf6293d6080e3a88c3cb3ba01d2c">computeIntraCorrelation</a> (double qSquare)</td></tr>
-<tr class="memdesc:ab280cf6293d6080e3a88c3cb3ba01d2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute intramolecular correlation at specific sqSquare.  <br /></td></tr>
-<tr class="separator:ab280cf6293d6080e3a88c3cb3ba01d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fd77bdc0ff793fbd9e8defea70d27d2" id="r_a8fd77bdc0ff793fbd9e8defea70d27d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fd77bdc0ff793fbd9e8defea70d27d2">computeIntraCorrelations</a> ()</td></tr>
-<tr class="memdesc:a8fd77bdc0ff793fbd9e8defea70d27d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute and return intramolecular correlations.  <br /></td></tr>
-<tr class="separator:a8fd77bdc0ff793fbd9e8defea70d27d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f0f1787bb26a3f4d258c309db7fe864" id="r_a3f0f1787bb26a3f4d258c309db7fe864"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f0f1787bb26a3f4d258c309db7fe864">computeIntraCorrelations</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp;correlations)</td></tr>
+<tr class="memdesc:a3f0f1787bb26a3f4d258c309db7fe864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute and modify intramolecular correlations.  <br /></td></tr>
+<tr class="separator:a3f0f1787bb26a3f4d258c309db7fe864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40e0dd041410f53486fc6b644fb0435" id="r_ae40e0dd041410f53486fc6b644fb0435"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae40e0dd041410f53486fc6b644fb0435">IntraCorrelation</a> (<a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a>&lt; D &gt; &amp;<a class="el" href="#a8e10c16e0cc41247989eae5b06368a56">system</a>)</td></tr>
+<tr class="memdesc:ae40e0dd041410f53486fc6b644fb0435"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="separator:ae40e0dd041410f53486fc6b644fb0435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb274ae04971cda5e7ba43f3b8a27b54" id="r_aeb274ae04971cda5e7ba43f3b8a27b54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb274ae04971cda5e7ba43f3b8a27b54">~IntraCorrelation</a> ()</td></tr>
+<tr class="memdesc:aeb274ae04971cda5e7ba43f3b8a27b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="separator:aeb274ae04971cda5e7ba43f3b8a27b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f0f1787bb26a3f4d258c309db7fe864" id="r_a3f0f1787bb26a3f4d258c309db7fe864"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f0f1787bb26a3f4d258c309db7fe864">computeIntraCorrelations</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp;correlations)</td></tr>
+<tr class="memdesc:a3f0f1787bb26a3f4d258c309db7fe864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute and modify intramolecular correlations.  <br /></td></tr>
+<tr class="separator:a3f0f1787bb26a3f4d258c309db7fe864"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classUtil_1_1ParamComposite"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classUtil_1_1ParamComposite')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComposite.html">Util::ParamComposite</a></td></tr>
 <tr class="memitem:a873eea7d2dbc19cde816d1bef602496c inherit pub_methods_classUtil_1_1ParamComposite" id="r_a873eea7d2dbc19cde816d1bef602496c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a873eea7d2dbc19cde816d1bef602496c">ParamComposite</a> ()</td></tr>
 <tr class="memdesc:a873eea7d2dbc19cde816d1bef602496c inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
@@ -366,6 +373,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a8e10c16e0cc41247989eae5b06368a56" id="r_a8e10c16e0cc41247989eae5b06368a56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e10c16e0cc41247989eae5b06368a56">system</a> ()</td></tr>
 <tr class="memdesc:a8e10c16e0cc41247989eae5b06368a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reference to parent system.  <br /></td></tr>
 <tr class="separator:a8e10c16e0cc41247989eae5b06368a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e10c16e0cc41247989eae5b06368a56" id="r_a8e10c16e0cc41247989eae5b06368a56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e10c16e0cc41247989eae5b06368a56">system</a> ()</td></tr>
+<tr class="memdesc:a8e10c16e0cc41247989eae5b06368a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reference to parent system.  <br /></td></tr>
+<tr class="separator:a8e10c16e0cc41247989eae5b06368a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classUtil_1_1ParamComposite"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classUtil_1_1ParamComposite')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUtil_1_1ParamComposite.html">Util::ParamComposite</a></td></tr>
 <tr class="memitem:a30752567fd7b8b93e5c8476bbe8592c5 inherit pro_methods_classUtil_1_1ParamComposite" id="r_a30752567fd7b8b93e5c8476bbe8592c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">setClassName</a> (const char *<a class="el" href="classUtil_1_1ParamComposite.html#a93e3a9fd3bd01dcc3c606a7bf3112c0e">className</a>)</td></tr>
 <tr class="memdesc:a30752567fd7b8b93e5c8476bbe8592c5 inherit pro_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set class name string.  <br /></td></tr>
@@ -440,12 +450,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
-class Pscf::Rpc::IntraCorrelation&lt; D &gt;</div><p>Base class for iterators that impose incompressibility. </p>
+class Pscf::Rpc::IntraCorrelation&lt; D &gt;</div><p>Intramolecular correlation analysis for LR compressors. </p>
 
 <p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2LrCompressor_8h_source.html#l00024">24</a> of file <a class="el" href="rpc_2fts_2compressor_2LrCompressor_8h_source.html">rpc/fts/compressor/LrCompressor.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae40e0dd041410f53486fc6b644fb0435" name="ae40e0dd041410f53486fc6b644fb0435"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae40e0dd041410f53486fc6b644fb0435">&#9670;&#160;</a></span>IntraCorrelation()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae40e0dd041410f53486fc6b644fb0435">&#9670;&#160;</a></span>IntraCorrelation() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -469,14 +479,14 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8tpp_source.html#l00025">25</a> of file <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8tpp_source.html">rpc/fts/compressor/intra/IntraCorrelation.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8tpp_source.html#l00026">26</a> of file <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8tpp_source.html">rpc/fts/compressor/intra/IntraCorrelation.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>.</p>
 
 </div>
 </div>
 <a id="aeb274ae04971cda5e7ba43f3b8a27b54" name="aeb274ae04971cda5e7ba43f3b8a27b54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb274ae04971cda5e7ba43f3b8a27b54">&#9670;&#160;</a></span>~IntraCorrelation()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb274ae04971cda5e7ba43f3b8a27b54">&#9670;&#160;</a></span>~IntraCorrelation() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -494,13 +504,12 @@ template&lt;int D&gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8tpp_source.html#l00032">32</a> of file <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8tpp_source.html">rpc/fts/compressor/intra/IntraCorrelation.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8tpp_source.html#l00033">33</a> of file <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8tpp_source.html">rpc/fts/compressor/intra/IntraCorrelation.tpp</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a73e0a49d5f78825f7bbd7ee13c1771fc" name="a73e0a49d5f78825f7bbd7ee13c1771fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73e0a49d5f78825f7bbd7ee13c1771fc">&#9670;&#160;</a></span>computeDebye()</h2>
+<a id="ae40e0dd041410f53486fc6b644fb0435" name="ae40e0dd041410f53486fc6b644fb0435"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae40e0dd041410f53486fc6b644fb0435">&#9670;&#160;</a></span>IntraCorrelation() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -508,22 +517,26 @@ template&lt;int D&gt; </div>
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">double <a class="el" href="classPscf_1_1Rpc_1_1IntraCorrelation.html">Pscf::Rpc::IntraCorrelation</a>&lt; D &gt;::computeDebye </td>
+          <td class="memname"><a class="el" href="classPscf_1_1Rpc_1_1IntraCorrelation.html">Pscf::Rpc::IntraCorrelation</a>&lt; D &gt;::IntraCorrelation </td>
           <td>(</td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a>&lt; D &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>system</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Compute Debye function. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8tpp_source.html#l00036">36</a> of file <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8tpp_source.html">rpc/fts/compressor/intra/IntraCorrelation.tpp</a>.</p>
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">system</td><td>parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class for SCFT or PS-FTS simulation of one system.">System</a> object </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="ab280cf6293d6080e3a88c3cb3ba01d2c" name="ab280cf6293d6080e3a88c3cb3ba01d2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab280cf6293d6080e3a88c3cb3ba01d2c">&#9670;&#160;</a></span>computeIntraCorrelation()</h2>
+<a id="aeb274ae04971cda5e7ba43f3b8a27b54" name="aeb274ae04971cda5e7ba43f3b8a27b54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb274ae04971cda5e7ba43f3b8a27b54">&#9670;&#160;</a></span>~IntraCorrelation() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -531,32 +544,7 @@ template&lt;int D&gt; </div>
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">double <a class="el" href="classPscf_1_1Rpc_1_1IntraCorrelation.html">Pscf::Rpc::IntraCorrelation</a>&lt; D &gt;::computeIntraCorrelation </td>
-          <td>(</td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>qSquare</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Compute intramolecular correlation at specific sqSquare. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8tpp_source.html#l00046">46</a> of file <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8tpp_source.html">rpc/fts/compressor/intra/IntraCorrelation.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="PolymerTmpl_8h_source.html#l00260">Pscf::PolymerTmpl&lt; Block &gt;::length()</a>, <a class="el" href="PolymerTmpl_8h_source.html#l00246">Pscf::PolymerTmpl&lt; Block &gt;::nBlock()</a>, <a class="el" href="Species_8h_source.html#l00090">Pscf::Species::phi()</a>, <a class="el" href="PolymerTmpl_8h_source.html#l00336">Pscf::PolymerTmpl&lt; Block &gt;::type()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-</div>
-</div>
-<a id="a8fd77bdc0ff793fbd9e8defea70d27d2" name="a8fd77bdc0ff793fbd9e8defea70d27d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fd77bdc0ff793fbd9e8defea70d27d2">&#9670;&#160;</a></span>computeIntraCorrelations()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; <a class="el" href="classPscf_1_1Rpc_1_1IntraCorrelation.html">Pscf::Rpc::IntraCorrelation</a>&lt; D &gt;::computeIntraCorrelations </td>
+          <td class="memname"><a class="el" href="classPscf_1_1Rpc_1_1IntraCorrelation.html">Pscf::Rpc::IntraCorrelation</a>&lt; D &gt;::~<a class="el" href="classPscf_1_1Rpc_1_1IntraCorrelation.html">IntraCorrelation</a> </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -564,16 +552,44 @@ template&lt;int D&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Compute and return intramolecular correlations. </p>
+<p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8tpp_source.html#l00085">85</a> of file <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8tpp_source.html">rpc/fts/compressor/intra/IntraCorrelation.tpp</a>.</p>
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3f0f1787bb26a3f4d258c309db7fe864" name="a3f0f1787bb26a3f4d258c309db7fe864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f0f1787bb26a3f4d258c309db7fe864">&#9670;&#160;</a></span>computeIntraCorrelations() <span class="overload">[1/2]</span></h2>
 
-<p class="reference">References <a class="el" href="cpu_2RField_8tpp_source.html#l00094">Pscf::Prdc::Cpu::RField&lt; D &gt;::allocate()</a>, <a class="el" href="MeshIterator_8h_source.html#l00141">Pscf::MeshIterator&lt; D &gt;::atEnd()</a>, <a class="el" href="MeshIterator_8tpp_source.html#l00061">Pscf::MeshIterator&lt; D &gt;::begin()</a>, <a class="el" href="UnitCellBase_8h_source.html#l00466">Pscf::Prdc::UnitCellBase&lt; D &gt;::ksq()</a>, <a class="el" href="MeshIterator_8h_source.html#l00122">Pscf::MeshIterator&lt; D &gt;::position()</a>, <a class="el" href="MeshIterator_8h_source.html#l00136">Pscf::MeshIterator&lt; D &gt;::rank()</a>, and <a class="el" href="MeshIterator_8tpp_source.html#l00042">Pscf::MeshIterator&lt; D &gt;::setDimensions()</a>.</p>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int D&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPscf_1_1Rpc_1_1IntraCorrelation.html">Pscf::Rpc::IntraCorrelation</a>&lt; D &gt;::computeIntraCorrelations </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>correlations</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute and modify intramolecular correlations. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">correlations</td><td>k-space grid of omega values </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8tpp_source.html#l00038">38</a> of file <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8tpp_source.html">rpc/fts/compressor/intra/IntraCorrelation.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; T &gt;::allocate()</a>, <a class="el" href="MeshIterator_8h_source.html#l00141">Pscf::MeshIterator&lt; D &gt;::atEnd()</a>, <a class="el" href="EdgeIterator_8cpp_source.html#l00033">Pscf::EdgeIterator::begin()</a>, <a class="el" href="MeshIterator_8tpp_source.html#l00061">Pscf::MeshIterator&lt; D &gt;::begin()</a>, <a class="el" href="PolymerTmpl_8h_source.html#l00234">Pscf::PolymerTmpl&lt; Block &gt;::block()</a>, <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="EdgeIterator_8cpp_source.html#l00120">Pscf::EdgeIterator::currentEdgeId()</a>, <a class="el" href="Debye_8cpp_source.html#l00017">Pscf::Debye::d()</a>, <a class="el" href="Debye_8cpp_source.html#l00032">Pscf::Debye::e()</a>, <a class="el" href="UnitCellBase_8h_source.html#l00466">Pscf::Prdc::UnitCellBase&lt; D &gt;::ksq()</a>, <a class="el" href="Monomer_8h_source.html#l00131">Pscf::Monomer::kuhn()</a>, <a class="el" href="Edge_8h_source.html#l00360">Pscf::Rpc::Block&lt; D &gt;::length()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00217">Pscf::MixtureTmpl&lt; TP, TS &gt;::monomer()</a>, <a class="el" href="Edge_8h_source.html#l00324">Pscf::Rpc::Block&lt; D &gt;::monomerId()</a>, <a class="el" href="PolymerSpecies_8h_source.html#l00264">Pscf::PolymerTmpl&lt; Block &gt;::nBlock()</a>, <a class="el" href="EdgeIterator_8cpp_source.html#l00140">Pscf::EdgeIterator::notEnd()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00205">Pscf::MixtureTmpl&lt; TP, TS &gt;::nPolymer()</a>, <a class="el" href="Species_8h_source.html#l00090">Pscf::Rpc::Polymer&lt; D &gt;::phi()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00231">Pscf::MixtureTmpl&lt; TP, TS &gt;::polymer()</a>, <a class="el" href="MeshIterator_8h_source.html#l00122">Pscf::MeshIterator&lt; D &gt;::position()</a>, <a class="el" href="MeshIterator_8h_source.html#l00136">Pscf::MeshIterator&lt; D &gt;::rank()</a>, <a class="el" href="MeshIterator_8tpp_source.html#l00042">Pscf::MeshIterator&lt; D &gt;::setDimensions()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="MixtureTmpl_8h_source.html#l00259">Pscf::MixtureTmpl&lt; TP, TS &gt;::vMonomer()</a>.</p>
 
 </div>
 </div>
 <a id="a8e10c16e0cc41247989eae5b06368a56" name="a8e10c16e0cc41247989eae5b06368a56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e10c16e0cc41247989eae5b06368a56">&#9670;&#160;</a></span>system()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e10c16e0cc41247989eae5b06368a56">&#9670;&#160;</a></span>system() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -599,20 +615,78 @@ template&lt;int D&gt; </div>
 
 <p>Return reference to parent system. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8h_source.html#l00085">85</a> of file <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8h_source.html">rpc/fts/compressor/intra/IntraCorrelation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8h_source.html#l00077">77</a> of file <a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8h_source.html">rpc/fts/compressor/intra/IntraCorrelation.h</a>.</p>
+
+</div>
+</div>
+<a id="a3f0f1787bb26a3f4d258c309db7fe864" name="a3f0f1787bb26a3f4d258c309db7fe864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f0f1787bb26a3f4d258c309db7fe864">&#9670;&#160;</a></span>computeIntraCorrelations() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int D&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPscf_1_1Rpc_1_1IntraCorrelation.html">Pscf::Rpc::IntraCorrelation</a>&lt; D &gt;::computeIntraCorrelations </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>correlations</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute and modify intramolecular correlations. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">correlations</td><td>k-space grid of omega values </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8e10c16e0cc41247989eae5b06368a56" name="a8e10c16e0cc41247989eae5b06368a56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e10c16e0cc41247989eae5b06368a56">&#9670;&#160;</a></span>system() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1Rpc_1_1IntraCorrelation.html">Pscf::Rpc::IntraCorrelation</a>&lt; D &gt;::system </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return reference to parent system. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8h_source.html">rpc/fts/compressor/intra/IntraCorrelation.h</a></li>
+<li><a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation__new_8h_source.html">rpc/fts/compressor/intra/IntraCorrelation_new.h</a></li>
 <li><a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8h_source.html">rpc/fts/compressor/LrAmCompressor.h</a></li>
 <li><a class="el" href="rpc_2fts_2compressor_2LrCompressor_8h_source.html">rpc/fts/compressor/LrCompressor.h</a></li>
 <li><a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation_8tpp_source.html">rpc/fts/compressor/intra/IntraCorrelation.tpp</a></li>
+<li><a class="el" href="rpc_2fts_2compressor_2intra_2IntraCorrelation__new_8tpp_source.html">rpc/fts/compressor/intra/IntraCorrelation_new.tpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 28 2025 00:57:30 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:24:05 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

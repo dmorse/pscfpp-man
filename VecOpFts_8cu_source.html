@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
    </div>
   </td>
  </tr>
@@ -190,7 +190,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                      <a class="code hl_class" href="classPscf_1_1DeviceArray.html">DeviceArray&lt;cudaReal&gt;</a> <span class="keyword">const</span> &amp; Cc, </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                      cudaReal <span class="keyword">const</span> a, cudaReal <span class="keyword">const</span> b, cudaReal <span class="keyword">const</span> s)</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>   {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> n = d.<a class="code hl_function" href="classPscf_1_1DeviceArray.html#aac902e929dc8df89b772d712aa7b7bca">capacity</a>();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> n = d.capacity();</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(Wc.<a class="code hl_function" href="classPscf_1_1DeviceArray.html#aac902e929dc8df89b772d712aa7b7bca">capacity</a>() == n);</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(Cc.<a class="code hl_function" href="classPscf_1_1DeviceArray.html#aac902e929dc8df89b772d712aa7b7bca">capacity</a>() == n);</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      </div>
@@ -199,7 +199,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      <a class="code hl_function" href="group__Pscf__Cuda__ThreadArray__Module.html#ga47b23c66ac782926241441c86e1c95ee">ThreadArray::setThreadsLogical</a>(n, nBlocks, nThreads);</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      <span class="comment">// Launch kernel</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      _computeDField&lt;&lt;&lt;nBlocks, nThreads&gt;&gt;&gt;(d.<a class="code hl_function" href="classPscf_1_1DeviceArray.html#aedc681c6110fffabf4d72160619d0d45">cArray</a>(), Wc.<a class="code hl_function" href="classPscf_1_1DeviceArray.html#aedc681c6110fffabf4d72160619d0d45">cArray</a>(), </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      _computeDField&lt;&lt;&lt;nBlocks, nThreads&gt;&gt;&gt;(d.cArray(), Wc.<a class="code hl_function" href="classPscf_1_1DeviceArray.html#aedc681c6110fffabf4d72160619d0d45">cArray</a>(), </div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                                            Cc.<a class="code hl_function" href="classPscf_1_1DeviceArray.html#aedc681c6110fffabf4d72160619d0d45">cArray</a>(), a, b, s, n);</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>   }</div>
 </div>
@@ -233,7 +233,7 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>}</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>}</div>
-<div class="ttc" id="aclassPscf_1_1DeviceArray_html"><div class="ttname"><a href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a></div><div class="ttdoc">Dynamic array on the GPU device with aligned data.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2System_8h_source.html#l00032">rpg/System.h:32</a></div></div>
+<div class="ttc" id="aclassPscf_1_1DeviceArray_html"><div class="ttname"><a href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a></div><div class="ttdoc">Dynamic array on the GPU device with aligned data.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2System_8h_source.html#l00036">rpg/System.h:36</a></div></div>
 <div class="ttc" id="aclassPscf_1_1DeviceArray_html_aac902e929dc8df89b772d712aa7b7bca"><div class="ttname"><a href="classPscf_1_1DeviceArray.html#aac902e929dc8df89b772d712aa7b7bca">Pscf::DeviceArray::capacity</a></div><div class="ttdeci">int capacity() const</div><div class="ttdoc">Return allocated capacity.</div><div class="ttdef"><b>Definition</b> <a href="DeviceArray_8h_source.html#l00460">DeviceArray.h:460</a></div></div>
 <div class="ttc" id="aclassPscf_1_1DeviceArray_html_aedc681c6110fffabf4d72160619d0d45"><div class="ttname"><a href="classPscf_1_1DeviceArray.html#aedc681c6110fffabf4d72160619d0d45">Pscf::DeviceArray::cArray</a></div><div class="ttdeci">Data * cArray()</div><div class="ttdoc">Return pointer to underlying C array.</div><div class="ttdef"><b>Definition</b> <a href="DeviceArray_8h_source.html#l00412">DeviceArray.h:412</a></div></div>
 <div class="ttc" id="aglobal_8h_html_aaf3bc07accafc94019d126e4cffa81e7"><div class="ttname"><a href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a></div><div class="ttdeci">#define UTIL_CHECK(condition)</div><div class="ttdoc">Assertion macro suitable for serial or parallel production code.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00068">global.h:68</a></div></div>
@@ -246,7 +246,7 @@ $(function(){ initResizable(false); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 28 2025 00:57:28 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:24:03 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

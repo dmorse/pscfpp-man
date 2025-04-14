@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
    </div>
   </td>
  </tr>
@@ -183,22 +183,25 @@ class Pscf::Prdc::UnitCell&lt; D &gt;</div><p>Base template for UnitCell&lt;D&gt
 <p>Each explicit specialization UnitCell&lt;D&gt; has a member variable of type UnitCell&lt;D&gt;::LatticeSystem, the value of which is returned by a function named lattice(). The value of the lattice variable is initialized to an enumeration value named Null, which denotes unknown or uninitialized. This variable may only be set once. Any attempt to reset the lattice type to a different non-null after it has been set will cause an Exception to be thrown and program execution to halt. Each UnitCell&lt;D&gt; object may thus only be used to represent one lattice type during its lifetime.</p>
 <p>A template defines iostream inserter (&lt;&lt;) and extractor (&gt;&gt;) operators each explicit specializations of UnitCell&lt;D&gt;, allowing a UnitCell&lt;D&gt; to be read from or written to file like a primitive variable. The text representation for a UnitCell&lt;D&gt; contains a text representation of the LatticeSystem&lt;D&gt; enumeration (i.e., the unit cell type) and a list of one or more unit cell parameters (lengths and angles), as described <a class="el" href="scft_unitcell_page.html">here</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2System_8h_source.html#l00034">34</a> of file <a class="el" href="rpg_2System_8h_source.html">rpg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2System_8h_source.html#l00038">38</a> of file <a class="el" href="rpg_2System_8h_source.html">rpg/System.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="Basis_8h_source.html">Basis.h</a></li>
+<li><a class="el" href="replicateUnitCell_8h_source.html">replicateUnitCell.h</a></li>
 <li><a class="el" href="UnitCell_8h_source.html">UnitCell.h</a></li>
 <li><a class="el" href="fieldIoUtil_8h_source.html">fieldIoUtil.h</a></li>
 <li><a class="el" href="rpc_2field_2FieldIo_8h_source.html">rpc/field/FieldIo.h</a></li>
 <li><a class="el" href="rpc_2solvers_2Block_8h_source.html">rpc/solvers/Block.h</a></li>
 <li><a class="el" href="rpc_2System_8h_source.html">rpc/System.h</a></li>
 <li><a class="el" href="rpg_2field_2FieldIo_8h_source.html">rpg/field/FieldIo.h</a></li>
+<li><a class="el" href="rpg_2solvers_2Block_8h_source.html">rpg/solvers/Block.h</a></li>
+<li><a class="el" href="rpg_2solvers_2Mixture_8h_source.html">rpg/solvers/Mixture.h</a></li>
 <li><a class="el" href="rpg_2solvers_2Polymer_8h_source.html">rpg/solvers/Polymer.h</a></li>
 <li><a class="el" href="rpg_2System_8h_source.html">rpg/System.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 28 2025 00:57:29 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:24:04 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

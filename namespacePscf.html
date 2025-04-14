@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
    </div>
   </td>
  </tr>
@@ -74,8 +74,14 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePscf_1_1Debye.html">Debye</a></td></tr>
+<tr class="memdesc:namespacePscf_1_1Debye"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions used to compute intramolecular correlation functions. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePscf_1_1Homogeneous.html">Homogeneous</a></td></tr>
 <tr class="memdesc:namespacePscf_1_1Homogeneous"><td class="mdescLeft">&#160;</td><td class="mdescRight">Properties of spatially homogeneous mixtures (Flory-Huggins theory). <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePscf_1_1PolymerModel.html">PolymerModel</a></td></tr>
+<tr class="memdesc:namespacePscf_1_1PolymerModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration and functions to specify a model for polymer chains. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePscf_1_1Prdc.html">Prdc</a></td></tr>
 <tr class="memdesc:namespacePscf_1_1Prdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Periodic fields and crystallography. <br /></td></tr>
@@ -104,17 +110,20 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html">AmIteratorTmpl</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template for Anderson mixing iterator algorithm.  <a href="classPscf_1_1AmIteratorTmpl.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1BlockDescriptor.html">BlockDescriptor</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Description of a linear homopolymer block within a block polymer.  <a href="classPscf_1_1BlockDescriptor.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1BlockTmpl.html">BlockTmpl</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class template for a block in a block copolymer.  <a href="classPscf_1_1BlockTmpl.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class template for a block solver in a block copolymer.  <a href="classPscf_1_1BlockTmpl.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1CudaRandom.html">CudaRandom</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Random number generator on GPU.  <a href="classPscf_1_1CudaRandom.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic array on the GPU device with aligned data.  <a href="classPscf_1_1DeviceArray.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Edge.html">Edge</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descriptor for a block within an acyclic block polymer.  <a href="classPscf_1_1Edge.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1EdgeIterator.html">EdgeIterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within an acyclic block polymer.">Edge</a> iterator for graph associated with a polymer.  <a href="classPscf_1_1EdgeIterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1FieldComparison.html">FieldComparison</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparison of element-by-element differences between field arrays.  <a href="classPscf_1_1FieldComparison.html#details">More...</a><br /></td></tr>
@@ -161,8 +170,11 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPscf_1_1ParameterType.html">ParameterType</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declaration of a specialized sweep parameter type.  <a href="structPscf_1_1ParameterType.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PolymerSpecies.html">PolymerSpecies</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descriptor for a linear or acyclic branched block polymer.  <a href="classPscf_1_1PolymerSpecies.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PolymerTmpl.html">PolymerTmpl</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descriptor and MDE solver for an acyclic block polymer.  <a href="classPscf_1_1PolymerTmpl.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descriptor and MDE solver for a block polymer.  <a href="classPscf_1_1PolymerTmpl.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPscf_1_1PolymerType.html">PolymerType</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct containing an enumeration of polymer structure types.  <a href="structPscf_1_1PolymerType.html#details">More...</a><br /></td></tr>
@@ -173,8 +185,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1RealVec.html">RealVec</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A RealVec&lt;D, T&gt; is D-component vector with elements of floating type T.  <a href="classPscf_1_1RealVec.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventDescriptor.html">SolventDescriptor</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descriptor for a solvent species.  <a href="classPscf_1_1SolventDescriptor.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventSpecies.html">SolventSpecies</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descriptor for a solvent species.  <a href="classPscf_1_1SolventSpecies.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html">Species</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for a molecular species (polymer or solvent).  <a href="classPscf_1_1Species.html#details">More...</a><br /></td></tr>
@@ -191,15 +203,18 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Vertex.html">Vertex</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A junction or chain end in a block polymer.  <a href="classPscf_1_1Vertex.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1VertexIterator.html">VertexIterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Vertex.html" title="A junction or chain end in a block polymer.">Vertex</a> iterator for graph associated with a polymer.  <a href="classPscf_1_1VertexIterator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af3acfd9252c655770b47d1ca2428fc09" id="r_af3acfd9252c655770b47d1ca2428fc09"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3acfd9252c655770b47d1ca2428fc09">operator&gt;&gt;</a> (std::istream &amp;in, <a class="el" href="classPscf_1_1BlockDescriptor.html">BlockDescriptor</a> &amp;block)</td></tr>
-<tr class="memdesc:af3acfd9252c655770b47d1ca2428fc09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input stream extractor (&gt;&gt;) for a <a class="el" href="classPscf_1_1BlockDescriptor.html" title="Description of a linear homopolymer block within a block polymer.">BlockDescriptor</a>.  <br /></td></tr>
-<tr class="separator:af3acfd9252c655770b47d1ca2428fc09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88b8ef9e5aea5ecfa0a459d59a1cb6e4" id="r_a88b8ef9e5aea5ecfa0a459d59a1cb6e4"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88b8ef9e5aea5ecfa0a459d59a1cb6e4">operator&lt;&lt;</a> (std::ostream &amp;out, <a class="el" href="classPscf_1_1BlockDescriptor.html">BlockDescriptor</a> const &amp;block)</td></tr>
-<tr class="memdesc:a88b8ef9e5aea5ecfa0a459d59a1cb6e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output stream inserter (&lt;&lt;) for a <a class="el" href="classPscf_1_1BlockDescriptor.html" title="Description of a linear homopolymer block within a block polymer.">BlockDescriptor</a>.  <br /></td></tr>
-<tr class="separator:a88b8ef9e5aea5ecfa0a459d59a1cb6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9501f4957b266277a07af8e8693a59a4" id="r_a9501f4957b266277a07af8e8693a59a4"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9501f4957b266277a07af8e8693a59a4">operator&gt;&gt;</a> (std::istream &amp;in, <a class="el" href="classPscf_1_1Edge.html">Edge</a> &amp;block)</td></tr>
+<tr class="memdesc:a9501f4957b266277a07af8e8693a59a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input stream extractor (&gt;&gt;) for a <a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within an acyclic block polymer.">Edge</a>.  <br /></td></tr>
+<tr class="separator:a9501f4957b266277a07af8e8693a59a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fba11dd48363739f564dbd469d52771" id="r_a0fba11dd48363739f564dbd469d52771"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fba11dd48363739f564dbd469d52771">operator&lt;&lt;</a> (std::ostream &amp;out, <a class="el" href="classPscf_1_1Edge.html">Edge</a> const &amp;block)</td></tr>
+<tr class="memdesc:a0fba11dd48363739f564dbd469d52771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output stream inserter (&lt;&lt;) for a <a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within an acyclic block polymer.">Edge</a>.  <br /></td></tr>
+<tr class="separator:a0fba11dd48363739f564dbd469d52771"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a515f7a297b210bec7f3cd4df8c1c130e" id="r_a515f7a297b210bec7f3cd4df8c1c130e"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a515f7a297b210bec7f3cd4df8c1c130e">operator&gt;&gt;</a> (std::istream &amp;in, <a class="el" href="classPscf_1_1Monomer.html">Monomer</a> &amp;monomer)</td></tr>
 <tr class="memdesc:a515f7a297b210bec7f3cd4df8c1c130e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream extractor (&gt;&gt;) for a <a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer type.">Monomer</a>.  <br /></td></tr>
 <tr class="separator:a515f7a297b210bec7f3cd4df8c1c130e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,9 +224,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga4ea417249f78b9c12fda1dfdfe61dcd1" id="r_ga4ea417249f78b9c12fda1dfdfe61dcd1"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pscf__Chem__Module.html#ga4ea417249f78b9c12fda1dfdfe61dcd1">operator&gt;&gt;</a> (std::istream &amp;in, PolymerType::Enum &amp;type)</td></tr>
 <tr class="memdesc:ga4ea417249f78b9c12fda1dfdfe61dcd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input stream extractor for a PolymerType::Enum enumeration.  <br /></td></tr>
 <tr class="separator:ga4ea417249f78b9c12fda1dfdfe61dcd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaea1e63aed19666adf11022457696501f" id="r_gaea1e63aed19666adf11022457696501f"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pscf__Chem__Module.html#gaea1e63aed19666adf11022457696501f">operator&lt;&lt;</a> (std::ostream &amp;out, PolymerType::Enum &amp;type)</td></tr>
-<tr class="memdesc:gaea1e63aed19666adf11022457696501f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input stream extractor for a PolymerType::Enum enumeration.  <br /></td></tr>
-<tr class="separator:gaea1e63aed19666adf11022457696501f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaabad59c6552ede921e5b93c538049bbd" id="r_gaabad59c6552ede921e5b93c538049bbd"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pscf__Chem__Module.html#gaabad59c6552ede921e5b93c538049bbd">operator&lt;&lt;</a> (std::ostream &amp;out, PolymerType::Enum const  &amp;type)</td></tr>
+<tr class="memdesc:gaabad59c6552ede921e5b93c538049bbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output stream extractor for a PolymerType::Enum enumeration.  <br /></td></tr>
+<tr class="separator:gaabad59c6552ede921e5b93c538049bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6f09562c22095c94fc893b87bace92da" id="r_ga6f09562c22095c94fc893b87bace92da"><td class="memTemplParams" colspan="2">template&lt;class Archive &gt; </td></tr>
 <tr class="memitem:ga6f09562c22095c94fc893b87bace92da"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__Pscf__Chem__Module.html#ga6f09562c22095c94fc893b87bace92da">serialize</a> (Archive &amp;ar, PolymerType::Enum &amp;data, const unsigned int version)</td></tr>
 <tr class="memdesc:ga6f09562c22095c94fc893b87bace92da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize a PolymerType::Enum enumeration.  <br /></td></tr>
@@ -659,8 +674,8 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>PSCF package top-level namespace. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="af3acfd9252c655770b47d1ca2428fc09" name="af3acfd9252c655770b47d1ca2428fc09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3acfd9252c655770b47d1ca2428fc09">&#9670;&#160;</a></span>operator&gt;&gt;() <span class="overload">[1/7]</span></h2>
+<a id="a9501f4957b266277a07af8e8693a59a4" name="a9501f4957b266277a07af8e8693a59a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9501f4957b266277a07af8e8693a59a4">&#9670;&#160;</a></span>operator&gt;&gt;() <span class="overload">[1/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -673,30 +688,35 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1BlockDescriptor.html">BlockDescriptor</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>block</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1Edge.html">Edge</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>block</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Input stream extractor (&gt;&gt;) for a <a class="el" href="classPscf_1_1BlockDescriptor.html" title="Description of a linear homopolymer block within a block polymer.">BlockDescriptor</a>. </p>
-<p>Different text representations are used for linear and branched polymers, based on the value of the polymerType enumeratin value. Text representation for a branched polymer is: </p><div class="fragment"><div class="line">monomerId length vertexId(0) vertexid(1)</div>
-</div><!-- fragment --><p> The vertex ids are omitted from the text representation for a linear polymer, because the vertex ids for a linear polymer must be equal to id and id + 1, where id denotes the block id.</p>
-<p>The polymerType must be set before a <a class="el" href="classPscf_1_1BlockDescriptor.html" title="Description of a linear homopolymer block within a block polymer.">BlockDescriptor</a> can be read from a stream. The block id must be set explicitly by calling setId, rather than read from an istream. <a class="el" href="classPscf_1_1Vertex.html" title="A junction or chain end in a block polymer.">Vertex</a> id values for blocks in a linear polymer must be set explicitly by calling setVertexIds with consecutive values, as done in the function <a class="el" href="classPscf_1_1PolymerTmpl.html#a073d3ff2294ca1fa5dc34274cc6cb3e2" title="Read and initialize.">Pscf::PolymerTmpl::readParameters</a>.</p>
+<p>Input stream extractor (&gt;&gt;) for a <a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within an acyclic block polymer.">Edge</a>. </p>
+<p>The polymerType must be set before an <a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within an acyclic block polymer.">Edge</a> can be read from a stream. The block id must be set explicitly by calling setId, and are not read from an istream. <a class="el" href="classPscf_1_1Vertex.html" title="A junction or chain end in a block polymer.">Vertex</a> id values for blocks in a linear polymer must be set explicitly by calling setVertexIds with consecutive values, as done in the function <a class="el" href="classPscf_1_1PolymerTmpl.html#a073d3ff2294ca1fa5dc34274cc6cb3e2" title="Read and initialize.">Pscf::PolymerTmpl::readParameters</a>.</p>
+<p>Different text representations are used for bead and thread models, and for linear and branched polymers:</p>
+<p>Thread model:</p>
+<p>In the thread model, if <a class="el" href="namespacePscf_1_1PolymerModel.html#a808c2831a6584875c7ec72c9d415e88e" title="Is the global polymer model a thread model ?">PolymerModel::isThread()</a>, the text representation of an <a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within an acyclic block polymer.">Edge</a> for a branched polymer is: </p><div class="fragment"><div class="line">monomerId length vertexId(0) vertexid(1)</div>
+</div><!-- fragment --><p> Here, length is a floating point number. For a linear polymer in the thread model, the vertex ids are omitted, because the vertex ids for block id of linear polymer must be equal to id and id + 1.</p>
+<p>Bead model:</p>
+<p>In the bead model, if <a class="el" href="namespacePscf_1_1PolymerModel.html#af5c7a9c517a218fe8198b2a48c45a1ab" title="Is the global polymer model a discrete bead-spring model ?">PolymerModel::isBead()</a>, the text representation for a branched polymer is: </p><div class="fragment"><div class="line">monomerId nBead vertexId(0) vertexid(1) ownsVertex(0) ownsVertex(1)</div>
+</div><!-- fragment --><p> Here, nBead is the integer number of beads in the chain, while ownsVertex(0) and ownsVertex(1) are boolean variables (0 or 1) that indicate whether the block owns vertex 0 and 1, respecively. The corresponding text representation for a bead-spring linear chain omits both the vertex ids and the ownsVertex flags, because values of these are set by convention. In a linear bead-spring polymer, vertex ids for block number id are id and id+1, ownsVertex(1) == 1, while ownsVertex(0) == 1 for the first block (id = 0) and ownsVertex(0) = 0 for all other blocks (id &gt; 0).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">in</td><td>input stream </td></tr>
-    <tr><td class="paramname">block</td><td><a class="el" href="classPscf_1_1BlockDescriptor.html" title="Description of a linear homopolymer block within a block polymer.">BlockDescriptor</a> to be read from stream </td></tr>
+    <tr><td class="paramname">block</td><td><a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within an acyclic block polymer.">Edge</a> to be read from stream </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>modified input stream </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BlockDescriptor_8cpp_source.html#l00070">70</a> of file <a class="el" href="BlockDescriptor_8cpp_source.html">BlockDescriptor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Edge_8cpp_source.html#l00093">93</a> of file <a class="el" href="Edge_8cpp_source.html">Edge.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a88b8ef9e5aea5ecfa0a459d59a1cb6e4" name="a88b8ef9e5aea5ecfa0a459d59a1cb6e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88b8ef9e5aea5ecfa0a459d59a1cb6e4">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/7]</span></h2>
+<a id="a0fba11dd48363739f564dbd469d52771" name="a0fba11dd48363739f564dbd469d52771"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fba11dd48363739f564dbd469d52771">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -709,23 +729,23 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1BlockDescriptor.html">BlockDescriptor</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>block</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1Edge.html">Edge</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>block</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Output stream inserter (&lt;&lt;) for a <a class="el" href="classPscf_1_1BlockDescriptor.html" title="Description of a linear homopolymer block within a block polymer.">BlockDescriptor</a>. </p>
+<p>Output stream inserter (&lt;&lt;) for a <a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within an acyclic block polymer.">Edge</a>. </p>
 <p>Different text representations are used for linear and branched polymers, as discussed in documentation for the stream extractor (&gt;&gt;) operator. <a class="el" href="classPscf_1_1Vertex.html" title="A junction or chain end in a block polymer.">Vertex</a> ids are output only for blocks of branched polymers.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">out</td><td>output stream </td></tr>
-    <tr><td class="paramname">block</td><td><a class="el" href="classPscf_1_1BlockDescriptor.html" title="Description of a linear homopolymer block within a block polymer.">BlockDescriptor</a> to be written to stream </td></tr>
+    <tr><td class="paramname">block</td><td><a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within an acyclic block polymer.">Edge</a> to be written to stream </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>modified output stream </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BlockDescriptor_8cpp_source.html#l00084">84</a> of file <a class="el" href="BlockDescriptor_8cpp_source.html">BlockDescriptor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Edge_8cpp_source.html#l00122">122</a> of file <a class="el" href="Edge_8cpp_source.html">Edge.cpp</a>.</p>
 
 </div>
 </div>
@@ -903,7 +923,7 @@ template&lt;class Archive &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Species_8h_source.html#l00133">133</a> of file <a class="el" href="Species_8h_source.html">Species.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Species_8h_source.html#l00139">139</a> of file <a class="el" href="Species_8h_source.html">Species.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00059">Util::serializeEnum()</a>.</p>
 
@@ -1685,7 +1705,7 @@ template&lt;int D&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 28 2025 00:57:29 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:24:04 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

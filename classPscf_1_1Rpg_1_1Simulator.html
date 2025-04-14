@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
    </div>
   </td>
  </tr>
@@ -669,7 +669,7 @@ class Pscf::Rpg::Simulator&lt; D &gt;</div><p>Field theoretic simulator (base cl
 <p>The <a class="el" href="#aa33734a2d4b70d3351e6a79c5d8b34c0" title="Perform eigenvalue analysis of projected chi matrix.">analyzeChi()</a> function constructs and diagonalizes the projected chi matrix. This is a singular nMonomer x nMonomer matrix defined by evaluating the projection of the chi matrix into the subspace of fluctuations that preserves total monomer concentration. The eigenvalues and eigenvectors of this matrix via the chiEvals and chiEvecs functions, respectively.</p>
 <p>The functions computeWc, computeCc and computeDc compute components components of various types of multi-component fields (i.e., fields that are associated with a monomer type index) in a basis of eigenvectors of the projected chi matrix. Names such as wc, cc and dc that end with a suffix "c" refer to components of multi-component fields that are defined using this eigenvector basis. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2System_8h_source.html#l00041">41</a> of file <a class="el" href="rpg_2System_8h_source.html">rpg/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2System_8h_source.html#l00045">45</a> of file <a class="el" href="rpg_2System_8h_source.html">rpg/System.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9e35161d76b061a369a815103571e84f" name="a9e35161d76b061a369a815103571e84f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e35161d76b061a369a815103571e84f">&#9670;&#160;</a></span>Simulator()</h2>
@@ -696,7 +696,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00036">36</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00043">43</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>, and <a class="el" href="rpg_2fts_2simulator_2Simulator_8h_source.html#l00804">Pscf::Rpg::Simulator&lt; D &gt;::system()</a>.</p>
 
@@ -721,7 +721,7 @@ template&lt;int D&gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00069">69</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00076">76</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
 </div>
 </div>
@@ -746,7 +746,7 @@ template&lt;int D&gt; </div>
 <p>Allocate required memory. </p>
 <p>Values of nMonomer and the mesh dimensions must be defined in <a class="el" href="classPscf_1_1Rpg_1_1Mixture.html" title="Solver for a mixture of polymers and solvents.">Mixture</a> and <a class="el" href="classPscf_1_1Rpg_1_1Domain.html" title="Spatial domain and spatial discretization for a periodic structure.">Domain</a> members of the parent <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class for calculations that represent one system.">System</a> on entry. This function should be called by the readParameters method of any subclass. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00095">95</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00102">102</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -790,7 +790,7 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classPscf_1_1Rpg_1_1BdSimulator.html#adeb86dbd4116ccd38a740674358e061e">Pscf::Rpg::BdSimulator&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1McSimulator.html#ac94209d892f6325916df45473b63fe0d">Pscf::Rpg::McSimulator&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00138">138</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00145">145</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
 </div>
 </div>
@@ -831,7 +831,7 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classPscf_1_1Rpg_1_1BdSimulator.html#a1cd5367c20c9f20373c8b49cf2a76431">Pscf::Rpg::BdSimulator&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1McSimulator.html#a3ed76335f951afb89eda63f58f32094a">Pscf::Rpg::McSimulator&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00169">169</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00176">176</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
@@ -891,7 +891,7 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classPscf_1_1Rpg_1_1BdSimulator.html#a24ab2e7db2ad5a091f6f924b684a52d8">Pscf::Rpg::BdSimulator&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1McSimulator.html#a3de04dec46e4d0cd1f842bec7e4d0fa8">Pscf::Rpg::McSimulator&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00176">176</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00183">183</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00051">UTIL_THROW</a>.</p>
 
@@ -965,7 +965,7 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classPscf_1_1Rpg_1_1BdSimulator.html#a0fcf27962242da64a543acf3569adb62">Pscf::Rpg::BdSimulator&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1McSimulator.html#a203339f5fea054283abe2b72cfc961fc">Pscf::Rpg::McSimulator&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00688">688</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00699">699</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
 </div>
 </div>
@@ -1003,7 +1003,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00698">698</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00709">709</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
 </div>
 </div>
@@ -1037,7 +1037,7 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classPscf_1_1Rpg_1_1McSimulator.html#a62bcf97399445e0bd53a52f66ddc94db">Pscf::Rpg::McSimulator&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00710">710</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00721">721</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1125,7 +1125,7 @@ template&lt;int D&gt; </div>
 <p>Perform eigenvalue analysis of projected chi matrix. </p>
 <p>Uses a chi matrix obtained from the <a class="el" href="classPscf_1_1Interaction.html" title="Flory-Huggins excess free energy model.">Interaction</a> member of the parent <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class for calculations that represent one system.">System</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00287">287</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00298">298</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; T &gt;::allocate()</a>, <a class="el" href="DMatrix_8h_source.html#l00170">Util::DMatrix&lt; Data &gt;::allocate()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1371,9 +1371,9 @@ template&lt;int D&gt; </div>
 
 <p>Compute the Hamiltonian used in field theoretic simulations. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00185">185</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00192">192</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Reduce_8cu_source.html#l00891">Pscf::Prdc::Cuda::Reduce::innerProduct()</a>, <a class="el" href="PolymerTmpl_8h_source.html#l00260">Pscf::PolymerTmpl&lt; Block &gt;::length()</a>, <a class="el" href="rpg_2field_2Domain_8h_source.html#l00302">Pscf::Rpg::Domain&lt; D &gt;::mesh()</a>, <a class="el" href="Species_8h_source.html#l00096">Pscf::Species::mu()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00201">Pscf::MixtureTmpl&lt; TP, TS &gt;::nMonomer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00205">Pscf::MixtureTmpl&lt; TP, TS &gt;::nPolymer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00209">Pscf::MixtureTmpl&lt; TP, TS &gt;::nSolvent()</a>, <a class="el" href="Species_8h_source.html#l00090">Pscf::Species::phi()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00231">Pscf::MixtureTmpl&lt; TP, TS &gt;::polymer()</a>, <a class="el" href="SolventDescriptor_8h_source.html#l00135">Pscf::SolventDescriptor::size()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00245">Pscf::MixtureTmpl&lt; TP, TS &gt;::solvent()</a>, <a class="el" href="VecOp_8cu_source.html#l01304">Pscf::Prdc::Cuda::VecOp::subVS()</a>, <a class="el" href="Reduce_8cu_source.html#l00480">Pscf::Prdc::Cuda::Reduce::sum()</a>, <a class="el" href="rpg_2field_2Domain_8h_source.html#l00292">Pscf::Rpg::Domain&lt; D &gt;::unitCell()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="MixtureTmpl_8h_source.html#l00259">Pscf::MixtureTmpl&lt; TP, TS &gt;::vMonomer()</a>.</p>
+<p class="reference">References <a class="el" href="Reduce_8cu_source.html#l00891">Pscf::Prdc::Cuda::Reduce::innerProduct()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00064">Pscf::PolymerModel::isThread()</a>, <a class="el" href="PolymerSpecies_8cpp_source.html#l00422">Pscf::PolymerTmpl&lt; Block &gt;::length()</a>, <a class="el" href="rpg_2field_2Domain_8h_source.html#l00302">Pscf::Rpg::Domain&lt; D &gt;::mesh()</a>, <a class="el" href="Species_8h_source.html#l00096">Pscf::Rpg::Polymer&lt; D &gt;::mu()</a>, <a class="el" href="Species_8h_source.html#l00096">Pscf::Species::mu()</a>, <a class="el" href="PolymerSpecies_8cpp_source.html#l00435">Pscf::PolymerTmpl&lt; Block &gt;::nBead()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00201">Pscf::MixtureTmpl&lt; TP, TS &gt;::nMonomer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00205">Pscf::MixtureTmpl&lt; TP, TS &gt;::nPolymer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00209">Pscf::MixtureTmpl&lt; TP, TS &gt;::nSolvent()</a>, <a class="el" href="Species_8h_source.html#l00090">Pscf::Rpg::Polymer&lt; D &gt;::phi()</a>, <a class="el" href="Species_8h_source.html#l00090">Pscf::Species::phi()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00231">Pscf::MixtureTmpl&lt; TP, TS &gt;::polymer()</a>, <a class="el" href="SolventSpecies_8h_source.html#l00143">Pscf::SolventSpecies::size()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00245">Pscf::MixtureTmpl&lt; TP, TS &gt;::solvent()</a>, <a class="el" href="VecOp_8cu_source.html#l01323">Pscf::Prdc::Cuda::VecOp::subVS()</a>, <a class="el" href="Reduce_8cu_source.html#l00480">Pscf::Prdc::Cuda::Reduce::sum()</a>, <a class="el" href="rpg_2field_2Domain_8h_source.html#l00292">Pscf::Rpg::Domain&lt; D &gt;::unitCell()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="MixtureTmpl_8h_source.html#l00259">Pscf::MixtureTmpl&lt; TP, TS &gt;::vMonomer()</a>.</p>
 
 </div>
 </div>
@@ -1568,9 +1568,9 @@ template&lt;int D&gt; </div>
 </p>
 <p> where \( w_{i}({\bf r}) \) is the w-field associated with monomer type \( i \), \( v_{ai} \) is eigenvector a of the projected chi matrix, and M = nMonomer. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00455">455</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00466">466</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOpMisc_8cu_source.html#l00343">Pscf::Prdc::Cuda::VecOp::addEqVc()</a>, <a class="el" href="VecOp_8cu_source.html#l01054">Pscf::Prdc::Cuda::VecOp::eqS()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="VecOpMisc_8cu_source.html#l00343">Pscf::Prdc::Cuda::VecOp::addEqVc()</a>, <a class="el" href="VecOp_8cu_source.html#l01073">Pscf::Prdc::Cuda::VecOp::eqS()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -1695,9 +1695,9 @@ template&lt;int D&gt; </div>
 <p>Compute eigenvector components of the current c fields. </p>
 <p>Compute and store the components of the values of the c fields on nodes of a real-space grid (r-grid) in a basis of the eigenvectors of the projected chi matrix. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00494">494</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00505">505</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOpMisc_8cu_source.html#l00343">Pscf::Prdc::Cuda::VecOp::addEqVc()</a>, <a class="el" href="VecOp_8cu_source.html#l01054">Pscf::Prdc::Cuda::VecOp::eqS()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="VecOpMisc_8cu_source.html#l00343">Pscf::Prdc::Cuda::VecOp::addEqVc()</a>, <a class="el" href="VecOp_8cu_source.html#l01073">Pscf::Prdc::Cuda::VecOp::eqS()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -1828,7 +1828,7 @@ template&lt;int D&gt; </div>
 <p>Compute functional derivatives of the Hamiltonian. </p>
 <p>Compute and store the functional derivatives of the field theoretic Hamiltonian with respect to eigenvector components of the w fields (i.e., with respect to components of wc). </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00535">535</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00546">546</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="VecOpFts_8cu_source.html#l00112">Pscf::Rpg::VecOpFts::computeDField()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -1954,9 +1954,9 @@ template&lt;int D&gt; </div>
 <p>Save a copy of the fts move state. </p>
 <p>This function and <a class="el" href="#a6c7b9f75a0fd39f3b1dcc5081beae816" title="Restore the saved copy of the fts move state.">restoreState()</a> are intended for use in the implementation of field theoretic moves. This function stores the current w fields and the corresponding Hamiltonian value. Current cc fields and dc fields are saved based on save policy. This is normally the first step of a fts move, prior to an attempted modification of the fields stored in the system w field container. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00575">575</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00586">586</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01020">Pscf::Prdc::Cuda::VecOp::eqV()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01039">Pscf::Prdc::Cuda::VecOp::eqV()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -1980,9 +1980,9 @@ template&lt;int D&gt; </div>
 <p>Restore the saved copy of the fts move state. </p>
 <p>This function and <a class="el" href="#a6b43c69989d8306ce5c5a566cc7d92b1" title="Save a copy of the fts move state.">saveState()</a> are intended to be used together in the implementation of fts moves. If an attempted Monte-Carle move is rejected or an fts move fails to converge <a class="el" href="#a6c7b9f75a0fd39f3b1dcc5081beae816" title="Restore the saved copy of the fts move state.">restoreState()</a> is called to restore the fields and Hamiltonian value that were saved by a previous call to the function <a class="el" href="#a6b43c69989d8306ce5c5a566cc7d92b1" title="Save a copy of the fts move state.">saveState()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00630">630</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00641">641</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01020">Pscf::Prdc::Cuda::VecOp::eqV()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01039">Pscf::Prdc::Cuda::VecOp::eqV()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -2006,7 +2006,7 @@ template&lt;int D&gt; </div>
 <p>Clear the saved copy of the fts state. </p>
 <p>This function, <a class="el" href="#a6c7b9f75a0fd39f3b1dcc5081beae816" title="Restore the saved copy of the fts move state.">restoreState()</a>, and <a class="el" href="#a6b43c69989d8306ce5c5a566cc7d92b1" title="Save a copy of the fts move state.">saveState()</a> are intended to be used together in the implementation of fts moves. If an attempted move is accepted, <a class="el" href="#ad19fed53cb2dede670732a64f4c85af5" title="Clear the saved copy of the fts state.">clearState()</a> is called to clear clear state_.hasData </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00681">681</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00692">692</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
 </div>
 </div>
@@ -2041,7 +2041,7 @@ template&lt;int D&gt; </div>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2brownian_2BdSimulator_8tpp_source.html#l00038">Pscf::Rpg::BdSimulator&lt; D &gt;::BdSimulator()</a>, <a class="el" href="rpg_2fts_2montecarlo_2McSimulator_8tpp_source.html#l00041">Pscf::Rpg::McSimulator&lt; D &gt;::McSimulator()</a>, <a class="el" href="rpg_2fts_2ramp_2RampParameter_8tpp_source.html#l00063">Pscf::Rpg::RampParameter&lt; D &gt;::setSimulator()</a>, and <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00036">Pscf::Rpg::Simulator&lt; D &gt;::Simulator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpg_2fts_2brownian_2BdSimulator_8tpp_source.html#l00038">Pscf::Rpg::BdSimulator&lt; D &gt;::BdSimulator()</a>, <a class="el" href="rpg_2fts_2montecarlo_2McSimulator_8tpp_source.html#l00041">Pscf::Rpg::McSimulator&lt; D &gt;::McSimulator()</a>, <a class="el" href="rpg_2fts_2ramp_2RampParameter_8tpp_source.html#l00063">Pscf::Rpg::RampParameter&lt; D &gt;::setSimulator()</a>, and <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00043">Pscf::Rpg::Simulator&lt; D &gt;::Simulator()</a>.</p>
 
 </div>
 </div>
@@ -2398,7 +2398,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00722">722</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00733">733</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
 </div>
 </div>
@@ -2474,7 +2474,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00738">738</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00749">749</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ParamComponent_8cpp_source.html#l00068">Util::ParamComponent::echo()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -2552,7 +2552,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00759">759</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00770">770</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ParamComponent_8cpp_source.html#l00068">Util::ParamComponent::echo()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -2591,7 +2591,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00778">778</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00789">789</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -2669,7 +2669,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00788">788</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00799">799</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ParamComponent_8cpp_source.html#l00068">Util::ParamComponent::echo()</a>, <a class="el" href="Log_8cpp_source.html#l00057">Util::Log::file()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -2708,7 +2708,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00807">807</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00818">818</a> of file <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html">rpg/fts/simulator/Simulator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -3222,7 +3222,7 @@ template&lt;int D&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 28 2025 00:57:30 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:24:05 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

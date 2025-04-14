@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
    </div>
   </td>
  </tr>
@@ -88,10 +88,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>   {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>      IntVec&lt;1&gt; u;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      <span class="keywordflow">if</span> (v[0] &gt; d[0]/2) {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>         u[0] = v[0] - d[0];</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>         u[0] = v[0] - <a class="code hl_function" href="group__Pscf__Chem__Module.html#ga927f98385bb36537301a5e652decdc98">d</a>[0];</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>      } <span class="keywordflow">else</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      <span class="keywordflow">if</span> (v[0] &lt; -(d[0]/2) ) {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>         u[0] = v[0] + d[0];</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>         u[0] = v[0] + <a class="code hl_function" href="group__Pscf__Chem__Module.html#ga927f98385bb36537301a5e652decdc98">d</a>[0];</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>         u[0] = v[0];</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      }</div>
@@ -114,9 +114,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      <span class="keywordtype">int</span> s0, s1;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> q = 2;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      <span class="keywordflow">for</span> (s0 = -q; s0 &lt; q+1; ++s0) { </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>         u[0] = v[0] + s0*d[0];</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>         u[0] = v[0] + s0*<a class="code hl_function" href="group__Pscf__Chem__Module.html#ga927f98385bb36537301a5e652decdc98">d</a>[0];</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>         <span class="keywordflow">for</span> (s1 = -q; s1 &lt; q+1; ++s1) {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            u[1] = v[1] + s1*d[1];</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            u[1] = v[1] + s1*<a class="code hl_function" href="group__Pscf__Chem__Module.html#ga927f98385bb36537301a5e652decdc98">d</a>[1];</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            Gsq = cell.ksq(u);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">if</span> (Gsq &lt; Gsq_min_hi) {</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>               <span class="keywordflow">if</span> ((Gsq &lt; Gsq_min_lo) || (r &lt; u)) {</div>
@@ -145,11 +145,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      <span class="keywordtype">int</span> s0, s1, s2;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> q = 2;</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      <span class="keywordflow">for</span> (s0 = -q; s0 &lt; q + 1; ++s0) { </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>         u[0] = v[0] + s0*d[0];</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>         u[0] = v[0] + s0*<a class="code hl_function" href="group__Pscf__Chem__Module.html#ga927f98385bb36537301a5e652decdc98">d</a>[0];</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>         <span class="keywordflow">for</span> (s1 = -q; s1 &lt; q + 1; ++s1) {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            u[1] = v[1] + s1*d[1];</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            u[1] = v[1] + s1*<a class="code hl_function" href="group__Pscf__Chem__Module.html#ga927f98385bb36537301a5e652decdc98">d</a>[1];</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordflow">for</span> (s2 = -q; s2 &lt; q + 1; ++s2) {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>               u[2] = v[2] + s2*d[2];</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>               u[2] = v[2] + s2*<a class="code hl_function" href="group__Pscf__Chem__Module.html#ga927f98385bb36537301a5e652decdc98">d</a>[2];</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>               Gsq = cell.ksq(u);</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>               <span class="keywordflow">if</span> (Gsq &lt; Gsq_min_hi) {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                  <span class="keywordflow">if</span> ((Gsq &lt; Gsq_min_lo) || (r &lt; u)) {</div>
@@ -168,13 +168,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
 <div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="global_8h.html">global.h</a></div><div class="ttdoc">File containing preprocessor macros for error handling.</div></div>
 <div class="ttc" id="aglobal_8h_html_aeb3d01af710489fd0112efe3054345b4"><div class="ttname"><a href="global_8h.html#aeb3d01af710489fd0112efe3054345b4">UTIL_ASSERT</a></div><div class="ttdeci">#define UTIL_ASSERT(condition)</div><div class="ttdoc">Assertion macro suitable for debugging serial or parallel code.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00075">global.h:75</a></div></div>
+<div class="ttc" id="agroup__Pscf__Chem__Module_html_ga927f98385bb36537301a5e652decdc98"><div class="ttname"><a href="group__Pscf__Chem__Module.html#ga927f98385bb36537301a5e652decdc98">Pscf::Debye::d</a></div><div class="ttdeci">double d(double ksq, double length, double kuhn)</div><div class="ttdoc">Compute and return a homopolymer correlation function.</div><div class="ttdef"><b>Definition</b> <a href="Debye_8cpp_source.html#l00017">Debye.cpp:17</a></div></div>
 <div class="ttc" id="agroup__Pscf__Math__Complex__Module_html_ga8fa76e79d3cb3087f2c5bec28c088f4c"><div class="ttname"><a href="group__Pscf__Math__Complex__Module.html#ga8fa76e79d3cb3087f2c5bec28c088f4c">Pscf::abs</a></div><div class="ttdeci">RT abs(CT const &amp;a)</div><div class="ttdoc">Return absolute magnitude of a complex number.</div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
 <div class="ttc" id="anamespaceUtil_html"><div class="ttname"><a href="namespaceUtil.html">Util</a></div><div class="ttdoc">Utility classes for scientific computation.</div><div class="ttdef"><b>Definition</b> <a href="accumulators_8mod_source.html#l00001">accumulators.mod:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 28 2025 00:57:27 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:24:02 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

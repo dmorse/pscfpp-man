@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
    </div>
   </td>
  </tr>
@@ -179,7 +179,7 @@ Polymer</h1>
 <li>When the volume fraction parameter phi is present, its value must lie in the range [0,1].</li>
 </ul>
 <p>Descriptions of parameter file formats for individual blocks of linear and branched polymers are discussed separately below.</p>
-<p><em> Technical comment (for users who examine the source code)</em>: A class or class template named Polymer is defined in each implementation-level namespace of the top-level <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a> namespace (i.e., in the R1d, Rpc and Rpg sub-namespaces of <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a>). These Polymer classes all use the same parameter file format, which is described above. Each of these Polymer classes is a subclass of an instances of a common class template named <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Descriptor and MDE solver for an acyclic block polymer.">Pscf::PolymerTmpl</a>. The readParameters function of this base class template defines the common file format.</p>
+<p><em> Technical comment (for users who examine the source code)</em>: A class or class template named Polymer is defined in each implementation-level namespace of the top-level <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a> namespace (i.e., in the R1d, Rpc and Rpg sub-namespaces of <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a>). These Polymer classes all use the same parameter file format, which is described above. Each of these Polymer classes is a subclass of an instances of a common class template named <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Descriptor and MDE solver for a block polymer.">Pscf::PolymerTmpl</a>. The readParameters function of this base class template defines the common file format.</p>
 <h1><a class="anchor" id="user_param_block_sec"></a>
 Block</h1>
 <p>The text representation of a block within the "blocks" array in a Polymer parameter file block is different depending on whether the polymer type is "linear" or "branched".</p>
@@ -213,7 +213,7 @@ Branched Polymers</h2>
 <div class="line">  phi  1.0</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> Note that the type parameter must be explicitly set to "branched", because the type is set to linear by default. We have set phi = 1.0 in this example on the assumption that this is a one-component terpolymer melt, for which the volume fraction of this species must equal unity.</p>
-<p><em> Technical comment (for users who examine the source code)</em>: A class or class template named Block is also defined in every implementation-level namespace. All of the Block classes are subclasses of a base class named <a class="el" href="classPscf_1_1BlockDescriptor.html" title="Description of a linear homopolymer block within a block polymer.">Pscf::BlockDescriptor</a>. The data for each line of the "blocks" array is read in using an overloaded insertion (&gt;&gt;) operator for a BlockDescriptor, which defines the text representation of the data required in a single line of the "blocks" array.</p>
+<p><em> Technical comment (for users who examine the source code)</em>: A class or class template named Block is also defined in every implementation-level namespace. All of the Block classes are subclasses of a base class named Pscf::BlockDescriptor. The data for each line of the "blocks" array is read in using an overloaded insertion (&gt;&gt;) operator for a BlockDescriptor, which defines the text representation of the data required in a single line of the "blocks" array.</p>
 <h1><a class="anchor" id="user_param_solvent_sec"></a>
 Solvent</h1>
 <p>A mixture block may contain zero or more Solvent blocks, each of which contains data about a small-molecule solvent species. Solvent species are treated in PSCF as point-like particles that occupy a specified volume (or "size"), for which the interactions with other components can be described by assigning the solvent a monomer type index.</p>
@@ -225,14 +225,14 @@ Solvent</h1>
 <div class="line">   mu          real (required iff phi is omitted)</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> The monomerId is a monomer type index that identifies the solvent as containing a specified monomer type. The size parameter gives the volume occupied a solvent molecule, in units in which the monomer reference volume is equal to unity. For each solvent, a value must be specified for either the volume fraction phi occupied by the species, or its chemical potential mu. It is an error to specify both phi and mu or to omit both variables.</p>
-<p><em> Technical comment (for users who examine the source code)</em>: A Class or class template named Solvent is defined in each implementation-level namespace (i.e., in the R1d, Rpc and Rpg sub-namespaces of <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a>). These classes are all use the same parameter file format, which is described above, and are all subclasses of a common base class named <a class="el" href="classPscf_1_1SolventDescriptor.html" title="Descriptor for a solvent species.">Pscf::SolventDescriptor</a>. The function <a class="el" href="classPscf_1_1SolventDescriptor.html#abfb65efdeaf48ae8fa57bc54a8322679" title="Read and initialize.">Pscf::SolventDescriptor::readParameters</a> defines most of this file format.</p>
+<p><em> Technical comment (for users who examine the source code)</em>: A Class or class template named Solvent is defined in each implementation-level namespace (i.e., in the R1d, Rpc and Rpg sub-namespaces of <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a>). These classes are all use the same parameter file format, which is described above, and are all subclasses of a common base class named Pscf::SolventDescriptor. The function Pscf::SolventDescriptor::readParameters defines most of this file format.</p>
 <p><br  />
  <a class="el" href="user_param_format_page.html">Parameter File - Format Descriptions</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_param_page.html">Parameter Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_command_page.html">Command Files</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 28 2025 00:57:29 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:24:04 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

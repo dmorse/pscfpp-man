@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
    </div>
   </td>
  </tr>
@@ -170,7 +170,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="namespaceUtil.html#ad59eef5bab97153dcd1f2e7ba905ef3a">   90</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceUtil.html#ad59eef5bab97153dcd1f2e7ba905ef3a">MpiThrow</a>(<a class="code hl_class" href="classUtil_1_1Exception.html">Exception</a>&amp; e) {</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      <span class="keywordflow">if</span> (MPI::Is_initialized()) {</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>         std::cerr &lt;&lt; e.<a class="code hl_function" href="classUtil_1_1Exception.html#a4d443a56802cc9dabff7c3fa2443fd1c">message</a>() &lt;&lt; std::endl; </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>         std::cerr &lt;&lt; e.message() &lt;&lt; std::endl; </div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>         <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>().flush(); </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>         <a class="code hl_function" href="classUtil_1_1Log.html#a665d080ef4a041fccfaf0b6bc0e78901">Log::close</a>(); </div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>         MPI::COMM_WORLD.Abort(65); </div>
@@ -194,7 +194,7 @@ $(function(){ initResizable(false); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 28 2025 00:57:29 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:24:03 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

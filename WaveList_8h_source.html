@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
    </div>
   </td>
  </tr>
@@ -243,11 +243,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>}</div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="comment">//#include &quot;WaveList.tpp&quot;</span></div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassPscf_1_1DeviceArray_html"><div class="ttname"><a href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a></div><div class="ttdoc">Dynamic array on the GPU device with aligned data.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2System_8h_source.html#l00032">rpg/System.h:32</a></div></div>
+<div class="ttc" id="aclassPscf_1_1DeviceArray_html"><div class="ttname"><a href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a></div><div class="ttdoc">Dynamic array on the GPU device with aligned data.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2System_8h_source.html#l00036">rpg/System.h:36</a></div></div>
 <div class="ttc" id="aclassPscf_1_1IntVec_html"><div class="ttname"><a href="classPscf_1_1IntVec.html">Pscf::IntVec</a></div><div class="ttdoc">An IntVec&lt;D, T&gt; is a D-component vector of elements of integer type T.</div><div class="ttdef"><b>Definition</b> <a href="IntVec_8h_source.html#l00026">IntVec.h:27</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Mesh_html"><div class="ttname"><a href="classPscf_1_1Mesh.html">Pscf::Mesh</a></div><div class="ttdoc">Description of a regular grid of points in a periodic domain.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2solvers_2Solvent_8h_source.html#l00016">rpg/solvers/Solvent.h:16</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Prdc_1_1Cpu_1_1RField_html"><div class="ttname"><a href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">Pscf::Prdc::Cpu::RField</a></div><div class="ttdoc">Field of real double precision values on an FFT mesh.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2solvers_2Mixture_8h_source.html#l00026">rpc/solvers/Mixture.h:26</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Prdc_1_1UnitCell_html"><div class="ttname"><a href="classPscf_1_1Prdc_1_1UnitCell.html">Pscf::Prdc::UnitCell</a></div><div class="ttdoc">Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2System_8h_source.html#l00034">rpg/System.h:34</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Prdc_1_1UnitCell_html"><div class="ttname"><a href="classPscf_1_1Prdc_1_1UnitCell.html">Pscf::Prdc::UnitCell</a></div><div class="ttdoc">Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2System_8h_source.html#l00038">rpg/System.h:38</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1WaveList_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1WaveList.html">Pscf::Rpg::WaveList</a></div><div class="ttdoc">Class to calculate and store properties of wavevectors.</div><div class="ttdef"><b>Definition</b> <a href="#l00038">WaveList.h:39</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1WaveList_html_a0af61949b3d5d4d3e0c4e6fc1542e9b6"><div class="ttname"><a href="classPscf_1_1Rpg_1_1WaveList.html#a0af61949b3d5d4d3e0c4e6fc1542e9b6">Pscf::Rpg::WaveList::hasdKSq</a></div><div class="ttdeci">bool hasdKSq() const</div><div class="ttdoc">Has the dKSq array been computed?</div><div class="ttdef"><b>Definition</b> <a href="#l00167">WaveList.h:167</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1WaveList_html_a1ff920c5d3f2637bdc78a860a321663f"><div class="ttname"><a href="classPscf_1_1Rpg_1_1WaveList.html#a1ff920c5d3f2637bdc78a860a321663f">Pscf::Rpg::WaveList::dKSq</a></div><div class="ttdeci">DeviceArray&lt; cudaReal &gt; const &amp; dKSq() const</div><div class="ttdoc">Get the full dKSq array on the device by reference.</div><div class="ttdef"><b>Definition</b> <a href="#l00246">WaveList.h:246</a></div></div>
@@ -265,7 +265,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1WaveList_html_ae4d6748e2919f07c4b78a7ab5d4717c7"><div class="ttname"><a href="classPscf_1_1Rpg_1_1WaveList.html#ae4d6748e2919f07c4b78a7ab5d4717c7">Pscf::Rpg::WaveList::hasMinimumImages</a></div><div class="ttdeci">bool hasMinimumImages() const</div><div class="ttdoc">Have minimum images been computed?</div><div class="ttdef"><b>Definition</b> <a href="#l00155">WaveList.h:155</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1WaveList_html_aec0792c3e43412a982d595d1d51a65bd"><div class="ttname"><a href="classPscf_1_1Rpg_1_1WaveList.html#aec0792c3e43412a982d595d1d51a65bd">Pscf::Rpg::WaveList::kSq</a></div><div class="ttdeci">RField&lt; D &gt; const &amp; kSq() const</div><div class="ttdoc">Get the kSq array on the device by reference.</div><div class="ttdef"><b>Definition</b> <a href="#l00238">WaveList.h:238</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1WaveList_html_afdee8b095017bb3b301368b719876994"><div class="ttname"><a href="classPscf_1_1Rpg_1_1WaveList.html#afdee8b095017bb3b301368b719876994">Pscf::Rpg::WaveList::hasVariableAngle</a></div><div class="ttdeci">bool hasVariableAngle() const</div><div class="ttdoc">Does this unit cell have an angle that can change?</div></div>
-<div class="ttc" id="aclassUtil_1_1DArray_html"><div class="ttname"><a href="classUtil_1_1DArray.html">Util::DArray</a></div><div class="ttdoc">Dynamically allocatable contiguous array template.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2perturbation_2Perturbation_8h_source.html#l00007">rpg/fts/perturbation/Perturbation.h:7</a></div></div>
+<div class="ttc" id="aclassUtil_1_1DArray_html"><div class="ttname"><a href="classUtil_1_1DArray.html">Util::DArray</a></div><div class="ttdoc">Dynamically allocatable contiguous array template.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2solvers_2Polymer_8h_source.html#l00019">rpg/solvers/Polymer.h:19</a></div></div>
 <div class="ttc" id="aglobal_8h_html_aaf3bc07accafc94019d126e4cffa81e7"><div class="ttname"><a href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a></div><div class="ttdeci">#define UTIL_CHECK(condition)</div><div class="ttdoc">Assertion macro suitable for serial or parallel production code.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00068">global.h:68</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a></div><div class="ttdoc">Fields, FFTs, and utilities for periodic boundary conditions (CUDA)</div><div class="ttdef"><b>Definition</b> <a href="CField_8cu_source.html#l00012">CField.cu:12</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_html"><div class="ttname"><a href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div><div class="ttdoc">Periodic fields and crystallography.</div><div class="ttdef"><b>Definition</b> <a href="CField_8cpp_source.html#l00011">CField.cpp:11</a></div></div>
@@ -274,7 +274,7 @@ $(function(){ initResizable(false); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 28 2025 00:57:28 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:24:03 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

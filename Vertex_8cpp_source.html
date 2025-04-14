@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
    </div>
   </td>
  </tr>
@@ -76,7 +76,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Vertex.h&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;BlockDescriptor.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;Edge.h&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;<a class="code" href="global_8h.html">util/global.h</a>&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a></div>
@@ -111,56 +111,56 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">   * Add a block to the vertex.</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">   * Add a edge to the vertex.</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">   */</span></div>
 <div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classPscf_1_1Vertex.html#a5aeca7af1ddad579fbe2fcd3ae76a618">   40</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Vertex.html#a5aeca7af1ddad579fbe2fcd3ae76a618">Vertex::addBlock</a>(<span class="keyword">const</span> <a class="code hl_class" href="classPscf_1_1BlockDescriptor.html">BlockDescriptor</a>&amp; block)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classPscf_1_1Vertex.html#a6709480745f4578abe0c4fe46db0a8b2">   40</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Vertex.html#a6709480745f4578abe0c4fe46db0a8b2">Vertex::addEdge</a>(<span class="keyword">const</span> <a class="code hl_class" href="classPscf_1_1Edge.html">Edge</a>&amp; edge)</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>   {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <span class="comment">// Preconditions</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="keywordflow">if</span> (id_ &lt; 0) {</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Negative vertex id&quot;</span>);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      <span class="keywordflow">if</span> (block.<a class="code hl_function" href="classPscf_1_1BlockDescriptor.html#ae6d146ea95e29c6dd75810a1173e25d7">id</a>() &lt; 0) {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Negative block id&quot;</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      <span class="keywordflow">if</span> (edge.<a class="code hl_function" href="classPscf_1_1Edge.html#a186132dde83313515f13225159bf5218">id</a>() &lt; 0) {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Negative edge id&quot;</span>);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keywordflow">if</span> (block.<a class="code hl_function" href="classPscf_1_1BlockDescriptor.html#a2eab787ed2d40088285e59e847a65396">vertexId</a>(0) &lt; 0) {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Error: Negative block vertexId 0&quot;</span>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keywordflow">if</span> (edge.<a class="code hl_function" href="classPscf_1_1Edge.html#acefe9771ab840c6f260aa2175888a876">vertexId</a>(0) &lt; 0) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Error: Negative edge vertexId 0&quot;</span>);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      <span class="keywordflow">if</span> (block.<a class="code hl_function" href="classPscf_1_1BlockDescriptor.html#a2eab787ed2d40088285e59e847a65396">vertexId</a>(1) &lt; 0) {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Error: Negative block vertexId 1&quot;</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      <span class="keywordflow">if</span> (edge.<a class="code hl_function" href="classPscf_1_1Edge.html#acefe9771ab840c6f260aa2175888a876">vertexId</a>(1) &lt; 0) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Error: Negative edge vertexId 1&quot;</span>);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keywordflow">if</span> (block.<a class="code hl_function" href="classPscf_1_1BlockDescriptor.html#a2eab787ed2d40088285e59e847a65396">vertexId</a>(0) == block.<a class="code hl_function" href="classPscf_1_1BlockDescriptor.html#a2eab787ed2d40088285e59e847a65396">vertexId</a>(1)) {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Error: Equal vertex indices in block&quot;</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keywordflow">if</span> (edge.<a class="code hl_function" href="classPscf_1_1Edge.html#acefe9771ab840c6f260aa2175888a876">vertexId</a>(0) == edge.<a class="code hl_function" href="classPscf_1_1Edge.html#acefe9771ab840c6f260aa2175888a876">vertexId</a>(1)) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Error: Equal vertex indices in edge&quot;</span>);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      }</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <a class="code hl_class" href="classUtil_1_1Pair.html">Pair&lt;int&gt;</a> propagatorId;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      propagatorId[0] = block.<a class="code hl_function" href="classPscf_1_1BlockDescriptor.html#ae6d146ea95e29c6dd75810a1173e25d7">id</a>();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      <span class="keywordflow">if</span> (block.<a class="code hl_function" href="classPscf_1_1BlockDescriptor.html#a2eab787ed2d40088285e59e847a65396">vertexId</a>(0) == id_) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      propagatorId[0] = edge.<a class="code hl_function" href="classPscf_1_1Edge.html#a186132dde83313515f13225159bf5218">id</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      <span class="keywordflow">if</span> (edge.<a class="code hl_function" href="classPscf_1_1Edge.html#acefe9771ab840c6f260aa2175888a876">vertexId</a>(0) == id_) {</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>         propagatorId[1] = 0;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>         outPropagatorIds_.append(propagatorId);</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>         propagatorId[1] = 1;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>         inPropagatorIds_.append(propagatorId);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      } <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      <span class="keywordflow">if</span> (block.<a class="code hl_function" href="classPscf_1_1BlockDescriptor.html#a2eab787ed2d40088285e59e847a65396">vertexId</a>(1) == id_) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      <span class="keywordflow">if</span> (edge.<a class="code hl_function" href="classPscf_1_1Edge.html#acefe9771ab840c6f260aa2175888a876">vertexId</a>(1) == id_) {</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>         propagatorId[1] = 1;</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>         outPropagatorIds_.append(propagatorId);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>         propagatorId[1] = 0;</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>         inPropagatorIds_.append(propagatorId);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Neither block vertex id matches this vertex&quot;</span>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Neither edge vertex id matches this vertex&quot;</span>);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      }</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>   }</div>
 </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>} </div>
-<div class="ttc" id="aclassPscf_1_1BlockDescriptor_html"><div class="ttname"><a href="classPscf_1_1BlockDescriptor.html">Pscf::BlockDescriptor</a></div><div class="ttdoc">Description of a linear homopolymer block within a block polymer.</div><div class="ttdef"><b>Definition</b> <a href="BlockDescriptor_8h_source.html#l00039">BlockDescriptor.h:40</a></div></div>
-<div class="ttc" id="aclassPscf_1_1BlockDescriptor_html_a2eab787ed2d40088285e59e847a65396"><div class="ttname"><a href="classPscf_1_1BlockDescriptor.html#a2eab787ed2d40088285e59e847a65396">Pscf::BlockDescriptor::vertexId</a></div><div class="ttdeci">int vertexId(int i) const</div><div class="ttdoc">Get id of an associated vertex.</div><div class="ttdef"><b>Definition</b> <a href="BlockDescriptor_8h_source.html#l00237">BlockDescriptor.h:237</a></div></div>
-<div class="ttc" id="aclassPscf_1_1BlockDescriptor_html_ae6d146ea95e29c6dd75810a1173e25d7"><div class="ttname"><a href="classPscf_1_1BlockDescriptor.html#ae6d146ea95e29c6dd75810a1173e25d7">Pscf::BlockDescriptor::id</a></div><div class="ttdeci">int id() const</div><div class="ttdoc">Get the id of this block.</div><div class="ttdef"><b>Definition</b> <a href="BlockDescriptor_8h_source.html#l00219">BlockDescriptor.h:219</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Edge_html"><div class="ttname"><a href="classPscf_1_1Edge.html">Pscf::Edge</a></div><div class="ttdoc">Descriptor for a block within an acyclic block polymer.</div><div class="ttdef"><b>Definition</b> <a href="Edge_8h_source.html#l00062">Edge.h:63</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Edge_html_a186132dde83313515f13225159bf5218"><div class="ttname"><a href="classPscf_1_1Edge.html#a186132dde83313515f13225159bf5218">Pscf::Edge::id</a></div><div class="ttdeci">int id() const</div><div class="ttdoc">Get the id of this block.</div><div class="ttdef"><b>Definition</b> <a href="Edge_8h_source.html#l00318">Edge.h:318</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Edge_html_acefe9771ab840c6f260aa2175888a876"><div class="ttname"><a href="classPscf_1_1Edge.html#acefe9771ab840c6f260aa2175888a876">Pscf::Edge::vertexId</a></div><div class="ttdeci">int vertexId(int i) const</div><div class="ttdoc">Get id of an associated vertex.</div><div class="ttdef"><b>Definition</b> <a href="Edge_8h_source.html#l00336">Edge.h:336</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Vertex_html_a4886c8b75829e44d8c4fa8e2cc45de91"><div class="ttname"><a href="classPscf_1_1Vertex.html#a4886c8b75829e44d8c4fa8e2cc45de91">Pscf::Vertex::setId</a></div><div class="ttdeci">void setId(int id)</div><div class="ttdoc">Set the integer identifier of this vertex.</div><div class="ttdef"><b>Definition</b> <a href="#l00034">Vertex.cpp:34</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Vertex_html_a5aeca7af1ddad579fbe2fcd3ae76a618"><div class="ttname"><a href="classPscf_1_1Vertex.html#a5aeca7af1ddad579fbe2fcd3ae76a618">Pscf::Vertex::addBlock</a></div><div class="ttdeci">void addBlock(BlockDescriptor const &amp;block)</div><div class="ttdoc">Add block to the list of attached blocks.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">Vertex.cpp:40</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Vertex_html_a6709480745f4578abe0c4fe46db0a8b2"><div class="ttname"><a href="classPscf_1_1Vertex.html#a6709480745f4578abe0c4fe46db0a8b2">Pscf::Vertex::addEdge</a></div><div class="ttdeci">void addEdge(Edge const &amp;block)</div><div class="ttdoc">Add block to the list of attached blocks.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">Vertex.cpp:40</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Vertex_html_ab3cf0ad010dda7022d94a8d5bfbb5f37"><div class="ttname"><a href="classPscf_1_1Vertex.html#ab3cf0ad010dda7022d94a8d5bfbb5f37">Pscf::Vertex::Vertex</a></div><div class="ttdeci">Vertex()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00018">Vertex.cpp:18</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Vertex_html_ac99a27e8da41de1a9a9f5a8ea54ad442"><div class="ttname"><a href="classPscf_1_1Vertex.html#ac99a27e8da41de1a9a9f5a8ea54ad442">Pscf::Vertex::~Vertex</a></div><div class="ttdeci">~Vertex()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00027">Vertex.cpp:27</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Vertex_html_aeca96441f6123402032e2f1f04ddb018"><div class="ttname"><a href="classPscf_1_1Vertex.html#aeca96441f6123402032e2f1f04ddb018">Pscf::Vertex::id</a></div><div class="ttdeci">int id() const</div><div class="ttdoc">Get the id of this vertex.</div><div class="ttdef"><b>Definition</b> <a href="Vertex_8h_source.html#l00102">Vertex.h:102</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Vertex_html_aeca96441f6123402032e2f1f04ddb018"><div class="ttname"><a href="classPscf_1_1Vertex.html#aeca96441f6123402032e2f1f04ddb018">Pscf::Vertex::id</a></div><div class="ttdeci">int id() const</div><div class="ttdoc">Get the id of this vertex.</div><div class="ttdef"><b>Definition</b> <a href="Vertex_8h_source.html#l00107">Vertex.h:107</a></div></div>
 <div class="ttc" id="aclassUtil_1_1Pair_html"><div class="ttname"><a href="classUtil_1_1Pair.html">Util::Pair</a></div><div class="ttdoc">An array of exactly 2 objects.</div><div class="ttdef"><b>Definition</b> <a href="Pair_8h_source.html#l00023">Pair.h:24</a></div></div>
 <div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="global_8h.html">global.h</a></div><div class="ttdoc">File containing preprocessor macros for error handling.</div></div>
 <div class="ttc" id="aglobal_8h_html_ad2512f8bd062d41d66799cf900151487"><div class="ttname"><a href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a></div><div class="ttdeci">#define UTIL_THROW(msg)</div><div class="ttdoc">Macro for throwing an Exception, reporting function, file and line number.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00051">global.h:51</a></div></div>
@@ -168,7 +168,7 @@ $(function(){ initResizable(false); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 28 2025 00:57:27 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:24:02 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

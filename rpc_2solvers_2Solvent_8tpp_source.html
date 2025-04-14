@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
    </div>
   </td>
  </tr>
@@ -90,7 +90,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
 <div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1Solvent.html#a456991c4c4df2c63c3215e3b55b659f6">   21</a></span>   <a class="code hl_function" href="classPscf_1_1Rpc_1_1Solvent.html#a456991c4c4df2c63c3215e3b55b659f6">Solvent&lt;D&gt;::Solvent</a>()</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    : <a class="code hl_class" href="classPscf_1_1SolventDescriptor.html">SolventDescriptor</a>(),</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    : <a class="code hl_class" href="classPscf_1_1SolventSpecies.html">SolventSpecies</a>(),</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      meshPtr_(nullptr)</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>   {  <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">setClassName</a>(<span class="stringliteral">&quot;Solvent&quot;</span>); }</div>
 </div>
@@ -182,14 +182,14 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1Solvent_html_ac7c2306050cfb2b6fa39bdb3fa71e4b6"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Solvent.html#ac7c2306050cfb2b6fa39bdb3fa71e4b6">Pscf::Rpc::Solvent::compute</a></div><div class="ttdeci">void compute(RField&lt; D &gt; const &amp;wField, double phiTot=1.0)</div><div class="ttdoc">Compute monomer concentration field, q and phi and/or mu.</div><div class="ttdef"><b>Definition</b> <a href="#l00056">rpc/solvers/Solvent.tpp:56</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1Solvent_html_aeb7e117a6563388c36705382cf343f02"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Solvent.html#aeb7e117a6563388c36705382cf343f02">Pscf::Rpc::Solvent::~Solvent</a></div><div class="ttdeci">~Solvent()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00030">rpc/solvers/Solvent.tpp:30</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1Solvent_html_afd7fdab8fad42a501ae2aa20813f7865"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Solvent.html#afd7fdab8fad42a501ae2aa20813f7865">Pscf::Rpc::Solvent::allocate</a></div><div class="ttdeci">void allocate()</div><div class="ttdoc">Allocate memory for concentrationf field.</div><div class="ttdef"><b>Definition</b> <a href="#l00046">rpc/solvers/Solvent.tpp:46</a></div></div>
-<div class="ttc" id="aclassPscf_1_1SolventDescriptor_html"><div class="ttname"><a href="classPscf_1_1SolventDescriptor.html">Pscf::SolventDescriptor</a></div><div class="ttdoc">Descriptor for a solvent species.</div><div class="ttdef"><b>Definition</b> <a href="SolventDescriptor_8h_source.html#l00023">SolventDescriptor.h:24</a></div></div>
+<div class="ttc" id="aclassPscf_1_1SolventSpecies_html"><div class="ttname"><a href="classPscf_1_1SolventSpecies.html">Pscf::SolventSpecies</a></div><div class="ttdoc">Descriptor for a solvent species.</div><div class="ttdef"><b>Definition</b> <a href="SolventSpecies_8h_source.html#l00029">SolventSpecies.h:30</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a30752567fd7b8b93e5c8476bbe8592c5"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">Util::ParamComposite::setClassName</a></div><div class="ttdeci">void setClassName(const char *className)</div><div class="ttdoc">Set class name string.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8cpp_source.html#l00379">ParamComposite.cpp:379</a></div></div>
 <div class="ttc" id="aglobal_8h_html_aaf3bc07accafc94019d126e4cffa81e7"><div class="ttname"><a href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a></div><div class="ttdeci">#define UTIL_CHECK(condition)</div><div class="ttdoc">Assertion macro suitable for serial or parallel production code.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00068">global.h:68</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 28 2025 00:57:28 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:24:03 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

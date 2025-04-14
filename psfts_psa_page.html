@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
    </div>
   </td>
  </tr>
@@ -141,7 +141,7 @@ as discussed in the article by Morse, Yong and Chen
 (&lt;https://pubs.acs.org/doi/10.1021/acs.macromol.4c02636&gt;).
 
 Some of the data analysis algorithms provided in the current version of 
-PSCF were, however, designed specifically for systems with \_form#820 
+PSCF were, however, designed specifically for systems with \_form#825 
 and are only usable with such systems.  The "analyzer" class that implements each such restricted algorithm checks whether \( M = 2 \), and will print an error message and then halt execution before entering the main simulation loop if a user attempts to apply it to a system with \( M &gt; 2 \). Currently, it is thus possible to perform PS-FTS calculations on some ABC systems, but some data analysis algorithms cannot be used for this purpose.</p>
 <p>Morse, Yong and Chen have proposed a further generalization of the PSA so as to treat cases in which one or more of the \( M - 1 \) nontrival eigenvalues of the projected \( \chi \) matrix are positive. Specificially, they proposed treating the auxiliary fields associated with such eigenvalues in a PSA, in addition to the use of the PSA for the pressure-like field \( W_{M} \). This generalized version of the PSA is not implemented in v1.2 of PSCF, in which the PSA is currently only applied to \( W_{M} \).</p>
 <p><br  />
@@ -150,7 +150,7 @@ and are only usable with such systems.  The "analyzer" class that implements eac
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 28 2025 00:57:29 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:24:04 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

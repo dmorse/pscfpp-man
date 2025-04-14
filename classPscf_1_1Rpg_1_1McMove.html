@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
    </div>
   </td>
  </tr>
@@ -84,13 +84,12 @@ Inheritance diagram for Pscf::Rpg::McMove&lt; D &gt;:</div>
  <div class="center">
   <img src="classPscf_1_1Rpg_1_1McMove.png" usemap="#Pscf::Rpg::McMove_3C_20D_20_3E_map" alt=""/>
   <map id="Pscf::Rpg::McMove_3C_20D_20_3E_map" name="Pscf::Rpg::McMove_3C_20D_20_3E_map">
-<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="204,112,398,136"/>
-<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="204,56,398,80"/>
-<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="102,0,296,24"/>
-<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="306,0,500,24"/>
+<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="102,112,296,136"/>
+<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="102,56,296,80"/>
+<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="0,0,194,24"/>
+<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="204,0,398,24"/>
 <area href="classPscf_1_1Rpg_1_1ForceBiasMove.html" title="ForceBiasMove attempts a Brownian dynamics move." alt="Pscf::Rpg::ForceBiasMove&lt; D &gt;" shape="rect" coords="0,224,194,248"/>
-<area href="classPscf_1_1Rpg_1_1FourierMove.html" title="FourierMove is a Monte Carlo move in fourier space." alt="Pscf::Rpg::FourierMove&lt; D &gt;" shape="rect" coords="204,224,398,248"/>
-<area href="classPscf_1_1Rpg_1_1RealMove.html" title="RealMove is a Monte Carlo move in real space." alt="Pscf::Rpg::RealMove&lt; D &gt;" shape="rect" coords="408,224,602,248"/>
+<area href="classPscf_1_1Rpg_1_1RealMove.html" title="RealMove is a Monte Carlo move in real space." alt="Pscf::Rpg::RealMove&lt; D &gt;" shape="rect" coords="204,224,398,248"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -598,7 +597,7 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classUtil_1_1ParamComposite.html#a172a3a656b5829c8d758424ad09a22a6">Util::ParamComposite</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPscf_1_1Rpg_1_1ForceBiasMove.html#adf3855a0c719ca422fe7e0f0e41731d9">Pscf::Rpg::ForceBiasMove&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpg_1_1FourierMove.html#ae86b6b1f858e18e92424c622d189ab1f">Pscf::Rpg::FourierMove&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1RealMove.html#a2bf97bc099114131bcc8c865c06d17ce">Pscf::Rpg::RealMove&lt; D &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classPscf_1_1Rpg_1_1ForceBiasMove.html#adf3855a0c719ca422fe7e0f0e41731d9">Pscf::Rpg::ForceBiasMove&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1RealMove.html#a2bf97bc099114131bcc8c865c06d17ce">Pscf::Rpg::RealMove&lt; D &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="rpg_2fts_2montecarlo_2McMove_8tpp_source.html#l00046">46</a> of file <a class="el" href="rpg_2fts_2montecarlo_2McMove_8tpp_source.html">rpg/fts/montecarlo/McMove.tpp</a>.</p>
 
@@ -669,11 +668,11 @@ template&lt;int D&gt; </div>
 <p>Setup before the beginning of each simulation run. </p>
 <p>This method zeros the statistical accumulators nAttempt and nAccept. Derived class implementations should complete any other initialization that is required at the beginning of each simulation run within a sequence of several such runs. </p>
 
-<p>Reimplemented in <a class="el" href="classPscf_1_1Rpg_1_1ForceBiasMove.html#a7112949a150e99fee6fc76201c6b8a88">Pscf::Rpg::ForceBiasMove&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpg_1_1FourierMove.html#a732411ad2fadc6c63023de04cb127b5e">Pscf::Rpg::FourierMove&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1RealMove.html#ae28b4feb1fe10cf3821306a28b580441">Pscf::Rpg::RealMove&lt; D &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classPscf_1_1Rpg_1_1ForceBiasMove.html#a7112949a150e99fee6fc76201c6b8a88">Pscf::Rpg::ForceBiasMove&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1RealMove.html#ae28b4feb1fe10cf3821306a28b580441">Pscf::Rpg::RealMove&lt; D &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="rpg_2fts_2montecarlo_2McMove_8tpp_source.html#l00062">62</a> of file <a class="el" href="rpg_2fts_2montecarlo_2McMove_8tpp_source.html">rpg/fts/montecarlo/McMove.tpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2montecarlo_2ForceBiasMove_8tpp_source.html#l00074">Pscf::Rpg::ForceBiasMove&lt; D &gt;::setup()</a>, <a class="el" href="FourierMove_8tpp_source.html#l00069">Pscf::Rpg::FourierMove&lt; D &gt;::setup()</a>, and <a class="el" href="rpg_2fts_2montecarlo_2RealMove_8tpp_source.html#l00054">Pscf::Rpg::RealMove&lt; D &gt;::setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpg_2fts_2montecarlo_2ForceBiasMove_8tpp_source.html#l00074">Pscf::Rpg::ForceBiasMove&lt; D &gt;::setup()</a>, and <a class="el" href="rpg_2fts_2montecarlo_2RealMove_8tpp_source.html#l00061">Pscf::Rpg::RealMove&lt; D &gt;::setup()</a>.</p>
 
 </div>
 </div>
@@ -811,11 +810,11 @@ template&lt;int D&gt; </div>
 
 <p>Log output timing results. </p>
 
-<p>Reimplemented in <a class="el" href="classPscf_1_1Rpg_1_1ForceBiasMove.html#ae7631c2dfd375b8d5ba48a231e2c7466">Pscf::Rpg::ForceBiasMove&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpg_1_1FourierMove.html#aadaca4213d666a43de38fc424f67fc9c">Pscf::Rpg::FourierMove&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1RealMove.html#aed78ed45e7c25e283bc0e1a3f947f313">Pscf::Rpg::RealMove&lt; D &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classPscf_1_1Rpg_1_1ForceBiasMove.html#ae7631c2dfd375b8d5ba48a231e2c7466">Pscf::Rpg::ForceBiasMove&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1RealMove.html#aed78ed45e7c25e283bc0e1a3f947f313">Pscf::Rpg::RealMove&lt; D &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="rpg_2fts_2montecarlo_2McMove_8tpp_source.html#l00162">162</a> of file <a class="el" href="rpg_2fts_2montecarlo_2McMove_8tpp_source.html">rpg/fts/montecarlo/McMove.tpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2montecarlo_2ForceBiasMove_8tpp_source.html#l00241">Pscf::Rpg::ForceBiasMove&lt; D &gt;::outputTimers()</a>, <a class="el" href="FourierMove_8tpp_source.html#l00223">Pscf::Rpg::FourierMove&lt; D &gt;::outputTimers()</a>, and <a class="el" href="rpg_2fts_2montecarlo_2RealMove_8tpp_source.html#l00106">Pscf::Rpg::RealMove&lt; D &gt;::outputTimers()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpg_2fts_2montecarlo_2ForceBiasMove_8tpp_source.html#l00241">Pscf::Rpg::ForceBiasMove&lt; D &gt;::outputTimers()</a>, and <a class="el" href="rpg_2fts_2montecarlo_2RealMove_8tpp_source.html#l00126">Pscf::Rpg::RealMove&lt; D &gt;::outputTimers()</a>.</p>
 
 </div>
 </div>
@@ -1001,7 +1000,7 @@ template&lt;int D&gt; </div>
 
 <p>Output statistics for this move (at the end of simulation) </p>
 
-<p>Reimplemented in <a class="el" href="classPscf_1_1Rpg_1_1ForceBiasMove.html#a78885d9f4bb40def698c2eed7d403788">Pscf::Rpg::ForceBiasMove&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpg_1_1FourierMove.html#a9b86e745b3d0fdcca50678790b48ff12">Pscf::Rpg::FourierMove&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1RealMove.html#af17f10a655e9309974d620b1bc8ba50f">Pscf::Rpg::RealMove&lt; D &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classPscf_1_1Rpg_1_1ForceBiasMove.html#a78885d9f4bb40def698c2eed7d403788">Pscf::Rpg::ForceBiasMove&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1RealMove.html#af17f10a655e9309974d620b1bc8ba50f">Pscf::Rpg::RealMove&lt; D &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="rpg_2fts_2montecarlo_2McMove_8tpp_source.html#l00158">158</a> of file <a class="el" href="rpg_2fts_2montecarlo_2McMove_8tpp_source.html">rpg/fts/montecarlo/McMove.tpp</a>.</p>
 
@@ -1284,7 +1283,7 @@ template&lt;int D&gt; </div>
 <p>This function should modify the system w fields in r-grid format, as returned by <a class="el" href="#a8e3be715c12864ce7a257414f161c6a7" title="Get parent System object.">system()</a>.w().rgrid(), in order apply an unconstrained attempted move. The compressor will then be applied in order to restore the density constraint.</p>
 <p>The default implementation is empty. </p>
 
-<p>Reimplemented in <a class="el" href="classPscf_1_1Rpg_1_1FourierMove.html#a6b7729423cc48f19eaad0b791f5ff4d8">Pscf::Rpg::FourierMove&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1RealMove.html#ab7fd7b5fa54c7aefbc05970be9ea1c5a">Pscf::Rpg::RealMove&lt; D &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classPscf_1_1Rpg_1_1RealMove.html#ab7fd7b5fa54c7aefbc05970be9ea1c5a">Pscf::Rpg::RealMove&lt; D &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="rpg_2fts_2montecarlo_2McMove_8h_source.html#l00208">208</a> of file <a class="el" href="rpg_2fts_2montecarlo_2McMove_8h_source.html">rpg/fts/montecarlo/McMove.h</a>.</p>
 
@@ -1327,7 +1326,7 @@ template&lt;int D&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 28 2025 00:57:30 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:24:05 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>

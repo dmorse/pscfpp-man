@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
    </div>
   </td>
  </tr>
@@ -729,7 +729,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>      <span class="comment">// Final processing of phases of of waves in stars:</span></div>
 <div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>      std::complex&lt;double&gt; rootCoeff; <span class="comment">// Coefficient of root wave</span></div>
 <div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>      std::complex&lt;double&gt; partCoeff; <span class="comment">// Coefficient of partner of root</span></div>
-<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>      std::complex&lt;double&gt; d;</div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>      std::complex&lt;double&gt; <a class="code hl_function" href="group__Pscf__Chem__Module.html#ga927f98385bb36537301a5e652decdc98">d</a>;</div>
 <div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>      <span class="keywordtype">int</span> rootId, partId;</div>
 <div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>      <span class="keywordflow">for</span> (i = 0; i &lt; nStar_; ++i) {</div>
 <div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span> </div>
@@ -821,17 +821,17 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>                  partCoeff = waves_[partId].coeff;</div>
 <div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>                  <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(std::abs(std::abs(partCoeff) - 1.0) &lt; 1.0E-9);</div>
 <div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>                  <span class="keywordflow">if</span> (std::abs(partCoeff - rootCoeff) &gt; 1.0E-6) {</div>
-<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>                     d = sqrt(partCoeff);</div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>                     <a class="code hl_function" href="group__Pscf__Chem__Module.html#ga927f98385bb36537301a5e652decdc98">d</a> = sqrt(partCoeff);</div>
 <div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>                     <span class="keywordflow">if</span> (<a class="code hl_function" href="group__Pscf__Math__Complex__Module.html#gadc3b10b3f2a06e8f2aee5527031c076b">real</a>(d) &lt; -1.0E-4) {</div>
-<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>                        d = -d;</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>                        <a class="code hl_function" href="group__Pscf__Chem__Module.html#ga927f98385bb36537301a5e652decdc98">d</a> = -<a class="code hl_function" href="group__Pscf__Chem__Module.html#ga927f98385bb36537301a5e652decdc98">d</a>;</div>
 <div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>                     } <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>                     <span class="keywordflow">if</span> (std::abs(<a class="code hl_function" href="group__Pscf__Math__Complex__Module.html#gadc3b10b3f2a06e8f2aee5527031c076b">real</a>(d)) &lt;= 1.0E-4) {</div>
 <div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>                        <span class="keywordflow">if</span> (<a class="code hl_function" href="group__Pscf__Math__Complex__Module.html#ga8c595f9e14aa158bee60fbcdb687efb0">imag</a>(d) &lt; 0.0) {</div>
-<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>                           d = -d;</div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>                           <a class="code hl_function" href="group__Pscf__Chem__Module.html#ga927f98385bb36537301a5e652decdc98">d</a> = -<a class="code hl_function" href="group__Pscf__Chem__Module.html#ga927f98385bb36537301a5e652decdc98">d</a>;</div>
 <div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>                        }</div>
 <div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>                     }</div>
 <div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>                     <span class="keywordflow">for</span> (j=stars_[i].beginId; j &lt; stars_[i].endId; ++j){</div>
-<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>                        waves_[j].coeff /= d;</div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>                        waves_[j].coeff /= <a class="code hl_function" href="group__Pscf__Chem__Module.html#ga927f98385bb36537301a5e652decdc98">d</a>;</div>
 <div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>                     }</div>
 <div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>                  }</div>
 <div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span> </div>
@@ -1520,7 +1520,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassPscf_1_1Prdc_1_1Basis_html_aaaaac3cb87cfcfa7b2aa20a900d20b85"><div class="ttname"><a href="classPscf_1_1Prdc_1_1Basis.html#aaaaac3cb87cfcfa7b2aa20a900d20b85">Pscf::Prdc::Basis::outputStars</a></div><div class="ttdeci">void outputStars(std::ostream &amp;out, bool outputAll=false) const</div><div class="ttdoc">Print a list of all stars to an output stream.</div><div class="ttdef"><b>Definition</b> <a href="#l00957">Basis.tpp:957</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Prdc_1_1SpaceGroup_html"><div class="ttname"><a href="classPscf_1_1Prdc_1_1SpaceGroup.html">Pscf::Prdc::SpaceGroup</a></div><div class="ttdoc">Crystallographic space group.</div><div class="ttdef"><b>Definition</b> <a href="FieldIoReal_8h_source.html#l00023">FieldIoReal.h:23</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Prdc_1_1SpaceGroup_html_a601f3d726e0373a8ec355b8046826e5b"><div class="ttname"><a href="classPscf_1_1Prdc_1_1SpaceGroup.html#a601f3d726e0373a8ec355b8046826e5b">Pscf::Prdc::SpaceGroup::checkMeshDimensions</a></div><div class="ttdeci">void checkMeshDimensions(IntVec&lt; D &gt; const &amp;dimensions) const</div><div class="ttdoc">Check if input mesh dimensions are compatible with space group.</div><div class="ttdef"><b>Definition</b> <a href="SpaceGroup_8tpp_source.html#l00064">SpaceGroup.tpp:64</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Prdc_1_1UnitCell_html"><div class="ttname"><a href="classPscf_1_1Prdc_1_1UnitCell.html">Pscf::Prdc::UnitCell</a></div><div class="ttdoc">Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2System_8h_source.html#l00034">rpg/System.h:34</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Prdc_1_1UnitCell_html"><div class="ttname"><a href="classPscf_1_1Prdc_1_1UnitCell.html">Pscf::Prdc::UnitCell</a></div><div class="ttdoc">Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2System_8h_source.html#l00038">rpg/System.h:38</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Vec_html_aefa0c09b531d84005009bdfdb6de95ff"><div class="ttname"><a href="classPscf_1_1Vec.html#aefa0c09b531d84005009bdfdb6de95ff">Pscf::Vec::negate</a></div><div class="ttdeci">Vec&lt; D, T &gt; &amp; negate(const Vec&lt; D, T &gt; &amp;v)</div><div class="ttdoc">Return negative of vector v.</div><div class="ttdef"><b>Definition</b> <a href="Vec_8h_source.html#l00520">Vec.h:520</a></div></div>
 <div class="ttc" id="aclassUtil_1_1Constants_html_a02241b62130cf631078a6f7c52af22db"><div class="ttname"><a href="classUtil_1_1Constants.html#a02241b62130cf631078a6f7c52af22db">Util::Constants::Pi</a></div><div class="ttdeci">static const double Pi</div><div class="ttdoc">Trigonometric constant Pi.</div><div class="ttdef"><b>Definition</b> <a href="Constants_8h_source.html#l00035">Constants.h:35</a></div></div>
 <div class="ttc" id="aclassUtil_1_1Dbl_html"><div class="ttname"><a href="classUtil_1_1Dbl.html">Util::Dbl</a></div><div class="ttdoc">Wrapper for a double precision number, for formatted ostream output.</div><div class="ttdef"><b>Definition</b> <a href="Dbl_8h_source.html#l00039">Dbl.h:40</a></div></div>
@@ -1531,14 +1531,15 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassUtil_1_1Int_html"><div class="ttname"><a href="classUtil_1_1Int.html">Util::Int</a></div><div class="ttdoc">Wrapper for an int, for formatted ostream output.</div><div class="ttdef"><b>Definition</b> <a href="Int_8h_source.html#l00036">Int.h:37</a></div></div>
 <div class="ttc" id="aglobal_8h_html_aaf3bc07accafc94019d126e4cffa81e7"><div class="ttname"><a href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a></div><div class="ttdeci">#define UTIL_CHECK(condition)</div><div class="ttdoc">Assertion macro suitable for serial or parallel production code.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00068">global.h:68</a></div></div>
 <div class="ttc" id="aglobal_8h_html_ad2512f8bd062d41d66799cf900151487"><div class="ttname"><a href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a></div><div class="ttdeci">#define UTIL_THROW(msg)</div><div class="ttdoc">Macro for throwing an Exception, reporting function, file and line number.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00051">global.h:51</a></div></div>
+<div class="ttc" id="agroup__Pscf__Chem__Module_html_ga927f98385bb36537301a5e652decdc98"><div class="ttname"><a href="group__Pscf__Chem__Module.html#ga927f98385bb36537301a5e652decdc98">Pscf::Debye::d</a></div><div class="ttdeci">double d(double ksq, double length, double kuhn)</div><div class="ttdoc">Compute and return a homopolymer correlation function.</div><div class="ttdef"><b>Definition</b> <a href="Debye_8cpp_source.html#l00017">Debye.cpp:17</a></div></div>
 <div class="ttc" id="agroup__Pscf__Math__Complex__Module_html_ga8c595f9e14aa158bee60fbcdb687efb0"><div class="ttname"><a href="group__Pscf__Math__Complex__Module.html#ga8c595f9e14aa158bee60fbcdb687efb0">Pscf::imag</a></div><div class="ttdeci">RT imag(CT const &amp;a)</div><div class="ttdoc">Return the imaginary part of a complex number.</div></div>
 <div class="ttc" id="agroup__Pscf__Math__Complex__Module_html_gadc3b10b3f2a06e8f2aee5527031c076b"><div class="ttname"><a href="group__Pscf__Math__Complex__Module.html#gadc3b10b3f2a06e8f2aee5527031c076b">Pscf::real</a></div><div class="ttdeci">RT real(CT const &amp;a)</div><div class="ttdoc">Return the real part of a complex number.</div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
-<div class="ttc" id="astructPscf_1_1Prdc_1_1TWave_html"><div class="ttname"><a href="structPscf_1_1Prdc_1_1TWave.html">Pscf::Prdc::TWave</a></div><div class="ttdoc">Simple wave struct for use within Basis construction.</div><div class="ttdef"><b>Definition</b> <a href="TWave_8h_source.html#l00023">TWave.h:24</a></div></div>
+<div class="ttc" id="astructPscf_1_1Prdc_1_1TWave_html"><div class="ttname"><a href="structPscf_1_1Prdc_1_1TWave.html">Pscf::Prdc::TWave</a></div><div class="ttdoc">Simple wave struct for use within Basis construction.</div><div class="ttdef"><b>Definition</b> <a href="TWave_8h_source.html#l00024">TWave.h:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 28 2025 00:57:27 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Mon Apr 14 2025 16:24:02 for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>
