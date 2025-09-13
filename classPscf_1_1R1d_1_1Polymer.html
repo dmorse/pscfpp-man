@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -390,8 +390,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Descriptor and solver for a block polymer species. </p>
-<p>The block concentrations stored in the constituent <a class="el" href="classPscf_1_1R1d_1_1Block.html" title="Block within a branched polymer.">Block</a> objects contain the block concentrations (i.e., volume fraction) fields computed in the most recent call of the compute function.</p>
-<p>The <a class="el" href="classPscf_1_1PolymerTmpl.html#a1956df7c7b319005c9f8b6cc274a7dc7">phi()</a> and <a class="el" href="classPscf_1_1PolymerTmpl.html#acaa3a7b3452b1100290920467bf99a57">mu()</a> accessor functions, which are inherited from <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">Pscf::PolymerSpecies</a>, return the value of phi (spatial average volume fraction of a species) or mu (species chemical potential) computed in the last call of the compute function. If the ensemble for this species is closed, phi is read from the parameter file and mu is computed. If the ensemble is open, mu is read from the parameter file and phi is computed.</p>
+<p>A <a class="el" href="classPscf_1_1R1d_1_1Polymer.html" title="Descriptor and solver for a block polymer species.">Polymer</a> contains an array of <a class="el" href="classPscf_1_1R1d_1_1Block.html" title="Block within a block polymer.">Block</a> objects, each of which contains two propagator objects. After <a class="el" href="#a76687ea3a9925c7007ebbbc2532e404a" title="Compute solution to modified diffusion equation and concentrations.">Polymer::compute</a> is called, each block stores the block concentration (volume fraction) fields computed for that block, and each <a class="el" href="classPscf_1_1R1d_1_1Propagator.html" title="MDE solver for one-direction of one block.">Propagator</a> contains the solution of the modified diffusion equation for that propagator. Functions that return values for molecular volume fraction phi, molecular chemical potential mu, and molecular partition function q are indirectly inherited from <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">Pscf::PolymerSpecies</a>.</p>
+<p>Class <a class="el" href="classPscf_1_1R1d_1_1Block.html" title="Block within a block polymer.">R1d::Block</a> is a subclass of <a class="el" href="classPscf_1_1PolymerTmpl.html">Pscf::PolymerTmpl&lt;Block&gt;</a>, which is a subclass of <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">Pscf::PolymerSpecies</a>.</p>
 <p><a class="el" href="user_param_mixture_page.html#user_param_polymer_sec">Parameter File Format</a> </p>
 
 <p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Polymer_8h_source.html#l00037">37</a> of file <a class="el" href="r1d_2solvers_2Polymer_8h_source.html">r1d/solvers/Polymer.h</a>.</p>
@@ -457,7 +457,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Compute solution to modified diffusion equation and concentrations. </p>
-<p>Upon return, propagator solutions and block concentration fields are computed for all propagators and blocks, along with molecular partition function q and phi or mu.</p>
+<p>Upon return, propagator solutions and block concentration fields have been computed for all propagators and blocks, along with the molecular partition function q and phi or mu.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">wFields</td><td>array of chemica potential fields. </td></tr>

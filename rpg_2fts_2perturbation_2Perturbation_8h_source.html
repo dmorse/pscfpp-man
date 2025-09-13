@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -62,143 +62,140 @@ $(function() {
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;util/param/ParamComposite.h&gt;</span>      <span class="comment">// base class</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceUtil.html">Util</a> {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code hl_class" href="classUtil_1_1DArray.html">DArray</a>;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>}</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// Forward declarations</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceUtil.html">Util</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code hl_class" href="classUtil_1_1DArray.html">DArray</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>}</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Prdc</a>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc_1_1Cuda.html">Cuda</a>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt; <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>   <span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Prdc</a>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>      <span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc_1_1Cuda.html">Cuda</a>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>         <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt; <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>      }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>   }</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpg.html">Rpg</a></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>   <span class="keyword">using namespace </span>Util;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Prdc</a>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>   <span class="keyword">using namespace </span>Prdc::Cuda;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt; <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System</a>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt; <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator</a>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Perturbation.html">   35</a></span>   <span class="keyword">class </span><a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#acba71b74af2c921a65c47e76054f5d4e">Perturbation</a> : <span class="keyword">public</span> <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a873eea7d2dbc19cde816d1bef602496c">ParamComposite</a></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>   {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>   <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#acba71b74af2c921a65c47e76054f5d4e">Perturbation</a>(<a class="code hl_class" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator&lt;D&gt;</a>&amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a5ed25339e87f892b85a8d27cd8fabd71">simulator</a>);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      <span class="keyword">virtual</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a8987195a01b0016681359780df916e18">~Perturbation</a>();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a94338593875d8acee6c168c6b395dfba">readParameters</a>(std::istream&amp; in);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#ad94fc99e2c015ed9b7158b74e9564800">setup</a>();</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a98484a268327c3fe9320de4006a41205">hamiltonian</a>(<span class="keywordtype">double</span> unperturbedHamiltonian);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a063ecf24bf003441cd9f9787dca28e0c">incrementDc</a>(<a class="code hl_class" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField&lt;D&gt;</a> &gt;&amp; dc);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a8d0bd9b686517adb64b42821084ca8d9">saveState</a>();</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#aeea41d39709050b1e720b6c1b2c3e97c">restoreState</a>();</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>       </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a59c42eba1e7db4346eeb430a705ef496">df</a>();</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      <a class="code hl_class" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator&lt;D&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a5ed25339e87f892b85a8d27cd8fabd71">simulator</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      <a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System&lt;D&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a1500c6d0f1065dfd582cd5a9ff57f5f0">system</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="foldopen" id="foldopen00128" data-start="{" data-end="}">
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Perturbation.html#a42659e5235d97dbc4cca3a335b2cfc50">  128</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a42659e5235d97dbc4cca3a335b2cfc50">lambda</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="keyword">      </span>{  <span class="keywordflow">return</span> <a class="code hl_variable" href="classPscf_1_1Rpg_1_1Perturbation.html#a21ba4b4e0af10ca4f86181e16b809d63">lambda_</a>; }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpg.html">Rpg</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>   <span class="keyword">using namespace </span>Util;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Prdc</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>   <span class="keyword">using namespace </span>Prdc::Cuda;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt; <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt; <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Perturbation.html">   34</a></span>   <span class="keyword">class </span><a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#acba71b74af2c921a65c47e76054f5d4e">Perturbation</a> : <span class="keyword">public</span> <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a873eea7d2dbc19cde816d1bef602496c">ParamComposite</a></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>   {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>   <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#acba71b74af2c921a65c47e76054f5d4e">Perturbation</a>(<a class="code hl_class" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator&lt;D&gt;</a>&amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a5ed25339e87f892b85a8d27cd8fabd71">simulator</a>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      <span class="keyword">virtual</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a8987195a01b0016681359780df916e18">~Perturbation</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a94338593875d8acee6c168c6b395dfba">readParameters</a>(std::istream&amp; in);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#ad94fc99e2c015ed9b7158b74e9564800">setup</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a98484a268327c3fe9320de4006a41205">hamiltonian</a>(<span class="keywordtype">double</span> unperturbedHamiltonian);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a063ecf24bf003441cd9f9787dca28e0c">incrementDc</a>(<a class="code hl_class" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField&lt;D&gt;</a> &gt;&amp; dc);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a8d0bd9b686517adb64b42821084ca8d9">saveState</a>();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#aeea41d39709050b1e720b6c1b2c3e97c">restoreState</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>       </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a59c42eba1e7db4346eeb430a705ef496">df</a>();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      <a class="code hl_class" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator&lt;D&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a5ed25339e87f892b85a8d27cd8fabd71">simulator</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      <a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System&lt;D&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a1500c6d0f1065dfd582cd5a9ff57f5f0">system</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="foldopen" id="foldopen00127" data-start="{" data-end="}">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Perturbation.html#a42659e5235d97dbc4cca3a335b2cfc50">  127</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a42659e5235d97dbc4cca3a335b2cfc50">lambda</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="keyword">      </span>{  <span class="keywordflow">return</span> <a class="code hl_variable" href="classPscf_1_1Rpg_1_1Perturbation.html#a21ba4b4e0af10ca4f86181e16b809d63">lambda_</a>; }</div>
 </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a0fcb0272ee75a858a718274e6d7a3259">setLambda</a>(<span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a42659e5235d97dbc4cca3a335b2cfc50">lambda</a>);</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>   <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span></div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>      <a class="code hl_class" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator&lt;D&gt;</a>&amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a5ed25339e87f892b85a8d27cd8fabd71">simulator</a>();</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>      </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      <a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System&lt;D&gt;</a>&amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a1500c6d0f1065dfd582cd5a9ff57f5f0">system</a>();</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Perturbation.html#a21ba4b4e0af10ca4f86181e16b809d63">  153</a></span>      <span class="keywordtype">double</span> <a class="code hl_variable" href="classPscf_1_1Rpg_1_1Perturbation.html#a21ba4b4e0af10ca4f86181e16b809d63">lambda_</a>;</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>   <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span></div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>      <a class="code hl_class" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator&lt;D&gt;</a>* simulatorPtr_;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>      </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>      <a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System&lt;D&gt;</a>* systemPtr_;</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>   };</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a0fcb0272ee75a858a718274e6d7a3259">setLambda</a>(<span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a42659e5235d97dbc4cca3a335b2cfc50">lambda</a>);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>   <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>      <a class="code hl_class" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator&lt;D&gt;</a>&amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a5ed25339e87f892b85a8d27cd8fabd71">simulator</a>();</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>      </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>      <a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System&lt;D&gt;</a>&amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a1500c6d0f1065dfd582cd5a9ff57f5f0">system</a>();</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Perturbation.html#a21ba4b4e0af10ca4f86181e16b809d63">  152</a></span>      <span class="keywordtype">double</span> <a class="code hl_variable" href="classPscf_1_1Rpg_1_1Perturbation.html#a21ba4b4e0af10ca4f86181e16b809d63">lambda_</a>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>   <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>      <a class="code hl_class" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator&lt;D&gt;</a>* simulatorPtr_;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>      </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>      <a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System&lt;D&gt;</a>* systemPtr_;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>   };</div>
 </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>   <span class="comment">// Inline methods</span></div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>   <span class="comment">// Return parent simulator by const reference.</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00169" data-start="{" data-end="}">
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Perturbation.html#a5ed25339e87f892b85a8d27cd8fabd71">  169</a></span>   <span class="keyword">inline</span> <a class="code hl_class" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator&lt;D&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a5ed25339e87f892b85a8d27cd8fabd71">Perturbation&lt;D&gt;::simulator</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="keyword">   </span>{</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      assert(simulatorPtr_);  </div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>      <span class="keywordflow">return</span> *simulatorPtr_; </div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>   }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>   <span class="comment">// Inline methods</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>   <span class="comment">// Return parent simulator by const reference.</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00168" data-start="{" data-end="}">
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Perturbation.html#a5ed25339e87f892b85a8d27cd8fabd71">  168</a></span>   <span class="keyword">inline</span> <a class="code hl_class" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator&lt;D&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a5ed25339e87f892b85a8d27cd8fabd71">Perturbation&lt;D&gt;::simulator</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="keyword">   </span>{</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      assert(simulatorPtr_);  </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      <span class="keywordflow">return</span> *simulatorPtr_; </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>   }</div>
 </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>   <span class="comment">// Return parent simulator by non-const reference.</span></div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00177" data-start="{" data-end="}">
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Perturbation.html#a5513904504f6a4655090b1898da1caa0">  177</a></span>   <span class="keyword">inline</span> <a class="code hl_class" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator&lt;D&gt;</a> &amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a5ed25339e87f892b85a8d27cd8fabd71">Perturbation&lt;D&gt;::simulator</a>() </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>   {  </div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      assert(simulatorPtr_);  </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>      <span class="keywordflow">return</span> *simulatorPtr_; </div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>   }</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>   <span class="comment">// Return parent simulator by non-const reference.</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00176" data-start="{" data-end="}">
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Perturbation.html#a5513904504f6a4655090b1898da1caa0">  176</a></span>   <span class="keyword">inline</span> <a class="code hl_class" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator&lt;D&gt;</a> &amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a5ed25339e87f892b85a8d27cd8fabd71">Perturbation&lt;D&gt;::simulator</a>() </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>   {  </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>      assert(simulatorPtr_);  </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      <span class="keywordflow">return</span> *simulatorPtr_; </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>   }</div>
 </div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>   </div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>   <span class="comment">// Return parent simulator by const reference.</span></div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00185" data-start="{" data-end="}">
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Perturbation.html#a1500c6d0f1065dfd582cd5a9ff57f5f0">  185</a></span>   <span class="keyword">inline</span> <a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System&lt;D&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a1500c6d0f1065dfd582cd5a9ff57f5f0">Perturbation&lt;D&gt;::system</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="keyword">   </span>{  </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>      assert(systemPtr_);  </div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>      <span class="keywordflow">return</span> *systemPtr_; </div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>   }</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>   </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>   <span class="comment">// Return parent simulator by const reference.</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00184" data-start="{" data-end="}">
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Perturbation.html#a1500c6d0f1065dfd582cd5a9ff57f5f0">  184</a></span>   <span class="keyword">inline</span> <a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System&lt;D&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a1500c6d0f1065dfd582cd5a9ff57f5f0">Perturbation&lt;D&gt;::system</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="keyword">   </span>{  </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>      assert(systemPtr_);  </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>      <span class="keywordflow">return</span> *systemPtr_; </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>   }</div>
 </div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>   </div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>   <span class="comment">// Return parent simulator by non-const reference.</span></div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00193" data-start="{" data-end="}">
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Perturbation.html#a197b26219090545e247cac9f10357733">  193</a></span>   <span class="keyword">inline</span> <a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System&lt;D&gt;</a> &amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a1500c6d0f1065dfd582cd5a9ff57f5f0">Perturbation&lt;D&gt;::system</a>() </div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>   {  </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>      assert(systemPtr_);  </div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>      <span class="keywordflow">return</span> *systemPtr_; </div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>   }</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>   </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>   <span class="comment">// Return parent simulator by non-const reference.</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00192" data-start="{" data-end="}">
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Perturbation.html#a197b26219090545e247cac9f10357733">  192</a></span>   <span class="keyword">inline</span> <a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System&lt;D&gt;</a> &amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Perturbation.html#a1500c6d0f1065dfd582cd5a9ff57f5f0">Perturbation&lt;D&gt;::system</a>() </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>   {  </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>      assert(systemPtr_);  </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>      <span class="keywordflow">return</span> *systemPtr_; </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>   }</div>
 </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">   #ifndef RPG_PERTURBATION_TPP</span></div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>   <span class="comment">// Suppress implicit instantiation</span></div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1Perturbation.html">Perturbation&lt;1&gt;</a>;</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1Perturbation.html">Perturbation&lt;2&gt;</a>;</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1Perturbation.html">Perturbation&lt;3&gt;</a>;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="preprocessor">   #endif</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>}</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>}</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>   <span class="comment">// Explicit instantiation declarations</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1Perturbation.html">Perturbation&lt;1&gt;</a>;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1Perturbation.html">Perturbation&lt;2&gt;</a>;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1Perturbation.html">Perturbation&lt;3&gt;</a>;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>}</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>}</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassPscf_1_1Prdc_1_1Cpu_1_1RField_html"><div class="ttname"><a href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">Pscf::Prdc::Cpu::RField</a></div><div class="ttdoc">Field of real double precision values on an FFT mesh.</div><div class="ttdef"><b>Definition</b> <a href="cpu_2RField_8h_source.html#l00028">cpu/RField.h:29</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html">Pscf::Rpg::Perturbation</a></div><div class="ttdoc">Base class for additive perturbations of standard FTS Hamiltonian.</div><div class="ttdef"><b>Definition</b> <a href="#l00035">rpg/fts/perturbation/Perturbation.h:36</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html">Pscf::Rpg::Perturbation</a></div><div class="ttdoc">Base class for additive perturbations of standard FTS Hamiltonian.</div><div class="ttdef"><b>Definition</b> <a href="#l00034">rpg/fts/perturbation/Perturbation.h:35</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_a063ecf24bf003441cd9f9787dca28e0c"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#a063ecf24bf003441cd9f9787dca28e0c">Pscf::Rpg::Perturbation::incrementDc</a></div><div class="ttdeci">virtual void incrementDc(DArray&lt; RField&lt; D &gt; &gt; &amp;dc)</div><div class="ttdoc">Modify the generalized forces to include perturbation.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2perturbation_2Perturbation_8tpp_source.html#l00059">rpg/fts/perturbation/Perturbation.tpp:59</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_a0fcb0272ee75a858a718274e6d7a3259"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#a0fcb0272ee75a858a718274e6d7a3259">Pscf::Rpg::Perturbation::setLambda</a></div><div class="ttdeci">void setLambda(double lambda)</div><div class="ttdoc">Set the perturbation parameter value.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2perturbation_2Perturbation_8tpp_source.html#l00087">rpg/fts/perturbation/Perturbation.tpp:87</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_a1500c6d0f1065dfd582cd5a9ff57f5f0"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#a1500c6d0f1065dfd582cd5a9ff57f5f0">Pscf::Rpg::Perturbation::system</a></div><div class="ttdeci">System&lt; D &gt; const &amp; system() const</div><div class="ttdoc">Get parent System&lt;D&gt; by const reference.</div><div class="ttdef"><b>Definition</b> <a href="#l00185">rpg/fts/perturbation/Perturbation.h:185</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_a21ba4b4e0af10ca4f86181e16b809d63"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#a21ba4b4e0af10ca4f86181e16b809d63">Pscf::Rpg::Perturbation::lambda_</a></div><div class="ttdeci">double lambda_</div><div class="ttdoc">Strength of the perturbation.</div><div class="ttdef"><b>Definition</b> <a href="#l00153">rpg/fts/perturbation/Perturbation.h:153</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_a42659e5235d97dbc4cca3a335b2cfc50"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#a42659e5235d97dbc4cca3a335b2cfc50">Pscf::Rpg::Perturbation::lambda</a></div><div class="ttdeci">double lambda() const</div><div class="ttdoc">Get the perturbation parameter.</div><div class="ttdef"><b>Definition</b> <a href="#l00128">rpg/fts/perturbation/Perturbation.h:128</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_a1500c6d0f1065dfd582cd5a9ff57f5f0"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#a1500c6d0f1065dfd582cd5a9ff57f5f0">Pscf::Rpg::Perturbation::system</a></div><div class="ttdeci">System&lt; D &gt; const &amp; system() const</div><div class="ttdoc">Get parent System&lt;D&gt; by const reference.</div><div class="ttdef"><b>Definition</b> <a href="#l00184">rpg/fts/perturbation/Perturbation.h:184</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_a21ba4b4e0af10ca4f86181e16b809d63"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#a21ba4b4e0af10ca4f86181e16b809d63">Pscf::Rpg::Perturbation::lambda_</a></div><div class="ttdeci">double lambda_</div><div class="ttdoc">Strength of the perturbation.</div><div class="ttdef"><b>Definition</b> <a href="#l00152">rpg/fts/perturbation/Perturbation.h:152</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_a42659e5235d97dbc4cca3a335b2cfc50"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#a42659e5235d97dbc4cca3a335b2cfc50">Pscf::Rpg::Perturbation::lambda</a></div><div class="ttdeci">double lambda() const</div><div class="ttdoc">Get the perturbation parameter.</div><div class="ttdef"><b>Definition</b> <a href="#l00127">rpg/fts/perturbation/Perturbation.h:127</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_a59c42eba1e7db4346eeb430a705ef496"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#a59c42eba1e7db4346eeb430a705ef496">Pscf::Rpg::Perturbation::df</a></div><div class="ttdeci">virtual double df()</div><div class="ttdoc">Compute and return derivative of H w/ respect to parameter lambda.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2perturbation_2Perturbation_8tpp_source.html#l00080">rpg/fts/perturbation/Perturbation.tpp:80</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_a5ed25339e87f892b85a8d27cd8fabd71"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#a5ed25339e87f892b85a8d27cd8fabd71">Pscf::Rpg::Perturbation::simulator</a></div><div class="ttdeci">Simulator&lt; D &gt; const &amp; simulator() const</div><div class="ttdoc">Get parent Simulator&lt;D&gt; by const reference.</div><div class="ttdef"><b>Definition</b> <a href="#l00169">rpg/fts/perturbation/Perturbation.h:169</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_a5ed25339e87f892b85a8d27cd8fabd71"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#a5ed25339e87f892b85a8d27cd8fabd71">Pscf::Rpg::Perturbation::simulator</a></div><div class="ttdeci">Simulator&lt; D &gt; const &amp; simulator() const</div><div class="ttdoc">Get parent Simulator&lt;D&gt; by const reference.</div><div class="ttdef"><b>Definition</b> <a href="#l00168">rpg/fts/perturbation/Perturbation.h:168</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_a8987195a01b0016681359780df916e18"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#a8987195a01b0016681359780df916e18">Pscf::Rpg::Perturbation::~Perturbation</a></div><div class="ttdeci">virtual ~Perturbation()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2perturbation_2Perturbation_8tpp_source.html#l00031">rpg/fts/perturbation/Perturbation.tpp:31</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_a8d0bd9b686517adb64b42821084ca8d9"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#a8d0bd9b686517adb64b42821084ca8d9">Pscf::Rpg::Perturbation::saveState</a></div><div class="ttdeci">virtual void saveState()</div><div class="ttdoc">Save any required internal state variables.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2perturbation_2Perturbation_8tpp_source.html#l00066">rpg/fts/perturbation/Perturbation.tpp:66</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_a94338593875d8acee6c168c6b395dfba"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#a94338593875d8acee6c168c6b395dfba">Pscf::Rpg::Perturbation::readParameters</a></div><div class="ttdeci">virtual void readParameters(std::istream &amp;in)</div><div class="ttdoc">Read parameters from archive.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2perturbation_2Perturbation_8tpp_source.html#l00038">rpg/fts/perturbation/Perturbation.tpp:38</a></div></div>
@@ -207,7 +204,7 @@ $(function() {
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_ad94fc99e2c015ed9b7158b74e9564800"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#ad94fc99e2c015ed9b7158b74e9564800">Pscf::Rpg::Perturbation::setup</a></div><div class="ttdeci">virtual void setup()</div><div class="ttdoc">Complete any required initialization.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2perturbation_2Perturbation_8tpp_source.html#l00045">rpg/fts/perturbation/Perturbation.tpp:45</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Perturbation_html_aeea41d39709050b1e720b6c1b2c3e97c"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Perturbation.html#aeea41d39709050b1e720b6c1b2c3e97c">Pscf::Rpg::Perturbation::restoreState</a></div><div class="ttdeci">virtual void restoreState()</div><div class="ttdoc">Restore any required internal state variables.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2perturbation_2Perturbation_8tpp_source.html#l00073">rpg/fts/perturbation/Perturbation.tpp:73</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Simulator_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Simulator.html">Pscf::Rpg::Simulator</a></div><div class="ttdoc">Field theoretic simulator (base class).</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2simulator_2Simulator_8h_source.html#l00061">rpg/fts/simulator/Simulator.h:62</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a></div><div class="ttdoc">Main class, representing one complete system.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2system_2System_8h_source.html#l00103">rpg/system/System.h:104</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a></div><div class="ttdoc">Main class, representing a complete physical system.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2system_2System_8h_source.html#l00037">rpg/system/System.h:38</a></div></div>
 <div class="ttc" id="aclassUtil_1_1DArray_html"><div class="ttname"><a href="classUtil_1_1DArray.html">Util::DArray</a></div><div class="ttdoc">Dynamically allocatable contiguous array template.</div><div class="ttdef"><b>Definition</b> <a href="DArray_8h_source.html#l00031">DArray.h:32</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a873eea7d2dbc19cde816d1bef602496c"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a873eea7d2dbc19cde816d1bef602496c">Util::ParamComposite::ParamComposite</a></div><div class="ttdeci">ParamComposite()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8cpp_source.html#l00023">ParamComposite.cpp:23</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a></div><div class="ttdoc">Fields, FFTs, and utilities for periodic boundary conditions (CUDA)</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00014">Reduce.cpp:14</a></div></div>

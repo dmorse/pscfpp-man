@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -99,16 +99,14 @@ $(function() {
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>   };</div>
 </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">   #ifndef RPC_MC_MOVE_FACTORY_TPP</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>   <span class="comment">// Suppress implicit instantiation</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1McMoveFactory.html">McMoveFactory&lt;1&gt;</a>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1McMoveFactory.html">McMoveFactory&lt;2&gt;</a>;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1McMoveFactory.html">McMoveFactory&lt;3&gt;</a>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">   #endif</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>   <span class="comment">// Explicit instantiation declarations</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1McMoveFactory.html">McMoveFactory&lt;1&gt;</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1McMoveFactory.html">McMoveFactory&lt;2&gt;</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1McMoveFactory.html">McMoveFactory&lt;3&gt;</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1McMoveFactory_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1McMoveFactory.html">Pscf::Rpc::McMoveFactory</a></div><div class="ttdoc">Factory for subclasses of McMove.</div><div class="ttdef"><b>Definition</b> <a href="#l00029">rpc/fts/montecarlo/McMoveFactory.h:30</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1McMoveFactory_html_ac2b1cc7b8e69cde61be1995ff4f5117b"><div class="ttname"><a href="classPscf_1_1Rpc_1_1McMoveFactory.html#ac2b1cc7b8e69cde61be1995ff4f5117b">Pscf::Rpc::McMoveFactory::McMoveFactory</a></div><div class="ttdeci">McMoveFactory(McSimulator&lt; D &gt; &amp;simulator)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2montecarlo_2McMoveFactory_8tpp_source.html#l00020">rpc/fts/montecarlo/McMoveFactory.tpp:20</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1McMoveFactory_html_ae3e3d0b5f4e26cbc7cb4e72e8861343a"><div class="ttname"><a href="classPscf_1_1Rpc_1_1McMoveFactory.html#ae3e3d0b5f4e26cbc7cb4e72e8861343a">Pscf::Rpc::McMoveFactory::factory</a></div><div class="ttdeci">McMove&lt; D &gt; * factory(const std::string &amp;className) const</div><div class="ttdoc">Method to create any McMove supplied with PSCF.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2montecarlo_2McMoveFactory_8tpp_source.html#l00028">rpc/fts/montecarlo/McMoveFactory.tpp:28</a></div></div>

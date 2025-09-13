@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -94,8 +94,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Rpc_1_1BinaryStructureFactorGrid.html" title="BinaryStructureFactorGrid evaluates AB copolymer structure factors.">BinaryStructureFactorGrid</a> evaluates AB copolymer structure factors.  <a href="classPscf_1_1Rpc_1_1BinaryStructureFactorGrid.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Block" id="r_Block"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpc_1_1Block.html">Block</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Rpc_1_1Block.html" title="Block within a linear or branched block polymer.">Block</a> within a linear or branched block polymer.  <a href="classPscf_1_1Rpc_1_1Block.html#details">More...</a><br /></td></tr>
-<tr class="memitem:CFieldContainer" id="r_CFieldContainer"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpc_1_1CFieldContainer.html">CFieldContainer</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of c fields stored in both basis and r-grid format.  <a href="classPscf_1_1Rpc_1_1CFieldContainer.html#details">More...</a><br /></td></tr>
+<tr class="memitem:CFields" id="r_CFields"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpc_1_1CFields.html">CFields</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of c fields stored in both basis and r-grid format.  <a href="classPscf_1_1Rpc_1_1CFields.html#details">More...</a><br /></td></tr>
 <tr class="memitem:ChiDerivative" id="r_ChiDerivative"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpc_1_1ChiDerivative.html">ChiDerivative</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the derivative of H with respect to chi.  <a href="classPscf_1_1Rpc_1_1ChiDerivative.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Compressor" id="r_Compressor"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpc_1_1Compressor.html">Compressor</a></td></tr>
@@ -117,7 +117,7 @@ Classes</h2></td></tr>
 <tr class="memitem:FieldIo" id="r_FieldIo"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpc_1_1FieldIo.html">FieldIo</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">File input/output operations and format conversions for fields.  <a href="classPscf_1_1Rpc_1_1FieldIo.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FieldState" id="r_FieldState"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpc_1_1FieldState.html">FieldState</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record of a state of a <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> (fields + unit cell).  <a href="classPscf_1_1Rpc_1_1FieldState.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record of a state of a <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> (fields + unit cell).  <a href="classPscf_1_1Rpc_1_1FieldState.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FilmEnvironment" id="r_FilmEnvironment"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpc_1_1FilmEnvironment.html">FilmEnvironment</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class defining mask &amp; external fields for thin-film systems.  <a href="classPscf_1_1Rpc_1_1FilmEnvironment.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FilmFieldGenExt" id="r_FilmFieldGenExt"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpc_1_1FilmFieldGenExt.html">FilmFieldGenExt</a></td></tr>
@@ -203,17 +203,19 @@ Classes</h2></td></tr>
 <tr class="memitem:SweepParameter" id="r_SweepParameter"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpc_1_1SweepParameter.html">SweepParameter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for storing data about an individual sweep parameter.  <a href="classPscf_1_1Rpc_1_1SweepParameter.html#details">More...</a><br /></td></tr>
 <tr class="memitem:System" id="r_System"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main class, representing one complete system.  <a href="classPscf_1_1Rpc_1_1System.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main class, representing a complete physical system.  <a href="classPscf_1_1Rpc_1_1System.html#details">More...</a><br /></td></tr>
 <tr class="memitem:SystemConstRef" id="r_SystemConstRef"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpc_1_1SystemConstRef.html">SystemConstRef</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Const access to a <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System&lt;D&gt;</a>.  <a href="classPscf_1_1Rpc_1_1SystemConstRef.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Const access to a <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System&lt;D&gt;</a>.  <a href="classPscf_1_1Rpc_1_1SystemConstRef.html#details">More...</a><br /></td></tr>
 <tr class="memitem:TrajectoryReader" id="r_TrajectoryReader"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpc_1_1TrajectoryReader.html">TrajectoryReader</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trajectory file reader (base class).  <a href="classPscf_1_1Rpc_1_1TrajectoryReader.html#details">More...</a><br /></td></tr>
 <tr class="memitem:TrajectoryReaderFactory" id="r_TrajectoryReaderFactory"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpc_1_1TrajectoryReaderFactory.html">TrajectoryReaderFactory</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory for subclasses of <a class="el" href="classPscf_1_1Rpc_1_1TrajectoryReader.html" title="Trajectory file reader (base class).">TrajectoryReader</a>.  <a href="classPscf_1_1Rpc_1_1TrajectoryReaderFactory.html#details">More...</a><br /></td></tr>
 <tr class="memitem:TrajectoryWriter" id="r_TrajectoryWriter"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpc_1_1TrajectoryWriter.html">TrajectoryWriter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Periodically write snapshots to a trajectory file.  <a href="classPscf_1_1Rpc_1_1TrajectoryWriter.html#details">More...</a><br /></td></tr>
-<tr class="memitem:WFieldContainer" id="r_WFieldContainer"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpc_1_1WFieldContainer.html">WFieldContainer</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A container of fields stored in both basis and r-grid format.  <a href="classPscf_1_1Rpc_1_1WFieldContainer.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Types" id="r_Types"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpc_1_1Types.html">Types</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classUtil_1_1List.html" title="Linked list class template.">List</a> of aliases for types used the in <a class="el" href="namespacePscf_1_1Rpc.html" title="Real periodic fields, SCFT and PS-FTS (CPU).">Rpc</a> namespace.  <a href="classPscf_1_1Rpc_1_1Types.html#details">More...</a><br /></td></tr>
+<tr class="memitem:WFields" id="r_WFields"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpc_1_1WFields.html">WFields</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A container of fields stored in both basis and r-grid format.  <a href="classPscf_1_1Rpc_1_1WFields.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>

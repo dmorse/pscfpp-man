@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -91,7 +91,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9a233a28c314cc8ef6b2cbca57247905" id="r_a9a233a28c314cc8ef6b2cbca57247905"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a233a28c314cc8ef6b2cbca57247905">~Sweep</a> ()</td></tr>
 <tr class="memdesc:a9a233a28c314cc8ef6b2cbca57247905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 <tr class="memitem:a178d22451baaf62f62aaad214010b454" id="r_a178d22451baaf62f62aaad214010b454"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a178d22451baaf62f62aaad214010b454">setSystem</a> (<a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a>&lt; D &gt; &amp;<a class="el" href="#a4949ccb8335016ec0f6e4657308a159b">system</a>)</td></tr>
-<tr class="memdesc:a178d22451baaf62f62aaad214010b454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set association with parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a>.  <br /></td></tr>
+<tr class="memdesc:a178d22451baaf62f62aaad214010b454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set association with parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a>.  <br /></td></tr>
 <tr class="memitem:a83b28b364d022da4ea8991c180043151" id="r_a83b28b364d022da4ea8991c180043151"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83b28b364d022da4ea8991c180043151">readParameters</a> (std::istream &amp;in)</td></tr>
 <tr class="memdesc:a83b28b364d022da4ea8991c180043151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameters from param file.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classPscf_1_1SweepTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1SweepTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1SweepTmpl.html">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a></td></tr>
@@ -294,7 +294,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a67e4247ccb23566cac92d2363aa6f100" id="r_a67e4247ccb23566cac92d2363aa6f100"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67e4247ccb23566cac92d2363aa6f100">cleanup</a> ()</td></tr>
 <tr class="memdesc:a67e4247ccb23566cac92d2363aa6f100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleanup operation at the beginning of a sweep.  <br /></td></tr>
 <tr class="memitem:ad37bd38ea8eeca0ee581c8fe09ffa382" id="r_ad37bd38ea8eeca0ee581c8fe09ffa382"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad37bd38ea8eeca0ee581c8fe09ffa382">hasSystem</a> ()</td></tr>
-<tr class="memdesc:ad37bd38ea8eeca0ee581c8fe09ffa382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does an association with the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> exist?  <br /></td></tr>
+<tr class="memdesc:ad37bd38ea8eeca0ee581c8fe09ffa382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does an association with the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> exist?  <br /></td></tr>
 <tr class="memitem:a4949ccb8335016ec0f6e4657308a159b" id="r_a4949ccb8335016ec0f6e4657308a159b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4949ccb8335016ec0f6e4657308a159b">system</a> ()</td></tr>
 <tr class="memdesc:a4949ccb8335016ec0f6e4657308a159b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the parent system by reference.  <br /></td></tr>
 <tr class="memitem:a5d9f133993e0aa0b18cd59938ccf8700" id="r_a5d9f133993e0aa0b18cd59938ccf8700"><td class="memTemplParams" colspan="2">template&lt;typename Type&gt; </td></tr>
@@ -394,7 +394,7 @@ Additional Inherited Members</h2></td></tr>
 class Pscf::Rpc::Sweep&lt; D &gt;</div><p>Solve a sequence of SCFT problems along a line in parameter space. </p>
 <p>See also: <a class="el" href="scft_param_sweep_page.html">Manual page</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00027">27</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html">rpc/scft/sweep/Sweep.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00026">26</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html">rpc/scft/sweep/Sweep.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a25dbac2600d61a40a38eb0f51a8fb452" name="a25dbac2600d61a40a38eb0f51a8fb452"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a25dbac2600d61a40a38eb0f51a8fb452">&#9670;&#160;</a></span>Sweep() <span class="overload">[1/2]</span></h2>
@@ -415,9 +415,9 @@ template&lt;int D&gt; </div>
 
 <p>Default Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00031">31</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00032">32</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepTmpl_8tpp_source.html#l00022">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::SweepTmpl()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00167">writeCBasis_</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00162">writeCRGrid_</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00172">writeWRGrid_</a>.</p>
+<p class="reference">References <a class="el" href="SweepTmpl_8tpp_source.html#l00022">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::SweepTmpl()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00166">writeCBasis_</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00161">writeCRGrid_</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00171">writeWRGrid_</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="rpc_2scft_2sweep_2LinearSweep_8tpp_source.html#l00020">Pscf::Rpc::LinearSweep&lt; D &gt;::LinearSweep()</a>.</p>
 
@@ -448,9 +448,9 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00043">43</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00044">44</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepTmpl_8tpp_source.html#l00181">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::addParameterTypes()</a>, <a class="el" href="SweepTmpl_8tpp_source.html#l00022">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::SweepTmpl()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00149">system()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00167">writeCBasis_</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00162">writeCRGrid_</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00172">writeWRGrid_</a>.</p>
+<p class="reference">References <a class="el" href="SweepTmpl_8tpp_source.html#l00181">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::addParameterTypes()</a>, <a class="el" href="SweepTmpl_8tpp_source.html#l00022">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::SweepTmpl()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00148">system()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00166">writeCBasis_</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00161">writeCRGrid_</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00171">writeWRGrid_</a>.</p>
 
 </div>
 </div>
@@ -473,7 +473,7 @@ template&lt;int D&gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00060">60</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00061">61</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
 
 </div>
 </div>
@@ -495,7 +495,7 @@ template&lt;int D&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Set association with parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a>. </p>
+<p>Set association with parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a>. </p>
 <p>Call for objects created with default constructor.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -504,9 +504,9 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00067">67</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00068">68</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00149">system()</a>.</p>
+<p class="reference">References <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00148">system()</a>.</p>
 
 </div>
 </div>
@@ -547,11 +547,11 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classPscf_1_1Rpc_1_1LinearSweep.html#a21119d4c1dd9f0d6e04a7a7c457f2738">Pscf::Rpc::LinearSweep&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00074">74</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00075">75</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ParamComposite_8h_source.html#l01256">readOptional()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00074">readParameters()</a>, <a class="el" href="SweepTmpl_8tpp_source.html#l00022">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::SweepTmpl()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00167">writeCBasis_</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00162">writeCRGrid_</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00172">writeWRGrid_</a>.</p>
+<p class="reference">References <a class="el" href="ParamComposite_8h_source.html#l01256">readOptional()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00075">readParameters()</a>, <a class="el" href="SweepTmpl_8tpp_source.html#l00022">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::SweepTmpl()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00166">writeCBasis_</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00161">writeCRGrid_</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00171">writeWRGrid_</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2scft_2sweep_2LinearSweep_8tpp_source.html#l00025">Pscf::Rpc::LinearSweep&lt; D &gt;::readParameters()</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00074">readParameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2scft_2sweep_2LinearSweep_8tpp_source.html#l00025">Pscf::Rpc::LinearSweep&lt; D &gt;::readParameters()</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00075">readParameters()</a>.</p>
 
 </div>
 </div>
@@ -588,11 +588,11 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00089">89</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00090">90</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00143">hasSystem()</a>, <a class="el" href="SweepTmpl_8h_source.html#l00127">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::state()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00149">system()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00142">hasSystem()</a>, <a class="el" href="SweepTmpl_8h_source.html#l00127">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::state()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00148">system()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00101">setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00102">setup()</a>.</p>
 
 </div>
 </div>
@@ -627,9 +627,9 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classPscf_1_1Rpc_1_1LinearSweep.html#aaed76e1b299de32653eea3f8ebd742a0">Pscf::Rpc::LinearSweep&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00101">101</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00102">102</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00091">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::baseFileName_</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00089">checkAllocation()</a>, <a class="el" href="SweepTmpl_8tpp_source.html#l00199">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::initialize()</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00149">system()</a>.</p>
+<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00091">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::baseFileName_</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00090">checkAllocation()</a>, <a class="el" href="SweepTmpl_8tpp_source.html#l00199">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::initialize()</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00148">system()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="rpc_2scft_2sweep_2LinearSweep_8tpp_source.html#l00058">Pscf::Rpc::LinearSweep&lt; D &gt;::setup()</a>.</p>
 
@@ -672,7 +672,7 @@ template&lt;int D&gt; </div>
 
 <p>Implemented in <a class="el" href="classPscf_1_1Rpc_1_1LinearSweep.html#ad8d82e53a962cb4dfdeef91d5b3399dc">Pscf::Rpc::LinearSweep&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00120">120</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00121">121</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00142">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::s()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
@@ -714,9 +714,9 @@ template&lt;int D&gt; </div>
 
 <p>Implements <a class="el" href="classPscf_1_1SweepTmpl.html#a204d5f1b29a41a92ed149168c8b76e94">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00130">130</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00131">131</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00167">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::c()</a>, <a class="el" href="SweepTmpl_8h_source.html#l00188">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::historyCapacity()</a>, <a class="el" href="SweepTmpl_8h_source.html#l00177">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::historySize()</a>, <a class="el" href="SweepTmpl_8tpp_source.html#l00252">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::setCoefficients()</a>, <a class="el" href="FSArray_8h_source.html#l00207">Util::FSArray&lt; Data, Capacity &gt;::size()</a>, <a class="el" href="SweepTmpl_8h_source.html#l00127">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::state()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00149">system()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00167">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::c()</a>, <a class="el" href="SweepTmpl_8h_source.html#l00188">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::historyCapacity()</a>, <a class="el" href="SweepTmpl_8h_source.html#l00177">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::historySize()</a>, <a class="el" href="SweepTmpl_8tpp_source.html#l00252">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::setCoefficients()</a>, <a class="el" href="FSArray_8h_source.html#l00207">Util::FSArray&lt; Data, Capacity &gt;::size()</a>, <a class="el" href="SweepTmpl_8h_source.html#l00127">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::state()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00148">system()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -756,9 +756,9 @@ template&lt;int D&gt; </div>
 
 <p>Implements <a class="el" href="classPscf_1_1SweepTmpl.html#abddfa9c19dad8cfbd5ff20691da6d440">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00231">231</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00232">232</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00149">system()</a>.</p>
+<p class="reference">References <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00148">system()</a>.</p>
 
 </div>
 </div>
@@ -792,9 +792,9 @@ template&lt;int D&gt; </div>
 
 <p>Implements <a class="el" href="classPscf_1_1SweepTmpl.html#af36b40cbf32dde6b3dfa3eb0321c4e2a">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00241">241</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00242">242</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00127">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::state()</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00149">system()</a>.</p>
+<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00127">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::state()</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00148">system()</a>.</p>
 
 </div>
 </div>
@@ -828,9 +828,9 @@ template&lt;int D&gt; </div>
 
 <p>Implements <a class="el" href="classPscf_1_1SweepTmpl.html#a068b815a618e98f8873a8ec87d952785">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00255">255</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00256">256</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00127">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::state()</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00149">system()</a>.</p>
+<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00127">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::state()</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00148">system()</a>.</p>
 
 </div>
 </div>
@@ -863,7 +863,7 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classPscf_1_1SweepTmpl.html#a47c747feb697f7f2f560b87098f03c0f">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00347">347</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00348">348</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html">rpc/scft/sweep/Sweep.tpp</a>.</p>
 
 </div>
 </div>
@@ -892,11 +892,11 @@ template&lt;int D&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Does an association with the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> exist? </p>
+<p>Does an association with the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> exist? </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00143">143</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html">rpc/scft/sweep/Sweep.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00142">142</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html">rpc/scft/sweep/Sweep.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00089">checkAllocation()</a>, and <a class="el" href="rpc_2scft_2sweep_2LinearSweep_8tpp_source.html#l00058">Pscf::Rpc::LinearSweep&lt; D &gt;::setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00090">checkAllocation()</a>, and <a class="el" href="rpc_2scft_2sweep_2LinearSweep_8tpp_source.html#l00058">Pscf::Rpc::LinearSweep&lt; D &gt;::setup()</a>.</p>
 
 </div>
 </div>
@@ -927,11 +927,11 @@ template&lt;int D&gt; </div>
 
 <p>Return the parent system by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00149">149</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html">rpc/scft/sweep/Sweep.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00148">148</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html">rpc/scft/sweep/Sweep.h</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00089">checkAllocation()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00130">extrapolate()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00255">getSolution()</a>, <a class="el" href="rpc_2scft_2sweep_2LinearSweep_8tpp_source.html#l00020">Pscf::Rpc::LinearSweep&lt; D &gt;::LinearSweep()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00241">reset()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00067">setSystem()</a>, <a class="el" href="rpc_2scft_2sweep_2LinearSweep_8tpp_source.html#l00058">Pscf::Rpc::LinearSweep&lt; D &gt;::setup()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00101">setup()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00231">solve()</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00043">Sweep()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00090">checkAllocation()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00131">extrapolate()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00256">getSolution()</a>, <a class="el" href="rpc_2scft_2sweep_2LinearSweep_8tpp_source.html#l00020">Pscf::Rpc::LinearSweep&lt; D &gt;::LinearSweep()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00242">reset()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00068">setSystem()</a>, <a class="el" href="rpc_2scft_2sweep_2LinearSweep_8tpp_source.html#l00058">Pscf::Rpc::LinearSweep&lt; D &gt;::setup()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00102">setup()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00232">solve()</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00044">Sweep()</a>.</p>
 
 </div>
 </div>
@@ -984,7 +984,7 @@ template&lt;typename Type&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="ParamComposite_8h_source.html#l00319">319</a> of file <a class="el" href="ParamComposite_8h_source.html">ParamComposite.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00074">readParameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00075">readParameters()</a>.</p>
 
 </div>
 </div>
@@ -1013,9 +1013,9 @@ template&lt;int D&gt; </div>
 
 <p>Should concentration fields be written to file in r-grid format? </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00162">162</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html">rpc/scft/sweep/Sweep.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00161">161</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html">rpc/scft/sweep/Sweep.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00074">readParameters()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00031">Sweep()</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00043">Sweep()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00075">readParameters()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00032">Sweep()</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00044">Sweep()</a>.</p>
 
 </div>
 </div>
@@ -1043,9 +1043,9 @@ template&lt;int D&gt; </div>
 
 <p>Should concentration fields be written to file in basis format? </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00167">167</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html">rpc/scft/sweep/Sweep.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00166">166</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html">rpc/scft/sweep/Sweep.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00074">readParameters()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00031">Sweep()</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00043">Sweep()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00075">readParameters()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00032">Sweep()</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00044">Sweep()</a>.</p>
 
 </div>
 </div>
@@ -1073,9 +1073,9 @@ template&lt;int D&gt; </div>
 
 <p>Should converged w fields be written to file in r-grid format? </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00172">172</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html">rpc/scft/sweep/Sweep.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00171">171</a> of file <a class="el" href="rpc_2scft_2sweep_2Sweep_8h_source.html">rpc/scft/sweep/Sweep.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00074">readParameters()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00031">Sweep()</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00043">Sweep()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00075">readParameters()</a>, <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00032">Sweep()</a>, and <a class="el" href="rpc_2scft_2sweep_2Sweep_8tpp_source.html#l00044">Sweep()</a>.</p>
 
 </div>
 </div>

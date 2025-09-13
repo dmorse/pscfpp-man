@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -64,32 +64,35 @@ $(function() {
 <p>The command file contains a sequence of commands that are read and executed in the order in which they appear in the file. Each command begins with a command name that is given in upper case letters. Some commands take one or more parameters, which must appear after the command name, separated by whitespace. The program stops execution and returns control to the operating system when it encounters the command name 'FINISH' on a line by itself.</p>
 <p>Full descriptions of all of the commands recognized by all three PSCF programs are given <a class="el" href="scft_command_page.html">here</a>.</p>
 <h1 class="doxsection"><a class="anchor" id="user_command_example_sec"></a>
-Example: SCFT command file, periodic structure</h1>
+Example: SCFT calculation, periodic structure</h1>
 <p>Suppose that pscf_pc is used to perform an SCFT calculation periodic structure of known space group symmetry, and is invoked from a directory that contains a parameter file named "param" and a command file named "command", using the command </p><div class="fragment"><div class="line">pscf_pc -e -p param -c command &gt; log</div>
-</div><!-- fragment --><p> Suppose that the working directory has subdirectories named "in" and "out", such that the "in" directory contains an initial w-field file named w.bf, while output files are all written to the out directory. The following is an example of a minimal command file that could be used for this purpose: </p><div class="fragment"><div class="line">READ_W_BASIS    in/w.bf</div>
+</div><!-- fragment --><p> Suppose also that the working directory has subdirectories named "in" and "out", such that the "in" directory contains an initial w-field file named w.bf, while output files are all written to the "out" directory. An example of a minimal command file that could be used for this purpose is shown below: </p><div class="fragment"><div class="line">READ_W_BASIS    in/w.bf</div>
 <div class="line">ITERATE</div>
 <div class="line">WRITE_W_BASIS   out/w.bf</div>
 <div class="line">WRITE_C_RGRID   out/c.rf</div>
 <div class="line">FINISH</div>
-</div><!-- fragment --><p> This file would work equally well as input to the GPU accelerated pscf_pg program, which has the same user interface as pscf_pc. This command file instructs the program to:</p>
+</div><!-- fragment --><p> This file would work equally well as input to the GPU accelerated pscf_pg program, which accepts the same set of commands as pscf_pc. This command file instructs the program to perform the following actions:</p>
 <ul>
-<li>READ_W_BASIS: Read in a chemical potential fields (w-fields) from the file in/w.rf in symmetry-adapted Fourier basis format.</li>
-<li>ITERATE: Iteratively solve the SCFT equation, using the iterator algorithm and parameters that are specified in the parameter file.</li>
-<li>WRITE_W_BASIS: Write the converged chemical potential fields (w-fields) to a file out/w.bf in symmetry-adapted basis format.</li>
+<li>READ_W_BASIS: Read in an initial set of chemical potential fields (w-fields) from the file in/w.rf in symmetry-adapted Fourier basis format.</li>
+<li>ITERATE: Iteratively solve the SCFT problem, using the iterator algorithm and parameters that are specified in the parameter file.</li>
+<li>WRITE_W_BASIS: Write the converged chemical potential fields (w-fields) obtained by solving the SCFT problem to a file named out/w.bf in symmetry-adapted basis format.</li>
 <li>WRITE_C_RGRID: Write the corresponding monomer concentration fields (c-fields) to a file out/c.rf in r-grid format, in which field values are given as values of nodes of a real-space grid.</li>
 <li>FINISH: stop execution</li>
 </ul>
 <p>The FINISH command is always the last command that is read in a command file, and causes execution of the program to halt.</p>
-<p>In this example, the concentration field that is written in r-grid format by the command WRITE_C_RGRID could be used for visualization.</p>
-<p><b> Interpretation of file names </b>: Many commands require the names of input or output files as arguments. By default, file names are interpreted as paths that are defined relative to the current working directory, i.e., relative to the directory from which the program executable was invoked. File name paths may include names of subdirectories of this directory and path separator slash characters, as done in the above example. This default behavior may, however, be modified by using the "-i" and/or "-o" <a class="el" href="user_usage_page.html">command line options</a> to automatically add prefixes to paths for input and output files, respectively. <br  />
+<p>In this example, w-fields are both read and written in basis format, using the commands READ_W_BASIS_and WRITE_W_BASIS. This is typical for SCFT calculations that are performed on a single unit cell of a structure of user-specified space group symmetry. The final monomer concentration fields have, however, been written in r-grid format, using the command WRITE_C_RGRID. Use of r-grid format for the c fields allows the resulting file to be used as an input to the POLYMER VISUAL program to allow visualization of the structure.</p>
+<h1 class="doxsection"><a class="anchor" id="user_command_path_sec"></a>
+Interpretation of file names</h1>
+<p>Many commands require the names of input or output files as arguments. By default, file names are interpreted as paths that are defined relative to the current working directory, i.e., relative to the directory from which the program executable was invoked. File name paths may that appear in the command file may include names of subdirectories of this directory and path separator slash characters, as done in the above example. <br  />
 </p>
-<p><b> Example (revisited) </b>: The command file in the above example was designed for a case in which pscf_pc or pscf_pg is invoked without using the -i or -o command line options. If the program had instead been invoked using these options to specify prefixes of "in/" and "out/", e.g., as </p><div class="fragment"><div class="line">&gt; pscf_pc -d 3 -p param -c command -i in/ -o out/ -e &gt; log</div>
-</div><!-- fragment --><p> then the corresponding command file could have been written in a form </p><div class="fragment"><div class="line">READ_W_BASIS    w.bf</div>
+<p>This default behavior may, however, be modified by using the "-i" and "-o" <a class="el" href="user_usage_page.html">command line options</a> to automatically add prefixes to paths for input and output files.</p>
+<p><b> Example (revisited) </b>: The command file in the above example was designed for a case in which pscf_pc or pscf_pg is invoked without using the -i or -o command line options. Suppose that the program had instead been invoked using these options to specify prefixes of "in/" and "out/", e.g., as </p><div class="fragment"><div class="line">&gt; pscf_pc -d 3 -p param -c command -i in/ -o out/ -e &gt; log</div>
+</div><!-- fragment --><p> The corresponding command file would then have been written in a form </p><div class="fragment"><div class="line">READ_W_BASIS    w.bf</div>
 <div class="line">ITERATE</div>
 <div class="line">WRITE_W_BASIS   w.bf</div>
 <div class="line">WRITE_C_RGRID   c.rf</div>
 <div class="line">FINISH</div>
-</div><!-- fragment --><p> in which the names of the input and output files that appear in the command file do not need to include explicit "in/" and "out/" directory names. In this case, the prefix "in/" is instead automatically prepended to the name given for any input file in the parameter or command file, while the prefix "out/" is prepended to the name of any output file. Note that, if a prefix is used to specify a subdirectory in which files are located, as in this example, then the prefix string must include a trailing backlash character.</p>
+</div><!-- fragment --><p> in which the names of the input and output files that appear in the command file do not include explicit "in/" and "out/" directory names. In this case, the prefix "in/" is instead automatically prepended to the name given for any input file in the parameter or command file, while the prefix "out/" is prepended to the name of any output file. Note that, if a prefix is used to specify a subdirectory in which files are located, as in this example, then the prefix string must include a trailing backlash character. The input and output prefixes defined by the -i and -o command line options are not, however, applied to the names of the parameter and command file that are specified by the -p and -o command line options.</p>
 <p><br  />
  <a class="el" href="user_param_page.html">Parameter Files</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_page.html">User Introduction</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_example_page.html">Examples</a> (Next) </p>
 </div></div><!-- contents -->

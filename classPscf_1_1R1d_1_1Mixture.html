@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -63,7 +63,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classPscf_1_1R1d_1_1Mixture.html" title="Mixture of polymers and solvents.">Mixture</a> of polymers and solvents.  
+<p>Solver and descriptor for a mixture of polymers and solvents.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="r1d_2solvers_2Mixture_8h_source.html">Mixture.h</a>&gt;</code></p>
@@ -323,6 +323,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a30752567fd7b8b93e5c8476bbe8592c5" id="r_a30752567fd7b8b93e5c8476bbe8592c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30752567fd7b8b93e5c8476bbe8592c5">setClassName</a> (const char *<a class="el" href="classUtil_1_1ParamComposite.html#a93e3a9fd3bd01dcc3c606a7bf3112c0e">className</a>)</td></tr>
+<tr class="memdesc:a30752567fd7b8b93e5c8476bbe8592c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set class name string.  <br /></td></tr>
 <tr class="memitem:a21c4ae1412ec944d4189cb7c7b6a3171" id="r_a21c4ae1412ec944d4189cb7c7b6a3171"><td class="memTemplParams" colspan="2">template&lt;typename Type&gt; </td></tr>
 <tr class="memitem:a21c4ae1412ec944d4189cb7c7b6a3171 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1ScalarParam.html">ScalarParam</a>&lt; Type &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21c4ae1412ec944d4189cb7c7b6a3171">read</a> (std::istream &amp;in, const char *label, Type &amp;value)</td></tr>
 <tr class="memdesc:a21c4ae1412ec944d4189cb7c7b6a3171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add and read a new required <a class="el" href="classUtil_1_1ScalarParam.html" title="Template for a Parameter object associated with a scalar variable.">ScalarParam</a> &lt; Type &gt; object.  <br /></td></tr>
@@ -393,9 +395,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:a838c0ac6b298e1dbb7f27053a8649aeb inherit pro_attribs_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer type.">Monomer</a> reference volume (set to 1.0 by default).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classPscf_1_1R1d_1_1Mixture.html" title="Mixture of polymers and solvents.">Mixture</a> of polymers and solvents. </p>
-<p>A <a class="el" href="classPscf_1_1R1d_1_1Mixture.html" title="Mixture of polymers and solvents.">Mixture</a> contains a list of <a class="el" href="classPscf_1_1R1d_1_1Polymer.html" title="Descriptor and solver for a block polymer species.">Polymer</a> and <a class="el" href="classPscf_1_1R1d_1_1Solvent.html" title="Solver and descriptor for a solvent species.">Solvent</a> objects. Each such object can solve the single-molecule statistical mechanics problem for an ideal gas of the associated species in a set of specified chemical potential fields, and thereby compute concentrations and single-molecule partition functions. A <a class="el" href="classPscf_1_1R1d_1_1Mixture.html" title="Mixture of polymers and solvents.">Mixture</a> is thus both a chemistry descriptor and an ideal-gas solver.</p>
-<p>A <a class="el" href="classPscf_1_1R1d_1_1Mixture.html" title="Mixture of polymers and solvents.">Mixture</a> is associated with a <a class="el" href="classPscf_1_1R1d_1_1Domain.html" title="One-dimensional spatial domain and discretization grid.">Domain</a> object, which models a spatial domain and a spatial discretization. Knowledge of the domain and discretization is needed to solve the ideal-gas problem.</p>
+<div class="textblock"><p>Solver and descriptor for a mixture of polymers and solvents. </p>
+<p>A <a class="el" href="classPscf_1_1R1d_1_1Mixture.html" title="Solver and descriptor for a mixture of polymers and solvents.">Mixture</a> contains arrays of <a class="el" href="classPscf_1_1R1d_1_1Polymer.html" title="Descriptor and solver for a block polymer species.">Polymer</a> and <a class="el" href="classPscf_1_1R1d_1_1Solvent.html" title="Solver and descriptor for a solvent species in a mixture.">Solvent</a> objects. Each such object can solve the single-molecule statistical mechanics problem for an ideal gas of the associated species in a set of specified chemical potential fields, and thereby compute concentrations for all monomer types and single-molecule partition functions for all molecular species.</p>
+<p>A <a class="el" href="classPscf_1_1R1d_1_1Mixture.html" title="Solver and descriptor for a mixture of polymers and solvents.">Mixture</a> is associated with a <a class="el" href="classPscf_1_1R1d_1_1Domain.html" title="One-dimensional spatial domain and discretization grid.">Domain</a> object, which models a 1D spatial domain and a spatial discretization mesh. Knowledge of the domain and discretization is needed to solve the ideal-gas problem.</p>
 <p><a class="el" href="user_param_mixture_page.html">Parameter File Format</a> </p>
 
 <p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Mixture_8h_source.html#l00042">42</a> of file <a class="el" href="r1d_2solvers_2Mixture_8h_source.html">r1d/solvers/Mixture.h</a>.</p>
@@ -438,7 +440,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Mixture_8cpp_source.html#l00017">17</a> of file <a class="el" href="r1d_2solvers_2Mixture_8cpp_source.html">r1d/solvers/Mixture.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>.</p>
+<p class="reference">References <a class="el" href="ParamComposite_8cpp_source.html#l00379">setClassName()</a>.</p>
 
 </div>
 </div>
@@ -488,7 +490,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Read all parameters and initialize. </p>
-<p>This function reads in a complete description of the chemical composition and structure of all species, as well as the target contour length step size ds.</p>
+<p>This function reads in a complete description of the chemical structure of all species and the composition of the mixture, as well as the target contour length step size ds.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">in</td><td>input parameter stream </td></tr>
@@ -500,7 +502,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Mixture_8cpp_source.html#l00025">25</a> of file <a class="el" href="r1d_2solvers_2Mixture_8cpp_source.html">r1d/solvers/Mixture.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="MixtureBase_8h_source.html#l00187">Pscf::MixtureBase::nMonomer()</a>, <a class="el" href="MixtureBase_8h_source.html#l00190">Pscf::MixtureBase::nPolymer()</a>, <a class="el" href="MixtureBase_8h_source.html#l00193">Pscf::MixtureBase::nSolvent()</a>, <a class="el" href="ParamComposite_8h_source.html#l01248">read()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00235">Pscf::MixtureTmpl&lt; PT, ST &gt;::readParameters()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="MixtureBase_8h_source.html#l00187">Pscf::MixtureBase::nMonomer()</a>, <a class="el" href="MixtureBase_8h_source.html#l00190">Pscf::MixtureBase::nPolymer()</a>, <a class="el" href="MixtureBase_8h_source.html#l00193">Pscf::MixtureBase::nSolvent()</a>, <a class="el" href="ParamComposite_8h_source.html#l01248">read()</a>, <a class="el" href="MixtureTmpl_8tpp_source.html#l00058">Pscf::MixtureTmpl&lt; PT, ST &gt;::readParameters()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -520,7 +522,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Create an association with the domain and allocate memory. </p>
-<p>The domain parameter must have already been initialized, e.g., by reading its parameters from a file, so that the domain dimensions are known on entry.</p>
+<p>The function parameter domain must have already been initialized, by reading its parameters from a file, so that the domain dimensions and number of grid points are known on entry.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">domain</td><td>associated <a class="el" href="classPscf_1_1R1d_1_1Domain.html" title="One-dimensional spatial domain and discretization grid.">Domain</a> object (stores address). </td></tr>
@@ -589,8 +591,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Compute concentrations. </p>
-<p>This function calls the compute function of every molecular species, and then adds the resulting block concentration fields for blocks of each type to compute a total monomer concentration (or volume fraction) for each monomer type. Upon return, values are set for volume fraction and chemical potential (mu) members of each species, and for the concentration fields for each <a class="el" href="classPscf_1_1R1d_1_1Block.html" title="Block within a branched polymer.">Block</a> and <a class="el" href="classPscf_1_1R1d_1_1Solvent.html" title="Solver and descriptor for a solvent species.">Solvent</a>. The total concentration for each monomer type is returned in the cFields output parameter.</p>
-<p>The arrays wFields and cFields must each have size <a class="el" href="classPscf_1_1MixtureBase.html#a76318e16b2490450a8012e50112ad7fa" title="Get number of monomer types.">nMonomer()</a>, and contain fields that are indexed by monomer type index.</p>
+<p>This function calls the compute function of every molecular species (polymers and solvents), species, and then adds the resulting block concentration fields for blocks of each type to compute a total monomer concentration (or volume fraction) for each monomer type. Upon return, values are set for volume fraction and chemical potential (mu) members of each species, and the concentration field for each <a class="el" href="classPscf_1_1R1d_1_1Block.html" title="Block within a block polymer.">Block</a> and <a class="el" href="classPscf_1_1R1d_1_1Solvent.html" title="Solver and descriptor for a solvent species in a mixture.">Solvent</a>. The total concentration fields for all monomer types are returned in the cFields output parameter.</p>
+<p>The arrays wFields and cFields must each have capacity <a class="el" href="classPscf_1_1MixtureBase.html#a76318e16b2490450a8012e50112ad7fa" title="Get number of monomer types.">nMonomer()</a>, and contain fields that are indexed by monomer type index.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">wFields</td><td>array of chemical potential fields (input) </td></tr>
@@ -604,6 +606,38 @@ Additional Inherited Members</h2></td></tr>
 <p class="reference">References <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="MixtureBase_8h_source.html#l00187">Pscf::MixtureBase::nMonomer()</a>, <a class="el" href="MixtureBase_8h_source.html#l00190">Pscf::MixtureBase::nPolymer()</a>, <a class="el" href="MixtureBase_8h_source.html#l00193">Pscf::MixtureBase::nSolvent()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00164">Pscf::MixtureTmpl&lt; Polymer, Solvent &gt;::polymer()</a>, <a class="el" href="MixtureTmpl_8h_source.html#l00178">Pscf::MixtureTmpl&lt; Polymer, Solvent &gt;::solvent()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BinaryRelaxIterator_8cpp_source.html#l00132">Pscf::R1d::BinaryRelaxIterator::solve()</a>, and <a class="el" href="NrIterator_8cpp_source.html#l00225">Pscf::R1d::NrIterator::solve()</a>.</p>
+
+</div>
+</div>
+<a id="a30752567fd7b8b93e5c8476bbe8592c5" name="a30752567fd7b8b93e5c8476bbe8592c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30752567fd7b8b93e5c8476bbe8592c5">&#9670;&#160;</a></span>setClassName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Util::ParamComposite::setClassName </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>className</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set class name string. </p>
+<p>Should be set in subclass constructor. </p>
+
+<p class="definition">Definition at line <a class="el" href="ParamComposite_8cpp_source.html#l00900">900</a> of file <a class="el" href="ParamComposite_8cpp_source.html">ParamComposite.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="r1d_2solvers_2Mixture_8cpp_source.html#l00017">Mixture()</a>.</p>
 
 </div>
 </div>

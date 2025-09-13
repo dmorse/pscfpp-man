@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -67,129 +67,125 @@ $(function() {
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">* Distributed under the terms of the GNU General Public License.</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;Compressor.h&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;prdc/cuda/RField.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;prdc/cuda/RFieldDft.h&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;util/containers/DArray.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;util/containers/DMatrix.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;util/misc/Timer.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;rpg/fts/compressor/IntraCorrelation.h&gt;</span>  </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpg.html">Rpg</a></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;Compressor.h&quot;</span>                           <span class="comment">// base class</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;prdc/cuda/RField.h&gt;</span>                     <span class="comment">// member</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;prdc/cuda/RFieldDft.h&gt;</span>                  <span class="comment">// member</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;util/containers/DArray.h&gt;</span>               <span class="comment">// member</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;util/misc/Timer.h&gt;</span>                      <span class="comment">// member</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;rpg/fts/compressor/IntraCorrelation.h&gt;</span>  <span class="comment">// member</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpg.html">Rpg</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt; <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System</a>;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt; <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System</a>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>   <span class="keyword">using namespace </span>Util;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1LrCompressor.html">   40</a></span>   <span class="keyword">class </span><a class="code hl_function" href="classPscf_1_1Rpg_1_1LrCompressor.html#aa8f5825e8fe09e290021a8928bafacab">LrCompressor</a> : <span class="keyword">public</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Compressor.html#a4167911521dd0e9af6302c30b238e3f8">Compressor</a>&lt;D&gt;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>   {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>   <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      <a class="code hl_function" href="classPscf_1_1Rpg_1_1LrCompressor.html#aa8f5825e8fe09e290021a8928bafacab">LrCompressor</a>(<a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System&lt;D&gt;</a>&amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Compressor.html#abc62b4f36d035c9e63ae92eaef90119c">system</a>);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <a class="code hl_function" href="classPscf_1_1Rpg_1_1LrCompressor.html#a68a0b76152d4e3818c5630eeedf8c9f5">~LrCompressor</a>();</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1LrCompressor.html#a1c0c9034253bb96ef88b5103abb825d9">readParameters</a>(std::istream&amp; in);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1LrCompressor.html#a015cc45e4b66cda40befa9d5df56f3f9">setup</a>();</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1LrCompressor.html#a72ca839fd0c202604254ba7610be5b16">compress</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>   <span class="keyword">using namespace </span>Util;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1LrCompressor.html">   38</a></span>   <span class="keyword">class </span><a class="code hl_function" href="classPscf_1_1Rpg_1_1LrCompressor.html#aa8f5825e8fe09e290021a8928bafacab">LrCompressor</a> : <span class="keyword">public</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Compressor.html#a4167911521dd0e9af6302c30b238e3f8">Compressor</a>&lt;D&gt;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>   {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>   <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      <a class="code hl_function" href="classPscf_1_1Rpg_1_1LrCompressor.html#aa8f5825e8fe09e290021a8928bafacab">LrCompressor</a>(<a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System&lt;D&gt;</a>&amp; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Compressor.html#abc62b4f36d035c9e63ae92eaef90119c">system</a>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <a class="code hl_function" href="classPscf_1_1Rpg_1_1LrCompressor.html#a68a0b76152d4e3818c5630eeedf8c9f5">~LrCompressor</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1LrCompressor.html#a1c0c9034253bb96ef88b5103abb825d9">readParameters</a>(std::istream&amp; in);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1LrCompressor.html#a015cc45e4b66cda40befa9d5df56f3f9">setup</a>();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1LrCompressor.html#a72ca839fd0c202604254ba7610be5b16">compress</a>();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <span class="keywordtype">double</span> subspacePercent(){<span class="keywordflow">return</span> 0;};</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      <span class="keywordtype">double</span> subspacePercent(){<span class="keywordflow">return</span> 0;};</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      <span class="keywordtype">double</span> correctionPercent(){<span class="keywordflow">return</span> 0;};</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1LrCompressor.html#ab71e40baa801a43c142fb50fc403f088">outputTimers</a>(std::ostream&amp; out) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      <span class="keywordtype">double</span> correctionPercent(){<span class="keywordflow">return</span> 0;};</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1LrCompressor.html#ab71e40baa801a43c142fb50fc403f088">outputTimers</a>(std::ostream&amp; out) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1LrCompressor.html#a3bf6e641489b04578d40641615dfe9ae">clearTimers</a>();</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1LrCompressor.html#a3bf6e641489b04578d40641615dfe9ae">clearTimers</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>   <span class="keyword">protected</span>:</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>   <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      <span class="comment">// Inherited protected members</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      <span class="keyword">using </span><a class="code hl_function" href="classPscf_1_1Rpg_1_1Compressor.html#a4167911521dd0e9af6302c30b238e3f8">Compressor</a>&lt;D&gt;<a class="code hl_variable" href="classPscf_1_1Rpg_1_1Compressor.html#a19df9c2398d6c0de42585a685e6138bc">::mdeCounter_</a>;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      <span class="keyword">using </span><a class="code hl_function" href="classUtil_1_1ParamComposite.html#a21c4ae1412ec944d4189cb7c7b6a3171">ParamComposite::read</a>;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      <span class="keyword">using </span><a class="code hl_function" href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">ParamComposite::readOptional</a>;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>      <span class="keyword">using </span><a class="code hl_function" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">ParamComposite::setClassName</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      <span class="comment">// Inherited protected members</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      <span class="keyword">using </span><a class="code hl_function" href="classPscf_1_1Rpg_1_1Compressor.html#a4167911521dd0e9af6302c30b238e3f8">Compressor</a>&lt;D&gt;<a class="code hl_variable" href="classPscf_1_1Rpg_1_1Compressor.html#a19df9c2398d6c0de42585a685e6138bc">::mdeCounter_</a>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      <span class="keyword">using </span><a class="code hl_function" href="classUtil_1_1ParamComposite.html#a21c4ae1412ec944d4189cb7c7b6a3171">ParamComposite::read</a>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      <span class="keyword">using </span><a class="code hl_function" href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">ParamComposite::readOptional</a>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      <span class="keyword">using </span><a class="code hl_function" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">ParamComposite::setClassName</a>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>   <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>   <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      <span class="comment">// Error tolerance.</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <span class="keywordtype">double</span> epsilon_;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      <span class="comment">// Current iteration counter.</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>      <span class="keywordtype">int</span> itr_;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      <span class="comment">// Maximum number of iterations.</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      <span class="keywordtype">int</span> maxItr_;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      <span class="comment">// Total iteration counter.</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      <span class="keywordtype">int</span> totalItr_;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <span class="comment">// Timers for analyzing performance.</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timerTotal_;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timerMDE_;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <span class="comment">// Type of error criterion used to test convergence</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      std::string errorType_;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      <span class="comment">// Verbosity level.</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      <span class="keywordtype">int</span> verbose_;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      <a class="code hl_class" href="classPscf_1_1IntVec.html">IntVec&lt;D&gt;</a> kMeshDimensions_;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      <span class="keywordtype">int</span> kSize_;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField&lt;D&gt;</a> intraCorrelationK_;</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span></div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>      <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField&lt;D&gt;</a> resid_;</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>      <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RFieldDft.html">RFieldDft&lt;D&gt;</a> residK_;</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>      </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>      <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt; RField&lt;D&gt;</a> &gt; wFieldTmp_;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span></div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>      <span class="keywordtype">void</span> getResidual();</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>      <span class="keywordtype">void</span> updateWFields();</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      <span class="keywordtype">double</span> computeError(<span class="keywordtype">int</span> verbose);</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span></div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>      <span class="keywordtype">double</span> maxAbs(<a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField&lt;D&gt;</a> <span class="keyword">const</span> &amp; a);</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span></div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>      <span class="keywordtype">double</span> dotProduct(<a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField&lt;D&gt;</a> <span class="keyword">const</span> &amp; a, <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField&lt;D&gt;</a> <span class="keyword">const</span> &amp; b);</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>      <span class="keywordtype">double</span> norm(<a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField&lt;D&gt;</a> <span class="keyword">const</span> &amp; a);</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span></div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>      <span class="keywordtype">void</span> outputToLog();</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>      </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>      <a class="code hl_class" href="classPscf_1_1Rpg_1_1IntraCorrelation.html">IntraCorrelation&lt;D&gt;</a> intra_;</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>      </div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>      <span class="keywordtype">bool</span> isIntraCalculated_;</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>      </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>      <span class="keywordtype">bool</span> isAllocated_;</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>      </div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>      <span class="comment">// Private inherited members</span></div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>      <span class="keyword">using </span><a class="code hl_function" href="classPscf_1_1Rpg_1_1Compressor.html#a4167911521dd0e9af6302c30b238e3f8">Compressor</a>&lt;D&gt;<a class="code hl_function" href="classPscf_1_1Rpg_1_1Compressor.html#abc62b4f36d035c9e63ae92eaef90119c">::system</a>;</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>   };</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      <span class="comment">// Error tolerance.</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      <span class="keywordtype">double</span> epsilon_;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <span class="comment">// Current iteration counter.</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      <span class="keywordtype">int</span> itr_;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>      <span class="comment">// Maximum number of iterations.</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>      <span class="keywordtype">int</span> maxItr_;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      <span class="comment">// Total iteration counter.</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      <span class="keywordtype">int</span> totalItr_;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      <span class="comment">// Timers for analyzing performance.</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timerTotal_;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timerMDE_;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      <span class="comment">// Type of error criterion used to test convergence</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      std::string errorType_;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      <span class="comment">// Verbosity level.</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      <span class="keywordtype">int</span> verbose_;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>      <a class="code hl_class" href="classPscf_1_1IntVec.html">IntVec&lt;D&gt;</a> kMeshDimensions_;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      <span class="keywordtype">int</span> kSize_;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField&lt;D&gt;</a> intraCorrelationK_;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>      <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField&lt;D&gt;</a> resid_;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>      <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RFieldDft.html">RFieldDft&lt;D&gt;</a> residK_;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>      </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt; RField&lt;D&gt;</a> &gt; wFieldTmp_;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>      <span class="keywordtype">void</span> getResidual();</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>      <span class="keywordtype">void</span> updateWFields();</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>      <span class="keywordtype">double</span> computeError(<span class="keywordtype">int</span> verbose);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>      <span class="keywordtype">double</span> maxAbs(<a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField&lt;D&gt;</a> <span class="keyword">const</span> &amp; a);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>      <span class="keywordtype">double</span> dotProduct(<a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField&lt;D&gt;</a> <span class="keyword">const</span> &amp; a, <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField&lt;D&gt;</a> <span class="keyword">const</span> &amp; b);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>      <span class="keywordtype">double</span> norm(<a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField&lt;D&gt;</a> <span class="keyword">const</span> &amp; a);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>      <span class="keywordtype">void</span> outputToLog();</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>      </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>      <a class="code hl_class" href="classPscf_1_1Rpg_1_1IntraCorrelation.html">IntraCorrelation&lt;D&gt;</a> intra_;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>      </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>      <span class="keywordtype">bool</span> isIntraCalculated_;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>      </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>      <span class="keywordtype">bool</span> isAllocated_;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>      </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>      <span class="comment">// Private inherited members</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>      <span class="keyword">using </span><a class="code hl_function" href="classPscf_1_1Rpg_1_1Compressor.html#a4167911521dd0e9af6302c30b238e3f8">Compressor</a>&lt;D&gt;<a class="code hl_function" href="classPscf_1_1Rpg_1_1Compressor.html#abc62b4f36d035c9e63ae92eaef90119c">::system</a>;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>   };</div>
 </div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>   </div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="preprocessor">   #ifndef RPG_LR_COMPRESSOR_TPP</span></div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>   <span class="comment">// Suppress implicit instantiation</span></div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1LrCompressor.html">LrCompressor&lt;1&gt;</a>;</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1LrCompressor.html">LrCompressor&lt;2&gt;</a>;</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1LrCompressor.html">LrCompressor&lt;3&gt;</a>;</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="preprocessor">   #endif</span></div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>} <span class="comment">// namespace Rpg</span></div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>} <span class="comment">// namespace Pscf</span></div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>   </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>   <span class="comment">// Explicit instantiation declarations</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1LrCompressor.html">LrCompressor&lt;1&gt;</a>;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1LrCompressor.html">LrCompressor&lt;2&gt;</a>;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1LrCompressor.html">LrCompressor&lt;3&gt;</a>;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>} <span class="comment">// namespace Rpg</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>} <span class="comment">// namespace Pscf</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassPscf_1_1IntVec_html"><div class="ttname"><a href="classPscf_1_1IntVec.html">Pscf::IntVec</a></div><div class="ttdoc">An IntVec&lt;D, T&gt; is a D-component vector of elements of integer type T.</div><div class="ttdef"><b>Definition</b> <a href="IntVec_8h_source.html#l00026">IntVec.h:27</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Prdc_1_1Cpu_1_1RFieldDft_html"><div class="ttname"><a href="classPscf_1_1Prdc_1_1Cpu_1_1RFieldDft.html">Pscf::Prdc::Cpu::RFieldDft</a></div><div class="ttdoc">Fourier transform of a real field on an FFT mesh.</div><div class="ttdef"><b>Definition</b> <a href="cpu_2RFieldDft_8h_source.html#l00031">cpu/RFieldDft.h:32</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Prdc_1_1Cpu_1_1RField_html"><div class="ttname"><a href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">Pscf::Prdc::Cpu::RField</a></div><div class="ttdoc">Field of real double precision values on an FFT mesh.</div><div class="ttdef"><b>Definition</b> <a href="cpu_2RField_8h_source.html#l00028">cpu/RField.h:29</a></div></div>
@@ -197,7 +193,7 @@ $(function() {
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Compressor_html_a4167911521dd0e9af6302c30b238e3f8"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Compressor.html#a4167911521dd0e9af6302c30b238e3f8">Pscf::Rpg::Compressor::Compressor</a></div><div class="ttdeci">Compressor(System&lt; D &gt; &amp;system)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2compressor_2Compressor_8h_source.html#l00109">rpg/fts/compressor/Compressor.h:109</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Compressor_html_abc62b4f36d035c9e63ae92eaef90119c"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Compressor.html#abc62b4f36d035c9e63ae92eaef90119c">Pscf::Rpg::Compressor::system</a></div><div class="ttdeci">System&lt; D &gt; const &amp; system() const</div><div class="ttdoc">Return const reference to parent system.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2compressor_2Compressor_8h_source.html#l00078">rpg/fts/compressor/Compressor.h:78</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1IntraCorrelation_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1IntraCorrelation.html">Pscf::Rpg::IntraCorrelation</a></div><div class="ttdoc">Linear response function for response to pressure.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2compressor_2IntraCorrelation_8h_source.html#l00032">rpg/fts/compressor/IntraCorrelation.h:33</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1LrCompressor_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1LrCompressor.html">Pscf::Rpg::LrCompressor</a></div><div class="ttdoc">Linear response compressor.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">rpg/fts/compressor/LrCompressor.h:41</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1LrCompressor_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1LrCompressor.html">Pscf::Rpg::LrCompressor</a></div><div class="ttdoc">Linear response compressor.</div><div class="ttdef"><b>Definition</b> <a href="#l00038">rpg/fts/compressor/LrCompressor.h:39</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1LrCompressor_html_a015cc45e4b66cda40befa9d5df56f3f9"><div class="ttname"><a href="classPscf_1_1Rpg_1_1LrCompressor.html#a015cc45e4b66cda40befa9d5df56f3f9">Pscf::Rpg::LrCompressor::setup</a></div><div class="ttdeci">void setup()</div><div class="ttdoc">Initialize just before entry to iterative loop.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2compressor_2LrCompressor_8tpp_source.html#l00067">rpg/fts/compressor/LrCompressor.tpp:67</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1LrCompressor_html_a1c0c9034253bb96ef88b5103abb825d9"><div class="ttname"><a href="classPscf_1_1Rpg_1_1LrCompressor.html#a1c0c9034253bb96ef88b5103abb825d9">Pscf::Rpg::LrCompressor::readParameters</a></div><div class="ttdeci">void readParameters(std::istream &amp;in)</div><div class="ttdoc">Read all parameters and initialize.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2compressor_2LrCompressor_8tpp_source.html#l00053">rpg/fts/compressor/LrCompressor.tpp:53</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1LrCompressor_html_a3bf6e641489b04578d40641615dfe9ae"><div class="ttname"><a href="classPscf_1_1Rpg_1_1LrCompressor.html#a3bf6e641489b04578d40641615dfe9ae">Pscf::Rpg::LrCompressor::clearTimers</a></div><div class="ttdeci">void clearTimers()</div><div class="ttdoc">Clear timers.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2compressor_2LrCompressor_8tpp_source.html#l00269">rpg/fts/compressor/LrCompressor.tpp:269</a></div></div>
@@ -205,7 +201,7 @@ $(function() {
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1LrCompressor_html_a72ca839fd0c202604254ba7610be5b16"><div class="ttname"><a href="classPscf_1_1Rpg_1_1LrCompressor.html#a72ca839fd0c202604254ba7610be5b16">Pscf::Rpg::LrCompressor::compress</a></div><div class="ttdeci">int compress()</div><div class="ttdoc">Iterate pressure field to obtain partial saddle point.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2compressor_2LrCompressor_8tpp_source.html#l00114">rpg/fts/compressor/LrCompressor.tpp:114</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1LrCompressor_html_aa8f5825e8fe09e290021a8928bafacab"><div class="ttname"><a href="classPscf_1_1Rpg_1_1LrCompressor.html#aa8f5825e8fe09e290021a8928bafacab">Pscf::Rpg::LrCompressor::LrCompressor</a></div><div class="ttdeci">LrCompressor(System&lt; D &gt; &amp;system)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2compressor_2LrCompressor_8tpp_source.html#l00029">rpg/fts/compressor/LrCompressor.tpp:29</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1LrCompressor_html_ab71e40baa801a43c142fb50fc403f088"><div class="ttname"><a href="classPscf_1_1Rpg_1_1LrCompressor.html#ab71e40baa801a43c142fb50fc403f088">Pscf::Rpg::LrCompressor::outputTimers</a></div><div class="ttdeci">void outputTimers(std::ostream &amp;out) const</div><div class="ttdoc">Return compressor times contributions.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2compressor_2LrCompressor_8tpp_source.html#l00249">rpg/fts/compressor/LrCompressor.tpp:249</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a></div><div class="ttdoc">Main class, representing one complete system.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2system_2System_8h_source.html#l00103">rpg/system/System.h:104</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a></div><div class="ttdoc">Main class, representing a complete physical system.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2system_2System_8h_source.html#l00037">rpg/system/System.h:38</a></div></div>
 <div class="ttc" id="aclassUtil_1_1DArray_html"><div class="ttname"><a href="classUtil_1_1DArray.html">Util::DArray</a></div><div class="ttdoc">Dynamically allocatable contiguous array template.</div><div class="ttdef"><b>Definition</b> <a href="DArray_8h_source.html#l00031">DArray.h:32</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a21c4ae1412ec944d4189cb7c7b6a3171"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a21c4ae1412ec944d4189cb7c7b6a3171">Util::ParamComposite::read</a></div><div class="ttdeci">ScalarParam&lt; Type &gt; &amp; read(std::istream &amp;in, const char *label, Type &amp;value)</div><div class="ttdoc">Add and read a new required ScalarParam &lt; Type &gt; object.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8h_source.html#l01248">ParamComposite.h:1248</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a30752567fd7b8b93e5c8476bbe8592c5"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">Util::ParamComposite::setClassName</a></div><div class="ttdeci">void setClassName(const char *className)</div><div class="ttdoc">Set class name string.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8cpp_source.html#l00379">ParamComposite.cpp:379</a></div></div>

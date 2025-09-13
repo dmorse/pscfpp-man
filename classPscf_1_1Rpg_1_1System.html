@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -55,12 +55,14 @@ $(function() {
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classPscf_1_1Rpg_1_1System-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Pscf::Rpg::System&lt; D &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Rpg__Module.html">Pscf::Rpg - Real Periodic Fields (GPU)</a></div></div></div>
+  <div class="headertitle"><div class="title">Pscf::Rpg::System&lt; D &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Rpg__Module.html">Pscf::Rpg - Real Periodic Fields (GPU)</a> &raquo; <a class="el" href="group__Rpg__System__Module.html">System</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Main class, representing one complete system.  
+<p>Main class, representing a complete physical system.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="rpg_2system_2System_8h_source.html">System.h</a>&gt;</code></p>
@@ -70,115 +72,87 @@ Inheritance diagram for Pscf::Rpg::System&lt; D &gt;:</div>
  <div class="center">
   <img src="classPscf_1_1Rpg_1_1System.png" usemap="#Pscf_3A_3ARpg_3A_3ASystem_3C_20D_20_3E_map" alt=""/>
   <map id="Pscf_3A_3ARpg_3A_3ASystem_3C_20D_20_3E_map" name="Pscf_3A_3ARpg_3A_3ASystem_3C_20D_20_3E_map">
-<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="77,112,221,136"/>
-<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="77,56,221,80"/>
-<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="0,0,144,24"/>
-<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="154,0,298,24"/>
+<area href="classPscf_1_1Prdc_1_1SystemTmpl.html" alt="Pscf::Prdc::SystemTmpl&lt; D, Types&lt; D &gt; &gt;" shape="rect" coords="130,168,381,192"/>
+<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="130,112,381,136"/>
+<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="130,56,381,80"/>
+<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="0,0,251,24"/>
+<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="261,0,512,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Construction and Destruction</div></td></tr>
 <tr class="memitem:a99602e11837fc6c0baf2b63e246f0ab0" id="r_a99602e11837fc6c0baf2b63e246f0ab0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99602e11837fc6c0baf2b63e246f0ab0">System</a> ()</td></tr>
 <tr class="memdesc:a99602e11837fc6c0baf2b63e246f0ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="memitem:a832a1b59f282bdb598240125e5825717" id="r_a832a1b59f282bdb598240125e5825717"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a832a1b59f282bdb598240125e5825717">~System</a> ()</td></tr>
-<tr class="memdesc:a832a1b59f282bdb598240125e5825717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr id="pub-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader">Lifetime (Actions in Main Program)</div></td></tr>
-<tr class="memitem:aa2e730bcbb68a0e89260f6767c67fb53" id="r_aa2e730bcbb68a0e89260f6767c67fb53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2e730bcbb68a0e89260f6767c67fb53">setOptions</a> (int argc, char **argv)</td></tr>
-<tr class="memdesc:aa2e730bcbb68a0e89260f6767c67fb53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process command line options.  <br /></td></tr>
-<tr class="memitem:ac063ed72e02c88e7abffb1b50621c5a3" id="r_ac063ed72e02c88e7abffb1b50621c5a3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac063ed72e02c88e7abffb1b50621c5a3">readParam</a> (std::istream &amp;in)</td></tr>
-<tr class="memdesc:ac063ed72e02c88e7abffb1b50621c5a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read input parameters (with opening and closing lines).  <br /></td></tr>
-<tr class="memitem:a2026360d4908ff0eef44642524087e45" id="r_a2026360d4908ff0eef44642524087e45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2026360d4908ff0eef44642524087e45">readParam</a> ()</td></tr>
-<tr class="memdesc:a2026360d4908ff0eef44642524087e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read input parameters from default param file.  <br /></td></tr>
-<tr class="memitem:a73fda832c66da0ead7b1316ac3422869" id="r_a73fda832c66da0ead7b1316ac3422869"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73fda832c66da0ead7b1316ac3422869">readParameters</a> (std::istream &amp;in)</td></tr>
-<tr class="memdesc:a73fda832c66da0ead7b1316ac3422869"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read body of parameter block (without opening and closing lines).  <br /></td></tr>
-<tr class="memitem:aa26feef75804fb233f3cf62687006bae" id="r_aa26feef75804fb233f3cf62687006bae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa26feef75804fb233f3cf62687006bae">readCommands</a> (std::istream &amp;in)</td></tr>
-<tr class="memdesc:aa26feef75804fb233f3cf62687006bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and process commands from an input stream.  <br /></td></tr>
-<tr class="memitem:a4133e372bbe3f738ebb442e107674f4f" id="r_a4133e372bbe3f738ebb442e107674f4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4133e372bbe3f738ebb442e107674f4f">readCommands</a> ()</td></tr>
-<tr class="memdesc:a4133e372bbe3f738ebb442e107674f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and process commands from the default command file.  <br /></td></tr>
-<tr id="pub-methods-2" class="groupHeader"><td colspan="2"><div class="groupHeader">Field Theory Computations</div></td></tr>
-<tr class="memitem:a29d8e5a1025b26edb90bd5dea98ac7ec" id="r_a29d8e5a1025b26edb90bd5dea98ac7ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29d8e5a1025b26edb90bd5dea98ac7ec">compute</a> (bool needStress=false)</td></tr>
-<tr class="memdesc:a29d8e5a1025b26edb90bd5dea98ac7ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the modified diffusion equation once, without iteration.  <br /></td></tr>
-<tr class="memitem:a52bab4d47562aba4dbdbfa4d9696d8ef" id="r_a52bab4d47562aba4dbdbfa4d9696d8ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52bab4d47562aba4dbdbfa4d9696d8ef">computeStress</a> ()</td></tr>
-<tr class="memdesc:a52bab4d47562aba4dbdbfa4d9696d8ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute SCFT stress.  <br /></td></tr>
-<tr class="memitem:a90379c57137ad78ed979eddabe79a4c6" id="r_a90379c57137ad78ed979eddabe79a4c6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90379c57137ad78ed979eddabe79a4c6">iterate</a> (bool isContinuation=false)</td></tr>
-<tr class="memdesc:a90379c57137ad78ed979eddabe79a4c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iteratively solve a SCFT problem.  <br /></td></tr>
-<tr class="memitem:a79e67fdfab3afc278b8eed2e75cc8717" id="r_a79e67fdfab3afc278b8eed2e75cc8717"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79e67fdfab3afc278b8eed2e75cc8717">sweep</a> ()</td></tr>
-<tr class="memdesc:a79e67fdfab3afc278b8eed2e75cc8717"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Rpg_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a> in parameter space, solving an SCF problem at each point.  <br /></td></tr>
-<tr class="memitem:af107694fdd1df271a74bf2f4e7c2a9e6" id="r_af107694fdd1df271a74bf2f4e7c2a9e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af107694fdd1df271a74bf2f4e7c2a9e6">simulate</a> (int nStep)</td></tr>
-<tr class="memdesc:af107694fdd1df271a74bf2f4e7c2a9e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a field theoretic simulation (PS-FTS).  <br /></td></tr>
-<tr class="memitem:a00021b28e0579b648cef31c25b75774f" id="r_a00021b28e0579b648cef31c25b75774f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00021b28e0579b648cef31c25b75774f">clearCFields</a> ()</td></tr>
-<tr class="memdesc:a00021b28e0579b648cef31c25b75774f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark c-fields and free energy as outdated or invalid.  <br /></td></tr>
-<tr id="pub-methods-3" class="groupHeader"><td colspan="2"><div class="groupHeader">Unit Cell Modifiers</div></td></tr>
-<tr class="memitem:ae4c962e8864fac80eb6967586b9ea84a" id="r_ae4c962e8864fac80eb6967586b9ea84a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4c962e8864fac80eb6967586b9ea84a">setUnitCell</a> (<a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;unitCell)</td></tr>
-<tr class="memdesc:ae4c962e8864fac80eb6967586b9ea84a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set parameters of the associated unit cell.  <br /></td></tr>
-<tr class="memitem:a88ac9bf9feff10e6194cad3005fce754" id="r_a88ac9bf9feff10e6194cad3005fce754"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88ac9bf9feff10e6194cad3005fce754">setUnitCell</a> (<a class="el" href="classUtil_1_1FSArray.html">FSArray</a>&lt; double, 6 &gt; const &amp;parameters)</td></tr>
-<tr class="memdesc:a88ac9bf9feff10e6194cad3005fce754"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set parameters of the associated unit cell.  <br /></td></tr>
-<tr class="memitem:a1956b15ea83e058e8f85ff5b16e67715" id="r_a1956b15ea83e058e8f85ff5b16e67715"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1956b15ea83e058e8f85ff5b16e67715">clearUnitCellData</a> ()</td></tr>
-<tr class="memdesc:a1956b15ea83e058e8f85ff5b16e67715"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing one complete system.">System</a> members that unit cell parameters have been modified.  <br /></td></tr>
-<tr id="pub-methods-4" class="groupHeader"><td colspan="2"><div class="groupHeader">Field Containers</div></td></tr>
-<tr class="memitem:a94b35ab5946087e5fa1c2bd4778fc0d6" id="r_a94b35ab5946087e5fa1c2bd4778fc0d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1CFieldContainer.html">CFieldContainer</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94b35ab5946087e5fa1c2bd4778fc0d6">c</a> () const</td></tr>
-<tr class="memdesc:a94b35ab5946087e5fa1c2bd4778fc0d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the monomer concentration (c) fields (const).  <br /></td></tr>
-<tr class="memitem:a24a0c243483b440a4614381b73106f33" id="r_a24a0c243483b440a4614381b73106f33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1WFieldContainer.html">WFieldContainer</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24a0c243483b440a4614381b73106f33">w</a> ()</td></tr>
-<tr class="memdesc:a24a0c243483b440a4614381b73106f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the chemical potential (w) fields (non-const).  <br /></td></tr>
-<tr class="memitem:afce326f6f41c83c414ef063b917a1c48" id="r_afce326f6f41c83c414ef063b917a1c48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1WFieldContainer.html">WFieldContainer</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afce326f6f41c83c414ef063b917a1c48">w</a> () const</td></tr>
-<tr class="memdesc:afce326f6f41c83c414ef063b917a1c48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the chemical potential (w) fields (const).  <br /></td></tr>
-<tr class="memitem:aefcb1576e216c71429f5186c0961a1fc" id="r_aefcb1576e216c71429f5186c0961a1fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1WFieldContainer.html">WFieldContainer</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefcb1576e216c71429f5186c0961a1fc">h</a> ()</td></tr>
-<tr class="memdesc:aefcb1576e216c71429f5186c0961a1fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the external potential (h) fields (non-const).  <br /></td></tr>
-<tr class="memitem:a92f7a50c0fe0929f4e2d7f66deb27c82" id="r_a92f7a50c0fe0929f4e2d7f66deb27c82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1WFieldContainer.html">WFieldContainer</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92f7a50c0fe0929f4e2d7f66deb27c82">h</a> () const</td></tr>
-<tr class="memdesc:a92f7a50c0fe0929f4e2d7f66deb27c82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the external potential (h) fields (const).  <br /></td></tr>
-<tr class="memitem:a745bc1375c73e830100fbb54dbc0404d" id="r_a745bc1375c73e830100fbb54dbc0404d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1Mask.html">Mask</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a745bc1375c73e830100fbb54dbc0404d">mask</a> ()</td></tr>
-<tr class="memdesc:a745bc1375c73e830100fbb54dbc0404d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the mask (non-const).  <br /></td></tr>
-<tr class="memitem:a23aa4036fac81c8300d4a34996451c9d" id="r_a23aa4036fac81c8300d4a34996451c9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1Mask.html">Mask</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23aa4036fac81c8300d4a34996451c9d">mask</a> () const</td></tr>
-<tr class="memdesc:a23aa4036fac81c8300d4a34996451c9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the mask (const).  <br /></td></tr>
-<tr id="pub-methods-5" class="groupHeader"><td colspan="2"><div class="groupHeader">Component Object Accessors</div></td></tr>
-<tr class="memitem:a33e03aebfa8e2a61b85c95d250ae63f8" id="r_a33e03aebfa8e2a61b85c95d250ae63f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1Mixture.html">Mixture</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33e03aebfa8e2a61b85c95d250ae63f8">mixture</a> () const</td></tr>
-<tr class="memdesc:a33e03aebfa8e2a61b85c95d250ae63f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classPscf_1_1Rpg_1_1Mixture.html" title="Solver and descriptor for a mixture of polymers and solvents.">Mixture</a> (const).  <br /></td></tr>
-<tr class="memitem:ac158512c95de2c2286aa104efcd0fc0b" id="r_ac158512c95de2c2286aa104efcd0fc0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1MixtureModifier.html">MixtureModifier</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac158512c95de2c2286aa104efcd0fc0b">mixtureModifier</a> ()</td></tr>
-<tr class="memdesc:ac158512c95de2c2286aa104efcd0fc0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classPscf_1_1Rpg_1_1MixtureModifier.html" title="Parameter modifier for an associated Mixture.">MixtureModifier</a> (non-const).  <br /></td></tr>
-<tr class="memitem:ad7b24097ceb5f5726518a511c90f6251" id="r_ad7b24097ceb5f5726518a511c90f6251"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Interaction.html">Interaction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7b24097ceb5f5726518a511c90f6251">interaction</a> ()</td></tr>
-<tr class="memdesc:ad7b24097ceb5f5726518a511c90f6251"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classPscf_1_1Interaction.html" title="Flory-Huggins excess free energy model.">Interaction</a> (non-const).  <br /></td></tr>
-<tr class="memitem:aa97dca471f41642836e0c702b35e9216" id="r_aa97dca471f41642836e0c702b35e9216"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Interaction.html">Interaction</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa97dca471f41642836e0c702b35e9216">interaction</a> () const</td></tr>
-<tr class="memdesc:aa97dca471f41642836e0c702b35e9216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classPscf_1_1Interaction.html" title="Flory-Huggins excess free energy model.">Interaction</a> (const).  <br /></td></tr>
-<tr class="memitem:a739d600a10a029b44777e438c44d691a" id="r_a739d600a10a029b44777e438c44d691a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1Domain.html">Domain</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a739d600a10a029b44777e438c44d691a">domain</a> () const</td></tr>
-<tr class="memdesc:a739d600a10a029b44777e438c44d691a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classPscf_1_1Rpg_1_1Domain.html" title="Spatial domain for a periodic structure with real fields, on a GPU.">Domain</a> (const).  <br /></td></tr>
-<tr class="memitem:ac0c679ad6d9d7f78f3095827a61afe55" id="r_ac0c679ad6d9d7f78f3095827a61afe55"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0c679ad6d9d7f78f3095827a61afe55">hasEnvironment</a> () const</td></tr>
-<tr class="memdesc:ac0c679ad6d9d7f78f3095827a61afe55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this system have an <a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a>?  <br /></td></tr>
-<tr class="memitem:a8aef4c88ec7aac8bec7f1ca10d13917b" id="r_a8aef4c88ec7aac8bec7f1ca10d13917b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1Environment.html">Environment</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8aef4c88ec7aac8bec7f1ca10d13917b">environment</a> ()</td></tr>
-<tr class="memdesc:a8aef4c88ec7aac8bec7f1ca10d13917b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a> (non-const).  <br /></td></tr>
-<tr class="memitem:a2c922dd5bc288620b860fbe2e4d73796" id="r_a2c922dd5bc288620b860fbe2e4d73796"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1Environment.html">Environment</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c922dd5bc288620b860fbe2e4d73796">environment</a> () const</td></tr>
-<tr class="memdesc:a2c922dd5bc288620b860fbe2e4d73796"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a> (const).  <br /></td></tr>
-<tr class="memitem:a29a3e50dda590617d830f81bdb515c91" id="r_a29a3e50dda590617d830f81bdb515c91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1ScftThermo.html">ScftThermo</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29a3e50dda590617d830f81bdb515c91">scft</a> ()</td></tr>
-<tr class="memdesc:a29a3e50dda590617d830f81bdb515c91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classPscf_1_1Rpg_1_1ScftThermo.html" title="Computes SCFT free energies.">ScftThermo</a> object (non-const).  <br /></td></tr>
-<tr class="memitem:ab53067521f72916ac03315152ba00398" id="r_ab53067521f72916ac03315152ba00398"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1ScftThermo.html">ScftThermo</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab53067521f72916ac03315152ba00398">scft</a> () const</td></tr>
-<tr class="memdesc:ab53067521f72916ac03315152ba00398"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classPscf_1_1Rpg_1_1ScftThermo.html" title="Computes SCFT free energies.">ScftThermo</a> object (const).  <br /></td></tr>
-<tr class="memitem:a8e12b80e543b406fe5fccab63b496862" id="r_a8e12b80e543b406fe5fccab63b496862"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e12b80e543b406fe5fccab63b496862">hasIterator</a> () const</td></tr>
-<tr class="memdesc:a8e12b80e543b406fe5fccab63b496862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this system have an <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a>?  <br /></td></tr>
-<tr class="memitem:a739e3141edad4077d9aab47490d47c7c" id="r_a739e3141edad4077d9aab47490d47c7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1Iterator.html">Iterator</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a739e3141edad4077d9aab47490d47c7c">iterator</a> ()</td></tr>
-<tr class="memdesc:a739e3141edad4077d9aab47490d47c7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> (non-const).  <br /></td></tr>
-<tr class="memitem:a2a62fe2c13b0c623d71001e9c456bf86" id="r_a2a62fe2c13b0c623d71001e9c456bf86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1Iterator.html">Iterator</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a62fe2c13b0c623d71001e9c456bf86">iterator</a> () const</td></tr>
-<tr class="memdesc:a2a62fe2c13b0c623d71001e9c456bf86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> (const).  <br /></td></tr>
-<tr class="memitem:adad74bd6e2561eaeaea885be8e9c7df6" id="r_adad74bd6e2561eaeaea885be8e9c7df6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adad74bd6e2561eaeaea885be8e9c7df6">hasSweep</a> () const</td></tr>
-<tr class="memdesc:adad74bd6e2561eaeaea885be8e9c7df6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this system have a <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a>?  <br /></td></tr>
-<tr class="memitem:aa8fc7c1ed1280a17d14fcb386dce0920" id="r_aa8fc7c1ed1280a17d14fcb386dce0920"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8fc7c1ed1280a17d14fcb386dce0920">hasSimulator</a> () const</td></tr>
-<tr class="memdesc:aa8fc7c1ed1280a17d14fcb386dce0920"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this system have a <a class="el" href="classPscf_1_1Rpg_1_1Simulator.html" title="Field theoretic simulator (base class).">Simulator</a>?  <br /></td></tr>
-<tr class="memitem:a154f770163b1521253a0c3d8a3b046a5" id="r_a154f770163b1521253a0c3d8a3b046a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a154f770163b1521253a0c3d8a3b046a5">simulator</a> ()</td></tr>
-<tr class="memdesc:a154f770163b1521253a0c3d8a3b046a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classPscf_1_1Rpg_1_1Simulator.html" title="Field theoretic simulator (base class).">Simulator</a> (non-const).  <br /></td></tr>
-<tr class="memitem:a1c6ab26a56115bd239898668c0d59da0" id="r_a1c6ab26a56115bd239898668c0d59da0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c6ab26a56115bd239898668c0d59da0">simulator</a> () const</td></tr>
-<tr class="memdesc:a1c6ab26a56115bd239898668c0d59da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classPscf_1_1Rpg_1_1Simulator.html" title="Field theoretic simulator (base class).">Simulator</a> (const).  <br /></td></tr>
-<tr class="memitem:aeb74c22bca28cb83a1ce3caa527a3a39" id="r_aeb74c22bca28cb83a1ce3caa527a3a39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1FileMaster.html">FileMaster</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb74c22bca28cb83a1ce3caa527a3a39">fileMaster</a> ()</td></tr>
-<tr class="memdesc:aeb74c22bca28cb83a1ce3caa527a3a39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classUtil_1_1FileMaster.html" title="A FileMaster manages input and output files for a simulation.">FileMaster</a> (non-const).  <br /></td></tr>
-<tr class="memitem:ae489298c270517750e2e891eecc608c8" id="r_ae489298c270517750e2e891eecc608c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1FileMaster.html">FileMaster</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae489298c270517750e2e891eecc608c8">fileMaster</a> () const</td></tr>
-<tr class="memdesc:ae489298c270517750e2e891eecc608c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classUtil_1_1FileMaster.html" title="A FileMaster manages input and output files for a simulation.">FileMaster</a> (const).  <br /></td></tr>
-<tr id="pub-methods-6" class="groupHeader"><td colspan="2"><div class="groupHeader">Property Output</div></td></tr>
-<tr class="memitem:a3b981f27ab511f243d8d3f8b9510fa6d" id="r_a3b981f27ab511f243d8d3f8b9510fa6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b981f27ab511f243d8d3f8b9510fa6d">writeParamNoSweep</a> (std::ostream &amp;out) const</td></tr>
-<tr class="memdesc:a3b981f27ab511f243d8d3f8b9510fa6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write partial parameter file to an ostream.  <br /></td></tr>
-<tr id="pub-methods-7" class="groupHeader"><td colspan="2"><div class="groupHeader">Timers</div></td></tr>
-<tr class="memitem:af8219b86f5f3ac42f860305a6f598111" id="r_af8219b86f5f3ac42f860305a6f598111"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8219b86f5f3ac42f860305a6f598111">writeTimers</a> (std::ostream &amp;out) const</td></tr>
-<tr class="memdesc:af8219b86f5f3ac42f860305a6f598111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write timer information to an output stream.  <br /></td></tr>
-<tr class="memitem:aaa5bb03620b4f7c39cbb9b80bcadfb72" id="r_aaa5bb03620b4f7c39cbb9b80bcadfb72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa5bb03620b4f7c39cbb9b80bcadfb72">clearTimers</a> ()</td></tr>
-<tr class="memdesc:aaa5bb03620b4f7c39cbb9b80bcadfb72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear timers.  <br /></td></tr>
+<tr class="inherit_header pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1Prdc_1_1SystemTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html">Pscf::Prdc::SystemTmpl&lt; D, Types&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:ad14797d4d1a8de6a411cc8810ee9c74e inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_ad14797d4d1a8de6a411cc8810ee9c74e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#ad14797d4d1a8de6a411cc8810ee9c74e">SystemTmpl</a> (typename Types&lt; D &gt;::System &amp;system)</td></tr>
+<tr class="memdesc:ad14797d4d1a8de6a411cc8810ee9c74e inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:ab5035f1a0d97194436f79d802d5c8a94 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_ab5035f1a0d97194436f79d802d5c8a94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#ab5035f1a0d97194436f79d802d5c8a94">~SystemTmpl</a> ()</td></tr>
+<tr class="memdesc:ab5035f1a0d97194436f79d802d5c8a94 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:a6b4599c07d7b6e3b16363cbf53bb8efb inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a6b4599c07d7b6e3b16363cbf53bb8efb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a6b4599c07d7b6e3b16363cbf53bb8efb">setOptions</a> (int argc, char **argv)</td></tr>
+<tr class="memdesc:a6b4599c07d7b6e3b16363cbf53bb8efb inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process command line options.  <br /></td></tr>
+<tr class="memitem:ad167564971467fa1f6b1c39b67cea8c3 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_ad167564971467fa1f6b1c39b67cea8c3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#ad167564971467fa1f6b1c39b67cea8c3">readParam</a> (std::istream &amp;in)</td></tr>
+<tr class="memdesc:ad167564971467fa1f6b1c39b67cea8c3 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read input parameters (with opening and closing lines).  <br /></td></tr>
+<tr class="memitem:a2da103a5060974d6d37d3339e72fa01c inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a2da103a5060974d6d37d3339e72fa01c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a2da103a5060974d6d37d3339e72fa01c">readParameters</a> (std::istream &amp;in)</td></tr>
+<tr class="memdesc:a2da103a5060974d6d37d3339e72fa01c inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read body of parameter block (without opening and closing lines).  <br /></td></tr>
+<tr class="memitem:a4ed15af2483b1981af99e082bcde97e8 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a4ed15af2483b1981af99e082bcde97e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a4ed15af2483b1981af99e082bcde97e8">readCommands</a> (std::istream &amp;in)</td></tr>
+<tr class="memdesc:a4ed15af2483b1981af99e082bcde97e8 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and process commands from an input stream.  <br /></td></tr>
+<tr class="memitem:a0a8d330b274687291bab95803de049fe inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a0a8d330b274687291bab95803de049fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a0a8d330b274687291bab95803de049fe">compute</a> (bool needStress=false)</td></tr>
+<tr class="memdesc:a0a8d330b274687291bab95803de049fe inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the modified diffusion equation once, without iteration.  <br /></td></tr>
+<tr class="memitem:a11b489068a669430a4a1004e7ca7c25b inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a11b489068a669430a4a1004e7ca7c25b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a11b489068a669430a4a1004e7ca7c25b">computeStress</a> ()</td></tr>
+<tr class="memdesc:a11b489068a669430a4a1004e7ca7c25b inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute SCFT stress.  <br /></td></tr>
+<tr class="memitem:a2d6ee8cf7e6315df67e018d4e35e04a0 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a2d6ee8cf7e6315df67e018d4e35e04a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a2d6ee8cf7e6315df67e018d4e35e04a0">iterate</a> (bool isContinuation=false)</td></tr>
+<tr class="memdesc:a2d6ee8cf7e6315df67e018d4e35e04a0 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iteratively solve a SCFT problem.  <br /></td></tr>
+<tr class="memitem:aa8af0c3704dd53e425560abf9b6543bf inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_aa8af0c3704dd53e425560abf9b6543bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#aa8af0c3704dd53e425560abf9b6543bf">sweep</a> ()</td></tr>
+<tr class="memdesc:aa8af0c3704dd53e425560abf9b6543bf inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sweep in parameter space, solving an SCF problem at each point.  <br /></td></tr>
+<tr class="memitem:a793e4e97731faaaf9bc22581387e6d17 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a793e4e97731faaaf9bc22581387e6d17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a793e4e97731faaaf9bc22581387e6d17">simulate</a> (int nStep)</td></tr>
+<tr class="memdesc:a793e4e97731faaaf9bc22581387e6d17 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a field theoretic simulation (PS-FTS).  <br /></td></tr>
+<tr class="memitem:a57b2f70da3bd9ba2e8d254850e920387 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a57b2f70da3bd9ba2e8d254850e920387"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a57b2f70da3bd9ba2e8d254850e920387">clearCFields</a> ()</td></tr>
+<tr class="memdesc:a57b2f70da3bd9ba2e8d254850e920387 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark c-fields and free energy as outdated or invalid.  <br /></td></tr>
+<tr class="memitem:a61242f6e17d3652787173b62dbc778f2 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a61242f6e17d3652787173b62dbc778f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a61242f6e17d3652787173b62dbc778f2">setUnitCell</a> (<a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;unitCell)</td></tr>
+<tr class="memdesc:a61242f6e17d3652787173b62dbc778f2 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set parameters of the associated unit cell.  <br /></td></tr>
+<tr class="memitem:ad0d62c7b668a7b758f2dce0537f026b4 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_ad0d62c7b668a7b758f2dce0537f026b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#ad0d62c7b668a7b758f2dce0537f026b4">clearUnitCellData</a> ()</td></tr>
+<tr class="memdesc:ad0d62c7b668a7b758f2dce0537f026b4 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify System members that unit cell parameters have been modified.  <br /></td></tr>
+<tr class="memitem:ac746f75c8a815aa38879f887a16541eb inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_ac746f75c8a815aa38879f887a16541eb"><td class="memItemLeft" align="right" valign="top">Types&lt; D &gt;::CFields const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#ac746f75c8a815aa38879f887a16541eb">c</a> () const</td></tr>
+<tr class="memdesc:ac746f75c8a815aa38879f887a16541eb inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the monomer concentration (c) fields (const).  <br /></td></tr>
+<tr class="memitem:a6559b128e62ffd29fde02185b2f4c8d3 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a6559b128e62ffd29fde02185b2f4c8d3"><td class="memItemLeft" align="right" valign="top">Types&lt; D &gt;::WFields &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a6559b128e62ffd29fde02185b2f4c8d3">w</a> ()</td></tr>
+<tr class="memdesc:a6559b128e62ffd29fde02185b2f4c8d3 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the chemical potential (w) fields (non-const).  <br /></td></tr>
+<tr class="memitem:afd97916b12228da6c4c8a2b7f813b093 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_afd97916b12228da6c4c8a2b7f813b093"><td class="memItemLeft" align="right" valign="top">Types&lt; D &gt;::WFields &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#afd97916b12228da6c4c8a2b7f813b093">h</a> ()</td></tr>
+<tr class="memdesc:afd97916b12228da6c4c8a2b7f813b093 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the external potential (h) fields (non-const).  <br /></td></tr>
+<tr class="memitem:a07ebb5681e437b857a37ce7b79669839 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a07ebb5681e437b857a37ce7b79669839"><td class="memItemLeft" align="right" valign="top">Types&lt; D &gt;::Mask &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a07ebb5681e437b857a37ce7b79669839">mask</a> ()</td></tr>
+<tr class="memdesc:a07ebb5681e437b857a37ce7b79669839 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the mask (non-const).  <br /></td></tr>
+<tr class="memitem:a8d223bba811df0797208a5bacf0f85c8 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a8d223bba811df0797208a5bacf0f85c8"><td class="memItemLeft" align="right" valign="top">Types&lt; D &gt;::Mixture const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a8d223bba811df0797208a5bacf0f85c8">mixture</a> () const</td></tr>
+<tr class="memdesc:a8d223bba811df0797208a5bacf0f85c8 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Mixture (const).  <br /></td></tr>
+<tr class="memitem:a7cfe4eb0ec390e9128adf84aa2d69f5e inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a7cfe4eb0ec390e9128adf84aa2d69f5e"><td class="memItemLeft" align="right" valign="top">Types&lt; D &gt;::MixtureModifier &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a7cfe4eb0ec390e9128adf84aa2d69f5e">mixtureModifier</a> ()</td></tr>
+<tr class="memdesc:a7cfe4eb0ec390e9128adf84aa2d69f5e inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the MixtureModifier (non-const).  <br /></td></tr>
+<tr class="memitem:a19e8cefdbc44fd5980e98cd925b0ccba inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a19e8cefdbc44fd5980e98cd925b0ccba"><td class="memItemLeft" align="right" valign="top">Types&lt; D &gt;::Interaction &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a19e8cefdbc44fd5980e98cd925b0ccba">interaction</a> ()</td></tr>
+<tr class="memdesc:a19e8cefdbc44fd5980e98cd925b0ccba inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Interaction (non-const).  <br /></td></tr>
+<tr class="memitem:a0469c945b7415857640dca55715721d8 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a0469c945b7415857640dca55715721d8"><td class="memItemLeft" align="right" valign="top">Types&lt; D &gt;::Domain const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a0469c945b7415857640dca55715721d8">domain</a> () const</td></tr>
+<tr class="memdesc:a0469c945b7415857640dca55715721d8 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Domain (const).  <br /></td></tr>
+<tr class="memitem:accdda5b6670d1d71afeb2ce10d7069c6 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_accdda5b6670d1d71afeb2ce10d7069c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#accdda5b6670d1d71afeb2ce10d7069c6">hasEnvironment</a> () const</td></tr>
+<tr class="memdesc:accdda5b6670d1d71afeb2ce10d7069c6 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this system have an Environment?  <br /></td></tr>
+<tr class="memitem:a31911940dd77444555086f30bc6c7d6b inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a31911940dd77444555086f30bc6c7d6b"><td class="memItemLeft" align="right" valign="top">Types&lt; D &gt;::Environment &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a31911940dd77444555086f30bc6c7d6b">environment</a> ()</td></tr>
+<tr class="memdesc:a31911940dd77444555086f30bc6c7d6b inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Environment (non-const).  <br /></td></tr>
+<tr class="memitem:a358a01845d09384d839b0e41627343f0 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a358a01845d09384d839b0e41627343f0"><td class="memItemLeft" align="right" valign="top">Types&lt; D &gt;::ScftThermo &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a358a01845d09384d839b0e41627343f0">scft</a> ()</td></tr>
+<tr class="memdesc:a358a01845d09384d839b0e41627343f0 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ScftThermo object (non-const).  <br /></td></tr>
+<tr class="memitem:a154179312d1370101bd477c71045b06a inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a154179312d1370101bd477c71045b06a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a154179312d1370101bd477c71045b06a">hasIterator</a> () const</td></tr>
+<tr class="memdesc:a154179312d1370101bd477c71045b06a inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this system have an Iterator?  <br /></td></tr>
+<tr class="memitem:aa9362608407831bf8b8acbf4b0f6f94c inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_aa9362608407831bf8b8acbf4b0f6f94c"><td class="memItemLeft" align="right" valign="top">Types&lt; D &gt;::Iterator &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#aa9362608407831bf8b8acbf4b0f6f94c">iterator</a> ()</td></tr>
+<tr class="memdesc:aa9362608407831bf8b8acbf4b0f6f94c inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Iterator (non-const).  <br /></td></tr>
+<tr class="memitem:a7f7994030b3d51ac42628c8290091b78 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a7f7994030b3d51ac42628c8290091b78"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a7f7994030b3d51ac42628c8290091b78">hasSweep</a> () const</td></tr>
+<tr class="memdesc:a7f7994030b3d51ac42628c8290091b78 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this system have a Sweep?  <br /></td></tr>
+<tr class="memitem:a7e306c8a40b7cb7f03bb26d44a0b7e8c inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a7e306c8a40b7cb7f03bb26d44a0b7e8c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a7e306c8a40b7cb7f03bb26d44a0b7e8c">hasSimulator</a> () const</td></tr>
+<tr class="memdesc:a7e306c8a40b7cb7f03bb26d44a0b7e8c inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this system have a Simulator?  <br /></td></tr>
+<tr class="memitem:a1836aab51a60ea536ae2875216c42e42 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_a1836aab51a60ea536ae2875216c42e42"><td class="memItemLeft" align="right" valign="top">Types&lt; D &gt;::Simulator &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#a1836aab51a60ea536ae2875216c42e42">simulator</a> ()</td></tr>
+<tr class="memdesc:a1836aab51a60ea536ae2875216c42e42 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Simulator (non-const).  <br /></td></tr>
+<tr class="memitem:af39e4736f292dfb1bfca52a73618b43d inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_af39e4736f292dfb1bfca52a73618b43d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1FileMaster.html">FileMaster</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#af39e4736f292dfb1bfca52a73618b43d">fileMaster</a> ()</td></tr>
+<tr class="memdesc:af39e4736f292dfb1bfca52a73618b43d inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classUtil_1_1FileMaster.html" title="A FileMaster manages input and output files for a simulation.">FileMaster</a> (non-const).  <br /></td></tr>
+<tr class="memitem:acbfb4eb6d2e97bdb740d1c0340a4cb76 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_acbfb4eb6d2e97bdb740d1c0340a4cb76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#acbfb4eb6d2e97bdb740d1c0340a4cb76">writeParamNoSweep</a> (std::ostream &amp;out) const</td></tr>
+<tr class="memdesc:acbfb4eb6d2e97bdb740d1c0340a4cb76 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write partial parameter file to an ostream.  <br /></td></tr>
+<tr class="memitem:aaa8145981a487555b6a327e359b66586 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_aaa8145981a487555b6a327e359b66586"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#aaa8145981a487555b6a327e359b66586">writeTimers</a> (std::ostream &amp;out) const</td></tr>
+<tr class="memdesc:aaa8145981a487555b6a327e359b66586 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write timer information to an output stream.  <br /></td></tr>
+<tr class="memitem:ab8cb54f15dd0fdf986c8d60607978d11 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_ab8cb54f15dd0fdf986c8d60607978d11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#ab8cb54f15dd0fdf986c8d60607978d11">clearTimers</a> ()</td></tr>
+<tr class="memdesc:ab8cb54f15dd0fdf986c8d60607978d11 inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear timers.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classUtil_1_1ParamComposite"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classUtil_1_1ParamComposite')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComposite.html">Util::ParamComposite</a></td></tr>
 <tr class="memitem:a873eea7d2dbc19cde816d1bef602496c inherit pub_methods_classUtil_1_1ParamComposite" id="r_a873eea7d2dbc19cde816d1bef602496c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a873eea7d2dbc19cde816d1bef602496c">ParamComposite</a> ()</td></tr>
 <tr class="memdesc:a873eea7d2dbc19cde816d1bef602496c inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
@@ -349,20 +323,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af2787f522a78daada06b2241ce368128 inherit pub_methods_classUtil_1_1MpiFileIo" id="r_af2787f522a78daada06b2241ce368128"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1MpiFileIo.html#af2787f522a78daada06b2241ce368128">isIoProcessor</a> () const</td></tr>
 <tr class="memdesc:af2787f522a78daada06b2241ce368128 inherit pub_methods_classUtil_1_1MpiFileIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can this processor do file I/O ?  <br /></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classUtil_1_1Serializable"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classUtil_1_1Serializable')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="classUtil_1_1Serializable.html">Util::Serializable</a></td></tr>
-<tr class="memitem:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable" id="r_aca43a1eea5ec5f13189a57892a7a6d04"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileOArchive.html">BinaryFileOArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#aca43a1eea5ec5f13189a57892a7a6d04">OArchive</a></td></tr>
-<tr class="memdesc:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of output archive used by save method.  <br /></td></tr>
-<tr class="memitem:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable" id="r_ac6bcbf9bac926cada5a398804410e891"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileIArchive.html">BinaryFileIArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">IArchive</a></td></tr>
-<tr class="memdesc:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of input archive used by load method.  <br /></td></tr>
-<tr class="inherit_header pub_static_methods_classUtil_1_1ParamComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classUtil_1_1ParamComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Static Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComponent.html">Util::ParamComponent</a></td></tr>
-<tr class="memitem:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_a5350c0432130f7feba8392f5b3a75cb4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a5350c0432130f7feba8392f5b3a75cb4">initStatic</a> ()</td></tr>
-<tr class="memdesc:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize static echo member to false.  <br /></td></tr>
-<tr class="memitem:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_add72ad7add98e0b90979ee2638c7468d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#add72ad7add98e0b90979ee2638c7468d">setEcho</a> (bool <a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a>=true)</td></tr>
-<tr class="memdesc:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable echoing for all subclasses of <a class="el" href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file.">ParamComponent</a>.  <br /></td></tr>
-<tr class="memitem:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_ac5808de278115409092e94f9c72362c2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a> ()</td></tr>
-<tr class="memdesc:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get echo parameter.  <br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a9ac8d55378d6c2d73a863ccf8656f2ba" id="r_a9ac8d55378d6c2d73a863ccf8656f2ba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ac8d55378d6c2d73a863ccf8656f2ba">setThreadCount</a> (int nThread) override</td></tr>
+<tr class="memdesc:a9ac8d55378d6c2d73a863ccf8656f2ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicitly set maximum number of threads per block.  <br /></td></tr>
 <tr class="memitem:a30752567fd7b8b93e5c8476bbe8592c5" id="r_a30752567fd7b8b93e5c8476bbe8592c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">setClassName</a> (const char *<a class="el" href="classUtil_1_1ParamComposite.html#a93e3a9fd3bd01dcc3c606a7bf3112c0e">className</a>)</td></tr>
 <tr class="memdesc:a30752567fd7b8b93e5c8476bbe8592c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set class name string.  <br /></td></tr>
 <tr class="memitem:a30bf69df610c5d1bfa2d2b852425b206" id="r_a30bf69df610c5d1bfa2d2b852425b206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a30bf69df610c5d1bfa2d2b852425b206">setIsRequired</a> (bool <a class="el" href="classUtil_1_1ParamComposite.html#aff9ce840ca72f2c6cf3e24335a7a580c">isRequired</a>)</td></tr>
@@ -399,41 +363,28 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:a6f859f325ca7d36747d28c9677fe0bfc inherit pro_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:ae979e22ecef3a94c0e826224b3761df9 inherit pro_methods_classUtil_1_1ParamComponent" id="r_ae979e22ecef3a94c0e826224b3761df9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ae979e22ecef3a94c0e826224b3761df9">ParamComponent</a> (const <a class="el" href="classUtil_1_1ParamComponent.html">ParamComponent</a> &amp;other)</td></tr>
 <tr class="memdesc:ae979e22ecef3a94c0e826224b3761df9 inherit pro_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classUtil_1_1Serializable"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classUtil_1_1Serializable')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="classUtil_1_1Serializable.html">Util::Serializable</a></td></tr>
+<tr class="memitem:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable" id="r_aca43a1eea5ec5f13189a57892a7a6d04"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileOArchive.html">BinaryFileOArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#aca43a1eea5ec5f13189a57892a7a6d04">OArchive</a></td></tr>
+<tr class="memdesc:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of output archive used by save method.  <br /></td></tr>
+<tr class="memitem:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable" id="r_ac6bcbf9bac926cada5a398804410e891"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileIArchive.html">BinaryFileIArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">IArchive</a></td></tr>
+<tr class="memdesc:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of input archive used by load method.  <br /></td></tr>
+<tr class="inherit_header pub_static_methods_classUtil_1_1ParamComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classUtil_1_1ParamComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Static Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComponent.html">Util::ParamComponent</a></td></tr>
+<tr class="memitem:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_a5350c0432130f7feba8392f5b3a75cb4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a5350c0432130f7feba8392f5b3a75cb4">initStatic</a> ()</td></tr>
+<tr class="memdesc:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize static echo member to false.  <br /></td></tr>
+<tr class="memitem:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_add72ad7add98e0b90979ee2638c7468d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#add72ad7add98e0b90979ee2638c7468d">setEcho</a> (bool <a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a>=true)</td></tr>
+<tr class="memdesc:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable echoing for all subclasses of <a class="el" href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file.">ParamComponent</a>.  <br /></td></tr>
+<tr class="memitem:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_ac5808de278115409092e94f9c72362c2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a> ()</td></tr>
+<tr class="memdesc:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get echo parameter.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
-class Pscf::Rpg::System&lt; D &gt;</div><p>Main class, representing one complete system. </p>
-<p>A <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing one complete system.">System</a> has (among other components):</p>
-<ul>
-<li>a <a class="el" href="classPscf_1_1Rpg_1_1Mixture.html" title="Solver and descriptor for a mixture of polymers and solvents.">Mixture</a> (container for polymer and solvent solvers)</li>
-<li>an <a class="el" href="classPscf_1_1Interaction.html" title="Flory-Huggins excess free energy model.">Interaction</a> (list of binary interaction parameters)</li>
-<li>a <a class="el" href="classPscf_1_1Rpg_1_1Domain.html" title="Spatial domain for a periodic structure with real fields, on a GPU.">Domain</a> (description of unit cell and discretization)</li>
-<li>a container of monomer chemical potential (w) fields</li>
-<li>a container of monomer concentration (c) fields</li>
-</ul>
-<p>A <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing one complete system.">System</a> may also optionally have <a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a>, <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a>, <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a>, and <a class="el" href="classPscf_1_1Rpg_1_1Simulator.html" title="Field theoretic simulator (base class).">Simulator</a> (<a class="el" href="classPscf_1_1Rpg_1_1BdSimulator.html" title="Brownian dynamics simulator.">BdSimulator</a> or <a class="el" href="classPscf_1_1Rpg_1_1McSimulator.html" title="Monte-Carlo simulation coordinator.">McSimulator</a>) components. <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> and <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a> objects are only used for SCFT calculations. A <a class="el" href="classPscf_1_1Rpg_1_1Simulator.html" title="Field theoretic simulator (base class).">Simulator</a> object is only used for PS-FTS calculations (i.e., field theoretic simulations that use a partial saddle-point approximation).</p>
-<p><a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing one complete system.">System</a> is a class template with an integer template parameter D = 1, 2, or 3 that represents the dimension of space. Many related components are also class templates of the same type. Names such as <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing one complete system.">System</a>, <a class="el" href="classPscf_1_1Rpg_1_1Mixture.html" title="Solver and descriptor for a mixture of polymers and solvents.">Mixture</a>, <a class="el" href="classPscf_1_1Rpg_1_1Domain.html" title="Spatial domain for a periodic structure with real fields, on a GPU.">Domain</a>, etc. mentioned above are thus names of class templates, while actual class names are of the form <a class="el" href="classPscf_1_1Rpg_1_1Mixture.html" title="Solver and descriptor for a mixture of polymers and solvents.">Mixture</a>&lt;D&gt;, <a class="el" href="classPscf_1_1Rpg_1_1Domain.html" title="Spatial domain for a periodic structure with real fields, on a GPU.">Domain</a>&lt;D&gt;, etc. with D=1, 2, or 3.</p>
-<p>Usage of a <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing one complete system.">System</a>&lt;D&gt; object in the pscf_pg main program looks something like this: </p><div class="fragment"><div class="line"><a class="code hl_function" href="#a99602e11837fc6c0baf2b63e246f0ab0">System&lt;D&gt;</a> system;</div>
-<div class="line">system.<a class="code hl_function" href="#aa2e730bcbb68a0e89260f6767c67fb53">setOptions</a>(argc, argv);</div>
-<div class="line">system.<a class="code hl_function" href="#ac063ed72e02c88e7abffb1b50621c5a3">readParam</a>();</div>
-<div class="line">system.<a class="code hl_function" href="#aa26feef75804fb233f3cf62687006bae">readCommands</a>();</div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html_a99602e11837fc6c0baf2b63e246f0ab0"><div class="ttname"><a href="#a99602e11837fc6c0baf2b63e246f0ab0">Pscf::Rpg::System::System</a></div><div class="ttdeci">System()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2system_2System_8tpp_source.html#l00060">rpg/system/System.tpp:60</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html_aa26feef75804fb233f3cf62687006bae"><div class="ttname"><a href="#aa26feef75804fb233f3cf62687006bae">Pscf::Rpg::System::readCommands</a></div><div class="ttdeci">void readCommands(std::istream &amp;in)</div><div class="ttdoc">Read and process commands from an input stream.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2system_2System_8tpp_source.html#l00421">rpg/system/System.tpp:421</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html_aa2e730bcbb68a0e89260f6767c67fb53"><div class="ttname"><a href="#aa2e730bcbb68a0e89260f6767c67fb53">Pscf::Rpg::System::setOptions</a></div><div class="ttdeci">void setOptions(int argc, char **argv)</div><div class="ttdoc">Process command line options.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2system_2System_8tpp_source.html#l00197">rpg/system/System.tpp:197</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html_ac063ed72e02c88e7abffb1b50621c5a3"><div class="ttname"><a href="#ac063ed72e02c88e7abffb1b50621c5a3">Pscf::Rpg::System::readParam</a></div><div class="ttdeci">virtual void readParam(std::istream &amp;in)</div><div class="ttdoc">Read input parameters (with opening and closing lines).</div><div class="ttdef"><b>Definition</b> <a href="rpg_2system_2System_8tpp_source.html#l00403">rpg/system/System.tpp:403</a></div></div>
-</div><!-- fragment --><p> where argc, and argv are parameters containing information about command line arguments that must be passed from the main program. This is implemented as function template <a class="el" href="group__Pscf__Rpg__Module.html#gae3841a25d7889d20d1acc1ac5359869b" title="Function template for main pscf_pg program.">Pscf::Rpg::run</a> in the file src/rpg/pscf_pg.cpp.</p>
-<p>See also: </p><ul>
-<li>
-<a class="el" href="scft_param_pc_page.html">Parameter File: SCFT</a>  </li>
-<li>
-<a class="el" href="psfts_param_page.html">Parameter File: PS-FTS</a>  </li>
-<li>
-<a class="el" href="rpc_System_page.html">Parameter File: Full Format</a>  </li>
-<li>
-<a class="el" href="scft_command_pc_page.html">Command File Format</a>  </li>
-</ul>
+class Pscf::Rpg::System&lt; D &gt;</div><p>Main class, representing a complete physical system. </p>
+<p>This class is derived from a partial specialization of the base class template <a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html" title="Base class template for classes that represent a complete system.">Prdc::SystemTmpl</a>, and has the same public interface as the base class. See the documentation of this template for details. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00103">103</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00037">37</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a99602e11837fc6c0baf2b63e246f0ab0" name="a99602e11837fc6c0baf2b63e246f0ab0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a99602e11837fc6c0baf2b63e246f0ab0">&#9670;&#160;</a></span>System()</h2>
@@ -454,1508 +405,59 @@ template&lt;int D&gt; </div>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l00060">60</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="System_8cu_source.html#l00048">48</a> of file <a class="el" href="System_8cu_source.html">System.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="Signal_8h_source.html#l00111">Util::Signal&lt; T &gt;::addObserver()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00951">clearCFields()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l01022">clearUnitCellData()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00040">Pscf::ThreadArray::init()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00676">mixtureModifier()</a>, <a class="el" href="BracketPolicy_8cpp_source.html#l00028">Util::BracketPolicy::set()</a>, and <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>.</p>
-
-</div>
-</div>
-<a id="a832a1b59f282bdb598240125e5825717" name="a832a1b59f282bdb598240125e5825717"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a832a1b59f282bdb598240125e5825717">&#9670;&#160;</a></span>~System()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::~<a class="el" href="classPscf_1_1Rpg_1_1System.html">System</a> </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Destructor. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l00157">157</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
+<p class="reference">References <a class="el" href="ThreadArray_8cu_source.html#l00040">Pscf::ThreadArray::init()</a>, <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>, and <a class="el" href="SystemTmpl_8tpp_source.html#l00037">Pscf::Prdc::SystemTmpl&lt; D, Types&lt; D &gt; &gt;::SystemTmpl()</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="aa2e730bcbb68a0e89260f6767c67fb53" name="aa2e730bcbb68a0e89260f6767c67fb53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2e730bcbb68a0e89260f6767c67fb53">&#9670;&#160;</a></span>setOptions()</h2>
+<a id="a9ac8d55378d6c2d73a863ccf8656f2ba" name="a9ac8d55378d6c2d73a863ccf8656f2ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ac8d55378d6c2d73a863ccf8656f2ba">&#9670;&#160;</a></span>setThreadCount()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::setOptions </td>
+          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::setThreadCount </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nThread</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Process command line options. </p>
-<p>This function takes the same arguments as any C/C++ main program function. The arguments of the main function should d be passed to this function unaltered, to allow this function to process the command line options.</p>
+<p>Explicitly set maximum number of threads per block. </p>
+<p>This function is called in the setOptions function if the -t command line option is present.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">argc</td><td>number of command line arguments </td></tr>
-    <tr><td class="paramname">argv</td><td>array of pointers to command line arguments </td></tr>
+    <tr><td class="paramname">nThread</td><td>thread count (maximum per block). </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l00197">197</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
+<p>Reimplemented from <a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#ac50b002d38aa033eb0c2eea7915cd8e2">Pscf::Prdc::SystemTmpl&lt; D, Types&lt; D &gt; &gt;</a>.</p>
 
-<p class="reference">References <a class="el" href="rpg_2system_2System_8h_source.html#l00800">c()</a>, <a class="el" href="Log_8cpp_source.html#l00059">Util::Log::file()</a>, <a class="el" href="ParamComponent_8cpp_source.html#l00062">Util::ParamComponent::setEcho()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00058">Pscf::ThreadArray::setThreadsPerBlock()</a>, <a class="el" href="ThreadMesh_8cu_source.html#l00342">Pscf::ThreadMesh::setThreadsPerBlock()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="definition">Definition at line <a class="el" href="System_8cu_source.html#l00059">59</a> of file <a class="el" href="System_8cu_source.html">System.cu</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pscf__pg_8cu_source.html#l00024">Pscf::Rpg::run()</a>.</p>
-
-</div>
-</div>
-<a id="ac063ed72e02c88e7abffb1b50621c5a3" name="ac063ed72e02c88e7abffb1b50621c5a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac063ed72e02c88e7abffb1b50621c5a3">&#9670;&#160;</a></span>readParam() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::readParam </td>
-          <td>(</td>
-          <td class="paramtype">std::istream &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Read input parameters (with opening and closing lines). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">in</td><td>input parameter stream </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="classUtil_1_1ParamComposite.html#a6fc094b057fd9a21641b089f6f063b39">Util::ParamComposite</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l00403">403</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="ParamComposite_8h_source.html#l01195">Util::ParamComposite::className()</a>, <a class="el" href="ParamComposite_8cpp_source.html#l00318">Util::ParamComposite::readBegin()</a>, <a class="el" href="ParamComposite_8cpp_source.html#l00346">Util::ParamComposite::readEnd()</a>, and <a class="el" href="rpg_2system_2System_8tpp_source.html#l00303">readParameters()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00414">readParam()</a>, and <a class="el" href="pscf__pg_8cu_source.html#l00024">Pscf::Rpg::run()</a>.</p>
-
-</div>
-</div>
-<a id="a2026360d4908ff0eef44642524087e45" name="a2026360d4908ff0eef44642524087e45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2026360d4908ff0eef44642524087e45">&#9670;&#160;</a></span>readParam() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::readParam </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Read input parameters from default param file. </p>
-<p>This function reads the parameter file set by the -p command line option. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l00414">414</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2system_2System_8tpp_source.html#l00403">readParam()</a>.</p>
-
-</div>
-</div>
-<a id="a73fda832c66da0ead7b1316ac3422869" name="a73fda832c66da0ead7b1316ac3422869"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73fda832c66da0ead7b1316ac3422869">&#9670;&#160;</a></span>readParameters()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::readParameters </td>
-          <td>(</td>
-          <td class="paramtype">std::istream &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Read body of parameter block (without opening and closing lines). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">in</td><td>input parameter stream </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="classUtil_1_1ParamComposite.html#a172a3a656b5829c8d758424ad09a22a6">Util::ParamComposite</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l00303">303</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="ParamComposite_8h_source.html#l01195">Util::ParamComposite::className()</a>, <a class="el" href="ParamComponent_8cpp_source.html#l00068">Util::ParamComponent::echo()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00710">environment()</a>, <a class="el" href="Log_8cpp_source.html#l00059">Util::Log::file()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00742">hasIterator()</a>, <a class="el" href="ParamComponent_8cpp_source.html#l00042">Util::ParamComponent::indent()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00684">interaction()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00081">Pscf::PolymerModel::isLocked()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00087">Pscf::PolymerModel::nSet()</a>, <a class="el" href="ParamComposite_8h_source.html#l01256">Util::ParamComposite::readOptional()</a>, <a class="el" href="ParamComposite_8cpp_source.html#l00262">Util::ParamComposite::readParamComposite()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00045">Pscf::PolymerModel::setModel()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00403">readParam()</a>.</p>
-
-</div>
-</div>
-<a id="aa26feef75804fb233f3cf62687006bae" name="aa26feef75804fb233f3cf62687006bae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa26feef75804fb233f3cf62687006bae">&#9670;&#160;</a></span>readCommands() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::readCommands </td>
-          <td>(</td>
-          <td class="paramtype">std::istream &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Read and process commands from an input stream. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">in</td><td>command script input stream </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">421</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00800">c()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l01075">clearTimers()</a>, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html#a638a2f978dbdaf2e75c820a7cb8cb2aa">Pscf::Rpg::FieldIo&lt; D &gt;::compareFieldsBasis()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00333">Pscf::Rpg::FieldIo&lt; D &gt;::compareFieldsRGrid()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00809">compute()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00849">computeStress()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00260">Pscf::Rpg::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html#af14070b4b11ffb50a3d0d8944e43d146">Pscf::Rpg::FieldIo&lt; D &gt;::convertBasisToRGrid()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00285">Pscf::Rpg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html#a0970416ad8b5e0708ef5966679d965b1">Pscf::Rpg::FieldIo&lt; D &gt;::convertKGridToRGrid()</a>, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html#a0bc6457496192dc8ca84df73052e1dfc">Pscf::Rpg::FieldIo&lt; D &gt;::convertRGridToBasis()</a>, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html#a7457571e877b456798f394e5b042a09c">Pscf::Rpg::FieldIo&lt; D &gt;::convertRGridToKGrid()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00710">environment()</a>, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html#a8141c6ca49fc42f087c1073e731cc11e">Pscf::Rpg::FieldIo&lt; D &gt;::estimateWBasis()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00391">Pscf::Rpg::FieldIo&lt; D &gt;::expandRGridDimension()</a>, <a class="el" href="Log_8cpp_source.html#l00059">Util::Log::file()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00817">h()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00705">hasEnvironment()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00768">hasSimulator()</a>, <a class="el" href="group__Prdc__Field__Module.html#ga3936ab56d187ec0d7b2b729fa49968b0">Pscf::Prdc::hasSymmetry()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00311">Pscf::Rpg::FieldIo&lt; D &gt;::hasSymmetry()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00684">interaction()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00869">iterate()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00827">mask()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00671">mixture()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00364">Pscf::Rpg::FieldIo&lt; D &gt;::replicateUnitCell()</a>, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html#a1c9468cfa0f0ebb3c3ce7427d32d72f8">Pscf::Rpg::FieldIo&lt; D &gt;::scaleFieldsBasis()</a>, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html#afcd21a58860579368f1a576a56088b54">Pscf::Rpg::FieldIo&lt; D &gt;::scaleFieldsRGrid()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00726">scft()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00963">setUnitCell()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00938">simulate()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00773">simulator()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00916">sweep()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00806">w()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l01038">writeParamNoSweep()</a>, and <a class="el" href="rpg_2system_2System_8tpp_source.html#l01059">writeTimers()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00795">readCommands()</a>, and <a class="el" href="pscf__pg_8cu_source.html#l00024">Pscf::Rpg::run()</a>.</p>
-
-</div>
-</div>
-<a id="a4133e372bbe3f738ebb442e107674f4f" name="a4133e372bbe3f738ebb442e107674f4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4133e372bbe3f738ebb442e107674f4f">&#9670;&#160;</a></span>readCommands() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::readCommands </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Read and process commands from the default command file. </p>
-<p>This function reads the parameter file set by the -c command line option. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l00795">795</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
-
-</div>
-</div>
-<a id="a29d8e5a1025b26edb90bd5dea98ac7ec" name="a29d8e5a1025b26edb90bd5dea98ac7ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29d8e5a1025b26edb90bd5dea98ac7ec">&#9670;&#160;</a></span>compute()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::compute </td>
-          <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>needStress</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Solve the modified diffusion equation once, without iteration. </p>
-<p>This function calls the <a class="el" href="classPscf_1_1Prdc_1_1MixtureReal.html#a6bf82e90b823954ddeb6f2fe085f278f">Mixture::compute()</a> function to solve the statistical mechanics problem for a non-interacting system subjected to the currrent system chemical potential fields. This requires solution of the modified diffusion equation for all polymers, computation of Boltzmann weights for all solvents, computation of molecular partition functions for all species, computation of concentration fields for all blocks and solvents, and computation of overall concentrations for all monomer types. This function does not compute the canonical (Helmholtz) free energy or grand-canonical free energy (i.e., pressure).</p>
-<p>If argument needStress is true, then this function also calls <a class="el" href="#a52bab4d47562aba4dbdbfa4d9696d8ef" title="Compute SCFT stress.">computeStress()</a> to compute the stress.</p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="#a24a0c243483b440a4614381b73106f33" title="Get the chemical potential (w) fields (non-const).">w()</a>.hasData() == true </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd><a class="el" href="#a94b35ab5946087e5fa1c2bd4778fc0d6" title="Get the monomer concentration (c) fields (const).">c()</a>.hasData() == true </dd>
-<dd>
-hasStress() == true iff needStress == true</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">needStress</td><td>true if stress is needed, false otherwise </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l00809">809</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2system_2System_8tpp_source.html#l00951">clearCFields()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00849">computeStress()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00710">environment()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00705">hasEnvironment()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00726">scft()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>.</p>
-
-</div>
-</div>
-<a id="a52bab4d47562aba4dbdbfa4d9696d8ef" name="a52bab4d47562aba4dbdbfa4d9696d8ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52bab4d47562aba4dbdbfa4d9696d8ef">&#9670;&#160;</a></span>computeStress()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::computeStress </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Compute SCFT stress. </p>
-<p>This function computes the standard definition of stress maintained by the <a class="el" href="classPscf_1_1Rpg_1_1Mixture.html" title="Solver and descriptor for a mixture of polymers and solvents.">Mixture</a> class. If an <a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a> exists, it also allows the <a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a> to compute a modified definition of the stress.</p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="#a24a0c243483b440a4614381b73106f33" title="Get the chemical potential (w) fields (non-const).">w()</a>.hasData() == true </dd>
-<dd>
-<a class="el" href="#a94b35ab5946087e5fa1c2bd4778fc0d6" title="Get the monomer concentration (c) fields (const).">c()</a>.hasData() == true </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l00849">849</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2system_2System_8h_source.html#l00710">environment()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00705">hasEnvironment()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00747">iterator()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00827">mask()</a>, and <a class="el" href="rpg_2system_2System_8h_source.html#l00671">mixture()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00809">compute()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00869">iterate()</a>, and <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>.</p>
-
-</div>
-</div>
-<a id="a90379c57137ad78ed979eddabe79a4c6" name="a90379c57137ad78ed979eddabe79a4c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90379c57137ad78ed979eddabe79a4c6">&#9670;&#160;</a></span>iterate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::iterate </td>
-          <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isContinuation</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Iteratively solve a SCFT problem. </p>
-<p>This function calls the iterator to solve the SCFT problem for the current system parameters, using the current chemical potential fields and unit cell parameters as initial guesses. Upon exit, <a class="el" href="#a94b35ab5946087e5fa1c2bd4778fc0d6" title="Get the monomer concentration (c) fields (const).">c()</a>.hasData() == true whether or not convergence is obtained to within the desired tolerance, but the SCFT Helmholtz free energy and pressure are computed only if convergence is successful.</p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="#a8e12b80e543b406fe5fccab63b496862" title="Does this system have an Iterator?">hasIterator()</a> == true </dd>
-<dd>
-<a class="el" href="#a24a0c243483b440a4614381b73106f33" title="Get the chemical potential (w) fields (non-const).">w()</a>.hasData() == true </dd>
-<dd>
-<a class="el" href="#a24a0c243483b440a4614381b73106f33" title="Get the chemical potential (w) fields (non-const).">w()</a>.isSymmetric() == true if the iterator is symmetric </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd><a class="el" href="#a94b35ab5946087e5fa1c2bd4778fc0d6" title="Get the monomer concentration (c) fields (const).">c()</a>.hasData() == true </dd>
-<dd>
-<a class="el" href="#a29a3e50dda590617d830f81bdb515c91" title="Get the ScftThermo object (non-const).">scft()</a>.hasData() == true upon successful convergence</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>returns 0 for successful convergence, 1 for failure</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">isContinuation</td><td>true if a continuation within a sweep </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l00869">869</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2system_2System_8tpp_source.html#l00951">clearCFields()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00849">computeStress()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00710">environment()</a>, <a class="el" href="Log_8cpp_source.html#l00059">Util::Log::file()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00705">hasEnvironment()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00742">hasIterator()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00747">iterator()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00671">mixture()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00726">scft()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>.</p>
-
-</div>
-</div>
-<a id="a79e67fdfab3afc278b8eed2e75cc8717" name="a79e67fdfab3afc278b8eed2e75cc8717"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79e67fdfab3afc278b8eed2e75cc8717">&#9670;&#160;</a></span>sweep()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::sweep </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classPscf_1_1Rpg_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a> in parameter space, solving an SCF problem at each point. </p>
-<p>This function uses a <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a> object that was initialized in the parameter file to solve the SCFT problem at a sequence of points along a contour in parameter space. The nature of this sequence is determined by implementation of a subclass of <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a> and the parameters passed to the sweep object in the parameter file.</p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="#adad74bd6e2561eaeaea885be8e9c7df6" title="Does this system have a Sweep?">hasSweep()</a> == true </dd>
-<dd>
-All preconditions of the <a class="el" href="#a90379c57137ad78ed979eddabe79a4c6" title="Iteratively solve a SCFT problem.">iterate()</a> function must be satisfied </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l00916">916</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="Log_8cpp_source.html#l00059">Util::Log::file()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00742">hasIterator()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00763">hasSweep()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00747">iterator()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>.</p>
-
-</div>
-</div>
-<a id="af107694fdd1df271a74bf2f4e7c2a9e6" name="af107694fdd1df271a74bf2f4e7c2a9e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af107694fdd1df271a74bf2f4e7c2a9e6">&#9670;&#160;</a></span>simulate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::simulate </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nStep</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Perform a field theoretic simulation (PS-FTS). </p>
-<p>Perform a field theoretic simulation using the partial saddle-point approximation (PS-FTS). The type of simulation (BD or MC) is determined by the type of <a class="el" href="classPscf_1_1Rpg_1_1Simulator.html" title="Field theoretic simulator (base class).">Simulator</a> (<a class="el" href="classPscf_1_1Rpg_1_1BdSimulator.html" title="Brownian dynamics simulator.">BdSimulator</a> or <a class="el" href="classPscf_1_1Rpg_1_1McSimulator.html" title="Monte-Carlo simulation coordinator.">McSimulator</a>) that is created in the parameter file. The number of BD steps or attempted MC moves to be performed is given by the parameter "nStep".</p>
-<dl class="section pre"><dt>Precondition</dt><dd>Function <a class="el" href="#aa8fc7c1ed1280a17d14fcb386dce0920" title="Does this system have a Simulator?">hasSimulator()</a> == true </dd>
-<dd>
-Function <a class="el" href="#a24a0c243483b440a4614381b73106f33" title="Get the chemical potential (w) fields (non-const).">w()</a>.hasData() == true</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">nStep</td><td>number of simulation (BD or MC) steps </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l00938">938</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2system_2System_8tpp_source.html#l00951">clearCFields()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00768">hasSimulator()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00773">simulator()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>.</p>
-
-</div>
-</div>
-<a id="a00021b28e0579b648cef31c25b75774f" name="a00021b28e0579b648cef31c25b75774f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00021b28e0579b648cef31c25b75774f">&#9670;&#160;</a></span>clearCFields()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::clearCFields </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Mark c-fields and free energy as outdated or invalid. </p>
-<p>This function should be called whenever any of the inputs to the solution of the modified diffusion equation are modified, including the w fields, unit cell parameters, external fields, or mask. Upon return, <a class="el" href="#a94b35ab5946087e5fa1c2bd4778fc0d6" title="Get the monomer concentration (c) fields (const).">c()</a>.hasData(), <a class="el" href="#a29a3e50dda590617d830f81bdb515c91" title="Get the ScftThermo object (non-const).">scft()</a>.hasData(), and <a class="el" href="#a33e03aebfa8e2a61b85c95d250ae63f8" title="Get the Mixture (const).">mixture()</a>.hasStress() all return false; if the system has an <a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a>, <a class="el" href="#a8aef4c88ec7aac8bec7f1ca10d13917b" title="Get the Environment (non-const).">environment()</a>.needsUpdate() will return true. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l00951">951</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2system_2System_8h_source.html#l00726">scft()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l01022">clearUnitCellData()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00809">compute()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00869">iterate()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00938">simulate()</a>, and <a class="el" href="rpg_2system_2System_8tpp_source.html#l00060">System()</a>.</p>
-
-</div>
-</div>
-<a id="ae4c962e8864fac80eb6967586b9ea84a" name="ae4c962e8864fac80eb6967586b9ea84a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4c962e8864fac80eb6967586b9ea84a">&#9670;&#160;</a></span>setUnitCell() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::setUnitCell </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>unitCell</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set parameters of the associated unit cell. </p>
-<p>The lattice (i.e., lattice system type) set in the <a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html" title="Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.">UnitCell&lt;D&gt;</a> unitCell input parameter must agree with any lattice enum value that was set previously in the parameter file.</p>
-<p>If a space group has been set but a basis has not yet been initialized, then this and the other setUnitCell member function will initialize a symmetry-adapted basis as a side effect.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">unitCell</td><td>new <a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html" title="Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.">UnitCell&lt;D&gt;</a> (with new parameters) </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l00963">963</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>.</p>
-
-</div>
-</div>
-<a id="a88ac9bf9feff10e6194cad3005fce754" name="a88ac9bf9feff10e6194cad3005fce754"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88ac9bf9feff10e6194cad3005fce754">&#9670;&#160;</a></span>setUnitCell() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::setUnitCell </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classUtil_1_1FSArray.html">FSArray</a>&lt; double, 6 &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>parameters</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set parameters of the associated unit cell. </p>
-<p>The lattice type must have been set before this function is called. The logical size of the <a class="el" href="classUtil_1_1FSArray.html">FSArray&lt;double, 6&gt;</a> "parameters" array must match the expected number of parameters for the current lattice type.</p>
-<p>See documentation of <a class="el" href="#ae4c962e8864fac80eb6967586b9ea84a" title="Set parameters of the associated unit cell.">setUnitCell(UnitCell&lt;D&gt; const &amp;)</a> regarding possible construction of a basis as a side effect.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">parameters</td><td>array of new unit cell parameters </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l00991">991</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-</div>
-</div>
-<a id="a1956b15ea83e058e8f85ff5b16e67715" name="a1956b15ea83e058e8f85ff5b16e67715"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1956b15ea83e058e8f85ff5b16e67715">&#9670;&#160;</a></span>clearUnitCellData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::clearUnitCellData </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Notify <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing one complete system.">System</a> members that unit cell parameters have been modified. </p>
-<p>This function should be called whenever the unit cell parameters are modified. It calls functions <a class="el" href="#a33e03aebfa8e2a61b85c95d250ae63f8" title="Get the Mixture (const).">mixture()</a>.<a class="el" href="#a1956b15ea83e058e8f85ff5b16e67715" title="Notify System members that unit cell parameters have been modified.">clearUnitCellData()</a>, <a class="el" href="#a739d600a10a029b44777e438c44d691a" title="Get the Domain (const).">domain()</a>.wavelist().<a class="el" href="#a1956b15ea83e058e8f85ff5b16e67715" title="Notify System members that unit cell parameters have been modified.">clearUnitCellData()</a>, <a class="el" href="#a00021b28e0579b648cef31c25b75774f" title="Mark c-fields and free energy as outdated or invalid.">clearCFields()</a>, and, if an <a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a> exists, <a class="el" href="#a8aef4c88ec7aac8bec7f1ca10d13917b" title="Get the Environment (non-const).">environment()</a>.reset(). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l01022">1022</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2system_2System_8tpp_source.html#l00951">clearCFields()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00710">environment()</a>, and <a class="el" href="rpg_2system_2System_8h_source.html#l00705">hasEnvironment()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00060">System()</a>.</p>
-
-</div>
-</div>
-<a id="a94b35ab5946087e5fa1c2bd4778fc0d6" name="a94b35ab5946087e5fa1c2bd4778fc0d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94b35ab5946087e5fa1c2bd4778fc0d6">&#9670;&#160;</a></span>c()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1CFieldContainer.html">CFieldContainer</a>&lt; D &gt; const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::c </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the monomer concentration (c) fields (const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00800">800</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>, and <a class="el" href="rpg_2system_2System_8tpp_source.html#l00197">setOptions()</a>.</p>
-
-</div>
-</div>
-<a id="a24a0c243483b440a4614381b73106f33" name="a24a0c243483b440a4614381b73106f33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24a0c243483b440a4614381b73106f33">&#9670;&#160;</a></span>w() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1WFieldContainer.html">WFieldContainer</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::w </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the chemical potential (w) fields (non-const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00806">806</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>.</p>
-
-</div>
-</div>
-<a id="afce326f6f41c83c414ef063b917a1c48" name="afce326f6f41c83c414ef063b917a1c48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afce326f6f41c83c414ef063b917a1c48">&#9670;&#160;</a></span>w() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1WFieldContainer.html">WFieldContainer</a>&lt; D &gt; const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::w </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the chemical potential (w) fields (const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00812">812</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-</div>
-</div>
-<a id="aefcb1576e216c71429f5186c0961a1fc" name="aefcb1576e216c71429f5186c0961a1fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefcb1576e216c71429f5186c0961a1fc">&#9670;&#160;</a></span>h() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1WFieldContainer.html">WFieldContainer</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::h </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the external potential (h) fields (non-const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00817">817</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>.</p>
-
-</div>
-</div>
-<a id="a92f7a50c0fe0929f4e2d7f66deb27c82" name="a92f7a50c0fe0929f4e2d7f66deb27c82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92f7a50c0fe0929f4e2d7f66deb27c82">&#9670;&#160;</a></span>h() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1WFieldContainer.html">WFieldContainer</a>&lt; D &gt; const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::h </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the external potential (h) fields (const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00822">822</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-</div>
-</div>
-<a id="a745bc1375c73e830100fbb54dbc0404d" name="a745bc1375c73e830100fbb54dbc0404d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a745bc1375c73e830100fbb54dbc0404d">&#9670;&#160;</a></span>mask() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1Mask.html">Mask</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::mask </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the mask (non-const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00827">827</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00849">computeStress()</a>, and <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>.</p>
-
-</div>
-</div>
-<a id="a23aa4036fac81c8300d4a34996451c9d" name="a23aa4036fac81c8300d4a34996451c9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23aa4036fac81c8300d4a34996451c9d">&#9670;&#160;</a></span>mask() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1Mask.html">Mask</a>&lt; D &gt; const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::mask </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the mask (const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00832">832</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-</div>
-</div>
-<a id="a33e03aebfa8e2a61b85c95d250ae63f8" name="a33e03aebfa8e2a61b85c95d250ae63f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33e03aebfa8e2a61b85c95d250ae63f8">&#9670;&#160;</a></span>mixture()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1Mixture.html">Mixture</a>&lt; D &gt; const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::mixture </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the <a class="el" href="classPscf_1_1Rpg_1_1Mixture.html" title="Solver and descriptor for a mixture of polymers and solvents.">Mixture</a> (const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00671">671</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00849">computeStress()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00869">iterate()</a>, and <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>.</p>
-
-</div>
-</div>
-<a id="ac158512c95de2c2286aa104efcd0fc0b" name="ac158512c95de2c2286aa104efcd0fc0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac158512c95de2c2286aa104efcd0fc0b">&#9670;&#160;</a></span>mixtureModifier()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1MixtureModifier.html">MixtureModifier</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::mixtureModifier </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the <a class="el" href="classPscf_1_1Rpg_1_1MixtureModifier.html" title="Parameter modifier for an associated Mixture.">MixtureModifier</a> (non-const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00676">676</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00060">System()</a>.</p>
-
-</div>
-</div>
-<a id="ad7b24097ceb5f5726518a511c90f6251" name="ad7b24097ceb5f5726518a511c90f6251"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7b24097ceb5f5726518a511c90f6251">&#9670;&#160;</a></span>interaction() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Interaction.html">Interaction</a> &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::interaction </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the <a class="el" href="classPscf_1_1Interaction.html" title="Flory-Huggins excess free energy model.">Interaction</a> (non-const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00684">684</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00303">readParameters()</a>, and <a class="el" href="rpg_2system_2System_8tpp_source.html#l01038">writeParamNoSweep()</a>.</p>
-
-</div>
-</div>
-<a id="aa97dca471f41642836e0c702b35e9216" name="aa97dca471f41642836e0c702b35e9216"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa97dca471f41642836e0c702b35e9216">&#9670;&#160;</a></span>interaction() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Interaction.html">Interaction</a> const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::interaction </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the <a class="el" href="classPscf_1_1Interaction.html" title="Flory-Huggins excess free energy model.">Interaction</a> (const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00692">692</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
-
-</div>
-</div>
-<a id="a739d600a10a029b44777e438c44d691a" name="a739d600a10a029b44777e438c44d691a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a739d600a10a029b44777e438c44d691a">&#9670;&#160;</a></span>domain()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1Domain.html">Domain</a>&lt; D &gt; const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::domain </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the <a class="el" href="classPscf_1_1Rpg_1_1Domain.html" title="Spatial domain for a periodic structure with real fields, on a GPU.">Domain</a> (const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00700">700</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-</div>
-</div>
-<a id="ac0c679ad6d9d7f78f3095827a61afe55" name="ac0c679ad6d9d7f78f3095827a61afe55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0c679ad6d9d7f78f3095827a61afe55">&#9670;&#160;</a></span>hasEnvironment()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::hasEnvironment </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Does this system have an <a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a>? </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00705">705</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l01022">clearUnitCellData()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00809">compute()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00849">computeStress()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00869">iterate()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>, and <a class="el" href="rpg_2system_2System_8tpp_source.html#l01038">writeParamNoSweep()</a>.</p>
-
-</div>
-</div>
-<a id="a8aef4c88ec7aac8bec7f1ca10d13917b" name="a8aef4c88ec7aac8bec7f1ca10d13917b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8aef4c88ec7aac8bec7f1ca10d13917b">&#9670;&#160;</a></span>environment() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Environment.html">Environment</a> &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::environment </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the <a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a> (non-const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00710">710</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l01022">clearUnitCellData()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00809">compute()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00849">computeStress()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00869">iterate()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00303">readParameters()</a>, and <a class="el" href="rpg_2system_2System_8tpp_source.html#l01038">writeParamNoSweep()</a>.</p>
-
-</div>
-</div>
-<a id="a2c922dd5bc288620b860fbe2e4d73796" name="a2c922dd5bc288620b860fbe2e4d73796"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c922dd5bc288620b860fbe2e4d73796">&#9670;&#160;</a></span>environment() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Environment.html">Environment</a> const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::environment </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the <a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a> (const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00718">718</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
-
-</div>
-</div>
-<a id="a29a3e50dda590617d830f81bdb515c91" name="a29a3e50dda590617d830f81bdb515c91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29a3e50dda590617d830f81bdb515c91">&#9670;&#160;</a></span>scft() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1ScftThermo.html">ScftThermo</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::scft </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the <a class="el" href="classPscf_1_1Rpg_1_1ScftThermo.html" title="Computes SCFT free energies.">ScftThermo</a> object (non-const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00726">726</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00951">clearCFields()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00809">compute()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00869">iterate()</a>, and <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>.</p>
-
-</div>
-</div>
-<a id="ab53067521f72916ac03315152ba00398" name="ab53067521f72916ac03315152ba00398"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab53067521f72916ac03315152ba00398">&#9670;&#160;</a></span>scft() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1ScftThermo.html">ScftThermo</a>&lt; D &gt; const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::scft </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the <a class="el" href="classPscf_1_1Rpg_1_1ScftThermo.html" title="Computes SCFT free energies.">ScftThermo</a> object (const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00734">734</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
-
-</div>
-</div>
-<a id="a8e12b80e543b406fe5fccab63b496862" name="a8e12b80e543b406fe5fccab63b496862"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e12b80e543b406fe5fccab63b496862">&#9670;&#160;</a></span>hasIterator()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::hasIterator </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Does this system have an <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a>? </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00742">742</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l01075">clearTimers()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00869">iterate()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00303">readParameters()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00916">sweep()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l01038">writeParamNoSweep()</a>, and <a class="el" href="rpg_2system_2System_8tpp_source.html#l01059">writeTimers()</a>.</p>
-
-</div>
-</div>
-<a id="a739e3141edad4077d9aab47490d47c7c" name="a739e3141edad4077d9aab47490d47c7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a739e3141edad4077d9aab47490d47c7c">&#9670;&#160;</a></span>iterator() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1Iterator.html">Iterator</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::iterator </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> (non-const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00747">747</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l01075">clearTimers()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00849">computeStress()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00869">iterate()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00916">sweep()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l01038">writeParamNoSweep()</a>, and <a class="el" href="rpg_2system_2System_8tpp_source.html#l01059">writeTimers()</a>.</p>
-
-</div>
-</div>
-<a id="a2a62fe2c13b0c623d71001e9c456bf86" name="a2a62fe2c13b0c623d71001e9c456bf86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a62fe2c13b0c623d71001e9c456bf86">&#9670;&#160;</a></span>iterator() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1Iterator.html">Iterator</a>&lt; D &gt; const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::iterator </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> (const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00755">755</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
-
-</div>
-</div>
-<a id="adad74bd6e2561eaeaea885be8e9c7df6" name="adad74bd6e2561eaeaea885be8e9c7df6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adad74bd6e2561eaeaea885be8e9c7df6">&#9670;&#160;</a></span>hasSweep()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::hasSweep </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Does this system have a <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a>? </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00763">763</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00916">sweep()</a>.</p>
-
-</div>
-</div>
-<a id="aa8fc7c1ed1280a17d14fcb386dce0920" name="aa8fc7c1ed1280a17d14fcb386dce0920"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8fc7c1ed1280a17d14fcb386dce0920">&#9670;&#160;</a></span>hasSimulator()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::hasSimulator </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Does this system have a <a class="el" href="classPscf_1_1Rpg_1_1Simulator.html" title="Field theoretic simulator (base class).">Simulator</a>? </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00768">768</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l01075">clearTimers()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00938">simulate()</a>, and <a class="el" href="rpg_2system_2System_8tpp_source.html#l01059">writeTimers()</a>.</p>
-
-</div>
-</div>
-<a id="a154f770163b1521253a0c3d8a3b046a5" name="a154f770163b1521253a0c3d8a3b046a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a154f770163b1521253a0c3d8a3b046a5">&#9670;&#160;</a></span>simulator() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::simulator </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the <a class="el" href="classPscf_1_1Rpg_1_1Simulator.html" title="Field theoretic simulator (base class).">Simulator</a> (non-const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00773">773</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l01075">clearTimers()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>, <a class="el" href="rpg_2system_2System_8tpp_source.html#l00938">simulate()</a>, and <a class="el" href="rpg_2system_2System_8tpp_source.html#l01059">writeTimers()</a>.</p>
-
-</div>
-</div>
-<a id="a1c6ab26a56115bd239898668c0d59da0" name="a1c6ab26a56115bd239898668c0d59da0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c6ab26a56115bd239898668c0d59da0">&#9670;&#160;</a></span>simulator() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator</a>&lt; D &gt; const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::simulator </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the <a class="el" href="classPscf_1_1Rpg_1_1Simulator.html" title="Field theoretic simulator (base class).">Simulator</a> (const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00781">781</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-<p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
-
-</div>
-</div>
-<a id="aeb74c22bca28cb83a1ce3caa527a3a39" name="aeb74c22bca28cb83a1ce3caa527a3a39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb74c22bca28cb83a1ce3caa527a3a39">&#9670;&#160;</a></span>fileMaster() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classUtil_1_1FileMaster.html">FileMaster</a> &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::fileMaster </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the <a class="el" href="classUtil_1_1FileMaster.html" title="A FileMaster manages input and output files for a simulation.">FileMaster</a> (non-const). </p>
-<p>Access (non-const) is used in some unit tests. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00789">789</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-</div>
-</div>
-<a id="ae489298c270517750e2e891eecc608c8" name="ae489298c270517750e2e891eecc608c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae489298c270517750e2e891eecc608c8">&#9670;&#160;</a></span>fileMaster() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classUtil_1_1FileMaster.html">FileMaster</a> const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::fileMaster </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the <a class="el" href="classUtil_1_1FileMaster.html" title="A FileMaster manages input and output files for a simulation.">FileMaster</a> (const). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8h_source.html#l00794">794</a> of file <a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a>.</p>
-
-</div>
-</div>
-<a id="a3b981f27ab511f243d8d3f8b9510fa6d" name="a3b981f27ab511f243d8d3f8b9510fa6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b981f27ab511f243d8d3f8b9510fa6d">&#9670;&#160;</a></span>writeParamNoSweep()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::writeParamNoSweep </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Write partial parameter file to an ostream. </p>
-<p>This function writes the <a class="el" href="classPscf_1_1Rpg_1_1Mixture.html" title="Solver and descriptor for a mixture of polymers and solvents.">Mixture</a>, <a class="el" href="classPscf_1_1Interaction.html" title="Flory-Huggins excess free energy model.">Interaction</a>, and <a class="el" href="classPscf_1_1Rpg_1_1Domain.html" title="Spatial domain for a periodic structure with real fields, on a GPU.">Domain</a> blocks of a parameter file, as well as any <a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a> and <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> blocks, but omits any <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html" title="Solve a sequence of problems along a line in parameter space.">Sweep</a> or <a class="el" href="classPscf_1_1Rpg_1_1Simulator.html" title="Field theoretic simulator (base class).">Simulator</a> blocks. The intent is to produce an output during an SCFT sweep that only refers to parameters relevant to a single state point, in a form that could be used as a parameter file for a single SCFT calculation.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">out</td><td>output stream </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l01038">1038</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2system_2System_8h_source.html#l00710">environment()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00705">hasEnvironment()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00742">hasIterator()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00684">interaction()</a>, and <a class="el" href="rpg_2system_2System_8h_source.html#l00747">iterator()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>.</p>
-
-</div>
-</div>
-<a id="af8219b86f5f3ac42f860305a6f598111" name="af8219b86f5f3ac42f860305a6f598111"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8219b86f5f3ac42f860305a6f598111">&#9670;&#160;</a></span>writeTimers()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::writeTimers </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Write timer information to an output stream. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">out</td><td>output stream </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l01059">1059</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="Log_8cpp_source.html#l00059">Util::Log::file()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00742">hasIterator()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00768">hasSimulator()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00747">iterator()</a>, and <a class="el" href="rpg_2system_2System_8h_source.html#l00773">simulator()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>.</p>
-
-</div>
-</div>
-<a id="aaa5bb03620b4f7c39cbb9b80bcadfb72" name="aaa5bb03620b4f7c39cbb9b80bcadfb72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa5bb03620b4f7c39cbb9b80bcadfb72">&#9670;&#160;</a></span>clearTimers()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a>&lt; D &gt;::clearTimers </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Clear timers. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2system_2System_8tpp_source.html#l01075">1075</a> of file <a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2system_2System_8h_source.html#l00742">hasIterator()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00768">hasSimulator()</a>, <a class="el" href="rpg_2system_2System_8h_source.html#l00747">iterator()</a>, and <a class="el" href="rpg_2system_2System_8h_source.html#l00773">simulator()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2system_2System_8tpp_source.html#l00421">readCommands()</a>.</p>
+<p class="reference">References <a class="el" href="ThreadArray_8cu_source.html#l00058">Pscf::ThreadArray::setThreadsPerBlock()</a>, and <a class="el" href="ThreadMesh_8cu_source.html#l00342">Pscf::ThreadMesh::setThreadsPerBlock()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="rpg_2environment_2EnvironmentFactory_8h_source.html">rpg/environment/EnvironmentFactory.h</a></li>
 <li><a class="el" href="rpg_2system_2System_8h_source.html">rpg/system/System.h</a></li>
-<li><a class="el" href="rpg_2system_2System_8tpp_source.html">rpg/system/System.tpp</a></li>
+<li><a class="el" href="System_8cu_source.html">System.cu</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

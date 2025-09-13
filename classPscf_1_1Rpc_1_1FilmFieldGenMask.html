@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -322,13 +322,13 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:aef762481b1893e86dda5724e868067e9" id="r_aef762481b1893e86dda5724e868067e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef762481b1893e86dda5724e868067e9">compute</a> ()</td></tr>
-<tr class="memdesc:aef762481b1893e86dda5724e868067e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the field and store where the <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> can access.  <br /></td></tr>
+<tr class="memdesc:aef762481b1893e86dda5724e868067e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the field and store where the <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> can access.  <br /></td></tr>
 <tr class="memitem:a2a0abb98592a9a2a93e627551145cb17" id="r_a2a0abb98592a9a2a93e627551145cb17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a0abb98592a9a2a93e627551145cb17">setFlexibleParams</a> () const</td></tr>
 <tr class="memdesc:a2a0abb98592a9a2a93e627551145cb17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies iterator().flexibleParams_ to be compatible with the mask.  <br /></td></tr>
 <tr class="memitem:a8a5b2bf0f97d64d97cfaee4828adaf29" id="r_a8a5b2bf0f97d64d97cfaee4828adaf29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a5b2bf0f97d64d97cfaee4828adaf29">system</a> ()</td></tr>
-<tr class="memdesc:a8a5b2bf0f97d64d97cfaee4828adaf29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> by non-const reference.  <br /></td></tr>
+<tr class="memdesc:a8a5b2bf0f97d64d97cfaee4828adaf29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> by non-const reference.  <br /></td></tr>
 <tr class="memitem:a8f943cafa0f16a7e5d6cbf76767bfeb2" id="r_a8f943cafa0f16a7e5d6cbf76767bfeb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f943cafa0f16a7e5d6cbf76767bfeb2">system</a> () const</td></tr>
-<tr class="memdesc:a8f943cafa0f16a7e5d6cbf76767bfeb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> by const reference.  <br /></td></tr>
+<tr class="memdesc:a8f943cafa0f16a7e5d6cbf76767bfeb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> by const reference.  <br /></td></tr>
 <tr class="memitem:a14b8ad23f6431d641de0f526e29aba90" id="r_a14b8ad23f6431d641de0f526e29aba90"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14b8ad23f6431d641de0f526e29aba90">systemSpaceGroup</a> () const</td></tr>
 <tr class="memdesc:a14b8ad23f6431d641de0f526e29aba90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the space group name for this system.  <br /></td></tr>
 <tr class="memitem:a56fa433cd6c09073929c1b0070dea8e1" id="r_a56fa433cd6c09073929c1b0070dea8e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1RealVec.html">RealVec</a>&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56fa433cd6c09073929c1b0070dea8e1">systemLatticeVector</a> (int id) const</td></tr>
@@ -416,7 +416,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
 class Pscf::Rpc::FilmFieldGenMask&lt; D &gt;</div><p>Field Generator for thin-film masks. </p>
-<p>The parent FilmFieldGenMaskBase class template defines all traits of a <a class="el" href="classPscf_1_1Rpc_1_1FilmFieldGenMask.html" title="Field Generator for thin-film masks.">FilmFieldGenMask</a> that do not require access to the <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a>. This subclass defines all methods that need <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> access.</p>
+<p>The parent FilmFieldGenMaskBase class template defines all traits of a <a class="el" href="classPscf_1_1Rpc_1_1FilmFieldGenMask.html" title="Field Generator for thin-film masks.">FilmFieldGenMask</a> that do not require access to the <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a>. This subclass defines all methods that need <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> access.</p>
 <p>If a <a class="el" href="classPscf_1_1Prdc_1_1MixAndMatchEnv.html" title="Environment that can mix and match field generators in variable-cell SCFT.">MixAndMatchEnv</a> contains a <a class="el" href="classPscf_1_1Rpc_1_1FilmFieldGenMask.html" title="Field Generator for thin-film masks.">FilmFieldGenMask</a>, then the system will contain two parallel hard surfaces ("walls"), confining the polymers/solvents to a "thin film" region of the unit cell. </p>
 
 <p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenMask_8h_source.html#l00034">34</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenMask_8h_source.html">rpc/environment/FilmFieldGenMask.h</a>.</p>
@@ -440,7 +440,7 @@ template&lt;int D&gt; </div>
 
 <p>Default constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00033">33</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html">rpc/environment/FilmFieldGenMask.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00034">34</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html">rpc/environment/FilmFieldGenMask.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="FilmFieldGenMaskBase_8tpp_source.html#l00026">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::FilmFieldGenMaskBase()</a>, and <a class="el" href="ParamComposite_8cpp_source.html#l00379">setClassName()</a>.</p>
 
@@ -466,12 +466,12 @@ template&lt;int D&gt; </div>
 <p>Constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sys</td><td><a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> parent object </td></tr>
+    <tr><td class="paramname">sys</td><td><a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> parent object </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00042">42</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html">rpc/environment/FilmFieldGenMask.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00043">43</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html">rpc/environment/FilmFieldGenMask.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="FilmFieldGenMaskBase_8tpp_source.html#l00026">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::FilmFieldGenMaskBase()</a>, and <a class="el" href="ParamComposite_8cpp_source.html#l00379">setClassName()</a>.</p>
 
@@ -496,7 +496,7 @@ template&lt;int D&gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00051">51</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html">rpc/environment/FilmFieldGenMask.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00052">52</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html">rpc/environment/FilmFieldGenMask.tpp</a>.</p>
 
 </div>
 </div>
@@ -537,11 +537,11 @@ template&lt;int D&gt; </div>
 
 <p>Implements <a class="el" href="classPscf_1_1Prdc_1_1FilmFieldGenMaskBase.html#af8926bbef91777ee0e0e1aece9e246b1">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00058">58</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html">rpc/environment/FilmFieldGenMask.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00059">59</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html">rpc/environment/FilmFieldGenMask.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="cpu_2RField_8tpp_source.html#l00094">Pscf::Prdc::Cpu::RField&lt; D &gt;::allocate()</a>, <a class="el" href="group__Prdc__Crystal__Module.html#gae8eb57727484965113abab5766daa972">Pscf::Prdc::convertFullParamIdToReduced()</a>, <a class="el" href="Mesh_8h_source.html#l00217">Pscf::Mesh&lt; D &gt;::dimensions()</a>, <a class="el" href="FilmFieldGenMaskBase_8h_source.html#l00263">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::excludedThickness()</a>, <a class="el" href="FilmFieldGenMaskBase_8h_source.html#l00258">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::interfaceThickness()</a>, <a class="el" href="classPscf_1_1Rpc_1_1Domain.html#af8d5e69c8a9926028cc9ec28f4dea2b1">Pscf::Rpc::Domain&lt; D &gt;::lattice()</a>, <a class="el" href="classPscf_1_1Rpc_1_1Domain.html#a5466e992698d4ba1d70b393f78a1df94">Pscf::Rpc::Domain&lt; D &gt;::mesh()</a>, <a class="el" href="FilmFieldGenMaskBase_8h_source.html#l00253">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::normalVecId()</a>, <a class="el" href="Mesh_8h_source.html#l00229">Pscf::Mesh&lt; D &gt;::size()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8h_source.html#l00143">system()</a>, <a class="el" href="classPscf_1_1Rpc_1_1Domain.html#adf80a353246cc7fe52784d0db92234e8">Pscf::Rpc::Domain&lt; D &gt;::unitCell()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="cpu_2RField_8tpp_source.html#l00094">Pscf::Prdc::Cpu::RField&lt; D &gt;::allocate()</a>, <a class="el" href="group__Prdc__Crystal__Module.html#gae8eb57727484965113abab5766daa972">Pscf::Prdc::convertFullParamIdToReduced()</a>, <a class="el" href="Mesh_8h_source.html#l00217">Pscf::Mesh&lt; D &gt;::dimensions()</a>, <a class="el" href="FilmFieldGenMaskBase_8h_source.html#l00263">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::excludedThickness()</a>, <a class="el" href="FilmFieldGenMaskBase_8h_source.html#l00258">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::interfaceThickness()</a>, <a class="el" href="classPscf_1_1Rpc_1_1Domain.html#af5c2b50ac0934c990d45f632533730e4">Pscf::Rpc::Domain&lt; D &gt;::lattice()</a>, <a class="el" href="classPscf_1_1Rpc_1_1Domain.html#a7cf29b0e7150d48e1ad602b906b5aa21">Pscf::Rpc::Domain&lt; D &gt;::mesh()</a>, <a class="el" href="FilmFieldGenMaskBase_8h_source.html#l00253">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::normalVecId()</a>, <a class="el" href="Mesh_8h_source.html#l00229">Pscf::Mesh&lt; D &gt;::size()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8h_source.html#l00143">system()</a>, <a class="el" href="classPscf_1_1Rpc_1_1Domain.html#ab88d4dfe4095c74e5fa42bea75a2e89b">Pscf::Rpc::Domain&lt; D &gt;::unitCell()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00170">modifyStress()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00171">modifyStress()</a>.</p>
 
 </div>
 </div>
@@ -575,7 +575,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Modify stress value in direction normal to the film. </p>
-<p>The "stress" calculated by the <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> is used to minimize fHelmholtz with respect to a given lattice parameter. In a thin film it is useful to instead minimize the excess free energy per unit area, (fHelmholtz - fRef) * Delta, where fRef is a reference free energy and Delta is the film thickness. The information needed to perform such a modification is contained within this object. This method performs this modification. The stress will not be modified for lattice parameters that are parallel to the film.</p>
+<p>The "stress" calculated by the <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> is used to minimize fHelmholtz with respect to a given lattice parameter. In a thin film it is useful to instead minimize the excess free energy per unit area, (fHelmholtz - fRef) * Delta, where fRef is a reference free energy and Delta is the film thickness. The information needed to perform such a modification is contained within this object. This method performs this modification. The stress will not be modified for lattice parameters that are parallel to the film.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">paramId</td><td>index of the lattice parameter with this stress </td></tr>
@@ -586,9 +586,9 @@ template&lt;int D&gt; </div>
 
 <p>Implements <a class="el" href="classPscf_1_1Prdc_1_1FilmFieldGenMaskBase.html#abd031e078d8a2c9c84e6c52008d6bb3f">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00170">170</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html">rpc/environment/FilmFieldGenMask.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00171">171</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html">rpc/environment/FilmFieldGenMask.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="group__Prdc__Crystal__Module.html#gae8eb57727484965113abab5766daa972">Pscf::Prdc::convertFullParamIdToReduced()</a>, <a class="el" href="FilmFieldGenMaskBase_8h_source.html#l00263">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::excludedThickness()</a>, <a class="el" href="FilmFieldGenMaskBase_8h_source.html#l00226">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::fBulk_</a>, <a class="el" href="FilmFieldGenMaskBase_8h_source.html#l00273">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::hasFBulk()</a>, <a class="el" href="FilmFieldGenMaskBase_8h_source.html#l00253">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::normalVecId()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00058">stress()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8h_source.html#l00143">system()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="group__Prdc__Crystal__Module.html#gae8eb57727484965113abab5766daa972">Pscf::Prdc::convertFullParamIdToReduced()</a>, <a class="el" href="FilmFieldGenMaskBase_8h_source.html#l00263">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::excludedThickness()</a>, <a class="el" href="FilmFieldGenMaskBase_8h_source.html#l00226">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::fBulk_</a>, <a class="el" href="FilmFieldGenMaskBase_8h_source.html#l00273">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::hasFBulk()</a>, <a class="el" href="FilmFieldGenMaskBase_8h_source.html#l00253">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::normalVecId()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00059">stress()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8h_source.html#l00143">system()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
 </div>
 </div>
@@ -617,11 +617,11 @@ template&lt;int D&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Compute the field and store where the <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> can access. </p>
+<p>Compute the field and store where the <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> can access. </p>
 
 <p>Implements <a class="el" href="classPscf_1_1Prdc_1_1FilmFieldGenMaskBase.html#adfb9ece8cae6092bf2e8c5fa0947f53d">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00205">205</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html">rpc/environment/FilmFieldGenMask.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00206">206</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html">rpc/environment/FilmFieldGenMask.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="cpu_2RField_8tpp_source.html#l00094">Pscf::Prdc::Cpu::RField&lt; D &gt;::allocate()</a>, <a class="el" href="group__Prdc__Crystal__Module.html#gae8eb57727484965113abab5766daa972">Pscf::Prdc::convertFullParamIdToReduced()</a>, <a class="el" href="FilmFieldGenMaskBase_8h_source.html#l00263">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::excludedThickness()</a>, <a class="el" href="FilmFieldGenMaskBase_8h_source.html#l00258">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::interfaceThickness()</a>, <a class="el" href="FilmFieldGenMaskBase_8h_source.html#l00223">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::normalVecCurrent_</a>, <a class="el" href="FilmFieldGenMaskBase_8h_source.html#l00253">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::normalVecId()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8h_source.html#l00143">system()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8h_source.html#l00164">systemLatticeVector()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -656,7 +656,7 @@ template&lt;int D&gt; </div>
 
 <p>Implements <a class="el" href="classPscf_1_1Prdc_1_1FilmFieldGenMaskBase.html#af748e60412490d5d3e9781a91cc8548b">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00270">270</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html">rpc/environment/FilmFieldGenMask.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00271">271</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html">rpc/environment/FilmFieldGenMask.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="classPscf_1_1Prdc_1_1FilmFieldGenMaskBase.html#a3c70068a55f1c9265082c6a0b34c972a">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::modifyFlexibleParams()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8h_source.html#l00143">system()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -687,13 +687,13 @@ template&lt;int D&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> by non-const reference. </p>
+<p>Get the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> by non-const reference. </p>
 
 <p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenMask_8h_source.html#l00143">143</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenMask_8h_source.html">rpc/environment/FilmFieldGenMask.h</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00205">compute()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00170">modifyStress()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00270">setFlexibleParams()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00058">stress()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8h_source.html#l00164">systemLatticeVector()</a>, and <a class="el" href="rpc_2environment_2FilmFieldGenMask_8h_source.html#l00159">systemSpaceGroup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00206">compute()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00171">modifyStress()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00271">setFlexibleParams()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00059">stress()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8h_source.html#l00164">systemLatticeVector()</a>, and <a class="el" href="rpc_2environment_2FilmFieldGenMask_8h_source.html#l00159">systemSpaceGroup()</a>.</p>
 
 </div>
 </div>
@@ -722,7 +722,7 @@ template&lt;int D&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> by const reference. </p>
+<p>Get the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> by const reference. </p>
 
 <p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenMask_8h_source.html#l00151">151</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenMask_8h_source.html">rpc/environment/FilmFieldGenMask.h</a>.</p>
 
@@ -804,7 +804,7 @@ template&lt;int D&gt; </div>
 
 <p class="reference">References <a class="el" href="rpc_2environment_2FilmFieldGenMask_8h_source.html#l00143">system()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00205">compute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00206">compute()</a>.</p>
 
 </div>
 </div>
@@ -838,7 +838,7 @@ template&lt;int D&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="ParamComposite_8cpp_source.html#l00900">900</a> of file <a class="el" href="ParamComposite_8cpp_source.html">ParamComposite.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00033">FilmFieldGenMask()</a>, and <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00042">FilmFieldGenMask()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00034">FilmFieldGenMask()</a>, and <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00043">FilmFieldGenMask()</a>.</p>
 
 </div>
 </div>

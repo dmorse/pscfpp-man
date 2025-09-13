@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -295,11 +295,11 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a9505d730c8c03d3f607d54b390c1e780" id="r_a9505d730c8c03d3f607d54b390c1e780"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9505d730c8c03d3f607d54b390c1e780">incrementNFail</a> ()</td></tr>
 <tr class="memdesc:a9505d730c8c03d3f607d54b390c1e780"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment the number of failed moves.  <br /></td></tr>
 <tr class="memitem:a540a12ec77ae19f5decd1bc7b16b0cf3" id="r_a540a12ec77ae19f5decd1bc7b16b0cf3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a540a12ec77ae19f5decd1bc7b16b0cf3">system</a> ()</td></tr>
-<tr class="memdesc:a540a12ec77ae19f5decd1bc7b16b0cf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> object.  <br /></td></tr>
+<tr class="memdesc:a540a12ec77ae19f5decd1bc7b16b0cf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> object.  <br /></td></tr>
 <tr class="memitem:a614a6590b637062167b2c5e2e391c128" id="r_a614a6590b637062167b2c5e2e391c128"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpc_1_1McSimulator.html">McSimulator</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a614a6590b637062167b2c5e2e391c128">simulator</a> ()</td></tr>
 <tr class="memdesc:a614a6590b637062167b2c5e2e391c128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parent <a class="el" href="classPscf_1_1Rpc_1_1McSimulator.html" title="Monte-Carlo simulation coordinator.">McSimulator</a> object.  <br /></td></tr>
 <tr class="memitem:a31158c9a3172d1161a64d1cad42db4b7" id="r_a31158c9a3172d1161a64d1cad42db4b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1Random.html">Random</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31158c9a3172d1161a64d1cad42db4b7">random</a> ()</td></tr>
-<tr class="memdesc:a31158c9a3172d1161a64d1cad42db4b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="classUtil_1_1Random.html" title="Random number generator.">Random</a> number generator of parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a>.  <br /></td></tr>
+<tr class="memdesc:a31158c9a3172d1161a64d1cad42db4b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="classUtil_1_1Random.html" title="Random number generator.">Random</a> number generator of parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a>.  <br /></td></tr>
 <tr class="memitem:a8c58af51ef79a1c75b89af14db081f5a" id="r_a8c58af51ef79a1c75b89af14db081f5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c58af51ef79a1c75b89af14db081f5a">readProbability</a> (std::istream &amp;in)</td></tr>
 <tr class="memdesc:a8c58af51ef79a1c75b89af14db081f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the probability from file.  <br /></td></tr>
 <tr class="memitem:a7fe57839bde5656eba47ad57de9c71ba" id="r_a7fe57839bde5656eba47ad57de9c71ba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fe57839bde5656eba47ad57de9c71ba">attemptMove</a> ()</td></tr>
@@ -364,7 +364,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
 class Pscf::Rpc::McMove&lt; D &gt;</div><p><a class="el" href="classPscf_1_1Rpc_1_1McMove.html" title="McMove is an abstract base class for Monte Carlo moves.">McMove</a> is an abstract base class for Monte Carlo moves. </p>
-<p>The virtual <a class="el" href="#a84c146a719afc111630bfe3fa3de266f" title="Generate, attempt, and accept or reject a Monte Carlo move.">move()</a> method must generate a trial move, decide whether to accept or reject it, and update the associated <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> fields if it is accepted. </p>
+<p>The virtual <a class="el" href="#a84c146a719afc111630bfe3fa3de266f" title="Generate, attempt, and accept or reject a Monte Carlo move.">move()</a> method must generate a trial move, decide whether to accept or reject it, and update the associated <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> fields if it is accepted. </p>
 
 <p class="definition">Definition at line <a class="el" href="rpc_2fts_2montecarlo_2McMove_8h_source.html#l00036">36</a> of file <a class="el" href="rpc_2fts_2montecarlo_2McMove_8h_source.html">rpc/fts/montecarlo/McMove.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -1013,7 +1013,7 @@ template&lt;int D&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> object. </p>
+<p>Get parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> object. </p>
 
 <p class="definition">Definition at line <a class="el" href="rpc_2fts_2montecarlo_2McMove_8h_source.html#l00288">288</a> of file <a class="el" href="rpc_2fts_2montecarlo_2McMove_8h_source.html">rpc/fts/montecarlo/McMove.h</a>.</p>
 
@@ -1079,7 +1079,7 @@ template&lt;int D&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get <a class="el" href="classUtil_1_1Random.html" title="Random number generator.">Random</a> number generator of parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a>. </p>
+<p>Get <a class="el" href="classUtil_1_1Random.html" title="Random number generator.">Random</a> number generator of parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="rpc_2fts_2montecarlo_2McMove_8h_source.html#l00302">302</a> of file <a class="el" href="rpc_2fts_2montecarlo_2McMove_8h_source.html">rpc/fts/montecarlo/McMove.h</a>.</p>
 

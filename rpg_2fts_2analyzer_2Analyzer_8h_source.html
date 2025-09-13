@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -175,16 +175,14 @@ $(function() {
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>   }</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">   #endif</span></div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor">   #ifndef RPG_ANALYZER_TPP</span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>   <span class="comment">// Suppress implicit instantiation</span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span>Analyzer&lt;1&gt;;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span>Analyzer&lt;2&gt;;</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span>Analyzer&lt;3&gt;;</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">   #endif</span></div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>}</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>}</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>   <span class="comment">// Explicit instantiation declarations</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span>Analyzer&lt;1&gt;;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span>Analyzer&lt;2&gt;;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span>Analyzer&lt;3&gt;;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>}</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>}</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Analyzer_html_a19bc27a7fb19cd00d77474facd67c1ae"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Analyzer.html#a19bc27a7fb19cd00d77474facd67c1ae">Pscf::Rpg::Analyzer::readParameters</a></div><div class="ttdeci">virtual void readParameters(std::istream &amp;in)</div><div class="ttdoc">Read parameters from archive.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2fts_2analyzer_2Analyzer_8tpp_source.html#l00041">rpg/fts/analyzer/Analyzer.tpp:41</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Analyzer_html_a47fb118cab5caa876c668cf3934e5e27"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Analyzer.html#a47fb118cab5caa876c668cf3934e5e27">Pscf::Rpg::Analyzer::baseInterval</a></div><div class="ttdeci">static long baseInterval</div><div class="ttdoc">The interval for every Analyzer must be a multiple of baseInterval.</div><div class="ttdef"><b>Definition</b> <a href="#l00106">rpg/fts/analyzer/Analyzer.h:106</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Analyzer_html_a48f4be129932efd8b37b704b3e3d9a34"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Analyzer.html#a48f4be129932efd8b37b704b3e3d9a34">Pscf::Rpg::Analyzer::sample</a></div><div class="ttdeci">virtual void sample(long iStep)=0</div><div class="ttdoc">Calculate, analyze and/or output a physical quantity.</div></div>

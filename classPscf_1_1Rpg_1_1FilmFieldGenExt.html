@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -334,11 +334,11 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ab803e98fde03a59f98bccdd94073601d" id="r_ab803e98fde03a59f98bccdd94073601d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab803e98fde03a59f98bccdd94073601d">compute</a> ()</td></tr>
-<tr class="memdesc:ab803e98fde03a59f98bccdd94073601d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the fields and store where the <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing one complete system.">System</a> can access.  <br /></td></tr>
+<tr class="memdesc:ab803e98fde03a59f98bccdd94073601d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the fields and store where the <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing a complete physical system.">System</a> can access.  <br /></td></tr>
 <tr class="memitem:aee9aac7365b96e74119708af3194f8d2" id="r_aee9aac7365b96e74119708af3194f8d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1System.html">System</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee9aac7365b96e74119708af3194f8d2">system</a> ()</td></tr>
-<tr class="memdesc:aee9aac7365b96e74119708af3194f8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing one complete system.">System</a> associated with this object by reference.  <br /></td></tr>
+<tr class="memdesc:aee9aac7365b96e74119708af3194f8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing a complete physical system.">System</a> associated with this object by reference.  <br /></td></tr>
 <tr class="memitem:a4605028b96242932889adf9853de38e9" id="r_a4605028b96242932889adf9853de38e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1System.html">System</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4605028b96242932889adf9853de38e9">system</a> () const</td></tr>
-<tr class="memdesc:a4605028b96242932889adf9853de38e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing one complete system.">System</a> associated with this object by const reference.  <br /></td></tr>
+<tr class="memdesc:a4605028b96242932889adf9853de38e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing a complete physical system.">System</a> associated with this object by const reference.  <br /></td></tr>
 <tr class="memitem:a452fb74da947b04bda0d8f0ad25a06b0" id="r_a452fb74da947b04bda0d8f0ad25a06b0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a452fb74da947b04bda0d8f0ad25a06b0">systemSpaceGroup</a> () const</td></tr>
 <tr class="memdesc:a452fb74da947b04bda0d8f0ad25a06b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the space group name for this system.  <br /></td></tr>
 <tr class="memitem:abdba3f155539444852e0bf8dcc384a7f" id="r_abdba3f155539444852e0bf8dcc384a7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1RealVec.html">RealVec</a>&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdba3f155539444852e0bf8dcc384a7f">systemLatticeVector</a> (int id) const</td></tr>
@@ -417,7 +417,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
 class Pscf::Rpg::FilmFieldGenExt&lt; D &gt;</div><p>Field Generator for external fields in thin-film systems. </p>
-<p>The parent FilmFieldGenExtBase class template defines all traits of a <a class="el" href="classPscf_1_1Rpg_1_1FilmFieldGenExt.html" title="Field Generator for external fields in thin-film systems.">FilmFieldGenExt</a> that do not require access to the <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing one complete system.">System</a>. This subclass defines all methods that need <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing one complete system.">System</a> access.</p>
+<p>The parent FilmFieldGenExtBase class template defines all traits of a <a class="el" href="classPscf_1_1Rpg_1_1FilmFieldGenExt.html" title="Field Generator for external fields in thin-film systems.">FilmFieldGenExt</a> that do not require access to the <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing a complete physical system.">System</a>. This subclass defines all methods that need <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing a complete physical system.">System</a> access.</p>
 <p>If the user chooses a <a class="el" href="classPscf_1_1Rpg_1_1FilmFieldGenExt.html" title="Field Generator for external fields in thin-film systems.">FilmFieldGenExt</a> object to generate external fields, the external fields will have the same shape as the mask, with a magnitude defined by a Flory&ndash;Huggins-like chi parameter. This class is specific to thin-film systems because it also allows for a different chi parameter to be defined on the top boundary than on the bottom, through user input arrays chi_bottom and chi_top. See <a class="el" href="scft_thin_films_page.html">Thin-Film Confinement</a> for more information. </p>
 
 <p class="definition">Definition at line <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00038">38</a> of file <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html">rpg/environment/FilmFieldGenExt.h</a>.</p>
@@ -467,7 +467,7 @@ template&lt;int D&gt; </div>
 <p>Constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sys</td><td><a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing one complete system.">System</a> parent object </td></tr>
+    <tr><td class="paramname">sys</td><td><a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing a complete physical system.">System</a> parent object </td></tr>
   </table>
   </dd>
 </dl>
@@ -540,7 +540,7 @@ template&lt;int D&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="rpg_2environment_2FilmFieldGenExt_8tpp_source.html#l00191">191</a> of file <a class="el" href="rpg_2environment_2FilmFieldGenExt_8tpp_source.html">rpg/environment/FilmFieldGenExt.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="ThreadMesh_8cu_source.html#l00367">Pscf::ThreadMesh::blockDims()</a>, <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="Array_8h_source.html#l00214">Util::Array&lt; Data &gt;::cArray()</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00289">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::chiBottom()</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00294">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::chiTop()</a>, <a class="el" href="group__Prdc__Crystal__Module.html#gae8eb57727484965113abab5766daa972">Pscf::Prdc::convertFullParamIdToReduced()</a>, <a class="el" href="ThreadMesh_8cu_source.html#l00364">Pscf::ThreadMesh::gridDims()</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00314">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::interfaceThickness()</a>, <a class="el" href="FilmFieldGenExtBase_8tpp_source.html#l00186">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::isAthermal()</a>, <a class="el" href="ThreadMesh_8cu_source.html#l00370">Pscf::ThreadMesh::meshDims()</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00309">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::normalVecId()</a>, <a class="el" href="ThreadMesh_8cu_source.html#l00088">Pscf::ThreadMesh::setConfig()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8tpp_source.html#l00191">stress()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00133">system()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="ThreadMesh_8cu_source.html#l00367">Pscf::ThreadMesh::blockDims()</a>, <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="Array_8h_source.html#l00214">Util::Array&lt; Data &gt;::cArray()</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00289">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::chiBottom()</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00294">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::chiTop()</a>, <a class="el" href="group__Prdc__Crystal__Module.html#gae8eb57727484965113abab5766daa972">Pscf::Prdc::convertFullParamIdToReduced()</a>, <a class="el" href="ThreadMesh_8cu_source.html#l00364">Pscf::ThreadMesh::gridDims()</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00314">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::interfaceThickness()</a>, <a class="el" href="FilmFieldGenExtBase_8tpp_source.html#l00186">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::isAthermal()</a>, <a class="el" href="ThreadMesh_8cu_source.html#l00370">Pscf::ThreadMesh::meshDims()</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00309">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::normalVecId()</a>, <a class="el" href="ThreadMesh_8cu_source.html#l00088">Pscf::ThreadMesh::setConfig()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8tpp_source.html#l00191">stress()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00134">system()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="rpg_2environment_2FilmFieldGenExt_8tpp_source.html#l00191">stress()</a>.</p>
 
@@ -571,13 +571,13 @@ template&lt;int D&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Compute the fields and store where the <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing one complete system.">System</a> can access. </p>
+<p>Compute the fields and store where the <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing a complete physical system.">System</a> can access. </p>
 
 <p>Implements <a class="el" href="classPscf_1_1Prdc_1_1FilmFieldGenExtBase.html#af02ecc3add0502bfcdcd515ed34bab7a">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="rpg_2environment_2FilmFieldGenExt_8tpp_source.html#l00256">256</a> of file <a class="el" href="rpg_2environment_2FilmFieldGenExt_8tpp_source.html">rpg/environment/FilmFieldGenExt.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="ThreadMesh_8cu_source.html#l00367">Pscf::ThreadMesh::blockDims()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="Array_8h_source.html#l00214">Util::Array&lt; Data &gt;::cArray()</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00289">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::chiBottom()</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00242">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::chiBottomCurrent_</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00294">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::chiTop()</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00253">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::chiTopCurrent_</a>, <a class="el" href="ThreadMesh_8cu_source.html#l00364">Pscf::ThreadMesh::gridDims()</a>, <a class="el" href="FilmFieldGenExtBase_8tpp_source.html#l00186">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::isAthermal()</a>, <a class="el" href="ThreadMesh_8cu_source.html#l00370">Pscf::ThreadMesh::meshDims()</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00231">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::normalVecCurrent_</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00309">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::normalVecId()</a>, <a class="el" href="ThreadMesh_8cu_source.html#l00088">Pscf::ThreadMesh::setConfig()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00133">system()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00148">systemLatticeVector()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="DArray_8h_source.html#l00199">Util::DArray&lt; Data &gt;::allocate()</a>, <a class="el" href="ThreadMesh_8cu_source.html#l00367">Pscf::ThreadMesh::blockDims()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="Array_8h_source.html#l00214">Util::Array&lt; Data &gt;::cArray()</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00289">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::chiBottom()</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00242">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::chiBottomCurrent_</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00294">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::chiTop()</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00253">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::chiTopCurrent_</a>, <a class="el" href="ThreadMesh_8cu_source.html#l00364">Pscf::ThreadMesh::gridDims()</a>, <a class="el" href="FilmFieldGenExtBase_8tpp_source.html#l00186">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::isAthermal()</a>, <a class="el" href="ThreadMesh_8cu_source.html#l00370">Pscf::ThreadMesh::meshDims()</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00231">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::normalVecCurrent_</a>, <a class="el" href="FilmFieldGenExtBase_8h_source.html#l00309">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::normalVecId()</a>, <a class="el" href="ThreadMesh_8cu_source.html#l00088">Pscf::ThreadMesh::setConfig()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00134">system()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00149">systemLatticeVector()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -601,16 +601,16 @@ template&lt;int D&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing one complete system.">System</a> associated with this object by reference. </p>
+<p>Get the <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing a complete physical system.">System</a> associated with this object by reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00133">133</a> of file <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html">rpg/environment/FilmFieldGenExt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00134">134</a> of file <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html">rpg/environment/FilmFieldGenExt.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2environment_2FilmFieldGenExt_8tpp_source.html#l00256">compute()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8tpp_source.html#l00191">stress()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00148">systemLatticeVector()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00153">systemNMonomer()</a>, and <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00143">systemSpaceGroup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpg_2environment_2FilmFieldGenExt_8tpp_source.html#l00256">compute()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8tpp_source.html#l00191">stress()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00149">systemLatticeVector()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00154">systemNMonomer()</a>, and <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00144">systemSpaceGroup()</a>.</p>
 
 </div>
 </div>
@@ -634,14 +634,14 @@ template&lt;int D&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing one complete system.">System</a> associated with this object by const reference. </p>
+<p>Get the <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing a complete physical system.">System</a> associated with this object by const reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00138">138</a> of file <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html">rpg/environment/FilmFieldGenExt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00139">139</a> of file <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html">rpg/environment/FilmFieldGenExt.h</a>.</p>
 
 </div>
 </div>
@@ -674,9 +674,9 @@ template&lt;int D&gt; </div>
 
 <p>Implements <a class="el" href="classPscf_1_1Prdc_1_1FilmFieldGenExtBase.html#aa341fa7df851ff37728d5358bf042ade">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00143">143</a> of file <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html">rpg/environment/FilmFieldGenExt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00144">144</a> of file <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html">rpg/environment/FilmFieldGenExt.h</a>.</p>
 
-<p class="reference">References <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00133">system()</a>.</p>
+<p class="reference">References <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00134">system()</a>.</p>
 
 </div>
 </div>
@@ -715,9 +715,9 @@ template&lt;int D&gt; </div>
 
 <p>Implements <a class="el" href="classPscf_1_1Prdc_1_1FilmFieldGenExtBase.html#aacfd70c6a6d47ea86ed27a70b4f39d68">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00148">148</a> of file <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html">rpg/environment/FilmFieldGenExt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00149">149</a> of file <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html">rpg/environment/FilmFieldGenExt.h</a>.</p>
 
-<p class="reference">References <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00133">system()</a>.</p>
+<p class="reference">References <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00134">system()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="rpg_2environment_2FilmFieldGenExt_8tpp_source.html#l00256">compute()</a>.</p>
 
@@ -752,9 +752,9 @@ template&lt;int D&gt; </div>
 
 <p>Implements <a class="el" href="classPscf_1_1Prdc_1_1FilmFieldGenExtBase.html#a56ed2c5f1d32d048be26fa8b7d49e064">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00153">153</a> of file <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html">rpg/environment/FilmFieldGenExt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00154">154</a> of file <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html">rpg/environment/FilmFieldGenExt.h</a>.</p>
 
-<p class="reference">References <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00133">system()</a>.</p>
+<p class="reference">References <a class="el" href="rpg_2environment_2FilmFieldGenExt_8h_source.html#l00134">system()</a>.</p>
 
 </div>
 </div>

@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -143,7 +143,7 @@ $(function() {
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>   <span class="keywordtype">void</span> writeGroup(std::string filename, SpaceGroup&lt;D&gt; <span class="keyword">const</span> &amp; group);</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="preprocessor">   #ifndef PRDC_SPACE_GROUP_TPP</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>   <span class="comment">// Explicit instantiation declarations</span></div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span>SpaceGroup&lt;1&gt;;</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span>SpaceGroup&lt;2&gt;;</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span>SpaceGroup&lt;3&gt;;</div>
@@ -153,11 +153,10 @@ $(function() {
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keywordtype">void</span> writeGroup(std::string, SpaceGroup&lt;1&gt; <span class="keyword">const</span> &amp;);</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keywordtype">void</span> writeGroup(std::string, SpaceGroup&lt;2&gt; <span class="keyword">const</span> &amp;);</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keywordtype">void</span> writeGroup(std::string, SpaceGroup&lt;3&gt; <span class="keyword">const</span> &amp;);</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="preprocessor">   #endif</span></div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>}</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>}</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>}</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassPscf_1_1IntVec_html"><div class="ttname"><a href="classPscf_1_1IntVec.html">Pscf::IntVec</a></div><div class="ttdoc">An IntVec&lt;D, T&gt; is a D-component vector of elements of integer type T.</div><div class="ttdef"><b>Definition</b> <a href="IntVec_8h_source.html#l00026">IntVec.h:27</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Prdc_1_1SpaceGroup_html"><div class="ttname"><a href="classPscf_1_1Prdc_1_1SpaceGroup.html">Pscf::Prdc::SpaceGroup</a></div><div class="ttdoc">Crystallographic space group.</div><div class="ttdef"><b>Definition</b> <a href="#l00031">SpaceGroup.h:32</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Prdc_1_1SpaceGroup_html_a2b994b5e9bb154b50bfb13ce94b58e66"><div class="ttname"><a href="classPscf_1_1Prdc_1_1SpaceGroup.html#a2b994b5e9bb154b50bfb13ce94b58e66">Pscf::Prdc::SpaceGroup::hasInversionCenter</a></div><div class="ttdeci">bool hasInversionCenter(typename SpaceSymmetry&lt; D &gt;::Translation &amp;center) const</div><div class="ttdoc">Determines if this space group has an inversion center.</div><div class="ttdef"><b>Definition</b> <a href="SpaceGroup_8tpp_source.html#l00024">SpaceGroup.tpp:24</a></div></div>

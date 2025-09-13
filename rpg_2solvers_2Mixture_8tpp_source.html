@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -69,7 +69,7 @@ $(function() {
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;Mixture.h&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;rpg/field/FieldIo.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;prdc/solvers/MixtureReal.tpp&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;prdc/solvers/MixturePrdc.tpp&gt;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;prdc/cuda/FFT.h&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;prdc/cuda/RField.h&gt;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
@@ -85,7 +85,7 @@ $(function() {
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
 <div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Mixture.html#aae49e892ce87518a34a338ffc2629fff">   27</a></span>   <a class="code hl_function" href="classPscf_1_1Rpg_1_1Mixture.html#aae49e892ce87518a34a338ffc2629fff">Mixture&lt;D&gt;::Mixture</a>()</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    : <a class="code hl_typedef" href="classPscf_1_1Rpg_1_1Mixture.html#abfb9697a5fc03bbc19ce587f3a81e0c2">MixtureRealT</a>(),</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    : <a class="code hl_typedef" href="classPscf_1_1Rpg_1_1Mixture.html#a8b5e20d7503470d7acdb112351866b85">MixturePrdcT</a>(),</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      useBatchedFFT_(true)</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>   {}</div>
 </div>
@@ -97,7 +97,7 @@ $(function() {
 <div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Mixture.html#a2103242537ebf911e2bf4db38b36db79">   36</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Mixture.html#a2103242537ebf911e2bf4db38b36db79">Mixture&lt;D&gt;::readParameters</a>(std::istream&amp; in)</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>   {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      MixtureRealT::readParameters(in);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      MixturePrdcT::readParameters(in);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      <span class="comment">// Optionally read useBatchedFFT boolean</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      useBatchedFFT_ = <span class="keyword">true</span>;</div>
@@ -146,8 +146,8 @@ $(function() {
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>} <span class="comment">// namespace Pscf</span></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Mixture_html_a2103242537ebf911e2bf4db38b36db79"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Mixture.html#a2103242537ebf911e2bf4db38b36db79">Pscf::Rpg::Mixture::readParameters</a></div><div class="ttdeci">void readParameters(std::istream &amp;in) override</div><div class="ttdoc">Read all parameters and initialize.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">rpg/solvers/Mixture.tpp:36</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Mixture_html_a8b5e20d7503470d7acdb112351866b85"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Mixture.html#a8b5e20d7503470d7acdb112351866b85">Pscf::Rpg::Mixture::MixturePrdcT</a></div><div class="ttdeci">typename Prdc::MixturePrdc&lt; D, Polymer&lt; D &gt;, Solvent&lt; D &gt; &gt; MixturePrdcT</div><div class="ttdoc">Direct (parent) base class.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2solvers_2Mixture_8h_source.html#l00035">rpg/solvers/Mixture.h:35</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Mixture_html_aae49e892ce87518a34a338ffc2629fff"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Mixture.html#aae49e892ce87518a34a338ffc2629fff">Pscf::Rpg::Mixture::Mixture</a></div><div class="ttdeci">Mixture()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00027">rpg/solvers/Mixture.tpp:27</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Mixture_html_abfb9697a5fc03bbc19ce587f3a81e0c2"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Mixture.html#abfb9697a5fc03bbc19ce587f3a81e0c2">Pscf::Rpg::Mixture::MixtureRealT</a></div><div class="ttdeci">typename Prdc::MixtureReal&lt; D, Polymer&lt; D &gt;, Solvent&lt; D &gt; &gt; MixtureRealT</div><div class="ttdoc">Direct (parent) base class.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2solvers_2Mixture_8h_source.html#l00035">rpg/solvers/Mixture.h:35</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a5d9f133993e0aa0b18cd59938ccf8700"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">Util::ParamComposite::readOptional</a></div><div class="ttdeci">ScalarParam&lt; Type &gt; &amp; readOptional(std::istream &amp;in, const char *label, Type &amp;value)</div><div class="ttdoc">Add and read a new optional ScalarParam &lt; Type &gt; object.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8h_source.html#l01256">ParamComposite.h:1256</a></div></div>
 <div class="ttc" id="aglobal_8h_html_aaf3bc07accafc94019d126e4cffa81e7"><div class="ttname"><a href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a></div><div class="ttdeci">#define UTIL_CHECK(condition)</div><div class="ttdoc">Assertion macro suitable for serial or parallel production code.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00068">global.h:68</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_1_1VecOp_html_a0133e303c9b5585548c98062cb9d8792"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html#a0133e303c9b5585548c98062cb9d8792">Pscf::Prdc::Cuda::VecOp::addEqV</a></div><div class="ttdeci">void addEqV(DeviceArray&lt; cudaReal &gt; &amp;a, DeviceArray&lt; cudaReal &gt; const &amp;b, const int beginIdA, const int beginIdB, const int n)</div><div class="ttdoc">Vector addition in-place, a[i] += b[i], kernel wrapper (cudaReal).</div><div class="ttdef"><b>Definition</b> <a href="VecOp_8cu_source.html#l01672">VecOp.cu:1672</a></div></div>

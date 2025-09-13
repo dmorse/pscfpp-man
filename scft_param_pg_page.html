@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -59,7 +59,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p><a class="el" href="scft_param_pc_page.html">Parameter File - pscf_pc</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_field_page.html">Field Files</a> (Next) <br  />
 </p>
-<p>The parameter file format for SCFT calculations using the pscf_pg GPU-accelerated program is almost identical to the parameter file format for the <a class="el" href="scft_param_pc_page.html">pscf_pc</a>. The Mixture and Interaction blocks use the same format as that used by both pscf_1d and pscf_pc, and the Domain block and Environment blocks have the same formats as that used by pscf_pc. The only differences between pscf_pc and pscf_pg parameter files are differences in the available iterators.</p>
+<p>The parameter file format for SCFT calculations using the pscf_pg GPU-accelerated program is almost identical to the parameter file format for <a class="el" href="scft_param_pc_page.html">pscf_pc</a>. The Mixture block uses the same format as that used by both pscf_1d and pscf_pc, with the exception of a single optional added parameter (<span class="tt">useBatchedFFT</span>, outlined <a class="el" href="#scft_param_pg_batched_fft_sec">below</a>). The Interaction block also uses the same format as pscf_1d and pscf_pc, and the Domain and Environment blocks have the same format as that used by pscf_pc. The main differences between pscf_pc and pscf_pg parameter files are differences in the available iterators.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_param_pg_iterator_sec"></a>
 Iterators</h1>
 <p>The default iterator for pscf_pg, which is implemented by class Rpg::AmIteratorBasis&lt;D&gt;, uses an Anderson-Mixing (AM) algorithm that imposes a prescribed space group symmetry, much like the analogous <a class="el" href="rpc_AmIteratorBasis_page.html">Rpc::AmIteratorBasis</a> iterator used by pscf_pc. This iteration algorithm may be invoked in the parameter file for pscf_pg using either the generic block label "Iterator" or a specific label "AmIteratorBasis". The parameter file must contain a groupName parameter within the Domain block to enable use of this iterator. The implementation of AmIteratorBasis uses an expansion of the chemical potential fields and the residual as vectors with components that represent coefficients in symmetry-adapted Fourier expansions of the corresponding fields.</p>
@@ -75,6 +75,13 @@ Iterators</h1>
 <h1 class="doxsection"><a class="anchor" id="scft_param_pg_sweep_sec"></a>
 Sweep</h1>
 <p>The only sweep algorithm currently available for use with pscf_pg is a general linear sweep algorithm identical to that used by pscf_pc. This can be enabled by including a block that starts either with the generic label Sweep or the specific label LinearSweep. The required parameter file format for a linear sweep is described <a class="el" href="scft_param_sweep_page.html#scft_param_sweep_linear_sec">here</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="scft_param_pg_batched_fft_sec"></a>
+useBatchedFFT</h1>
+<p>To compute the stress values for a flexible unit cell, fast Fourier transforms (FFTs) need to be performed on the propagator at every step along the chain contour. This often means 100 or more independent FFTs at a time. By default, pscf_pg performs these FFTs in parallel, using a "batched" FFT algorithm provided by cuFFT that performs as many parallel FFTs as is needed to maximize GPU occupancy. This can greatly accelerate stress calculations when the grid size is modest.</p>
+<p>However, batched FFTs require significant amounts of memory to be allocated on the GPU to store the Fourier transform of the propagator, which can be avoided when using non-batched FFTs. To be precise, batched FFTs nearly double the total on-chip memory usage of the whole program. We therefore provide an optional parameter, <span class="tt">useBatchedFFT</span>, which allows users to toggle between batched and non-batched FFTs. This parameter immediately follows <span class="tt">ds</span> in the Mixture block of the parameter file.</p>
+<p>Whether or not batched FFTs will cause a problem depends on both the GPU being used and the number of gridpoints in the system. Modern GPUs tend to have very large on-chip memories (for example, an A100 has 40GB), so they are capable of handling the memory demand of batched FFTs in all but the very largest of calculations. Older GPUs, however, have smaller on-chip memories, meaning that users may encounter an "out of memory" error even when the calculation is not terribly large.</p>
+<p>Furthermore, the computational benefit of batched FFTs shrinks as the number of gridpoints increases. For calculations with 100,000 gridpoints on an A40 GPU, we have found that batched FFTs allow the stress to be calculated 10x faster than non-batched FFTs, while for calculations with 1,000,000 gridpoints, batched FFTs are only 1.16x faster.</p>
+<p>Therefore, we recommend that users use non-batched FFTs for calculations that exceed one million gridpoints, or for smaller calculations when paired with older GPUs. If an "out of memory" error is encountered when using batched FFTs, using non-batched FFTs instead will likely remediate the error.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_param_pg_seealso_sec"></a>
 See Also:</h1>
 <ul>

@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -64,17 +64,17 @@ $(function() {
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">* Distributed under the terms of the GNU General Public License.</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Mask.tpp&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;prdc/field/MaskReal.tpp&gt;</span> <span class="comment">// needed for implementation</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Mask.tpp&quot;</span>                 <span class="comment">// class implementation</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;prdc/field/MaskTmpl.tpp&gt;</span>  <span class="comment">// base class implementation</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Prdc</a> {</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>   <span class="comment">// Explicit instantiation</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>   <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Prdc_1_1MaskReal.html">MaskReal&lt; 1, Cpu::RField&lt;1&gt;</a>, Rpc::FieldIo&lt;1&gt; &gt;;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>   <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Prdc_1_1MaskReal.html">MaskReal&lt; 2, Cpu::RField&lt;2&gt;</a>, Rpc::FieldIo&lt;2&gt; &gt;;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>   <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Prdc_1_1MaskReal.html">MaskReal&lt; 3, Cpu::RField&lt;3&gt;</a>, Rpc::FieldIo&lt;3&gt; &gt;;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>   <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Prdc_1_1MaskTmpl.html">MaskTmpl&lt; 1, Cpu::RField&lt;1&gt;</a>, Rpc::FieldIo&lt;1&gt; &gt;;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>   <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Prdc_1_1MaskTmpl.html">MaskTmpl&lt; 2, Cpu::RField&lt;2&gt;</a>, Rpc::FieldIo&lt;2&gt; &gt;;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>   <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Prdc_1_1MaskTmpl.html">MaskTmpl&lt; 3, Cpu::RField&lt;3&gt;</a>, Rpc::FieldIo&lt;3&gt; &gt;;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>} <span class="comment">// namespace Prdc</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
@@ -87,7 +87,7 @@ $(function() {
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>} <span class="comment">// namespace Rpc</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>} <span class="comment">// namespace Pscf</span></div>
-<div class="ttc" id="aclassPscf_1_1Prdc_1_1MaskReal_html"><div class="ttname"><a href="classPscf_1_1Prdc_1_1MaskReal.html">Pscf::Prdc::MaskReal</a></div><div class="ttdoc">Container for a field to which the total density is constrained.</div><div class="ttdef"><b>Definition</b> <a href="MaskReal_8h_source.html#l00083">MaskReal.h:84</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Prdc_1_1MaskTmpl_html"><div class="ttname"><a href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a></div><div class="ttdoc">Container for a field to which the total density is constrained.</div><div class="ttdef"><b>Definition</b> <a href="MaskTmpl_8h_source.html#l00083">MaskTmpl.h:84</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1Mask_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Mask.html">Pscf::Rpc::Mask</a></div><div class="ttdoc">A field to which the total density is constrained.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2field_2Mask_8h_source.html#l00031">rpc/field/Mask.h:32</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_html"><div class="ttname"><a href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div><div class="ttdoc">Periodic fields and crystallography.</div><div class="ttdef"><b>Definition</b> <a href="CField_8cpp_source.html#l00011">CField.cpp:11</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Rpc_html"><div class="ttname"><a href="namespacePscf_1_1Rpc.html">Pscf::Rpc</a></div><div class="ttdoc">Real periodic fields, SCFT and PS-FTS (CPU).</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00002">param_pc.dox:2</a></div></div>

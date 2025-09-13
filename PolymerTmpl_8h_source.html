@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -231,182 +231,14 @@ $(function() {
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>   }</div>
 </div>
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="preprocessor">   #if 0</span></div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>   <span class="comment">// Non-inline functions</span></div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="comment">   * Constructor.</span></div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> BT&gt;</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>   <a class="code hl_function" href="classPscf_1_1PolymerTmpl.html#ae62d26b8378cebc78b149a4b95808c52">PolymerTmpl&lt;BT&gt;::PolymerTmpl</a>()</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    : <a class="code hl_class" href="classPscf_1_1PolymerSpecies.html">PolymerSpecies</a>(),</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>      blocks_()</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>   {  <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">setClassName</a>(<span class="stringliteral">&quot;PolymerTmpl&quot;</span>); }</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span><span class="comment">   * Destructor.</span></div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> BT&gt;</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>   <a class="code hl_function" href="classPscf_1_1PolymerTmpl.html#a758ca1d34040fafd4dc15666e56120a9">PolymerTmpl&lt;BT&gt;::~PolymerTmpl</a>()</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>   {}</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="comment">   * Allocate blocks array.</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> BT&gt;</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1PolymerTmpl.html#a1c76626f1fed689daa38c46aa91e2aa0">PolymerTmpl&lt;BT&gt;::allocateBlocks</a>()</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>   {  blocks_.allocate(nBlock()); }</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="comment">   * Read blocks array from parameter file.</span></div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> BT&gt;</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1PolymerTmpl.html#a4e79ee2d8bb1ceddc9f1dc9b86888a7b">PolymerTmpl&lt;BT&gt;::readBlocks</a>(std::istream&amp; in)</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>   {  readDArray&lt;BT&gt;(in, <span class="stringliteral">&quot;blocks&quot;</span>, blocks_, nBlock()); }</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="comment">   * Read parameter file block.</span></div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> BT&gt;</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1PolymerTmpl.html#ab5cfed6d34003e9d17729cf3c4b72c1f">PolymerTmpl&lt;BT&gt;::readParameters</a>(std::istream&amp; in)</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>   {</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>      <span class="comment">// Call PoymerSpecies base class member function</span></div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>      <span class="comment">// Initializes PolymerSpecies, and Edge and Vertex components</span></div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>      <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a669997da55add219693c9fa6e8446259">PolymerSpecies::readParameters</a>(in);</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>      <span class="comment">// The remainder of this function sets and validates immutable</span></div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>      <span class="comment">// information about graph topology that is stored by propagators.</span></div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      PropagatorT * propagatorPtr = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>      PropagatorT <span class="keyword">const</span> * sourcePtr = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>      <a class="code hl_class" href="classPscf_1_1Vertex.html">Vertex</a> <span class="keyword">const</span> * headPtr = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>      <a class="code hl_class" href="classPscf_1_1Vertex.html">Vertex</a> <span class="keyword">const</span> * tailPtr = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>      <a class="code hl_class" href="classUtil_1_1Pair.html">Pair&lt;int&gt;</a> propId;</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>      <span class="keywordtype">int</span> blockId, forwardId, reverseId, headId, tailId, i;</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>      <span class="keywordtype">bool</span> isHeadEnd, isTailEnd;</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>      <span class="comment">// Set sources and end flags for all propagators</span></div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>      <span class="keywordflow">for</span> (blockId = 0; blockId &lt; nBlock(); ++blockId) {</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>         <span class="keywordflow">for</span> (forwardId = 0; forwardId &lt; 2; ++forwardId) {</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>            propagatorPtr = &amp;block(blockId).propagator(forwardId);</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>            <span class="comment">// Identify head and tail vertices</span></div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>            <span class="keywordflow">if</span> (forwardId == 0) {</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>              reverseId = 1;</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>              reverseId = 0;</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>            }</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>            headId = block(blockId).vertexId(forwardId);</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>            tailId = block(blockId).vertexId(reverseId);</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>            headPtr = &amp;vertex(headId);  <span class="comment">// pointer to head vertex</span></div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>            tailPtr = &amp;vertex(tailId);  <span class="comment">// pointer to tail vertex</span></div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span> </div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            <span class="comment">// Add pointers to source propagators</span></div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>            <span class="keywordflow">for</span> (i = 0; i &lt; headPtr-&gt;size(); ++i) {</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>               propId = headPtr-&gt;inPropagatorId(i);</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>               <span class="keywordflow">if</span> (propId[0] == blockId) {</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>                  <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(propId[1] != forwardId);</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>               } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                  sourcePtr =</div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>                     &amp;block(propId[0]).propagator(propId[1]);</div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>                  propagatorPtr-&gt;addSource(*sourcePtr);</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>               }</div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>            }</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span> </div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>            <span class="comment">// Set vertex end flags</span></div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>            isHeadEnd = (headPtr-&gt;size() == 1) ? true : <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>            isTailEnd = (tailPtr-&gt;size() == 1) ? true : <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>            propagatorPtr-&gt;setEndFlags(isHeadEnd, isTailEnd);</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span> </div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>         } <span class="comment">// end loop over forwardId (propagator direction id)</span></div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>      } <span class="comment">// end loop over blockId </span></div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span> </div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>      <span class="comment">// Check validity - throw Exception if error detected</span></div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>      isValid();</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>   }</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span> </div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span><span class="comment">   * Checks validity of propagator data set in readParameters.</span></div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span><span class="comment">   *</span></div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span><span class="comment">   * This function only checks validity of propagator source and end flag</span></div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span><span class="comment">   * member data that is set in PolymerTmpl&lt;BT&gt;::readParameters. It </span></div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span><span class="comment">   * does not check validity of members of PolymerSpecies, Edge, and Vertex</span></div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span><span class="comment">   * that are set and validated within the PolymerSpecies::readParameters </span></div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span><span class="comment">   * base class member function. </span></div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> BT&gt;</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>   <span class="keywordtype">void</span> PolymerTmpl&lt;BT&gt;::isValid()</div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>   {</div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>      <a class="code hl_class" href="classPscf_1_1Vertex.html">Vertex</a> <span class="keyword">const</span> * v0Ptr = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>      <a class="code hl_class" href="classPscf_1_1Vertex.html">Vertex</a> <span class="keyword">const</span> * v1Ptr = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>      PropagatorT <span class="keyword">const</span> * p0Ptr = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>      PropagatorT <span class="keyword">const</span> * p1Ptr = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>      <span class="keywordtype">int</span> bId, v0Id, v1Id;</div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span> </div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>      <span class="comment">// Loop over blocks</span></div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>      <span class="keywordflow">for</span> (bId = 0; bId &lt; nBlock(); ++bId) {</div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>         v0Id = block(bId).vertexId(0);</div>
-<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>         v1Id = block(bId).vertexId(1);</div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>         <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(v0Id &gt;= 0 &amp;&amp; v0Id &lt; nVertex());</div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>         <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(v1Id &gt;= 0 &amp;&amp; v1Id &lt; nVertex());</div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>         <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(v0Id != v1Id);</div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>         v0Ptr = &amp;vertex(v0Id);</div>
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>         v1Ptr = &amp;vertex(v1Id);</div>
-<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>         p0Ptr = &amp;(block(bId).propagator(0));</div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>         p1Ptr = &amp;(block(bId).propagator(1));</div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>         <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(p0Ptr-&gt;nSource() == (v0Ptr-&gt;size() - 1));</div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>         <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(p1Ptr-&gt;nSource() == (v1Ptr-&gt;size() - 1));</div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>         <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(p0Ptr-&gt;isHeadEnd() == p1Ptr-&gt;isTailEnd());</div>
-<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>         <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(p0Ptr-&gt;isHeadEnd() == (v0Ptr-&gt;size() == 1));</div>
-<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>         <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(p1Ptr-&gt;isHeadEnd() == (v1Ptr-&gt;size() == 1));</div>
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>      }</div>
-<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span> </div>
-<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>   }</div>
-<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span> </div>
-<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span><span class="comment">   * Solve the MDE for all blocks of this polymer.</span></div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> BT&gt;</div>
-<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1PolymerTmpl.html#adce9a2d87a0a2872bfaa338f7ed5ce31">PolymerTmpl&lt;BT&gt;::solve</a>(<span class="keywordtype">double</span> phiTot)</div>
-<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>   {</div>
-<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span> </div>
-<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>      <span class="comment">// Clear all propagators</span></div>
-<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; nPropagator(); ++j) {</div>
-<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>         propagator(j).setIsSolved(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>      }</div>
-<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span> </div>
-<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>      <span class="comment">// Solve modified diffusion equation for all propagators in</span></div>
-<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>      <span class="comment">// the order specified by function makePlan.</span></div>
-<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; nPropagator(); ++j) {</div>
-<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>         <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(propagator(j).isReady());</div>
-<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>         propagator(j).solve();</div>
-<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>      }</div>
-<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span> </div>
-<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>      <span class="comment">// Compute molecular partition function Q</span></div>
-<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>      <span class="keywordtype">double</span> Q = block(0).propagator(0).computeQ();</div>
-<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span> </div>
-<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>      <span class="comment">// The PropagatorT::computeQ function returns a spatial average.</span></div>
-<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>      <span class="comment">// Correct for partial occupation of the unit cell.</span></div>
-<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>      Q = Q/phiTot;</div>
-<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span> </div>
-<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>      <span class="comment">// Set q and compute phi or mu, depending on the ensemble</span></div>
-<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>      <a class="code hl_function" href="classPscf_1_1Species.html#a5a2496c97ef452469f485eacdba6384a">Species::setQ</a>(Q);</div>
-<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span> </div>
-<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>   }</div>
-<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span><span class="preprocessor">   #endif</span></div>
-<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span> </div>
-<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>}</div>
-<div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span><span class="preprocessor">#include &quot;PolymerTmpl.tpp&quot;</span></div>
-<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>}</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="preprocessor">#include &quot;PolymerTmpl.tpp&quot;</span></div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassPscf_1_1Edge_html"><div class="ttname"><a href="classPscf_1_1Edge.html">Pscf::Edge</a></div><div class="ttdoc">Descriptor for a block within a block polymer.</div><div class="ttdef"><b>Definition</b> <a href="Edge_8h_source.html#l00058">Edge.h:59</a></div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html">Pscf::PolymerSpecies</a></div><div class="ttdoc">Descriptor for a linear or acyclic branched block polymer.</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8h_source.html#l00070">PolymerSpecies.h:71</a></div></div>
 <div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a01945dca17c487e068d3f941625c6845"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a01945dca17c487e068d3f941625c6845">Pscf::PolymerSpecies::vertex</a></div><div class="ttdeci">const Vertex &amp; vertex(int id) const</div><div class="ttdoc">Get a specified Vertex by const reference.</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8h_source.html#l00317">PolymerSpecies.h:317</a></div></div>
 <div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a216b773f72feb4d7e76b337548374eeb"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a216b773f72feb4d7e76b337548374eeb">Pscf::PolymerSpecies::PolymerSpecies</a></div><div class="ttdeci">PolymerSpecies()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8cpp_source.html#l00023">PolymerSpecies.cpp:23</a></div></div>
 <div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a44a255cb903e721ccde2c14c42c224fc"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a44a255cb903e721ccde2c14c42c224fc">Pscf::PolymerSpecies::path</a></div><div class="ttdeci">Pair&lt; int &gt; const &amp; path(int is, int it) const</div><div class="ttdoc">Get an id for a propagator from one vertex towards a target.</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8h_source.html#l00335">PolymerSpecies.h:335</a></div></div>
 <div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a5a69c4eb67fafa3e4d8a3e7157cdcf91"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a5a69c4eb67fafa3e4d8a3e7157cdcf91">Pscf::PolymerSpecies::nVertex</a></div><div class="ttdeci">int nVertex() const</div><div class="ttdoc">Number of vertices (junctions and chain ends).</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8h_source.html#l00304">PolymerSpecies.h:304</a></div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a669997da55add219693c9fa6e8446259"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a669997da55add219693c9fa6e8446259">Pscf::PolymerSpecies::readParameters</a></div><div class="ttdeci">virtual void readParameters(std::istream &amp;in)</div><div class="ttdoc">Read parameters and initialize.</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8cpp_source.html#l00043">PolymerSpecies.cpp:43</a></div></div>
 <div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a840d1875e810fea65a9368c6caf76468"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a840d1875e810fea65a9368c6caf76468">Pscf::PolymerSpecies::nPropagator</a></div><div class="ttdeci">int nPropagator() const</div><div class="ttdoc">Number of propagators (2*nBlock).</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8h_source.html#l00310">PolymerSpecies.h:310</a></div></div>
 <div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a94aaf98a48d27a2ae1888624d4e1732b"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a94aaf98a48d27a2ae1888624d4e1732b">Pscf::PolymerSpecies::nBead</a></div><div class="ttdeci">int nBead() const</div><div class="ttdoc">Total number of beads in the polymer (bead model).</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8cpp_source.html#l00416">PolymerSpecies.cpp:416</a></div></div>
 <div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a9de76c8bdb004ba7de73184aab67625f"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a9de76c8bdb004ba7de73184aab67625f">Pscf::PolymerSpecies::nBlock</a></div><div class="ttdeci">int nBlock() const</div><div class="ttdoc">Number of blocks.</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8h_source.html#l00298">PolymerSpecies.h:298</a></div></div>
@@ -430,15 +262,11 @@ $(function() {
 <div class="ttc" id="aclassPscf_1_1PolymerTmpl_html_aef57b0629441758a7d930ea9518042c8"><div class="ttname"><a href="classPscf_1_1PolymerTmpl.html#aef57b0629441758a7d930ea9518042c8">Pscf::PolymerTmpl::edge</a></div><div class="ttdeci">Edge &amp; edge(int id) final</div><div class="ttdoc">Get a specified Edge (block descriptor) by non-const reference.</div><div class="ttdef"><b>Definition</b> <a href="#l00237">PolymerTmpl.h:237</a></div></div>
 <div class="ttc" id="aclassPscf_1_1PolymerTmpl_html_af4cfc2a3807adc26e12e70b933737aaa"><div class="ttname"><a href="classPscf_1_1PolymerTmpl.html#af4cfc2a3807adc26e12e70b933737aaa">Pscf::PolymerTmpl::block</a></div><div class="ttdeci">BT &amp; block(int id)</div><div class="ttdoc">Get a specified Block (solver and descriptor).</div><div class="ttdef"><b>Definition</b> <a href="#l00253">PolymerTmpl.h:253</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Species_html_a1956df7c7b319005c9f8b6cc274a7dc7"><div class="ttname"><a href="classPscf_1_1Species.html#a1956df7c7b319005c9f8b6cc274a7dc7">Pscf::Species::phi</a></div><div class="ttdeci">double phi() const</div><div class="ttdoc">Get the overall volume fraction for this species.</div><div class="ttdef"><b>Definition</b> <a href="Species_8h_source.html#l00149">Species.h:149</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Species_html_a5a2496c97ef452469f485eacdba6384a"><div class="ttname"><a href="classPscf_1_1Species.html#a5a2496c97ef452469f485eacdba6384a">Pscf::Species::setQ</a></div><div class="ttdeci">void setQ(double q)</div><div class="ttdoc">Set q and compute phi or mu (depending on the ensemble).</div><div class="ttdef"><b>Definition</b> <a href="Species_8cpp_source.html#l00063">Species.cpp:63</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Species_html_acaa3a7b3452b1100290920467bf99a57"><div class="ttname"><a href="classPscf_1_1Species.html#acaa3a7b3452b1100290920467bf99a57">Pscf::Species::mu</a></div><div class="ttdeci">double mu() const</div><div class="ttdoc">Get the chemical potential for this species (units kT=1).</div><div class="ttdef"><b>Definition</b> <a href="Species_8h_source.html#l00155">Species.h:155</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Species_html_ade886c269cb418b071b3e6da63652989"><div class="ttname"><a href="classPscf_1_1Species.html#ade886c269cb418b071b3e6da63652989">Pscf::Species::ensemble</a></div><div class="ttdeci">Ensemble ensemble() const</div><div class="ttdoc">Get the statistical ensemble for this species (open or closed).</div><div class="ttdef"><b>Definition</b> <a href="Species_8h_source.html#l00167">Species.h:167</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Species_html_afb8506f32d739b0183c4e09612958663"><div class="ttname"><a href="classPscf_1_1Species.html#afb8506f32d739b0183c4e09612958663">Pscf::Species::q</a></div><div class="ttdeci">double q() const</div><div class="ttdoc">Get the molecular partition function for this species.</div><div class="ttdef"><b>Definition</b> <a href="Species_8h_source.html#l00161">Species.h:161</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Vertex_html"><div class="ttname"><a href="classPscf_1_1Vertex.html">Pscf::Vertex</a></div><div class="ttdoc">A junction or chain end in a block polymer.</div><div class="ttdef"><b>Definition</b> <a href="Vertex_8h_source.html#l00030">Vertex.h:31</a></div></div>
 <div class="ttc" id="aclassUtil_1_1DArray_html"><div class="ttname"><a href="classUtil_1_1DArray.html">Util::DArray</a></div><div class="ttdoc">Dynamically allocatable contiguous array template.</div><div class="ttdef"><b>Definition</b> <a href="DArray_8h_source.html#l00031">DArray.h:32</a></div></div>
 <div class="ttc" id="aclassUtil_1_1Pair_html"><div class="ttname"><a href="classUtil_1_1Pair.html">Util::Pair</a></div><div class="ttdoc">An array of exactly 2 objects.</div><div class="ttdef"><b>Definition</b> <a href="Pair_8h_source.html#l00023">Pair.h:24</a></div></div>
-<div class="ttc" id="aclassUtil_1_1ParamComposite_html_a30752567fd7b8b93e5c8476bbe8592c5"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">Util::ParamComposite::setClassName</a></div><div class="ttdeci">void setClassName(const char *className)</div><div class="ttdoc">Set class name string.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8cpp_source.html#l00379">ParamComposite.cpp:379</a></div></div>
-<div class="ttc" id="aglobal_8h_html_aaf3bc07accafc94019d126e4cffa81e7"><div class="ttname"><a href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a></div><div class="ttdeci">#define UTIL_CHECK(condition)</div><div class="ttdoc">Assertion macro suitable for serial or parallel production code.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00068">global.h:68</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -334,11 +334,11 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a13fbb494de880f83c696eeb0b3557a89" id="r_a13fbb494de880f83c696eeb0b3557a89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13fbb494de880f83c696eeb0b3557a89">compute</a> ()</td></tr>
-<tr class="memdesc:a13fbb494de880f83c696eeb0b3557a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the fields and store where the <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> can access.  <br /></td></tr>
+<tr class="memdesc:a13fbb494de880f83c696eeb0b3557a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the fields and store where the <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> can access.  <br /></td></tr>
 <tr class="memitem:a0fc79153eafaa553a4f1542ae0dfc647" id="r_a0fc79153eafaa553a4f1542ae0dfc647"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fc79153eafaa553a4f1542ae0dfc647">system</a> ()</td></tr>
-<tr class="memdesc:a0fc79153eafaa553a4f1542ae0dfc647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> by non-const reference.  <br /></td></tr>
+<tr class="memdesc:a0fc79153eafaa553a4f1542ae0dfc647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> by non-const reference.  <br /></td></tr>
 <tr class="memitem:afbbe132e43636a9950ae80f71db10c70" id="r_afbbe132e43636a9950ae80f71db10c70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbbe132e43636a9950ae80f71db10c70">system</a> () const</td></tr>
-<tr class="memdesc:afbbe132e43636a9950ae80f71db10c70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> by const reference.  <br /></td></tr>
+<tr class="memdesc:afbbe132e43636a9950ae80f71db10c70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> by const reference.  <br /></td></tr>
 <tr class="memitem:a581631c1548b211016d88e5a05b35358" id="r_a581631c1548b211016d88e5a05b35358"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a581631c1548b211016d88e5a05b35358">systemSpaceGroup</a> () const</td></tr>
 <tr class="memdesc:a581631c1548b211016d88e5a05b35358"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the space group name for this system.  <br /></td></tr>
 <tr class="memitem:a8dc4f0dbd8728940ddec03c57e42636a" id="r_a8dc4f0dbd8728940ddec03c57e42636a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1RealVec.html">RealVec</a>&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dc4f0dbd8728940ddec03c57e42636a">systemLatticeVector</a> (int id) const</td></tr>
@@ -417,7 +417,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
 class Pscf::Rpc::FilmFieldGenExt&lt; D &gt;</div><p>Field Generator for external fields in thin-film systems. </p>
-<p>The parent FilmFieldGenExtBase class template defines all traits of a <a class="el" href="classPscf_1_1Rpc_1_1FilmFieldGenExt.html" title="Field Generator for external fields in thin-film systems.">FilmFieldGenExt</a> that do not require access to the <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a>. This subclass defines all methods that need <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> access.</p>
+<p>The parent FilmFieldGenExtBase class template defines all traits of a <a class="el" href="classPscf_1_1Rpc_1_1FilmFieldGenExt.html" title="Field Generator for external fields in thin-film systems.">FilmFieldGenExt</a> that do not require access to the <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a>. This subclass defines all methods that need <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> access.</p>
 <p>If the user chooses an <a class="el" href="classPscf_1_1Rpc_1_1FilmFieldGenExt.html" title="Field Generator for external fields in thin-film systems.">FilmFieldGenExt</a> object to generate external fields, the external fields will have the same shape as the mask, with a magnitude defined by a Flory&ndash;Huggins-like chi parameter. This class is specific to thin-film systems because it also allows for a different chi parameter to be defined on the top boundary than on the bottom, through user input arrays chi_bottom and chi_top. See <a class="el" href="scft_thin_films_page.html">Thin-Film Confinement</a> for more information. </p>
 
 <p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenExt_8h_source.html#l00038">38</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenExt_8h_source.html">rpc/environment/FilmFieldGenExt.h</a>.</p>
@@ -467,7 +467,7 @@ template&lt;int D&gt; </div>
 <p>Constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sys</td><td>parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> object </td></tr>
+    <tr><td class="paramname">sys</td><td>parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> object </td></tr>
   </table>
   </dd>
 </dl>
@@ -569,7 +569,7 @@ template&lt;int D&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Compute the fields and store where the <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> can access. </p>
+<p>Compute the fields and store where the <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> can access. </p>
 
 <p>Implements <a class="el" href="classPscf_1_1Prdc_1_1FilmFieldGenExtBase.html#af02ecc3add0502bfcdcd515ed34bab7a">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;</a>.</p>
 
@@ -604,7 +604,7 @@ template&lt;int D&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> by non-const reference. </p>
+<p>Get the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> by non-const reference. </p>
 
 <p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenExt_8h_source.html#l00134">134</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenExt_8h_source.html">rpc/environment/FilmFieldGenExt.h</a>.</p>
 
@@ -639,7 +639,7 @@ template&lt;int D&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing one complete system.">System</a> by const reference. </p>
+<p>Get the parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> by const reference. </p>
 
 <p class="definition">Definition at line <a class="el" href="rpc_2environment_2FilmFieldGenExt_8h_source.html#l00142">142</a> of file <a class="el" href="rpc_2environment_2FilmFieldGenExt_8h_source.html">rpc/environment/FilmFieldGenExt.h</a>.</p>
 

@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -60,7 +60,7 @@ $(function() {
 <div class="textblock"><p><a class="el" href="user_param_syntax_page.html">Parameter File - Syntax</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_param_mixture_page.html">Parameter File - Mixture Block</a> (Next) <br  />
 </p>
 <p>Users of PSCF require complete documentation of the required format for each type of block that can appear within a parameter file. This manual page discusses a representation that is used throughout the PSCF documentation to describe the required format of parameter file blocks. This format representation looks similar to that of the actual block, except for thus use of notation to indicate data types of parameter values (rather than actual values), and by the use of special symbols to indicate syntactical elements such as array-valued parameters, optional elements and selectable subblocks.</p>
-<h1 class="doxsection"><a class="anchor" id="user_format_example1_sec"></a>
+<h1 class="doxsection"><a class="anchor" id="user_param_format_example1_sec"></a>
 Example 1: SCFT parameter file for a periodic structure</h1>
 <p>As a simple first example of this sort of format description, the overall format for a pscf_pc or pscf_pg parameter file used to initialize a SCFT calculation is shown below: </p><div class="fragment"><div class="line">System{</div>
 <div class="line">   polymerModel*  enumeration (<span class="stringliteral">&quot;thread&quot;</span> or <span class="stringliteral">&quot;bead&quot;</span>, <span class="stringliteral">&quot;thread&quot;</span> by <span class="keywordflow">default</span>)</div>
@@ -72,9 +72,9 @@ Example 1: SCFT parameter file for a periodic structure</h1>
 <div class="line">}</div>
 </div><!-- fragment --><p> This description should look familiar, except for the inclusion of a Sweep{...} block, which is an optional element that was omitted from our earlier example. In such a description, the syntax Label{...} is used to indicate a nested subblock, for which the format of the subblock must be described separately somewhere else. The appearance of an asterisk (*) after any block or parameter label is used to indicate that an element is optional (i.e., omittable). Parameters and block labels that are not followed by an asterisk are thus labels for required elements. The appearance of a "#" symbol after a block label indicate that the block is selectable. The above description thus indicates that the Iterator and Sweep blocks are both optional and selectable.</p>
 <p>For simplicity, the above format description only shows allowed elements of the System block that are relevant to SCFT calculations for spatially periodic structure. A complete format description for the System block of the pscf_pc program, which includes additional optional elements, is given <a class="el" href="rpc_System_page.html">here</a>.</p>
-<h1 class="doxsection"><a class="anchor" id="user_format_example2_sec"></a>
+<h1 class="doxsection"><a class="anchor" id="user_param_format_example2_sec"></a>
 Example 2: Mixture block</h1>
-<p>Every PSCF parameter file contains a Mixture block, which is always a required element of the System block. Different PSCF programs use a Mixture block with the same file format. This format can be described compactly as follows: </p><div class="fragment"><div class="line">Mixture{</div>
+<p>Every PSCF parameter file contains a Mixture block, which is always a required element of the System block. Different PSCF programs use a Mixture block with very similar file formats. The format used by both pscf_1d and pscf_pc can be described compactly as follows: </p><div class="fragment"><div class="line">Mixture{</div>
 <div class="line">  nMonomer   <span class="keywordtype">int</span></div>
 <div class="line">  monomers   Array [ real ]</div>
 <div class="line">  nPolymer   <span class="keywordtype">int</span></div>
@@ -89,7 +89,7 @@ Example 2: Mixture block</h1>
 </div><!-- fragment --><p>In this example, we see that the locations at which values of individual parameters would appear in an actual parameter file have been replaced by labels that specify the type of parameter value, such as int or real. The word Array followed by opening a closing square brackets enclosing a type descriptor is describe an array-value parameter. Note that default values for some optional elements (nSolvent and vMonomer) are given as comments enclosed in parentheses.</p>
 <p>A Mixture block may contain multiple Polymer and Solvent blocks, as indicated by ellipses in the above format description. The number of Polymer and Solvent blocks must match the values of nPolymer and nSolvent, respectively.</p>
 <p>The sort of compact format description shown above is usually supplemented by a table and/or text discussion that contains an explanation of the the meaning of each parameter, as well comments about allowed values for particular parameters, values for dimensions of arrays or matrices, relationships among choices of parameter values, and any other required supplementary information.</p>
-<h1 class="doxsection"><a class="anchor" id="user_format_conventions_sec"></a>
+<h1 class="doxsection"><a class="anchor" id="user_param_format_conventions_sec"></a>
 Element descriptors</h1>
 <p>The following conventions are used to describe different types of element that may appear in the description of a parameter block format:</p>
 <ul>
@@ -107,7 +107,7 @@ Element descriptors</h1>
 <li><b> Matrices </b>: Parameters that represent two-dimensional arrays or matrices that must be input in element format (which uses parentheses as delimiters) are indicated using the syntax <div class="fragment"><div class="line">label Matrix ( type )</div>
 </div><!-- fragment --> where "type" is the data type for a single element.</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="user_format_optional_sec"></a>
+<h1 class="doxsection"><a class="anchor" id="user_param_format_optional_sec"></a>
 Optional and Selectable Elements</h1>
 <p>Optional elements and selectable blocks are identified using the following conventions:</p>
 <ul>

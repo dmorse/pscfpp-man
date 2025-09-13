@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
    </div>
   </td>
  </tr>
@@ -329,8 +329,8 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:ac6922aec3e0c7bf39b8096fa23145c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this iterator use a symmetry-adapted basis?  <br /></td></tr>
 <tr class="memitem:a879d82c09d74269e70db5967ddafe3c1" id="r_a879d82c09d74269e70db5967ddafe3c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a879d82c09d74269e70db5967ddafe3c1">isFlexible_</a></td></tr>
 <tr class="memdesc:a879d82c09d74269e70db5967ddafe3c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the unit cell flexible during iteration?  <br /></td></tr>
-<tr class="memitem:af5fabf5a85e667fae82319626b6e1028" id="r_af5fabf5a85e667fae82319626b6e1028"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1FSArray.html">FSArray</a>&lt; bool, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5fabf5a85e667fae82319626b6e1028">flexibleParams_</a></td></tr>
-<tr class="memdesc:af5fabf5a85e667fae82319626b6e1028"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classUtil_1_1Array.html" title="Array container class template.">Array</a> of indices of the lattice parameters that are flexible.  <br /></td></tr>
+<tr class="memitem:aab85733ea4e919516304223fa2b505d5" id="r_aab85733ea4e919516304223fa2b505d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1FSArray.html">FSArray</a>&lt; bool, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab85733ea4e919516304223fa2b505d5">flexibleParams_</a></td></tr>
+<tr class="memdesc:aab85733ea4e919516304223fa2b505d5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classUtil_1_1Array.html" title="Array container class template.">Array</a> of indices of the lattice parameters that are flexible.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -351,7 +351,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
 class Pscf::Rpg::Iterator&lt; D &gt;</div><p>Base class for iterative solvers for SCF equations. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00035">35</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00034">34</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a30f4489aebb0ea1a56da6925d03eecfb" name="a30f4489aebb0ea1a56da6925d03eecfb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30f4489aebb0ea1a56da6925d03eecfb">&#9670;&#160;</a></span>Iterator() <span class="overload">[1/2]</span></h2>
@@ -360,9 +360,6 @@ class Pscf::Rpg::Iterator&lt; D &gt;</div><p>Base class for iterative solvers fo
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Iterator::Iterator </td>
@@ -371,18 +368,13 @@ template&lt;int D&gt; </div>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Default constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00151">151</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00028">28</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00125">isFlexible_</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00120">isSymmetric_</a>, and <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>.</p>
+<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00124">isFlexible_</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00119">isSymmetric_</a>, and <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>.</p>
 
 </div>
 </div>
@@ -393,9 +385,6 @@ template&lt;int D&gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Iterator::Iterator </td>
@@ -404,24 +393,19 @@ template&lt;int D&gt; </div>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">system</td><td>parent <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing one complete system.">System</a> object </td></tr>
+    <tr><td class="paramname">system</td><td>parent <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing a complete physical system.">System</a> object </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00159">159</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00038">38</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00125">isFlexible_</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00120">isSymmetric_</a>, <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>, and <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00227">system()</a>.</p>
+<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00124">isFlexible_</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00119">isSymmetric_</a>, <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>, and <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00152">system()</a>.</p>
 
 </div>
 </div>
@@ -432,9 +416,6 @@ template&lt;int D&gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Iterator::~Iterator </td>
@@ -443,16 +424,11 @@ template&lt;int D&gt; </div>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00167">167</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00048">48</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a>.</p>
 
 </div>
 </div>
@@ -578,9 +554,9 @@ template&lt;int D&gt; </div>
 
 <p>Does this iterator use a symmetry-adapted Fourier basis? </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00172">172</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00055">55</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00120">isSymmetric_</a>.</p>
+<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00119">isSymmetric_</a>.</p>
 
 </div>
 </div>
@@ -611,9 +587,9 @@ template&lt;int D&gt; </div>
 
 <p>Is the unit cell flexible (true) or rigid (false). </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00178">178</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00062">62</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00125">isFlexible_</a>.</p>
+<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00124">isFlexible_</a>.</p>
 
 </div>
 </div>
@@ -645,9 +621,9 @@ template&lt;int D&gt; </div>
 <p>Get the array indicating which lattice parameters are flexible. </p>
 <p>This array should be nParameters long, where the i-th entry is a boolean indicating whether parameter i is flexible. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00183">183</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00069">69</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00130">flexibleParams_</a>.</p>
+<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00129">flexibleParams_</a>.</p>
 
 </div>
 </div>
@@ -670,11 +646,11 @@ template&lt;int D&gt; </div>
 
 <p>Get the number of flexible lattice parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00188">188</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00076">76</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00130">flexibleParams_</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00227">system()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00129">flexibleParams_</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00152">system()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00201">setFlexibleParams()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00091">setFlexibleParams()</a>.</p>
 
 </div>
 </div>
@@ -703,9 +679,9 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00201">201</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00091">91</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00130">flexibleParams_</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00125">isFlexible_</a>, and <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00188">nFlexibleParams()</a>.</p>
+<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00129">flexibleParams_</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00124">isFlexible_</a>, and <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00076">nFlexibleParams()</a>.</p>
 
 </div>
 </div>
@@ -743,9 +719,9 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00213">213</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00105">105</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00130">flexibleParams_</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00227">system()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00129">flexibleParams_</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00152">system()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -776,9 +752,9 @@ template&lt;int D&gt; </div>
 
 <p>Return reference to parent system. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00227">227</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00152">152</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00159">Iterator()</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00188">nFlexibleParams()</a>, and <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00213">stress()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00038">Iterator()</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00076">nFlexibleParams()</a>, and <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00105">stress()</a>.</p>
 
 </div>
 </div>
@@ -809,7 +785,7 @@ template&lt;int D&gt; </div>
 
 <p>Return const reference to parent system. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00232">232</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00157">157</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
 
 </div>
 </div>
@@ -838,9 +814,9 @@ template&lt;int D&gt; </div>
 
 <p>Does this iterator use a symmetry-adapted basis? </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00120">120</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00119">119</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00172">isSymmetric()</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00151">Iterator()</a>, and <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00159">Iterator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00055">isSymmetric()</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00028">Iterator()</a>, and <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00038">Iterator()</a>.</p>
 
 </div>
 </div>
@@ -868,14 +844,14 @@ template&lt;int D&gt; </div>
 
 <p>Is the unit cell flexible during iteration? </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00125">125</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00124">124</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00178">isFlexible()</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00151">Iterator()</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00159">Iterator()</a>, and <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00201">setFlexibleParams()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00062">isFlexible()</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00028">Iterator()</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00038">Iterator()</a>, and <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00091">setFlexibleParams()</a>.</p>
 
 </div>
 </div>
-<a id="af5fabf5a85e667fae82319626b6e1028" name="af5fabf5a85e667fae82319626b6e1028"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5fabf5a85e667fae82319626b6e1028">&#9670;&#160;</a></span>flexibleParams_</h2>
+<a id="aab85733ea4e919516304223fa2b505d5" name="aab85733ea4e919516304223fa2b505d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab85733ea4e919516304223fa2b505d5">&#9670;&#160;</a></span>flexibleParams_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -886,7 +862,7 @@ template&lt;int D&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classUtil_1_1FSArray.html">FSArray</a>&lt;bool,6&gt; <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html">Pscf::Rpg::Iterator</a>&lt; D &gt;::flexibleParams_</td>
+          <td class="memname"><a class="el" href="classUtil_1_1FSArray.html">FSArray</a>&lt;bool, 6&gt; <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html">Pscf::Rpg::Iterator</a>&lt; D &gt;::flexibleParams_</td>
         </tr>
       </table>
   </td>
@@ -898,14 +874,15 @@ template&lt;int D&gt; </div>
 
 <p><a class="el" href="classUtil_1_1Array.html" title="Array container class template.">Array</a> of indices of the lattice parameters that are flexible. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00130">130</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00129">129</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00183">flexibleParams()</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00188">nFlexibleParams()</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00201">setFlexibleParams()</a>, and <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00213">stress()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00069">flexibleParams()</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00076">nFlexibleParams()</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00091">setFlexibleParams()</a>, and <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00105">stress()</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a></li>
+<li><a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
