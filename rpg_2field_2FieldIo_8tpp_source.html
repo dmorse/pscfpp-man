@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -436,7 +436,7 @@ $(function() {
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                              <span class="keywordtype">double</span> factor)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span><span class="keyword">   </span>{</div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(field.<a class="code hl_function" href="classPscf_1_1Prdc_1_1Cpu_1_1FftwDArray.html#ae55b9e8d35b1ce7a8d73b022bcc160bb">isAllocated</a>());</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>      <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html#aa8a4917af7cb8ef1d7abaff2d8a1daa8">VecOp::mulEqS</a>(field, factor);</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>      <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1VecOp.html#a7d4d28be9fc60f89de2396240cbc9a6c">VecOp::mulEqS</a>(field, factor);</div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>   }</div>
 </div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span> </div>
@@ -553,11 +553,11 @@ $(function() {
 <div class="ttc" id="agroup__Prdc__Field__Module_html_gad4760a4937ab3f2737192fe740c00b87"><div class="ttname"><a href="group__Prdc__Field__Module.html#gad4760a4937ab3f2737192fe740c00b87">Pscf::Prdc::readMeshDimensions</a></div><div class="ttdeci">void readMeshDimensions(std::istream &amp;in, IntVec&lt; D &gt; const &amp;meshDimensions)</div><div class="ttdoc">Read mesh dimensions from a field file header.</div><div class="ttdef"><b>Definition</b> <a href="fieldIoUtil_8tpp_source.html#l00227">fieldIoUtil.tpp:227</a></div></div>
 <div class="ttc" id="agroup__Prdc__Field__Module_html_gae6e9e1493aeed2c4ecde7800d0cf4ca4"><div class="ttname"><a href="group__Prdc__Field__Module.html#gae6e9e1493aeed2c4ecde7800d0cf4ca4">Pscf::Prdc::checkAllocateFields</a></div><div class="ttdeci">void checkAllocateFields(DArray&lt; FT &gt; &amp;fields, int nMonomer, IntVec&lt; D &gt; const &amp;dimensions)</div><div class="ttdoc">Check allocation of an array of fields, allocate if necessary.</div><div class="ttdef"><b>Definition</b> <a href="fieldIoUtil_8tpp_source.html#l00055">fieldIoUtil.tpp:55</a></div></div>
 <div class="ttc" id="agroup__Prdc__Field__Module_html_gaf360a15fae49c11469e2717c1ddfe4a8"><div class="ttname"><a href="group__Prdc__Field__Module.html#gaf360a15fae49c11469e2717c1ddfe4a8">Pscf::Prdc::checkAllocateField</a></div><div class="ttdeci">void checkAllocateField(FT &amp;field, IntVec&lt; D &gt; const &amp;dimensions)</div><div class="ttdoc">Check allocation of a single field, allocate if necessary.</div><div class="ttdef"><b>Definition</b> <a href="fieldIoUtil_8tpp_source.html#l00041">fieldIoUtil.tpp:41</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_1_1VecOp_html_aa8a4917af7cb8ef1d7abaff2d8a1daa8"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html#aa8a4917af7cb8ef1d7abaff2d8a1daa8">Pscf::Prdc::Cuda::VecOp::mulEqS</a></div><div class="ttdeci">void mulEqS(DeviceArray&lt; cudaReal &gt; &amp;a, const cudaReal b, const int beginIdA, const int n)</div><div class="ttdoc">Vector multiplication in-place, a[i] *= b, kernel wrapper (cudaReal).</div><div class="ttdef"><b>Definition</b> <a href="VecOp_8cu_source.html#l01918">VecOp.cu:1918</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a></div><div class="ttdoc">Fields, FFTs, and utilities for periodic boundary conditions (CUDA)</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00014">Reduce.cpp:14</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1VecOp_html_a7d4d28be9fc60f89de2396240cbc9a6c"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1VecOp.html#a7d4d28be9fc60f89de2396240cbc9a6c">Pscf::Prdc::Cpu::VecOp::mulEqS</a></div><div class="ttdeci">void mulEqS(Array&lt; double &gt; &amp;a, double b)</div><div class="ttdoc">Vector multiplication in-place, a[i] *= b.</div><div class="ttdef"><b>Definition</b> <a href="VecOp_8cpp_source.html#l00267">VecOp.cpp:267</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a></div><div class="ttdoc">Fields, FFTs, and utilities for periodic boundary conditions (CUDA)</div><div class="ttdef"><b>Definition</b> <a href="CField_8cu_source.html#l00012">CField.cu:12</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_html"><div class="ttname"><a href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div><div class="ttdoc">Periodic fields and crystallography.</div><div class="ttdef"><b>Definition</b> <a href="CField_8cpp_source.html#l00011">CField.cpp:11</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Rpg_html"><div class="ttname"><a href="namespacePscf_1_1Rpg.html">Pscf::Rpg</a></div><div class="ttdoc">SCFT and PS-FTS with real periodic fields (GPU)</div><div class="ttdef"><b>Definition</b> <a href="rpg_2environment_2environment_8mod_source.html#l00003">rpg/environment/environment.mod:3</a></div></div>
-<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
+<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

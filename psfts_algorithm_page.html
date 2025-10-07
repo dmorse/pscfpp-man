@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -108,7 +108,8 @@ Brownian Dynamics (BD) Step Algorithms</h1>
 \]
 </p>
 <p> Here, \( \Delta V \) is the volume per node (or grid point) of the computational mesh, given by \( \Delta V = V/G \), where \( V \) is the total system volume and \( G \) is the total number of nodes in the mesh. Other authors have sometimes referred to what we call a "mobility" as a time step, sometimes indicated by a symbol such \( \Delta t \) or \( \delta t \).</p>
-<p>The mobility parameter has an analogous meaning in more sophisticated BD step algorithms. It always appears as a prefactor of the "force" (or functional derivative) \( \delta H/\delta W_{-}({\bf r}) \) in expressions for changes in \( W_{-}({\bf r}) \) over a single time step.</p>
+<p>After this random in \( W_{-} \), the chosen compressor algorithm is applied to adjust the pressure-like field \($ W_{+} \) until the partial saddle-point condition is again satisfied, completing the BD move.</p>
+<p>The meaning of the mobility parameter in other BD step algorithms is analogous to its meaning in the explicit Euler algorithm described above: The mobility always appears as a prefactor of the "force" (or functional derivative) \( -\delta H/\delta W_{-}({\bf r}) \) in expressions for changes in \( W_{-}({\bf r}) \) over a single time step. A mobility parameter is the only required parameter for any of the available BD step algorithms.</p>
 <p>PSCF currently allows users to choose from among three BD step algorithms, which are labelled below by the names of the C++ classes that implement them: </p><ul>
 <li>
 <a class="el" href="rpc_LMBdStep_page.html">LMBdStep</a> : A "Leimkuhler-Matthews" (LM) BD step algorithm  </li>
@@ -124,11 +125,11 @@ Monte Carlo (MC) Move Algorithms</h1>
 <p>The PSCF implementation of MC sampling allows the user to specify a set of Monte Carlo move types to be used during an MC simulation. When more than one type of move is specified, one of the move types is chosen at random at the beginning of each step, using probabilities that are specified by the user. The algorithm for each attempted step of a MC simulation is thus as follows:</p>
 <ul>
 <li>Choose a type of MC move at random from among a set of choices specified in the parameter file.</li>
-<li>Use the chosen MC move to generate a random change in \( W_{-} \).</li>
-<li>Use the chosen compressor algorithm to adjust the real pressure-like field \( W_{+}({\bf r}) \) so as to satisfy the partial saddle-point condition.</li>
+<li>Use the chosen MC move to generate a random change in the fields.</li>
+<li>Apply the chosen compressor algorithm to adjust the real pressure-like field \( W_{+}({\bf r}) \) so as to again satisfy the partial saddle-point (i.e., SCF incompressibility) condition.</li>
 <li>Evaluate the Hamiltonian in the new partial saddle point state.</li>
 <li>Use a Metropolis criterion that is designed to satisfy detailed balance to decide whether to accept or reject the move.</li>
-<li>If the move is rejected, restore the field configuration that existed at the beginning of the attempted move.</li>
+<li>If the move is rejected, restore the field configuration that existed before the beginning of the attempted move.</li>
 </ul>
 <p>The block of the parameter file for an MC simulation that contains information about MC moves, which is labelled "McMoveManager", contains one or more subblocks that are associated with different types of move. The parameter file block associated with each such MC move type contains a parameter named "probability" that specifies the probability of that type of move being chosen at the start of each step.</p>
 <p>PSCF currently provides the following two MC step algorithms: </p><ul>
@@ -156,6 +157,9 @@ Compressor Algorithms</h1>
 <p>The LrAmCompressor is the default choice, and is recommended for general use.</p>
 <p>The AmCompressor algorithm is similar to the Anderson mixing algorithm used in most previously published PS-FTS calculations. This algorithm uses information from previous iterations to guide the choice of a new field configuration during each iteration after the first.</p>
 <p>The LrAmCompressor and LrCompressor algorithms both use a quasi-Newton approximation that uses the analytically calculated linear response of a hypothetical homogeneous state as an approximation to the actual linear response of the monomer concentration in an inhomgeneous state to small changes in the pressure-like field. The Lr algorithm is a straightforward quasi-Newton algorithm based on this approximation. The LrAm uses this quasi-Newton step as one stage of a modified Anderson mixing algorithm, which also uses information from previous steps.</p>
+<p>All three of the compressor algorithms listed above are described and compared in the following reference:</p>
+<p><a href="https://doi.org/10.1063/5.0264036">"Improved algorithm for identifying partial saddle-points in polymer
+field theoretic simulations", K. Chen and D.C. Morse, <em> J. Chem. Phys. </em> <b> 162 </b>, 243901 (2025). </a>,</p>
 <h1 class="doxsection"><a class="anchor" id="psfts_algorithm_analyzer_sec"></a>
 Analyzer Algorithms</h1>
 <p>PSCF provides an extensible set of C++ classes for analysis of field theoretic simulations. These are referred to here as analyzers classes, or simply analyzers. Each analyzer class performs a specified analysis and/or file IO operation at some regular interval during a simulation (e.g., every 10 or 100 simulation steps). Analyzer classes can be designed to periodically compute physical quantities of interest, output data to file, or compute statistical properties such as averages and variances, or any combination of these types of operation. The PSCF parameter file format allows the user to enables a set of zero or more analyzers in order to specify which such operations should be performed during a simulation that is run with the SIMULATE command, and how often each should be performed. The same set of analyzer classes may also be used during a postprocessing operation that is performed by the ANALYZE command, as discussed in more detail <a class="el" href="psfts_analysis_page.html">here</a>.</p>

@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -49,7 +49,7 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a href="index.html">PSCF - Polymer Self-Consistent Field</a></li><li class="navelem"><a href="scft_page.html">Self-Consistent Field Theory</a></li><li class="navelem"><a href="scft_param_page.html">Parameter Files</a></li><li class="navelem"><a href="scft_param_pc_page.html">Parameter File - pscf_pc</a></li>  </ul>
+<li class="navelem"><a href="index.html">PSCF - Polymer Self-Consistent Field</a></li><li class="navelem"><a href="scft_page.html">Self-Consistent Field Theory</a></li><li class="navelem"><a href="scft_param_page.html">Parameter Files</a></li><li class="navelem"><a href="scft_param_pc_page.html">Parameter File - pscf_pc and pscf_pg</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -85,35 +85,42 @@ Parameter File format</h1>
 <tr>
 <td><a class="el" href="classPscf_1_1Interaction.html" title="Flory-Huggins excess free energy model.">Interaction</a> </td><td>The <a class="el" href="classPscf_1_1Interaction.html" title="Flory-Huggins excess free energy model.">Interaction</a> block for a system described by the "standard model" of an incompressible polymer mixture. The matrix-valued "chi" parameter entry contains a list of distinct nonzero Flory-Huggins chi parameters, as discussed <a class="el" href="user_param_example_page.html#user_param_example_interaction">here</a>. (required) </td></tr>
 <tr>
-<td><a class="el" href="classPscf_1_1Rpc_1_1Domain.html" title="Spatial domain for a periodic structure with real fields, on a CPU.">Domain</a> </td><td>The <a class="el" href="classPscf_1_1Rpc_1_1Domain.html" title="Spatial domain for a periodic structure with real fields, on a CPU.">Domain</a> block contains information about the periodic unit cell, the computational mesh used to discretize fields in that cell, and space group symmetry (if any), as described <a class="el" href="rpc_Domain_page.html">here</a>. (required) </td></tr>
+<td><a class="el" href="classPscf_1_1Rpc_1_1Domain.html" title="Spatial domain for a periodic structure with real fields, on a CPU.">Domain</a> </td><td>The <a class="el" href="classPscf_1_1Rpc_1_1Domain.html" title="Spatial domain for a periodic structure with real fields, on a CPU.">Domain</a> block contains information about the periodic unit cell, the computational mesh used to discretize fields in that cell, and space group group symmetry (if any), as described <a class="el" href="user_param_domain_pc_page.html">here</a>. (required) </td></tr>
 <tr>
 <td><a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a>#* </td><td>An <a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a> defines a set of inhomogeneous imposed fields, which may include a mask and/or a set of external fields, as discussed <a class="el" href="scft_environment_page.html">here</a>. An <a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a> may be used to define a confined environment, such as that experienced by a thin film. (optional and selectable) </td></tr>
 <tr>
-<td><a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a>#* </td><td>An <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> object implements an iterative algorithm for solving the self-consistent field equations for an SCFT calculation. Available iteration algorithms are listed on separate manual pages <a class="el" href="scft_param_pc_page.html#scft_param_pc_iterator_sec">pscf_pc</a> and for <a class="el" href="scft_param_pg_page.html#scft_param_pg_iterator_sec">pscf_pg</a>. An <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> is required for any SCFT calculation, but is not needed for PS-FTS calculations (optional and selectable) </td></tr>
+<td><a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a>#* </td><td>An <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> object implements an iterative algorithm for solving the self-consistent field equations for an SCFT calculation. <br  />
+ Available iteration algorithms are listed <a class="el" href="scft_iterator_page.html#scft_iterator_periodic_sec">elsewhere</a>. An <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> is required for SCFT calculation, but is not needed for PS-FTS calculations (optional and selectable) </td></tr>
 <tr>
-<td><a class="el" href="classPscf_1_1Rpc_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space.">Sweep</a>#* </td><td>A <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space.">Sweep</a> object performs a sequence of SCFT calculations along a user-prescribed 1D path through parameter space, as described <a class="el" href="scft_param_sweep_page.html">here</a>. A <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space.">Sweep</a> may only be added if an <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> exists. The <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space.">Sweep</a> block is optional and selectable, but the only option that is currently implemented for either pscf_pc or pscf_pg is a <a class="el" href="classPscf_1_1Rpc_1_1LinearSweep.html" title="Sweep in which parameters vary linearly with sweep variable s.">LinearSweep</a> (class <a class="el" href="classPscf_1_1Rpc_1_1LinearSweep.html" title="Sweep in which parameters vary linearly with sweep variable s.">Rpc::LinearSweep</a> or (<a class="el" href="classPscf_1_1Rpg_1_1LinearSweep.html" title="Base class for a sweep in parameter space where parameters change linearly with the sweep variable.">Rpg::LinearSweep</a>). <a class="el" href="classPscf_1_1Rpc_1_1LinearSweep.html" title="Sweep in which parameters vary linearly with sweep variable s.">LinearSweep</a> thus also the default choice obtained using the generic block name "Sweep". (optional and selectable) </td></tr>
+<td><a class="el" href="classPscf_1_1Rpc_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space.">Sweep</a>#* </td><td>A <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space.">Sweep</a> object performs a sequence of SCFT calculations along a user-prescribed 1D path through parameter space, as described <a class="el" href="scft_sweep_page.html">here</a>. A <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space.">Sweep</a> may only be added if an <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> exists. The <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space.">Sweep</a> block is optional and selectable, but the only option that is currently implemented for either pscf_pc or pscf_pg is a <a class="el" href="classPscf_1_1Rpc_1_1LinearSweep.html" title="Sweep in which parameters vary linearly with sweep variable s.">LinearSweep</a> (class <a class="el" href="classPscf_1_1Rpc_1_1LinearSweep.html" title="Sweep in which parameters vary linearly with sweep variable s.">Rpc::LinearSweep</a> or (<a class="el" href="classPscf_1_1Rpg_1_1LinearSweep.html" title="Base class for a sweep in parameter space where parameters change linearly with the sweep variable.">Rpg::LinearSweep</a>). <a class="el" href="classPscf_1_1Rpc_1_1LinearSweep.html" title="Sweep in which parameters vary linearly with sweep variable s.">LinearSweep</a> thus also the default choice obtained using the generic block name "Sweep". (optional and selectable) </td></tr>
 <tr>
 <td><a class="el" href="classPscf_1_1Rpc_1_1Simulator.html" title="Field theoretic simulator (base class).">Simulator</a>#* </td><td>The selectable <a class="el" href="psfts_param_page.html">Simulator</a> block contains parameters for all of the algorithms that used to perform and analyze a partial saddle-point field theoretic simulation (PS-FTS), but that are not used for SCFT. Users may currently select either a <a class="el" href="rpc_BdSimulator_page.html">BdSimulator</a> block (which creates an instance of a class named <a class="el" href="classPscf_1_1Rpc_1_1BdSimulator.html" title="Brownian dynamics simulator for PS-FTS.">BdSimulator</a> &lt;D&gt;) to perform a Brownian dynamics PS-FTS or a <a class="el" href="rpc_McSimulator_page.html">McSimulator</a> <a class="el" href="classPscf_1_1Rpc_1_1McSimulator.html" title="Monte-Carlo simulation coordinator.">McSimulator</a> block (which creates an instance of a class named <a class="el" href="classPscf_1_1Rpc_1_1McSimulator.html" title="Monte-Carlo simulation coordinator.">McSimulator</a> &lt;D&gt;) to perform a field theoretic Monte-Carlo simulation. (optional and selectable). </td></tr>
 </table>
-<dl class="section see"><dt>See also</dt><dd><ul>
+<h1 class="doxsection"><a class="anchor" id="rpc_System_seealso_sec"></a>
+See also:</h1>
+<ul>
 <li>
 <a class="el" href="user_param_mixture_page.html">Mixture</a>  </li>
 <li>
 <a class="el" href="user_param_example_page.html#user_param_example_interaction">Interaction</a>  </li>
 <li>
-<a class="el" href="rpc_Domain_page.html">Domain</a>  </li>
+<a class="el" href="user_param_domain_pc_page.html">Domain</a>  </li>
 <li>
 <a class="el" href="scft_environment_page.html">Environment</a>  </li>
 <li>
-<a class="el" href="scft_param_pc_page.html#scft_param_pc_iterator_sec">Iterator</a>  <ul>
+<a class="el" href="scft_iterator_page.html">Iterator</a>  <ul>
 <li>
 <a class="el" href="rpc_AmIteratorBasis_page.html">AmIteratorBasis</a> </li>
 </ul>
+<ul>
+<li>
+<a class="el" href="rpc_AmIteratorGrid_page.html">AmIteratorGrid</a> </li>
+</ul>
 </li>
 <li>
-<a class="el" href="scft_param_sweep_page.html">Sweep</a>  <ul>
+<a class="el" href="scft_sweep_page.html">Sweep</a>  <ul>
 <li>
-<a class="el" href="scft_param_sweep_page.html#scft_param_sweep_linear_sec">LinearSweep</a> </li>
+<a class="el" href="scft_sweep_page.html#scft_sweep_linear_sec">LinearSweep</a> </li>
 </ul>
 </li>
 <li>
@@ -125,7 +132,6 @@ Parameter File format</h1>
 </ul>
 </li>
 </ul>
-</dd></dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

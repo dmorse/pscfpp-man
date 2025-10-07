@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -49,7 +49,7 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a href="index.html">PSCF - Polymer Self-Consistent Field</a></li><li class="navelem"><a href="scft_page.html">Self-Consistent Field Theory</a></li><li class="navelem"><a href="scft_param_page.html">Parameter Files</a></li><li class="navelem"><a href="scft_param_1d_page.html">Parameter File - pscf_1d</a></li>  </ul>
+<li class="navelem"><a href="index.html">PSCF - Polymer Self-Consistent Field</a></li><li class="navelem"><a href="scft_page.html">Self-Consistent Field Theory</a></li><li class="navelem"><a href="scft_iterator_page.html">Iteration Algorithms</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -57,15 +57,14 @@ $(function() {
   <div class="headertitle"><div class="title">R1d::NrIterator </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>A <a class="el" href="classPscf_1_1R1d_1_1NrIterator.html" title="Newton-Raphson Iterator for SCF equations.">Pscf::R1d::NrIterator&lt;D&gt;</a> object is an iterator that solves the SCFT equations using the Newton-Raphson method. The only user-defined parameters are the max number of iterations (maxItr) and the error tolerance (epsilon).</p>
+<div class="textblock"><p>A <a class="el" href="classPscf_1_1R1d_1_1NrIterator.html" title="Newton-Raphson Iterator for 1D SCFT.">Pscf::R1d::NrIterator&lt;D&gt;</a> object is an iterator that solves the SCFT equations using the Newton-Raphson method. The only user-defined parameters are the the error tolerance (epsilon) and the max number of iterations (maxItr).</p>
 <p>The cost of the NR algorithm used here increases rapidly with the number of grid points, and becomes inefficient for problems with greater than roughly 1000 grid points. The algorithm converges in very few iterations from a good initial guess, but has a high computational cost per iteration, and is not particularly robust in the face of a poor initial guess.</p>
 <h1 class="doxsection"><a class="anchor" id="r1d_NrIterator_param_sec"></a>
 Parameter File</h1>
-<p>The parameter file format for an <a class="el" href="classPscf_1_1R1d_1_1NrIterator.html" title="Newton-Raphson Iterator for SCF equations.">R1d::NrIterator</a> object is: </p><div class="fragment"><div class="line">NrIterator{</div>
-<div class="line">   epsilon     <a class="code hl_function" href="group__Pscf__Math__Complex__Module.html#gadc3b10b3f2a06e8f2aee5527031c076b">real</a></div>
+<p>The parameter file format for an <a class="el" href="classPscf_1_1R1d_1_1NrIterator.html" title="Newton-Raphson Iterator for 1D SCFT.">R1d::NrIterator</a> object is: </p><div class="fragment"><div class="line">NrIterator{</div>
+<div class="line">   epsilon     real</div>
 <div class="line">   maxItr*     int (100 by <span class="keywordflow">default</span>)</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__Pscf__Math__Complex__Module_html_gadc3b10b3f2a06e8f2aee5527031c076b"><div class="ttname"><a href="group__Pscf__Math__Complex__Module.html#gadc3b10b3f2a06e8f2aee5527031c076b">Pscf::real</a></div><div class="ttdeci">RT real(CT const &amp;a)</div><div class="ttdoc">Return the real part of a complex number.</div></div>
 </div><!-- fragment --><p> Note that maxItr is an optional parameter, which is set to 100 by default. Parameters are described below: </p><table class="doxtable">
 <tr>
 <td>epsilon </td><td>Error tolerance. </td></tr>

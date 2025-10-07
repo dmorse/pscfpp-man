@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: Commands - pscf_pc</title>
+<title>PSCF: Commands - pscf_pc and pscf_pg</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -54,15 +54,15 @@ $(function() {
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">Commands - pscf_pc </div></div>
+  <div class="headertitle"><div class="title">Commands - pscf_pc and pscf_pg </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="el" href="scft_command_1d_page.html">Commands - pscf_1d</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_command_pg_page.html">Commands - pscf_pg</a> (Next) <br  />
+<div class="textblock"><p><a class="el" href="scft_command_1d_page.html">Commands - pscf_1d</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_thermo_page.html">Thermodynamic Properties</a> (Next) <br  />
 </p>
-<p>The pscf_pc program accepts a larger set of commands than the simpler pscf_1d program, though the basic commands are similar. The number of commands is larger in part as a result of the fact that pscf_pc can use several different formats to read and write field files. By convention, the names of commands that read or write a field file in symmetry-adapted basis format end with a suffix _BASIS, while names of commands that read or write files in read-space grid (r-grid) format end with a suffic _RGRID. The pscf_pc program also accept a set of commands that can be used convert between different possible field file formats.</p>
+<p>The pscf_pc and pscf_pg programs accept identical set of commands, which are described on this page. These programs for periodic systems accept a larger set of commands than the simpler pscf_1d program, though many basic commands are similar. The number of available commands is larger, in part, as a result of the fact that pscf_pc and pscf_pg can read and write several different formats for field files. By convention, the names of commands that read or write a field file in symmetry-adapted basis format end with a suffix _BASIS, while names of commands that read or write files in read-space grid (r-grid) format end with a suffic _RGRID. The pscf_pc and pscf_pg programs also accept a set of commands that can be used convert between different possible field file formats.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_command_pc_scft_sec"></a>
 Example: SCFT calculation</h1>
-<p>Below is an example of a simple command file for using pscf_pc to perform a single SCFT calculation. Note that the names of the pscf_pc commands that read or write field files include a string "BASIS", "RGRID" or "KGRID" that specifies which of the three available field formats should be use: </p><div class="fragment"><div class="line">READ_W_BASIS    in/w.bf</div>
+<p>Below is an example of a simple command file for using pscf_pc to perform a single SCFT calculation, using field files and an iterator algorithm that impose a specified space group symmetry that must be declared in the parameter file. </p><div class="fragment"><div class="line">READ_W_BASIS    in/w.bf</div>
 <div class="line">ITERATE</div>
 <div class="line">WRITE_W_BASIS   out/w.bf</div>
 <div class="line">WRITE_C_BASIS   out/c.bf</div>
@@ -70,19 +70,19 @@ Example: SCFT calculation</h1>
 <div class="line">WRITE_PARAM     out/data</div>
 <div class="line">WRITE_THERMO    out/data</div>
 <div class="line">FINISH</div>
-</div><!-- fragment --><p> The command "READ_W_BASIS in/w.bf" reads an initial guess for the chemical potentials fields from the file in/w.bf, which must contain the components of the fields in "basis" format, as coefficients in an expansion in a symmetry-adapted Fourier basis functions. The ITERATE command attempts to iteratively solve the SCFT equations starting from this initial guess. The command "WRITE_W_BASIS out/w.bf" writes the resulting converged set of chemical potential fields to file out/w.bf in symmetry-adapted basis format. The command "WRITE_C_BASIS out/c.bf" writes the corresponding monomer volume fraction fields to the file out/c.bf in the same format, while "WRITE_C_RGRID out/c.rf" writes the volume fraction fields in r-grid format, which can be used for subsequent visualization. The command "WRITE_PARAM out/data" writes a param file for the current system to the file out/data. The command, "WRITE_THERMO out/data", appends the thermodynamic properties of the converged solution to the end of the same file. The FINISH command instructs the main program to finish execution and return.</p>
+</div><!-- fragment --><p> The command "READ_W_BASIS in/w.bf" reads an initial guess for the chemical potentials fields from the file in/w.bf, which must contain the components of the fields in "basis" format, as coefficients in an expansion in a symmetry-adapted Fourier basis. The ITERATE command attempts to iteratively solve the SCFT equations starting from this initial guess, using the iterator algorithm specified in the parameter file. The command "WRITE_W_BASIS out/w.bf" writes the resulting converged set of chemical potential fields to file out/w.bf in symmetry-adapted basis format. The command "WRITE_C_BASIS out/c.bf" writes the corresponding monomer volume fraction fields to the file out/c.bf in the same format, while "WRITE_C_RGRID out/c.rf" writes the volume fraction fields in r-grid format, which can be used for subsequent visualization. The command "WRITE_PARAM out/data" writes a param file for the current system to the file out/data. The command, "WRITE_THERMO out/data", appends the thermodynamic properties of the converged solution to the end of the same file. The FINISH command instructs the main program to finish execution and return.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_command_pc_ex_sweep_sec"></a>
 Example: SCFT sweep</h1>
 <p>Here is an example of a minimal command file to perform an SCFT parameter sweep. </p><div class="fragment"><div class="line">READ_W_BASIS    in/w.bf</div>
 <div class="line">SWEEP</div>
 <div class="line">FINISH</div>
-</div><!-- fragment --><p> The command "READ_W_BASIS in/w.bf" reads an initial guess for the chemical potentials fields at the initial state of the sweep (the state s=0) from the file in/w.bf. The SWEEP command actually executes a sweep operation. The FINISH command halts execution of the main program.</p>
-<p>The parameter file for a program run that performs a parameter sweep must contain an Iterator block and a Sweep block. The Sweep block defines the desired sequence of state points (i.e., choices of parameter values), while the Iterator block determines the behavior of the iteration algorithm used to solve the SCF equations at each state point.</p>
-<p>The minimal command file required for a sweep is somewhat simpler than the corresponding command file for single SCFT calculation because the former does not contain any commands to output data associated with the converged solution. This is possible because the required data output operations are programmed to occur automatically for each state in the sweep.</p>
+</div><!-- fragment --><p> The command "READ_W_BASIS in/w.bf" reads an initial guess for the chemical potentials fields at the initial state of the sweep (the state s=0) from the file in/w.bf. The SWEEP command actually performs a parameter sweep. The FINISH command halts execution of the main program.</p>
+<p>The parameter file used to initialize a parameter sweep must contain an Iterator block and a Sweep block. The Sweep block defines the desired sequence of state points (i.e., choices of parameter values), while the Iterator block determines the behavior of the iteration algorithm used to solve the SCF equations at each state point.</p>
+<p>The minimal command file required for a sweep is somewhat simpler than the corresponding command file for single SCFT calculation because the former does not contain any commands to output data associated with the converged solution. This is possible because the required data output operations are programmed to occur automatically at the end of each step in the sweep.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_command_pc_commands_sec"></a>
 Commands</h1>
-<p>The following table shows a list of available commands for pscf_pc that are relevant to SCFT calculations. A few additional commands that are only relevant to PS-FTS calculations are discussed on a <a class="el" href="psfts_command_page.html">separate page</a>.</p>
-<p>Each clickable command name links to a more detailed discussion of that command or a group of closely related commands.</p>
+<p>The following table shows a list of available commands for pscf_pc or pscf_pg that are relevant to SCFT calculations. A few additional commands that are only relevant to PS-FTS calculations are discussed on a <a class="el" href="psfts_command_page.html">separate page</a> within the manual chapter that discusses such simulations.</p>
+<p>Each clickable command name links to a more detailed discussion of a command or a group of closely related commands.</p>
 <table class="doxtable">
 <tr>
 <td><b>command </b> </td><td><b>parameter(s)</b> </td><td><b>action </b> </td></tr>
@@ -327,7 +327,7 @@ Contents (subpages)</h1>
 <a class="el" href="scft_command_pc_group_page.html">WRITE_GROUP</a>  </li>
 </ol>
 <p><br  />
- <a class="el" href="scft_command_1d_page.html">Commands - pscf_1d</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_command_page.html">Command Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="scft_command_pg_page.html">Commands - pscf_pg</a> (Next) </p>
+ <a class="el" href="scft_command_1d_page.html">Commands - pscf_1d</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_command_page.html">Command Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="scft_thermo_page.html">Thermodynamic Properties</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

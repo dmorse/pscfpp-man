@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -57,11 +57,11 @@ $(function() {
 <p>PSCF is written primarily in C++, supplemented by CUDA to use a NVIDIA graphics processing unit if one is available. The package is only distributed in source code form, and so must be compiled by the user. PSCF is designed for a unix-like environment, and is regularly tested on Linux and Mac OS X operating systems.</p>
 <p>PSCF is free, open source software. It is distributed under the terms of the GNU General Public License as (GPL) published by the Free Software Foundation, either version 3 of the License or (at your option) any later version. See the LICENSE file or the <a href="http://www.gnu.org/licenses/">gnu web page</a> for details. Development of PSCF is currently supported by the National Science Foundation program for Cyberinfrastructure for Sustained Scientific Development (CSSI) under Grant No. 2103627.</p>
 <h2>Manual Organization:</h2>
-<p>This web manual is designed to provide both usage information for users who may never look at the source code and complete developer documentation for those who do.</p>
-<p>Information for users about how to install and use PSCF is provided in chapters 1-5 of the web manual, as outlined below. Additional general information aimed at developers is given in chapter 6, <a class="el" href="developer_page.html">Developer Information</a>.</p>
-<p>Detailed programming interface documentation aimed at developers is accessible via the "Topics", "Namespaces", "Classes", and "Files" tabs that appear at the top of every web manual page. The "Topics" page provides a hierarchical list of classes and functions, organized into C++ namespaces and, within each namespace, into groups of functionally related classes.</p>
+<p>This web manual is designed to provide both thorough usage information for users who may never look at the source code, and complete aplication programming interface (API) documentation for those who do.</p>
+<p>Information for users about how to install and run PSCF is provided in chapters 1-5 of the web manual that is outlined below. Some additional general information aimed at developers is given in chapter 6, <a class="el" href="developer_page.html">Developer Information</a>.</p>
+<p>Detailed API documentation that is extracted from comments in the source code is instead accessible via the "Topics", "Namespaces", "Classes", and "Files" tabs that appear at the top of every web manual page. Clicking on a highlighted name of a function, class or class template anywhere in this web manual also links you to the technical API documentation for that entity. The "Topics" tab provides a hierarchical list of C++ classes and functions, organized by C++ namespace and, within each namespace, into named groups of functionally related classes.</p>
 <p>The web manual for the most recent release of PSCF is available online at  <a href="https://dmorse.github.io/pscfpp-man">https://dmorse.github.io/pscfpp-man</a> .</p>
-<h2>Manual Contents:</h2>
+<h2>Manual outline:</h2>
 <ol type="1">
 <li>
 <a class="el" href="about_page.html">About</a> <ol type="1">
@@ -121,6 +121,10 @@ $(function() {
 <a class="el" href="scft_page.html">Self-Consistent Field Theory</a> <ol type="1">
 <li>
 <a class="el" href="scft_theory_page.html">Self-Consistent Field Theory</a>  </li>
+<li>
+<a class="el" href="scft_iterator_page.html">Iteration Algorithms</a>  </li>
+<li>
+<a class="el" href="scft_sweep_page.html">Parameter Sweeps</a>  </li>
 <li>
 <a class="el" href="scft_param_page.html">Parameter Files</a>  </li>
 <li>

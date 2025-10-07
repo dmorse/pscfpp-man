@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -334,7 +334,7 @@ Functions</h2></td></tr>
 <li>The first accepts only the output array and the necessary input arrays / scalars. In these functions, each input array must be at least as long as the output array, and the element-wise operation will be performed for every element of the output array. All arrays will be indexed starting at element 0.</li>
 <li>The second allows for vector operations to be performed using only subsections (slices) of the input and output arrays. These functions require additional parameters: one index for each array involved in the operation (output and input), representing the element of each array at which to begin the slice, and an integer n, representing the size of the slices. Before calling the CUDA kernel, these functions check to ensure that the slices do not contain any indices that exceed the length of the corresponding arrays.</li>
 </ul>
-<p>Additional functions that perform multiple operations within a single kernel are defined in VecOpMisc, which are not comprehensive and are written as-needed during the development of this software. <a class="el" href="VecOpMisc_8h_source.html">VecOpMisc.h</a> is included at the end of <a class="el" href="VecOp_8h_source.html">VecOp.h</a> so that any code that includes <a class="el" href="VecOp_8h_source.html">VecOp.h</a> will also include <a class="el" href="VecOpMisc_8h_source.html">VecOpMisc.h</a>. </p>
+<p>Additional functions that perform multiple operations within a single kernel are defined in VecOpMisc, which are not comprehensive and are written as-needed during the development of this software. <a class="el" href="VecOpMisc_8h_source.html">VecOpMisc.h</a> is included at the end of VecOp.h so that any code that includes VecOp.h will also include <a class="el" href="VecOpMisc_8h_source.html">VecOpMisc.h</a>. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a04f900bb09570d83a7c46c75c1f266d9" name="a04f900bb09570d83a7c46c75c1f266d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a04f900bb09570d83a7c46c75c1f266d9">&#9670;&#160;</a></span>eqV() <span class="overload">[1/4]</span></h2>
@@ -385,8 +385,6 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="VecOp_8cu_source.html#l01039">1039</a> of file <a class="el" href="VecOp_8cu_source.html">VecOp.cu</a>.</p>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2montecarlo_2RealMove_8tpp_source.html#l00082">Pscf::Rpg::RealMove&lt; D &gt;::attemptMove()</a>, <a class="el" href="rpg_2fts_2analyzer_2FourthOrderParameter_8tpp_source.html#l00079">Pscf::Rpg::FourthOrderParameter&lt; D &gt;::compute()</a>, <a class="el" href="rpg_2fts_2analyzer_2MaxOrderParameter_8tpp_source.html#l00078">Pscf::Rpg::MaxOrderParameter&lt; D &gt;::compute()</a>, <a class="el" href="VecOp_8h_source.html#l00119">eqV()</a>, <a class="el" href="VecOp_8h_source.html#l00098">eqV()</a>, <a class="el" href="rpg_2fts_2montecarlo_2ForceBiasMove_8tpp_source.html#l00100">Pscf::Rpg::ForceBiasMove&lt; D &gt;::move()</a>, <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00627">Pscf::Rpg::Simulator&lt; D &gt;::restoreState()</a>, <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00572">Pscf::Rpg::Simulator&lt; D &gt;::saveState()</a>, <a class="el" href="rpg_2fts_2compressor_2AmCompressor_8tpp_source.html#l00049">Pscf::Rpg::AmCompressor&lt; D &gt;::setup()</a>, <a class="el" href="rpg_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00056">Pscf::Rpg::LrAmCompressor&lt; D &gt;::setup()</a>, <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00123">Pscf::Rpg::Propagator&lt; D &gt;::solve()</a>, <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00174">Pscf::Rpg::Propagator&lt; D &gt;::solve()</a>, <a class="el" href="rpg_2fts_2brownian_2ExplicitBdStep_8tpp_source.html#l00079">Pscf::Rpg::ExplicitBdStep&lt; D &gt;::step()</a>, <a class="el" href="rpg_2fts_2brownian_2LMBdStep_8tpp_source.html#l00143">Pscf::Rpg::LMBdStep&lt; D &gt;::step()</a>, <a class="el" href="rpg_2fts_2brownian_2PredCorrBdStep_8tpp_source.html#l00099">Pscf::Rpg::PredCorrBdStep&lt; D &gt;::step()</a>, and <a class="el" href="rpg_2environment_2FilmFieldGenMask_8tpp_source.html#l00176">Pscf::Rpg::FilmFieldGenMask&lt; D &gt;::stress()</a>.</p>
 
 </div>
 </div>
@@ -485,8 +483,6 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="VecOp_8cu_source.html#l01073">1073</a> of file <a class="el" href="VecOp_8cu_source.html">VecOp.cu</a>.</p>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00498">Pscf::Rpg::Simulator&lt; D &gt;::computeCc()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00610">Pscf::Rpg::Block&lt; D &gt;::computeConcentrationBead()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00574">Pscf::Rpg::Block&lt; D &gt;::computeConcentrationThread()</a>, <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00466">Pscf::Rpg::Simulator&lt; D &gt;::computeWc()</a>, <a class="el" href="VecOp_8h_source.html#l00160">eqS()</a>, <a class="el" href="VecOp_8h_source.html#l00140">eqS()</a>, and <a class="el" href="rpg_2fts_2analyzer_2FourthOrderParameter_8tpp_source.html#l00051">Pscf::Rpg::FourthOrderParameter&lt; D &gt;::setup()</a>.</p>
 
 </div>
 </div>
@@ -597,8 +593,6 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="VecOp_8cu_source.html#l01103">1103</a> of file <a class="el" href="VecOp_8cu_source.html">VecOp.cu</a>.</p>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="VecOpMisc_8cu_source.html#l00465">addVMany()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00495">addVMany()</a>, <a class="el" href="VecOp_8h_source.html#l00215">addVV()</a>, <a class="el" href="VecOp_8h_source.html#l00269">addVV()</a>, <a class="el" href="VecOp_8h_source.html#l00242">addVV()</a>, and <a class="el" href="VecOp_8h_source.html#l00189">addVV()</a>.</p>
 
 </div>
 </div>
@@ -850,8 +844,6 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="VecOp_8h_source.html#l00320">addVS()</a>, <a class="el" href="VecOp_8h_source.html#l00370">addVS()</a>, <a class="el" href="VecOp_8h_source.html#l00345">addVS()</a>, and <a class="el" href="VecOp_8h_source.html#l00295">addVS()</a>.</p>
-
 </div>
 </div>
 <a id="afaeb939495d313f875eaac5ba30e65f8" name="afaeb939495d313f875eaac5ba30e65f8"></a>
@@ -1089,8 +1081,6 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="VecOp_8cu_source.html#l01247">1247</a> of file <a class="el" href="VecOp_8cu_source.html">VecOp.cu</a>.</p>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2perturbation_2EinsteinCrystalPerturbation_8tpp_source.html#l00108">Pscf::Rpg::EinsteinCrystalPerturbation&lt; D &gt;::hamiltonian()</a>, <a class="el" href="rpg_2fts_2perturbation_2EinsteinCrystalPerturbation_8tpp_source.html#l00148">Pscf::Rpg::EinsteinCrystalPerturbation&lt; D &gt;::incrementDc()</a>, <a class="el" href="rpg_2fts_2brownian_2PredCorrBdStep_8tpp_source.html#l00099">Pscf::Rpg::PredCorrBdStep&lt; D &gt;::step()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenMask_8tpp_source.html#l00176">Pscf::Rpg::FilmFieldGenMask&lt; D &gt;::stress()</a>, <a class="el" href="VecOp_8h_source.html#l00426">subVV()</a>, <a class="el" href="VecOp_8h_source.html#l00479">subVV()</a>, <a class="el" href="VecOp_8h_source.html#l00453">subVV()</a>, and <a class="el" href="VecOp_8h_source.html#l00400">subVV()</a>.</p>
 
 </div>
 </div>
@@ -1342,8 +1332,6 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00192">Pscf::Rpg::Simulator&lt; D &gt;::computeHamiltonian()</a>, <a class="el" href="VecOp_8h_source.html#l00530">subVS()</a>, <a class="el" href="VecOp_8h_source.html#l00581">subVS()</a>, <a class="el" href="VecOp_8h_source.html#l00555">subVS()</a>, and <a class="el" href="VecOp_8h_source.html#l00505">subVS()</a>.</p>
-
 </div>
 </div>
 <a id="a4467853070a5d4843cf48b9d634697f7" name="a4467853070a5d4843cf48b9d634697f7"></a>
@@ -1581,8 +1569,6 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="VecOp_8cu_source.html#l01395">1395</a> of file <a class="el" href="VecOp_8cu_source.html">VecOp.cu</a>.</p>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="VecOpMisc_8cu_source.html#l00525">mulVMany()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00555">mulVMany()</a>, <a class="el" href="VecOp_8h_source.html#l00637">mulVV()</a>, <a class="el" href="VecOp_8h_source.html#l00691">mulVV()</a>, <a class="el" href="VecOp_8h_source.html#l00664">mulVV()</a>, and <a class="el" href="VecOp_8h_source.html#l00611">mulVV()</a>.</p>
 
 </div>
 </div>
@@ -1834,8 +1820,6 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="VecOp_8h_source.html#l00742">mulVS()</a>, <a class="el" href="VecOp_8h_source.html#l00794">mulVS()</a>, <a class="el" href="VecOp_8h_source.html#l00768">mulVS()</a>, and <a class="el" href="VecOp_8h_source.html#l00717">mulVS()</a>.</p>
-
 </div>
 </div>
 <a id="aec6310a97161b49b2b34610a9b0ffb01" name="aec6310a97161b49b2b34610a9b0ffb01"></a>
@@ -2074,8 +2058,6 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="VecOp_8h_source.html#l00851">divVV()</a>, and <a class="el" href="VecOp_8h_source.html#l00825">divVV()</a>.</p>
-
 </div>
 </div>
 <a id="a344ab2df0b710a9e360b619ebcb04b88" name="a344ab2df0b710a9e360b619ebcb04b88"></a>
@@ -2198,8 +2180,6 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="VecOp_8h_source.html#l00902">divVS()</a>, and <a class="el" href="VecOp_8h_source.html#l00877">divVS()</a>.</p>
-
 </div>
 </div>
 <a id="af0dd080a9a74722f338b9fce696686e4" name="af0dd080a9a74722f338b9fce696686e4"></a>
@@ -2316,8 +2296,6 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="VecOp_8h_source.html#l00927">divSV()</a>, and <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00433">Pscf::Rpg::Block&lt; D &gt;::setupSolver()</a>.</p>
-
 </div>
 </div>
 <a id="aef3da4b9b03b5e61e691ac5a2b5602a0" name="aef3da4b9b03b5e61e691ac5a2b5602a0"></a>
@@ -2369,8 +2347,6 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="VecOp_8cu_source.html#l01638">1638</a> of file <a class="el" href="VecOp_8cu_source.html">VecOp.cu</a>.</p>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="VecOp_8h_source.html#l00973">expV()</a>, and <a class="el" href="VecOp_8h_source.html#l00952">expV()</a>.</p>
 
 </div>
 </div>
@@ -2475,8 +2451,6 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="VecOp_8cu_source.html#l01672">1672</a> of file <a class="el" href="VecOp_8cu_source.html">VecOp.cu</a>.</p>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="VecOp_8h_source.html#l01020">addEqV()</a>, <a class="el" href="VecOp_8h_source.html#l01042">addEqV()</a>, <a class="el" href="VecOp_8h_source.html#l00999">addEqV()</a>, and <a class="el" href="rpg_2fts_2brownian_2PredCorrBdStep_8tpp_source.html#l00099">Pscf::Rpg::PredCorrBdStep&lt; D &gt;::step()</a>.</p>
 
 </div>
 </div>
@@ -2628,8 +2602,6 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="VecOp_8h_source.html#l01083">addEqS()</a>, <a class="el" href="VecOp_8h_source.html#l01103">addEqS()</a>, and <a class="el" href="VecOp_8h_source.html#l01063">addEqS()</a>.</p>
-
 </div>
 </div>
 <a id="a7b44705e7f88503d0041402ad10c4cb2" name="a7b44705e7f88503d0041402ad10c4cb2"></a>
@@ -2773,8 +2745,6 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="VecOp_8cu_source.html#l01769">1769</a> of file <a class="el" href="VecOp_8cu_source.html">VecOp.cu</a>.</p>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="VecOp_8h_source.html#l01149">subEqV()</a>, <a class="el" href="VecOp_8h_source.html#l01171">subEqV()</a>, and <a class="el" href="VecOp_8h_source.html#l01128">subEqV()</a>.</p>
 
 </div>
 </div>
@@ -2926,8 +2896,6 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="VecOp_8h_source.html#l01212">subEqS()</a>, <a class="el" href="VecOp_8h_source.html#l01232">subEqS()</a>, and <a class="el" href="VecOp_8h_source.html#l01192">subEqS()</a>.</p>
-
 </div>
 </div>
 <a id="af99447b4e9b476595ebeb7e245809f1f" name="af99447b4e9b476595ebeb7e245809f1f"></a>
@@ -3071,8 +3039,6 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="VecOp_8cu_source.html#l01867">1867</a> of file <a class="el" href="VecOp_8cu_source.html">VecOp.cu</a>.</p>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2analyzer_2FourthOrderParameter_8tpp_source.html#l00079">Pscf::Rpg::FourthOrderParameter&lt; D &gt;::compute()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00758">Pscf::Rpg::Block&lt; D &gt;::computeStressBead()</a>, <a class="el" href="VecOp_8h_source.html#l01279">mulEqV()</a>, <a class="el" href="VecOp_8h_source.html#l01301">mulEqV()</a>, <a class="el" href="VecOp_8h_source.html#l01257">mulEqV()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00525">Pscf::Rpg::Block&lt; D &gt;::stepBondBead()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00511">Pscf::Rpg::Block&lt; D &gt;::stepFieldBead()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00551">Pscf::Rpg::Block&lt; D &gt;::stepHalfBondBead()</a>, and <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00460">Pscf::Rpg::Block&lt; D &gt;::stepThread()</a>.</p>
 
 </div>
 </div>
@@ -3224,7 +3190,7 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Solvent_8tpp_source.html#l00037">Pscf::Rpg::Solvent&lt; D &gt;::compute()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00610">Pscf::Rpg::Block&lt; D &gt;::computeConcentrationBead()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00574">Pscf::Rpg::Block&lt; D &gt;::computeConcentrationThread()</a>, <a class="el" href="FFTBatched_8tpp_source.html#l00191">Pscf::Prdc::Cuda::FFTBatched&lt; D &gt;::forwardTransform()</a>, <a class="el" href="rpg_2fts_2perturbation_2EinsteinCrystalPerturbation_8tpp_source.html#l00148">Pscf::Rpg::EinsteinCrystalPerturbation&lt; D &gt;::incrementDc()</a>, <a class="el" href="VecOp_8h_source.html#l01342">mulEqS()</a>, <a class="el" href="VecOp_8h_source.html#l01362">mulEqS()</a>, <a class="el" href="VecOp_8h_source.html#l01322">mulEqS()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00352">Pscf::Rpg::FieldIo&lt; D &gt;::scaleFieldRGrid()</a>, and <a class="el" href="rpg_2fts_2brownian_2PredCorrBdStep_8tpp_source.html#l00099">Pscf::Rpg::PredCorrBdStep&lt; D &gt;::step()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FFTBatched_8tpp_source.html#l00191">Pscf::Prdc::Cuda::FFTBatched&lt; D &gt;::forwardTransform()</a>.</p>
 
 </div>
 </div>
@@ -3370,8 +3336,6 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="VecOp_8h_source.html#l01408">divEqV()</a>, and <a class="el" href="VecOp_8h_source.html#l01387">divEqV()</a>.</p>
-
 </div>
 </div>
 <a id="a6c64dd5a43b88752b355f513ffb9d655" name="a6c64dd5a43b88752b355f513ffb9d655"></a>
@@ -3470,8 +3434,6 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="VecOp_8h_source.html#l01449">divEqS()</a>, and <a class="el" href="VecOp_8h_source.html#l01429">divEqS()</a>.</p>
-
 </div>
 </div>
 <a id="a5812f834c7968967f1b16da68ae16239" name="a5812f834c7968967f1b16da68ae16239"></a>
@@ -3556,9 +3518,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00098">98</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00098">98</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01039">eqV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00023">Pscf::Prdc::Cpu::VecOp::eqV()</a>.</p>
 
 </div>
 </div>
@@ -3598,9 +3560,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00119">119</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00119">119</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01039">eqV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00023">Pscf::Prdc::Cpu::VecOp::eqV()</a>.</p>
 
 </div>
 </div>
@@ -3640,9 +3602,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00140">140</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00140">140</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01073">eqS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00036">Pscf::Prdc::Cpu::VecOp::eqS()</a>.</p>
 
 </div>
 </div>
@@ -3682,9 +3644,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00160">160</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00160">160</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01073">eqS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00036">Pscf::Prdc::Cpu::VecOp::eqS()</a>.</p>
 
 </div>
 </div>
@@ -3730,9 +3692,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00189">189</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00189">189</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01103">addVV()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
+<p class="reference">References <a class="el" href="VecOp_8cpp_source.html#l00050">Pscf::Prdc::Cpu::VecOp::addVV()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
 
 </div>
 </div>
@@ -3778,9 +3740,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00215">215</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00215">215</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01103">addVV()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
+<p class="reference">References <a class="el" href="VecOp_8cpp_source.html#l00050">Pscf::Prdc::Cpu::VecOp::addVV()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
 
 </div>
 </div>
@@ -3826,9 +3788,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00242">242</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00242">242</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01103">addVV()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
+<p class="reference">References <a class="el" href="VecOp_8cpp_source.html#l00050">Pscf::Prdc::Cpu::VecOp::addVV()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
 
 </div>
 </div>
@@ -3874,9 +3836,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00269">269</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00269">269</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01103">addVV()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
+<p class="reference">References <a class="el" href="VecOp_8cpp_source.html#l00050">Pscf::Prdc::Cpu::VecOp::addVV()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
 
 </div>
 </div>
@@ -3922,9 +3884,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00295">295</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00295">295</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01179">addVS()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
+<p class="reference">References <a class="el" href="VecOp_8cpp_source.html#l00065">Pscf::Prdc::Cpu::VecOp::addVS()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
 
 </div>
 </div>
@@ -3970,9 +3932,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00320">320</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00320">320</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01179">addVS()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
+<p class="reference">References <a class="el" href="VecOp_8cpp_source.html#l00065">Pscf::Prdc::Cpu::VecOp::addVS()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
 
 </div>
 </div>
@@ -4018,9 +3980,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00345">345</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00345">345</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01179">addVS()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
+<p class="reference">References <a class="el" href="VecOp_8cpp_source.html#l00065">Pscf::Prdc::Cpu::VecOp::addVS()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
 
 </div>
 </div>
@@ -4066,9 +4028,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00370">370</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00370">370</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01179">addVS()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
+<p class="reference">References <a class="el" href="VecOp_8cpp_source.html#l00065">Pscf::Prdc::Cpu::VecOp::addVS()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
 
 </div>
 </div>
@@ -4114,9 +4076,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00400">400</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00400">400</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01247">subVV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00081">Pscf::Prdc::Cpu::VecOp::subVV()</a>.</p>
 
 </div>
 </div>
@@ -4162,9 +4124,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00426">426</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00426">426</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01247">subVV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00081">Pscf::Prdc::Cpu::VecOp::subVV()</a>.</p>
 
 </div>
 </div>
@@ -4210,9 +4172,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00453">453</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00453">453</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01247">subVV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00081">Pscf::Prdc::Cpu::VecOp::subVV()</a>.</p>
 
 </div>
 </div>
@@ -4258,9 +4220,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00479">479</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00479">479</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01247">subVV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00081">Pscf::Prdc::Cpu::VecOp::subVV()</a>.</p>
 
 </div>
 </div>
@@ -4306,9 +4268,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00505">505</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00505">505</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01323">subVS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00096">Pscf::Prdc::Cpu::VecOp::subVS()</a>.</p>
 
 </div>
 </div>
@@ -4354,9 +4316,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00530">530</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00530">530</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01323">subVS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00096">Pscf::Prdc::Cpu::VecOp::subVS()</a>.</p>
 
 </div>
 </div>
@@ -4402,9 +4364,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00555">555</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00555">555</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01323">subVS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00096">Pscf::Prdc::Cpu::VecOp::subVS()</a>.</p>
 
 </div>
 </div>
@@ -4450,9 +4412,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00581">581</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00581">581</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01323">subVS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00096">Pscf::Prdc::Cpu::VecOp::subVS()</a>.</p>
 
 </div>
 </div>
@@ -4498,9 +4460,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00611">611</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00611">611</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01395">mulVV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00111">Pscf::Prdc::Cpu::VecOp::mulVV()</a>.</p>
 
 </div>
 </div>
@@ -4546,9 +4508,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00637">637</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00637">637</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01395">mulVV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00111">Pscf::Prdc::Cpu::VecOp::mulVV()</a>.</p>
 
 </div>
 </div>
@@ -4594,9 +4556,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00664">664</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00664">664</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01395">mulVV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00111">Pscf::Prdc::Cpu::VecOp::mulVV()</a>.</p>
 
 </div>
 </div>
@@ -4642,9 +4604,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00691">691</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00691">691</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01395">mulVV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00111">Pscf::Prdc::Cpu::VecOp::mulVV()</a>.</p>
 
 </div>
 </div>
@@ -4690,9 +4652,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00717">717</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00717">717</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01471">mulVS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00126">Pscf::Prdc::Cpu::VecOp::mulVS()</a>.</p>
 
 </div>
 </div>
@@ -4738,9 +4700,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00742">742</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00742">742</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01471">mulVS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00126">Pscf::Prdc::Cpu::VecOp::mulVS()</a>.</p>
 
 </div>
 </div>
@@ -4786,9 +4748,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00768">768</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00768">768</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01471">mulVS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00126">Pscf::Prdc::Cpu::VecOp::mulVS()</a>.</p>
 
 </div>
 </div>
@@ -4834,9 +4796,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00794">794</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00794">794</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01471">mulVS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00126">Pscf::Prdc::Cpu::VecOp::mulVS()</a>.</p>
 
 </div>
 </div>
@@ -4882,9 +4844,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00825">825</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00825">825</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01544">divVV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00141">Pscf::Prdc::Cpu::VecOp::divVV()</a>.</p>
 
 </div>
 </div>
@@ -4930,9 +4892,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00851">851</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00851">851</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01544">divVV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00141">Pscf::Prdc::Cpu::VecOp::divVV()</a>.</p>
 
 </div>
 </div>
@@ -4978,9 +4940,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00877">877</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00877">877</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01582">divVS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00156">Pscf::Prdc::Cpu::VecOp::divVS()</a>.</p>
 
 </div>
 </div>
@@ -5026,9 +4988,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00902">902</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00902">902</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01582">divVS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00156">Pscf::Prdc::Cpu::VecOp::divVS()</a>.</p>
 
 </div>
 </div>
@@ -5074,9 +5036,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00927">927</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00927">927</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01619">divSV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00169">Pscf::Prdc::Cpu::VecOp::divSV()</a>.</p>
 
 </div>
 </div>
@@ -5116,9 +5078,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00952">952</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00952">952</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01638">expV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00184">Pscf::Prdc::Cpu::VecOp::expV()</a>.</p>
 
 </div>
 </div>
@@ -5158,9 +5120,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00973">973</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00973">973</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01638">expV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00184">Pscf::Prdc::Cpu::VecOp::expV()</a>.</p>
 
 </div>
 </div>
@@ -5200,9 +5162,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l00999">999</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l00999">999</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01672">addEqV()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
+<p class="reference">References <a class="el" href="VecOp_8cpp_source.html#l00199">Pscf::Prdc::Cpu::VecOp::addEqV()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
 
 </div>
 </div>
@@ -5242,9 +5204,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01020">1020</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01020">1020</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01672">addEqV()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
+<p class="reference">References <a class="el" href="VecOp_8cpp_source.html#l00199">Pscf::Prdc::Cpu::VecOp::addEqV()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
 
 </div>
 </div>
@@ -5284,9 +5246,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01042">1042</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01042">1042</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01672">addEqV()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
+<p class="reference">References <a class="el" href="VecOp_8cpp_source.html#l00199">Pscf::Prdc::Cpu::VecOp::addEqV()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
 
 </div>
 </div>
@@ -5326,9 +5288,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01063">1063</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01063">1063</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01724">addEqS()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
+<p class="reference">References <a class="el" href="VecOp_8cpp_source.html#l00212">Pscf::Prdc::Cpu::VecOp::addEqS()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
 
 </div>
 </div>
@@ -5368,9 +5330,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01083">1083</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01083">1083</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01724">addEqS()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
+<p class="reference">References <a class="el" href="VecOp_8cpp_source.html#l00212">Pscf::Prdc::Cpu::VecOp::addEqS()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
 
 </div>
 </div>
@@ -5410,9 +5372,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01103">1103</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01103">1103</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01724">addEqS()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
+<p class="reference">References <a class="el" href="VecOp_8cpp_source.html#l00212">Pscf::Prdc::Cpu::VecOp::addEqS()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>.</p>
 
 </div>
 </div>
@@ -5452,9 +5414,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01128">1128</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01128">1128</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01769">subEqV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00227">Pscf::Prdc::Cpu::VecOp::subEqV()</a>.</p>
 
 </div>
 </div>
@@ -5494,9 +5456,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01149">1149</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01149">1149</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01769">subEqV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00227">Pscf::Prdc::Cpu::VecOp::subEqV()</a>.</p>
 
 </div>
 </div>
@@ -5536,9 +5498,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01171">1171</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01171">1171</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01769">subEqV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00227">Pscf::Prdc::Cpu::VecOp::subEqV()</a>.</p>
 
 </div>
 </div>
@@ -5578,9 +5540,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01192">1192</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01192">1192</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01822">subEqS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00240">Pscf::Prdc::Cpu::VecOp::subEqS()</a>.</p>
 
 </div>
 </div>
@@ -5620,9 +5582,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01212">1212</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01212">1212</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01822">subEqS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00240">Pscf::Prdc::Cpu::VecOp::subEqS()</a>.</p>
 
 </div>
 </div>
@@ -5662,9 +5624,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01232">1232</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01232">1232</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01822">subEqS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00240">Pscf::Prdc::Cpu::VecOp::subEqS()</a>.</p>
 
 </div>
 </div>
@@ -5704,9 +5666,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01257">1257</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01257">1257</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01867">mulEqV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00254">Pscf::Prdc::Cpu::VecOp::mulEqV()</a>.</p>
 
 </div>
 </div>
@@ -5746,9 +5708,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01279">1279</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01279">1279</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01867">mulEqV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00254">Pscf::Prdc::Cpu::VecOp::mulEqV()</a>.</p>
 
 </div>
 </div>
@@ -5788,9 +5750,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01301">1301</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01301">1301</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01867">mulEqV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00254">Pscf::Prdc::Cpu::VecOp::mulEqV()</a>.</p>
 
 </div>
 </div>
@@ -5830,9 +5792,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01322">1322</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01322">1322</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01918">mulEqS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00267">Pscf::Prdc::Cpu::VecOp::mulEqS()</a>.</p>
 
 </div>
 </div>
@@ -5872,9 +5834,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01342">1342</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01342">1342</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01918">mulEqS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00267">Pscf::Prdc::Cpu::VecOp::mulEqS()</a>.</p>
 
 </div>
 </div>
@@ -5914,9 +5876,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01362">1362</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01362">1362</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01918">mulEqS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00267">Pscf::Prdc::Cpu::VecOp::mulEqS()</a>.</p>
 
 </div>
 </div>
@@ -5956,9 +5918,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01387">1387</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01387">1387</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01964">divEqV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00281">Pscf::Prdc::Cpu::VecOp::divEqV()</a>.</p>
 
 </div>
 </div>
@@ -5998,9 +5960,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01408">1408</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01408">1408</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01964">divEqV()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00281">Pscf::Prdc::Cpu::VecOp::divEqV()</a>.</p>
 
 </div>
 </div>
@@ -6040,9 +6002,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01429">1429</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01429">1429</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01998">divEqS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00294">Pscf::Prdc::Cpu::VecOp::divEqS()</a>.</p>
 
 </div>
 </div>
@@ -6082,9 +6044,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VecOp_8h_source.html#l01449">1449</a> of file <a class="el" href="VecOp_8h_source.html">VecOp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2VecOp_8h_source.html#l01449">1449</a> of file <a class="el" href="cuda_2VecOp_8h_source.html">cuda/VecOp.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cu_source.html#l01998">divEqS()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, and <a class="el" href="VecOp_8cpp_source.html#l00294">Pscf::Prdc::Cpu::VecOp::divEqS()</a>.</p>
 
 </div>
 </div>
@@ -6136,9 +6098,9 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="VecOpMisc_8cu_source.html#l00304">304</a> of file <a class="el" href="VecOpMisc_8cu_source.html">VecOpMisc.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="VecOpMisc_8cu_source.html#l00304">addVcVc()</a>, <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2perturbation_2EinsteinCrystalPerturbation_8tpp_source.html#l00148">Pscf::Rpg::EinsteinCrystalPerturbation&lt; D &gt;::incrementDc()</a>, <a class="el" href="rpg_2fts_2montecarlo_2ForceBiasMove_8tpp_source.html#l00100">Pscf::Rpg::ForceBiasMove&lt; D &gt;::move()</a>, <a class="el" href="rpg_2fts_2analyzer_2BinaryStructureFactorGrid_8tpp_source.html#l00124">Pscf::Rpg::BinaryStructureFactorGrid&lt; D &gt;::sample()</a>, <a class="el" href="rpg_2fts_2brownian_2ExplicitBdStep_8tpp_source.html#l00079">Pscf::Rpg::ExplicitBdStep&lt; D &gt;::step()</a>, and <a class="el" href="rpg_2fts_2brownian_2PredCorrBdStep_8tpp_source.html#l00099">Pscf::Rpg::PredCorrBdStep&lt; D &gt;::step()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="VecOpMisc_8cu_source.html#l00304">addVcVc()</a>, <a class="el" href="rpg_2fts_2perturbation_2EinsteinCrystalPerturbation_8tpp_source.html#l00148">Pscf::Rpg::EinsteinCrystalPerturbation&lt; D &gt;::incrementDc()</a>, <a class="el" href="rpg_2fts_2montecarlo_2ForceBiasMove_8tpp_source.html#l00100">Pscf::Rpg::ForceBiasMove&lt; D &gt;::move()</a>, <a class="el" href="rpg_2fts_2analyzer_2BinaryStructureFactorGrid_8tpp_source.html#l00124">Pscf::Rpg::BinaryStructureFactorGrid&lt; D &gt;::sample()</a>, <a class="el" href="rpg_2fts_2brownian_2ExplicitBdStep_8tpp_source.html#l00079">Pscf::Rpg::ExplicitBdStep&lt; D &gt;::step()</a>, and <a class="el" href="rpg_2fts_2brownian_2PredCorrBdStep_8tpp_source.html#l00099">Pscf::Rpg::PredCorrBdStep&lt; D &gt;::step()</a>.</p>
 
 </div>
 </div>
@@ -6202,9 +6164,9 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="VecOpMisc_8cu_source.html#l00322">322</a> of file <a class="el" href="VecOpMisc_8cu_source.html">VecOpMisc.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="VecOpMisc_8cu_source.html#l00322">addVcVcVc()</a>, <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2brownian_2LMBdStep_8tpp_source.html#l00143">Pscf::Rpg::LMBdStep&lt; D &gt;::step()</a>, and <a class="el" href="rpg_2fts_2brownian_2PredCorrBdStep_8tpp_source.html#l00099">Pscf::Rpg::PredCorrBdStep&lt; D &gt;::step()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="VecOpMisc_8cu_source.html#l00322">addVcVcVc()</a>, <a class="el" href="rpg_2fts_2brownian_2LMBdStep_8tpp_source.html#l00143">Pscf::Rpg::LMBdStep&lt; D &gt;::step()</a>, and <a class="el" href="rpg_2fts_2brownian_2PredCorrBdStep_8tpp_source.html#l00099">Pscf::Rpg::PredCorrBdStep&lt; D &gt;::step()</a>.</p>
 
 </div>
 </div>
@@ -6244,9 +6206,9 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="VecOpMisc_8cu_source.html#l00343">343</a> of file <a class="el" href="VecOpMisc_8cu_source.html">VecOpMisc.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="VecOpMisc_8cu_source.html#l00343">addEqVc()</a>, <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2montecarlo_2RealMove_8tpp_source.html#l00082">Pscf::Rpg::RealMove&lt; D &gt;::attemptMove()</a>, <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00498">Pscf::Rpg::Simulator&lt; D &gt;::computeCc()</a>, <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00466">Pscf::Rpg::Simulator&lt; D &gt;::computeWc()</a>, <a class="el" href="rpg_2fts_2montecarlo_2ForceBiasMove_8tpp_source.html#l00100">Pscf::Rpg::ForceBiasMove&lt; D &gt;::move()</a>, <a class="el" href="rpg_2fts_2brownian_2ExplicitBdStep_8tpp_source.html#l00079">Pscf::Rpg::ExplicitBdStep&lt; D &gt;::step()</a>, <a class="el" href="rpg_2fts_2brownian_2LMBdStep_8tpp_source.html#l00143">Pscf::Rpg::LMBdStep&lt; D &gt;::step()</a>, <a class="el" href="rpg_2fts_2brownian_2PredCorrBdStep_8tpp_source.html#l00099">Pscf::Rpg::PredCorrBdStep&lt; D &gt;::step()</a>, and <a class="el" href="rpg_2environment_2FilmFieldGenMask_8tpp_source.html#l00176">Pscf::Rpg::FilmFieldGenMask&lt; D &gt;::stress()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="VecOpMisc_8cu_source.html#l00343">addEqVc()</a>, <a class="el" href="rpg_2fts_2montecarlo_2RealMove_8tpp_source.html#l00082">Pscf::Rpg::RealMove&lt; D &gt;::attemptMove()</a>, <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00498">Pscf::Rpg::Simulator&lt; D &gt;::computeCc()</a>, <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00466">Pscf::Rpg::Simulator&lt; D &gt;::computeWc()</a>, <a class="el" href="rpg_2fts_2montecarlo_2ForceBiasMove_8tpp_source.html#l00100">Pscf::Rpg::ForceBiasMove&lt; D &gt;::move()</a>, <a class="el" href="rpg_2fts_2brownian_2ExplicitBdStep_8tpp_source.html#l00079">Pscf::Rpg::ExplicitBdStep&lt; D &gt;::step()</a>, <a class="el" href="rpg_2fts_2brownian_2LMBdStep_8tpp_source.html#l00143">Pscf::Rpg::LMBdStep&lt; D &gt;::step()</a>, <a class="el" href="rpg_2fts_2brownian_2PredCorrBdStep_8tpp_source.html#l00099">Pscf::Rpg::PredCorrBdStep&lt; D &gt;::step()</a>, and <a class="el" href="rpg_2environment_2FilmFieldGenMask_8tpp_source.html#l00176">Pscf::Rpg::FilmFieldGenMask&lt; D &gt;::stress()</a>.</p>
 
 </div>
 </div>
@@ -6292,7 +6254,9 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="VecOpMisc_8cu_source.html#l00359">359</a> of file <a class="el" href="VecOpMisc_8cu_source.html">VecOpMisc.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00359">subVVS()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="VecOpMisc_8cu_source.html#l00359">subVVS()</a>.</p>
 
 </div>
 </div>
@@ -6332,7 +6296,9 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="VecOpMisc_8cu_source.html#l00377">377</a> of file <a class="el" href="VecOpMisc_8cu_source.html">VecOpMisc.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00377">divEqVc()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="VecOpMisc_8cu_source.html#l00377">divEqVc()</a>.</p>
 
 </div>
 </div>
@@ -6372,9 +6338,9 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="VecOpMisc_8cu_source.html#l00393">393</a> of file <a class="el" href="VecOpMisc_8cu_source.html">VecOpMisc.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00393">expVc()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Solvent_8tpp_source.html#l00037">Pscf::Rpg::Solvent&lt; D &gt;::compute()</a>, and <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00433">Pscf::Rpg::Block&lt; D &gt;::setupSolver()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Solvent_8tpp_source.html#l00037">Pscf::Rpg::Solvent&lt; D &gt;::compute()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00393">expVc()</a>, and <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00433">Pscf::Rpg::Block&lt; D &gt;::setupSolver()</a>.</p>
 
 </div>
 </div>
@@ -6414,9 +6380,9 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="VecOpMisc_8cu_source.html#l00409">409</a> of file <a class="el" href="VecOpMisc_8cu_source.html">VecOpMisc.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00409">eqVPair()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2brownian_2PredCorrBdStep_8tpp_source.html#l00099">Pscf::Rpg::PredCorrBdStep&lt; D &gt;::step()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="VecOpMisc_8cu_source.html#l00409">eqVPair()</a>, and <a class="el" href="rpg_2fts_2brownian_2PredCorrBdStep_8tpp_source.html#l00099">Pscf::Rpg::PredCorrBdStep&lt; D &gt;::step()</a>.</p>
 
 </div>
 </div>
@@ -6468,9 +6434,9 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="VecOpMisc_8cu_source.html#l00426">426</a> of file <a class="el" href="VecOpMisc_8cu_source.html">VecOpMisc.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00426">mulVVPair()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00460">Pscf::Rpg::Block&lt; D &gt;::stepThread()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="VecOpMisc_8cu_source.html#l00426">mulVVPair()</a>, and <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00460">Pscf::Rpg::Block&lt; D &gt;::stepThread()</a>.</p>
 
 </div>
 </div>
@@ -6510,9 +6476,9 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="VecOpMisc_8cu_source.html#l00448">448</a> of file <a class="el" href="VecOpMisc_8cu_source.html">VecOpMisc.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00448">mulEqVPair()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00460">Pscf::Rpg::Block&lt; D &gt;::stepThread()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="VecOpMisc_8cu_source.html#l00448">mulEqVPair()</a>, and <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00460">Pscf::Rpg::Block&lt; D &gt;::stepThread()</a>.</p>
 
 </div>
 </div>
@@ -6547,7 +6513,9 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="VecOpMisc_8cu_source.html#l00465">465</a> of file <a class="el" href="VecOpMisc_8cu_source.html">VecOpMisc.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01103">addVV()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="Array_8h_source.html#l00214">Util::Array&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="VecOpMisc_8cu_source.html#l00465">addVMany()</a>, <a class="el" href="VecOp_8cpp_source.html#l00050">Pscf::Prdc::Cpu::VecOp::addVV()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="Array_8h_source.html#l00214">Util::Array&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="VecOpMisc_8cu_source.html#l00465">addVMany()</a>, and <a class="el" href="VecOpMisc_8cu_source.html#l00495">addVMany()</a>.</p>
 
 </div>
 </div>
@@ -6583,7 +6551,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="VecOpMisc_8cu_source.html#l00495">495</a> of file <a class="el" href="VecOpMisc_8cu_source.html">VecOpMisc.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="VecOp_8cu_source.html#l01103">addVV()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="Array_8h_source.html#l00214">Util::Array&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="VecOpMisc_8cu_source.html#l00465">addVMany()</a>, <a class="el" href="VecOp_8cpp_source.html#l00050">Pscf::Prdc::Cpu::VecOp::addVV()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="Array_8h_source.html#l00214">Util::Array&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -6618,7 +6586,9 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="VecOpMisc_8cu_source.html#l00525">525</a> of file <a class="el" href="VecOpMisc_8cu_source.html">VecOpMisc.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="Array_8h_source.html#l00214">Util::Array&lt; Data &gt;::cArray()</a>, <a class="el" href="VecOp_8cu_source.html#l01395">mulVV()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="Array_8h_source.html#l00214">Util::Array&lt; Data &gt;::cArray()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00525">mulVMany()</a>, <a class="el" href="VecOp_8cpp_source.html#l00111">Pscf::Prdc::Cpu::VecOp::mulVV()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="VecOpMisc_8cu_source.html#l00525">mulVMany()</a>, and <a class="el" href="VecOpMisc_8cu_source.html#l00555">mulVMany()</a>.</p>
 
 </div>
 </div>
@@ -6654,7 +6624,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="VecOpMisc_8cu_source.html#l00555">555</a> of file <a class="el" href="VecOpMisc_8cu_source.html">VecOpMisc.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="Array_8h_source.html#l00214">Util::Array&lt; Data &gt;::cArray()</a>, <a class="el" href="VecOp_8cu_source.html#l01395">mulVV()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="Array_8h_source.html#l00214">Util::Array&lt; Data &gt;::cArray()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00525">mulVMany()</a>, <a class="el" href="VecOp_8cpp_source.html#l00111">Pscf::Prdc::Cpu::VecOp::mulVV()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -6688,9 +6658,9 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="VecOpMisc_8cu_source.html#l00585">585</a> of file <a class="el" href="VecOpMisc_8cu_source.html">VecOpMisc.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00585">sqNormV()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2analyzer_2MaxOrderParameter_8tpp_source.html#l00078">Pscf::Rpg::MaxOrderParameter&lt; D &gt;::compute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpg_2fts_2analyzer_2MaxOrderParameter_8tpp_source.html#l00078">Pscf::Rpg::MaxOrderParameter&lt; D &gt;::compute()</a>, and <a class="el" href="VecOpMisc_8cu_source.html#l00585">sqNormV()</a>.</p>
 
 </div>
 </div>
@@ -6724,9 +6694,9 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="VecOpMisc_8cu_source.html#l00600">600</a> of file <a class="el" href="VecOpMisc_8cu_source.html">VecOpMisc.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">Pscf::DeviceArray&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">Pscf::DeviceArray&lt; Data &gt;::cArray()</a>, <a class="el" href="ThreadArray_8cu_source.html#l00087">Pscf::ThreadArray::setThreadsLogical()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00600">sqSqNormV()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2analyzer_2FourthOrderParameter_8tpp_source.html#l00079">Pscf::Rpg::FourthOrderParameter&lt; D &gt;::compute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpg_2fts_2analyzer_2FourthOrderParameter_8tpp_source.html#l00079">Pscf::Rpg::FourthOrderParameter&lt; D &gt;::compute()</a>, and <a class="el" href="VecOpMisc_8cu_source.html#l00600">sqSqNormV()</a>.</p>
 
 </div>
 </div>

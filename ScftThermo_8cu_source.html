@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -94,7 +94,7 @@ $(function() {
 <div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1ScftThermo.html#a2f7747e80a78a1133ac68b62c5106b3f">   33</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1ScftThermo.html#a2f7747e80a78a1133ac68b62c5106b3f">ScftThermo&lt;D&gt;::innerProduct</a>(<a class="code hl_typedef" href="classPscf_1_1Rpg_1_1ScftThermo.html#a3d31fe8b7cdad08285fb31699f16dcf3">RFieldT</a> <span class="keyword">const</span> &amp; A, </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                                         <a class="code hl_typedef" href="classPscf_1_1Rpg_1_1ScftThermo.html#a3d31fe8b7cdad08285fb31699f16dcf3">RFieldT</a> <span class="keyword">const</span> &amp; B)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">      </span>{  <span class="keywordflow">return</span> Cuda::Reduce::innerProduct(A, B); };</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">      </span>{  <span class="keywordflow">return</span> <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cuda_1_1Reduce.html#a841eba6e83d8cf4fcbafbcc4569c2038">Cuda::Reduce::innerProduct</a>(A, B); };</div>
 </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      <span class="comment">// Explicit instantiation</span></div>
@@ -112,9 +112,10 @@ $(function() {
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1ScftThermo_html_a59568d4f4c37c342a2f2346a2617cbb7"><div class="ttname"><a href="classPscf_1_1Rpg_1_1ScftThermo.html#a59568d4f4c37c342a2f2346a2617cbb7">Pscf::Rpg::ScftThermo::Base</a></div><div class="ttdeci">ScftThermoTmpl&lt; D, System&lt; D &gt; &gt; Base</div><div class="ttdoc">Alias for base class.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2scft_2ScftThermo_8h_source.html#l00031">rpg/scft/ScftThermo.h:31</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1ScftThermo_html_ad09fce4057f32ffe7213465c3bf1ba7a"><div class="ttname"><a href="classPscf_1_1Rpg_1_1ScftThermo.html#ad09fce4057f32ffe7213465c3bf1ba7a">Pscf::Rpg::ScftThermo::ScftThermo</a></div><div class="ttdeci">ScftThermo(System&lt; D &gt; const &amp;system)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00025">ScftThermo.cu:25</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a></div><div class="ttdoc">Main class, representing a complete physical system.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2system_2System_8h_source.html#l00037">rpg/system/System.h:38</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_1_1Reduce_html_a841eba6e83d8cf4fcbafbcc4569c2038"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda_1_1Reduce.html#a841eba6e83d8cf4fcbafbcc4569c2038">Pscf::Prdc::Cuda::Reduce::innerProduct</a></div><div class="ttdeci">cudaReal innerProduct(DeviceArray&lt; cudaReal &gt; const &amp;a, DeviceArray&lt; cudaReal &gt; const &amp;b)</div><div class="ttdoc">Compute inner product of two real arrays (GPU kernel wrapper).</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cu_source.html#l00891">Reduce.cu:891</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_html"><div class="ttname"><a href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div><div class="ttdoc">Periodic fields and crystallography.</div><div class="ttdef"><b>Definition</b> <a href="CField_8cpp_source.html#l00011">CField.cpp:11</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Rpg_html"><div class="ttname"><a href="namespacePscf_1_1Rpg.html">Pscf::Rpg</a></div><div class="ttdoc">SCFT and PS-FTS with real periodic fields (GPU)</div><div class="ttdef"><b>Definition</b> <a href="rpg_2environment_2environment_8mod_source.html#l00003">rpg/environment/environment.mod:3</a></div></div>
-<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
+<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

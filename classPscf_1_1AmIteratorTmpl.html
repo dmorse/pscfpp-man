@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -80,7 +80,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab33190953cf8dca75fd34f881779dc82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:a7decf2817507d097a7ab80603e599856" id="r_a7decf2817507d097a7ab80603e599856"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7decf2817507d097a7ab80603e599856">~AmIteratorTmpl</a> ()</td></tr>
 <tr class="memdesc:a7decf2817507d097a7ab80603e599856"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:ad9ffb94dd7fcca4eff1eacd4a266b9d4" id="r_ad9ffb94dd7fcca4eff1eacd4a266b9d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9ffb94dd7fcca4eff1eacd4a266b9d4">readParameters</a> (std::istream &amp;in)</td></tr>
+<tr class="memitem:ad9ffb94dd7fcca4eff1eacd4a266b9d4" id="r_ad9ffb94dd7fcca4eff1eacd4a266b9d4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9ffb94dd7fcca4eff1eacd4a266b9d4">readParameters</a> (std::istream &amp;in)</td></tr>
 <tr class="memdesc:ad9ffb94dd7fcca4eff1eacd4a266b9d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read all parameters and initialize.  <br /></td></tr>
 <tr class="memitem:ae73358fa1ae70ca7c4c1e81216a48b3d" id="r_ae73358fa1ae70ca7c4c1e81216a48b3d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae73358fa1ae70ca7c4c1e81216a48b3d">solve</a> (bool isContinuation=false)</td></tr>
 <tr class="memdesc:ae73358fa1ae70ca7c4c1e81216a48b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate to a solution.  <br /></td></tr>
@@ -88,59 +88,55 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4ac22fa359ac9d3cce6c46042acc2796"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classUtil_1_1Log.html" title="A static class that holds a log output stream.">Log</a> output timing results.  <br /></td></tr>
 <tr class="memitem:a66a2a0089b03ae9a3b694dc26e25c665" id="r_a66a2a0089b03ae9a3b694dc26e25c665"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66a2a0089b03ae9a3b694dc26e25c665">clearTimers</a> ()</td></tr>
 <tr class="memdesc:a66a2a0089b03ae9a3b694dc26e25c665"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear timers.  <br /></td></tr>
-<tr class="memitem:a571324a4ecfdff4941b20a9f0129dd2e" id="r_a571324a4ecfdff4941b20a9f0129dd2e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a571324a4ecfdff4941b20a9f0129dd2e">errorType</a> () const</td></tr>
-<tr class="memdesc:a571324a4ecfdff4941b20a9f0129dd2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain error type.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:aa196fc082b2d632873009e81dad40983" id="r_aa196fc082b2d632873009e81dad40983"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa196fc082b2d632873009e81dad40983">setMaxItr</a> (int maxItr)</td></tr>
-<tr class="memdesc:aa196fc082b2d632873009e81dad40983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value of maxItr.  <br /></td></tr>
-<tr class="memitem:a2516c6a0c2beb966ad3ed321bd7807ef" id="r_a2516c6a0c2beb966ad3ed321bd7807ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2516c6a0c2beb966ad3ed321bd7807ef">setMaxHist</a> (int maxHist)</td></tr>
-<tr class="memdesc:a2516c6a0c2beb966ad3ed321bd7807ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value of maxHist (number of retained previous states)  <br /></td></tr>
-<tr class="memitem:a4d483975ac4db7f3e9cd7023debedb44" id="r_a4d483975ac4db7f3e9cd7023debedb44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d483975ac4db7f3e9cd7023debedb44">setErrorType</a> (std::string <a class="el" href="#a571324a4ecfdff4941b20a9f0129dd2e">errorType</a>)</td></tr>
-<tr class="memdesc:a4d483975ac4db7f3e9cd7023debedb44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set and validate value of errorType string.  <br /></td></tr>
 <tr class="memitem:a9205a322c557c51cdc3ebb991ea64e9f" id="r_a9205a322c557c51cdc3ebb991ea64e9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9205a322c557c51cdc3ebb991ea64e9f">readErrorType</a> (std::istream &amp;in)</td></tr>
 <tr class="memdesc:a9205a322c557c51cdc3ebb991ea64e9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and validate the optional errorType string parameter.  <br /></td></tr>
 <tr class="memitem:ac28c346f90b36f7174dc798accb27be9" id="r_ac28c346f90b36f7174dc798accb27be9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac28c346f90b36f7174dc798accb27be9">isValidErrorType</a> ()</td></tr>
 <tr class="memdesc:ac28c346f90b36f7174dc798accb27be9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a string is a valid error type.  <br /></td></tr>
-<tr class="memitem:afce62f5d547473c35e039d16a13b8df3" id="r_afce62f5d547473c35e039d16a13b8df3"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afce62f5d547473c35e039d16a13b8df3">norm</a> (T const &amp;hist)</td></tr>
-<tr class="memdesc:afce62f5d547473c35e039d16a13b8df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the L2 norm of a vector.  <br /></td></tr>
+<tr class="memitem:a2abf62c5ccc4d30acf8afb8c074e50ac" id="r_a2abf62c5ccc4d30acf8afb8c074e50ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2abf62c5ccc4d30acf8afb8c074e50ac">readMixingParameters</a> (std::istream &amp;in, bool useLambdaRamp=true)</td></tr>
+<tr class="memdesc:a2abf62c5ccc4d30acf8afb8c074e50ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read optional parameters used in default correction algorithm.  <br /></td></tr>
 <tr class="memitem:a35b2f9b458a3b56f3ffcf55b6236552e" id="r_a35b2f9b458a3b56f3ffcf55b6236552e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35b2f9b458a3b56f3ffcf55b6236552e">allocateAM</a> ()</td></tr>
 <tr class="memdesc:a35b2f9b458a3b56f3ffcf55b6236552e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory required by AM algorithm, if necessary.  <br /></td></tr>
-<tr class="memitem:a41bec1ca6bbac559d2e7469085f448a7" id="r_a41bec1ca6bbac559d2e7469085f448a7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41bec1ca6bbac559d2e7469085f448a7">clear</a> ()</td></tr>
-<tr class="memdesc:a41bec1ca6bbac559d2e7469085f448a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear information about history.  <br /></td></tr>
+<tr class="memitem:a3987903c9536462dd9659df814f5e62c" id="r_a3987903c9536462dd9659df814f5e62c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3987903c9536462dd9659df814f5e62c">isAllocatedAM</a> () const</td></tr>
+<tr class="memdesc:a3987903c9536462dd9659df814f5e62c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Have data structures required by the AM algorithm been allocated?  <br /></td></tr>
 <tr class="memitem:a0b99a48a0ab289af9769b615a1ae464a" id="r_a0b99a48a0ab289af9769b615a1ae464a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b99a48a0ab289af9769b615a1ae464a">setup</a> (bool isContinuation)</td></tr>
 <tr class="memdesc:a0b99a48a0ab289af9769b615a1ae464a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize just before entry to iterative loop.  <br /></td></tr>
-<tr class="memitem:a3112579f0c4bde562b7b2d5c6f6428e2" id="r_a3112579f0c4bde562b7b2d5c6f6428e2"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3112579f0c4bde562b7b2d5c6f6428e2">computeError</a> (T &amp;residTrial, T &amp;fieldTrial, std::string <a class="el" href="#a571324a4ecfdff4941b20a9f0129dd2e">errorType</a>, int <a class="el" href="#a7cbc162e8785ff54fb1a2922a951ce6c">verbose</a>)</td></tr>
-<tr class="memdesc:a3112579f0c4bde562b7b2d5c6f6428e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute and return error used to test for convergence.  <br /></td></tr>
+<tr class="memitem:a41bec1ca6bbac559d2e7469085f448a7" id="r_a41bec1ca6bbac559d2e7469085f448a7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41bec1ca6bbac559d2e7469085f448a7">clear</a> ()</td></tr>
+<tr class="memdesc:a41bec1ca6bbac559d2e7469085f448a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear information about history.  <br /></td></tr>
+<tr class="memitem:ad04e76fb3e2e03ce87300303e36377d9" id="r_ad04e76fb3e2e03ce87300303e36377d9"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad04e76fb3e2e03ce87300303e36377d9">computeError</a> (T &amp;residTrial, T &amp;stateTrial, std::string <a class="el" href="#a571324a4ecfdff4941b20a9f0129dd2e">errorType</a>, int <a class="el" href="#a7cbc162e8785ff54fb1a2922a951ce6c">verbose</a>)</td></tr>
+<tr class="memdesc:ad04e76fb3e2e03ce87300303e36377d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute and return error used to test for convergence.  <br /></td></tr>
 <tr class="memitem:a2fe889e87b6dae5982eca17e0749b58d" id="r_a2fe889e87b6dae5982eca17e0749b58d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fe889e87b6dae5982eca17e0749b58d">computeError</a> (int <a class="el" href="#a7cbc162e8785ff54fb1a2922a951ce6c">verbose</a>)</td></tr>
 <tr class="memdesc:a2fe889e87b6dae5982eca17e0749b58d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute and return error used to test for convergence.  <br /></td></tr>
-<tr class="memitem:a28abb7b015ec360e51341a3b2c81412a" id="r_a28abb7b015ec360e51341a3b2c81412a"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28abb7b015ec360e51341a3b2c81412a">computeLambda</a> (double r)</td></tr>
-<tr class="memdesc:a28abb7b015ec360e51341a3b2c81412a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute mixing parameter for correction step of Anderson mixing.  <br /></td></tr>
-<tr class="memitem:a317c3e88b6006282b757bd2f9fab06ab" id="r_a317c3e88b6006282b757bd2f9fab06ab"><td class="memItemLeft" align="right" valign="top">T const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a317c3e88b6006282b757bd2f9fab06ab">residual</a> () const</td></tr>
-<tr class="memdesc:a317c3e88b6006282b757bd2f9fab06ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current residual vector by const reference.  <br /></td></tr>
-<tr class="memitem:af65aca8b7d3bbb98e63dfcb30c8866ed" id="r_af65aca8b7d3bbb98e63dfcb30c8866ed"><td class="memItemLeft" align="right" valign="top">T const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af65aca8b7d3bbb98e63dfcb30c8866ed">field</a> () const</td></tr>
-<tr class="memdesc:af65aca8b7d3bbb98e63dfcb30c8866ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current field or state vector by const reference.  <br /></td></tr>
+<tr class="memitem:a00725afb67d0d1697273c5b982e2d2b6" id="r_a00725afb67d0d1697273c5b982e2d2b6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00725afb67d0d1697273c5b982e2d2b6">lambdaRampFactor</a> ()</td></tr>
+<tr class="memdesc:a00725afb67d0d1697273c5b982e2d2b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute ramped prefactor of mixing parameter lambda.  <br /></td></tr>
+<tr class="memitem:ab8b7d6869d79bc4f4addde9731c32e99" id="r_ab8b7d6869d79bc4f4addde9731c32e99"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8b7d6869d79bc4f4addde9731c32e99">computeLambda</a> ()</td></tr>
+<tr class="memdesc:ab8b7d6869d79bc4f4addde9731c32e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute mixing parameter for correction step of Anderson mixing.  <br /></td></tr>
 <tr class="memitem:a7cbc162e8785ff54fb1a2922a951ce6c" id="r_a7cbc162e8785ff54fb1a2922a951ce6c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cbc162e8785ff54fb1a2922a951ce6c">verbose</a> () const</td></tr>
 <tr class="memdesc:a7cbc162e8785ff54fb1a2922a951ce6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verbosity level, allowed values 0, 1, or 2.  <br /></td></tr>
+<tr class="memitem:a571324a4ecfdff4941b20a9f0129dd2e" id="r_a571324a4ecfdff4941b20a9f0129dd2e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a571324a4ecfdff4941b20a9f0129dd2e">errorType</a> () const</td></tr>
+<tr class="memdesc:a571324a4ecfdff4941b20a9f0129dd2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get error type string.  <br /></td></tr>
+<tr class="memitem:a317c3e88b6006282b757bd2f9fab06ab" id="r_a317c3e88b6006282b757bd2f9fab06ab"><td class="memItemLeft" align="right" valign="top">T const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a317c3e88b6006282b757bd2f9fab06ab">residual</a> () const</td></tr>
+<tr class="memdesc:a317c3e88b6006282b757bd2f9fab06ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current residual vector by const reference.  <br /></td></tr>
+<tr class="memitem:ada14e7d0a31071a8571dadec0522fed2" id="r_ada14e7d0a31071a8571dadec0522fed2"><td class="memItemLeft" align="right" valign="top">T const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada14e7d0a31071a8571dadec0522fed2">state</a> () const</td></tr>
+<tr class="memdesc:ada14e7d0a31071a8571dadec0522fed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current state vector by const reference.  <br /></td></tr>
 <tr class="memitem:a683919a1f3a8e161cb86417cbad0e399" id="r_a683919a1f3a8e161cb86417cbad0e399"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a683919a1f3a8e161cb86417cbad0e399">totalItr</a> ()</td></tr>
 <tr class="memdesc:a683919a1f3a8e161cb86417cbad0e399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the total number of iterations needed to converge.  <br /></td></tr>
 <tr class="memitem:a324f73f1f646b9c14cce22efbb0cbbc1" id="r_a324f73f1f646b9c14cce22efbb0cbbc1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a324f73f1f646b9c14cce22efbb0cbbc1">timerTotal</a> ()</td></tr>
 <tr class="memdesc:a324f73f1f646b9c14cce22efbb0cbbc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get total time.  <br /></td></tr>
 <tr class="memitem:a950f0963a85ef9ed59bbc0516b9b9cd4" id="r_a950f0963a85ef9ed59bbc0516b9b9cd4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a950f0963a85ef9ed59bbc0516b9b9cd4">timerMDE</a> ()</td></tr>
-<tr class="memdesc:a950f0963a85ef9ed59bbc0516b9b9cd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time solving modified diffusion equation (MDE).  <br /></td></tr>
+<tr class="memdesc:a950f0963a85ef9ed59bbc0516b9b9cd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time spent solving the modified diffusion equation (MDE).  <br /></td></tr>
 <tr class="memitem:a6a9dc19560ec2f08e0f797dd42da8079" id="r_a6a9dc19560ec2f08e0f797dd42da8079"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a9dc19560ec2f08e0f797dd42da8079">timerAM</a> ()</td></tr>
 <tr class="memdesc:a6a9dc19560ec2f08e0f797dd42da8079"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get total time for AM algorithm, excluding MDE solution.  <br /></td></tr>
 <tr class="memitem:aaf03dc4406daaf5bf6f00c3eed416b4d" id="r_aaf03dc4406daaf5bf6f00c3eed416b4d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf03dc4406daaf5bf6f00c3eed416b4d">timerResid</a> ()</td></tr>
-<tr class="memdesc:aaf03dc4406daaf5bf6f00c3eed416b4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time computing residual.  <br /></td></tr>
+<tr class="memdesc:aaf03dc4406daaf5bf6f00c3eed416b4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time spent computing residual.  <br /></td></tr>
 <tr class="memitem:a0d8e83ed86addc299afd911061c9b9af" id="r_a0d8e83ed86addc299afd911061c9b9af"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d8e83ed86addc299afd911061c9b9af">timerError</a> ()</td></tr>
 <tr class="memdesc:a0d8e83ed86addc299afd911061c9b9af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time evaluating scalar error.  <br /></td></tr>
 <tr class="memitem:a85282947c4bd9b322b6c2c7adc12eef5" id="r_a85282947c4bd9b322b6c2c7adc12eef5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85282947c4bd9b322b6c2c7adc12eef5">timerCoeff</a> ()</td></tr>
-<tr class="memdesc:a85282947c4bd9b322b6c2c7adc12eef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time evaluating Anderson mixing coefficients.  <br /></td></tr>
+<tr class="memdesc:a85282947c4bd9b322b6c2c7adc12eef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time spent evaluating Anderson mixing coefficients.  <br /></td></tr>
 <tr class="memitem:a44600447d7ec6f74179602e010bb0cb6" id="r_a44600447d7ec6f74179602e010bb0cb6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44600447d7ec6f74179602e010bb0cb6">timerOmega</a> ()</td></tr>
-<tr class="memdesc:a44600447d7ec6f74179602e010bb0cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time updating w fields.  <br /></td></tr>
-<tr class="memitem:a3987903c9536462dd9659df814f5e62c" id="r_a3987903c9536462dd9659df814f5e62c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3987903c9536462dd9659df814f5e62c">isAllocatedAM</a> () const</td></tr>
-<tr class="memdesc:a3987903c9536462dd9659df814f5e62c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Have data structures required by the AM algorithm been allocated?  <br /></td></tr>
+<tr class="memdesc:a44600447d7ec6f74179602e010bb0cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time spent updating w states.  <br /></td></tr>
 <tr class="memitem:a21c4ae1412ec944d4189cb7c7b6a3171" id="r_a21c4ae1412ec944d4189cb7c7b6a3171"><td class="memTemplParams" colspan="2">template&lt;typename Type&gt; </td></tr>
 <tr class="memitem:a21c4ae1412ec944d4189cb7c7b6a3171 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1ScalarParam.html">ScalarParam</a>&lt; Type &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21c4ae1412ec944d4189cb7c7b6a3171">read</a> (std::istream &amp;in, const char *label, Type &amp;value)</td></tr>
 <tr class="memdesc:a21c4ae1412ec944d4189cb7c7b6a3171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add and read a new required <a class="el" href="classUtil_1_1ScalarParam.html" title="Template for a Parameter object associated with a scalar variable.">ScalarParam</a> &lt; Type &gt; object.  <br /></td></tr>
@@ -150,17 +146,26 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:aaf632064eb7c9a76198f12c35f361b24" id="r_aaf632064eb7c9a76198f12c35f361b24"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf632064eb7c9a76198f12c35f361b24">epsilon_</a></td></tr>
+<tr class="memdesc:aaf632064eb7c9a76198f12c35f361b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error tolerance.  <br /></td></tr>
+<tr class="memitem:acb3495d28db3833c87cf4e2f52f0b350" id="r_acb3495d28db3833c87cf4e2f52f0b350"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb3495d28db3833c87cf4e2f52f0b350">maxItr_</a></td></tr>
+<tr class="memdesc:acb3495d28db3833c87cf4e2f52f0b350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of iterations to attempt.  <br /></td></tr>
+<tr class="memitem:ae34487094628f8d6e14403771a3577eb" id="r_ae34487094628f8d6e14403771a3577eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae34487094628f8d6e14403771a3577eb">maxHist_</a></td></tr>
+<tr class="memdesc:ae34487094628f8d6e14403771a3577eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of basis vectors in AM algorithm.  <br /></td></tr>
+<tr class="memitem:a95e51b065b6828b9a55f1443cd252a10" id="r_a95e51b065b6828b9a55f1443cd252a10"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95e51b065b6828b9a55f1443cd252a10">verbose_</a></td></tr>
+<tr class="memdesc:a95e51b065b6828b9a55f1443cd252a10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verbosity level.  <br /></td></tr>
 <tr class="memitem:ad0ab7a80b720e7d5138d3dec43e6cb6d" id="r_ad0ab7a80b720e7d5138d3dec43e6cb6d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0ab7a80b720e7d5138d3dec43e6cb6d">errorType_</a></td></tr>
 <tr class="memdesc:ad0ab7a80b720e7d5138d3dec43e6cb6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of error criterion used to test convergence.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename Iterator, typename T&gt;<br />
 class Pscf::AmIteratorTmpl&lt; Iterator, T &gt;</div><p>Template for Anderson mixing iterator algorithm. </p>
-<p>Anderson mixing is an algorithm for solving a system of N nonlinear equations of the form r_{i}(x) = 0 for i = 0, ..., N-1, where x denotes a vector or array of unknown coordinate values. A vector of array of unknowns is referred here the "field" vector, while a vector or array of values of the errors r_{0},..., r_{N-1} is referred to as the residual vector.</p>
-<p>The template parameter Iterator is a base class that must be derived from <a class="el" href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file.">Util::ParamComposite</a>, and must declare a virtual <a class="el" href="#ae73358fa1ae70ca7c4c1e81216a48b3d" title="Iterate to a solution.">solve(bool)</a> function with the same interface as that declared here.</p>
-<p>The template type parameter T is the type of the data structure used to store both field and residual vectors. </p>
+<p>Anderson mixing is an algorithm for solving a system of N nonlinear equations of the form R{i}(X) = 0 for i = 0, ..., N-1, where X denotes a vector or array of N unknown coordinate values. A vector of array of unknowns is referred here as the state vector, while a vector or array of values of the errors R{0} ,..., R{N-1} is referred to as the residual vector.</p>
+<p>The template type parameter Iterator is a base class that must be derived from <a class="el" href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file.">Util::ParamComposite</a>. In applications to SCFT iterators, the Iterator class may declare a virtual solve function that is overridden by the <a class="el" href="#ae73358fa1ae70ca7c4c1e81216a48b3d" title="Iterate to a solution.">solve()</a> function defined by this template.</p>
+<p>The template type parameter T is the type of data structure that is used to represent state and residual vectors.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="pscf_AmIteratorTmpl_page.html">Anderson Mixing Solver Algorithms</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00044">44</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00047">47</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab33190953cf8dca75fd34f881779dc82" name="ab33190953cf8dca75fd34f881779dc82"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab33190953cf8dca75fd34f881779dc82">&#9670;&#160;</a></span>AmIteratorTmpl()</h2>
@@ -181,9 +186,9 @@ template&lt;typename Iterator, typename T&gt; </div>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00031">31</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00032">32</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="AmIteratorTmpl_8h_source.html#l00091">errorType_</a>.</p>
+<p class="reference">References <a class="el" href="AmIteratorTmpl_8h_source.html#l00093">epsilon_</a>, <a class="el" href="AmIteratorTmpl_8h_source.html#l00113">errorType_</a>, <a class="el" href="AmIteratorTmpl_8h_source.html#l00103">maxHist_</a>, <a class="el" href="AmIteratorTmpl_8h_source.html#l00098">maxItr_</a>, <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>, and <a class="el" href="AmIteratorTmpl_8h_source.html#l00108">verbose_</a>.</p>
 
 </div>
 </div>
@@ -206,7 +211,7 @@ template&lt;typename Iterator, typename T&gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00049">49</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00053">53</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
 
 </div>
 </div>
@@ -218,6 +223,9 @@ template&lt;typename Iterator, typename T&gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename Iterator, typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::readParameters </td>
@@ -226,6 +234,11 @@ template&lt;typename Iterator, typename T&gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Read all parameters and initialize. </p>
@@ -236,9 +249,11 @@ template&lt;typename Iterator, typename T&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00056">56</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
+<p>Reimplemented in <a class="el" href="classPscf_1_1R1d_1_1AmIterator.html#a02f94d9e4e7888f96ba519749bd2788c">Pscf::R1d::AmIterator</a>, <a class="el" href="classPscf_1_1Rpc_1_1AmCompressor.html#a8b223a4c51178571d45af6deeb4dd3ec">Pscf::Rpc::AmCompressor&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpc_1_1AmIteratorBasis.html#a3d4ce36e0153652d7e9ded905370ba72">Pscf::Rpc::AmIteratorBasis&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpc_1_1AmIteratorGrid.html#a3a86d7cec2edfcbf1ee34dee92e065cc">Pscf::Rpc::AmIteratorGrid&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpc_1_1LrAmCompressor.html#a190c986077b1c5e3e3ebc3653b014caa">Pscf::Rpc::LrAmCompressor&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpg_1_1AmCompressor.html#abc4399a60f7da93b56069a05af99aef8">Pscf::Rpg::AmCompressor&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpg_1_1AmIteratorBasis.html#a5fd0a1212100f4834b3c453c5661d241">Pscf::Rpg::AmIteratorBasis&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpg_1_1AmIteratorGrid.html#a17260b6ab392ef2ee0301a2ef3cc2102">Pscf::Rpg::AmIteratorGrid&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1LrAmCompressor.html#a69fe8b03385903abadfba88c041df22b">Pscf::Rpg::LrAmCompressor&lt; D &gt;</a>.</p>
 
-<p class="reference">References <a class="el" href="ParamComposite_8h_source.html#l01248">read()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00060">60</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="AmIteratorTmpl_8h_source.html#l00093">epsilon_</a>, and <a class="el" href="ParamComposite_8h_source.html#l01248">read()</a>.</p>
 
 </div>
 </div>
@@ -268,9 +283,9 @@ template&lt;typename Iterator, typename T&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 for convergence, 1 for failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00091">91</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00098">98</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00505">setup()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="AmIteratorTmpl_8h_source.html#l00098">maxItr_</a>, <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00394">setup()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -292,8 +307,14 @@ template&lt;typename Iterator, typename T&gt; </div>
 </div><div class="memdoc">
 
 <p><a class="el" href="classUtil_1_1Log.html" title="A static class that holds a log output stream.">Log</a> output timing results. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>output stream </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00637">637</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00235">235</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
 
 </div>
 </div>
@@ -316,150 +337,7 @@ template&lt;typename Iterator, typename T&gt; </div>
 
 <p>Clear timers. </p>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00681">681</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
-
-</div>
-</div>
-<a id="a571324a4ecfdff4941b20a9f0129dd2e" name="a571324a4ecfdff4941b20a9f0129dd2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a571324a4ecfdff4941b20a9f0129dd2e">&#9670;&#160;</a></span>errorType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Iterator, typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::errorType </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Obtain error type. </p>
-
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00538">538</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
-
-<p class="reference">References <a class="el" href="AmIteratorTmpl_8h_source.html#l00091">errorType_</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00583">computeError()</a>, and <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00243">setErrorType()</a>.</p>
-
-</div>
-</div>
-<a id="aa196fc082b2d632873009e81dad40983" name="aa196fc082b2d632873009e81dad40983"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa196fc082b2d632873009e81dad40983">&#9670;&#160;</a></span>setMaxItr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Iterator, typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::setMaxItr </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>maxItr</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set value of maxItr. </p>
-<p>Provided to allow subclasses to set a modified default value before calling readParameters, in which maxItr is optional. Global default, set in constructor, is maxItr = 200.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">maxItr</td><td>maximum number of iterations attempted </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00229">229</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
-
-</div>
-</div>
-<a id="a2516c6a0c2beb966ad3ed321bd7807ef" name="a2516c6a0c2beb966ad3ed321bd7807ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2516c6a0c2beb966ad3ed321bd7807ef">&#9670;&#160;</a></span>setMaxHist()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Iterator, typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::setMaxHist </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>maxHist</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set value of maxHist (number of retained previous states) </p>
-<p>Provided to allow subclasses to set a modified default value before calling readParameters, in which maxItr is optional. Global default, set in constructor, is maxHist = 50.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">maxHist</td><td>maximum number of retained previous states </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00236">236</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
-
-</div>
-</div>
-<a id="a4d483975ac4db7f3e9cd7023debedb44" name="a4d483975ac4db7f3e9cd7023debedb44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d483975ac4db7f3e9cd7023debedb44">&#9670;&#160;</a></span>setErrorType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Iterator, typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::setErrorType </td>
-          <td>(</td>
-          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>errorType</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set and validate value of errorType string. </p>
-<p>Provided to allow subclasses to set a modified default value before calling readParameters, in which errorType is optional. Global default, set in constructor, is relNormResid = 50.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">errorType</td><td>error type string </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00243">243</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AmIteratorTmpl_8h_source.html#l00538">errorType()</a>, <a class="el" href="AmIteratorTmpl_8h_source.html#l00091">errorType_</a>, <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00287">isValidErrorType()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00279">279</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
 
 </div>
 </div>
@@ -496,9 +374,9 @@ template&lt;typename Iterator, typename T&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00263">263</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00297">297</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="AmIteratorTmpl_8h_source.html#l00091">errorType_</a>, <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00287">isValidErrorType()</a>, <a class="el" href="ParamComposite_8h_source.html#l01256">readOptional()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="AmIteratorTmpl_8h_source.html#l00113">errorType_</a>, <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00320">isValidErrorType()</a>, <a class="el" href="ParamComposite_8h_source.html#l01256">readOptional()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
 </div>
 </div>
@@ -531,16 +409,16 @@ template&lt;typename Iterator, typename T&gt; </div>
 <p>Virtual to allow extension of allowed error type string values.</p>
 <dl class="section return"><dt>Returns</dt><dd>true if type is valid, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00287">287</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00320">320</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="AmIteratorTmpl_8h_source.html#l00091">errorType_</a>.</p>
+<p class="reference">References <a class="el" href="AmIteratorTmpl_8h_source.html#l00113">errorType_</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00263">readErrorType()</a>, and <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00243">setErrorType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00297">readErrorType()</a>.</p>
 
 </div>
 </div>
-<a id="afce62f5d547473c35e039d16a13b8df3" name="afce62f5d547473c35e039d16a13b8df3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afce62f5d547473c35e039d16a13b8df3">&#9670;&#160;</a></span>norm()</h2>
+<a id="a2abf62c5ccc4d30acf8afb8c074e50ac" name="a2abf62c5ccc4d30acf8afb8c074e50ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2abf62c5ccc4d30acf8afb8c074e50ac">&#9670;&#160;</a></span>readMixingParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -551,31 +429,36 @@ template&lt;typename Iterator, typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::norm </td>
+          <td class="memname">void <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::readMixingParameters </td>
           <td>(</td>
-          <td class="paramtype">T const &amp;</td>          <td class="paramname"><span class="paramname"><em>hist</em></span></td><td>)</td>
+          <td class="paramtype">std::istream &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>useLambdaRamp</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Find the L2 norm of a vector. </p>
-<p>The default implementation calls dotProduct internally. Virtual to allow more optimized versions.</p>
+<p>Read optional parameters used in default correction algorithm. </p>
+<p>Sets a default value for useLambdaRamp, and then optionally reads lambda, useLambdaRamp, and (if useLambdaRamp == true) the ratio r used in the ramp.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hist</td><td>residual vector </td></tr>
+    <tr><td class="paramname">in</td><td>input filestream </td></tr>
+    <tr><td class="paramname">useLambdaRamp</td><td>default value for useLambdaRamp </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00541">541</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00343">343</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00583">computeError()</a>.</p>
+<p class="reference">References <a class="el" href="ParamComposite_8h_source.html#l01256">readOptional()</a>.</p>
 
 </div>
 </div>
@@ -607,9 +490,88 @@ template&lt;typename Iterator, typename T&gt; </div>
 <p>Allocate memory required by AM algorithm, if necessary. </p>
 <p>If the required memory has been allocated previously, this function does nothing and returns. </p>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00310">310</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00362">362</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00505">setup()</a>.</p>
+<p class="reference">References <a class="el" href="AmIteratorTmpl_8h_source.html#l00103">maxHist_</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00394">setup()</a>.</p>
+
+</div>
+</div>
+<a id="a3987903c9536462dd9659df814f5e62c" name="a3987903c9536462dd9659df814f5e62c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3987903c9536462dd9659df814f5e62c">&#9670;&#160;</a></span>isAllocatedAM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator, typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::isAllocatedAM </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Have data structures required by the AM algorithm been allocated? </p>
+
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00596">596</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00394">setup()</a>.</p>
+
+</div>
+</div>
+<a id="a0b99a48a0ab289af9769b615a1ae464a" name="a0b99a48a0ab289af9769b615a1ae464a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b99a48a0ab289af9769b615a1ae464a">&#9670;&#160;</a></span>setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator, typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::setup </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isContinuation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize just before entry to iterative loop. </p>
+<p>This function is called by the solve function before entering the loop over iterations. The default implementation calls <a class="el" href="#a35b2f9b458a3b56f3ffcf55b6236552e" title="Allocate memory required by AM algorithm, if necessary.">allocateAM()</a> if <a class="el" href="#a3987903c9536462dd9659df814f5e62c" title="Have data structures required by the AM algorithm been allocated?">isAllocatedAM()</a> is false, and clears state and residual histories. If isContinuation is false, it also clears state and residual basis vector lists.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isContinuation</td><td>true iff continuation within a sweep </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classPscf_1_1R1d_1_1AmIterator.html#ad15223a7660b12ec54e8114a99f85007">Pscf::R1d::AmIterator</a>, <a class="el" href="classPscf_1_1Rpc_1_1AmCompressor.html#a6d15a341420a75f0e43756c7524c0b47">Pscf::Rpc::AmCompressor&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpc_1_1AmIteratorBasis.html#abfbb0dae1a777da9d4c10dcceafe99a7">Pscf::Rpc::AmIteratorBasis&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpc_1_1AmIteratorGrid.html#a83f9429fef97d2024e0badfd1aa11a0f">Pscf::Rpc::AmIteratorGrid&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpc_1_1LrAmCompressor.html#ad20190c7d0090f84ba028a04741bdd2f">Pscf::Rpc::LrAmCompressor&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpg_1_1AmCompressor.html#a7542f8f129fb8430afe1f98d528793f5">Pscf::Rpg::AmCompressor&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpg_1_1AmIteratorBasis.html#a61e273de9a9c88b2444a7c7eb877fe5d">Pscf::Rpg::AmIteratorBasis&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpg_1_1AmIteratorGrid.html#a299999abcda1e078c5a8a40642368886">Pscf::Rpg::AmIteratorGrid&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1LrAmCompressor.html#adb6433af3b8240535bf33857e7dad421">Pscf::Rpg::LrAmCompressor&lt; D &gt;</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00394">394</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00362">allocateAM()</a>, and <a class="el" href="AmIteratorTmpl_8h_source.html#l00596">isAllocatedAM()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00098">solve()</a>.</p>
 
 </div>
 </div>
@@ -641,58 +603,14 @@ template&lt;typename Iterator, typename T&gt; </div>
 <p>Clear information about history. </p>
 <p>This function clears the the history and basis vector ring buffer containers. </p>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00341">341</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00414">414</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Log_8cpp_source.html#l00059">Util::Log::file()</a>.</p>
-
-</div>
-</div>
-<a id="a0b99a48a0ab289af9769b615a1ae464a" name="a0b99a48a0ab289af9769b615a1ae464a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b99a48a0ab289af9769b615a1ae464a">&#9670;&#160;</a></span>setup()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Iterator, typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::setup </td>
-          <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isContinuation</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Initialize just before entry to iterative loop. </p>
-<p>This function is called by the solve function before entering the loop over iterations. The default functions calls <a class="el" href="#a35b2f9b458a3b56f3ffcf55b6236552e" title="Allocate memory required by AM algorithm, if necessary.">allocateAM()</a> if <a class="el" href="#a3987903c9536462dd9659df814f5e62c" title="Have data structures required by the AM algorithm been allocated?">isAllocatedAM()</a> is false, and otherwise calls <a class="el" href="#a41bec1ca6bbac559d2e7469085f448a7" title="Clear information about history.">clear()</a> if isContinuation is false.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">isContinuation</td><td>true iff continuation within a sweep </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented in <a class="el" href="classPscf_1_1R1d_1_1AmIterator.html#a291029870b7a424d6d9e8f13327d45c7">Pscf::R1d::AmIterator</a>, <a class="el" href="classPscf_1_1Rpc_1_1AmCompressor.html#a17cc0be66b4e7079265cd59b522e6636">Pscf::Rpc::AmCompressor&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpc_1_1AmIteratorBasis.html#a15063a6af05b1124c814d1e9bfcef0bd">Pscf::Rpc::AmIteratorBasis&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpc_1_1LrAmCompressor.html#aa08c8b8950de52c5c5ae18d0c939362c">Pscf::Rpc::LrAmCompressor&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpg_1_1AmCompressor.html#a7542f8f129fb8430afe1f98d528793f5">Pscf::Rpg::AmCompressor&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpg_1_1AmIteratorBasis.html#a61e273de9a9c88b2444a7c7eb877fe5d">Pscf::Rpg::AmIteratorBasis&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpg_1_1AmIteratorGrid.html#a9da5c3ce85ab1c2a709cc9aa138182e4">Pscf::Rpg::AmIteratorGrid&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1LrAmCompressor.html#adb6433af3b8240535bf33857e7dad421">Pscf::Rpg::LrAmCompressor&lt; D &gt;</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00505">505</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00310">allocateAM()</a>, and <a class="el" href="AmIteratorTmpl_8h_source.html#l00531">isAllocatedAM()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00091">solve()</a>.</p>
+<p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
-<a id="a3112579f0c4bde562b7b2d5c6f6428e2" name="a3112579f0c4bde562b7b2d5c6f6428e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3112579f0c4bde562b7b2d5c6f6428e2">&#9670;&#160;</a></span>computeError() <span class="overload">[1/2]</span></h2>
+<a id="ad04e76fb3e2e03ce87300303e36377d9" name="ad04e76fb3e2e03ce87300303e36377d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad04e76fb3e2e03ce87300303e36377d9">&#9670;&#160;</a></span>computeError() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -710,7 +628,7 @@ template&lt;typename Iterator, typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>fieldTrial</em></span>, </td>
+          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>stateTrial</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -734,8 +652,7 @@ template&lt;typename Iterator, typename T&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">residTrial</td><td>current residual vector </td></tr>
-    <tr><td class="paramname">fieldTrial</td><td>current field vector <br  />
- </td></tr>
+    <tr><td class="paramname">stateTrial</td><td>current state vector </td></tr>
     <tr><td class="paramname">errorType</td><td>type of error </td></tr>
     <tr><td class="paramname">verbose</td><td>verbosity level of output report. </td></tr>
   </table>
@@ -743,11 +660,11 @@ template&lt;typename Iterator, typename T&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>error measure used to test for convergence. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00583">583</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00637">637</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="AmIteratorTmpl_8h_source.html#l00538">errorType()</a>, <a class="el" href="Log_8cpp_source.html#l00059">Util::Log::file()</a>, <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00541">norm()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>, and <a class="el" href="AmIteratorTmpl_8h_source.html#l00524">verbose()</a>.</p>
+<p class="reference">References <a class="el" href="AmIteratorTmpl_8h_source.html#l00575">errorType()</a>, <a class="el" href="Log_8cpp_source.html#l00059">Util::Log::file()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>, and <a class="el" href="AmIteratorTmpl_8h_source.html#l00568">verbose()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00631">computeError()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00689">computeError()</a>.</p>
 
 </div>
 </div>
@@ -783,16 +700,46 @@ template&lt;typename Iterator, typename T&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>error measure used to test for convergence. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>error error value used to test for convergence. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00631">631</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00689">689</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00583">computeError()</a>, <a class="el" href="AmIteratorTmpl_8h_source.html#l00091">errorType_</a>, and <a class="el" href="AmIteratorTmpl_8h_source.html#l00524">verbose()</a>.</p>
+<p class="reference">References <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00637">computeError()</a>, <a class="el" href="AmIteratorTmpl_8h_source.html#l00113">errorType_</a>, and <a class="el" href="AmIteratorTmpl_8h_source.html#l00568">verbose()</a>.</p>
 
 </div>
 </div>
-<a id="a28abb7b015ec360e51341a3b2c81412a" name="a28abb7b015ec360e51341a3b2c81412a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28abb7b015ec360e51341a3b2c81412a">&#9670;&#160;</a></span>computeLambda()</h2>
+<a id="a00725afb67d0d1697273c5b982e2d2b6" name="a00725afb67d0d1697273c5b982e2d2b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00725afb67d0d1697273c5b982e2d2b6">&#9670;&#160;</a></span>lambdaRampFactor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator, typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::lambdaRampFactor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute ramped prefactor of mixing parameter lambda. </p>
+<dl class="section return"><dt>Returns</dt><dd>prefactor 1 - r^{nBasis} multiplying lambda. </dd></dl>
+
+</div>
+</div>
+<a id="ab8b7d6869d79bc4f4addde9731c32e99" name="ab8b7d6869d79bc4f4addde9731c32e99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8b7d6869d79bc4f4addde9731c32e99">&#9670;&#160;</a></span>computeLambda()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -805,7 +752,7 @@ template&lt;typename Iterator, typename T&gt; </div>
         <tr>
           <td class="memname">double <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::computeLambda </td>
           <td>(</td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>r</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -817,81 +764,12 @@ template&lt;typename Iterator, typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Compute mixing parameter for correction step of Anderson mixing. </p>
-<p>Compute mixing parameter for mixing step of an Anderson mixing algorithm.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">r</td><td>ramping parameter: lambda = 1 - r^Nh for Nh &lt; maxHist. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>lambda mixing parameter.</dd></dl>
-<p>(virtual) </p>
+<p>If useLambdaRamp_ == true and nBasis_ &lt; maxHist_, then return the ramped parameter lambda_ * ( 1 - r_^(nBasis) ). Otherwise, return the parameter lambda_.</p>
+<dl class="section return"><dt>Returns</dt><dd>lambda mixing parameter </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classPscf_1_1Rpc_1_1AmCompressor.html#a33ffb3935f34e7336e6269630e64e0fd">Pscf::Rpc::AmCompressor&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1AmCompressor.html#a811dbf1af8de55aa7970b4e4933254e4">Pscf::Rpg::AmCompressor&lt; D &gt;</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00573">573</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00526">526</a> of file <a class="el" href="AmIteratorTmpl_8tpp_source.html">AmIteratorTmpl.tpp</a>.</p>
-
-</div>
-</div>
-<a id="a317c3e88b6006282b757bd2f9fab06ab" name="a317c3e88b6006282b757bd2f9fab06ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a317c3e88b6006282b757bd2f9fab06ab">&#9670;&#160;</a></span>residual()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Iterator, typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T const  &amp; <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::residual </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return the current residual vector by const reference. </p>
-
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00510">510</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
-
-</div>
-</div>
-<a id="af65aca8b7d3bbb98e63dfcb30c8866ed" name="af65aca8b7d3bbb98e63dfcb30c8866ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af65aca8b7d3bbb98e63dfcb30c8866ed">&#9670;&#160;</a></span>field()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Iterator, typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T const  &amp; <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::field </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return the current field or state vector by const reference. </p>
-
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00517">517</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+<p class="reference">References <a class="el" href="AmIteratorTmpl_8h_source.html#l00103">maxHist_</a>.</p>
 
 </div>
 </div>
@@ -922,9 +800,108 @@ template&lt;typename Iterator, typename T&gt; </div>
 
 <p>Verbosity level, allowed values 0, 1, or 2. </p>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00524">524</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00568">568</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00631">computeError()</a>, and <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00583">computeError()</a>.</p>
+<p class="reference">References <a class="el" href="AmIteratorTmpl_8h_source.html#l00108">verbose_</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00689">computeError()</a>, and <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00637">computeError()</a>.</p>
+
+</div>
+</div>
+<a id="a571324a4ecfdff4941b20a9f0129dd2e" name="a571324a4ecfdff4941b20a9f0129dd2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a571324a4ecfdff4941b20a9f0129dd2e">&#9670;&#160;</a></span>errorType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator, typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::errorType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get error type string. </p>
+
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00575">575</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+
+<p class="reference">References <a class="el" href="AmIteratorTmpl_8h_source.html#l00113">errorType_</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00637">computeError()</a>.</p>
+
+</div>
+</div>
+<a id="a317c3e88b6006282b757bd2f9fab06ab" name="a317c3e88b6006282b757bd2f9fab06ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a317c3e88b6006282b757bd2f9fab06ab">&#9670;&#160;</a></span>residual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator, typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T const  &amp; <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::residual </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the current residual vector by const reference. </p>
+
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00589">589</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+
+</div>
+</div>
+<a id="ada14e7d0a31071a8571dadec0522fed2" name="ada14e7d0a31071a8571dadec0522fed2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada14e7d0a31071a8571dadec0522fed2">&#9670;&#160;</a></span>state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator, typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T const  &amp; <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::state </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the current state vector by const reference. </p>
+
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00582">582</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
 
 </div>
 </div>
@@ -955,7 +932,7 @@ template&lt;typename Iterator, typename T&gt; </div>
 
 <p>Return the total number of iterations needed to converge. </p>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00545">545</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00603">603</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
 
 </div>
 </div>
@@ -986,7 +963,7 @@ template&lt;typename Iterator, typename T&gt; </div>
 
 <p>Get total time. </p>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00594">594</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00652">652</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
 
 </div>
 </div>
@@ -1015,9 +992,9 @@ template&lt;typename Iterator, typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get time solving modified diffusion equation (MDE). </p>
+<p>Get time spent solving the modified diffusion equation (MDE). </p>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00552">552</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00610">610</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
 
 </div>
 </div>
@@ -1048,7 +1025,7 @@ template&lt;typename Iterator, typename T&gt; </div>
 
 <p>Get total time for AM algorithm, excluding MDE solution. </p>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00559">559</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00617">617</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
 
 </div>
 </div>
@@ -1077,9 +1054,9 @@ template&lt;typename Iterator, typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get time computing residual. </p>
+<p>Get time spent computing residual. </p>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00566">566</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00624">624</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
 
 </div>
 </div>
@@ -1110,7 +1087,7 @@ template&lt;typename Iterator, typename T&gt; </div>
 
 <p>Get time evaluating scalar error. </p>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00573">573</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00631">631</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
 
 </div>
 </div>
@@ -1139,9 +1116,9 @@ template&lt;typename Iterator, typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get time evaluating Anderson mixing coefficients. </p>
+<p>Get time spent evaluating Anderson mixing coefficients. </p>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00580">580</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00638">638</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
 
 </div>
 </div>
@@ -1170,42 +1147,9 @@ template&lt;typename Iterator, typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get time updating w fields. </p>
+<p>Get time spent updating w states. </p>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00587">587</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
-
-</div>
-</div>
-<a id="a3987903c9536462dd9659df814f5e62c" name="a3987903c9536462dd9659df814f5e62c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3987903c9536462dd9659df814f5e62c">&#9670;&#160;</a></span>isAllocatedAM()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Iterator, typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::isAllocatedAM </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Have data structures required by the AM algorithm been allocated? </p>
-
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00531">531</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00505">setup()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00645">645</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
 
 </div>
 </div>
@@ -1258,7 +1202,7 @@ template&lt;typename Type&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="ParamComposite_8h_source.html#l00305">305</a> of file <a class="el" href="ParamComposite_8h_source.html">ParamComposite.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00056">readParameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00060">readParameters()</a>.</p>
 
 </div>
 </div>
@@ -1311,11 +1255,131 @@ template&lt;typename Type&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="ParamComposite_8h_source.html#l00319">319</a> of file <a class="el" href="ParamComposite_8h_source.html">ParamComposite.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00263">readErrorType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00297">readErrorType()</a>, and <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00343">readMixingParameters()</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="aaf632064eb7c9a76198f12c35f361b24" name="aaf632064eb7c9a76198f12c35f361b24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf632064eb7c9a76198f12c35f361b24">&#9670;&#160;</a></span>epsilon_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator, typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::epsilon_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Error tolerance. </p>
+
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00093">93</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00032">AmIteratorTmpl()</a>, and <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00060">readParameters()</a>.</p>
+
+</div>
+</div>
+<a id="acb3495d28db3833c87cf4e2f52f0b350" name="acb3495d28db3833c87cf4e2f52f0b350"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb3495d28db3833c87cf4e2f52f0b350">&#9670;&#160;</a></span>maxItr_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator, typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::maxItr_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maximum number of iterations to attempt. </p>
+
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00098">98</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00032">AmIteratorTmpl()</a>, and <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00098">solve()</a>.</p>
+
+</div>
+</div>
+<a id="ae34487094628f8d6e14403771a3577eb" name="ae34487094628f8d6e14403771a3577eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae34487094628f8d6e14403771a3577eb">&#9670;&#160;</a></span>maxHist_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator, typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::maxHist_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maximum number of basis vectors in AM algorithm. </p>
+
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00103">103</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00362">allocateAM()</a>, <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00032">AmIteratorTmpl()</a>, and <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00573">computeLambda()</a>.</p>
+
+</div>
+</div>
+<a id="a95e51b065b6828b9a55f1443cd252a10" name="a95e51b065b6828b9a55f1443cd252a10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95e51b065b6828b9a55f1443cd252a10">&#9670;&#160;</a></span>verbose_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator, typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a>&lt; Iterator, T &gt;::verbose_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Verbosity level. </p>
+
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00108">108</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00032">AmIteratorTmpl()</a>, and <a class="el" href="AmIteratorTmpl_8h_source.html#l00568">verbose()</a>.</p>
+
+</div>
+</div>
 <a id="ad0ab7a80b720e7d5138d3dec43e6cb6d" name="ad0ab7a80b720e7d5138d3dec43e6cb6d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad0ab7a80b720e7d5138d3dec43e6cb6d">&#9670;&#160;</a></span>errorType_</h2>
 
@@ -1340,9 +1404,9 @@ template&lt;typename Iterator, typename T&gt; </div>
 
 <p>Type of error criterion used to test convergence. </p>
 
-<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00091">91</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AmIteratorTmpl_8h_source.html#l00113">113</a> of file <a class="el" href="AmIteratorTmpl_8h_source.html">AmIteratorTmpl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00031">AmIteratorTmpl()</a>, <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00631">computeError()</a>, <a class="el" href="AmIteratorTmpl_8h_source.html#l00538">errorType()</a>, <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00287">isValidErrorType()</a>, <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00263">readErrorType()</a>, and <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00243">setErrorType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00032">AmIteratorTmpl()</a>, <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00689">computeError()</a>, <a class="el" href="AmIteratorTmpl_8h_source.html#l00575">errorType()</a>, <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00320">isValidErrorType()</a>, and <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00297">readErrorType()</a>.</p>
 
 </div>
 </div>

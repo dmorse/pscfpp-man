@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: Rpc::PredCorrBdStep</title>
+<title>PSCF: PredCorrBdStep</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -54,11 +54,11 @@ $(function() {
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">Rpc::PredCorrBdStep </div></div>
+  <div class="headertitle"><div class="title">PredCorrBdStep </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>The PredCorrBdStep classes used by both the pscf_pc and pscf_pg programs implements a predictor corrector Brownian dynamics step algorithm.</p>
-<p>Two closely analogous classes named <a class="el" href="classPscf_1_1Rpc_1_1PredCorrBdStep.html" title="Predictor-corrector Brownian dynamics stepper.">Pscf::Rpc::PredCorrBdStep</a> and <a class="el" href="classPscf_1_1Rpg_1_1PredCorrBdStep.html" title="Predictor-corrector Brownian dynamics stepper.">Pscf::Rpg::PredCorrBdStep</a> are used to implement this algorithm for the pscf_pc program (using a standard CPU) and for the pscf_pg program (using GPU acceleration), respectively These classes implement the same algorithm and use the same parameter file format, as documented below for both.</p>
+<p>Two closely analogous classes named <a class="el" href="classPscf_1_1Rpc_1_1PredCorrBdStep.html" title="Predictor-corrector Brownian dynamics stepper.">Pscf::Rpc::PredCorrBdStep</a> and <a class="el" href="classPscf_1_1Rpg_1_1PredCorrBdStep.html" title="Predictor-corrector Brownian dynamics stepper.">Pscf::Rpg::PredCorrBdStep</a> are used to implement this algorithm for the pscf_pc program (using a standard CPU) and for the pscf_pg program (using GPU acceleration), respectively These classes implement the same algorithm and use the same parameter file format, as documented below.</p>
 <h1 class="doxsection"><a class="anchor" id="rpc_PredCorrBdStep_algorithm_sec"></a>
 Step Algorithm</h1>
 <p>A general discussion of conventions used in PSCF for BD step algorithms is given <a class="el" href="psfts_algorithm_page.html">here</a>. In what follows, we refer to the fields or fields that are stochastically sampled as \( W_{-} \), or as exchange fields, and the field or fields that are chosen to satisfy a partial saddle point condition as \( W_{+} \). All exchange fields must be associated with negative eigenvalues of the projecte chi matrix. Each step of the predictor corrector algorithm involves the following stages: </p><ul>

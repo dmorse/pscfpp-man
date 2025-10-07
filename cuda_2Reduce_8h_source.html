@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -76,17 +76,17 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc_1_1Cuda_1_1Reduce.html">Reduce</a> {</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>cudaReal sum(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>cudaReal <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a1d531e19f7cc5674cefa424e397f0972">sum</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>cudaReal max(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>cudaReal <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a897393112248e2fa5562fc9086e21c46">max</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>cudaReal maxAbs(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>cudaReal <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a5021e123d5a367b15ea36af51c4e0122">maxAbs</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>cudaReal min(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>cudaReal <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#aa86d4e549e25a7a8a731069cf9e119a3">min</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>cudaReal minAbs(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>cudaReal <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a13a7dd0601d65d655308ce9ff6dc0dfc">minAbs</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>cudaReal innerProduct(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; a, </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>cudaReal <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a888ffcc13055f72938cd4144ed6cd29b">innerProduct</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; a, </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                      DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; b);</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
@@ -95,10 +95,16 @@ $(function() {
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>} <span class="comment">// Prdc</span></div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>} <span class="comment">// Pscf</span></div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_1_1Reduce_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda_1_1Reduce.html">Pscf::Prdc::Cuda::Reduce</a></div><div class="ttdoc">Functions that perform parallel reductions on the GPU.</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00015">Reduce.cpp:15</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a></div><div class="ttdoc">Fields, FFTs, and utilities for periodic boundary conditions (CUDA)</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00014">Reduce.cpp:14</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1Reduce_html_a13a7dd0601d65d655308ce9ff6dc0dfc"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a13a7dd0601d65d655308ce9ff6dc0dfc">Pscf::Prdc::Cpu::Reduce::minAbs</a></div><div class="ttdeci">double minAbs(Array&lt; double &gt; const &amp;in)</div><div class="ttdoc">Get minimum absolute magnitude of array elements .</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00064">Reduce.cpp:64</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1Reduce_html_a1d531e19f7cc5674cefa424e397f0972"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a1d531e19f7cc5674cefa424e397f0972">Pscf::Prdc::Cpu::Reduce::sum</a></div><div class="ttdeci">double sum(Array&lt; double &gt; const &amp;in)</div><div class="ttdoc">Compute sum of array elements .</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00080">Reduce.cpp:80</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1Reduce_html_a5021e123d5a367b15ea36af51c4e0122"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a5021e123d5a367b15ea36af51c4e0122">Pscf::Prdc::Cpu::Reduce::maxAbs</a></div><div class="ttdeci">double maxAbs(Array&lt; double &gt; const &amp;in)</div><div class="ttdoc">Get maximum absolute magnitude of array elements .</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00034">Reduce.cpp:34</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1Reduce_html_a888ffcc13055f72938cd4144ed6cd29b"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a888ffcc13055f72938cd4144ed6cd29b">Pscf::Prdc::Cpu::Reduce::innerProduct</a></div><div class="ttdeci">double innerProduct(Array&lt; double &gt; const &amp;a, Array&lt; double &gt; const &amp;b)</div><div class="ttdoc">Compute inner product of two real arrays .</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00094">Reduce.cpp:94</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1Reduce_html_a897393112248e2fa5562fc9086e21c46"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a897393112248e2fa5562fc9086e21c46">Pscf::Prdc::Cpu::Reduce::max</a></div><div class="ttdeci">double max(Array&lt; double &gt; const &amp;in)</div><div class="ttdoc">Get maximum of array elements .</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00020">Reduce.cpp:20</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1Reduce_html_aa86d4e549e25a7a8a731069cf9e119a3"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#aa86d4e549e25a7a8a731069cf9e119a3">Pscf::Prdc::Cpu::Reduce::min</a></div><div class="ttdeci">double min(Array&lt; double &gt; const &amp;in)</div><div class="ttdoc">Get minimum of array elements .</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00050">Reduce.cpp:50</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_1_1Reduce_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda_1_1Reduce.html">Pscf::Prdc::Cuda::Reduce</a></div><div class="ttdoc">Functions that perform parallel reductions on the GPU.</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cu_source.html#l00017">Reduce.cu:17</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a></div><div class="ttdoc">Fields, FFTs, and utilities for periodic boundary conditions (CUDA)</div><div class="ttdef"><b>Definition</b> <a href="CField_8cu_source.html#l00012">CField.cu:12</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_html"><div class="ttname"><a href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div><div class="ttdoc">Periodic fields and crystallography.</div><div class="ttdef"><b>Definition</b> <a href="CField_8cpp_source.html#l00011">CField.cpp:11</a></div></div>
-<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
+<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

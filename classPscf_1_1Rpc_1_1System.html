@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -83,6 +83,10 @@ Inheritance diagram for Pscf::Rpc::System&lt; D &gt;:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8ceaded09fe7e8baa67adc82f8efc663" id="r_a8ceaded09fe7e8baa67adc82f8efc663"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ceaded09fe7e8baa67adc82f8efc663">System</a> ()</td></tr>
 <tr class="memdesc:a8ceaded09fe7e8baa67adc82f8efc663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:a9d8be93dc0197ade25f7d76e1ff9ec0d" id="r_a9d8be93dc0197ade25f7d76e1ff9ec0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d8be93dc0197ade25f7d76e1ff9ec0d">System</a> (<a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a>&lt; D &gt; const &amp;)=delete</td></tr>
+<tr class="memdesc:a9d8be93dc0197ade25f7d76e1ff9ec0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
+<tr class="memitem:a7560854f162cdb272797a950142d7a62" id="r_a7560854f162cdb272797a950142d7a62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7560854f162cdb272797a950142d7a62">operator=</a> (<a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a>&lt; D &gt; const &amp;)=delete</td></tr>
+<tr class="memdesc:a7560854f162cdb272797a950142d7a62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1Prdc_1_1SystemTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html">Pscf::Prdc::SystemTmpl&lt; D, Types&lt; D &gt; &gt;</a></td></tr>
 <tr class="memitem:ad14797d4d1a8de6a411cc8810ee9c74e inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl" id="r_ad14797d4d1a8de6a411cc8810ee9c74e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html#ad14797d4d1a8de6a411cc8810ee9c74e">SystemTmpl</a> (typename Types&lt; D &gt;::System &amp;system)</td></tr>
 <tr class="memdesc:ad14797d4d1a8de6a411cc8810ee9c74e inherit pub_methods_classPscf_1_1Prdc_1_1SystemTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
@@ -381,10 +385,10 @@ Additional Inherited Members</h2></td></tr>
 class Pscf::Rpc::System&lt; D &gt;</div><p>Main class, representing a complete physical system. </p>
 <p>This class is derived from a partial specialization of the class template <a class="el" href="classPscf_1_1Prdc_1_1SystemTmpl.html" title="Base class template for classes that represent a complete system.">Prdc::SystemTmpl</a>, and has the same public interface as its base class. See the documentation of this base class template for details. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2system_2System_8h_source.html#l00038">38</a> of file <a class="el" href="rpc_2system_2System_8h_source.html">rpc/system/System.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2system_2System_8h_source.html#l00037">37</a> of file <a class="el" href="rpc_2system_2System_8h_source.html">rpc/system/System.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8ceaded09fe7e8baa67adc82f8efc663" name="a8ceaded09fe7e8baa67adc82f8efc663"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ceaded09fe7e8baa67adc82f8efc663">&#9670;&#160;</a></span>System()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ceaded09fe7e8baa67adc82f8efc663">&#9670;&#160;</a></span>System() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -402,9 +406,74 @@ template&lt;int D&gt; </div>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2system_2System_8cpp_source.html#l00048">48</a> of file <a class="el" href="rpc_2system_2System_8cpp_source.html">rpc/system/System.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2system_2System_8cpp_source.html#l00049">49</a> of file <a class="el" href="rpc_2system_2System_8cpp_source.html">rpc/system/System.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>, and <a class="el" href="SystemTmpl_8tpp_source.html#l00037">Pscf::Prdc::SystemTmpl&lt; D, Types&lt; D &gt; &gt;::SystemTmpl()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a7560854f162cdb272797a950142d7a62">operator=()</a>, and <a class="el" href="#a9d8be93dc0197ade25f7d76e1ff9ec0d">System()</a>.</p>
+
+</div>
+</div>
+<a id="a9d8be93dc0197ade25f7d76e1ff9ec0d" name="a9d8be93dc0197ade25f7d76e1ff9ec0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d8be93dc0197ade25f7d76e1ff9ec0d">&#9670;&#160;</a></span>System() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPscf_1_1Rpc_1_1System.html">Pscf::Rpc::System</a>&lt; D &gt;::System </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor. </p>
+
+<p class="reference">References <a class="el" href="rpc_2system_2System_8cpp_source.html#l00049">System()</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a7560854f162cdb272797a950142d7a62" name="a7560854f162cdb272797a950142d7a62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7560854f162cdb272797a950142d7a62">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1Rpc_1_1System.html">Pscf::Rpc::System</a>&lt; D &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1Rpc_1_1System.html">System</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assignment. </p>
+
+<p class="reference">References <a class="el" href="rpc_2system_2System_8cpp_source.html#l00049">System()</a>.</p>
 
 </div>
 </div>

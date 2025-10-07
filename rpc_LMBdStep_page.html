@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: Rpc::LMBdStep</title>
+<title>PSCF: LMBdStep</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -54,11 +54,11 @@ $(function() {
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">Rpc::LMBdStep </div></div>
+  <div class="headertitle"><div class="title">LMBdStep </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The LMBdStep classes used by both the pscf_pc and pscf_pg programs implements the Leimkuhler Matthews Brownian dynamics step algorithm.</p>
-<p>Two closely analogous classes named <a class="el" href="classPscf_1_1Rpc_1_1LMBdStep.html" title="Leimkuhler-Matthews Brownian dynamics stepper.">Pscf::Rpc::LMBdStep</a> and <a class="el" href="classPscf_1_1Rpg_1_1LMBdStep.html" title="Leimkuhler-Matthews Brownian dynamics stepper.">Pscf::Rpg::LMBdStep</a> that have the same class name but that are defined in different namespaces are used to implement this the same step algorithm for different programs. The LMBdStep class defined in the Rpc namespace is used in the pscf_pc program (using CPU hardware) and the class defined in the Rpg namespace is used in the pscf_pg program (using GPU acceleration). These two analogous classes implement the same step algorithm and use the same parameter file format, which are documented below.</p>
+<div class="textblock"><p>The LMBdStep classes used by both the pscf_pc and pscf_pg programs implement the Leimkuhler-Matthews Brownian dynamics step algorithm.</p>
+<p>Two closely analogous classes named <a class="el" href="classPscf_1_1Rpc_1_1LMBdStep.html" title="Leimkuhler-Matthews Brownian dynamics stepper.">Pscf::Rpc::LMBdStep</a> and <a class="el" href="classPscf_1_1Rpg_1_1LMBdStep.html" title="Leimkuhler-Matthews Brownian dynamics stepper.">Pscf::Rpg::LMBdStep</a> that have the same class name but that are defined in different namespaces are used to implement this step algorithm for different programs. The LMBdStep class defined in the Rpc namespace is used in the pscf_pc program (using CPU hardware) and the class defined in the Rpg namespace is used in the pscf_pg program (using GPU acceleration). These two analogous classes implement the same step algorithm and use the same parameter file format, as documented below.</p>
 <h1 class="doxsection"><a class="anchor" id="rpc_LMBdStep_algorithm_sec"></a>
 Step Algorithm</h1>
 <p>A general discussion of conventions used in PSCF for BD step algorithms is given <a class="el" href="psfts_algorithm_page.html">here</a>. The Leimkuhler Matthews (LM) algorithm is described and tested in these references:</p>
@@ -108,12 +108,12 @@ Step Algorithm</h1>
 <h1 class="doxsection"><a class="anchor" id="rpc_LMBdStep_parameter_sec"></a>
 Parameter File</h1>
 <p>The only parameter need by this algorithm is a required parameter named "mobility", which gives the value of parameter denoted by \( \gamma \) in the above equations. A typical example of the contents of the block is shown below: </p><div class="fragment"><div class="line">LMBdStep{</div>
-<div class="line">  mobility     1e-3</div>
+<div class="line">  mobility     1.0e-2</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> The format of this block is simply </p><div class="fragment"><div class="line">LMBdStep{</div>
 <div class="line">   mobility      <span class="keywordtype">float</span></div>
 <div class="line">}</div>
-</div><!-- fragment --><p> The mobility parameter is requred. </p>
+</div><!-- fragment --><p> The mobility parameter is required. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

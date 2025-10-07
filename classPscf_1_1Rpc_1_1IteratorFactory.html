@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -125,8 +125,14 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">system</td><td>parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2iterator_2IteratorFactory_8tpp_source.html#l00018">18</a> of file <a class="el" href="rpc_2scft_2iterator_2IteratorFactory_8tpp_source.html">rpc/scft/iterator/IteratorFactory.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2iterator_2IteratorFactory_8tpp_source.html#l00019">19</a> of file <a class="el" href="rpc_2scft_2iterator_2IteratorFactory_8tpp_source.html">rpc/scft/iterator/IteratorFactory.tpp</a>.</p>
 
 </div>
 </div>
@@ -159,15 +165,15 @@ template&lt;int D&gt; </div>
 <p>Method to create any <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> supplied with PSCF. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">className</td><td>name of the <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> subclass </td></tr>
+    <tr><td class="paramname">className</td><td>name of the <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator&lt;D&gt;</a> subclass </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Iterator* pointer to new instance of className </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to new instance of className </dd></dl>
 
 <p>Implements <a class="el" href="classUtil_1_1Factory.html#a71b3e1c2dac1635d161f668529860764">Util::Factory&lt; Iterator&lt; D &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2scft_2iterator_2IteratorFactory_8tpp_source.html#l00026">26</a> of file <a class="el" href="rpc_2scft_2iterator_2IteratorFactory_8tpp_source.html">rpc/scft/iterator/IteratorFactory.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2scft_2iterator_2IteratorFactory_8tpp_source.html#l00027">27</a> of file <a class="el" href="rpc_2scft_2iterator_2IteratorFactory_8tpp_source.html">rpc/scft/iterator/IteratorFactory.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Factory_8h_source.html#l00425">Util::Factory&lt; Iterator&lt; D &gt; &gt;::trySubfactories()</a>.</p>
 

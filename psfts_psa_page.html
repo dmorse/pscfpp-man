@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -114,15 +114,8 @@ General Case ( \( M \geq 2 \))</h1>
 </p>
 <p> In the case considered here, for which \( \lambda_{1}, \ldots, \lambda_{M-1} \) are all negative, the partial saddle-point approximation yields real values for all average monomer fields \( \phi_{1}({\bf r}), \ldots \phi_{M}({\bf r}) \) and for the Hamiltonian \( H \) in all allowed field configurations.</p>
 <p><a class="anchor" id="psfts_psa_status"></a><b> Status of Algorithms for \( M &gt; 2 \): </b></p>
-<p>The BD and MC algorithms currently provided PSCF can perform simulations of systems with \( M \geq 2 \) if and only if the projected chi matrix has no positive eigenvalues. This statement applies both to the actual BD and MC algorithms used to generate random changes in exchange fields and to the <a class="el" href="psfts_algorithm_page.html#psfts_algorithm_compressor_sec">Compressor Algorithms</a> ``compressor" algorithms used 
-to identify partial saddle points. For ABC systems, this requirement 
-imposes a constraint on the allowed range of values of the chi parameters, 
-as discussed in the article by Morse, Yong and Chen
-(&lt;https://pubs.acs.org/doi/10.1021/acs.macromol.4c02636&gt;).
-
-Some of the data analysis algorithms provided in the current version of 
-PSCF were, however, designed specifically for systems with \_form#849 
-and are only usable with such systems.  The "analyzer" class that implements each such restricted algorithm checks whether \( M = 2 \), and will print an error message and then halt execution before entering the main simulation loop if a user attempts to apply it to a system with \( M &gt; 2 \). Currently, it is thus possible to perform PS-FTS calculations on some ABC systems, but some data analysis algorithms cannot be used for this purpose.</p>
+<p>The BD and MC algorithms currently provided PSCF can perform simulations of systems with \( M \geq 2 \) if and only if the projected chi matrix has no positive eigenvalues. This statement applies both to the actual BD and MC algorithms used to generate random changes in exchange fields and to the <a class="el" href="psfts_algorithm_page.html#psfts_algorithm_compressor_sec">compressor</a> algorithms used to identify partial saddle points. For ABC systems, this requirement imposes several constraints on the allowed ranges of values of the chi parameters, as discussed in the article by <a href="https://pubs.acs.org/doi/10.1021/acs.macromol.4c02636">Morse, Yong and Chen </a>.</p>
+<p>Some of the data analysis algorithms provided in the current version of PSCF were, however, designed specifically for systems with \( M = 2 \) and are only usable with such systems. The "analyzer" class that implements each such restricted algorithm checks whether \( M = 2 \), and will print an error message and then halt execution before entering the main simulation loop if a user attempts to apply it to a system with \( M &gt; 2 \). Currently, it is thus possible to perform PS-FTS calculations on some ABC systems, but some data analysis algorithms cannot be used for this purpose.</p>
 <p>Morse, Yong and Chen have proposed a further generalization of the PSA so as to treat cases in which one or more of the \( M - 1 \) nontrival eigenvalues of the projected \( \chi \) matrix are positive. Specificially, they proposed treating the auxiliary fields associated with such eigenvalues in a PSA, in addition to the use of the PSA for the pressure-like field \( W_{M} \). This generalized version of the PSA is not implemented in the current version of PSCF, in which the PSA is currently only applied to \( W_{M} \).</p>
 <p><br  />
  <a class="el" href="psfts_theory_page.html">Fully Fluctuating Field Theory - Incompressible Systems</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="psfts_page.html">Partial Saddle-Point Field Theoretic Simulation (PS-FTS)</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="psfts_algorithm_page.html">Algorithms</a> (Next) </p>

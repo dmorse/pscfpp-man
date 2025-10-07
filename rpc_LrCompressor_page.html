@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: Rpc::LrCompressor</title>
+<title>PSCF: LrCompressor</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -54,25 +54,23 @@ $(function() {
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">Rpc::LrCompressor </div></div>
+  <div class="headertitle"><div class="title">LrCompressor </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>The LrCompressor classes used by both the pscf_pc and pscf_pg programs implements a linear-response Anderson mixing (LRAM) algorithm as described in this publication.</p>
 <p>Two closely analogous classes named <a class="el" href="classPscf_1_1Rpc_1_1LrCompressor.html" title="Linear response compressor.">Pscf::Rpc::LrCompressor</a> and <a class="el" href="classPscf_1_1Rpg_1_1LrCompressor.html" title="Linear response compressor.">Pscf::Rpg::LrCompressor</a> implement this algorithm for the pscf_pc CPU and program and the pscf_pg GPU-accelerated program, respectively. These two classes implement the same step algorithm and use the same parameter file format, which are documented below.</p>
-<h1 class="doxsection"><a class="anchor" id="rpc_LrCompressor_algorithm_sec"></a>
-Step Algorithm</h1>
-<p>A general discussion of compressor algorithms for PS-FTS is given <a class="el" href="psfts_algorithm_page.html">here</a>.</p>
-<p>The LrCompressor algorithm ...</p>
+<p>A general discussion of compressor algorithms for PS-FTS is given <a class="el" href="psfts_algorithm_page.html">here</a>. Each LrCompressor class implements the linear response (LR) algorithm that is presented in the following publication: <a href="https://doi.org/10.1063/5.0264036">"Improved algorithm for identifying partial saddle-points in polymer
+field theoretic simulations", K. Chen and D.C. Morse, <em> J. Chem. Phys. </em> <b> 162 </b>, 243901 (2025). </a>. This is a quasi-Newton algorithm in which linear response of an inhomogeneous ideal gas to an infinitesimal change in the pressure-like field \( W_{+}({\bf r}) \) is approximated by the analytically calculable response of a hypothetical homogeneous state of the same fluid.</p>
 <h1 class="doxsection"><a class="anchor" id="rpc_LrCompressor_parameter_sec"></a>
-Parameter File</h1>
-<p>The only parameter needed by this algorithm are the error threshhold "epsilon" </p><div class="fragment"><div class="line">LrCompressor{</div>
+Parameter file</h1>
+<p>The LR algorithm does not require any adjustable parameters that affect the progress of iteration towards a solution. The only required parameter for this algorithm is an error threshhold "epsilon". The iteration loop exits when a scalar definition of error is less than epsilon. A minimal block could thus looks something like this: </p><div class="fragment"><div class="line">LrCompressor{</div>
 <div class="line">  epsilon      1.0E-4</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> The full parameter file format, including all optional parameters, is shown below: </p><div class="fragment"><div class="line">LrCompressor{</div>
-<div class="line">  epsilon           <span class="keywordtype">float</span></div>
-<div class="line">  maxItr*           int     (<span class="keywordflow">default</span> 200)</div>
-<div class="line">  verbose           int     (<span class="keywordflow">default</span> 0)</div>
-<div class="line">  errorType*        string  (<span class="stringliteral">&quot;norm&quot;</span>, <span class="stringliteral">&quot;rms&quot;</span>, <span class="stringliteral">&quot;max&quot;</span>, or <span class="stringliteral">&quot;relNorm&quot;</span>)</div>
+</div><!-- fragment --><p> The full parameter block format, including several optional parameters, is shown below: </p><div class="fragment"><div class="line">LrCompressor{</div>
+<div class="line">  epsilon       <span class="keywordtype">float</span></div>
+<div class="line">  maxItr*       int     (100 by <span class="keywordflow">default</span>)</div>
+<div class="line">  verbose*      int     (0 by <span class="keywordflow">default</span>)</div>
+<div class="line">  errorType*    string  (<span class="stringliteral">&quot;rms&quot;</span>, <span class="stringliteral">&quot;norm&quot;</span> or <span class="stringliteral">&quot;max&quot;</span>. <span class="stringliteral">&quot;rms&quot;</span> by <span class="keywordflow">default</span>)</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> Meanings of all parameters are described briefly below: </p><table class="doxtable">
 <tr>
@@ -80,12 +78,39 @@ Parameter File</h1>
 <tr>
 <td>epsilon </td><td>error threshhold </td></tr>
 <tr>
-<td>maxItr* </td><td>maximum number of iterations to attempt before declaring failure </td></tr>
+<td>maxItr* </td><td>maximum number of iterations to attempt before declaring failure (100 by default) </td></tr>
 <tr>
-<td>verbose* </td><td>verbosity level (lower values are less verbose. Default level = 0) </td></tr>
+<td>verbose* </td><td>verbosity level. Lower values are less verbose. (0 by default) </td></tr>
 <tr>
-<td>errorType* </td><td>???? </td></tr>
+<td>errorType* </td><td>Type of norm used to define the scalar error, as discussed <a class="el" href="#rpc_LrCompressor_error_sec">below</a>. ("rms" by default) </td></tr>
 </table>
+<h1 class="doxsection"><a class="anchor" id="rpc_LrCompressor_residual_sec"></a>
+Residual definition</h1>
+<p>The residual vector for the LrCompressor is defined in real space, as an array in which each element is associated with one node of a regular computational grid. The value \( R({\bf r}) \) of the residual element associated with a grid point located at position \( {\bf r} \) is given by   </p><p class="formulaDsp">
+\[    R({\bf r}) = -1 + \sum_{i=1}^{N_{\rm m}} \phi_{i}({\bf r}) 
+\]
+</p>
+<p> where \( \phi_{i}({\bf r}) \) is the volume fraction of monomer type \( i \) at that grid point, and \( N_{\rm m} \) is the number of monomer types, also known as nMonomer.</p>
+<h1 class="doxsection"><a class="anchor" id="rpc_LrCompressor_error_sec"></a>
+Error type</h1>
+<p>The LrCompressor algorithm terminates either: (1) when the number of iterations reaches the maximum allowed value maxItr, or (2) when the value of a scalar error \( e({\bf R}) \) becomes less than a user-specified error tolerance \( \epsilon \) (or "epsilon").</p>
+<p>Users may usually choose from among several possible definitions of the error \( e \) by assigning one of the following allowed values to a string parameter named "errorType":</p>
+<ul>
+<li>If errorType == "rms", then the scalar error is take to be the root-mean-square magnitude of elements of the residual vector (i.e., the \( l_2 \) norm divided by the square root of the number of elements),    <p class="formulaDsp">
+\[       e = \frac{|{\bf R}|}{\sqrt{N} }
+         = \left ( \frac{1}{N}\sum_{i=0}^{N-1} R_{i}^{2} \right)^{1/2}
+\]
+</p>
+</li>
+<li>If errorType == "norm", then the scalar error is take to be the \( l_2 \) norm of the residual vector \( {\bf R} \), i.e.,   <p class="formulaDsp">
+\[       e = |{\bf R}| = \left ( \sum_{i=0}^{N-1} R_{i}^{2} \right)^{1/2}
+\]
+</p>
+</li>
+<li>If errorType == "max", then the scalar error is take to be maximum absolute magnitude of any element in the residual vector (i.e., the \( l_{\infty} \) norm of the residual vector).</li>
+</ul>
+<p>An iteration algorithm successfully converges if it terminates with \( e({\bf R}) &lt; \epsilon \) in fewer than maxItr iterations. <br  />
+ Different error types require different choises for the error threshhold \( \epsilon \) (or "epsilon") to obtain comparable accuracy. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: Parameter File - Parameter Sweeps</title>
+<title>PSCF: Parameter Sweeps</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -49,26 +49,27 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a href="index.html">PSCF - Polymer Self-Consistent Field</a></li><li class="navelem"><a href="scft_page.html">Self-Consistent Field Theory</a></li><li class="navelem"><a href="scft_param_page.html">Parameter Files</a></li>  </ul>
+<li class="navelem"><a href="index.html">PSCF - Polymer Self-Consistent Field</a></li><li class="navelem"><a href="scft_page.html">Self-Consistent Field Theory</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">Parameter File - Parameter Sweeps </div></div>
+  <div class="headertitle"><div class="title">Parameter Sweeps </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="el" href="scft_param_page.html">Parameter Files</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_param_1d_page.html">Parameter File - pscf_1d</a> (Next) <br  />
+<div class="textblock"><p><a class="el" href="scft_iterator_page.html">Iteration Algorithms</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_param_page.html">Parameter Files</a> (Next) <br  />
 </p>
-<p>Some of the PSCF programs provide capability to run a sequence of SCFT simulations at slightly different conditions corresponding to points on a line through the space of possible input parameter values. We refer to this kind of calculation as a "sweep". All of the PSCF programs can perform sweep operations.</p>
-<h1 class="doxsection"><a class="anchor" id="scft_param_sweep_concept_sec"></a>
+<p>Every PSCF programs can perform a sequence of SCFT simulations at a sequence of different conditions that correspond to points on a line through the space of possible input parameter values. We refer to this kind of calculation as a parameter "sweep". <br  />
+</p>
+<h1 class="doxsection"><a class="anchor" id="scft_sweep_concept_sec"></a>
 Sweep concept</h1>
 <p>To perform a sweep, the program attempts to solve a sequence of SCFT problems for choices of input parameters (e.g., block lengths, chi parameters, species volume fractions, etc.) that lie along a line through the space of possible values for these parameters. During a sweep, the resulting SCFT problems are solved in the sequence that they appear along this line. An initial guess for the vector of unknown variables for every point after the first one is obtained by extrapolating from solutions obtained at one or more immediately preceding points along this line.</p>
 <p>To define a sweep, a path through parameter space is defined by defining how one or more input parameters vary as a function of a contour variable denoted by s. By convention, s is taken to vary from 0 to 1 over the length of a sweep. The number of SCFT calculations performed along that line is determined by an integer parameter denoted by ns. SCFT calculations are performed at ns+1 evenly spaced values of s given by s = i/ns, for integer i = 0, ..., ns + 1.</p>
 <p>The simplest possible type of sweep is a linear sweep in which only one input parameter varies, and in which that parameter is a linear function of s. For example, one might do a linear sweep of a single element of the chi parameter matrix over a set of evenly spaced values between an initial and final value.</p>
-<p>A general linear sweep is one in which several input parameters may be varied simultaneously, and in which each of the affected parameters is a linear functions of s. Every pscfp program can perform a general linear sweep of this type.</p>
-<h1 class="doxsection"><a class="anchor" id="scft_param_sweep_param_sec"></a>
-Parameter file</h1>
-<p>The parameter file for a calculation in which a sweep will be performed must include an optional block that describes the nature of the sweep. This block, when present, must appear after the block that specifies the iterator algorithm. The skeleton structure for a paramater file for a calculation that includes a sweep is shown below: </p><div class="fragment"><div class="line">System{</div>
+<p>A general linear sweep is one in which several input parameters may be varied simultaneously, and in which each of the affected parameters is a linear functions of s. Every PSCF program can perform a general linear sweep of this type.</p>
+<h1 class="doxsection"><a class="anchor" id="scft_sweep_param_sec"></a>
+Parameter file format</h1>
+<p>The parameter file for a calculation in which a sweep will be performed must include an optional block that describes the nature of the sweep. This block, when present, must appear after the block that specifies the iterator algorithm. The minimal skeleton structure for a paramater file for a calculation that performs a sweep is shown below: </p><div class="fragment"><div class="line">System{</div>
 <div class="line">  Mixture{</div>
 <div class="line">     ...</div>
 <div class="line">  }</div>
@@ -78,14 +79,14 @@ Parameter file</h1>
 <div class="line">  Domain{</div>
 <div class="line">     ...</div>
 <div class="line">  }</div>
-<div class="line">  Iterator#{</div>
+<div class="line">  Iterator#*{</div>
 <div class="line">     ...</div>
 <div class="line">  }</div>
-<div class="line">  Sweep#{</div>
+<div class="line">  Sweep#*{</div>
 <div class="line">     ...</div>
 <div class="line">  }</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> In this description, the Iterator and Sweep blocks include a # suffix to indicate that these are both selectable blocks. Different options for the Sweep block can define different types of paths through parameter space.</p>
+</div><!-- fragment --><p> In this description, the Iterator and Sweep blocks include a #* suffix to indicate that these are both optional selectable blocks. Different options for the Sweep block can define different types of paths through parameter space.</p>
 <p>Below, we show an example of a pscf_1d parameter file that extends the example parameter file shown <a class="el" href="user_param_example_page.html">previously</a> by appending a Sweep parameter file block to the end of the main System block, using the default algorithm. </p><div class="fragment"><div class="line">System{</div>
 <div class="line">  Mixture{</div>
 <div class="line">     nMonomer   2</div>
@@ -123,7 +124,7 @@ Parameter file</h1>
 <div class="line">     xMax     8.0</div>
 <div class="line">     nx       401</div>
 <div class="line">  }</div>
-<div class="line">  NrIterator{</div>
+<div class="line">  Iterator{</div>
 <div class="line">     epsilon   0.00000001</div>
 <div class="line">  }</div>
 <div class="line">  Sweep{</div>
@@ -137,14 +138,14 @@ Parameter file</h1>
 <div class="line">  }</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> The only new element in this example is the Sweep block, which is discussed below.</p>
-<h1 class="doxsection"><a class="anchor" id="scft_param_sweep_command_sec"></a>
+<h1 class="doxsection"><a class="anchor" id="scft_sweep_command_sec"></a>
 SWEEP command</h1>
 <p>A sweep is actually performed by including a command named "SWEEP" in the command file. The SWEEP command does not take any parameters, and performs the sequence of calculations described in the Sweep block of the parameter file. The SWEEP block must appear after a command that initializes the w files with an initial guess for the solution of the first point of the sweep, e.g., by reading an initial guess from a file.</p>
-<h1 class="doxsection"><a class="anchor" id="scft_param_sweep_linear_sec"></a>
+<h1 class="doxsection"><a class="anchor" id="scft_sweep_linear_sec"></a>
 Class LinearSweep</h1>
-<p>The default implementation of sweep for all PSCF programs is a general linear sweep algorithm. This algorithm may be selected by using the label "Sweep" preceding a curly bracket in the first line of a sweep block, as done in the above example. A version of this algorithm is implemented for each PSCF program by a class named LinearSweep. This algorithm can be selected by including a Sweep block with the appropriate format that starts either with a line containing the generic name Sweep (to select the default algorithm) or LinearSweep (to explicitly select the implementation provided by this class).</p>
+<p>The default implementation of sweep for all PSCF programs is a general linear sweep algorithm. This algorithm may be selected by using the label "Sweep" preceding a curly bracket in the first line of a sweep block, as in the above example. A version of this algorithm is implemented for each PSCF program by a class named LinearSweep. This algorithm can thus be selected by including a Sweep block with the appropriate format that starts either with a line containing the generic name Sweep (to select the default algorithm) or LinearSweep (to explicitly select the algorithm provided by a class with this name).</p>
 <p><em>Technical note: </em> Source code files that are specific to different PSCF programs are defined in different C++ implementation level namespaces (i.e., in <a class="el" href="namespacePscf_1_1R1d.html" title="SCFT with real 1D fields.">Pscf::R1d</a>, <a class="el" href="namespacePscf_1_1Rpc.html" title="Real periodic fields, SCFT and PS-FTS (CPU).">Pscf::Rpc</a> and <a class="el" href="namespacePscf_1_1Rpg.html" title="SCFT and PS-FTS with real periodic fields (GPU)">Pscf::Rpg</a>). This allows classes that play analogous roles in different programs to be given the same name. The LinearSweep classes for the pscf_1d, pscf_pc and pscf_pg programs are actually different classes defined in different namespaces that have identical or nearly identical user interfaces and implement closely analogous algorithms. The common user interface for these classes is described here.</p>
-<h2 class="doxsection"><a class="anchor" id="scft_param_sweep_linear_param_sub"></a>
+<h2 class="doxsection"><a class="anchor" id="scft_sweep_linear_param_sub"></a>
 Parameter file format</h2>
 <p>The parameter file format for a LinearSweep is summarized below: </p><div class="fragment"><div class="line">LinearSweep{</div>
 <div class="line">     ns                <span class="keywordtype">int</span></div>
@@ -165,9 +166,9 @@ Parameter file format</h2>
 <tr>
 <td>baseFileName </td><td>string that is added as a prefix to the names of all files output during the sweep. </td></tr>
 <tr>
-<td>historyCapacity* </td><td>integer that gives the maximum number of previous states to use to compute initial guesses by extrapolation. Optional, and equal to 3 by default. Set to 1 to use zeroth-order extrapolation, in which the fields from the previous state along the sweep are used as the initial guess for the next sweep step.</td></tr>
+<td>historyCapacity* </td><td>integer that gives the maximum number of previous states to use to compute initial guesses by extrapolation. Optional, and equal to 3 by default. Set to 1 to use zeroth-order extrapolation, in which the fields from the previous state along the sweep are used as the initial guess for the next step, or 2 for linear linar extrapolation from the previous two states.</td></tr>
 <tr>
-<td>reuseState* </td><td>boolean, set to 1 (true) to re-use information about linear response to perturbations acquired during iteration at the previoius state within a sweep, or 0 (false) to always restart the history. Optional, and true default. </td></tr>
+<td>reuseState* </td><td>boolean, set to 1 (true) to re-use information about linear response to perturbations acquired during iteration at the previoius state within a sweep, or 0 (false) to always restart the history. Optional, and true by default. </td></tr>
 <tr>
 <td>writeCRGrid* </td><td>boolean, set to 1 (true) to write the concentration fields in r-grid format at each step of the sweep, or set to 0 (false) to do nothing. Optional, and false by default. Not relevant for pscf_1d. </td></tr>
 <tr>
@@ -177,7 +178,7 @@ Parameter file format</h2>
 <tr>
 <td>nParameter </td><td>number of parameters that are modified during the sweep </td></tr>
 <tr>
-<td>parameter </td><td>array in which each element specifies the magnitude of the change in one modified parameter over the course of the sweep. </td></tr>
+<td>parameter </td><td>Array in which each element specifies the magnitude of the change in one modified parameter over the course of the sweep. </td></tr>
 </table>
 <p>Comments:</p>
 <ul>
@@ -187,7 +188,7 @@ Parameter file format</h2>
 </ul>
 <p>In this example, the elements of the parameters array tell the program to increase the the initial value of chi(0,1) by 5.0 in 10 increments, to also increase the length of block 0 of polymer 1 (the homopolymer) by 0.3. Values of all parameters at the initial state (corresponding to s=0) are given by the values that were set before the sweep began.</p>
 <p>The "parameters" array must contain exactly nParameter entries, each on a separate line. Each entry in this array describes how one input parameter should be modified.</p>
-<h2 class="doxsection"><a class="anchor" id="scft_param_sweep_linear_parameters_sec"></a>
+<h2 class="doxsection"><a class="anchor" id="scft_sweep_linear_parameters_sec"></a>
 Sweep parameters</h2>
 <p>The file format each line of the "parameters" array (corresponding to a single parameter) in a LinearSweep contains an identifier for a specific input parameter followed by amount by which the value of that parameter should change over the course of the sweep. The parameter identifier in each such entry contains a name string that identifies the type of variable, such as "block" for a block length or "chi" for an interaction parameter. This string is followed by either one or two integer indices that specify which variable of that type should be changed. For example, the string "block" must be followed by two integers, the first being an index for the polymer species the block belongs to, and the second being an index for that block within that polymer. Some other types of parameter can be uniqued identified using only a single index. For example the description of a parameter that specifies a volume fraction or chemical potential of a polymer or solvent molecular species requires a single index to identify the polymer or solvent species of interest.</p>
 <p>The general format for a line in the parameters array for a parameter that is specified by two indices is: </p><div class="fragment"><div class="line">type   id0    id1    change</div>
@@ -228,18 +229,18 @@ Sweep parameters</h2>
 </table>
 <p>The two indices for a Flory-Huggins chi parameter refer to indices in the chi matrix maintained by Interaction. Changes to element chi(i, j) automatically also update chi(j, i) for \( i \neq j \), thus preserving the symmetry of the matrix.</p>
 <p>Parameters of type "cell_param" are only usable in simulations of periodic structure performed using a pscf_pc or pscf_pg program, for simulations with a rigid unit cell in which the parameters are not automatically optimized so as to minimize the free energy density. In this case, a "unit_cell" parameter is one of the parameters that determine the the size and shape of the crystal unit for a system of specified latttice type. Examples include the length of each edge of a cubic unit cell, the lengths of the three edges of an orthorhombic crystal, or the value of the angle between two edges for a non-orthogonal crystal lattice type. PSCF uses a set of standard conventions for a list of parameters required to describe each unit cell type for 1, 2 and 3 dimensional structures of various crystal lattice system types. These conventions are described <a class="el" href="scft_unitcell_page.html">here</a>. The uid index for a cell_parameter is a zero based integer index that identifies which parameter in such a list is being varied.</p>
-<p>The chi_top and chi_bottom parameters are only applicable to simulations of thin films performed with pscf_pc program, as discussed <a class="el" href="scft_thin_films_page.html">here</a>. These are used to vary the effective interaction parameters for interactions of a specific monomer type with the top or bottom surface of a thin film.</p>
-<h1 class="doxsection"><a class="anchor" id="scft_param_sweep_output_sec"></a>
+<p>The chi_top and chi_bottom parameters are only applicable to simulations of thin films performed with thepscf_pc or pscf_pg program, as discussed <a class="el" href="scft_thin_films_page.html">here</a>. These are used to vary the effective interaction parameters for interactions of a specific monomer type with the top or bottom surface of a thin film.</p>
+<h1 class="doxsection"><a class="anchor" id="scft_sweep_output_sec"></a>
 Output files</h1>
 <p>A parameter sweep will output several files for each state point in the sweep. The names of all output files associated with a particular state include an integer index for that state point within the sweep, numbered starting from 0. The name of each such file name is given by a concatenation of the baseFileName string given in the Sweep block (if any), the integer index of the relevant state point, and a postfix string or file extension that indicates the file type. If the optional baseFileName parameter is absent, the default value of this variable is any empty string, in which case these file names all start with an integer index.</p>
 <p>The first type of file that is output for each state in a parameter sweep is a "state file", which contains values for both the input parameters and the output thermodynamic properties for that state. Names for state files end with a file name extension ".stt", giving names of the form "0.stt", "1.stt", etc. See the linked page on <a class="el" href="scft_thermo_page.html#scft_thermo_state_sec">state files</a> for more information about the format of these files.</p>
 <p>The other files output for each state in a parameter sweep are field files. These always include a converged chemical potential field file (a w field file) and somtimes include a file containing monomer concentration (a c field file). Formats and file name extensions for these files are different for different programs.</p>
 <p>In the case of the pscf_1d program, both a chemical potential field and a monomer concentration field are always output, and are both output in the <a class="el" href="scft_field_r1d_page.html">1D field file</a> used by pscf_1d. Names for these files end with filename extension ".w" for chemical potential fields and ".c" for monomer concentration fields.</p>
-<p>In the case of the pscf_pc and pscf_pg programs, only the chemical potential fields are output by default, using <a class="el" href="scft_field_basis_page.html">basis format</a>. Names for these files end with a postfix string "_w.bf", are thus of the form "0_w.bf", "1_w.bf", etc. Chemical potential fields in rgrid format and/or monomer concentration fields in basis or rgrid format can be output at each state point by adding the optional boolean input parameters writeWRGrid, writeCBasis, and writeCRGrid with values of 1, as described <a class="el" href="#scft_param_sweep_linear_param_sub">above</a>. Names for these files, when they are created, end with postfixes "_w.rf", "_c.bf" and "_c.rf", respectively, where "_w" or "_c" is used to indicate a chemical potential (w) or monomer concentration (c) field, while ".bf" or ".rf" is used to indicate a basis or rgrid field file format.</p>
-<p>In addition to files that are output for each state, a sweep command creates a single log file named "sweep.log" that contains a small table of with one row for each state point in the sweep. Each row in this file contains an integer index for a state point, the fractional position along the parameter sweep (denoted "ds"), the Helmholtz free energy and the non-dimensionalized pressure. Values for the Helmholtz free energy and pressure are reported using the same conventions as those used for the variables "fHelmholtz" and "pressure" reported in the <a class="el" href="scft_thermo_page.html">thermo file block</a> of a state file.</p>
-<p>After a sweep is completed, the Python class pscfpp.output.sweep can be used to parse all of the state files produced by a sweep and produce Python lists or tables of data that contain any combination of input and output variables that the user wishes. See the manual page on <a class="el" href="scft_python_page.html">Python Tools</a> for an overview of this and other Python postprocessing tools, in addition to the documentation for this specific class.</p>
+<p>In the case of the pscf_pc and pscf_pg programs, only the converged chemical potential fields are output by default. If these converged fields were obtained using an iterator that preserves space group symmetry, such as AmIteratorBasis, they are output in <a class="el" href="scft_field_basis_page.html">basis format</a>, to files with names that begin with an integer state index end with a suffix "_w.bf", such as "0_w.bf", "1_w.bf", etc. Otherwise, the w fields are output in <a class="el" href="scft_field_rgrid_page.html">r-rgrid format</a> to files with names that end in a suffix "_w.rf". Chemical potential fields in rgrid format and/or monomer concentration fields in basis or rgrid format can also be output at each state point by adding the optional boolean input parameters writeWRGrid, writeCBasis, and writeCRGrid with values of 1, as described <a class="el" href="#scft_sweep_linear_param_sub">above</a>. Names for these files, when they are created, end with postfixes "_w.rf", "_c.bf" and "_c.rf", respectively, where "_w" or "_c" is used to indicate a chemical potential (w) or monomer concentration (c) field, while ".bf" or ".rf" is used to indicate a basis or rgrid field file format.</p>
+<p>In addition to files that are output for each state, a sweep command creates a single log file named "sweep.log" that contains a small table with one row for each state point in the sweep. Each row in this file contains an integer index for a state point, the fractional position along the parameter sweep (denoted "ds"), the Helmholtz free energy and the non-dimensionalized pressure. Values for the Helmholtz free energy and pressure are reported using the same conventions as those used for the variables "fHelmholtz" and "pressure" reported in the <a class="el" href="scft_thermo_page.html">thermo file block</a> of a state file.</p>
+<p>The PSCF package includes a set of Python data analysis tools that are particularly useful for analysis of parameter sweeps. After a sweep is completed, the Python class pscfpp.output.sweep can be used to parse all of the state files produced by a sweep and produce Python lists or tables of data that contain any combination of input and output variables that the user wishes. See the manual page on <a class="el" href="scft_python_page.html">Python Tools</a> for an overview of this and other Python postprocessing tools, including the documentation for this specific class.</p>
 <p><br  />
- <a class="el" href="scft_param_page.html">Parameter Files</a> (Prev and Up) &#160; &#160; &#160; &#160; <a class="el" href="scft_param_1d_page.html">Parameter File - pscf_1d</a> (Next) </p>
+ <a class="el" href="scft_iterator_page.html">Iteration Algorithms</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_page.html">Self-Consistent Field Theory</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="scft_param_page.html">Parameter Files</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

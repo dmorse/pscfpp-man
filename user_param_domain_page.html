@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: Commands - pscf_pg</title>
+<title>PSCF: Parameter File - Domain Block</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -49,19 +49,25 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a href="index.html">PSCF - Polymer Self-Consistent Field</a></li><li class="navelem"><a href="scft_page.html">Self-Consistent Field Theory</a></li><li class="navelem"><a href="scft_command_page.html">Command Files</a></li>  </ul>
+<li class="navelem"><a href="index.html">PSCF - Polymer Self-Consistent Field</a></li><li class="navelem"><a href="user_page.html">User Introduction</a></li><li class="navelem"><a href="user_param_page.html">Parameter Files</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">Commands - pscf_pg </div></div>
+  <div class="headertitle"><div class="title">Parameter File - Domain Block </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="el" href="scft_command_pc_page.html">Commands - pscf_pc</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_thermo_page.html">Thermodynamic Properties</a> (Next) <br  />
+<div class="textblock"><p><a class="el" href="user_param_mixture_page.html">Parameter File - Mixture Block</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_command_page.html">Command Files</a> (Next) <br  />
 </p>
-<p>The pscf_pg GPU-accelerated program provides all of the same capabilities as the pscf_pc CPU program, and accepts all of the same commands. Users of pscf_pg programs should thus consult the documentation for <a class="el" href="scft_command_pc_page.html">pscf_pc commands</a> for a list of commands.</p>
+<p>Every PSCF parameter file contains a block labelled "Domain" that contains information about the spatial domain within which a SCFT or PS-FTS calculation will be performed. This block always appears after the Mixture and <a class="el" href="classPscf_1_1Interaction.html" title="Flory-Huggins excess free energy model.">Interaction</a> blocks. Different formats are are used for this block to describe the one-dimensional domains treated by pscf_1d and the periodic domains treated by pscf_pc and pscf_pg. These parameter block formats are described in the two pages linked below:</p>
+<ol>
+<li>
+<a class="el" href="user_param_domain_1d_page.html">One dimension domains (pscf_1d)</a>  </li>
+<li>
+<a class="el" href="user_param_domain_pc_page.html">Periodic domains (pscf_pc and pscf_pg)</a>  </li>
+</ol>
 <p><br  />
- <a class="el" href="scft_command_pc_page.html">Commands - pscf_pc</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_command_page.html">Command Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="scft_thermo_page.html">Thermodynamic Properties</a> (Next) </p>
+ <a class="el" href="user_param_mixture_page.html">Parameter File - Mixture Block</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_param_page.html">Parameter Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_command_page.html">Command Files</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

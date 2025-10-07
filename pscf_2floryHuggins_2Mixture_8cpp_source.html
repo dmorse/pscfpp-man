@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -309,16 +309,16 @@ $(function() {
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>      }</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>      <span class="comment">// Check and normalize monomer volume fractions</span></div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>      <span class="keywordtype">double</span> sum = 0.0;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>      <span class="keywordtype">double</span> <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a1d531e19f7cc5674cefa424e397f0972">sum</a> = 0.0;</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>      <span class="keywordflow">for</span> (k = 0; k &lt; nMonomer_; ++k) {</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>         <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(c_[k] &gt;= 0.0);</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>         <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(c_[k] &lt;= 1.0);</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>         sum += c_[k];</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>         <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a1d531e19f7cc5674cefa424e397f0972">sum</a> += c_[k];</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      }</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(sum &gt; 0.9999);</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(sum &lt; 1.0001);</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>      <span class="keywordflow">for</span> (k = 0; k &lt; nMonomer_; ++k) {</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>         c_[k] /= sum;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>         c_[k] /= <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a1d531e19f7cc5674cefa424e397f0972">sum</a>;</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      }</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>   }</div>
@@ -656,7 +656,8 @@ $(function() {
 <div class="ttc" id="aglobal_8h_html_ad2512f8bd062d41d66799cf900151487"><div class="ttname"><a href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a></div><div class="ttdeci">#define UTIL_THROW(msg)</div><div class="ttdoc">Macro for throwing an Exception, reporting function, file and line number.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00049">global.h:49</a></div></div>
 <div class="ttc" id="aglobal_8h_html_aeb3d01af710489fd0112efe3054345b4"><div class="ttname"><a href="global_8h.html#aeb3d01af710489fd0112efe3054345b4">UTIL_ASSERT</a></div><div class="ttdeci">#define UTIL_ASSERT(condition)</div><div class="ttdoc">Assertion macro suitable for debugging serial or parallel code.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00075">global.h:75</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1FloryHuggins_html"><div class="ttname"><a href="namespacePscf_1_1FloryHuggins.html">Pscf::FloryHuggins</a></div><div class="ttdoc">Flory-Huggins theory of spatially homogeneous mixtures.</div><div class="ttdef"><b>Definition</b> <a href="Clump_8cpp_source.html#l00011">Clump.cpp:11</a></div></div>
-<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1Reduce_html_a1d531e19f7cc5674cefa424e397f0972"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a1d531e19f7cc5674cefa424e397f0972">Pscf::Prdc::Cpu::Reduce::sum</a></div><div class="ttdeci">double sum(Array&lt; double &gt; const &amp;in)</div><div class="ttdoc">Compute sum of array elements .</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00080">Reduce.cpp:80</a></div></div>
+<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

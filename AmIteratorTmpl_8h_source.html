@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -67,11 +67,11 @@ $(function() {
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">* Distributed under the terms of the GNU General Public License.</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;util/containers/DArray.h&gt;</span>     <span class="comment">// member template</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;util/containers/DMatrix.h&gt;</span>    <span class="comment">// member template</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;util/containers/RingBuffer.h&gt;</span> <span class="comment">// member template</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;util/misc/Timer.h&gt;</span>            <span class="comment">// member template</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;util/accumulators/Average.h&gt;</span>  <span class="comment">// member template</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;util/containers/DArray.h&gt;</span>       <span class="comment">// member template</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;util/containers/DMatrix.h&gt;</span>      <span class="comment">// member template</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;util/containers/RingBuffer.h&gt;</span>   <span class="comment">// member template</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;util/accumulators/Average.h&gt;</span>    <span class="comment">// member template</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;util/misc/Timer.h&gt;</span>              <span class="comment">// member</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// Uncomment to test details of Anderson-Mixing algorithm performance</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//#define PSCF_AM_TEST</span></div>
@@ -79,392 +79,378 @@ $(function() {
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>   <span class="keyword">using namespace </span>Util;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>   </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html">   44</a></span>   <span class="keyword">class </span><a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#ab33190953cf8dca75fd34f881779dc82">AmIteratorTmpl</a> : <span class="keyword">virtual</span> <span class="keyword">public</span> Iterator</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>   {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>   <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#ab33190953cf8dca75fd34f881779dc82">AmIteratorTmpl</a>();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a7decf2817507d097a7ab80603e599856">~AmIteratorTmpl</a>();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#ad9ffb94dd7fcca4eff1eacd4a266b9d4">readParameters</a>(std::istream&amp; in);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#ae73358fa1ae70ca7c4c1e81216a48b3d">solve</a>(<span class="keywordtype">bool</span> isContinuation = <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a4ac22fa359ac9d3cce6c46042acc2796">outputTimers</a>(std::ostream&amp; out) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a66a2a0089b03ae9a3b694dc26e25c665">clearTimers</a>();</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      </div>
-<div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a571324a4ecfdff4941b20a9f0129dd2e">   86</a></span>      std::string <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a571324a4ecfdff4941b20a9f0129dd2e">errorType</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html">   47</a></span>   <span class="keyword">class </span><a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#ab33190953cf8dca75fd34f881779dc82">AmIteratorTmpl</a> : <span class="keyword">virtual</span> <span class="keyword">public</span> Iterator</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>   {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>   <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#ab33190953cf8dca75fd34f881779dc82">   54</a></span>      <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#ab33190953cf8dca75fd34f881779dc82">AmIteratorTmpl</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a7decf2817507d097a7ab80603e599856">   59</a></span>      <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a7decf2817507d097a7ab80603e599856">~AmIteratorTmpl</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#ad9ffb94dd7fcca4eff1eacd4a266b9d4">   66</a></span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#ad9ffb94dd7fcca4eff1eacd4a266b9d4">readParameters</a>(std::istream&amp; in);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#ae73358fa1ae70ca7c4c1e81216a48b3d">   74</a></span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#ae73358fa1ae70ca7c4c1e81216a48b3d">solve</a>(<span class="keywordtype">bool</span> isContinuation = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a4ac22fa359ac9d3cce6c46042acc2796">   81</a></span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a4ac22fa359ac9d3cce6c46042acc2796">outputTimers</a>(std::ostream&amp; out) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a66a2a0089b03ae9a3b694dc26e25c665">   86</a></span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a66a2a0089b03ae9a3b694dc26e25c665">clearTimers</a>();</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>   <span class="keyword">protected</span>:</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#ad0ab7a80b720e7d5138d3dec43e6cb6d">   91</a></span>      std::string <a class="code hl_variable" href="classPscf_1_1AmIteratorTmpl.html#ad0ab7a80b720e7d5138d3dec43e6cb6d">errorType_</a>;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      <span class="comment">// Members of parent classes with non-dependent names</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      <span class="keyword">using </span>Iterator::setClassName;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      <span class="keyword">using </span><a class="code hl_function" href="classUtil_1_1ParamComposite.html#a21c4ae1412ec944d4189cb7c7b6a3171">ParamComposite::read</a>;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      <span class="keyword">using </span><a class="code hl_function" href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">ParamComposite::readOptional</a>;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#aa196fc082b2d632873009e81dad40983">setMaxItr</a>(<span class="keywordtype">int</span> maxItr);</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a2516c6a0c2beb966ad3ed321bd7807ef">setMaxHist</a>(<span class="keywordtype">int</span> maxHist);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a4d483975ac4db7f3e9cd7023debedb44">setErrorType</a>(std::string <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a571324a4ecfdff4941b20a9f0129dd2e">errorType</a>);</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a9205a322c557c51cdc3ebb991ea64e9f">readErrorType</a>(std::istream&amp; in);</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span></div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>      <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#ac28c346f90b36f7174dc798accb27be9">isValidErrorType</a>();</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span></div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>      <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#afce62f5d547473c35e039d16a13b8df3">norm</a>(T <span class="keyword">const</span> &amp; hist);</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a35b2f9b458a3b56f3ffcf55b6236552e">allocateAM</a>();</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a41bec1ca6bbac559d2e7469085f448a7">clear</a>();</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a0b99a48a0ab289af9769b615a1ae464a">setup</a>(<span class="keywordtype">bool</span> isContinuation);</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>      </div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>      <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a3112579f0c4bde562b7b2d5c6f6428e2">computeError</a>(T&amp; residTrial, T&amp; fieldTrial, </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                                  std::string <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a571324a4ecfdff4941b20a9f0129dd2e">errorType</a>, </div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                                  <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a7cbc162e8785ff54fb1a2922a951ce6c">verbose</a>);</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>     </div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a3112579f0c4bde562b7b2d5c6f6428e2">computeError</a>(<span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a7cbc162e8785ff54fb1a2922a951ce6c">verbose</a>);</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>      </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>      <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a28abb7b015ec360e51341a3b2c81412a">computeLambda</a>(<span class="keywordtype">double</span> r);</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span></div>
-<div class="foldopen" id="foldopen00217" data-start="{" data-end="}">
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a317c3e88b6006282b757bd2f9fab06ab">  217</a></span>      T <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a317c3e88b6006282b757bd2f9fab06ab">residual</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span></div>
-<div class="foldopen" id="foldopen00222" data-start="{" data-end="}">
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#af65aca8b7d3bbb98e63dfcb30c8866ed">  222</a></span>      T <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#af65aca8b7d3bbb98e63dfcb30c8866ed">field</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span></div>
-<div class="foldopen" id="foldopen00227" data-start="{" data-end="}">
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a7cbc162e8785ff54fb1a2922a951ce6c">  227</a></span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a7cbc162e8785ff54fb1a2922a951ce6c">verbose</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>      </div>
-<div class="foldopen" id="foldopen00232" data-start="{" data-end="}">
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a683919a1f3a8e161cb86417cbad0e399">  232</a></span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a683919a1f3a8e161cb86417cbad0e399">totalItr</a>();</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>      </div>
-<div class="foldopen" id="foldopen00235" data-start="{" data-end="}">
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a324f73f1f646b9c14cce22efbb0cbbc1">  235</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a324f73f1f646b9c14cce22efbb0cbbc1">timerTotal</a>();</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>      </div>
-<div class="foldopen" id="foldopen00238" data-start="{" data-end="}">
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a950f0963a85ef9ed59bbc0516b9b9cd4">  238</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a950f0963a85ef9ed59bbc0516b9b9cd4">timerMDE</a>();</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span></div>
-<div class="foldopen" id="foldopen00241" data-start="{" data-end="}">
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a6a9dc19560ec2f08e0f797dd42da8079">  241</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a6a9dc19560ec2f08e0f797dd42da8079">timerAM</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#aaf632064eb7c9a76198f12c35f361b24">   93</a></span>      <span class="keywordtype">double</span> <a class="code hl_variable" href="classPscf_1_1AmIteratorTmpl.html#aaf632064eb7c9a76198f12c35f361b24">epsilon_</a>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#acb3495d28db3833c87cf4e2f52f0b350">   98</a></span>      <span class="keywordtype">int</span> <a class="code hl_variable" href="classPscf_1_1AmIteratorTmpl.html#acb3495d28db3833c87cf4e2f52f0b350">maxItr_</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#ae34487094628f8d6e14403771a3577eb">  103</a></span>      <span class="keywordtype">int</span> <a class="code hl_variable" href="classPscf_1_1AmIteratorTmpl.html#ae34487094628f8d6e14403771a3577eb">maxHist_</a>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a95e51b065b6828b9a55f1443cd252a10">  108</a></span>      <span class="keywordtype">int</span> <a class="code hl_variable" href="classPscf_1_1AmIteratorTmpl.html#a95e51b065b6828b9a55f1443cd252a10">verbose_</a>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#ad0ab7a80b720e7d5138d3dec43e6cb6d">  113</a></span>      std::string <a class="code hl_variable" href="classPscf_1_1AmIteratorTmpl.html#ad0ab7a80b720e7d5138d3dec43e6cb6d">errorType_</a>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      <span class="comment">// Parameter initialization</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a9205a322c557c51cdc3ebb991ea64e9f">  122</a></span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a9205a322c557c51cdc3ebb991ea64e9f">readErrorType</a>(std::istream&amp; in);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#ac28c346f90b36f7174dc798accb27be9">  131</a></span>      <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#ac28c346f90b36f7174dc798accb27be9">isValidErrorType</a>();</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a2abf62c5ccc4d30acf8afb8c074e50ac">  143</a></span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a2abf62c5ccc4d30acf8afb8c074e50ac">readMixingParameters</a>(std::istream&amp; in, </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                                <span class="keywordtype">bool</span> useLambdaRamp = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>      <span class="comment">// Protected AM mixing operations</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a35b2f9b458a3b56f3ffcf55b6236552e">  154</a></span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a35b2f9b458a3b56f3ffcf55b6236552e">allocateAM</a>();</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a3987903c9536462dd9659df814f5e62c">  159</a></span>      <span class="keywordtype">bool</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a3987903c9536462dd9659df814f5e62c">isAllocatedAM</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a0b99a48a0ab289af9769b615a1ae464a">  172</a></span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a0b99a48a0ab289af9769b615a1ae464a">setup</a>(<span class="keywordtype">bool</span> isContinuation);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a41bec1ca6bbac559d2e7469085f448a7">  180</a></span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a41bec1ca6bbac559d2e7469085f448a7">clear</a>();</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>      <span class="keyword">virtual</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#ad04e76fb3e2e03ce87300303e36377d9">  192</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#ad04e76fb3e2e03ce87300303e36377d9">computeError</a>(T&amp; residTrial, T&amp; stateTrial,</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                          std::string <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a571324a4ecfdff4941b20a9f0129dd2e">errorType</a>, <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a7cbc162e8785ff54fb1a2922a951ce6c">verbose</a>);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a2fe889e87b6dae5982eca17e0749b58d">  201</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a2fe889e87b6dae5982eca17e0749b58d">computeError</a>(<span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a7cbc162e8785ff54fb1a2922a951ce6c">verbose</a>);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a00725afb67d0d1697273c5b982e2d2b6">  208</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a00725afb67d0d1697273c5b982e2d2b6">lambdaRampFactor</a>();</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#ab8b7d6869d79bc4f4addde9731c32e99">  219</a></span>      <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#ab8b7d6869d79bc4f4addde9731c32e99">computeLambda</a>();</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>      <span class="comment">// Protected accessors for member variables</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a7cbc162e8785ff54fb1a2922a951ce6c">  226</a></span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a7cbc162e8785ff54fb1a2922a951ce6c">verbose</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a571324a4ecfdff4941b20a9f0129dd2e">  231</a></span>      std::string <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a571324a4ecfdff4941b20a9f0129dd2e">errorType</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a317c3e88b6006282b757bd2f9fab06ab">  236</a></span>      T <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a317c3e88b6006282b757bd2f9fab06ab">residual</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#ada14e7d0a31071a8571dadec0522fed2">  241</a></span>      T <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#ada14e7d0a31071a8571dadec0522fed2">state</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span></div>
-<div class="foldopen" id="foldopen00244" data-start="{" data-end="}">
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#aaf03dc4406daaf5bf6f00c3eed416b4d">  244</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#aaf03dc4406daaf5bf6f00c3eed416b4d">timerResid</a>();</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span></div>
-<div class="foldopen" id="foldopen00247" data-start="{" data-end="}">
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a0d8e83ed86addc299afd911061c9b9af">  247</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a0d8e83ed86addc299afd911061c9b9af">timerError</a>();</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span></div>
-<div class="foldopen" id="foldopen00250" data-start="{" data-end="}">
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a85282947c4bd9b322b6c2c7adc12eef5">  250</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a85282947c4bd9b322b6c2c7adc12eef5">timerCoeff</a>();</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span></div>
-<div class="foldopen" id="foldopen00253" data-start="{" data-end="}">
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a44600447d7ec6f74179602e010bb0cb6">  253</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a44600447d7ec6f74179602e010bb0cb6">timerOmega</a>();</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a683919a1f3a8e161cb86417cbad0e399">  246</a></span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a683919a1f3a8e161cb86417cbad0e399">totalItr</a>();</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      <span class="comment">// --- Timer value accessors --- //</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a324f73f1f646b9c14cce22efbb0cbbc1">  253</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a324f73f1f646b9c14cce22efbb0cbbc1">timerTotal</a>();</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span></div>
-<div class="foldopen" id="foldopen00258" data-start="{" data-end="}">
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a3987903c9536462dd9659df814f5e62c">  258</a></span>      <span class="keywordtype">bool</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a3987903c9536462dd9659df814f5e62c">isAllocatedAM</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>      </div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>   <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>      </div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>      <span class="comment">// Private member variables</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span></div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>      <span class="keywordtype">double</span> error_;</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span></div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      <span class="keywordtype">double</span> epsilon_;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a950f0963a85ef9ed59bbc0516b9b9cd4">  258</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a950f0963a85ef9ed59bbc0516b9b9cd4">timerMDE</a>();</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a6a9dc19560ec2f08e0f797dd42da8079">  263</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a6a9dc19560ec2f08e0f797dd42da8079">timerAM</a>();</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#aaf03dc4406daaf5bf6f00c3eed416b4d">  268</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#aaf03dc4406daaf5bf6f00c3eed416b4d">timerResid</a>();</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span></div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>      <span class="keywordtype">double</span> lambda_;</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>      </div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>      <span class="keywordtype">double</span> r_;</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span></div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>      <span class="keywordtype">int</span> maxItr_;</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span></div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>      <span class="keywordtype">int</span> maxHist_;</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span></div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>      <span class="keywordtype">int</span> nBasis_;</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span></div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>      <span class="keywordtype">int</span> itr_;</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>      </div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>      <span class="keywordtype">int</span> totalItr_;</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span></div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      <span class="keywordtype">int</span> nElem_; </div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span></div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>      <span class="keywordtype">int</span> verbose_;</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span></div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>      <span class="keywordtype">bool</span> isAllocatedAM_;</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span></div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>      <a class="code hl_class" href="classUtil_1_1RingBuffer.html">RingBuffer&lt;T&gt;</a> fieldHists_;</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span></div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>      <a class="code hl_class" href="classUtil_1_1RingBuffer.html">RingBuffer&lt;T&gt;</a> fieldBasis_;</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span></div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>      <a class="code hl_class" href="classUtil_1_1RingBuffer.html">RingBuffer&lt;T&gt;</a> resHists_;</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span></div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>      <a class="code hl_class" href="classUtil_1_1RingBuffer.html">RingBuffer&lt;T&gt;</a> resBasis_;</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span></div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>      <a class="code hl_class" href="classUtil_1_1DMatrix.html">DMatrix&lt;double&gt;</a> U_;</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span></div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>      <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a> coeffs_;</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span></div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>      <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a> v_;</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span></div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>      T fieldTrial_;</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span></div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>      T resTrial_;</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span></div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>      T temp_;</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>      </div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>      <span class="comment">// Timers for analyzing performance</span></div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timerMDE_;</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timerAM_;</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timerResid_;</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timerError_;</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timerCoeff_;</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timerOmega_;</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timerTotal_;</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="preprocessor">      #ifdef PSCF_AM_TEST</span></div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      <span class="keywordtype">bool</span> hasAmTest_{<span class="keyword">false</span>};</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>      <span class="keywordtype">double</span> preError_{0};</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>      <span class="keywordtype">double</span> projectionError_{0};</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>      <span class="keywordtype">double</span> correctionError_{0};</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>      <span class="keywordtype">double</span> projectionRatio_{0};</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>      <span class="keywordtype">double</span> correctionRatio_{0};</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>      <span class="keywordtype">int</span> testCounter{0};</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="preprocessor">      #endif</span></div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>      </div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>      <span class="comment">// --- Non-virtual private functions (implemented here) ---- //</span></div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span></div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>      <span class="keywordtype">void</span> computeResidCoeff();</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span></div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>      <span class="keywordtype">void</span> updateGuess();</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span> </div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>      <span class="comment">// --- Private virtual functions with default implementations --- //</span></div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>      </div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> updateU(DMatrix&lt;double&gt; &amp; U, </div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                           RingBuffer&lt;T&gt; <span class="keyword">const</span> &amp; resBasis, <span class="keywordtype">int</span> nHist);</div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span></div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> updateV(DArray&lt;double&gt; &amp; v, T <span class="keyword">const</span> &amp; resCurrent, </div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>                           RingBuffer&lt;T&gt; <span class="keyword">const</span> &amp; resBasis, <span class="keywordtype">int</span> nHist);</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>      </div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>      <span class="comment">// --- Pure virtual methods for doing AM iterator math --- //</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a0d8e83ed86addc299afd911061c9b9af">  273</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a0d8e83ed86addc299afd911061c9b9af">timerError</a>();</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a85282947c4bd9b322b6c2c7adc12eef5">  278</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a85282947c4bd9b322b6c2c7adc12eef5">timerCoeff</a>();</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a44600447d7ec6f74179602e010bb0cb6">  283</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a44600447d7ec6f74179602e010bb0cb6">timerOmega</a>();</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>      <span class="comment">// Inherited members of parent classes with non-dependent names</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>      <span class="keyword">using </span><a class="code hl_function" href="classUtil_1_1ParamComposite.html#a21c4ae1412ec944d4189cb7c7b6a3171">ParamComposite::read</a>;</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>      <span class="keyword">using </span><a class="code hl_function" href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">ParamComposite::readOptional</a>;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>   <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>      <span class="comment">// Private member variables</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span></div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>      <span class="keywordtype">double</span> error_;</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>      <span class="keywordtype">int</span> nBasis_;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span></div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>      <span class="keywordtype">int</span> itr_;</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span></div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>      <span class="keywordtype">int</span> totalItr_;</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>      <span class="keywordtype">int</span> nElem_;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span></div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>      <span class="keywordtype">double</span> lambda_;</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span></div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>      <span class="keywordtype">double</span> r_;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span></div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>      <span class="keywordtype">bool</span> useLambdaRamp_;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>      <span class="keywordtype">bool</span> isAllocatedAM_;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span></div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>      <a class="code hl_class" href="classUtil_1_1RingBuffer.html">RingBuffer&lt;T&gt;</a> stateHistory_;</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span></div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>      <a class="code hl_class" href="classUtil_1_1RingBuffer.html">RingBuffer&lt;T&gt;</a> stateBasis_;</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>      <a class="code hl_class" href="classUtil_1_1RingBuffer.html">RingBuffer&lt;T&gt;</a> residualHistory_;</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span></div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>      <a class="code hl_class" href="classUtil_1_1RingBuffer.html">RingBuffer&lt;T&gt;</a> residualBasis_;</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span></div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>      <a class="code hl_class" href="classUtil_1_1DMatrix.html">DMatrix&lt;double&gt;</a> U_;</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>      <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a> v_;</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>      <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a> coeffs_;</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>      T stateTrial_;</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span></div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>      T residualTrial_;</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span></div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>      T temp_;</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>      <span class="comment">// Timers for analyzing performance</span></div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timerMDE_;</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timerAM_;</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timerResid_;</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timerError_;</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timerCoeff_;</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timerOmega_;</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timerTotal_;</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span> </div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="preprocessor">      #ifdef PSCF_AM_TEST</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>      <span class="keywordtype">bool</span> hasAmTest_{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>      <span class="keywordtype">double</span> preError_{0};</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>      <span class="keywordtype">double</span> projectionError_{0};</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>      <span class="keywordtype">double</span> correctionError_{0};</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>      <span class="keywordtype">double</span> projectionRatio_{0};</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>      <span class="keywordtype">double</span> correctionRatio_{0};</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>      <span class="keywordtype">int</span> testCounter{0};</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span><span class="preprocessor">      #endif</span></div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>      <span class="comment">// Private non-virtual functions used in AM algorithm</span></div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span></div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>      <span class="keywordtype">void</span> updateBasis(RingBuffer&lt;T&gt; &amp; basis,</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>                       RingBuffer&lt;T&gt; <span class="keyword">const</span> &amp; history);</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span></div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>      <span class="keywordtype">void</span> updateU(DMatrix&lt;double&gt; &amp; U,</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>                   RingBuffer&lt;T&gt; <span class="keyword">const</span> &amp; resBasis);</div>
 <div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span></div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEqual(T&amp; a, T <span class="keyword">const</span> &amp; b) = 0;</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span></div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>      <span class="keyword">virtual</span> <span class="keywordtype">double</span> dotProduct(T <span class="keyword">const</span> &amp; a, T <span class="keyword">const</span> &amp; b) = 0;</div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span></div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>      <span class="keyword">virtual</span> <span class="keywordtype">double</span> maxAbs(T <span class="keyword">const</span> &amp; hist) = 0;</div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span></div>
-<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>      <span class="keyword">virtual</span> </div>
-<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>      <span class="keywordtype">void</span> updateBasis(RingBuffer&lt;T&gt; &amp; basis, </div>
-<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>                       RingBuffer&lt;T&gt; <span class="keyword">const</span> &amp; hists) = 0;</div>
-<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span></div>
-<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>      <span class="keyword">virtual</span> </div>
-<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>      <span class="keywordtype">void</span> addHistories(T&amp; trial, </div>
-<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>                        RingBuffer&lt;T&gt; <span class="keyword">const</span> &amp; basis, </div>
-<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>                        DArray&lt;double&gt; coeffs, </div>
-<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>                        <span class="keywordtype">int</span> nHist) = 0;</div>
-<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span></div>
-<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>      <span class="keyword">virtual</span> </div>
-<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>      <span class="keywordtype">void</span> addPredictedError(T&amp; fieldTrial, T <span class="keyword">const</span> &amp; resTrial, </div>
-<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>                             <span class="keywordtype">double</span> lambda) = 0;</div>
-<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span> </div>
-<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>      <span class="comment">// -- Pure virtual functions to exchange data with parent system -- //</span></div>
-<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>     </div>
-<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>      <span class="keyword">virtual</span> <span class="keywordtype">bool</span> hasInitialGuess() = 0;</div>
-<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>     </div>
-<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>      <span class="keyword">virtual</span> <span class="keywordtype">int</span> nElements() = 0;</div>
-<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span></div>
-<div class="line"><a id="l00474" name="l00474"></a><span class="lineno">  474</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> getCurrent(T&amp; curr) = 0;</div>
-<div class="line"><a id="l00475" name="l00475"></a><span class="lineno">  475</span></div>
-<div class="line"><a id="l00483" name="l00483"></a><span class="lineno">  483</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> evaluate() = 0;</div>
-<div class="line"><a id="l00484" name="l00484"></a><span class="lineno">  484</span></div>
-<div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> getResidual(T&amp; resid) = 0;</div>
-<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span></div>
-<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> update(T&amp; newGuess) = 0;</div>
-<div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span></div>
-<div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> outputToLog() = 0;</div>
-<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span> </div>
-<div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span>   };</div>
-<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>  </div>
-<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span><span class="comment">   * Return the current residual vector by const reference.</span></div>
-<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00510" data-start="{" data-end="}">
-<div class="line"><a id="l00510" name="l00510"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a317c3e88b6006282b757bd2f9fab06ab">  510</a></span>   T <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a317c3e88b6006282b757bd2f9fab06ab">AmIteratorTmpl&lt;Iterator,T&gt;::residual</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> resHists_[0]; }</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>      <span class="keywordtype">void</span> computeV(DArray&lt;double&gt; &amp; v, </div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>                   T <span class="keyword">const</span> &amp; resCurrent,</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>                   RingBuffer&lt;T&gt; <span class="keyword">const</span> &amp; resBasis);</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span></div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>      <span class="keywordtype">void</span> computeTrialCoeff();</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span></div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>      <span class="keywordtype">void</span> updateTrial();</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span></div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>      <span class="keywordtype">void</span> addEqVectors(T&amp; v,</div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>                        RingBuffer&lt;T&gt; <span class="keyword">const</span> &amp; basis,</div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>                        DArray&lt;double&gt; coeffs);</div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span> </div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>      <span class="comment">// Private virtual functions with a default implementation </span></div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span></div>
+<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>      <span class="keyword">virtual</span> </div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>      <span class="keywordtype">void</span> addCorrection(T&amp; stateTrial, T <span class="keyword">const</span> &amp; residualTrial);</div>
+<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span> </div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>      <span class="comment">// Private pure virtual functions that interact with parent system</span></div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span></div>
+<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>      <span class="keyword">virtual</span> <span class="keywordtype">int</span> nElements() = 0;</div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span></div>
+<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>      <span class="keyword">virtual</span> <span class="keywordtype">bool</span> hasInitialGuess() = 0;</div>
+<div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span></div>
+<div class="line"><a id="l00477" name="l00477"></a><span class="lineno">  477</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> getCurrent(T&amp; curr) = 0;</div>
+<div class="line"><a id="l00478" name="l00478"></a><span class="lineno">  478</span></div>
+<div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> evaluate() = 0;</div>
+<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span></div>
+<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> getResidual(T&amp; resid) = 0;</div>
+<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span></div>
+<div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> update(T&amp; newGuess) = 0;</div>
+<div class="line"><a id="l00501" name="l00501"></a><span class="lineno">  501</span></div>
+<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> outputToLog() = 0;</div>
+<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span> </div>
+<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>      <span class="comment">// Private functions for vector math</span></div>
+<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span></div>
+<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEqual(T&amp; a, T <span class="keyword">const</span> &amp; b) = 0;</div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span></div>
+<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>      <span class="keyword">virtual</span> <span class="keywordtype">double</span> dotProduct(T <span class="keyword">const</span> &amp; a, T <span class="keyword">const</span> &amp; b) = 0;</div>
+<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span></div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>      <span class="keywordtype">double</span> norm(T <span class="keyword">const</span> &amp; a);</div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span></div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>      <span class="keyword">virtual</span> <span class="keywordtype">double</span> maxAbs(T <span class="keyword">const</span> &amp; a) = 0;</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span></div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> subVV(T&amp; a, T <span class="keyword">const</span> &amp; b, T <span class="keyword">const</span> &amp; c) = 0;</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span></div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> addEqVc(T&amp; a, T <span class="keyword">const</span> &amp; b, <span class="keywordtype">double</span> c) = 0;</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span> </div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>   };</div>
 </div>
-<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span> </div>
-<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span><span class="comment">   * Return the current field/state vector by const reference.</span></div>
-<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00517" data-start="{" data-end="}">
-<div class="line"><a id="l00517" name="l00517"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#af65aca8b7d3bbb98e63dfcb30c8866ed">  517</a></span>   T <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#af65aca8b7d3bbb98e63dfcb30c8866ed">AmIteratorTmpl&lt;Iterator,T&gt;::field</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> fieldHists_[0]; }</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span> </div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span><span class="comment">   * Return integer level for verbosity of the log output (0-2).</span></div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00568" data-start="{" data-end="}">
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a7cbc162e8785ff54fb1a2922a951ce6c">  568</a></span>   <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a7cbc162e8785ff54fb1a2922a951ce6c">AmIteratorTmpl&lt;Iterator,T&gt;::verbose</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> <a class="code hl_variable" href="classPscf_1_1AmIteratorTmpl.html#a95e51b065b6828b9a55f1443cd252a10">verbose_</a>; }</div>
 </div>
-<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span> </div>
-<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span><span class="comment">   * Integer level for verbosity of the log output (0-2).</span></div>
-<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00524" data-start="{" data-end="}">
-<div class="line"><a id="l00524" name="l00524"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a7cbc162e8785ff54fb1a2922a951ce6c">  524</a></span>   <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a7cbc162e8785ff54fb1a2922a951ce6c">AmIteratorTmpl&lt;Iterator,T&gt;::verbose</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> verbose_; }</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span> </div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span><span class="comment">   * Return error type string.</span></div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00575" data-start="{" data-end="}">
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a571324a4ecfdff4941b20a9f0129dd2e">  575</a></span>   std::string <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a571324a4ecfdff4941b20a9f0129dd2e">AmIteratorTmpl&lt;Iterator,T&gt;::errorType</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> <a class="code hl_variable" href="classPscf_1_1AmIteratorTmpl.html#ad0ab7a80b720e7d5138d3dec43e6cb6d">errorType_</a>; }</div>
 </div>
-<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span> </div>
-<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span><span class="comment">   * Has memory required by AM algorithm been allocated?</span></div>
-<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00531" data-start="{" data-end="}">
-<div class="line"><a id="l00531" name="l00531"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a3987903c9536462dd9659df814f5e62c">  531</a></span>   <span class="keywordtype">bool</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a3987903c9536462dd9659df814f5e62c">AmIteratorTmpl&lt;Iterator,T&gt;::isAllocatedAM</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> isAllocatedAM_; }</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span> </div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span><span class="comment">   * Return the current state vector by const reference.</span></div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00582" data-start="{" data-end="}">
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#ada14e7d0a31071a8571dadec0522fed2">  582</a></span>   T <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#ada14e7d0a31071a8571dadec0522fed2">AmIteratorTmpl&lt;Iterator,T&gt;::state</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> stateHistory_[0]; }</div>
 </div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span> </div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span><span class="comment">   * Return the current residual vector by const reference.</span></div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00589" data-start="{" data-end="}">
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a317c3e88b6006282b757bd2f9fab06ab">  589</a></span>   T <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a317c3e88b6006282b757bd2f9fab06ab">AmIteratorTmpl&lt;Iterator,T&gt;::residual</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> residualHistory_[0]; }</div>
 </div>
-<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>   </div>
-<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span><span class="comment">   * Return error type</span></div>
-<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span><span class="comment">   */</span> </div>
-<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00538" data-start="{" data-end="}">
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a571324a4ecfdff4941b20a9f0129dd2e">  538</a></span>   std::string <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a571324a4ecfdff4941b20a9f0129dd2e">AmIteratorTmpl&lt;Iterator,T&gt;::errorType</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> <a class="code hl_variable" href="classPscf_1_1AmIteratorTmpl.html#ad0ab7a80b720e7d5138d3dec43e6cb6d">errorType_</a>; }</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span> </div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span><span class="comment">   * Has memory required by the AM algorithm been allocated?</span></div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00596" data-start="{" data-end="}">
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a3987903c9536462dd9659df814f5e62c">  596</a></span>   <span class="keywordtype">bool</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a3987903c9536462dd9659df814f5e62c">AmIteratorTmpl&lt;Iterator,T&gt;::isAllocatedAM</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> isAllocatedAM_; }</div>
 </div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>   </div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span><span class="comment">   * Return total iteration counter</span></div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00545" data-start="{" data-end="}">
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a683919a1f3a8e161cb86417cbad0e399">  545</a></span>   <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a683919a1f3a8e161cb86417cbad0e399">AmIteratorTmpl&lt;Iterator,T&gt;::totalItr</a>() </div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>   {  <span class="keywordflow">return</span> totalItr_; }</div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span> </div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span><span class="comment">   * Return total iteration counter.</span></div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00603" data-start="{" data-end="}">
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a683919a1f3a8e161cb86417cbad0e399">  603</a></span>   <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a683919a1f3a8e161cb86417cbad0e399">AmIteratorTmpl&lt;Iterator,T&gt;::totalItr</a>()</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>   {  <span class="keywordflow">return</span> totalItr_; }</div>
 </div>
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>   </div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span><span class="comment">   * Return computing MDE time cost</span></div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00552" data-start="{" data-end="}">
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a950f0963a85ef9ed59bbc0516b9b9cd4">  552</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a950f0963a85ef9ed59bbc0516b9b9cd4">AmIteratorTmpl&lt;Iterator,T&gt;::timerMDE</a>() </div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>   {  <span class="keywordflow">return</span> timerMDE_.time(); }</div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span> </div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span><span class="comment">   * Return computing MDE time cost.</span></div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00610" data-start="{" data-end="}">
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a950f0963a85ef9ed59bbc0516b9b9cd4">  610</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a950f0963a85ef9ed59bbc0516b9b9cd4">AmIteratorTmpl&lt;Iterator,T&gt;::timerMDE</a>()</div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>   {  <span class="keywordflow">return</span> timerMDE_.time(); }</div>
 </div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>  </div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span><span class="comment">   * Return computing AM time cost</span></div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00559" data-start="{" data-end="}">
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a6a9dc19560ec2f08e0f797dd42da8079">  559</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a6a9dc19560ec2f08e0f797dd42da8079">AmIteratorTmpl&lt;Iterator,T&gt;::timerAM</a>() </div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>   {  <span class="keywordflow">return</span> timerAM_.time(); }</div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span> </div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span><span class="comment">   * Return computing AM time cost.</span></div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00617" data-start="{" data-end="}">
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a6a9dc19560ec2f08e0f797dd42da8079">  617</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a6a9dc19560ec2f08e0f797dd42da8079">AmIteratorTmpl&lt;Iterator,T&gt;::timerAM</a>()</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>   {  <span class="keywordflow">return</span> timerAM_.time(); }</div>
 </div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>   </div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span><span class="comment">   * Return computing Resid time cost</span></div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00566" data-start="{" data-end="}">
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#aaf03dc4406daaf5bf6f00c3eed416b4d">  566</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#aaf03dc4406daaf5bf6f00c3eed416b4d">AmIteratorTmpl&lt;Iterator,T&gt;::timerResid</a>() </div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>   {  <span class="keywordflow">return</span> timerResid_.time(); }</div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span> </div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span><span class="comment">   * Return computing Resid time cost.</span></div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00624" data-start="{" data-end="}">
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#aaf03dc4406daaf5bf6f00c3eed416b4d">  624</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#aaf03dc4406daaf5bf6f00c3eed416b4d">AmIteratorTmpl&lt;Iterator,T&gt;::timerResid</a>()</div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>   {  <span class="keywordflow">return</span> timerResid_.time(); }</div>
 </div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>   </div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span><span class="comment">   * Return computing Error time cost</span></div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00573" data-start="{" data-end="}">
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a0d8e83ed86addc299afd911061c9b9af">  573</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a0d8e83ed86addc299afd911061c9b9af">AmIteratorTmpl&lt;Iterator,T&gt;::timerError</a>() </div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>   {  <span class="keywordflow">return</span> timerError_.time(); }</div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span> </div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span><span class="comment">   * Return computing Error time cost.</span></div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00631" data-start="{" data-end="}">
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a0d8e83ed86addc299afd911061c9b9af">  631</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a0d8e83ed86addc299afd911061c9b9af">AmIteratorTmpl&lt;Iterator,T&gt;::timerError</a>()</div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>   {  <span class="keywordflow">return</span> timerError_.time(); }</div>
 </div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>   </div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span><span class="comment">   * Return computing Coeff time cost</span></div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00580" data-start="{" data-end="}">
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a85282947c4bd9b322b6c2c7adc12eef5">  580</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a85282947c4bd9b322b6c2c7adc12eef5">AmIteratorTmpl&lt;Iterator,T&gt;::timerCoeff</a>() </div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>   {  <span class="keywordflow">return</span> timerCoeff_.time(); }</div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span> </div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span><span class="comment">   * Return computing Coeff time cost.</span></div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00638" data-start="{" data-end="}">
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a85282947c4bd9b322b6c2c7adc12eef5">  638</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a85282947c4bd9b322b6c2c7adc12eef5">AmIteratorTmpl&lt;Iterator,T&gt;::timerCoeff</a>()</div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>   {  <span class="keywordflow">return</span> timerCoeff_.time(); }</div>
 </div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>   </div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span><span class="comment">   * Return computing Omega time cost</span></div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00587" data-start="{" data-end="}">
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a44600447d7ec6f74179602e010bb0cb6">  587</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a44600447d7ec6f74179602e010bb0cb6">AmIteratorTmpl&lt;Iterator,T&gt;::timerOmega</a>() </div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>   {  <span class="keywordflow">return</span> timerOmega_.time(); }</div>
+<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span> </div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span><span class="comment">   * Return computing Omega time cost.</span></div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00645" data-start="{" data-end="}">
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a44600447d7ec6f74179602e010bb0cb6">  645</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a44600447d7ec6f74179602e010bb0cb6">AmIteratorTmpl&lt;Iterator,T&gt;::timerOmega</a>()</div>
+<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>   {  <span class="keywordflow">return</span> timerOmega_.time(); }</div>
 </div>
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span> </div>
+<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span><span class="comment">   * Return total time cost.</span></div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00652" data-start="{" data-end="}">
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a324f73f1f646b9c14cce22efbb0cbbc1">  652</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a324f73f1f646b9c14cce22efbb0cbbc1">AmIteratorTmpl&lt;Iterator,T&gt;::timerTotal</a>()</div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>   {  <span class="keywordflow">return</span> timerTotal_.time(); }</div>
 </div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>   </div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span><span class="comment">   * Return total time cost</span></div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00594" data-start="{" data-end="}">
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno"><a class="line" href="classPscf_1_1AmIteratorTmpl.html#a324f73f1f646b9c14cce22efbb0cbbc1">  594</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#a324f73f1f646b9c14cce22efbb0cbbc1">AmIteratorTmpl&lt;Iterator,T&gt;::timerTotal</a>() </div>
-<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>   {  <span class="keywordflow">return</span> timerTotal_.time(); }</div>
-</div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>   </div>
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>}</div>
-<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span><span class="preprocessor">#include &quot;AmIteratorTmpl.tpp&quot;</span></div>
-<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span><span class="preprocessor">#endif</span></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a0b99a48a0ab289af9769b615a1ae464a"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a0b99a48a0ab289af9769b615a1ae464a">Pscf::AmIteratorTmpl::setup</a></div><div class="ttdeci">virtual void setup(bool isContinuation)</div><div class="ttdoc">Initialize just before entry to iterative loop.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00505">AmIteratorTmpl.tpp:505</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a0d8e83ed86addc299afd911061c9b9af"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a0d8e83ed86addc299afd911061c9b9af">Pscf::AmIteratorTmpl::timerError</a></div><div class="ttdeci">double timerError()</div><div class="ttdoc">Get time evaluating scalar error.</div><div class="ttdef"><b>Definition</b> <a href="#l00573">AmIteratorTmpl.h:573</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a2516c6a0c2beb966ad3ed321bd7807ef"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a2516c6a0c2beb966ad3ed321bd7807ef">Pscf::AmIteratorTmpl::setMaxHist</a></div><div class="ttdeci">void setMaxHist(int maxHist)</div><div class="ttdoc">Set value of maxHist (number of retained previous states)</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00236">AmIteratorTmpl.tpp:236</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a28abb7b015ec360e51341a3b2c81412a"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a28abb7b015ec360e51341a3b2c81412a">Pscf::AmIteratorTmpl::computeLambda</a></div><div class="ttdeci">virtual double computeLambda(double r)</div><div class="ttdoc">Compute mixing parameter for correction step of Anderson mixing.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00526">AmIteratorTmpl.tpp:526</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a3112579f0c4bde562b7b2d5c6f6428e2"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a3112579f0c4bde562b7b2d5c6f6428e2">Pscf::AmIteratorTmpl::computeError</a></div><div class="ttdeci">virtual double computeError(T &amp;residTrial, T &amp;fieldTrial, std::string errorType, int verbose)</div><div class="ttdoc">Compute and return error used to test for convergence.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00583">AmIteratorTmpl.tpp:583</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a317c3e88b6006282b757bd2f9fab06ab"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a317c3e88b6006282b757bd2f9fab06ab">Pscf::AmIteratorTmpl::residual</a></div><div class="ttdeci">T const &amp; residual() const</div><div class="ttdoc">Return the current residual vector by const reference.</div><div class="ttdef"><b>Definition</b> <a href="#l00510">AmIteratorTmpl.h:510</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a324f73f1f646b9c14cce22efbb0cbbc1"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a324f73f1f646b9c14cce22efbb0cbbc1">Pscf::AmIteratorTmpl::timerTotal</a></div><div class="ttdeci">double timerTotal()</div><div class="ttdoc">Get total time.</div><div class="ttdef"><b>Definition</b> <a href="#l00594">AmIteratorTmpl.h:594</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a35b2f9b458a3b56f3ffcf55b6236552e"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a35b2f9b458a3b56f3ffcf55b6236552e">Pscf::AmIteratorTmpl::allocateAM</a></div><div class="ttdeci">void allocateAM()</div><div class="ttdoc">Allocate memory required by AM algorithm, if necessary.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00310">AmIteratorTmpl.tpp:310</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a3987903c9536462dd9659df814f5e62c"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a3987903c9536462dd9659df814f5e62c">Pscf::AmIteratorTmpl::isAllocatedAM</a></div><div class="ttdeci">bool isAllocatedAM() const</div><div class="ttdoc">Have data structures required by the AM algorithm been allocated?</div><div class="ttdef"><b>Definition</b> <a href="#l00531">AmIteratorTmpl.h:531</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a41bec1ca6bbac559d2e7469085f448a7"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a41bec1ca6bbac559d2e7469085f448a7">Pscf::AmIteratorTmpl::clear</a></div><div class="ttdeci">virtual void clear()</div><div class="ttdoc">Clear information about history.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00341">AmIteratorTmpl.tpp:341</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a44600447d7ec6f74179602e010bb0cb6"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a44600447d7ec6f74179602e010bb0cb6">Pscf::AmIteratorTmpl::timerOmega</a></div><div class="ttdeci">double timerOmega()</div><div class="ttdoc">Get time updating w fields.</div><div class="ttdef"><b>Definition</b> <a href="#l00587">AmIteratorTmpl.h:587</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a4ac22fa359ac9d3cce6c46042acc2796"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a4ac22fa359ac9d3cce6c46042acc2796">Pscf::AmIteratorTmpl::outputTimers</a></div><div class="ttdeci">void outputTimers(std::ostream &amp;out) const</div><div class="ttdoc">Log output timing results.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00637">AmIteratorTmpl.tpp:637</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a4d483975ac4db7f3e9cd7023debedb44"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a4d483975ac4db7f3e9cd7023debedb44">Pscf::AmIteratorTmpl::setErrorType</a></div><div class="ttdeci">void setErrorType(std::string errorType)</div><div class="ttdoc">Set and validate value of errorType string.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00243">AmIteratorTmpl.tpp:243</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a571324a4ecfdff4941b20a9f0129dd2e"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a571324a4ecfdff4941b20a9f0129dd2e">Pscf::AmIteratorTmpl::errorType</a></div><div class="ttdeci">std::string errorType() const</div><div class="ttdoc">Obtain error type.</div><div class="ttdef"><b>Definition</b> <a href="#l00538">AmIteratorTmpl.h:538</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a66a2a0089b03ae9a3b694dc26e25c665"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a66a2a0089b03ae9a3b694dc26e25c665">Pscf::AmIteratorTmpl::clearTimers</a></div><div class="ttdeci">void clearTimers()</div><div class="ttdoc">Clear timers.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00681">AmIteratorTmpl.tpp:681</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a683919a1f3a8e161cb86417cbad0e399"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a683919a1f3a8e161cb86417cbad0e399">Pscf::AmIteratorTmpl::totalItr</a></div><div class="ttdeci">int totalItr()</div><div class="ttdoc">Return the total number of iterations needed to converge.</div><div class="ttdef"><b>Definition</b> <a href="#l00545">AmIteratorTmpl.h:545</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a6a9dc19560ec2f08e0f797dd42da8079"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a6a9dc19560ec2f08e0f797dd42da8079">Pscf::AmIteratorTmpl::timerAM</a></div><div class="ttdeci">double timerAM()</div><div class="ttdoc">Get total time for AM algorithm, excluding MDE solution.</div><div class="ttdef"><b>Definition</b> <a href="#l00559">AmIteratorTmpl.h:559</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a7cbc162e8785ff54fb1a2922a951ce6c"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a7cbc162e8785ff54fb1a2922a951ce6c">Pscf::AmIteratorTmpl::verbose</a></div><div class="ttdeci">int verbose() const</div><div class="ttdoc">Verbosity level, allowed values 0, 1, or 2.</div><div class="ttdef"><b>Definition</b> <a href="#l00524">AmIteratorTmpl.h:524</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a7decf2817507d097a7ab80603e599856"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a7decf2817507d097a7ab80603e599856">Pscf::AmIteratorTmpl::~AmIteratorTmpl</a></div><div class="ttdeci">~AmIteratorTmpl()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00049">AmIteratorTmpl.tpp:49</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a85282947c4bd9b322b6c2c7adc12eef5"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a85282947c4bd9b322b6c2c7adc12eef5">Pscf::AmIteratorTmpl::timerCoeff</a></div><div class="ttdeci">double timerCoeff()</div><div class="ttdoc">Get time evaluating Anderson mixing coefficients.</div><div class="ttdef"><b>Definition</b> <a href="#l00580">AmIteratorTmpl.h:580</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a9205a322c557c51cdc3ebb991ea64e9f"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a9205a322c557c51cdc3ebb991ea64e9f">Pscf::AmIteratorTmpl::readErrorType</a></div><div class="ttdeci">void readErrorType(std::istream &amp;in)</div><div class="ttdoc">Read and validate the optional errorType string parameter.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00263">AmIteratorTmpl.tpp:263</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a950f0963a85ef9ed59bbc0516b9b9cd4"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a950f0963a85ef9ed59bbc0516b9b9cd4">Pscf::AmIteratorTmpl::timerMDE</a></div><div class="ttdeci">double timerMDE()</div><div class="ttdoc">Get time solving modified diffusion equation (MDE).</div><div class="ttdef"><b>Definition</b> <a href="#l00552">AmIteratorTmpl.h:552</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_aa196fc082b2d632873009e81dad40983"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#aa196fc082b2d632873009e81dad40983">Pscf::AmIteratorTmpl::setMaxItr</a></div><div class="ttdeci">void setMaxItr(int maxItr)</div><div class="ttdoc">Set value of maxItr.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00229">AmIteratorTmpl.tpp:229</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_aaf03dc4406daaf5bf6f00c3eed416b4d"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#aaf03dc4406daaf5bf6f00c3eed416b4d">Pscf::AmIteratorTmpl::timerResid</a></div><div class="ttdeci">double timerResid()</div><div class="ttdoc">Get time computing residual.</div><div class="ttdef"><b>Definition</b> <a href="#l00566">AmIteratorTmpl.h:566</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_ab33190953cf8dca75fd34f881779dc82"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#ab33190953cf8dca75fd34f881779dc82">Pscf::AmIteratorTmpl::AmIteratorTmpl</a></div><div class="ttdeci">AmIteratorTmpl()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00031">AmIteratorTmpl.tpp:31</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_ac28c346f90b36f7174dc798accb27be9"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#ac28c346f90b36f7174dc798accb27be9">Pscf::AmIteratorTmpl::isValidErrorType</a></div><div class="ttdeci">virtual bool isValidErrorType()</div><div class="ttdoc">Checks if a string is a valid error type.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00287">AmIteratorTmpl.tpp:287</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_ad0ab7a80b720e7d5138d3dec43e6cb6d"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#ad0ab7a80b720e7d5138d3dec43e6cb6d">Pscf::AmIteratorTmpl::errorType_</a></div><div class="ttdeci">std::string errorType_</div><div class="ttdoc">Type of error criterion used to test convergence.</div><div class="ttdef"><b>Definition</b> <a href="#l00091">AmIteratorTmpl.h:91</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_ad9ffb94dd7fcca4eff1eacd4a266b9d4"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#ad9ffb94dd7fcca4eff1eacd4a266b9d4">Pscf::AmIteratorTmpl::readParameters</a></div><div class="ttdeci">void readParameters(std::istream &amp;in)</div><div class="ttdoc">Read all parameters and initialize.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00056">AmIteratorTmpl.tpp:56</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_ae73358fa1ae70ca7c4c1e81216a48b3d"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#ae73358fa1ae70ca7c4c1e81216a48b3d">Pscf::AmIteratorTmpl::solve</a></div><div class="ttdeci">int solve(bool isContinuation=false)</div><div class="ttdoc">Iterate to a solution.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00091">AmIteratorTmpl.tpp:91</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_af65aca8b7d3bbb98e63dfcb30c8866ed"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#af65aca8b7d3bbb98e63dfcb30c8866ed">Pscf::AmIteratorTmpl::field</a></div><div class="ttdeci">T const &amp; field() const</div><div class="ttdoc">Return the current field or state vector by const reference.</div><div class="ttdef"><b>Definition</b> <a href="#l00517">AmIteratorTmpl.h:517</a></div></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_afce62f5d547473c35e039d16a13b8df3"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#afce62f5d547473c35e039d16a13b8df3">Pscf::AmIteratorTmpl::norm</a></div><div class="ttdeci">virtual double norm(T const &amp;hist)</div><div class="ttdoc">Find the L2 norm of a vector.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00541">AmIteratorTmpl.tpp:541</a></div></div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span> </div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>}</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span><span class="preprocessor">#include &quot;AmIteratorTmpl.tpp&quot;</span></div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a00725afb67d0d1697273c5b982e2d2b6"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a00725afb67d0d1697273c5b982e2d2b6">Pscf::AmIteratorTmpl::lambdaRampFactor</a></div><div class="ttdeci">double lambdaRampFactor()</div><div class="ttdoc">Compute ramped prefactor of mixing parameter lambda.</div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a0b99a48a0ab289af9769b615a1ae464a"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a0b99a48a0ab289af9769b615a1ae464a">Pscf::AmIteratorTmpl::setup</a></div><div class="ttdeci">virtual void setup(bool isContinuation)</div><div class="ttdoc">Initialize just before entry to iterative loop.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00394">AmIteratorTmpl.tpp:394</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a0d8e83ed86addc299afd911061c9b9af"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a0d8e83ed86addc299afd911061c9b9af">Pscf::AmIteratorTmpl::timerError</a></div><div class="ttdeci">double timerError()</div><div class="ttdoc">Get time evaluating scalar error.</div><div class="ttdef"><b>Definition</b> <a href="#l00631">AmIteratorTmpl.h:631</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a2abf62c5ccc4d30acf8afb8c074e50ac"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a2abf62c5ccc4d30acf8afb8c074e50ac">Pscf::AmIteratorTmpl::readMixingParameters</a></div><div class="ttdeci">void readMixingParameters(std::istream &amp;in, bool useLambdaRamp=true)</div><div class="ttdoc">Read optional parameters used in default correction algorithm.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00343">AmIteratorTmpl.tpp:343</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a2fe889e87b6dae5982eca17e0749b58d"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a2fe889e87b6dae5982eca17e0749b58d">Pscf::AmIteratorTmpl::computeError</a></div><div class="ttdeci">double computeError(int verbose)</div><div class="ttdoc">Compute and return error used to test for convergence.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00689">AmIteratorTmpl.tpp:689</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a317c3e88b6006282b757bd2f9fab06ab"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a317c3e88b6006282b757bd2f9fab06ab">Pscf::AmIteratorTmpl::residual</a></div><div class="ttdeci">T const &amp; residual() const</div><div class="ttdoc">Get the current residual vector by const reference.</div><div class="ttdef"><b>Definition</b> <a href="#l00589">AmIteratorTmpl.h:589</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a324f73f1f646b9c14cce22efbb0cbbc1"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a324f73f1f646b9c14cce22efbb0cbbc1">Pscf::AmIteratorTmpl::timerTotal</a></div><div class="ttdeci">double timerTotal()</div><div class="ttdoc">Get total time.</div><div class="ttdef"><b>Definition</b> <a href="#l00652">AmIteratorTmpl.h:652</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a35b2f9b458a3b56f3ffcf55b6236552e"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a35b2f9b458a3b56f3ffcf55b6236552e">Pscf::AmIteratorTmpl::allocateAM</a></div><div class="ttdeci">void allocateAM()</div><div class="ttdoc">Allocate memory required by AM algorithm, if necessary.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00362">AmIteratorTmpl.tpp:362</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a3987903c9536462dd9659df814f5e62c"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a3987903c9536462dd9659df814f5e62c">Pscf::AmIteratorTmpl::isAllocatedAM</a></div><div class="ttdeci">bool isAllocatedAM() const</div><div class="ttdoc">Have data structures required by the AM algorithm been allocated?</div><div class="ttdef"><b>Definition</b> <a href="#l00596">AmIteratorTmpl.h:596</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a41bec1ca6bbac559d2e7469085f448a7"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a41bec1ca6bbac559d2e7469085f448a7">Pscf::AmIteratorTmpl::clear</a></div><div class="ttdeci">virtual void clear()</div><div class="ttdoc">Clear information about history.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00414">AmIteratorTmpl.tpp:414</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a44600447d7ec6f74179602e010bb0cb6"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a44600447d7ec6f74179602e010bb0cb6">Pscf::AmIteratorTmpl::timerOmega</a></div><div class="ttdeci">double timerOmega()</div><div class="ttdoc">Get time spent updating w states.</div><div class="ttdef"><b>Definition</b> <a href="#l00645">AmIteratorTmpl.h:645</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a4ac22fa359ac9d3cce6c46042acc2796"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a4ac22fa359ac9d3cce6c46042acc2796">Pscf::AmIteratorTmpl::outputTimers</a></div><div class="ttdeci">void outputTimers(std::ostream &amp;out) const</div><div class="ttdoc">Log output timing results.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00235">AmIteratorTmpl.tpp:235</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a571324a4ecfdff4941b20a9f0129dd2e"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a571324a4ecfdff4941b20a9f0129dd2e">Pscf::AmIteratorTmpl&lt; Iterator, DArray&lt; double &gt; &gt;::errorType</a></div><div class="ttdeci">std::string errorType() const</div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a66a2a0089b03ae9a3b694dc26e25c665"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a66a2a0089b03ae9a3b694dc26e25c665">Pscf::AmIteratorTmpl::clearTimers</a></div><div class="ttdeci">void clearTimers()</div><div class="ttdoc">Clear timers.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00279">AmIteratorTmpl.tpp:279</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a683919a1f3a8e161cb86417cbad0e399"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a683919a1f3a8e161cb86417cbad0e399">Pscf::AmIteratorTmpl::totalItr</a></div><div class="ttdeci">int totalItr()</div><div class="ttdoc">Return the total number of iterations needed to converge.</div><div class="ttdef"><b>Definition</b> <a href="#l00603">AmIteratorTmpl.h:603</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a6a9dc19560ec2f08e0f797dd42da8079"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a6a9dc19560ec2f08e0f797dd42da8079">Pscf::AmIteratorTmpl::timerAM</a></div><div class="ttdeci">double timerAM()</div><div class="ttdoc">Get total time for AM algorithm, excluding MDE solution.</div><div class="ttdef"><b>Definition</b> <a href="#l00617">AmIteratorTmpl.h:617</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a7cbc162e8785ff54fb1a2922a951ce6c"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a7cbc162e8785ff54fb1a2922a951ce6c">Pscf::AmIteratorTmpl&lt; Iterator, DArray&lt; double &gt; &gt;::verbose</a></div><div class="ttdeci">int verbose() const</div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a7decf2817507d097a7ab80603e599856"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a7decf2817507d097a7ab80603e599856">Pscf::AmIteratorTmpl::~AmIteratorTmpl</a></div><div class="ttdeci">~AmIteratorTmpl()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00053">AmIteratorTmpl.tpp:53</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a85282947c4bd9b322b6c2c7adc12eef5"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a85282947c4bd9b322b6c2c7adc12eef5">Pscf::AmIteratorTmpl::timerCoeff</a></div><div class="ttdeci">double timerCoeff()</div><div class="ttdoc">Get time spent evaluating Anderson mixing coefficients.</div><div class="ttdef"><b>Definition</b> <a href="#l00638">AmIteratorTmpl.h:638</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a9205a322c557c51cdc3ebb991ea64e9f"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a9205a322c557c51cdc3ebb991ea64e9f">Pscf::AmIteratorTmpl::readErrorType</a></div><div class="ttdeci">void readErrorType(std::istream &amp;in)</div><div class="ttdoc">Read and validate the optional errorType string parameter.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00297">AmIteratorTmpl.tpp:297</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a950f0963a85ef9ed59bbc0516b9b9cd4"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a950f0963a85ef9ed59bbc0516b9b9cd4">Pscf::AmIteratorTmpl::timerMDE</a></div><div class="ttdeci">double timerMDE()</div><div class="ttdoc">Get time spent solving the modified diffusion equation (MDE).</div><div class="ttdef"><b>Definition</b> <a href="#l00610">AmIteratorTmpl.h:610</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_a95e51b065b6828b9a55f1443cd252a10"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#a95e51b065b6828b9a55f1443cd252a10">Pscf::AmIteratorTmpl&lt; Iterator, DArray&lt; double &gt; &gt;::verbose_</a></div><div class="ttdeci">int verbose_</div><div class="ttdef"><b>Definition</b> <a href="#l00108">AmIteratorTmpl.h:108</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_aaf03dc4406daaf5bf6f00c3eed416b4d"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#aaf03dc4406daaf5bf6f00c3eed416b4d">Pscf::AmIteratorTmpl::timerResid</a></div><div class="ttdeci">double timerResid()</div><div class="ttdoc">Get time spent computing residual.</div><div class="ttdef"><b>Definition</b> <a href="#l00624">AmIteratorTmpl.h:624</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_aaf632064eb7c9a76198f12c35f361b24"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#aaf632064eb7c9a76198f12c35f361b24">Pscf::AmIteratorTmpl&lt; Iterator, DArray&lt; double &gt; &gt;::epsilon_</a></div><div class="ttdeci">double epsilon_</div><div class="ttdef"><b>Definition</b> <a href="#l00093">AmIteratorTmpl.h:93</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_ab33190953cf8dca75fd34f881779dc82"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#ab33190953cf8dca75fd34f881779dc82">Pscf::AmIteratorTmpl::AmIteratorTmpl</a></div><div class="ttdeci">AmIteratorTmpl()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00032">AmIteratorTmpl.tpp:32</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_ab8b7d6869d79bc4f4addde9731c32e99"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#ab8b7d6869d79bc4f4addde9731c32e99">Pscf::AmIteratorTmpl::computeLambda</a></div><div class="ttdeci">virtual double computeLambda()</div><div class="ttdoc">Compute mixing parameter for correction step of Anderson mixing.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00573">AmIteratorTmpl.tpp:573</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_ac28c346f90b36f7174dc798accb27be9"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#ac28c346f90b36f7174dc798accb27be9">Pscf::AmIteratorTmpl::isValidErrorType</a></div><div class="ttdeci">virtual bool isValidErrorType()</div><div class="ttdoc">Checks if a string is a valid error type.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00320">AmIteratorTmpl.tpp:320</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_acb3495d28db3833c87cf4e2f52f0b350"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#acb3495d28db3833c87cf4e2f52f0b350">Pscf::AmIteratorTmpl&lt; Iterator, DArray&lt; double &gt; &gt;::maxItr_</a></div><div class="ttdeci">int maxItr_</div><div class="ttdef"><b>Definition</b> <a href="#l00098">AmIteratorTmpl.h:98</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_ad04e76fb3e2e03ce87300303e36377d9"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#ad04e76fb3e2e03ce87300303e36377d9">Pscf::AmIteratorTmpl::computeError</a></div><div class="ttdeci">virtual double computeError(T &amp;residTrial, T &amp;stateTrial, std::string errorType, int verbose)</div><div class="ttdoc">Compute and return error used to test for convergence.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00637">AmIteratorTmpl.tpp:637</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_ad0ab7a80b720e7d5138d3dec43e6cb6d"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#ad0ab7a80b720e7d5138d3dec43e6cb6d">Pscf::AmIteratorTmpl&lt; Iterator, DArray&lt; double &gt; &gt;::errorType_</a></div><div class="ttdeci">std::string errorType_</div><div class="ttdef"><b>Definition</b> <a href="#l00113">AmIteratorTmpl.h:113</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_ad9ffb94dd7fcca4eff1eacd4a266b9d4"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#ad9ffb94dd7fcca4eff1eacd4a266b9d4">Pscf::AmIteratorTmpl::readParameters</a></div><div class="ttdeci">virtual void readParameters(std::istream &amp;in)</div><div class="ttdoc">Read all parameters and initialize.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00060">AmIteratorTmpl.tpp:60</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_ada14e7d0a31071a8571dadec0522fed2"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#ada14e7d0a31071a8571dadec0522fed2">Pscf::AmIteratorTmpl::state</a></div><div class="ttdeci">T const &amp; state() const</div><div class="ttdoc">Return the current state vector by const reference.</div><div class="ttdef"><b>Definition</b> <a href="#l00582">AmIteratorTmpl.h:582</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_ae34487094628f8d6e14403771a3577eb"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#ae34487094628f8d6e14403771a3577eb">Pscf::AmIteratorTmpl&lt; Iterator, DArray&lt; double &gt; &gt;::maxHist_</a></div><div class="ttdeci">int maxHist_</div><div class="ttdef"><b>Definition</b> <a href="#l00103">AmIteratorTmpl.h:103</a></div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_ae73358fa1ae70ca7c4c1e81216a48b3d"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#ae73358fa1ae70ca7c4c1e81216a48b3d">Pscf::AmIteratorTmpl::solve</a></div><div class="ttdeci">int solve(bool isContinuation=false)</div><div class="ttdoc">Iterate to a solution.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00098">AmIteratorTmpl.tpp:98</a></div></div>
 <div class="ttc" id="aclassUtil_1_1DArray_html"><div class="ttname"><a href="classUtil_1_1DArray.html">Util::DArray</a></div><div class="ttdoc">Dynamically allocatable contiguous array template.</div><div class="ttdef"><b>Definition</b> <a href="DArray_8h_source.html#l00031">DArray.h:32</a></div></div>
 <div class="ttc" id="aclassUtil_1_1DMatrix_html"><div class="ttname"><a href="classUtil_1_1DMatrix.html">Util::DMatrix</a></div><div class="ttdoc">Dynamically allocated Matrix.</div><div class="ttdef"><b>Definition</b> <a href="DMatrix_8h_source.html#l00024">DMatrix.h:25</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a21c4ae1412ec944d4189cb7c7b6a3171"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a21c4ae1412ec944d4189cb7c7b6a3171">Util::ParamComposite::read</a></div><div class="ttdeci">ScalarParam&lt; Type &gt; &amp; read(std::istream &amp;in, const char *label, Type &amp;value)</div><div class="ttdoc">Add and read a new required ScalarParam &lt; Type &gt; object.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8h_source.html#l01248">ParamComposite.h:1248</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a5d9f133993e0aa0b18cd59938ccf8700"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">Util::ParamComposite::readOptional</a></div><div class="ttdeci">ScalarParam&lt; Type &gt; &amp; readOptional(std::istream &amp;in, const char *label, Type &amp;value)</div><div class="ttdoc">Add and read a new optional ScalarParam &lt; Type &gt; object.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8h_source.html#l01256">ParamComposite.h:1256</a></div></div>
 <div class="ttc" id="aclassUtil_1_1RingBuffer_html"><div class="ttname"><a href="classUtil_1_1RingBuffer.html">Util::RingBuffer</a></div><div class="ttdoc">Class for storing history of previous values in an array.</div><div class="ttdef"><b>Definition</b> <a href="RingBuffer_8h_source.html#l00026">RingBuffer.h:27</a></div></div>
 <div class="ttc" id="aclassUtil_1_1Timer_html"><div class="ttname"><a href="classUtil_1_1Timer.html">Util::Timer</a></div><div class="ttdoc">Wall clock timer.</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00034">Timer.h:35</a></div></div>
-<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
+<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

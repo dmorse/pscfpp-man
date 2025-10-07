@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -145,7 +145,7 @@ Example file structure</h1>
 </ul>
 <p>The format of parameter file required to perform a 1D SCFT calculation using pscf_1d would have a broadly analogous structure, with analogous top level subblocks appearing in the same order. The polymerModel parameter would not appear in a pscf_1d parameter file, however, because the pscf_1d program can only use the thread model. All three PSCF programs use the same formats for the Mixture and Interaction blocks, but somewhat different formats for other blocks. <br  />
 </p>
-<p>The structure of a parameter file that is used to initialize a different type of calculation would generally be somewhat different than shown here, and could include other types of block. For example, a parameter file used to initialize an SCFT parameter sweep (rather than a single SCFT calculation) would contain an additional "Sweep" block at the end to describe the desired <a class="el" href="scft_param_sweep_page.html">sequence of states</a>. A parameter file that is used to initialize a PS-FTS simulation would normally not contain an Iterator or Sweep block, but would instead contain a large block that contains information needed to initialize either a Brownian dynamics (BD) or Monte Carlo (MC) simulation. Parameter file elements that are required to initialize a PS-FTS simulation are discussed in a <a class="el" href="psfts_page.html">chapter 5</a> of this manual.</p>
+<p>The structure of a parameter file that is used to initialize a different type of calculation would generally be somewhat different than shown here, and could include other types of block. For example, a parameter file used to initialize an SCFT parameter sweep (rather than a single SCFT calculation) would contain an additional "Sweep" block at the end to describe the desired <a class="el" href="scft_sweep_page.html">sequence of states</a>. A parameter file that is used to initialize a PS-FTS simulation would normally not contain an Iterator or Sweep block, but would instead contain a large block that contains information needed to initialize either a Brownian dynamics (BD) or Monte Carlo (MC) simulation. Parameter file elements that are required to initialize a PS-FTS simulation are discussed in a <a class="el" href="psfts_page.html">chapter 5</a> of this manual.</p>
 <h1 class="doxsection"><a class="anchor" id="user_param_example_elements_sec"></a>
 Parameter types</h1>
 <p>Next, consider the format of the actual parameter entries in this example. Each parameter entry starts with a lower case label that indicates the name of the parameter followed by a text representation of the parameter value. The example contains several different types of parameter entries, including single parameters, and array-valued, vector-valued, and matrix-valued parameters.</p>

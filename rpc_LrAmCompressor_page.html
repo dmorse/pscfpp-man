@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: Rpc::LrAmCompressor</title>
+<title>PSCF: LrAmCompressor</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -54,42 +54,48 @@ $(function() {
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">Rpc::LrAmCompressor </div></div>
+  <div class="headertitle"><div class="title">LrAmCompressor </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The LrAmCompressor classes used by both the pscf_pc and pscf_pg programs implements a linear-response Anderson mixing (LRAM) algorithm as described in this publication.</p>
-<p>Two closely analogous classes named <a class="el" href="classPscf_1_1Rpc_1_1LrAmCompressor.html" title="Anderson Mixing compressor with linear-response mixing step.">Pscf::Rpc::LrAmCompressor</a> and <a class="el" href="classPscf_1_1Rpg_1_1LrAmCompressor.html" title="Anderson Mixing compressor with linear-response mixing step.">Pscf::Rpg::LrAmCompressor</a> implement this algorithm for the pscf_pc CPU and program and the pscf_pg GPU-accelerated program, respectively. These two classes implement the same step algorithm and use the same parameter file format, which are documented below.</p>
-<h1 class="doxsection"><a class="anchor" id="rpc_LrAmCompressor_algorithm_sec"></a>
-Step Algorithm</h1>
-<p>A general discussion of compressor algorithms for PS-FTS is given <a class="el" href="psfts_algorithm_page.html">here</a>.</p>
-<p>The LrAmCompressor algorithm ...</p>
+<div class="textblock"><p>The LrAmCompressor classes used by both the pscf_pc and pscf_pg programs implements a linear-response Anderson mixing (LRAM) algorithm. Two closely analogous classes named <a class="el" href="classPscf_1_1Rpc_1_1LrAmCompressor.html" title="Anderson Mixing compressor with linear-response mixing step.">Pscf::Rpc::LrAmCompressor</a> and <a class="el" href="classPscf_1_1Rpg_1_1LrAmCompressor.html" title="Anderson Mixing compressor with linear-response mixing step.">Pscf::Rpg::LrAmCompressor</a> implement this algorithm for the pscf_pc CPU and program and the pscf_pg GPU-accelerated program, respectively. These two classes implement the same step algorithm and use the same parameter file format, which are documented below.</p>
+<p>A general discussion of compressor algorithms for PS-FTS is given <a class="el" href="psfts_algorithm_page.html">here</a>. The LrAm compressor algorithm is described in the article: <a href="https://doi.org/10.1063/5.0264036">"Improved algorithm for identifying partial saddle-points in polymer
+field theoretic simulations", K. Chen and D.C. Morse, <em> J. Chem. Phys. </em> <b> 162 </b>, 243901 (2025). </a>.</p>
 <h1 class="doxsection"><a class="anchor" id="rpc_LrAmCompressor_parameter_sec"></a>
-Parameter File</h1>
-<p>The only parameter needed by this algorithm are the error threshhold "epsilon" </p><div class="fragment"><div class="line">LrAmCompressor{</div>
+Parameter file</h1>
+<p>The only parameter needed by this algorithm are the error threshhold "epsilon". A minimal version of the required parameter block might thus look like this: </p><div class="fragment"><div class="line">LrAmCompressor{</div>
 <div class="line">  epsilon      1.0E-4</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> The full parameter file format, including all optional parameters, is shown below: </p><div class="fragment"><div class="line">LrAmCompressor{</div>
 <div class="line">  epsilon           <span class="keywordtype">float</span></div>
-<div class="line">  maxItr*           int     (<span class="keywordflow">default</span> 200)</div>
+<div class="line">  maxItr*           int     (<span class="keywordflow">default</span> 100)</div>
 <div class="line">  maxHist           int     (<span class="keywordflow">default</span> 50)</div>
 <div class="line">  verbose           int     (<span class="keywordflow">default</span> 0)</div>
-<div class="line">  correctionRamp*   float   (<span class="keywordflow">default</span> 0.9)</div>
-<div class="line">  errorType*        string  (<span class="stringliteral">&quot;norm&quot;</span>, <span class="stringliteral">&quot;rms&quot;</span>, <span class="stringliteral">&quot;max&quot;</span>, or <span class="stringliteral">&quot;relNorm&quot;</span>)</div>
-<div class="line">}</div>
+<div class="line">  errorType*        string  (<span class="stringliteral">&quot;norm&quot;</span>, <span class="stringliteral">&quot;rms&quot;</span>, <span class="stringliteral">&quot;max&quot;</span>, or <span class="stringliteral">&quot;relNorm&quot;</span>. <span class="stringliteral">&quot;rms&quot;</span> by <span class="keywordflow">default</span><span class="stringliteral">&quot;)</span></div>
+<div class="line"><span class="stringliteral">}</span></div>
 </div><!-- fragment --><p> Meanings of all parameters are described briefly below: </p><table class="doxtable">
 <tr>
 <td><b> Label </b> </td><td><b> Description </b> </td></tr>
 <tr>
 <td>epsilon </td><td>error threshhold </td></tr>
 <tr>
-<td>maxItr* </td><td>maximum number of iterations to attempt before declaring failure </td></tr>
+<td>maxItr* </td><td><br  />
+ maximum number of iterations to attempt before declaring failure (100 by default) </td></tr>
 <tr>
-<td>maxHist* </td><td>maximum number of previous states to retain in history </td></tr>
+<td>maxHist* </td><td><br  />
+ maximum number of previous states to retain in history (50 by default) </td></tr>
 <tr>
-<td>verbose* </td><td>verbosity level (lower values are less verbose. Default level = 0) </td></tr>
+<td>verbose* </td><td><br  />
+ verbosity level. lower values are less verbose (0 by default) </td></tr>
 <tr>
-<td>errorType* </td><td>???? </td></tr>
+<td>errorType* </td><td>Identifer for the choice of a definition for the scalar error. Meaning of the allowed values are "norm", "rms" "max", and "relNorm", are discussed <a class="el" href="pscf_AmIteratorTmpl_page.html">here</a> ("rms" by default). </td></tr>
 </table>
+<h1 class="doxsection"><a class="anchor" id="rpc_LrAmCompressor_residual_sec"></a>
+Residual definition</h1>
+<p>The residual vector for the LrAmCompressor is defined in real space, as an array in which each element is associated with one node of a regular computational grid. The value \( R({\bf r}) \) of the residual element associated with a grid point located at position \( {\bf r} \) is given by   </p><p class="formulaDsp">
+\[    R({\bf r}) = -1 + \sum_{i=1}^{N_{\rm m}} \phi_{i}({\bf r}) 
+\]
+</p>
+<p> where \( \phi_{i}({\bf r}) \) is the volume fraction of monomer type \( i \) at that grid point, and \( N_{\rm m} \) is the number of monomer types, also known as nMonomer. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

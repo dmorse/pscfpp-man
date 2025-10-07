@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -86,7 +86,7 @@ $(function() {
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Mask.html#a3feee77e198708d8871d1009bbd7074a">   26</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Mask.html#a3feee77e198708d8871d1009bbd7074a">Mask&lt;D&gt;::rGridAverage</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">   </span>{</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField&lt;D&gt;</a> <span class="keyword">const</span> &amp; rg = <a class="code hl_function" href="classPscf_1_1Prdc_1_1MaskTmpl.html#ada9840488b502b10432ba1830d4c19eb">MaskTmpl&lt; D, RField&lt;D&gt;</a>, <a class="code hl_class" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo&lt;D&gt;</a> &gt;<a class="code hl_function" href="classPscf_1_1Rpg_1_1Mask.html#a6d471bacca0a8151bbf60057ee37149f">::rgrid</a>();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <span class="keywordflow">return</span> (Reduce::sum(rg) / ((<span class="keywordtype">double</span>)rg.<a class="code hl_function" href="classUtil_1_1Array.html#a66a4be07c83c3b49eae3536a3afd9fb0">capacity</a>()));</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <span class="keywordflow">return</span> (<a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a1d531e19f7cc5674cefa424e397f0972">Reduce::sum</a>(rg) / ((<span class="keywordtype">double</span>)rg.<a class="code hl_function" href="classUtil_1_1Array.html#a66a4be07c83c3b49eae3536a3afd9fb0">capacity</a>()));</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>   }</div>
 </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
@@ -99,10 +99,11 @@ $(function() {
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Mask_html_a3feee77e198708d8871d1009bbd7074a"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Mask.html#a3feee77e198708d8871d1009bbd7074a">Pscf::Rpg::Mask::rGridAverage</a></div><div class="ttdeci">double rGridAverage() const override</div><div class="ttdoc">Calculate the average value of the rgrid_ member.</div><div class="ttdef"><b>Definition</b> <a href="#l00026">rpg/field/Mask.tpp:26</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Mask_html_a6d471bacca0a8151bbf60057ee37149f"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Mask.html#a6d471bacca0a8151bbf60057ee37149f">Pscf::Rpg::Mask::rgrid</a></div><div class="ttdeci">Prdc::Cuda::RField&lt; D &gt; const &amp; rgrid() const</div><div class="ttdoc">Get the field in r-grid format.</div></div>
 <div class="ttc" id="aclassUtil_1_1Array_html_a66a4be07c83c3b49eae3536a3afd9fb0"><div class="ttname"><a href="classUtil_1_1Array.html#a66a4be07c83c3b49eae3536a3afd9fb0">Util::Array::capacity</a></div><div class="ttdeci">int capacity() const</div><div class="ttdoc">Return allocated size.</div><div class="ttdef"><b>Definition</b> <a href="Array_8h_source.html#l00159">Array.h:159</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a></div><div class="ttdoc">Fields, FFTs, and utilities for periodic boundary conditions (CUDA)</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00014">Reduce.cpp:14</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1Reduce_html_a1d531e19f7cc5674cefa424e397f0972"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a1d531e19f7cc5674cefa424e397f0972">Pscf::Prdc::Cpu::Reduce::sum</a></div><div class="ttdeci">double sum(Array&lt; double &gt; const &amp;in)</div><div class="ttdoc">Compute sum of array elements .</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00080">Reduce.cpp:80</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a></div><div class="ttdoc">Fields, FFTs, and utilities for periodic boundary conditions (CUDA)</div><div class="ttdef"><b>Definition</b> <a href="CField_8cu_source.html#l00012">CField.cu:12</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_html"><div class="ttname"><a href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div><div class="ttdoc">Periodic fields and crystallography.</div><div class="ttdef"><b>Definition</b> <a href="CField_8cpp_source.html#l00011">CField.cpp:11</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Rpg_html"><div class="ttname"><a href="namespacePscf_1_1Rpg.html">Pscf::Rpg</a></div><div class="ttdoc">SCFT and PS-FTS with real periodic fields (GPU)</div><div class="ttdef"><b>Definition</b> <a href="rpg_2environment_2environment_8mod_source.html#l00003">rpg/environment/environment.mod:3</a></div></div>
-<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
+<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

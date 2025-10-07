@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -131,324 +131,329 @@ $(function() {
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      <span class="comment">// Read optional random seed value</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#ac716a3884880aebf9961e4ad72ab062d">readRandomSeed</a>(in);</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <span class="comment">// Read McMoveManager block</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <span class="comment">// Read optional McMoveManager block</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      <a class="code hl_function" href="classPscf_1_1Rpc_1_1McSimulator.html#ac7f91287ff57b0cd8180b9ac18c4368d">readParamCompositeOptional</a>(in, mcMoveManager_);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="comment">// Read optional Compressor, Perturbation and Ramp blocks</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      <span class="keywordtype">bool</span> isEnd = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#ad0b2a043608d273e834a3b46788b1845">readCompressor</a>(in, isEnd);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a0d52197d4b1c47c0b3092c3d780e4393">readPerturbation</a>(in, isEnd);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="keywordtype">bool</span> isEnd = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      <span class="comment">// Read optionally Compressor block</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#ad0b2a043608d273e834a3b46788b1845">readCompressor</a>(in, isEnd);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classPscf_1_1Rpc_1_1McSimulator.html#a578d29a9e448ec8af9d95c2220b891c9">hasMcMoves</a>()) {</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>         <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(<a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#ac6eb2c5b782602630c6b4d86a3f92b15">hasCompressor</a>());</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>         <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#ae09d7f1efadf246b0250935e7f243c22">readRamp</a>(in, isEnd);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      <span class="comment">// Read optional AnalyzerManager block</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Analyzer.html#a6745c2bbcd978b149f04a60bcc55f297">Analyzer&lt;D&gt;::baseInterval</a> = 0; <span class="comment">// default value</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      <a class="code hl_function" href="classPscf_1_1Rpc_1_1McSimulator.html#ac7f91287ff57b0cd8180b9ac18c4368d">readParamCompositeOptional</a>(in, analyzerManager_);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      <span class="comment">// Figure out what needs to be saved</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#a228f69184359d46567376cdd5f2342bf">state_</a>.needsCc = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#a228f69184359d46567376cdd5f2342bf">state_</a>.needsDc = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#a228f69184359d46567376cdd5f2342bf">state_</a>.needsHamiltonian = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      <span class="keywordflow">if</span> (mcMoveManager_.needsCc()){</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>         <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#a228f69184359d46567376cdd5f2342bf">state_</a>.needsCc = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      }</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      <span class="keywordflow">if</span> (mcMoveManager_.needsDc()){</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>         <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#a228f69184359d46567376cdd5f2342bf">state_</a>.needsDc = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      }</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>      <span class="comment">// Initialize Simulator&lt;D&gt; base class</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a758df2d2fb463e6004e45c84c12d5aea">Simulator&lt;D&gt;::allocate</a>();</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>   }</div>
-</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      <span class="comment">// Read optional Perturbation and/or Ramp blocks</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a0d52197d4b1c47c0b3092c3d780e4393">readPerturbation</a>(in, isEnd);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classPscf_1_1Rpc_1_1McSimulator.html#a578d29a9e448ec8af9d95c2220b891c9">hasMcMoves</a>()) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>         <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#ae09d7f1efadf246b0250935e7f243c22">readRamp</a>(in, isEnd);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      <span class="comment">// Read optional AnalyzerManager block</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Analyzer.html#a6745c2bbcd978b149f04a60bcc55f297">Analyzer&lt;D&gt;::baseInterval</a> = 0; <span class="comment">// default value</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      <a class="code hl_function" href="classPscf_1_1Rpc_1_1McSimulator.html#ac7f91287ff57b0cd8180b9ac18c4368d">readParamCompositeOptional</a>(in, analyzerManager_);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      <span class="comment">// Figure out what needs to be saved</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#a228f69184359d46567376cdd5f2342bf">state_</a>.needsCc = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#a228f69184359d46567376cdd5f2342bf">state_</a>.needsDc = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#a228f69184359d46567376cdd5f2342bf">state_</a>.needsHamiltonian = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      <span class="keywordflow">if</span> (mcMoveManager_.needsCc()){</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>         <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#a228f69184359d46567376cdd5f2342bf">state_</a>.needsCc = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>      }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      <span class="keywordflow">if</span> (mcMoveManager_.needsDc()){</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>         <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#a228f69184359d46567376cdd5f2342bf">state_</a>.needsDc = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      }</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">   * Initialize just prior to a run.</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>   <span class="keywordtype">void</span> McSimulator&lt;D&gt;::setup(<span class="keywordtype">int</span> nStep)</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>   {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(system().w().hasData());</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      <span class="comment">// Eigenanalysis of the projected chi matrix.</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      analyzeChi();</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <span class="keywordflow">if</span> (hasPerturbation()) {</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>         perturbation().setup();</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      }</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <span class="keywordflow">if</span> (hasRamp()) {</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>         ramp().setup(nStep);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      }</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>   </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      <span class="comment">// Solve MDE and compute c-fields for the intial state</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      system().compute();</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>      <span class="comment">// Compress the initial state (adjust pressure-like field)</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      <span class="keywordflow">if</span> (hasCompressor()) {</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>         compressor().compress();</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>         compressor().clearTimers();</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>      }</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>      <span class="comment">// Compute field components and Hamiltonian</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      computeWc();</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      <span class="keywordflow">if</span> (state_.needsCc || state_.needsDc) {</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>         computeCc();</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      }</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>      <span class="keywordflow">if</span> (state_.needsDc) {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>         computeDc();</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      }</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>      computeHamiltonian();</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>      mcMoveManager_.setup();</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>      <span class="keywordflow">if</span> (analyzerManager_.size() &gt; 0){</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>         analyzerManager_.setup();</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>      }</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>   </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>   }</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="comment">   * Perform a field theoretic MC simulation of nStep steps.</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00151" data-start="{" data-end="}">
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1McSimulator.html#a898d7c3b457be7d8e040e88724fde5d3">  151</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1McSimulator.html#a898d7c3b457be7d8e040e88724fde5d3">McSimulator&lt;D&gt;::simulate</a>(<span class="keywordtype">int</span> nStep)</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>   {</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(<a class="code hl_function" href="classPscf_1_1Rpc_1_1McSimulator.html#a578d29a9e448ec8af9d95c2220b891c9">hasMcMoves</a>());</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(<a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#ac6eb2c5b782602630c6b4d86a3f92b15">hasCompressor</a>());</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>      </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>      <span class="comment">// Initial setup</span></div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>      setup(nStep);</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>   </div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>      <span class="comment">// Initialize timer, iStep_, and ramp (if any)</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timer;</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> analyzerTimer;</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      timer.<a class="code hl_function" href="classUtil_1_1Timer.html#a307f66b72595f093e28787365abf8c77">start</a>();</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>      <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a> = 0;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a34c4fe16da726972d46885c59f08f1ac">hasRamp</a>()) {</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>         <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a09594970b5047b9e2bcf755eaf45d122">ramp</a>().setParameters(<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a>);</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>      }</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      <span class="comment">// Analysis initial step (if any)</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      analyzerTimer.<a class="code hl_function" href="classUtil_1_1Timer.html#a307f66b72595f093e28787365abf8c77">start</a>();</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>      analyzerManager_.sample(<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a>);</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>      analyzerTimer.<a class="code hl_function" href="classUtil_1_1Timer.html#ae1884c49bc5f2a21d1b426655247b645">stop</a>();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <span class="comment">// Initialize Simulator&lt;D&gt; base class</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a758df2d2fb463e6004e45c84c12d5aea">Simulator&lt;D&gt;::allocate</a>();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>   }</div>
+</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">   * Initialize just prior to a run.</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>   <span class="keywordtype">void</span> McSimulator&lt;D&gt;::setup(<span class="keywordtype">int</span> nStep)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>   {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(system().w().hasData());</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      <span class="comment">// Eigenanalysis of the projected chi matrix.</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      analyzeChi();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      <span class="keywordflow">if</span> (hasPerturbation()) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>         perturbation().setup();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      <span class="keywordflow">if</span> (hasRamp()) {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>         ramp().setup(nStep);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>      }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>   </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      <span class="comment">// Solve MDE and compute c-fields for the intial state</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      system().compute();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>      </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      <span class="comment">// Compress the initial state (adjust pressure-like field)</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>      <span class="keywordflow">if</span> (hasCompressor()) {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>         compressor().compress();</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>         compressor().clearTimers();</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>      }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>      <span class="comment">// Compute field components and Hamiltonian</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      computeWc();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      <span class="keywordflow">if</span> (state_.needsCc || state_.needsDc) {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>         computeCc();</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>      }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>      <span class="keywordflow">if</span> (state_.needsDc) {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>         computeDc();</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>      }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>      computeHamiltonian();</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>      mcMoveManager_.setup();</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>      <span class="keywordflow">if</span> (analyzerManager_.size() &gt; 0){</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>         analyzerManager_.setup();</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      }</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>   </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>   }</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="comment">   * Perform a field theoretic MC simulation of nStep steps.</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00156" data-start="{" data-end="}">
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1McSimulator.html#a898d7c3b457be7d8e040e88724fde5d3">  156</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1McSimulator.html#a898d7c3b457be7d8e040e88724fde5d3">McSimulator&lt;D&gt;::simulate</a>(<span class="keywordtype">int</span> nStep)</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>   {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(<a class="code hl_function" href="classPscf_1_1Rpc_1_1McSimulator.html#a578d29a9e448ec8af9d95c2220b891c9">hasMcMoves</a>());</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(<a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#ac6eb2c5b782602630c6b4d86a3f92b15">hasCompressor</a>());</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>      </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>      <span class="comment">// Initial setup</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>      setup(nStep);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>   </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      <span class="comment">// Initialize timer, iStep_, and ramp (if any)</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timer;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> analyzerTimer;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>      timer.<a class="code hl_function" href="classUtil_1_1Timer.html#a307f66b72595f093e28787365abf8c77">start</a>();</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a> = 0;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a34c4fe16da726972d46885c59f08f1ac">hasRamp</a>()) {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>         <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a09594970b5047b9e2bcf755eaf45d122">ramp</a>().setParameters(<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a>);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>      }</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>      <span class="comment">// Main Monte Carlo loop</span></div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>      <span class="keywordflow">for</span> (<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#ac24da701b7ed01989601cac9de479a4b">iTotalStep_</a> = 0; <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#ac24da701b7ed01989601cac9de479a4b">iTotalStep_</a> &lt; nStep; ++<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#ac24da701b7ed01989601cac9de479a4b">iTotalStep_</a>) {</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>         <span class="comment">// Choose and attempt an McMove</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>         <span class="keywordtype">bool</span> converged;</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>         converged = mcMoveManager_.chooseMove().move();</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>         <span class="keywordflow">if</span> (converged){</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a>++;</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a34c4fe16da726972d46885c59f08f1ac">hasRamp</a>()) {</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>               <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a09594970b5047b9e2bcf755eaf45d122">ramp</a>().setParameters(<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a>);               </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            }</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            <span class="comment">// Analysis (if any)</span></div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            analyzerTimer.<a class="code hl_function" href="classUtil_1_1Timer.html#a307f66b72595f093e28787365abf8c77">start</a>();</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Analyzer.html#a6745c2bbcd978b149f04a60bcc55f297">Analyzer&lt;D&gt;::baseInterval</a> != 0) {</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>               <span class="keywordflow">if</span> (<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a> % <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Analyzer.html#a6745c2bbcd978b149f04a60bcc55f297">Analyzer&lt;D&gt;::baseInterval</a> == 0) {</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                  <span class="keywordflow">if</span> (analyzerManager_.size() &gt; 0) {</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                     analyzerManager_.sample(<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a>);</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                  }</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>               }</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            }</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            analyzerTimer.<a class="code hl_function" href="classUtil_1_1Timer.html#ae1884c49bc5f2a21d1b426655247b645">stop</a>();</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>         } <span class="keywordflow">else</span>{</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;Step: &quot;</span>&lt;&lt; <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#ac24da701b7ed01989601cac9de479a4b">iTotalStep_</a> </div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                        &lt;&lt; <span class="stringliteral">&quot; failed to converge&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>         }</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>      }</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>      timer.<a class="code hl_function" href="classUtil_1_1Timer.html#ae1884c49bc5f2a21d1b426655247b645">stop</a>();</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>      <span class="keywordtype">double</span> time = timer.<a class="code hl_function" href="classUtil_1_1Timer.html#a9546409375479f55e93c185d248be201">time</a>();</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>      <span class="keywordtype">double</span> analyzerTime = analyzerTimer.<a class="code hl_function" href="classUtil_1_1Timer.html#a9546409375479f55e93c185d248be201">time</a>();</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>      <span class="comment">// Output results of move statistics to files</span></div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>      mcMoveManager_.output();</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Analyzer.html#a6745c2bbcd978b149f04a60bcc55f297">Analyzer&lt;D&gt;::baseInterval</a> &gt; 0){</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>         analyzerManager_.output();</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>      }</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>      </div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>      <span class="comment">// Output results of ramp</span></div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a34c4fe16da726972d46885c59f08f1ac">hasRamp</a>()){</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>         <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a09594970b5047b9e2bcf755eaf45d122">ramp</a>().output();</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>      <span class="comment">// Analysis initial step (if any)</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>      analyzerTimer.<a class="code hl_function" href="classUtil_1_1Timer.html#a307f66b72595f093e28787365abf8c77">start</a>();</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      analyzerManager_.sample(<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a>);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>      analyzerTimer.<a class="code hl_function" href="classUtil_1_1Timer.html#ae1884c49bc5f2a21d1b426655247b645">stop</a>();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>      <span class="comment">// Main Monte Carlo loop</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>      <span class="keywordflow">for</span> (<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#ac24da701b7ed01989601cac9de479a4b">iTotalStep_</a> = 0; <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#ac24da701b7ed01989601cac9de479a4b">iTotalStep_</a> &lt; nStep; ++<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#ac24da701b7ed01989601cac9de479a4b">iTotalStep_</a>) {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>         <span class="comment">// Choose and attempt an McMove</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>         <span class="keywordtype">bool</span> converged;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>         converged = mcMoveManager_.chooseMove().move();</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>         <span class="keywordflow">if</span> (converged){</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a>++;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a34c4fe16da726972d46885c59f08f1ac">hasRamp</a>()) {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>               <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a09594970b5047b9e2bcf755eaf45d122">ramp</a>().setParameters(<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a>);               </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            }</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            <span class="comment">// Analysis (if any)</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            analyzerTimer.<a class="code hl_function" href="classUtil_1_1Timer.html#a307f66b72595f093e28787365abf8c77">start</a>();</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Analyzer.html#a6745c2bbcd978b149f04a60bcc55f297">Analyzer&lt;D&gt;::baseInterval</a> != 0) {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>               <span class="keywordflow">if</span> (<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a> % <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Analyzer.html#a6745c2bbcd978b149f04a60bcc55f297">Analyzer&lt;D&gt;::baseInterval</a> == 0) {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                  <span class="keywordflow">if</span> (analyzerManager_.size() &gt; 0) {</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                     analyzerManager_.sample(<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a>);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                  }</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>               }</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            }</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            analyzerTimer.<a class="code hl_function" href="classUtil_1_1Timer.html#ae1884c49bc5f2a21d1b426655247b645">stop</a>();</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>         } <span class="keywordflow">else</span>{</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;Step: &quot;</span>&lt;&lt; <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#ac24da701b7ed01989601cac9de479a4b">iTotalStep_</a> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                        &lt;&lt; <span class="stringliteral">&quot; failed to converge&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>         }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>      }</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>      timer.<a class="code hl_function" href="classUtil_1_1Timer.html#ae1884c49bc5f2a21d1b426655247b645">stop</a>();</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>      <span class="keywordtype">double</span> time = timer.<a class="code hl_function" href="classUtil_1_1Timer.html#a9546409375479f55e93c185d248be201">time</a>();</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>      <span class="keywordtype">double</span> analyzerTime = analyzerTimer.<a class="code hl_function" href="classUtil_1_1Timer.html#a9546409375479f55e93c185d248be201">time</a>();</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>      <span class="comment">// Output results of move statistics to files</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>      mcMoveManager_.output();</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Analyzer.html#a6745c2bbcd978b149f04a60bcc55f297">Analyzer&lt;D&gt;::baseInterval</a> &gt; 0){</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>         analyzerManager_.output();</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>      }</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>      <span class="comment">// Output times for the simulation run</span></div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;nStep               &quot;</span> &lt;&lt; nStep &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a> != nStep){</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>         <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;nFail Step          &quot;</span> &lt;&lt; (nStep - <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a>) &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>      }</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;Total run time      &quot;</span> &lt;&lt; time</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                  &lt;&lt; <span class="stringliteral">&quot; sec&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>      <span class="keywordtype">double</span> rStep = double(nStep);</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;time / nStep        &quot;</span> &lt;&lt;  time / rStep</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                  &lt;&lt; <span class="stringliteral">&quot; sec&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;Analyzer run time   &quot;</span> &lt;&lt; analyzerTime</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>      </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>      <span class="comment">// Output results of ramp</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a34c4fe16da726972d46885c59f08f1ac">hasRamp</a>()){</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>         <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a09594970b5047b9e2bcf755eaf45d122">ramp</a>().output();</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>      }</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>      <span class="comment">// Output times for the simulation run</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;nStep               &quot;</span> &lt;&lt; nStep &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a> != nStep){</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>         <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;nFail Step          &quot;</span> &lt;&lt; (nStep - <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a>) &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>      }</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;Total run time      &quot;</span> &lt;&lt; time</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                  &lt;&lt; <span class="stringliteral">&quot; sec&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>      <span class="comment">// Output number of times MDE has been solved for the simulation run</span></div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>      <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a6b0dce56f209a20c05323b08660d45cd">outputMdeCounter</a>(<a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>());</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>      </div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>      <span class="comment">// Print McMove acceptance statistics</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>      <span class="keywordtype">long</span> attempt;</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      <span class="keywordtype">long</span> accept;</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      <span class="keywordtype">long</span> fail;</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      <span class="keyword">using namespace </span>std;</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;Move Statistics:&quot;</span> &lt;&lt; endl &lt;&lt; endl;</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; setw(20) &lt;&lt; left &lt;&lt;  <span class="stringliteral">&quot;Move Name&quot;</span></div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>           &lt;&lt; setw(10) &lt;&lt; right &lt;&lt; <span class="stringliteral">&quot;Attempted&quot;</span></div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>           &lt;&lt; setw(10) &lt;&lt; right &lt;&lt; <span class="stringliteral">&quot;Accepted&quot;</span></div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>           &lt;&lt; setw(13) &lt;&lt; right &lt;&lt; <span class="stringliteral">&quot;AcceptRate&quot;</span></div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>           &lt;&lt; setw(10) &lt;&lt; right &lt;&lt; <span class="stringliteral">&quot;Failed&quot;</span></div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>           &lt;&lt; setw(13) &lt;&lt; right &lt;&lt; <span class="stringliteral">&quot;FailRate&quot;</span></div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>           &lt;&lt; endl;</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      <span class="keywordtype">int</span> nMove = mcMoveManager_.size();</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iMove = 0; iMove &lt; nMove; ++iMove) {</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>         attempt = mcMoveManager_[iMove].nAttempt();</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>         accept  = mcMoveManager_[iMove].nAccept();</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>         fail  = mcMoveManager_[iMove].nFail();</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>         <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; setw(20) &lt;&lt; left</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>              &lt;&lt; mcMoveManager_[iMove].className()</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>              &lt;&lt; setw(10) &lt;&lt; right &lt;&lt; attempt</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>              &lt;&lt; setw(10) &lt;&lt; accept</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>              &lt;&lt; setw(13) &lt;&lt; fixed &lt;&lt; setprecision(5)</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>              &lt;&lt; ( attempt == 0 ? 0.0 : double(accept)/double(attempt) )</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>              &lt;&lt; setw(10) &lt;&lt; fail</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>              &lt;&lt; setw(13) &lt;&lt; fixed &lt;&lt; setprecision(5)</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>              &lt;&lt; ( attempt == 0 ? 0.0 : double(fail)/double(attempt) )</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>              &lt;&lt; endl;</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>      }</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; endl;</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>   }</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>      <span class="keywordtype">double</span> rStep = double(nStep);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;time / nStep        &quot;</span> &lt;&lt;  time / rStep</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                  &lt;&lt; <span class="stringliteral">&quot; sec&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;Analyzer run time   &quot;</span> &lt;&lt; analyzerTime</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                  &lt;&lt; <span class="stringliteral">&quot; sec&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      <span class="comment">// Output number of times MDE has been solved for the simulation run</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a6b0dce56f209a20c05323b08660d45cd">outputMdeCounter</a>(<a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>());</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      <span class="comment">// Print McMove acceptance statistics</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>      <span class="keywordtype">long</span> attempt;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>      <span class="keywordtype">long</span> accept;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>      <span class="keywordtype">long</span> fail;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      <span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;Move Statistics:&quot;</span> &lt;&lt; endl &lt;&lt; endl;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; setw(20) &lt;&lt; left &lt;&lt;  <span class="stringliteral">&quot;Move Name&quot;</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>           &lt;&lt; setw(10) &lt;&lt; right &lt;&lt; <span class="stringliteral">&quot;Attempted&quot;</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>           &lt;&lt; setw(10) &lt;&lt; right &lt;&lt; <span class="stringliteral">&quot;Accepted&quot;</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>           &lt;&lt; setw(13) &lt;&lt; right &lt;&lt; <span class="stringliteral">&quot;AcceptRate&quot;</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>           &lt;&lt; setw(10) &lt;&lt; right &lt;&lt; <span class="stringliteral">&quot;Failed&quot;</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>           &lt;&lt; setw(13) &lt;&lt; right &lt;&lt; <span class="stringliteral">&quot;FailRate&quot;</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>           &lt;&lt; endl;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      <span class="keywordtype">int</span> nMove = mcMoveManager_.size();</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iMove = 0; iMove &lt; nMove; ++iMove) {</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>         attempt = mcMoveManager_[iMove].nAttempt();</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>         accept  = mcMoveManager_[iMove].nAccept();</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>         fail  = mcMoveManager_[iMove].nFail();</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>         <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; setw(20) &lt;&lt; left</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>              &lt;&lt; mcMoveManager_[iMove].className()</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>              &lt;&lt; setw(10) &lt;&lt; right &lt;&lt; attempt</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>              &lt;&lt; setw(10) &lt;&lt; accept</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>              &lt;&lt; setw(13) &lt;&lt; fixed &lt;&lt; setprecision(5)</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>              &lt;&lt; ( attempt == 0 ? 0.0 : double(accept)/double(attempt) )</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>              &lt;&lt; setw(10) &lt;&lt; fail</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>              &lt;&lt; setw(13) &lt;&lt; fixed &lt;&lt; setprecision(5)</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>              &lt;&lt; ( attempt == 0 ? 0.0 : double(fail)/double(attempt) )</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>              &lt;&lt; endl;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>      }</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; endl;</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>   }</div>
 </div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="comment">   * Open, read and analyze a trajectory file</span></div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00276" data-start="{" data-end="}">
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1McSimulator.html#a102e1ff1dfef2be34f186d816a280393">  276</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1McSimulator.html#a102e1ff1dfef2be34f186d816a280393">McSimulator&lt;D&gt;::analyze</a>(<span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max,</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                                std::string classname,</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                                std::string filename)</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>   {</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>      <span class="comment">// Preconditions</span></div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(min &gt;= 0);</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(max &gt;= min);</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Analyzer.html#a6745c2bbcd978b149f04a60bcc55f297">Analyzer&lt;D&gt;::baseInterval</a> &gt; 0);</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(analyzerManager_.size() &gt; 0);</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>      <span class="comment">// Construct TrajectoryReader</span></div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>      <a class="code hl_class" href="classPscf_1_1Rpc_1_1TrajectoryReader.html">TrajectoryReader&lt;D&gt;</a>* trajectoryReaderPtr;</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>      trajectoryReaderPtr = <a class="code hl_function" href="classPscf_1_1Rpc_1_1McSimulator.html#a02623e14777b74d18c862322414033f8">trajectoryReaderFactory</a>().factory(classname);</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>      <span class="keywordflow">if</span> (!trajectoryReaderPtr) {</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>         std::string message;</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>         message = <span class="stringliteral">&quot;Invalid TrajectoryReader class name &quot;</span> + classname;</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(message.c_str());</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>      }</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>      <span class="comment">// Open trajectory file</span></div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>      trajectoryReaderPtr-&gt;<a class="code hl_function" href="classPscf_1_1Rpc_1_1TrajectoryReader.html#a5c236cde46f46f339975ee16285b8101">open</a>(filename);</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>      trajectoryReaderPtr-&gt;readHeader();</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>      <span class="comment">// Main loop over trajectory frames</span></div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timer;</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>      <span class="keywordtype">bool</span> hasFrame;</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>      timer.<a class="code hl_function" href="classUtil_1_1Timer.html#a307f66b72595f093e28787365abf8c77">start</a>();</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>      hasFrame = trajectoryReaderPtr-&gt;<a class="code hl_function" href="classPscf_1_1Rpc_1_1TrajectoryReader.html#a0141e7bca4a4f1f6f08e45dc1123052e">readFrame</a>();</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>      </div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>      <span class="keywordflow">for</span> (<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a> = 0; <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a> &lt;= max &amp;&amp; hasFrame; ++<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a>) {</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>         <span class="keywordflow">if</span> (hasFrame) {</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>            <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a50346830ae5ba5bb7d36530971c05546">clearData</a>();</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>            <span class="comment">// Initialize analyzers</span></div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a> == min) {</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>               setup(<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a>);</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>            }</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="comment">   * Open, read and analyze a trajectory file</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00281" data-start="{" data-end="}">
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1McSimulator.html#a102e1ff1dfef2be34f186d816a280393">  281</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1McSimulator.html#a102e1ff1dfef2be34f186d816a280393">McSimulator&lt;D&gt;::analyze</a>(<span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max,</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                                std::string classname,</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                                std::string filename)</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>   {</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>      <span class="comment">// Preconditions</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(min &gt;= 0);</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(max &gt;= min);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Analyzer.html#a6745c2bbcd978b149f04a60bcc55f297">Analyzer&lt;D&gt;::baseInterval</a> &gt; 0);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(analyzerManager_.size() &gt; 0);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>      <span class="comment">// Construct TrajectoryReader</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      <a class="code hl_class" href="classPscf_1_1Rpc_1_1TrajectoryReader.html">TrajectoryReader&lt;D&gt;</a>* trajectoryReaderPtr;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>      trajectoryReaderPtr = <a class="code hl_function" href="classPscf_1_1Rpc_1_1McSimulator.html#a02623e14777b74d18c862322414033f8">trajectoryReaderFactory</a>().factory(classname);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>      <span class="keywordflow">if</span> (!trajectoryReaderPtr) {</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>         std::string message;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>         message = <span class="stringliteral">&quot;Invalid TrajectoryReader class name &quot;</span> + classname;</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(message.c_str());</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>      }</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>      <span class="comment">// Open trajectory file</span></div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>      trajectoryReaderPtr-&gt;<a class="code hl_function" href="classPscf_1_1Rpc_1_1TrajectoryReader.html#a5c236cde46f46f339975ee16285b8101">open</a>(filename);</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>      trajectoryReaderPtr-&gt;readHeader();</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>      <span class="comment">// Main loop over trajectory frames</span></div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>      <a class="code hl_class" href="classUtil_1_1Timer.html">Timer</a> timer;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>      <span class="keywordtype">bool</span> hasFrame;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>      timer.<a class="code hl_function" href="classUtil_1_1Timer.html#a307f66b72595f093e28787365abf8c77">start</a>();</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>      hasFrame = trajectoryReaderPtr-&gt;<a class="code hl_function" href="classPscf_1_1Rpc_1_1TrajectoryReader.html#a0141e7bca4a4f1f6f08e45dc1123052e">readFrame</a>();</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>      </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>      <span class="keywordflow">for</span> (<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a> = 0; <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a> &lt;= max &amp;&amp; hasFrame; ++<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a>) {</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>         <span class="keywordflow">if</span> (hasFrame) {</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>            <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a50346830ae5ba5bb7d36530971c05546">clearData</a>();</div>
 <div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span> </div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>            <span class="comment">// Sample property values only for iStep &gt;= min</span></div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a> &gt;= min) {</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>               analyzerManager_.sample(<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a>);</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>            <span class="comment">// Initialize analyzers</span></div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a> == min) {</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>               setup(<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a>);</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            }</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>         }</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>         </div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>         hasFrame = trajectoryReaderPtr-&gt;<a class="code hl_function" href="classPscf_1_1Rpc_1_1TrajectoryReader.html#a0141e7bca4a4f1f6f08e45dc1123052e">readFrame</a>();</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>      }</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>      timer.<a class="code hl_function" href="classUtil_1_1Timer.html#ae1884c49bc5f2a21d1b426655247b645">stop</a>();</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;end main loop&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>      <span class="keywordtype">int</span> nFrames = <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a> - min;</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>      trajectoryReaderPtr-&gt;<a class="code hl_function" href="classPscf_1_1Rpc_1_1TrajectoryReader.html#a0a1a54df31887940aabb3a16c698e727">close</a>();</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>      <span class="keyword">delete</span> trajectoryReaderPtr;</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>      <span class="comment">// Output results of all analyzers to output files</span></div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>      analyzerManager_.output();</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>      <span class="comment">// Output number of frames and times</span></div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;# of frames   &quot;</span> &lt;&lt; nFrames &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;run time      &quot;</span> &lt;&lt; timer.<a class="code hl_function" href="classUtil_1_1Timer.html#a9546409375479f55e93c185d248be201">time</a>()</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                  &lt;&lt; <span class="stringliteral">&quot;  sec&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;time / frame &quot;</span> &lt;&lt; timer.<a class="code hl_function" href="classUtil_1_1Timer.html#a9546409375479f55e93c185d248be201">time</a>()/double(nFrames)</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                  &lt;&lt; <span class="stringliteral">&quot;  sec&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>   }</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>            <span class="comment">// Sample property values only for iStep &gt;= min</span></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a> &gt;= min) {</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>               analyzerManager_.sample(<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a>);</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            }</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>         }</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>         </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>         hasFrame = trajectoryReaderPtr-&gt;<a class="code hl_function" href="classPscf_1_1Rpc_1_1TrajectoryReader.html#a0141e7bca4a4f1f6f08e45dc1123052e">readFrame</a>();</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>      }</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>      timer.<a class="code hl_function" href="classUtil_1_1Timer.html#ae1884c49bc5f2a21d1b426655247b645">stop</a>();</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;end main loop&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>      <span class="keywordtype">int</span> nFrames = <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">iStep_</a> - min;</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>      trajectoryReaderPtr-&gt;<a class="code hl_function" href="classPscf_1_1Rpc_1_1TrajectoryReader.html#a0a1a54df31887940aabb3a16c698e727">close</a>();</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>      <span class="keyword">delete</span> trajectoryReaderPtr;</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>      <span class="comment">// Output results of all analyzers to output files</span></div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>      analyzerManager_.output();</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>      <span class="comment">// Output number of frames and times</span></div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;# of frames   &quot;</span> &lt;&lt; nFrames &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;run time      &quot;</span> &lt;&lt; timer.<a class="code hl_function" href="classUtil_1_1Timer.html#a9546409375479f55e93c185d248be201">time</a>()</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                  &lt;&lt; <span class="stringliteral">&quot;  sec&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;time / frame &quot;</span> &lt;&lt; timer.<a class="code hl_function" href="classUtil_1_1Timer.html#a9546409375479f55e93c185d248be201">time</a>()/double(nFrames)</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                  &lt;&lt; <span class="stringliteral">&quot;  sec&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>   }</div>
 </div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="comment">   * Output McMoveManager timer results.</span></div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>   <span class="keyword">template</span>&lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00346" data-start="{" data-end="}">
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1McSimulator.html#a837e0fdcea2422c0baaa0f603e323a3c">  346</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1McSimulator.html#a837e0fdcea2422c0baaa0f603e323a3c">McSimulator&lt;D&gt;::outputTimers</a>(std::ostream&amp; out)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="keyword">   </span>{</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>      <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a520ec16b9f5bcd79d9035f857f5d5115">compressor</a>().outputTimers(out);</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>      out &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>      out &lt;&lt; <span class="stringliteral">&quot;MC move time contributions:\n&quot;</span>;</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>      mcMoveManager_.outputTimers(out);</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>      out &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>   }</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="comment">   * Output McMoveManager timer results.</span></div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>   <span class="keyword">template</span>&lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00351" data-start="{" data-end="}">
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1McSimulator.html#a837e0fdcea2422c0baaa0f603e323a3c">  351</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1McSimulator.html#a837e0fdcea2422c0baaa0f603e323a3c">McSimulator&lt;D&gt;::outputTimers</a>(std::ostream&amp; out)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="keyword">   </span>{</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>      <a class="code hl_function" href="classPscf_1_1Rpc_1_1Simulator.html#a520ec16b9f5bcd79d9035f857f5d5115">compressor</a>().outputTimers(out);</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>      out &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>      out &lt;&lt; <span class="stringliteral">&quot;MC move time contributions:\n&quot;</span>;</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>      mcMoveManager_.outputTimers(out);</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>      out &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>   }</div>
 </div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span> </div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span><span class="comment">   * Clear all McMoveManager timers.</span></div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>   <span class="keyword">template</span>&lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00359" data-start="{" data-end="}">
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1McSimulator.html#a84eaf98dee4a3d0709f6f7432b27f834">  359</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1McSimulator.html#a84eaf98dee4a3d0709f6f7432b27f834">McSimulator&lt;D&gt;::clearTimers</a>()</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>   {  mcMoveManager_.clearTimers(); }</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span> </div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="comment">   * Clear all McMoveManager timers.</span></div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>   <span class="keyword">template</span>&lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00364" data-start="{" data-end="}">
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1McSimulator.html#a84eaf98dee4a3d0709f6f7432b27f834">  364</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1McSimulator.html#a84eaf98dee4a3d0709f6f7432b27f834">McSimulator&lt;D&gt;::clearTimers</a>()</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>   {  mcMoveManager_.clearTimers(); }</div>
 </div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>}</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>}</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span> </div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>}</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>}</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1Analyzer_html_a6745c2bbcd978b149f04a60bcc55f297"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Analyzer.html#a6745c2bbcd978b149f04a60bcc55f297">Pscf::Rpc::Analyzer::baseInterval</a></div><div class="ttdeci">static long baseInterval</div><div class="ttdoc">The interval for an Analyzer must be a multiple of baseInterval.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2analyzer_2Analyzer_8h_source.html#l00110">rpc/fts/analyzer/Analyzer.h:110</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1McSimulator_html_a02623e14777b74d18c862322414033f8"><div class="ttname"><a href="classPscf_1_1Rpc_1_1McSimulator.html#a02623e14777b74d18c862322414033f8">Pscf::Rpc::McSimulator::trajectoryReaderFactory</a></div><div class="ttdeci">Factory&lt; TrajectoryReader&lt; D &gt; &gt; &amp; trajectoryReaderFactory()</div><div class="ttdoc">Get the trajectory reader factory by reference.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2montecarlo_2McSimulator_8h_source.html#l00236">rpc/fts/montecarlo/McSimulator.h:236</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1McSimulator_html_a102e1ff1dfef2be34f186d816a280393"><div class="ttname"><a href="classPscf_1_1Rpc_1_1McSimulator.html#a102e1ff1dfef2be34f186d816a280393">Pscf::Rpc::McSimulator::analyze</a></div><div class="ttdeci">virtual void analyze(int min, int max, std::string classname, std::string filename)</div><div class="ttdoc">Read and analyze a trajectory file.</div><div class="ttdef"><b>Definition</b> <a href="#l00276">rpc/fts/montecarlo/McSimulator.tpp:276</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1McSimulator_html_a102e1ff1dfef2be34f186d816a280393"><div class="ttname"><a href="classPscf_1_1Rpc_1_1McSimulator.html#a102e1ff1dfef2be34f186d816a280393">Pscf::Rpc::McSimulator::analyze</a></div><div class="ttdeci">virtual void analyze(int min, int max, std::string classname, std::string filename)</div><div class="ttdoc">Read and analyze a trajectory file.</div><div class="ttdef"><b>Definition</b> <a href="#l00281">rpc/fts/montecarlo/McSimulator.tpp:281</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1McSimulator_html_a30752567fd7b8b93e5c8476bbe8592c5"><div class="ttname"><a href="classPscf_1_1Rpc_1_1McSimulator.html#a30752567fd7b8b93e5c8476bbe8592c5">Pscf::Rpc::McSimulator::setClassName</a></div><div class="ttdeci">void setClassName(const char *className)</div><div class="ttdoc">Set class name string.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8cpp_source.html#l00900">ParamComposite.cpp:379</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1McSimulator_html_a578d29a9e448ec8af9d95c2220b891c9"><div class="ttname"><a href="classPscf_1_1Rpc_1_1McSimulator.html#a578d29a9e448ec8af9d95c2220b891c9">Pscf::Rpc::McSimulator::hasMcMoves</a></div><div class="ttdeci">bool hasMcMoves() const</div><div class="ttdoc">Have any McMove algorithms been defined?</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2montecarlo_2McSimulator_8h_source.html#l00244">rpc/fts/montecarlo/McSimulator.h:244</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1McSimulator_html_a5c3230cff60c74ee1f247c76a2d96877"><div class="ttname"><a href="classPscf_1_1Rpc_1_1McSimulator.html#a5c3230cff60c74ee1f247c76a2d96877">Pscf::Rpc::McSimulator::readParameters</a></div><div class="ttdeci">virtual void readParameters(std::istream &amp;in)</div><div class="ttdoc">Read parameters file block for an MC simulation.</div><div class="ttdef"><b>Definition</b> <a href="#l00065">rpc/fts/montecarlo/McSimulator.tpp:65</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1McSimulator_html_a837e0fdcea2422c0baaa0f603e323a3c"><div class="ttname"><a href="classPscf_1_1Rpc_1_1McSimulator.html#a837e0fdcea2422c0baaa0f603e323a3c">Pscf::Rpc::McSimulator::outputTimers</a></div><div class="ttdeci">virtual void outputTimers(std::ostream &amp;out) const</div><div class="ttdoc">Output timing results.</div><div class="ttdef"><b>Definition</b> <a href="#l00346">rpc/fts/montecarlo/McSimulator.tpp:346</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1McSimulator_html_a84eaf98dee4a3d0709f6f7432b27f834"><div class="ttname"><a href="classPscf_1_1Rpc_1_1McSimulator.html#a84eaf98dee4a3d0709f6f7432b27f834">Pscf::Rpc::McSimulator::clearTimers</a></div><div class="ttdeci">virtual void clearTimers()</div><div class="ttdoc">Clear timers.</div><div class="ttdef"><b>Definition</b> <a href="#l00359">rpc/fts/montecarlo/McSimulator.tpp:359</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1McSimulator_html_a898d7c3b457be7d8e040e88724fde5d3"><div class="ttname"><a href="classPscf_1_1Rpc_1_1McSimulator.html#a898d7c3b457be7d8e040e88724fde5d3">Pscf::Rpc::McSimulator::simulate</a></div><div class="ttdeci">void simulate(int nStep)</div><div class="ttdoc">Perform a field theoretic Monte-Carlo simulation.</div><div class="ttdef"><b>Definition</b> <a href="#l00151">rpc/fts/montecarlo/McSimulator.tpp:151</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1McSimulator_html_a837e0fdcea2422c0baaa0f603e323a3c"><div class="ttname"><a href="classPscf_1_1Rpc_1_1McSimulator.html#a837e0fdcea2422c0baaa0f603e323a3c">Pscf::Rpc::McSimulator::outputTimers</a></div><div class="ttdeci">virtual void outputTimers(std::ostream &amp;out) const</div><div class="ttdoc">Output timing results.</div><div class="ttdef"><b>Definition</b> <a href="#l00351">rpc/fts/montecarlo/McSimulator.tpp:351</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1McSimulator_html_a84eaf98dee4a3d0709f6f7432b27f834"><div class="ttname"><a href="classPscf_1_1Rpc_1_1McSimulator.html#a84eaf98dee4a3d0709f6f7432b27f834">Pscf::Rpc::McSimulator::clearTimers</a></div><div class="ttdeci">virtual void clearTimers()</div><div class="ttdoc">Clear timers.</div><div class="ttdef"><b>Definition</b> <a href="#l00364">rpc/fts/montecarlo/McSimulator.tpp:364</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1McSimulator_html_a898d7c3b457be7d8e040e88724fde5d3"><div class="ttname"><a href="classPscf_1_1Rpc_1_1McSimulator.html#a898d7c3b457be7d8e040e88724fde5d3">Pscf::Rpc::McSimulator::simulate</a></div><div class="ttdeci">void simulate(int nStep)</div><div class="ttdoc">Perform a field theoretic Monte-Carlo simulation.</div><div class="ttdef"><b>Definition</b> <a href="#l00156">rpc/fts/montecarlo/McSimulator.tpp:156</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1McSimulator_html_aa2beb9ca232ef14643a362a56e0d48fa"><div class="ttname"><a href="classPscf_1_1Rpc_1_1McSimulator.html#aa2beb9ca232ef14643a362a56e0d48fa">Pscf::Rpc::McSimulator::~McSimulator</a></div><div class="ttdeci">~McSimulator()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00054">rpc/fts/montecarlo/McSimulator.tpp:54</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1McSimulator_html_ac458ce273ce3731ffb26c49767d7456e"><div class="ttname"><a href="classPscf_1_1Rpc_1_1McSimulator.html#ac458ce273ce3731ffb26c49767d7456e">Pscf::Rpc::McSimulator::McSimulator</a></div><div class="ttdeci">McSimulator(System&lt; D &gt; &amp;system)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00039">rpc/fts/montecarlo/McSimulator.tpp:39</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1McSimulator_html_ac7f91287ff57b0cd8180b9ac18c4368d"><div class="ttname"><a href="classPscf_1_1Rpc_1_1McSimulator.html#ac7f91287ff57b0cd8180b9ac18c4368d">Pscf::Rpc::McSimulator::readParamCompositeOptional</a></div><div class="ttdeci">void readParamCompositeOptional(std::istream &amp;in, ParamComposite &amp;child, bool next=true)</div><div class="ttdoc">Add and attempt to read an optional child ParamComposite.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8cpp_source.html#l00292">ParamComposite.cpp:273</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1Simulator_html_a09594970b5047b9e2bcf755eaf45d122"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Simulator.html#a09594970b5047b9e2bcf755eaf45d122">Pscf::Rpc::Simulator::ramp</a></div><div class="ttdeci">Ramp&lt; D &gt; const &amp; ramp() const</div><div class="ttdoc">Get the associated Ramp by const reference.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2simulator_2Simulator_8h_source.html#l00907">rpc/fts/simulator/Simulator.h:907</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1Simulator_html_a0d52197d4b1c47c0b3092c3d780e4393"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Simulator.html#a0d52197d4b1c47c0b3092c3d780e4393">Pscf::Rpc::Simulator::readPerturbation</a></div><div class="ttdeci">void readPerturbation(std::istream &amp;in, bool &amp;isEnd)</div><div class="ttdoc">Optionally read an associated perturbation.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00765">rpc/fts/simulator/Simulator.tpp:765</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1Simulator_html_a0d52197d4b1c47c0b3092c3d780e4393"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Simulator.html#a0d52197d4b1c47c0b3092c3d780e4393">Pscf::Rpc::Simulator::readPerturbation</a></div><div class="ttdeci">void readPerturbation(std::istream &amp;in, bool &amp;isEnd)</div><div class="ttdoc">Optionally read a Perturbation parameter file block.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00765">rpc/fts/simulator/Simulator.tpp:765</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1Simulator_html_a0e6913e95f54f5a6492f415e87f4b455"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Simulator.html#a0e6913e95f54f5a6492f415e87f4b455">Pscf::Rpc::Simulator::system</a></div><div class="ttdeci">System&lt; D &gt; &amp; system()</div><div class="ttdoc">Get parent system by reference.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2simulator_2Simulator_8h_source.html#l00831">rpc/fts/simulator/Simulator.h:831</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1Simulator_html_a228f69184359d46567376cdd5f2342bf"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Simulator.html#a228f69184359d46567376cdd5f2342bf">Pscf::Rpc::Simulator::state_</a></div><div class="ttdeci">SimState&lt; D &gt; state_</div><div class="ttdoc">Previous state saved during at the beginning of a step.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2simulator_2Simulator_8h_source.html#l00673">rpc/fts/simulator/Simulator.h:673</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1Simulator_html_a34c4fe16da726972d46885c59f08f1ac"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Simulator.html#a34c4fe16da726972d46885c59f08f1ac">Pscf::Rpc::Simulator::hasRamp</a></div><div class="ttdeci">bool hasRamp() const</div><div class="ttdoc">Does this Simulator have a Ramp?</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2simulator_2Simulator_8h_source.html#l00902">rpc/fts/simulator/Simulator.h:902</a></div></div>
@@ -459,10 +464,10 @@ $(function() {
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1Simulator_html_ac24da701b7ed01989601cac9de479a4b"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Simulator.html#ac24da701b7ed01989601cac9de479a4b">Pscf::Rpc::Simulator::iTotalStep_</a></div><div class="ttdeci">long iTotalStep_</div><div class="ttdoc">Step counter - total number of attempted BD or MC steps.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2simulator_2Simulator_8h_source.html#l00715">rpc/fts/simulator/Simulator.h:715</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1Simulator_html_ac6eb2c5b782602630c6b4d86a3f92b15"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Simulator.html#ac6eb2c5b782602630c6b4d86a3f92b15">Pscf::Rpc::Simulator::hasCompressor</a></div><div class="ttdeci">bool hasCompressor() const</div><div class="ttdoc">Does this Simulator have a Compressor?</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2simulator_2Simulator_8h_source.html#l00852">rpc/fts/simulator/Simulator.h:852</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1Simulator_html_ac716a3884880aebf9961e4ad72ab062d"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Simulator.html#ac716a3884880aebf9961e4ad72ab062d">Pscf::Rpc::Simulator::readRandomSeed</a></div><div class="ttdeci">void readRandomSeed(std::istream &amp;in)</div><div class="ttdoc">Optionally read a random number generator seed.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00730">rpc/fts/simulator/Simulator.tpp:730</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1Simulator_html_ad0b2a043608d273e834a3b46788b1845"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Simulator.html#ad0b2a043608d273e834a3b46788b1845">Pscf::Rpc::Simulator::readCompressor</a></div><div class="ttdeci">void readCompressor(std::istream &amp;in, bool &amp;isEnd)</div><div class="ttdoc">Read the compressor block of the parameter file.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00745">rpc/fts/simulator/Simulator.tpp:745</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1Simulator_html_ad0b2a043608d273e834a3b46788b1845"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Simulator.html#ad0b2a043608d273e834a3b46788b1845">Pscf::Rpc::Simulator::readCompressor</a></div><div class="ttdeci">void readCompressor(std::istream &amp;in, bool &amp;isEnd)</div><div class="ttdoc">Optionally read a Compressor parameter file block.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00745">rpc/fts/simulator/Simulator.tpp:745</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1Simulator_html_adc592fbbf7f6ebf3ee52f0e1dd09f155"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Simulator.html#adc592fbbf7f6ebf3ee52f0e1dd09f155">Pscf::Rpc::Simulator::iStep_</a></div><div class="ttdeci">long iStep_</div><div class="ttdoc">Step counter - attempted steps for which compressor converges.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2simulator_2Simulator_8h_source.html#l00710">rpc/fts/simulator/Simulator.h:710</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1Simulator_html_ae09d7f1efadf246b0250935e7f243c22"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Simulator.html#ae09d7f1efadf246b0250935e7f243c22">Pscf::Rpc::Simulator::readRamp</a></div><div class="ttdeci">void readRamp(std::istream &amp;in, bool &amp;isEnd)</div><div class="ttdoc">Optionally read an associated ramp.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00795">rpc/fts/simulator/Simulator.tpp:795</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1System.html">Pscf::Rpc::System</a></div><div class="ttdoc">Main class, representing a complete physical system.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2system_2System_8h_source.html#l00038">rpc/system/System.h:39</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1Simulator_html_ae09d7f1efadf246b0250935e7f243c22"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Simulator.html#ae09d7f1efadf246b0250935e7f243c22">Pscf::Rpc::Simulator::readRamp</a></div><div class="ttdeci">void readRamp(std::istream &amp;in, bool &amp;isEnd)</div><div class="ttdoc">Optionally read a Ramp parameter file block.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00795">rpc/fts/simulator/Simulator.tpp:795</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1System.html">Pscf::Rpc::System</a></div><div class="ttdoc">Main class, representing a complete physical system.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2system_2System_8h_source.html#l00037">rpc/system/System.h:38</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1TrajectoryReaderFactory_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1TrajectoryReaderFactory.html">Pscf::Rpc::TrajectoryReaderFactory</a></div><div class="ttdoc">Factory for subclasses of TrajectoryReader.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2trajectory_2TrajectoryReaderFactory_8h_source.html#l00028">rpc/fts/trajectory/TrajectoryReaderFactory.h:29</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1TrajectoryReader_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1TrajectoryReader.html">Pscf::Rpc::TrajectoryReader</a></div><div class="ttdoc">Trajectory file reader (base class).</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2trajectory_2TrajectoryReader_8h_source.html#l00024">rpc/fts/trajectory/TrajectoryReader.h:25</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1TrajectoryReader_html_a0141e7bca4a4f1f6f08e45dc1123052e"><div class="ttname"><a href="classPscf_1_1Rpc_1_1TrajectoryReader.html#a0141e7bca4a4f1f6f08e45dc1123052e">Pscf::Rpc::TrajectoryReader::readFrame</a></div><div class="ttdeci">virtual bool readFrame()=0</div><div class="ttdoc">Read a single frame.</div></div>
@@ -477,7 +482,7 @@ $(function() {
 <div class="ttc" id="aglobal_8h_html_aaf3bc07accafc94019d126e4cffa81e7"><div class="ttname"><a href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a></div><div class="ttdeci">#define UTIL_CHECK(condition)</div><div class="ttdoc">Assertion macro suitable for serial or parallel production code.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00068">global.h:68</a></div></div>
 <div class="ttc" id="aglobal_8h_html_ad2512f8bd062d41d66799cf900151487"><div class="ttname"><a href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a></div><div class="ttdeci">#define UTIL_THROW(msg)</div><div class="ttdoc">Macro for throwing an Exception, reporting function, file and line number.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00049">global.h:49</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Rpc_html"><div class="ttname"><a href="namespacePscf_1_1Rpc.html">Pscf::Rpc</a></div><div class="ttdoc">Real periodic fields, SCFT and PS-FTS (CPU).</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00002">param_pc.dox:2</a></div></div>
-<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
+<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

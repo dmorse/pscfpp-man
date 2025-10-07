@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: Rpc::ExplicitBdStep</title>
+<title>PSCF: ExplicitBdStep</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -54,25 +54,25 @@ $(function() {
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">Rpc::ExplicitBdStep </div></div>
+  <div class="headertitle"><div class="title">ExplicitBdStep </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The ExplictBdStep classes used by both the pscf_pc and pscf_pg programs implements a simple explicit Euler Brownian dynamics step algorithm.</p>
-<p>Two closely analogous classes named <a class="el" href="classPscf_1_1Rpc_1_1ExplicitBdStep.html" title="BdStep is an abstract base class for Brownian dynamics steps.">Pscf::Rpc::ExplicitBdStep</a> and <a class="el" href="classPscf_1_1Rpg_1_1ExplicitBdStep.html" title="BdStep is an abstract base class for Brownian dynamics steps.">Pscf::Rpg::ExplicitBdStep</a> that have the same class name but that are defined in different namespaces are used to implement this the same step algorithm for different programs. The ExplicitBdStep class defined in the Rpc namespace is used in the pscf_pc program (using CPU hardware) and the class defined in the Rpg namespace is used in the pscf_pg program (using GPU acceleration). These two analogous classes implement the same step algorithm and use the same parameter file format, which are documented below.</p>
+<div class="textblock"><p>The ExplictBdStep classes used by both the pscf_pc and pscf_pg programs both implement a simple explicit Euler Brownian dynamics step algorithm.</p>
+<p>Two closely analogous classes named <a class="el" href="classPscf_1_1Rpc_1_1ExplicitBdStep.html" title="BdStep is an abstract base class for Brownian dynamics steps.">Pscf::Rpc::ExplicitBdStep</a> and <a class="el" href="classPscf_1_1Rpg_1_1ExplicitBdStep.html" title="BdStep is an abstract base class for Brownian dynamics steps.">Pscf::Rpg::ExplicitBdStep</a> that have the same class name but that are defined in different namespaces are used to implement this step algorithm for different programs. The ExplicitBdStep class defined in the Rpc namespace is used in the pscf_pc program (using CPU hardware) and the class defined in the Rpg namespace is used in the pscf_pg program (using GPU acceleration). These two analogous classes implement the same step algorithm and use the same parameter file format, as documented below.</p>
 <h1 class="doxsection"><a class="anchor" id="rpc_ExplicitBdStep_algorithm_sec"></a>
 Step Algorithm</h1>
 <p>A general discussion of conventions used in PSCF for BD step algorithms is given <a class="el" href="psfts_algorithm_page.html">here</a>.</p>
-<p>The explicit Euler BD step algorithm for the common case of a standard AB system with two types of monomer is described by an update scheme for the field \( \omega_{0}({\bf r}) = \omega_{-}({\bf r}) \) at grid point location \( {\bf r} \) and time step \( n \) that is given by      </p><p class="formulaDsp">
-\[  \omega_{-}^{(n+1)}({\bf r}) =
-  \omega_{-}^{(n)}({\bf r}) 
-  - \gamma \frac{\delta H}{\delta \omega_{-}({\bf r})}
+<p>The explicit Euler BD step algorithm for the common case of a standard AB system with two types of monomer is described by an update scheme for the field \( W_{0}({\bf r}) = W_{-}({\bf r}) \) at grid point location \( {\bf r} \) and time step \( n \) that is given by      </p><p class="formulaDsp">
+\[  W_{-}^{(n+1)}({\bf r}) =
+  W_{-}^{(n)}({\bf r}) 
+  - \gamma \frac{\delta H}{\delta W_{-}({\bf r})}
   + g^{(n)}({\bf r})
 \]
 </p>
 <p> where \( \gamma \) is the BD mobility parameter,      </p><p class="formulaDsp">
-\[  \frac{\delta H}{\delta \omega_{-}({\bf r})}
+\[  \frac{\delta H}{\delta W_{-}({\bf r})}
   = \frac{1}{v} \left [
-    \frac{2\omega_{-}({\bf r})}{\chi_{b}}
+    \frac{2W_{-}({\bf r})}{\chi_{b}}
     - \Phi_{-}({\bf r}) \right ]
 \]
 </p>
@@ -81,10 +81,10 @@ Step Algorithm</h1>
 \]
 </p>
 <p> Here, \( \Delta V \) is the volume per grid point of the computational mesh, given by \( \Delta V = V/G \), where \( V \) is the total system volume and \( G \) is the number of grid points on the mesh.</p>
-<p>This algorithm can be generalized to a system with \( M \) monomer types for which the first \( L \) eigenvalues of the projected chi matrix are negative, with \( L \leq M - 1 \). In this case, each field component \( \omega_{i}({\bf r}) \) associated with eigenvalue \( \lambda_{i} &lt; 0 \) of the projected \( \chi \) matrix, for \( i = 0, \ldots, L - 1 \), is updated via a scheme      </p><p class="formulaDsp">
-\[  \omega_{i}^{(n+1)}({\bf r}) =
-  \omega_{i}^{(n)}({\bf r}) 
-  - \gamma \frac{\delta H}{\delta \omega_{i}({\bf r})}
+<p>This algorithm can be generalized to a system with \( M \) monomer types for which the first \( L \) eigenvalues of the projected chi matrix are negative, with \( L \leq M - 1 \). In this case, each field component \( W_{i}({\bf r}) \) associated with eigenvalue \( \lambda_{i} &lt; 0 \) of the projected \( \chi \) matrix, for \( i = 0, \ldots, L - 1 \), is updated via a scheme      </p><p class="formulaDsp">
+\[  W_{i}^{(n+1)}({\bf r}) =
+  W_{i}^{(n)}({\bf r}) 
+  - \gamma \frac{\delta H}{\delta W_{i}({\bf r})}
   + g_{i}^{(n)}({\bf r}) \quad.
 \]
 </p>

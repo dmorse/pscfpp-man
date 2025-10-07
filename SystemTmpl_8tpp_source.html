@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -403,7 +403,7 @@ $(function() {
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>      <span class="comment">// Allocate memory for field containers in r-grid form</span></div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>      allocateFieldsGrid();</div>
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>      <span class="comment">// Optionally construct an Environment object</span></div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>      <span class="comment">// Optionally read and construct an Environment</span></div>
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>      std::string <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a93e3a9fd3bd01dcc3c606a7bf3112c0e">className</a>;</div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>      <span class="keywordtype">bool</span> isEnd;</div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>      environmentPtr_ =</div>
@@ -416,7 +416,7 @@ $(function() {
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>         environment().setNParams(domain_.unitCell().nParameter());</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      }</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>      <span class="comment">// Optionally construct an Iterator object</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>      <span class="comment">// Optionally read and construct an Iterator</span></div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>      <span class="keywordflow">if</span> (!isEnd) {</div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>         iteratorPtr_ =</div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            iteratorFactoryPtr_-&gt;readObjectOptional(in, *<span class="keyword">this</span>, </div>
@@ -427,7 +427,7 @@ $(function() {
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>         }</div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>      }</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>      <span class="comment">// Optionally construct a Sweep object (if an iterator exists)</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>      <span class="comment">// Optionally read and construct a Sweep (if an iterator exists)</span></div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>      <span class="keywordflow">if</span> (hasIterator() &amp;&amp; !isEnd) {</div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>         sweepPtr_ =</div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>            sweepFactoryPtr_-&gt;readObjectOptional(in, *<span class="keyword">this</span>,</div>
@@ -437,7 +437,7 @@ $(function() {
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>         }</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>      }</div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>      <span class="comment">// Optionally construct a Simulator object</span></div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>      <span class="comment">// Optionally read and construct a Simulator </span></div>
 <div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>      <span class="keywordflow">if</span> (!isEnd) {</div>
 <div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>         simulatorPtr_ =</div>
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            simulatorFactoryPtr_-&gt;readObjectOptional(in, *<span class="keyword">this</span>,</div>
@@ -1358,7 +1358,7 @@ $(function() {
 <div class="ttc" id="anamespacePscf_1_1PolymerModel_html_a791e33c1ef3bdc8eb0c0e6c09772e023"><div class="ttname"><a href="namespacePscf_1_1PolymerModel.html#a791e33c1ef3bdc8eb0c0e6c09772e023">Pscf::PolymerModel::setModel</a></div><div class="ttdeci">void setModel(Type model)</div><div class="ttdoc">Set the global polymer model enumeration value.</div><div class="ttdef"><b>Definition</b> <a href="PolymerModel_8cpp_source.html#l00045">PolymerModel.cpp:45</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1PolymerModel_html_afda8b9d128920a444038e1b891fca209"><div class="ttname"><a href="namespacePscf_1_1PolymerModel.html#afda8b9d128920a444038e1b891fca209">Pscf::PolymerModel::isLocked</a></div><div class="ttdeci">bool isLocked()</div><div class="ttdoc">Has the model type been locked (i.e., made immutable) ?</div><div class="ttdef"><b>Definition</b> <a href="PolymerModel_8cpp_source.html#l00081">PolymerModel.cpp:81</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_html"><div class="ttname"><a href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div><div class="ttdoc">Periodic fields and crystallography.</div><div class="ttdef"><b>Definition</b> <a href="CField_8cpp_source.html#l00011">CField.cpp:11</a></div></div>
-<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
+<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 <div class="ttc" id="anamespaceUtil_1_1BracketPolicy_html_a1526320b74b658078193c3f69db30edd"><div class="ttname"><a href="namespaceUtil_1_1BracketPolicy.html#a1526320b74b658078193c3f69db30edd">Util::BracketPolicy::set</a></div><div class="ttdeci">void set(BracketPolicy::Type policy)</div><div class="ttdoc">Set policy regarding use of bracket delimiters on arrays.</div><div class="ttdef"><b>Definition</b> <a href="BracketPolicy_8cpp_source.html#l00028">BracketPolicy.cpp:28</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

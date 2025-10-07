@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -108,7 +108,7 @@ $(function() {
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      <span class="keywordtype">int</span> n = rhs.<a class="code hl_function" href="classUtil_1_1Array.html#a66a4be07c83c3b49eae3536a3afd9fb0">capacity</a>();</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(lhs.<a class="code hl_function" href="classUtil_1_1Array.html#a66a4be07c83c3b49eae3536a3afd9fb0">capacity</a>() == n);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(meshSize() == n);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html#a04f900bb09570d83a7c46c75c1f266d9">VecOp::eqV</a>(lhs, rhs);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1VecOp.html#a305b321c7952bcadf74cfea57a663ede">VecOp::eqV</a>(lhs, rhs);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>   }</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>} <span class="comment">// namespace Rpg</span></div>
@@ -126,11 +126,11 @@ $(function() {
 <div class="ttc" id="aclassUtil_1_1DArray_html"><div class="ttname"><a href="classUtil_1_1DArray.html">Util::DArray</a></div><div class="ttdoc">Dynamically allocatable contiguous array template.</div><div class="ttdef"><b>Definition</b> <a href="DArray_8h_source.html#l00031">DArray.h:32</a></div></div>
 <div class="ttc" id="aclassUtil_1_1DArray_html_a1ffe3de1a78d48c67fc0186dbb0c6f36"><div class="ttname"><a href="classUtil_1_1DArray.html#a1ffe3de1a78d48c67fc0186dbb0c6f36">Util::DArray::allocate</a></div><div class="ttdeci">void allocate(int capacity)</div><div class="ttdoc">Allocate the underlying C array.</div><div class="ttdef"><b>Definition</b> <a href="DArray_8h_source.html#l00199">DArray.h:199</a></div></div>
 <div class="ttc" id="aglobal_8h_html_aaf3bc07accafc94019d126e4cffa81e7"><div class="ttname"><a href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a></div><div class="ttdeci">#define UTIL_CHECK(condition)</div><div class="ttdoc">Assertion macro suitable for serial or parallel production code.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00068">global.h:68</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_1_1VecOp_html_a04f900bb09570d83a7c46c75c1f266d9"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html#a04f900bb09570d83a7c46c75c1f266d9">Pscf::Prdc::Cuda::VecOp::eqV</a></div><div class="ttdeci">void eqV(DeviceArray&lt; cudaReal &gt; &amp;a, DeviceArray&lt; cudaReal &gt; const &amp;b, const int beginIdA, const int beginIdB, const int n)</div><div class="ttdoc">Vector assignment, a[i] = b[i], kernel wrapper (cudaReal).</div><div class="ttdef"><b>Definition</b> <a href="VecOp_8cu_source.html#l01039">VecOp.cu:1039</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a></div><div class="ttdoc">Fields, FFTs, and utilities for periodic boundary conditions (CUDA)</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00014">Reduce.cpp:14</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1VecOp_html_a305b321c7952bcadf74cfea57a663ede"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1VecOp.html#a305b321c7952bcadf74cfea57a663ede">Pscf::Prdc::Cpu::VecOp::eqV</a></div><div class="ttdeci">void eqV(Array&lt; double &gt; &amp;a, Array&lt; double &gt; const &amp;b)</div><div class="ttdoc">Vector assignment, a[i] = b[i].</div><div class="ttdef"><b>Definition</b> <a href="VecOp_8cpp_source.html#l00023">VecOp.cpp:23</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a></div><div class="ttdoc">Fields, FFTs, and utilities for periodic boundary conditions (CUDA)</div><div class="ttdef"><b>Definition</b> <a href="CField_8cu_source.html#l00012">CField.cu:12</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_html"><div class="ttname"><a href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div><div class="ttdoc">Periodic fields and crystallography.</div><div class="ttdef"><b>Definition</b> <a href="CField_8cpp_source.html#l00011">CField.cpp:11</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Rpg_html"><div class="ttname"><a href="namespacePscf_1_1Rpg.html">Pscf::Rpg</a></div><div class="ttdoc">SCFT and PS-FTS with real periodic fields (GPU)</div><div class="ttdef"><b>Definition</b> <a href="rpg_2environment_2environment_8mod_source.html#l00003">rpg/environment/environment.mod:3</a></div></div>
-<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
+<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

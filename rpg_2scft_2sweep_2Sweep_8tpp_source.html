@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -379,57 +379,63 @@ $(function() {
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>      outFileName = baseFileName_;</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>      outFileName += indexString;</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>      outFileName += <span class="stringliteral">&quot;_w&quot;</span>;</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>      outFileName += <span class="stringliteral">&quot;.bf&quot;</span>;</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>      system().w().writeBasis(outFileName);</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>      <span class="comment">// Optionally write c rgrid files</span></div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>      <span class="keywordflow">if</span> (writeCRGrid_) {</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        outFileName = baseFileName_;</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        outFileName += indexString;</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        outFileName += <span class="stringliteral">&quot;_c&quot;</span>;</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        outFileName += <span class="stringliteral">&quot;.rf&quot;</span>;</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        system().c().writeRGrid(outFileName);</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>      }</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>      <span class="comment">// Optionally write c basis files</span></div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>      <span class="keywordflow">if</span> (writeCBasis_) {</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>         outFileName = baseFileName_;</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>         outFileName += indexString;</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>         outFileName += <span class="stringliteral">&quot;_c&quot;</span>;</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>         outFileName += <span class="stringliteral">&quot;.bf&quot;</span>;</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>         system().c().writeBasis(outFileName);</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>      }</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>      <span class="comment">// Optionally write w rgrid files</span></div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>      <span class="keywordflow">if</span> (writeWRGrid_) {</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        outFileName = baseFileName_;</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>        outFileName += indexString;</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>        outFileName += <span class="stringliteral">&quot;_w&quot;</span>;</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        outFileName += <span class="stringliteral">&quot;.rf&quot;</span>;</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>        system().w().writeRGrid(outFileName);</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>      }</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>   }</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>   <span class="keywordtype">void</span> Sweep&lt;D&gt;::outputSummary(std::ostream&amp; out)</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>   {</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>      <span class="keywordtype">int</span> i = nAccept() - 1;</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>      <span class="keywordtype">double</span> sNew = s(0);</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>      out &lt;&lt; <a class="code hl_class" href="classUtil_1_1Int.html">Int</a>(i,5) &lt;&lt; <a class="code hl_class" href="classUtil_1_1Dbl.html">Dbl</a>(sNew)</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>          &lt;&lt; <a class="code hl_class" href="classUtil_1_1Dbl.html">Dbl</a>(system().scft().fHelmholtz(),16)</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>          &lt;&lt; <a class="code hl_class" href="classUtil_1_1Dbl.html">Dbl</a>(system().scft().pressure(),16);</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>      out &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>   }</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00342" data-start="{" data-end="}">
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Sweep.html#ae3b19c5f98370051109840e1ae398de9">  342</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Sweep.html#ae3b19c5f98370051109840e1ae398de9">Sweep&lt;D&gt;::cleanup</a>() </div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>   {  logFile_.close(); }</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>      <span class="keywordflow">if</span> (system().w().isSymmetric()) {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>         outFileName += <span class="stringliteral">&quot;.bf&quot;</span>;</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>         system().w().writeBasis(outFileName);</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>         outFileName += <span class="stringliteral">&quot;.rf&quot;</span>;</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>         system().w().writeRGrid(outFileName);</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>      }</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>      <span class="comment">// Optionally write c rgrid files</span></div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>      <span class="keywordflow">if</span> (writeCRGrid_) {</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        outFileName = baseFileName_;</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        outFileName += indexString;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        outFileName += <span class="stringliteral">&quot;_c&quot;</span>;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        outFileName += <span class="stringliteral">&quot;.rf&quot;</span>;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        system().c().writeRGrid(outFileName);</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>      }</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>      <span class="comment">// Optionally write c basis files</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>      <span class="keywordflow">if</span> (writeCBasis_ &amp;&amp; system().c().isSymmetric()) {</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>         outFileName = baseFileName_;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>         outFileName += indexString;</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>         outFileName += <span class="stringliteral">&quot;_c&quot;</span>;</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>         outFileName += <span class="stringliteral">&quot;.bf&quot;</span>;</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>         system().c().writeBasis(outFileName);</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>      }</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>      <span class="comment">// Optionally write w rgrid files</span></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>      <span class="keywordflow">if</span> (writeWRGrid_ &amp;&amp; system().w().isSymmetric()) {</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        outFileName = baseFileName_;</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        outFileName += indexString;</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        outFileName += <span class="stringliteral">&quot;_w&quot;</span>;</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        outFileName += <span class="stringliteral">&quot;.rf&quot;</span>;</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        system().w().writeRGrid(outFileName);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>      }</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>   }</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>   <span class="keywordtype">void</span> Sweep&lt;D&gt;::outputSummary(std::ostream&amp; out)</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>   {</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>      <span class="keywordtype">int</span> i = nAccept() - 1;</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      <span class="keywordtype">double</span> sNew = s(0);</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>      out &lt;&lt; <a class="code hl_class" href="classUtil_1_1Int.html">Int</a>(i,5) &lt;&lt; <a class="code hl_class" href="classUtil_1_1Dbl.html">Dbl</a>(sNew)</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>          &lt;&lt; <a class="code hl_class" href="classUtil_1_1Dbl.html">Dbl</a>(system().scft().fHelmholtz(),16)</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>          &lt;&lt; <a class="code hl_class" href="classUtil_1_1Dbl.html">Dbl</a>(system().scft().pressure(),16);</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>      out &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>   }</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00348" data-start="{" data-end="}">
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Sweep.html#ae3b19c5f98370051109840e1ae398de9">  348</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Sweep.html#ae3b19c5f98370051109840e1ae398de9">Sweep&lt;D&gt;::cleanup</a>() </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>   {  logFile_.close(); }</div>
 </div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>} <span class="comment">// namespace Rpg</span></div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>} <span class="comment">// namespace Pscf</span></div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>} <span class="comment">// namespace Rpg</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>} <span class="comment">// namespace Pscf</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1BasisFieldState_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1BasisFieldState.html">Pscf::Rpg::BasisFieldState</a></div><div class="ttdoc">FieldState for fields in symmetry-adapted basis format.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2scft_2sweep_2BasisFieldState_8h_source.html#l00026">rpg/scft/sweep/BasisFieldState.h:27</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Sweep_html_a0afa9ae79b260a3a1bb09ddba7380d88"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Sweep.html#a0afa9ae79b260a3a1bb09ddba7380d88">Pscf::Rpg::Sweep::getSolution</a></div><div class="ttdeci">virtual void getSolution()</div><div class="ttdoc">Update state(0) and output data after successful convergence.</div><div class="ttdef"><b>Definition</b> <a href="#l00263">rpg/scft/sweep/Sweep.tpp:263</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Sweep_html_a0f148c7fe532d77ea71c014be469ee8a"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Sweep.html#a0f148c7fe532d77ea71c014be469ee8a">Pscf::Rpg::Sweep::writeCBasis_</a></div><div class="ttdeci">bool writeCBasis_</div><div class="ttdoc">Whether to write concentration field files in basis format.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00145">rpg/scft/sweep/Sweep.h:145</a></div></div>
@@ -447,7 +453,7 @@ $(function() {
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Sweep_html_aa60b6403a4fd008e71e7eeaf85fc0fe8"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Sweep.html#aa60b6403a4fd008e71e7eeaf85fc0fe8">Pscf::Rpg::Sweep::Sweep</a></div><div class="ttdeci">Sweep()</div><div class="ttdoc">Default Constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00031">rpg/scft/sweep/Sweep.tpp:31</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Sweep_html_acf76c4700bf76deeb324714572a0b39a"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Sweep.html#acf76c4700bf76deeb324714572a0b39a">Pscf::Rpg::Sweep::system</a></div><div class="ttdeci">System&lt; D &gt; &amp; system()</div><div class="ttdoc">Return the parent system by reference.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00138">rpg/scft/sweep/Sweep.h:138</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Sweep_html_ad0d5897bcb3ba422420388a0fa5b518e"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Sweep.html#ad0d5897bcb3ba422420388a0fa5b518e">Pscf::Rpg::Sweep::setSystem</a></div><div class="ttdeci">void setSystem(System&lt; D &gt; &amp;system)</div><div class="ttdoc">Set association with parent System.</div><div class="ttdef"><b>Definition</b> <a href="#l00067">rpg/scft/sweep/Sweep.tpp:67</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Sweep_html_ae3b19c5f98370051109840e1ae398de9"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Sweep.html#ae3b19c5f98370051109840e1ae398de9">Pscf::Rpg::Sweep::cleanup</a></div><div class="ttdeci">virtual void cleanup()</div><div class="ttdoc">Cleanup operation at the beginning of a sweep.</div><div class="ttdef"><b>Definition</b> <a href="#l00342">rpg/scft/sweep/Sweep.tpp:342</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Sweep_html_ae3b19c5f98370051109840e1ae398de9"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Sweep.html#ae3b19c5f98370051109840e1ae398de9">Pscf::Rpg::Sweep::cleanup</a></div><div class="ttdeci">virtual void cleanup()</div><div class="ttdoc">Cleanup operation at the beginning of a sweep.</div><div class="ttdef"><b>Definition</b> <a href="#l00348">rpg/scft/sweep/Sweep.tpp:348</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Sweep_html_ae3c042183821c15309396d8145e0df29"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Sweep.html#ae3c042183821c15309396d8145e0df29">Pscf::Rpg::Sweep::~Sweep</a></div><div class="ttdeci">~Sweep()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00060">rpg/scft/sweep/Sweep.tpp:60</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a></div><div class="ttdoc">Main class, representing a complete physical system.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2system_2System_8h_source.html#l00037">rpg/system/System.h:38</a></div></div>
 <div class="ttc" id="aclassPscf_1_1SweepTmpl_html_a01ca317af56bf2a5d467cdfb02eecdc9"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#a01ca317af56bf2a5d467cdfb02eecdc9">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::historySize</a></div><div class="ttdeci">int historySize() const</div><div class="ttdef"><b>Definition</b> <a href="SweepTmpl_8h_source.html#l00177">SweepTmpl.h:177</a></div></div>
@@ -469,7 +475,7 @@ $(function() {
 <div class="ttc" id="aglobal_8h_html_ad2512f8bd062d41d66799cf900151487"><div class="ttname"><a href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a></div><div class="ttdeci">#define UTIL_THROW(msg)</div><div class="ttdoc">Macro for throwing an Exception, reporting function, file and line number.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00049">global.h:49</a></div></div>
 <div class="ttc" id="agroup__Misc__Module_html_ga69d6f862289b96b4b0c0591357c8823e"><div class="ttname"><a href="group__Misc__Module.html#ga69d6f862289b96b4b0c0591357c8823e">Util::toString</a></div><div class="ttdeci">std::string toString(int n)</div><div class="ttdoc">Return string representation of an integer.</div><div class="ttdef"><b>Definition</b> <a href="ioUtil_8cpp_source.html#l00052">ioUtil.cpp:52</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Rpg_html"><div class="ttname"><a href="namespacePscf_1_1Rpg.html">Pscf::Rpg</a></div><div class="ttdoc">SCFT and PS-FTS with real periodic fields (GPU)</div><div class="ttdef"><b>Definition</b> <a href="rpg_2environment_2environment_8mod_source.html#l00003">rpg/environment/environment.mod:3</a></div></div>
-<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
+<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -67,129 +67,102 @@ $(function() {
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">* Distributed under the terms of the GNU General Public License.</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;Compressor.h&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;prdc/cpu/RField.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;pscf/iterator/AmIteratorTmpl.h&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpc.html">Rpc</a></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;Compressor.h&quot;</span>                     <span class="comment">// base class template argument</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;prdc/cpu/RField.h&gt;</span>                <span class="comment">// member</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;pscf/iterator/AmIteratorDArray.h&gt;</span> <span class="comment">// base class template</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;util/containers/DArray.h&gt;</span>         <span class="comment">// member</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpc.html">Rpc</a> {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>   <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1System.html">System</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>   <span class="comment">// Forward declaration</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt; <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1System.html">System</a>;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>   <span class="keyword">using namespace </span>Util;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc_1_1Cpu.html">Pscf::Prdc::Cpu</a>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1AmCompressor.html">   31</a></span>   <span class="keyword">class </span><a class="code hl_function" href="classPscf_1_1Rpc_1_1AmCompressor.html#a5d3515693fd98b123dedee424238dafd">AmCompressor</a></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>         : <span class="keyword">public</span> <a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#ab33190953cf8dca75fd34f881779dc82">AmIteratorTmpl</a>&lt;Compressor&lt;D&gt;, DArray&lt;double&gt; &gt;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>   {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>   <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <a class="code hl_function" href="classPscf_1_1Rpc_1_1AmCompressor.html#a5d3515693fd98b123dedee424238dafd">AmCompressor</a>(<a class="code hl_class" href="classPscf_1_1Rpc_1_1System.html">System&lt;D&gt;</a>&amp; system);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      <a class="code hl_function" href="classPscf_1_1Rpc_1_1AmCompressor.html#ace179bdb24f47a0842de801268b2f5bb">~AmCompressor</a>();</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1AmCompressor.html#a6eebc76581ae60ff7f66195c770ce476">readParameters</a>(std::istream&amp; in);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1AmCompressor.html#a17cc0be66b4e7079265cd59b522e6636">setup</a>(<span class="keywordtype">bool</span> isContinuation);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1AmCompressor.html#a30a0b7c5a21d14a932841fccd0a20d1e">compress</a>();</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1AmCompressor.html#a33ffb3935f34e7336e6269630e64e0fd">computeLambda</a>(<span class="keywordtype">double</span> r);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1AmCompressor.html#adc2c7dc9de947e282c42b198be9ba4ea">outputTimers</a>(std::ostream&amp; out) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1AmCompressor.html#aed47e917d0b58f97829abb5f6264ddd3">clearTimers</a>();</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      <span class="comment">// Inherited public member functions</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      <span class="keyword">using </span><a class="code hl_function" href="classPscf_1_1AmIteratorTmpl.html#ab33190953cf8dca75fd34f881779dc82">AmIteratorTmpl</a>&lt;<a class="code hl_class" href="classPscf_1_1Rpc_1_1Compressor.html">Compressor&lt;D&gt;</a>, <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a> &gt;::setClassName;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>   <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      <span class="comment">// Inherited protected members</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      <span class="keyword">using </span><a class="code hl_function" href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">ParamComposite::readOptional</a>;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      <span class="keyword">using </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1Compressor.html">Compressor</a>&lt;D&gt;::mdeCounter_;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>   <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      <span class="keywordtype">int</span> itr_;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt; RField&lt;D&gt;</a> &gt; w0_;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <span class="keywordtype">bool</span> isAllocated_;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt; RField&lt;D&gt;</a> &gt; wFieldTmp_;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a> newBasis_;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      <span class="keywordtype">void</span> setEqual(<a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a>&amp; a, <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a> <span class="keyword">const</span> &amp; b);</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      <span class="keywordtype">double</span> dotProduct(<a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a> <span class="keyword">const</span> &amp; a, <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a> <span class="keyword">const</span> &amp; b);</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span></div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>      <span class="keywordtype">double</span> maxAbs(<a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a> <span class="keyword">const</span> &amp; hist);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>   <span class="comment">// Namespaces from which names can be used without qualification</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>   <span class="keyword">using namespace </span>Util;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc_1_1Cpu.html">Pscf::Prdc::Cpu</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1AmCompressor.html">   32</a></span>   <span class="keyword">class </span><a class="code hl_function" href="classPscf_1_1Rpc_1_1AmCompressor.html#a5d3515693fd98b123dedee424238dafd">AmCompressor</a></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      : <span class="keyword">public</span> <a class="code hl_function" href="classPscf_1_1AmIteratorDArray.html#aa7139d85f731d002b82c980268515770">AmIteratorDArray</a>&lt; Compressor&lt;D&gt; &gt;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>   {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>   <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <a class="code hl_function" href="classPscf_1_1Rpc_1_1AmCompressor.html#a5d3515693fd98b123dedee424238dafd">AmCompressor</a>(<a class="code hl_class" href="classPscf_1_1Rpc_1_1System.html">System&lt;D&gt;</a>&amp; system);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      <a class="code hl_function" href="classPscf_1_1Rpc_1_1AmCompressor.html#ace179bdb24f47a0842de801268b2f5bb">~AmCompressor</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1AmCompressor.html#a8b223a4c51178571d45af6deeb4dd3ec">readParameters</a>(std::istream&amp; in) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1AmCompressor.html#a6d15a341420a75f0e43756c7524c0b47">setup</a>(<span class="keywordtype">bool</span> isContinuation) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1AmCompressor.html#a11d68d201d9862d36efb12ff94d42dcb">compress</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1AmCompressor.html#a4e26af9a38796031d6fb38648b73bf6b">outputTimers</a>(std::ostream&amp; out) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1AmCompressor.html#aa75841fb1e30a2a8623589b067f0e9e3">clearTimers</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>   <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      <span class="keywordtype">int</span> itr_;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt; RField&lt;D&gt;</a> &gt; w0_;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      <span class="keywordtype">bool</span> isAllocated_;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>      <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt; RField&lt;D&gt;</a> &gt; wFieldTmp_;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      <span class="comment">// Private virtual functions that interact with parent system</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      <span class="keywordtype">int</span> nElements() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      <span class="keywordtype">bool</span> hasInitialGuess() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      <span class="keywordtype">void</span> getCurrent(<a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a>&amp; curr) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      <span class="keywordtype">void</span> evaluate() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>      <span class="keywordtype">void</span> getResidual(<a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a>&amp; resid) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      <span class="keywordtype">void</span> updateBasis(<a class="code hl_class" href="classUtil_1_1RingBuffer.html">RingBuffer</a>&lt;<a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a> &gt; &amp; basis,</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                       <a class="code hl_class" href="classUtil_1_1RingBuffer.html">RingBuffer</a>&lt;<a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a> &gt; <span class="keyword">const</span> &amp; hists);</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span></div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>      <span class="keywordtype">void</span> addHistories(<a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a>&amp; trial,</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                        <a class="code hl_class" href="classUtil_1_1RingBuffer.html">RingBuffer</a>&lt;<a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a> &gt; <span class="keyword">const</span> &amp; basis,</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                        <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a> coeffs,</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                        <span class="keywordtype">int</span> nHist);</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span></div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>      <span class="keywordtype">void</span> addPredictedError(<a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a>&amp; fieldTrial,</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                             <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a> <span class="keyword">const</span> &amp; resTrial,</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                             <span class="keywordtype">double</span> lambda);</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      <span class="keywordtype">bool</span> hasInitialGuess();</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>      <span class="keywordtype">int</span> nElements();</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span></div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>      <span class="keywordtype">void</span> getCurrent(<a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a>&amp; curr);</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span></div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>      <span class="keywordtype">void</span> evaluate();</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span></div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>      <span class="keywordtype">void</span> getResidual(<a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a>&amp; resid);</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span></div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>      <span class="keywordtype">void</span> update(<a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a>&amp; newGuess);</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span></div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>      <span class="keywordtype">void</span> outputToLog();</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>      <span class="comment">// Inherited private members</span></div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>      <span class="keyword">using </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1Compressor.html">Compressor</a>&lt;D&gt;::system;</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>   };</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      <span class="keywordtype">void</span> update(<a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a>&amp; newGuess) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>      <span class="keywordtype">void</span> outputToLog() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>      <span class="comment">// Inherited private members</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>      <span class="keyword">using </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1Compressor.html">Compressor</a>&lt;D&gt;::system;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>      <span class="comment">// Indirect (grandparent) base class.</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>      <span class="keyword">using </span>AmTmpl = <a class="code hl_class" href="classPscf_1_1AmIteratorTmpl.html">AmIteratorTmpl&lt; Compressor&lt;D&gt;</a>, <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;double&gt;</a> &gt;;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>   };</div>
 </div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>   <span class="comment">// Explicit instantiation declarations</span></div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1AmCompressor.html">AmCompressor&lt;1&gt;</a>;</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1AmCompressor.html">AmCompressor&lt;2&gt;</a>;</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1AmCompressor.html">AmCompressor&lt;3&gt;</a>;</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>} <span class="comment">// namespace Rpc</span></div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>} <span class="comment">// namespace Pscf</span></div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html_ab33190953cf8dca75fd34f881779dc82"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html#ab33190953cf8dca75fd34f881779dc82">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;::AmIteratorTmpl</a></div><div class="ttdeci">AmIteratorTmpl()</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8tpp_source.html#l00051">AmIteratorTmpl.tpp:31</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1AmCompressor_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1AmCompressor.html">Pscf::Rpc::AmCompressor</a></div><div class="ttdoc">Anderson Mixing compressor.</div><div class="ttdef"><b>Definition</b> <a href="#l00031">rpc/fts/compressor/AmCompressor.h:33</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1AmCompressor_html_a17cc0be66b4e7079265cd59b522e6636"><div class="ttname"><a href="classPscf_1_1Rpc_1_1AmCompressor.html#a17cc0be66b4e7079265cd59b522e6636">Pscf::Rpc::AmCompressor::setup</a></div><div class="ttdeci">void setup(bool isContinuation)</div><div class="ttdoc">Initialize just before entry to iterative loop.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2compressor_2AmCompressor_8tpp_source.html#l00043">rpc/fts/compressor/AmCompressor.tpp:43</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1AmCompressor_html_a30a0b7c5a21d14a932841fccd0a20d1e"><div class="ttname"><a href="classPscf_1_1Rpc_1_1AmCompressor.html#a30a0b7c5a21d14a932841fccd0a20d1e">Pscf::Rpc::AmCompressor::compress</a></div><div class="ttdeci">int compress()</div><div class="ttdoc">Compress to obtain partial saddle point w+.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2compressor_2AmCompressor_8tpp_source.html#l00072">rpc/fts/compressor/AmCompressor.tpp:72</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1AmCompressor_html_a33ffb3935f34e7336e6269630e64e0fd"><div class="ttname"><a href="classPscf_1_1Rpc_1_1AmCompressor.html#a33ffb3935f34e7336e6269630e64e0fd">Pscf::Rpc::AmCompressor::computeLambda</a></div><div class="ttdeci">double computeLambda(double r)</div><div class="ttdoc">Compute mixing parameter lambda.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2compressor_2AmCompressor_8tpp_source.html#l00244">rpc/fts/compressor/AmCompressor.tpp:244</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1AmCompressor_html_a5d3515693fd98b123dedee424238dafd"><div class="ttname"><a href="classPscf_1_1Rpc_1_1AmCompressor.html#a5d3515693fd98b123dedee424238dafd">Pscf::Rpc::AmCompressor::AmCompressor</a></div><div class="ttdeci">AmCompressor(System&lt; D &gt; &amp;system)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2compressor_2AmCompressor_8tpp_source.html#l00022">rpc/fts/compressor/AmCompressor.tpp:22</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1AmCompressor_html_a6eebc76581ae60ff7f66195c770ce476"><div class="ttname"><a href="classPscf_1_1Rpc_1_1AmCompressor.html#a6eebc76581ae60ff7f66195c770ce476">Pscf::Rpc::AmCompressor::readParameters</a></div><div class="ttdeci">void readParameters(std::istream &amp;in)</div><div class="ttdoc">Read all parameters and initialize.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2compressor_2AmCompressor_8tpp_source.html#l00034">rpc/fts/compressor/AmCompressor.tpp:34</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1AmCompressor_html_ace179bdb24f47a0842de801268b2f5bb"><div class="ttname"><a href="classPscf_1_1Rpc_1_1AmCompressor.html#ace179bdb24f47a0842de801268b2f5bb">Pscf::Rpc::AmCompressor::~AmCompressor</a></div><div class="ttdeci">~AmCompressor()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2compressor_2AmCompressor_8tpp_source.html#l00029">rpc/fts/compressor/AmCompressor.tpp:29</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1AmCompressor_html_adc2c7dc9de947e282c42b198be9ba4ea"><div class="ttname"><a href="classPscf_1_1Rpc_1_1AmCompressor.html#adc2c7dc9de947e282c42b198be9ba4ea">Pscf::Rpc::AmCompressor::outputTimers</a></div><div class="ttdeci">void outputTimers(std::ostream &amp;out) const</div><div class="ttdoc">Return compressor times contributions.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2compressor_2AmCompressor_8tpp_source.html#l00254">rpc/fts/compressor/AmCompressor.tpp:254</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1AmCompressor_html_aed47e917d0b58f97829abb5f6264ddd3"><div class="ttname"><a href="classPscf_1_1Rpc_1_1AmCompressor.html#aed47e917d0b58f97829abb5f6264ddd3">Pscf::Rpc::AmCompressor::clearTimers</a></div><div class="ttdeci">void clearTimers()</div><div class="ttdoc">Clear all timers (reset accumulated time to zero).</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2compressor_2AmCompressor_8tpp_source.html#l00264">rpc/fts/compressor/AmCompressor.tpp:264</a></div></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>   <span class="comment">// Explicit instantiation declarations</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1AmCompressor.html">AmCompressor&lt;1&gt;</a>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1AmCompressor.html">AmCompressor&lt;2&gt;</a>;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1AmCompressor.html">AmCompressor&lt;3&gt;</a>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>} <span class="comment">// namespace Rpc</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>} <span class="comment">// namespace Pscf</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorDArray_html_aa7139d85f731d002b82c980268515770"><div class="ttname"><a href="classPscf_1_1AmIteratorDArray.html#aa7139d85f731d002b82c980268515770">Pscf::AmIteratorDArray&lt; Compressor&lt; D &gt; &gt;::AmIteratorDArray</a></div><div class="ttdeci">AmIteratorDArray()=default</div></div>
+<div class="ttc" id="aclassPscf_1_1AmIteratorTmpl_html"><div class="ttname"><a href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl</a></div><div class="ttdoc">Template for Anderson mixing iterator algorithm.</div><div class="ttdef"><b>Definition</b> <a href="AmIteratorTmpl_8h_source.html#l00047">AmIteratorTmpl.h:48</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1AmCompressor_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1AmCompressor.html">Pscf::Rpc::AmCompressor</a></div><div class="ttdoc">Anderson mixing compressor.</div><div class="ttdef"><b>Definition</b> <a href="#l00032">rpc/fts/compressor/AmCompressor.h:34</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1AmCompressor_html_a11d68d201d9862d36efb12ff94d42dcb"><div class="ttname"><a href="classPscf_1_1Rpc_1_1AmCompressor.html#a11d68d201d9862d36efb12ff94d42dcb">Pscf::Rpc::AmCompressor::compress</a></div><div class="ttdeci">int compress() override</div><div class="ttdoc">Compress to obtain partial saddle point w+.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2compressor_2AmCompressor_8tpp_source.html#l00093">rpc/fts/compressor/AmCompressor.tpp:93</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1AmCompressor_html_a4e26af9a38796031d6fb38648b73bf6b"><div class="ttname"><a href="classPscf_1_1Rpc_1_1AmCompressor.html#a4e26af9a38796031d6fb38648b73bf6b">Pscf::Rpc::AmCompressor::outputTimers</a></div><div class="ttdeci">void outputTimers(std::ostream &amp;out) const override</div><div class="ttdoc">Return compressor times contributions.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2compressor_2AmCompressor_8tpp_source.html#l00103">rpc/fts/compressor/AmCompressor.tpp:103</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1AmCompressor_html_a5d3515693fd98b123dedee424238dafd"><div class="ttname"><a href="classPscf_1_1Rpc_1_1AmCompressor.html#a5d3515693fd98b123dedee424238dafd">Pscf::Rpc::AmCompressor::AmCompressor</a></div><div class="ttdeci">AmCompressor(System&lt; D &gt; &amp;system)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2compressor_2AmCompressor_8tpp_source.html#l00028">rpc/fts/compressor/AmCompressor.tpp:28</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1AmCompressor_html_a6d15a341420a75f0e43756c7524c0b47"><div class="ttname"><a href="classPscf_1_1Rpc_1_1AmCompressor.html#a6d15a341420a75f0e43756c7524c0b47">Pscf::Rpc::AmCompressor::setup</a></div><div class="ttdeci">void setup(bool isContinuation) override</div><div class="ttdoc">Initialize just before entry to iterative loop.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2compressor_2AmCompressor_8tpp_source.html#l00061">rpc/fts/compressor/AmCompressor.tpp:61</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1AmCompressor_html_a8b223a4c51178571d45af6deeb4dd3ec"><div class="ttname"><a href="classPscf_1_1Rpc_1_1AmCompressor.html#a8b223a4c51178571d45af6deeb4dd3ec">Pscf::Rpc::AmCompressor::readParameters</a></div><div class="ttdeci">void readParameters(std::istream &amp;in) override</div><div class="ttdoc">Read all parameters and initialize.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2compressor_2AmCompressor_8tpp_source.html#l00044">rpc/fts/compressor/AmCompressor.tpp:44</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1AmCompressor_html_aa75841fb1e30a2a8623589b067f0e9e3"><div class="ttname"><a href="classPscf_1_1Rpc_1_1AmCompressor.html#aa75841fb1e30a2a8623589b067f0e9e3">Pscf::Rpc::AmCompressor::clearTimers</a></div><div class="ttdeci">void clearTimers() override</div><div class="ttdoc">Clear all timers (reset accumulated time to zero).</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2compressor_2AmCompressor_8tpp_source.html#l00114">rpc/fts/compressor/AmCompressor.tpp:114</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1AmCompressor_html_ace179bdb24f47a0842de801268b2f5bb"><div class="ttname"><a href="classPscf_1_1Rpc_1_1AmCompressor.html#ace179bdb24f47a0842de801268b2f5bb">Pscf::Rpc::AmCompressor::~AmCompressor</a></div><div class="ttdeci">~AmCompressor()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2compressor_2AmCompressor_8tpp_source.html#l00037">rpc/fts/compressor/AmCompressor.tpp:37</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1Compressor_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Compressor.html">Pscf::Rpc::Compressor</a></div><div class="ttdoc">Base class for iterators that impose incompressibility.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2compressor_2Compressor_8h_source.html#l00028">rpc/fts/compressor/Compressor.h:29</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1System.html">Pscf::Rpc::System</a></div><div class="ttdoc">Main class, representing a complete physical system.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2system_2System_8h_source.html#l00038">rpc/system/System.h:39</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1System.html">Pscf::Rpc::System</a></div><div class="ttdoc">Main class, representing a complete physical system.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2system_2System_8h_source.html#l00037">rpc/system/System.h:38</a></div></div>
 <div class="ttc" id="aclassUtil_1_1DArray_html"><div class="ttname"><a href="classUtil_1_1DArray.html">Util::DArray</a></div><div class="ttdoc">Dynamically allocatable contiguous array template.</div><div class="ttdef"><b>Definition</b> <a href="DArray_8h_source.html#l00031">DArray.h:32</a></div></div>
-<div class="ttc" id="aclassUtil_1_1ParamComposite_html_a5d9f133993e0aa0b18cd59938ccf8700"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">Util::ParamComposite::readOptional</a></div><div class="ttdeci">ScalarParam&lt; Type &gt; &amp; readOptional(std::istream &amp;in, const char *label, Type &amp;value)</div><div class="ttdoc">Add and read a new optional ScalarParam &lt; Type &gt; object.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8h_source.html#l01256">ParamComposite.h:1256</a></div></div>
-<div class="ttc" id="aclassUtil_1_1RingBuffer_html"><div class="ttname"><a href="classUtil_1_1RingBuffer.html">Util::RingBuffer</a></div><div class="ttdoc">Class for storing history of previous values in an array.</div><div class="ttdef"><b>Definition</b> <a href="RingBuffer_8h_source.html#l00026">RingBuffer.h:27</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu.html">Pscf::Prdc::Cpu</a></div><div class="ttdoc">Fields and FFTs for periodic boundary conditions (CPU)</div><div class="ttdef"><b>Definition</b> <a href="CField_8cpp_source.html#l00012">CField.cpp:12</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Rpc_html"><div class="ttname"><a href="namespacePscf_1_1Rpc.html">Pscf::Rpc</a></div><div class="ttdoc">Real periodic fields, SCFT and PS-FTS (CPU).</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00002">param_pc.dox:2</a></div></div>
-<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
+<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

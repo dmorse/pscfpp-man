@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -113,7 +113,7 @@ $(function() {
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">   </span>{</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> nx = mesh().size();</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(nx == A.capacity());</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html#a17f4ccd75557c86096359a22c0721c3a">VecOp::eqS</a>(A,c);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1VecOp.html#ab657e2619b153713611b49e6d1117de6">VecOp::eqS</a>(A,c);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>   }</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>   <span class="comment">/*</span></div>
@@ -125,7 +125,7 @@ $(function() {
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> nx = mesh().size();</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(nx == A.capacity());</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(nx == B.capacity());</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html#a0133e303c9b5585548c98062cb9d8792">VecOp::addEqV</a>(A, B);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1VecOp.html#a25039feced2a872505861c151214a2cd">VecOp::addEqV</a>(A, B);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>   }</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>   <span class="comment">/*</span></div>
@@ -150,11 +150,11 @@ $(function() {
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Mixture_html_aae49e892ce87518a34a338ffc2629fff"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Mixture.html#aae49e892ce87518a34a338ffc2629fff">Pscf::Rpg::Mixture::Mixture</a></div><div class="ttdeci">Mixture()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00027">rpg/solvers/Mixture.tpp:27</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a5d9f133993e0aa0b18cd59938ccf8700"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">Util::ParamComposite::readOptional</a></div><div class="ttdeci">ScalarParam&lt; Type &gt; &amp; readOptional(std::istream &amp;in, const char *label, Type &amp;value)</div><div class="ttdoc">Add and read a new optional ScalarParam &lt; Type &gt; object.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8h_source.html#l01256">ParamComposite.h:1256</a></div></div>
 <div class="ttc" id="aglobal_8h_html_aaf3bc07accafc94019d126e4cffa81e7"><div class="ttname"><a href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a></div><div class="ttdeci">#define UTIL_CHECK(condition)</div><div class="ttdoc">Assertion macro suitable for serial or parallel production code.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00068">global.h:68</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_1_1VecOp_html_a0133e303c9b5585548c98062cb9d8792"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html#a0133e303c9b5585548c98062cb9d8792">Pscf::Prdc::Cuda::VecOp::addEqV</a></div><div class="ttdeci">void addEqV(DeviceArray&lt; cudaReal &gt; &amp;a, DeviceArray&lt; cudaReal &gt; const &amp;b, const int beginIdA, const int beginIdB, const int n)</div><div class="ttdoc">Vector addition in-place, a[i] += b[i], kernel wrapper (cudaReal).</div><div class="ttdef"><b>Definition</b> <a href="VecOp_8cu_source.html#l01672">VecOp.cu:1672</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_1_1VecOp_html_a17f4ccd75557c86096359a22c0721c3a"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html#a17f4ccd75557c86096359a22c0721c3a">Pscf::Prdc::Cuda::VecOp::eqS</a></div><div class="ttdeci">void eqS(DeviceArray&lt; cudaReal &gt; &amp;a, const cudaReal b, const int beginIdA, const int n)</div><div class="ttdoc">Vector assignment, a[i] = b, kernel wrapper (cudaReal).</div><div class="ttdef"><b>Definition</b> <a href="VecOp_8cu_source.html#l01073">VecOp.cu:1073</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1VecOp_html_a25039feced2a872505861c151214a2cd"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1VecOp.html#a25039feced2a872505861c151214a2cd">Pscf::Prdc::Cpu::VecOp::addEqV</a></div><div class="ttdeci">void addEqV(Array&lt; double &gt; &amp;a, Array&lt; double &gt; const &amp;b)</div><div class="ttdoc">Vector addition in-place, a[i] += b[i].</div><div class="ttdef"><b>Definition</b> <a href="VecOp_8cpp_source.html#l00199">VecOp.cpp:199</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1VecOp_html_ab657e2619b153713611b49e6d1117de6"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1VecOp.html#ab657e2619b153713611b49e6d1117de6">Pscf::Prdc::Cpu::VecOp::eqS</a></div><div class="ttdeci">void eqS(Array&lt; double &gt; &amp;a, double b)</div><div class="ttdoc">Vector assignment, a[i] = b.</div><div class="ttdef"><b>Definition</b> <a href="VecOp_8cpp_source.html#l00036">VecOp.cpp:36</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_html"><div class="ttname"><a href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div><div class="ttdoc">Periodic fields and crystallography.</div><div class="ttdef"><b>Definition</b> <a href="CField_8cpp_source.html#l00011">CField.cpp:11</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Rpg_html"><div class="ttname"><a href="namespacePscf_1_1Rpg.html">Pscf::Rpg</a></div><div class="ttdoc">SCFT and PS-FTS with real periodic fields (GPU)</div><div class="ttdef"><b>Definition</b> <a href="rpg_2environment_2environment_8mod_source.html#l00003">rpg/environment/environment.mod:3</a></div></div>
-<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00001">param_pc.dox:1</a></div></div>
+<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

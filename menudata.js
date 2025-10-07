@@ -150,6 +150,7 @@ var menudata={children:[
 {text:"w",url:"functions_vars_w.html#index_w"},
 {text:"z",url:"functions_vars_z.html#index_z"}]},
 {text:"Typedefs",url:"functions_type.html",children:[
+{text:"a",url:"functions_type.html#index_a"},
 {text:"b",url:"functions_type.html#index_b"},
 {text:"c",url:"functions_type.html#index_c"},
 {text:"e",url:"functions_type.html#index_e"},
@@ -162,6 +163,7 @@ var menudata={children:[
 {text:"r",url:"functions_type.html#index_r"},
 {text:"s",url:"functions_type.html#index_s"},
 {text:"t",url:"functions_type.html#index_t"},
+{text:"v",url:"functions_type.html#index_v"},
 {text:"w",url:"functions_type.html#index_w"}]},
 {text:"Enumerations",url:"functions_enum.html"},
 {text:"Related Symbols",url:"functions_rela.html",children:[

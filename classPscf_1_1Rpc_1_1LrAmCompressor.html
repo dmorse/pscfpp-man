@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -56,7 +56,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classPscf_1_1Rpc_1_1LrAmCompressor-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Pscf::Rpc::LrAmCompressor&lt; D &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Rpc__Module.html">Pscf::Rpc - Real Periodic Fields (CPU)</a> &raquo; <a class="el" href="group__Rpc__Fts__Module.html">Field Theoretic Simulation (FTS)</a> &raquo; <a class="el" href="group__Rpc__Fts__Compressor__Module.html">Compressors</a></div></div></div>
 </div><!--header-->
@@ -72,6 +71,7 @@ Inheritance diagram for Pscf::Rpc::LrAmCompressor&lt; D &gt;:</div>
  <div class="center">
   <img src="classPscf_1_1Rpc_1_1LrAmCompressor.png" usemap="#Pscf_3A_3ARpc_3A_3ALrAmCompressor_3C_20D_20_3E_map" alt=""/>
   <map id="Pscf_3A_3ARpc_3A_3ALrAmCompressor_3C_20D_20_3E_map" name="Pscf_3A_3ARpc_3A_3ALrAmCompressor_3C_20D_20_3E_map">
+<area href="classPscf_1_1AmIteratorDArray.html" alt="Pscf::AmIteratorDArray&lt; Compressor&lt; D &gt; &gt;" shape="rect" coords="0,112,365,136"/>
 <area href="classPscf_1_1AmIteratorTmpl.html" alt="Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;" shape="rect" coords="0,56,365,80"/>
   </map>
 </div></div>
@@ -82,84 +82,92 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3de36e0d09a88a86b02cb9ea47fa4c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:a2e725148e13b75500f7dc07fa6140537" id="r_a2e725148e13b75500f7dc07fa6140537"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e725148e13b75500f7dc07fa6140537">~LrAmCompressor</a> ()</td></tr>
 <tr class="memdesc:a2e725148e13b75500f7dc07fa6140537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:a0bf40eb82636fa8b0afcf80251b914f7" id="r_a0bf40eb82636fa8b0afcf80251b914f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bf40eb82636fa8b0afcf80251b914f7">readParameters</a> (std::istream &amp;in)</td></tr>
-<tr class="memdesc:a0bf40eb82636fa8b0afcf80251b914f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read all parameters and initialize.  <br /></td></tr>
-<tr class="memitem:aa08c8b8950de52c5c5ae18d0c939362c" id="r_aa08c8b8950de52c5c5ae18d0c939362c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa08c8b8950de52c5c5ae18d0c939362c">setup</a> (bool isContinuation)</td></tr>
-<tr class="memdesc:aa08c8b8950de52c5c5ae18d0c939362c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize just before entry to iterative loop.  <br /></td></tr>
-<tr class="memitem:ab6d35e0c3eabcce4b758509246e0bf18" id="r_ab6d35e0c3eabcce4b758509246e0bf18"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6d35e0c3eabcce4b758509246e0bf18">compress</a> ()</td></tr>
-<tr class="memdesc:ab6d35e0c3eabcce4b758509246e0bf18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compress to obtain partial saddle point w+.  <br /></td></tr>
-<tr class="memitem:a49cf50b133cfde150dbd9eacd04c1025" id="r_a49cf50b133cfde150dbd9eacd04c1025"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49cf50b133cfde150dbd9eacd04c1025">outputTimers</a> (std::ostream &amp;out) const</td></tr>
-<tr class="memdesc:a49cf50b133cfde150dbd9eacd04c1025"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return compressor times contributions.  <br /></td></tr>
-<tr class="memitem:a6a59426870245b57f160687024593f1a" id="r_a6a59426870245b57f160687024593f1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a59426870245b57f160687024593f1a">clearTimers</a> ()</td></tr>
-<tr class="memdesc:a6a59426870245b57f160687024593f1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all timers (reset accumulated time to zero).  <br /></td></tr>
+<tr class="memitem:a190c986077b1c5e3e3ebc3653b014caa" id="r_a190c986077b1c5e3e3ebc3653b014caa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a190c986077b1c5e3e3ebc3653b014caa">readParameters</a> (std::istream &amp;in) override</td></tr>
+<tr class="memdesc:a190c986077b1c5e3e3ebc3653b014caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read all parameters and initialize.  <br /></td></tr>
+<tr class="memitem:ad20190c7d0090f84ba028a04741bdd2f" id="r_ad20190c7d0090f84ba028a04741bdd2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad20190c7d0090f84ba028a04741bdd2f">setup</a> (bool isContinuation) override</td></tr>
+<tr class="memdesc:ad20190c7d0090f84ba028a04741bdd2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize just before entry to iterative loop.  <br /></td></tr>
+<tr class="memitem:ab8faa01466c132ad8b77939de0ee8fa4" id="r_ab8faa01466c132ad8b77939de0ee8fa4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8faa01466c132ad8b77939de0ee8fa4">compress</a> () override</td></tr>
+<tr class="memdesc:ab8faa01466c132ad8b77939de0ee8fa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compress to obtain partial saddle point w+.  <br /></td></tr>
+<tr class="memitem:ab93b0e550021901a21f4f91d95270e94" id="r_ab93b0e550021901a21f4f91d95270e94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab93b0e550021901a21f4f91d95270e94">outputTimers</a> (std::ostream &amp;out) const override</td></tr>
+<tr class="memdesc:ab93b0e550021901a21f4f91d95270e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return compressor times contributions.  <br /></td></tr>
+<tr class="memitem:ae23f478f0144669e477985c5c8f735d9" id="r_ae23f478f0144669e477985c5c8f735d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae23f478f0144669e477985c5c8f735d9">clearTimers</a> () override</td></tr>
+<tr class="memdesc:ae23f478f0144669e477985c5c8f735d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all timers (reset accumulated time to zero).  <br /></td></tr>
+<tr class="inherit_header pub_methods_classPscf_1_1AmIteratorDArray"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1AmIteratorDArray')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1AmIteratorDArray.html">Pscf::AmIteratorDArray&lt; Compressor&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:aa7139d85f731d002b82c980268515770 inherit pub_methods_classPscf_1_1AmIteratorDArray" id="r_aa7139d85f731d002b82c980268515770"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorDArray.html#aa7139d85f731d002b82c980268515770">AmIteratorDArray</a> ()=default</td></tr>
+<tr class="memdesc:aa7139d85f731d002b82c980268515770 inherit pub_methods_classPscf_1_1AmIteratorDArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:ac6b3dcd10815c786fae8f80c03535924 inherit pub_methods_classPscf_1_1AmIteratorDArray" id="r_ac6b3dcd10815c786fae8f80c03535924"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorDArray.html#ac6b3dcd10815c786fae8f80c03535924">~AmIteratorDArray</a> ()=default</td></tr>
+<tr class="memdesc:ac6b3dcd10815c786fae8f80c03535924 inherit pub_methods_classPscf_1_1AmIteratorDArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classPscf_1_1AmIteratorTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1AmIteratorTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;</a></td></tr>
 <tr class="memitem:ab33190953cf8dca75fd34f881779dc82 inherit pub_methods_classPscf_1_1AmIteratorTmpl" id="r_ab33190953cf8dca75fd34f881779dc82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#ab33190953cf8dca75fd34f881779dc82">AmIteratorTmpl</a> ()</td></tr>
 <tr class="memdesc:ab33190953cf8dca75fd34f881779dc82 inherit pub_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:a7decf2817507d097a7ab80603e599856 inherit pub_methods_classPscf_1_1AmIteratorTmpl" id="r_a7decf2817507d097a7ab80603e599856"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a7decf2817507d097a7ab80603e599856">~AmIteratorTmpl</a> ()</td></tr>
 <tr class="memdesc:a7decf2817507d097a7ab80603e599856 inherit pub_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:ad9ffb94dd7fcca4eff1eacd4a266b9d4 inherit pub_methods_classPscf_1_1AmIteratorTmpl" id="r_ad9ffb94dd7fcca4eff1eacd4a266b9d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#ad9ffb94dd7fcca4eff1eacd4a266b9d4">readParameters</a> (std::istream &amp;in)</td></tr>
-<tr class="memdesc:ad9ffb94dd7fcca4eff1eacd4a266b9d4 inherit pub_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read all parameters and initialize.  <br /></td></tr>
 <tr class="memitem:ae73358fa1ae70ca7c4c1e81216a48b3d inherit pub_methods_classPscf_1_1AmIteratorTmpl" id="r_ae73358fa1ae70ca7c4c1e81216a48b3d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#ae73358fa1ae70ca7c4c1e81216a48b3d">solve</a> (bool isContinuation=false)</td></tr>
 <tr class="memdesc:ae73358fa1ae70ca7c4c1e81216a48b3d inherit pub_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate to a solution.  <br /></td></tr>
 <tr class="memitem:a4ac22fa359ac9d3cce6c46042acc2796 inherit pub_methods_classPscf_1_1AmIteratorTmpl" id="r_a4ac22fa359ac9d3cce6c46042acc2796"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a4ac22fa359ac9d3cce6c46042acc2796">outputTimers</a> (std::ostream &amp;out) const</td></tr>
 <tr class="memdesc:a4ac22fa359ac9d3cce6c46042acc2796 inherit pub_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classUtil_1_1Log.html" title="A static class that holds a log output stream.">Log</a> output timing results.  <br /></td></tr>
 <tr class="memitem:a66a2a0089b03ae9a3b694dc26e25c665 inherit pub_methods_classPscf_1_1AmIteratorTmpl" id="r_a66a2a0089b03ae9a3b694dc26e25c665"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a66a2a0089b03ae9a3b694dc26e25c665">clearTimers</a> ()</td></tr>
 <tr class="memdesc:a66a2a0089b03ae9a3b694dc26e25c665 inherit pub_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear timers.  <br /></td></tr>
-<tr class="memitem:a571324a4ecfdff4941b20a9f0129dd2e inherit pub_methods_classPscf_1_1AmIteratorTmpl" id="r_a571324a4ecfdff4941b20a9f0129dd2e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a571324a4ecfdff4941b20a9f0129dd2e">errorType</a> () const</td></tr>
-<tr class="memdesc:a571324a4ecfdff4941b20a9f0129dd2e inherit pub_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain error type.  <br /></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a5d9f133993e0aa0b18cd59938ccf8700" id="r_a5d9f133993e0aa0b18cd59938ccf8700"><td class="memTemplParams" colspan="2">template&lt;typename Type&gt; </td></tr>
-<tr class="memitem:a5d9f133993e0aa0b18cd59938ccf8700 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1ScalarParam.html">ScalarParam</a>&lt; Type &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d9f133993e0aa0b18cd59938ccf8700">readOptional</a> (std::istream &amp;in, const char *label, Type &amp;value)</td></tr>
-<tr class="memdesc:a5d9f133993e0aa0b18cd59938ccf8700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add and read a new optional <a class="el" href="classUtil_1_1ScalarParam.html" title="Template for a Parameter object associated with a scalar variable.">ScalarParam</a> &lt; Type &gt; object.  <br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classPscf_1_1AmIteratorDArray"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classPscf_1_1AmIteratorDArray')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="classPscf_1_1AmIteratorDArray.html">Pscf::AmIteratorDArray&lt; Compressor&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:a3eeb90b4a0a52d05bec13371e957e24d inherit pub_types_classPscf_1_1AmIteratorDArray" id="r_a3eeb90b4a0a52d05bec13371e957e24d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorDArray.html#a3eeb90b4a0a52d05bec13371e957e24d">AmTmpl</a></td></tr>
+<tr class="memdesc:a3eeb90b4a0a52d05bec13371e957e24d inherit pub_types_classPscf_1_1AmIteratorDArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for base class template.  <br /></td></tr>
 <tr class="inherit_header pro_methods_classPscf_1_1AmIteratorTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classPscf_1_1AmIteratorTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;</a></td></tr>
-<tr class="memitem:aa196fc082b2d632873009e81dad40983 inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_aa196fc082b2d632873009e81dad40983"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#aa196fc082b2d632873009e81dad40983">setMaxItr</a> (int maxItr)</td></tr>
-<tr class="memdesc:aa196fc082b2d632873009e81dad40983 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value of maxItr.  <br /></td></tr>
-<tr class="memitem:a2516c6a0c2beb966ad3ed321bd7807ef inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a2516c6a0c2beb966ad3ed321bd7807ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a2516c6a0c2beb966ad3ed321bd7807ef">setMaxHist</a> (int maxHist)</td></tr>
-<tr class="memdesc:a2516c6a0c2beb966ad3ed321bd7807ef inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value of maxHist (number of retained previous states)  <br /></td></tr>
-<tr class="memitem:a4d483975ac4db7f3e9cd7023debedb44 inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a4d483975ac4db7f3e9cd7023debedb44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a4d483975ac4db7f3e9cd7023debedb44">setErrorType</a> (std::string <a class="el" href="classPscf_1_1AmIteratorTmpl.html#a571324a4ecfdff4941b20a9f0129dd2e">errorType</a>)</td></tr>
-<tr class="memdesc:a4d483975ac4db7f3e9cd7023debedb44 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set and validate value of errorType string.  <br /></td></tr>
 <tr class="memitem:a9205a322c557c51cdc3ebb991ea64e9f inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a9205a322c557c51cdc3ebb991ea64e9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a9205a322c557c51cdc3ebb991ea64e9f">readErrorType</a> (std::istream &amp;in)</td></tr>
 <tr class="memdesc:a9205a322c557c51cdc3ebb991ea64e9f inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and validate the optional errorType string parameter.  <br /></td></tr>
 <tr class="memitem:ac28c346f90b36f7174dc798accb27be9 inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_ac28c346f90b36f7174dc798accb27be9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#ac28c346f90b36f7174dc798accb27be9">isValidErrorType</a> ()</td></tr>
 <tr class="memdesc:ac28c346f90b36f7174dc798accb27be9 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a string is a valid error type.  <br /></td></tr>
-<tr class="memitem:afce62f5d547473c35e039d16a13b8df3 inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_afce62f5d547473c35e039d16a13b8df3"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#afce62f5d547473c35e039d16a13b8df3">norm</a> (<a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; const &amp;hist)</td></tr>
-<tr class="memdesc:afce62f5d547473c35e039d16a13b8df3 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the L2 norm of a vector.  <br /></td></tr>
+<tr class="memitem:a2abf62c5ccc4d30acf8afb8c074e50ac inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a2abf62c5ccc4d30acf8afb8c074e50ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a2abf62c5ccc4d30acf8afb8c074e50ac">readMixingParameters</a> (std::istream &amp;in, bool useLambdaRamp=true)</td></tr>
+<tr class="memdesc:a2abf62c5ccc4d30acf8afb8c074e50ac inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read optional parameters used in default correction algorithm.  <br /></td></tr>
 <tr class="memitem:a35b2f9b458a3b56f3ffcf55b6236552e inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a35b2f9b458a3b56f3ffcf55b6236552e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a35b2f9b458a3b56f3ffcf55b6236552e">allocateAM</a> ()</td></tr>
 <tr class="memdesc:a35b2f9b458a3b56f3ffcf55b6236552e inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory required by AM algorithm, if necessary.  <br /></td></tr>
+<tr class="memitem:a3987903c9536462dd9659df814f5e62c inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a3987903c9536462dd9659df814f5e62c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a3987903c9536462dd9659df814f5e62c">isAllocatedAM</a> () const</td></tr>
+<tr class="memdesc:a3987903c9536462dd9659df814f5e62c inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Have data structures required by the AM algorithm been allocated?  <br /></td></tr>
 <tr class="memitem:a41bec1ca6bbac559d2e7469085f448a7 inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a41bec1ca6bbac559d2e7469085f448a7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a41bec1ca6bbac559d2e7469085f448a7">clear</a> ()</td></tr>
 <tr class="memdesc:a41bec1ca6bbac559d2e7469085f448a7 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear information about history.  <br /></td></tr>
-<tr class="memitem:a3112579f0c4bde562b7b2d5c6f6428e2 inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a3112579f0c4bde562b7b2d5c6f6428e2"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a3112579f0c4bde562b7b2d5c6f6428e2">computeError</a> (<a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; &amp;residTrial, <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; &amp;fieldTrial, std::string <a class="el" href="classPscf_1_1AmIteratorTmpl.html#a571324a4ecfdff4941b20a9f0129dd2e">errorType</a>, int <a class="el" href="classPscf_1_1AmIteratorTmpl.html#a7cbc162e8785ff54fb1a2922a951ce6c">verbose</a>)</td></tr>
-<tr class="memdesc:a3112579f0c4bde562b7b2d5c6f6428e2 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute and return error used to test for convergence.  <br /></td></tr>
-<tr class="memitem:a317c3e88b6006282b757bd2f9fab06ab inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a317c3e88b6006282b757bd2f9fab06ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a317c3e88b6006282b757bd2f9fab06ab">residual</a> () const</td></tr>
-<tr class="memdesc:a317c3e88b6006282b757bd2f9fab06ab inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current residual vector by const reference.  <br /></td></tr>
-<tr class="memitem:af65aca8b7d3bbb98e63dfcb30c8866ed inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_af65aca8b7d3bbb98e63dfcb30c8866ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#af65aca8b7d3bbb98e63dfcb30c8866ed">field</a> () const</td></tr>
-<tr class="memdesc:af65aca8b7d3bbb98e63dfcb30c8866ed inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current field or state vector by const reference.  <br /></td></tr>
+<tr class="memitem:ad04e76fb3e2e03ce87300303e36377d9 inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_ad04e76fb3e2e03ce87300303e36377d9"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#ad04e76fb3e2e03ce87300303e36377d9">computeError</a> (<a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; &amp;residTrial, <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; &amp;stateTrial, std::string <a class="el" href="classPscf_1_1AmIteratorTmpl.html#a571324a4ecfdff4941b20a9f0129dd2e">errorType</a>, int <a class="el" href="classPscf_1_1AmIteratorTmpl.html#a7cbc162e8785ff54fb1a2922a951ce6c">verbose</a>)</td></tr>
+<tr class="memdesc:ad04e76fb3e2e03ce87300303e36377d9 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute and return error used to test for convergence.  <br /></td></tr>
+<tr class="memitem:a2fe889e87b6dae5982eca17e0749b58d inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a2fe889e87b6dae5982eca17e0749b58d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a2fe889e87b6dae5982eca17e0749b58d">computeError</a> (int <a class="el" href="classPscf_1_1AmIteratorTmpl.html#a7cbc162e8785ff54fb1a2922a951ce6c">verbose</a>)</td></tr>
+<tr class="memdesc:a2fe889e87b6dae5982eca17e0749b58d inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute and return error used to test for convergence.  <br /></td></tr>
+<tr class="memitem:a00725afb67d0d1697273c5b982e2d2b6 inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a00725afb67d0d1697273c5b982e2d2b6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a00725afb67d0d1697273c5b982e2d2b6">lambdaRampFactor</a> ()</td></tr>
+<tr class="memdesc:a00725afb67d0d1697273c5b982e2d2b6 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute ramped prefactor of mixing parameter lambda.  <br /></td></tr>
+<tr class="memitem:ab8b7d6869d79bc4f4addde9731c32e99 inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_ab8b7d6869d79bc4f4addde9731c32e99"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#ab8b7d6869d79bc4f4addde9731c32e99">computeLambda</a> ()</td></tr>
+<tr class="memdesc:ab8b7d6869d79bc4f4addde9731c32e99 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute mixing parameter for correction step of Anderson mixing.  <br /></td></tr>
 <tr class="memitem:a7cbc162e8785ff54fb1a2922a951ce6c inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a7cbc162e8785ff54fb1a2922a951ce6c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a7cbc162e8785ff54fb1a2922a951ce6c">verbose</a> () const</td></tr>
 <tr class="memdesc:a7cbc162e8785ff54fb1a2922a951ce6c inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verbosity level, allowed values 0, 1, or 2.  <br /></td></tr>
+<tr class="memitem:a571324a4ecfdff4941b20a9f0129dd2e inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a571324a4ecfdff4941b20a9f0129dd2e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a571324a4ecfdff4941b20a9f0129dd2e">errorType</a> () const</td></tr>
+<tr class="memdesc:a571324a4ecfdff4941b20a9f0129dd2e inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get error type string.  <br /></td></tr>
+<tr class="memitem:a317c3e88b6006282b757bd2f9fab06ab inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a317c3e88b6006282b757bd2f9fab06ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a317c3e88b6006282b757bd2f9fab06ab">residual</a> () const</td></tr>
+<tr class="memdesc:a317c3e88b6006282b757bd2f9fab06ab inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current residual vector by const reference.  <br /></td></tr>
+<tr class="memitem:ada14e7d0a31071a8571dadec0522fed2 inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_ada14e7d0a31071a8571dadec0522fed2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#ada14e7d0a31071a8571dadec0522fed2">state</a> () const</td></tr>
+<tr class="memdesc:ada14e7d0a31071a8571dadec0522fed2 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current state vector by const reference.  <br /></td></tr>
 <tr class="memitem:a683919a1f3a8e161cb86417cbad0e399 inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a683919a1f3a8e161cb86417cbad0e399"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a683919a1f3a8e161cb86417cbad0e399">totalItr</a> ()</td></tr>
 <tr class="memdesc:a683919a1f3a8e161cb86417cbad0e399 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the total number of iterations needed to converge.  <br /></td></tr>
 <tr class="memitem:a324f73f1f646b9c14cce22efbb0cbbc1 inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a324f73f1f646b9c14cce22efbb0cbbc1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a324f73f1f646b9c14cce22efbb0cbbc1">timerTotal</a> ()</td></tr>
 <tr class="memdesc:a324f73f1f646b9c14cce22efbb0cbbc1 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get total time.  <br /></td></tr>
 <tr class="memitem:a950f0963a85ef9ed59bbc0516b9b9cd4 inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a950f0963a85ef9ed59bbc0516b9b9cd4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a950f0963a85ef9ed59bbc0516b9b9cd4">timerMDE</a> ()</td></tr>
-<tr class="memdesc:a950f0963a85ef9ed59bbc0516b9b9cd4 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time solving modified diffusion equation (MDE).  <br /></td></tr>
+<tr class="memdesc:a950f0963a85ef9ed59bbc0516b9b9cd4 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time spent solving the modified diffusion equation (MDE).  <br /></td></tr>
 <tr class="memitem:a6a9dc19560ec2f08e0f797dd42da8079 inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a6a9dc19560ec2f08e0f797dd42da8079"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a6a9dc19560ec2f08e0f797dd42da8079">timerAM</a> ()</td></tr>
 <tr class="memdesc:a6a9dc19560ec2f08e0f797dd42da8079 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get total time for AM algorithm, excluding MDE solution.  <br /></td></tr>
 <tr class="memitem:aaf03dc4406daaf5bf6f00c3eed416b4d inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_aaf03dc4406daaf5bf6f00c3eed416b4d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#aaf03dc4406daaf5bf6f00c3eed416b4d">timerResid</a> ()</td></tr>
-<tr class="memdesc:aaf03dc4406daaf5bf6f00c3eed416b4d inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time computing residual.  <br /></td></tr>
+<tr class="memdesc:aaf03dc4406daaf5bf6f00c3eed416b4d inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time spent computing residual.  <br /></td></tr>
 <tr class="memitem:a0d8e83ed86addc299afd911061c9b9af inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a0d8e83ed86addc299afd911061c9b9af"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a0d8e83ed86addc299afd911061c9b9af">timerError</a> ()</td></tr>
 <tr class="memdesc:a0d8e83ed86addc299afd911061c9b9af inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time evaluating scalar error.  <br /></td></tr>
 <tr class="memitem:a85282947c4bd9b322b6c2c7adc12eef5 inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a85282947c4bd9b322b6c2c7adc12eef5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a85282947c4bd9b322b6c2c7adc12eef5">timerCoeff</a> ()</td></tr>
-<tr class="memdesc:a85282947c4bd9b322b6c2c7adc12eef5 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time evaluating Anderson mixing coefficients.  <br /></td></tr>
+<tr class="memdesc:a85282947c4bd9b322b6c2c7adc12eef5 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time spent evaluating Anderson mixing coefficients.  <br /></td></tr>
 <tr class="memitem:a44600447d7ec6f74179602e010bb0cb6 inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a44600447d7ec6f74179602e010bb0cb6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a44600447d7ec6f74179602e010bb0cb6">timerOmega</a> ()</td></tr>
-<tr class="memdesc:a44600447d7ec6f74179602e010bb0cb6 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time updating w fields.  <br /></td></tr>
-<tr class="memitem:a3987903c9536462dd9659df814f5e62c inherit pro_methods_classPscf_1_1AmIteratorTmpl" id="r_a3987903c9536462dd9659df814f5e62c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a3987903c9536462dd9659df814f5e62c">isAllocatedAM</a> () const</td></tr>
-<tr class="memdesc:a3987903c9536462dd9659df814f5e62c inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Have data structures required by the AM algorithm been allocated?  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="memdesc:a44600447d7ec6f74179602e010bb0cb6 inherit pro_methods_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time spent updating w states.  <br /></td></tr>
 <tr class="inherit_header pro_attribs_classPscf_1_1AmIteratorTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classPscf_1_1AmIteratorTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classPscf_1_1AmIteratorTmpl.html">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;</a></td></tr>
+<tr class="memitem:aaf632064eb7c9a76198f12c35f361b24 inherit pro_attribs_classPscf_1_1AmIteratorTmpl" id="r_aaf632064eb7c9a76198f12c35f361b24"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#aaf632064eb7c9a76198f12c35f361b24">epsilon_</a></td></tr>
+<tr class="memdesc:aaf632064eb7c9a76198f12c35f361b24 inherit pro_attribs_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error tolerance.  <br /></td></tr>
+<tr class="memitem:acb3495d28db3833c87cf4e2f52f0b350 inherit pro_attribs_classPscf_1_1AmIteratorTmpl" id="r_acb3495d28db3833c87cf4e2f52f0b350"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#acb3495d28db3833c87cf4e2f52f0b350">maxItr_</a></td></tr>
+<tr class="memdesc:acb3495d28db3833c87cf4e2f52f0b350 inherit pro_attribs_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of iterations to attempt.  <br /></td></tr>
+<tr class="memitem:ae34487094628f8d6e14403771a3577eb inherit pro_attribs_classPscf_1_1AmIteratorTmpl" id="r_ae34487094628f8d6e14403771a3577eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#ae34487094628f8d6e14403771a3577eb">maxHist_</a></td></tr>
+<tr class="memdesc:ae34487094628f8d6e14403771a3577eb inherit pro_attribs_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of basis vectors in AM algorithm.  <br /></td></tr>
+<tr class="memitem:a95e51b065b6828b9a55f1443cd252a10 inherit pro_attribs_classPscf_1_1AmIteratorTmpl" id="r_a95e51b065b6828b9a55f1443cd252a10"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#a95e51b065b6828b9a55f1443cd252a10">verbose_</a></td></tr>
+<tr class="memdesc:a95e51b065b6828b9a55f1443cd252a10 inherit pro_attribs_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verbosity level.  <br /></td></tr>
 <tr class="memitem:ad0ab7a80b720e7d5138d3dec43e6cb6d inherit pro_attribs_classPscf_1_1AmIteratorTmpl" id="r_ad0ab7a80b720e7d5138d3dec43e6cb6d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1AmIteratorTmpl.html#ad0ab7a80b720e7d5138d3dec43e6cb6d">errorType_</a></td></tr>
 <tr class="memdesc:ad0ab7a80b720e7d5138d3dec43e6cb6d inherit pro_attribs_classPscf_1_1AmIteratorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of error criterion used to test convergence.  <br /></td></tr>
 </table>
@@ -168,7 +176,7 @@ Additional Inherited Members</h2></td></tr>
 class Pscf::Rpc::LrAmCompressor&lt; D &gt;</div><p>Anderson Mixing compressor with linear-response mixing step. </p>
 <p>Class <a class="el" href="classPscf_1_1Rpc_1_1LrAmCompressor.html" title="Anderson Mixing compressor with linear-response mixing step.">LrAmCompressor</a> implements an Anderson mixing algorithm which modifies the second mixing step, estimating Jacobian by linear response of homogenous liquid instead of unity. The residual is a vector in which each that represents a deviations in the sum of volume fractions from unity. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8h_source.html#l00038">38</a> of file <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8h_source.html">rpc/fts/compressor/LrAmCompressor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8h_source.html#l00042">42</a> of file <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8h_source.html">rpc/fts/compressor/LrAmCompressor.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3de36e0d09a88a86b02cb9ea47fa4c39" name="a3de36e0d09a88a86b02cb9ea47fa4c39"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3de36e0d09a88a86b02cb9ea47fa4c39">&#9670;&#160;</a></span>LrAmCompressor()</h2>
@@ -190,12 +198,14 @@ template&lt;int D&gt; </div>
 <p>Constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">system</td><td><a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> object associated with this compressor. </td></tr>
+    <tr><td class="paramname">system</td><td>parent <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System&lt;D&gt;</a> object </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00025">25</a> of file <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html">rpc/fts/compressor/LrAmCompressor.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00027">27</a> of file <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html">rpc/fts/compressor/LrAmCompressor.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>.</p>
 
 </div>
 </div>
@@ -218,18 +228,21 @@ template&lt;int D&gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00036">36</a> of file <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html">rpc/fts/compressor/LrAmCompressor.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00038">38</a> of file <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html">rpc/fts/compressor/LrAmCompressor.tpp</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a0bf40eb82636fa8b0afcf80251b914f7" name="a0bf40eb82636fa8b0afcf80251b914f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bf40eb82636fa8b0afcf80251b914f7">&#9670;&#160;</a></span>readParameters()</h2>
+<a id="a190c986077b1c5e3e3ebc3653b014caa" name="a190c986077b1c5e3e3ebc3653b014caa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a190c986077b1c5e3e3ebc3653b014caa">&#9670;&#160;</a></span>readParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classPscf_1_1Rpc_1_1LrAmCompressor.html">Pscf::Rpc::LrAmCompressor</a>&lt; D &gt;::readParameters </td>
@@ -238,6 +251,11 @@ template&lt;int D&gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Read all parameters and initialize. </p>
@@ -248,16 +266,16 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00043">43</a> of file <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html">rpc/fts/compressor/LrAmCompressor.tpp</a>.</p>
+<p>Reimplemented from <a class="el" href="classPscf_1_1AmIteratorTmpl.html#ad9ffb94dd7fcca4eff1eacd4a266b9d4">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;</a>.</p>
 
-<p class="reference">References <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00031">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;::AmIteratorTmpl()</a>, <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00263">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;::readErrorType()</a>, and <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00043">readParameters()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00045">45</a> of file <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html">rpc/fts/compressor/LrAmCompressor.tpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00043">readParameters()</a>.</p>
+<p class="reference">References <a class="el" href="AmIteratorTmpl_8h_source.html#l00113">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;::errorType_</a>, <a class="el" href="AmIteratorTmpl_8h_source.html#l00098">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;::maxItr_</a>, <a class="el" href="classPscf_1_1AmIteratorTmpl.html#a9205a322c557c51cdc3ebb991ea64e9f">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;::readErrorType()</a>, <a class="el" href="classPscf_1_1AmIteratorTmpl.html#ad9ffb94dd7fcca4eff1eacd4a266b9d4">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;::readParameters()</a>, and <a class="el" href="AmIteratorTmpl_8h_source.html#l00108">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;::verbose_</a>.</p>
 
 </div>
 </div>
-<a id="aa08c8b8950de52c5c5ae18d0c939362c" name="aa08c8b8950de52c5c5ae18d0c939362c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa08c8b8950de52c5c5ae18d0c939362c">&#9670;&#160;</a></span>setup()</h2>
+<a id="ad20190c7d0090f84ba028a04741bdd2f" name="ad20190c7d0090f84ba028a04741bdd2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad20190c7d0090f84ba028a04741bdd2f">&#9670;&#160;</a></span>setup()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -276,7 +294,7 @@ template&lt;int D&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -292,21 +310,24 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classPscf_1_1AmIteratorTmpl.html#a0b99a48a0ab289af9769b615a1ae464a">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00055">55</a> of file <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html">rpc/fts/compressor/LrAmCompressor.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00062">62</a> of file <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html">rpc/fts/compressor/LrAmCompressor.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00031">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;::AmIteratorTmpl()</a>, and <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00055">setup()</a>.</p>
+<p class="reference">References <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00062">setup()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00055">setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00062">setup()</a>.</p>
 
 </div>
 </div>
-<a id="ab6d35e0c3eabcce4b758509246e0bf18" name="ab6d35e0c3eabcce4b758509246e0bf18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6d35e0c3eabcce4b758509246e0bf18">&#9670;&#160;</a></span>compress()</h2>
+<a id="ab8faa01466c132ad8b77939de0ee8fa4" name="ab8faa01466c132ad8b77939de0ee8fa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8faa01466c132ad8b77939de0ee8fa4">&#9670;&#160;</a></span>compress()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int <a class="el" href="classPscf_1_1Rpc_1_1LrAmCompressor.html">Pscf::Rpc::LrAmCompressor</a>&lt; D &gt;::compress </td>
@@ -315,24 +336,32 @@ template&lt;int D&gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Compress to obtain partial saddle point w+. </p>
 <dl class="section return"><dt>Returns</dt><dd>0 for convergence, 1 for failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00109">109</a> of file <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html">rpc/fts/compressor/LrAmCompressor.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00116">116</a> of file <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html">rpc/fts/compressor/LrAmCompressor.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00031">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;::AmIteratorTmpl()</a>, and <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00091">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;::solve()</a>.</p>
+<p class="reference">References <a class="el" href="classPscf_1_1AmIteratorTmpl.html#ae73358fa1ae70ca7c4c1e81216a48b3d">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;::solve()</a>.</p>
 
 </div>
 </div>
-<a id="a49cf50b133cfde150dbd9eacd04c1025" name="a49cf50b133cfde150dbd9eacd04c1025"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49cf50b133cfde150dbd9eacd04c1025">&#9670;&#160;</a></span>outputTimers()</h2>
+<a id="ab93b0e550021901a21f4f91d95270e94" name="ab93b0e550021901a21f4f91d95270e94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab93b0e550021901a21f4f91d95270e94">&#9670;&#160;</a></span>outputTimers()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classPscf_1_1Rpc_1_1LrAmCompressor.html">Pscf::Rpc::LrAmCompressor</a>&lt; D &gt;::outputTimers </td>
@@ -341,25 +370,37 @@ template&lt;int D&gt; </div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Return compressor times contributions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>output stream </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00364">364</a> of file <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html">rpc/fts/compressor/LrAmCompressor.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00126">126</a> of file <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html">rpc/fts/compressor/LrAmCompressor.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00031">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;::AmIteratorTmpl()</a>, and <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00364">outputTimers()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00364">outputTimers()</a>.</p>
+<p class="reference">References <a class="el" href="classPscf_1_1AmIteratorTmpl.html#a4ac22fa359ac9d3cce6c46042acc2796">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;::outputTimers()</a>.</p>
 
 </div>
 </div>
-<a id="a6a59426870245b57f160687024593f1a" name="a6a59426870245b57f160687024593f1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a59426870245b57f160687024593f1a">&#9670;&#160;</a></span>clearTimers()</h2>
+<a id="ae23f478f0144669e477985c5c8f735d9" name="ae23f478f0144669e477985c5c8f735d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae23f478f0144669e477985c5c8f735d9">&#9670;&#160;</a></span>clearTimers()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classPscf_1_1Rpc_1_1LrAmCompressor.html">Pscf::Rpc::LrAmCompressor</a>&lt; D &gt;::clearTimers </td>
@@ -368,66 +409,18 @@ template&lt;int D&gt; </div>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>Clear all timers (reset accumulated time to zero). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00376">376</a> of file <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html">rpc/fts/compressor/LrAmCompressor.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AmIteratorTmpl_8tpp_source.html#l00031">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;::AmIteratorTmpl()</a>, and <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00376">clearTimers()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00376">clearTimers()</a>.</p>
-
-</div>
-</div>
-<a id="a5d9f133993e0aa0b18cd59938ccf8700" name="a5d9f133993e0aa0b18cd59938ccf8700"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d9f133993e0aa0b18cd59938ccf8700">&#9670;&#160;</a></span>readOptional()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<div class="memtemplate">
-template&lt;typename Type&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classUtil_1_1ScalarParam.html">ScalarParam</a>&lt; Type &gt; &amp; Util::ParamComposite::readOptional </td>
-          <td>(</td>
-          <td class="paramtype">std::istream &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>label</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Type &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
-        </tr>
-      </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Add and read a new optional <a class="el" href="classUtil_1_1ScalarParam.html" title="Template for a Parameter object associated with a scalar variable.">ScalarParam</a> &lt; Type &gt; object. </p>
-<p>This is equivalent to ScalarParam&lt;Type&gt;(in, label, value, false).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">in</td><td>input stream for reading </td></tr>
-    <tr><td class="paramname">label</td><td><a class="el" href="classUtil_1_1Label.html" title="A label string in a file format.">Label</a> string </td></tr>
-    <tr><td class="paramname">value</td><td>reference to new <a class="el" href="classUtil_1_1ScalarParam.html" title="Template for a Parameter object associated with a scalar variable.">ScalarParam&lt; Type &gt;</a> </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Clear all timers (reset accumulated time to zero). </p>
 
-<p class="definition">Definition at line <a class="el" href="ParamComposite_8h_source.html#l00319">319</a> of file <a class="el" href="ParamComposite_8h_source.html">ParamComposite.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00137">137</a> of file <a class="el" href="rpc_2fts_2compressor_2LrAmCompressor_8tpp_source.html">rpc/fts/compressor/LrAmCompressor.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="classPscf_1_1AmIteratorTmpl.html#a66a2a0089b03ae9a3b694dc26e25c665">Pscf::AmIteratorTmpl&lt; Compressor&lt; D &gt;, DArray&lt; double &gt; &gt;::clearTimers()</a>, and <a class="el" href="rpc_2fts_2compressor_2Compressor_8h_source.html#l00097">Pscf::Rpc::Compressor&lt; D &gt;::mdeCounter_</a>.</p>
 
 </div>
 </div>

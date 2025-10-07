@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -61,8 +61,8 @@ $(function() {
 <p>Two closely analogous classes named <a class="el" href="classPscf_1_1Rpc_1_1RealMove.html" title="RealMove generates spatially uncorrelated random field changes.">Pscf::Rpc::RealMove</a> and <a class="el" href="classPscf_1_1Rpg_1_1RealMove.html" title="RealMove is a Monte Carlo move in real space.">Pscf::Rpg::RealMove</a> that are defined in different namespaces are used to implement this the same step algorithm for different programs. The <a class="el" href="classPscf_1_1Rpc_1_1RealMove.html" title="RealMove generates spatially uncorrelated random field changes.">RealMove</a> class defined in the <a class="el" href="namespacePscf_1_1Rpc.html" title="Real periodic fields, SCFT and PS-FTS (CPU).">Rpc</a> namespace is used in the pscf_pc program (using CPU hardware) and the class defined in the <a class="el" href="namespacePscf_1_1Rpg.html" title="SCFT and PS-FTS with real periodic fields (GPU)">Rpg</a> namespace is used in the pscf_pg program (using GPU acceleration). These two classes implement the same step algorithm and use the same parameter file format, which are documented below.</p>
 <h1 class="doxsection"><a class="anchor" id="rpc_RealMove_algorithm_sec"></a>
 Step Algorithm</h1>
-<p>A general discussion of MC move algorithms for PS-FTS is given <a class="el" href="psfts_algorithm_page.html">here</a>. As discussed there, each move consists of an unconstrained change in the fields, followed by application of a compressor to re-impose the incompressibility constraint. The decision about whether to accept or reject the move is based on the value of the Hamiltonian after incompressibility has been restored.</p>
-<p>The <a class="el" href="classPscf_1_1Rpc_1_1RealMove.html" title="RealMove generates spatially uncorrelated random field changes.">RealMove</a> algorithm takes one parameter, denoted by sigma in the parameter file. The unconstrained move changes each monomer field component by a random amount chosen from the Gaussian distribution with zero mean and a standard deviation of a sigma.</p>
+<p>A general discussion of MC move algorithms for PS-FTS is given on a <a class="el" href="psfts_algorithm_page.html#psfts_algorithm_MC_sec">separate page</a>. As discussed there, each attempted MC move consists of an unconstrained change in the fields, followed by application of a compressor to re-impose the incompressibility constraint. The decision about whether to accept or reject the move is based on the value of the Hamiltonian after incompressibility has been restored by adjusting the pressure-like field.</p>
+<p>The <a class="el" href="classPscf_1_1Rpc_1_1RealMove.html" title="RealMove generates spatially uncorrelated random field changes.">RealMove</a> algorithm takes one parameter, denoted by sigma. The unconstrained move each monomer field component at each grid point by a random amount chosen from the Gaussian distribution with zero mean and a standard deviation of a sigma.</p>
 <h1 class="doxsection"><a class="anchor" id="rpc_RealMove_parameter_sec"></a>
 Parameter File</h1>
 <p>The only parameter needed by this algorithm are the "probability" parameter, which determines the probability that a move of this type will be chosen on any step, and a required parameter named sigma, as described above. A typical example of the contents of this is shown below. </p><div class="fragment"><div class="line">RealMove{</div>
