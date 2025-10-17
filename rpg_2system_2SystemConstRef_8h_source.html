@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -67,15 +67,15 @@ $(function() {
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">* Distributed under the terms of the GNU General Public License.</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;prdc/system/SystemConstRefTmpl.h&gt;</span>   <span class="comment">// base class template</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;rpg/system/System.h&gt;</span>                       <span class="comment">// template parameter</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;prdc/system/SystemConstRefTmpl.h&gt;</span>  <span class="comment">// base class template</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;rpg/system/System.h&gt;</span>               <span class="comment">// template parameter</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpg.html">Rpg</a> {</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>   <span class="keyword">using namespace </span>Util;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc_1_1Cpu.html">Pscf::Prdc::Cpu</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a>;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
 <div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
@@ -124,8 +124,8 @@ $(function() {
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1SystemConstRef_html_a2e33a6dbc48197ef1e176b549122f667"><div class="ttname"><a href="classPscf_1_1Rpg_1_1SystemConstRef.html#a2e33a6dbc48197ef1e176b549122f667">Pscf::Rpg::SystemConstRef::SystemConstRef</a></div><div class="ttdeci">SystemConstRef()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00037">rpg/system/SystemConstRef.h:37</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1SystemConstRef_html_a505d76ce8831cadf47865b4530a32857"><div class="ttname"><a href="classPscf_1_1Rpg_1_1SystemConstRef.html#a505d76ce8831cadf47865b4530a32857">Pscf::Rpg::SystemConstRef::Base</a></div><div class="ttdeci">SystemConstRefTmpl&lt; System&lt; D &gt; &gt; Base</div><div class="ttdoc">Alias for base class.</div><div class="ttdef"><b>Definition</b> <a href="#l00032">rpg/system/SystemConstRef.h:32</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1SystemConstRef_html_a980654a794a5df2f695b1c0e79a1e544"><div class="ttname"><a href="classPscf_1_1Rpg_1_1SystemConstRef.html#a980654a794a5df2f695b1c0e79a1e544">Pscf::Rpg::SystemConstRef::SystemConstRef</a></div><div class="ttdeci">SystemConstRef(System&lt; D &gt; const &amp;system)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00044">rpg/system/SystemConstRef.h:44</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a></div><div class="ttdoc">Main class, representing a complete physical system.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2system_2System_8h_source.html#l00037">rpg/system/System.h:38</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu.html">Pscf::Prdc::Cpu</a></div><div class="ttdoc">Fields and FFTs for periodic boundary conditions (CPU)</div><div class="ttdef"><b>Definition</b> <a href="CField_8cpp_source.html#l00012">CField.cpp:12</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a></div><div class="ttdoc">Main class, representing a complete physical system.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2system_2System_8h_source.html#l00035">rpg/system/System.h:36</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a></div><div class="ttdoc">Fields, FFTs, and utilities for periodic boundary conditions (CUDA)</div><div class="ttdef"><b>Definition</b> <a href="CField_8cu_source.html#l00012">CField.cu:12</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_html"><div class="ttname"><a href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div><div class="ttdoc">Periodic fields and crystallography.</div><div class="ttdef"><b>Definition</b> <a href="CField_8cpp_source.html#l00011">CField.cpp:11</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Rpg_html"><div class="ttname"><a href="namespacePscf_1_1Rpg.html">Pscf::Rpg</a></div><div class="ttdoc">SCFT and PS-FTS with real periodic fields (GPU)</div><div class="ttdef"><b>Definition</b> <a href="rpg_2environment_2environment_8mod_source.html#l00003">rpg/environment/environment.mod:3</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>

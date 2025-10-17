@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -81,7 +81,7 @@ Types of target</h1>
 <p>Makefile rules can contain the following three different types of target:</p>
 <ul>
 <li><b>File name targets</b>, for which the target is the name of a specific file that needs to be created by the build system, such as an object, library or executable file.</li>
-<li><b>File pattern targets</b>, for which the target is given by a filename pattern that, for example, might match any filename with a specified file name extension.</li>
+<li><b>File pattern targets</b>, for which the target is given by a filename pattern that, for example, might match any filename with a specified file name suffix.</li>
 <li><b>Phony targets</b>, for which in which the target is a label such as "clean" or "all" but that is neither a file name nor a file name pattern, but merely serves as a label for the rule.</li>
 </ul>
 <p>Rules with targets that are file name patterns are referred to here as pattern rules. The simple example discussed above has a file name target. Pattern rules and phony targets are discussed in more detail below.</p>
@@ -105,7 +105,7 @@ Recursive updating of prerequisites</h1>
 <p>This recursive behavior normally has no affect on rules that create object file targets. The prerequisites of such rules are usually C++ files that are not created by the build system, and so are not targets of other rules.</p>
 <h1 class="doxsection"><a class="anchor" id="developer_build_make_pattern_sec"></a>
 Pattern rules</h1>
-<p>A pattern rule is typically used to specify a general procedure for creating any target file with a specific file extension by applying a specific recipe to any corresponding files with the same base name but a different file name extension. For example, a simple pattern rule might tell the build system how to compile any object file with file name extension .o by compiling a corresponding C++ source file with file name extension *.cpp.</p>
+<p>A pattern rule is typically used to specify a general procedure for creating any target file with a specific file suffix by applying a specific recipe to any corresponding files with the same base name but a different file name suffix. For example, a simple pattern rule might tell the build system how to compile any object file with file name suffix .o by compiling a corresponding C++ source file with file name suffix *.cpp.</p>
 <p>The target of a pattern rule must contain exactly one instance of the wildcard symbol %, which may be matched by any continuous string of characters. The % symbol may also used in one or more of the prerequisites of a pattern rule to represent the same string as the one that matches % in the pattern for the target.</p>
 <p>For example, a pattern rule with a target and prerequisite of the form </p><div class="fragment"><div class="line">%.o: %.cpp</div>
 <div class="line">   recipe...</div>

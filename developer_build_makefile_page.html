@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -198,7 +198,7 @@ pscf_pc:
 -include $(PSCF_PC).d 
 </pre><p>Note the following elements of this file that are not present in the makefiles in the util, pscf, and prdc namespace-level directories:</p>
 <ul>
-<li>Definition of a variable PSCF_PC = $(BLD_DIR)/rpc/pscf_pc that gives the shared part of the paths for the object and dependency file that are created by compiling the program source file <a class="el" href="pscf__pc_8cpp_source.html">src/rpc/pscf_pc.cpp</a>, without the .o and .d file name extensions.</li>
+<li>Definition of a variable PSCF_PC = $(BLD_DIR)/rpc/pscf_pc that gives the shared part of the paths for the object and dependency file that are created by compiling the program source file <a class="el" href="pscf__pc_8cpp_source.html">src/rpc/pscf_pc.cpp</a>, without the .o and .d file name suffixes.</li>
 <li>Definition of a variable PSCF_PC_EXE = $(BIN_DIR)/pscf_pc that gives the absolute path to the resulting executable file.</li>
 <li>A rule to build the executable file $(PSCF_PC_EXE) by linking the main program object file $(PSCF_PC).o to all relevant library files.</li>
 <li>The "all" target lists the main program executable $(PSCF_PC_EXE) as a prerequisite.</li>

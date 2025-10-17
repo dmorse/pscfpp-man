@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -70,110 +70,112 @@ $(function() {
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;Iterator.h&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;rpc/system/System.h&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;prdc/environment/Environment.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpc.html">Rpc</a> {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>   <span class="keyword">using namespace </span>Util;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;rpc/solvers/Mixture.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;rpc/field/Domain.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;prdc/environment/Environment.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpc.html">Rpc</a> {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">   * Default constructor.</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1Iterator.html#a30f4489aebb0ea1a56da6925d03eecfb">   25</a></span>   <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a30f4489aebb0ea1a56da6925d03eecfb">Iterator&lt;D&gt;::Iterator</a>()</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    : <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a12aba3a69c0de1e7478573036acb3d84">isSymmetric_</a>(false),</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a886a2094ae9ef69f6e5c6ac354e28e50">isFlexible_</a>(false),</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      sysPtr_(nullptr)</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>   {  <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">setClassName</a>(<span class="stringliteral">&quot;Iterator&quot;</span>); }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>   <span class="keyword">using namespace </span>Util;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">   * Default constructor.</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1Iterator.html#a30f4489aebb0ea1a56da6925d03eecfb">   27</a></span>   <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a30f4489aebb0ea1a56da6925d03eecfb">Iterator&lt;D&gt;::Iterator</a>()</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    : <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a12aba3a69c0de1e7478573036acb3d84">isSymmetric_</a>(false),</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a886a2094ae9ef69f6e5c6ac354e28e50">isFlexible_</a>(false),</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      sysPtr_(nullptr)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>   {  <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">setClassName</a>(<span class="stringliteral">&quot;Iterator&quot;</span>); }</div>
 </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">   * Constructor.</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1Iterator.html#a182319e966de1170702710a6e09c821f">   35</a></span>   <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a30f4489aebb0ea1a56da6925d03eecfb">Iterator&lt;D&gt;::Iterator</a>(<a class="code hl_class" href="classPscf_1_1Rpc_1_1System.html">System&lt;D&gt;</a>&amp; <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a76b4f1e7521ea93cd2a8744443a1d43b">system</a>)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    : <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a12aba3a69c0de1e7478573036acb3d84">isSymmetric_</a>(false),</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a886a2094ae9ef69f6e5c6ac354e28e50">isFlexible_</a>(false),</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      sysPtr_(&amp;<a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a76b4f1e7521ea93cd2a8744443a1d43b">system</a>)</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>   {  <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">setClassName</a>(<span class="stringliteral">&quot;Iterator&quot;</span>); }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">   * Constructor.</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1Iterator.html#a182319e966de1170702710a6e09c821f">   37</a></span>   <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a30f4489aebb0ea1a56da6925d03eecfb">Iterator&lt;D&gt;::Iterator</a>(<a class="code hl_class" href="classPscf_1_1Rpc_1_1System.html">System&lt;D&gt;</a>&amp; <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a76b4f1e7521ea93cd2a8744443a1d43b">system</a>)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    : <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a12aba3a69c0de1e7478573036acb3d84">isSymmetric_</a>(false),</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a886a2094ae9ef69f6e5c6ac354e28e50">isFlexible_</a>(false),</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      sysPtr_(&amp;<a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a76b4f1e7521ea93cd2a8744443a1d43b">system</a>)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>   {  <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">setClassName</a>(<span class="stringliteral">&quot;Iterator&quot;</span>); }</div>
 </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">   * Destructor.</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1Iterator.html#aab6716f5bdecb49e9cdd754359408ab6">   45</a></span>   <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#aab6716f5bdecb49e9cdd754359408ab6">Iterator&lt;D&gt;::~Iterator</a>()</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>   {}</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">   * Destructor.</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1Iterator.html#aab6716f5bdecb49e9cdd754359408ab6">   47</a></span>   <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#aab6716f5bdecb49e9cdd754359408ab6">Iterator&lt;D&gt;::~Iterator</a>()</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>   {}</div>
 </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">   * Get the number of flexible lattice parameters.</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1Iterator.html#a64fc87ea2c7bf6c0791c479e6fb33b50">   52</a></span>   <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a64fc87ea2c7bf6c0791c479e6fb33b50">Iterator&lt;D&gt;::nFlexibleParams</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">   </span>{</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a9ada9064edd651a0b47c5c50415cd150">flexibleParams_</a>.size() == </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                                 <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a76b4f1e7521ea93cd2a8744443a1d43b">system</a>().domain().unitCell().nParameter());</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      <span class="keywordtype">int</span> nFlexParams = 0;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a9ada9064edd651a0b47c5c50415cd150">flexibleParams_</a>.size(); i++) {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>         <span class="keywordflow">if</span> (<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a9ada9064edd651a0b47c5c50415cd150">flexibleParams_</a>[i]) nFlexParams++;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      <span class="keywordflow">return</span> nFlexParams;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>   }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">   * Get the number of flexible lattice parameters.</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1Iterator.html#a64fc87ea2c7bf6c0791c479e6fb33b50">   54</a></span>   <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a64fc87ea2c7bf6c0791c479e6fb33b50">Iterator&lt;D&gt;::nFlexibleParams</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">   </span>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a9ada9064edd651a0b47c5c50415cd150">flexibleParams_</a>.size() == </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                                 <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a76b4f1e7521ea93cd2a8744443a1d43b">system</a>().domain().unitCell().nParameter());</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <span class="keywordtype">int</span> nFlexParams = 0;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a9ada9064edd651a0b47c5c50415cd150">flexibleParams_</a>.size(); i++) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>         <span class="keywordflow">if</span> (<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a9ada9064edd651a0b47c5c50415cd150">flexibleParams_</a>[i]) nFlexParams++;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <span class="keywordflow">return</span> nFlexParams;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>   }</div>
 </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">   * Set the array indicating which lattice parameters are flexible.</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1Iterator.html#a1ba072eac2f6e20141ea2fc2838367f3">   67</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a1ba072eac2f6e20141ea2fc2838367f3">Iterator&lt;D&gt;::setFlexibleParams</a>(<a class="code hl_class" href="classUtil_1_1FSArray.html">FSArray&lt;bool,6&gt;</a> <span class="keyword">const</span> &amp; flexParams)</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>   {  </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a9ada9064edd651a0b47c5c50415cd150">flexibleParams_</a> = flexParams; </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a64fc87ea2c7bf6c0791c479e6fb33b50">nFlexibleParams</a>() == 0) {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>         <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a886a2094ae9ef69f6e5c6ac354e28e50">isFlexible_</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>         <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a886a2094ae9ef69f6e5c6ac354e28e50">isFlexible_</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>   }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">   * Set the array indicating which lattice parameters are flexible.</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1Iterator.html#a1ba072eac2f6e20141ea2fc2838367f3">   69</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a1ba072eac2f6e20141ea2fc2838367f3">Iterator&lt;D&gt;::setFlexibleParams</a>(<a class="code hl_class" href="classUtil_1_1FSArray.html">FSArray&lt;bool,6&gt;</a> <span class="keyword">const</span> &amp; flexParams)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>   {  </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a9ada9064edd651a0b47c5c50415cd150">flexibleParams_</a> = flexParams; </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a64fc87ea2c7bf6c0791c479e6fb33b50">nFlexibleParams</a>() == 0) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>         <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a886a2094ae9ef69f6e5c6ac354e28e50">isFlexible_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>         <a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a886a2094ae9ef69f6e5c6ac354e28e50">isFlexible_</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>   }</div>
 </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">   * Return the stress used by this Iterator, for one lattice parameter.</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1Iterator.html#a8c4eef8e522272ea37b52790e5b83a48">   81</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a8c4eef8e522272ea37b52790e5b83a48">Iterator&lt;D&gt;::stress</a>(<span class="keywordtype">int</span> paramId)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">   </span>{</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <span class="comment">// Parameter must be flexible to access the stress</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a9ada9064edd651a0b47c5c50415cd150">flexibleParams_</a>[paramId]);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a76b4f1e7521ea93cd2a8744443a1d43b">system</a>().hasEnvironment()) {</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>         <span class="keywordflow">return</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a76b4f1e7521ea93cd2a8744443a1d43b">system</a>().environment().stress(paramId);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>         <span class="keywordflow">return</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a76b4f1e7521ea93cd2a8744443a1d43b">system</a>().mixture().stress(paramId);</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      }</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>   }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">   * Return the stress used by this Iterator, for one lattice parameter.</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1Iterator.html#a8c4eef8e522272ea37b52790e5b83a48">   83</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a8c4eef8e522272ea37b52790e5b83a48">Iterator&lt;D&gt;::stress</a>(<span class="keywordtype">int</span> paramId)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keyword">   </span>{</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      <span class="comment">// Parameter must be flexible to access the stress</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(<a class="code hl_variable" href="classPscf_1_1Rpc_1_1Iterator.html#a9ada9064edd651a0b47c5c50415cd150">flexibleParams_</a>[paramId]);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a76b4f1e7521ea93cd2a8744443a1d43b">system</a>().hasEnvironment()) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>         <span class="keywordflow">return</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a76b4f1e7521ea93cd2a8744443a1d43b">system</a>().environment().stress(paramId);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>         <span class="keywordflow">return</span> <a class="code hl_function" href="classPscf_1_1Rpc_1_1Iterator.html#a76b4f1e7521ea93cd2a8744443a1d43b">system</a>().mixture().stress(paramId);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>   }</div>
 </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>} <span class="comment">// namespace Rpc</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>} <span class="comment">// namespace Pscf</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>} <span class="comment">// namespace Rpc</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>} <span class="comment">// namespace Pscf</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1Iterator_html_a12aba3a69c0de1e7478573036acb3d84"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Iterator.html#a12aba3a69c0de1e7478573036acb3d84">Pscf::Rpc::Iterator::isSymmetric_</a></div><div class="ttdeci">bool isSymmetric_</div><div class="ttdoc">Does this iterator use a symmetry-adapted basis?</div><div class="ttdef"><b>Definition</b> <a href="rpc_2scft_2iterator_2Iterator_8h_source.html#l00116">rpc/scft/iterator/Iterator.h:116</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1Iterator_html_a1ba072eac2f6e20141ea2fc2838367f3"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Iterator.html#a1ba072eac2f6e20141ea2fc2838367f3">Pscf::Rpc::Iterator::setFlexibleParams</a></div><div class="ttdeci">void setFlexibleParams(FSArray&lt; bool, 6 &gt; const &amp;flexParams)</div><div class="ttdoc">Set the array indicating which lattice parameters are flexible.</div><div class="ttdef"><b>Definition</b> <a href="#l00067">rpc/scft/iterator/Iterator.tpp:67</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1Iterator_html_a30f4489aebb0ea1a56da6925d03eecfb"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Iterator.html#a30f4489aebb0ea1a56da6925d03eecfb">Pscf::Rpc::Iterator::Iterator</a></div><div class="ttdeci">Iterator()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00025">rpc/scft/iterator/Iterator.tpp:25</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1Iterator_html_a64fc87ea2c7bf6c0791c479e6fb33b50"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Iterator.html#a64fc87ea2c7bf6c0791c479e6fb33b50">Pscf::Rpc::Iterator::nFlexibleParams</a></div><div class="ttdeci">int nFlexibleParams() const</div><div class="ttdoc">Get the number of flexible lattice parameters.</div><div class="ttdef"><b>Definition</b> <a href="#l00052">rpc/scft/iterator/Iterator.tpp:52</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1Iterator_html_a1ba072eac2f6e20141ea2fc2838367f3"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Iterator.html#a1ba072eac2f6e20141ea2fc2838367f3">Pscf::Rpc::Iterator::setFlexibleParams</a></div><div class="ttdeci">void setFlexibleParams(FSArray&lt; bool, 6 &gt; const &amp;flexParams)</div><div class="ttdoc">Set the array indicating which lattice parameters are flexible.</div><div class="ttdef"><b>Definition</b> <a href="#l00069">rpc/scft/iterator/Iterator.tpp:69</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1Iterator_html_a30f4489aebb0ea1a56da6925d03eecfb"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Iterator.html#a30f4489aebb0ea1a56da6925d03eecfb">Pscf::Rpc::Iterator::Iterator</a></div><div class="ttdeci">Iterator()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00027">rpc/scft/iterator/Iterator.tpp:27</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1Iterator_html_a64fc87ea2c7bf6c0791c479e6fb33b50"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Iterator.html#a64fc87ea2c7bf6c0791c479e6fb33b50">Pscf::Rpc::Iterator::nFlexibleParams</a></div><div class="ttdeci">int nFlexibleParams() const</div><div class="ttdoc">Get the number of flexible lattice parameters.</div><div class="ttdef"><b>Definition</b> <a href="#l00054">rpc/scft/iterator/Iterator.tpp:54</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1Iterator_html_a76b4f1e7521ea93cd2a8744443a1d43b"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Iterator.html#a76b4f1e7521ea93cd2a8744443a1d43b">Pscf::Rpc::Iterator::system</a></div><div class="ttdeci">System&lt; D &gt; const &amp; system() const</div><div class="ttdoc">Get parent system by const reference.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2scft_2iterator_2Iterator_8h_source.html#l00151">rpc/scft/iterator/Iterator.h:151</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1Iterator_html_a886a2094ae9ef69f6e5c6ac354e28e50"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Iterator.html#a886a2094ae9ef69f6e5c6ac354e28e50">Pscf::Rpc::Iterator::isFlexible_</a></div><div class="ttdeci">bool isFlexible_</div><div class="ttdoc">Are any lattice parameters flexible during iteration?</div><div class="ttdef"><b>Definition</b> <a href="rpc_2scft_2iterator_2Iterator_8h_source.html#l00121">rpc/scft/iterator/Iterator.h:121</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1Iterator_html_a8c4eef8e522272ea37b52790e5b83a48"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Iterator.html#a8c4eef8e522272ea37b52790e5b83a48">Pscf::Rpc::Iterator::stress</a></div><div class="ttdeci">virtual double stress(int paramId) const</div><div class="ttdoc">Return the stress used by this Iterator, for one lattice parameter.</div><div class="ttdef"><b>Definition</b> <a href="#l00081">rpc/scft/iterator/Iterator.tpp:81</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1Iterator_html_a8c4eef8e522272ea37b52790e5b83a48"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Iterator.html#a8c4eef8e522272ea37b52790e5b83a48">Pscf::Rpc::Iterator::stress</a></div><div class="ttdeci">virtual double stress(int paramId) const</div><div class="ttdoc">Return the stress used by this Iterator, for one lattice parameter.</div><div class="ttdef"><b>Definition</b> <a href="#l00083">rpc/scft/iterator/Iterator.tpp:83</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1Iterator_html_a9ada9064edd651a0b47c5c50415cd150"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Iterator.html#a9ada9064edd651a0b47c5c50415cd150">Pscf::Rpc::Iterator::flexibleParams_</a></div><div class="ttdeci">FSArray&lt; bool, 6 &gt; flexibleParams_</div><div class="ttdoc">Array of indices of the lattice parameters that are flexible.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2scft_2iterator_2Iterator_8h_source.html#l00126">rpc/scft/iterator/Iterator.h:126</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1Iterator_html_aab6716f5bdecb49e9cdd754359408ab6"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Iterator.html#aab6716f5bdecb49e9cdd754359408ab6">Pscf::Rpc::Iterator::~Iterator</a></div><div class="ttdeci">~Iterator()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00045">rpc/scft/iterator/Iterator.tpp:45</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1System.html">Pscf::Rpc::System</a></div><div class="ttdoc">Main class, representing a complete physical system.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2system_2System_8h_source.html#l00037">rpc/system/System.h:38</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1Iterator_html_aab6716f5bdecb49e9cdd754359408ab6"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Iterator.html#aab6716f5bdecb49e9cdd754359408ab6">Pscf::Rpc::Iterator::~Iterator</a></div><div class="ttdeci">~Iterator()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00047">rpc/scft/iterator/Iterator.tpp:47</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1System.html">Pscf::Rpc::System</a></div><div class="ttdoc">Main class, representing a complete physical system.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2system_2System_8h_source.html#l00035">rpc/system/System.h:36</a></div></div>
 <div class="ttc" id="aclassUtil_1_1FSArray_html"><div class="ttname"><a href="classUtil_1_1FSArray.html">Util::FSArray</a></div><div class="ttdoc">A fixed capacity (static) contiguous array with a variable logical size.</div><div class="ttdef"><b>Definition</b> <a href="FSArray_8h_source.html#l00037">FSArray.h:38</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a30752567fd7b8b93e5c8476bbe8592c5"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">Util::ParamComposite::setClassName</a></div><div class="ttdeci">void setClassName(const char *className)</div><div class="ttdoc">Set class name string.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8cpp_source.html#l00379">ParamComposite.cpp:379</a></div></div>
 <div class="ttc" id="aglobal_8h_html_aaf3bc07accafc94019d126e4cffa81e7"><div class="ttname"><a href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a></div><div class="ttdeci">#define UTIL_CHECK(condition)</div><div class="ttdoc">Assertion macro suitable for serial or parallel production code.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00068">global.h:68</a></div></div>

@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -63,10 +63,10 @@ $(function() {
 <h1 class="doxsection"><a class="anchor" id="file_section"></a>
 File names</h1>
 <ul>
-<li>Header files that may be included in other files use file extension *.h</li>
-<li>Files that contain definitions of member functions for class templates are often separated from the header file and given names that end in an extension *.tpp.</li>
-<li>Compilable C++ source files use extension *.cpp</li>
-<li>Compilable CUDA C++ source files use extension *.cu</li>
+<li>Header files that may be included in other files use file name suffix *.h</li>
+<li>Files that contain definitions of member functions for class templates are often separated from the header file and given names that end in an suffix *.tpp.</li>
+<li>Compilable C++ source files use file name suffix *.cpp</li>
+<li>Compilable CUDA C++ source files use file name suffix *.cu</li>
 <li>One class per file: Avoid including definitions or definitions involving more than one public class in a single file.</li>
 <li>Use the same base name for the header and implementation for the same class: The header and source files for a class named MyClass should be MyClass.h and MyClass.cpp. If MyClass is class template, some of the implementatiom may be defined in a file MyClass.tpp.</li>
 <li>Place the header and implementation files for each class or class template in the same directory within the src/ directory tree. An analogous directory must exist in the bld/ directory tree.</li>
@@ -392,7 +392,7 @@ Use of C++ templates</h1>
 <ul>
 <li>In code for periodic systems defined in namespaces <a class="el" href="namespacePscf_1_1Prdc.html" title="Periodic fields and crystallography.">Pscf::Prdc</a>, <a class="el" href="namespacePscf_1_1Rpc.html" title="Real periodic fields, SCFT and PS-FTS (CPU).">Pscf::Rpc</a> and <a class="el" href="namespacePscf_1_1Rpg.html" title="SCFT and PS-FTS with real periodic fields (GPU)">Pscf::Rpg</a>, the dimension D of space is always treated as a template parameter. As a result, almost all of the files in the corresponding namespace-level directories src/prdc, src/rpc, and src/rpg define class templates, rather than classes.</li>
 <li>Specializations of templates in which the dimension D of space is the only template parameter should be explicitly instantiated for the three possible values of D=1, 2, or 3. More generally, if a class template has only a very small number of possible valid specializations, those specializations should be explicitly instantiated.</li>
-<li>Definitions of member functions for class templates are often placed in a "template implementation file" with filename extension .tpp. This file can be included into the *.h header file for standard templates that are designed to be implicitly instantiated or can be included into a compilable source file that instantiates all valid specializations for a class template that is designed to be compiled by explicit instantiation of all valid specializations.</li>
+<li>Definitions of member functions for class templates are often placed in a "template implementation file" with file name suffix .tpp. This file can be included into the *.h header file for standard templates that are designed to be implicitly instantiated or can be included into a compilable source file that instantiates all valid specializations for a class template that is designed to be compiled by explicit instantiation of all valid specializations.</li>
 <li>See the <a class="el" href="developer_template_page.html">next page</a> about the use of C++ templates in PSCF for a more in-depth discussion of several use cases.</li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="error_section"></a>

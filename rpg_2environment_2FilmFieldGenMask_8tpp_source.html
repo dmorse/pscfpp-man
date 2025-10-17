@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -68,27 +68,27 @@ $(function() {
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;FilmFieldGenMask.h&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;rpg/field/FieldIo.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;rpg/scft/ScftThermo.h&gt;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;rpg/scft/iterator/Iterator.h&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;rpg/scft/ScftThermo.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;prdc/cpu/RField.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;prdc/crystal/UnitCell.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;prdc/crystal/paramIdConversions.h&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;prdc/cuda/resources.h&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;pscf/inter/Interaction.h&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpg.html">Rpg</a></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>   <span class="keyword">using namespace </span>Util;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>   <span class="comment">// CUDA kernels: </span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>   <span class="comment">// (defined in anonymous namespace, used only in this file)</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;rpg/solvers/Mixture.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;rpg/field/Domain.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;rpg/field/FieldIo.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;prdc/cpu/RField.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;prdc/crystal/Basis.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;prdc/crystal/UnitCell.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;prdc/crystal/paramIdConversions.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;prdc/cuda/resources.h&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;pscf/inter/Interaction.h&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpg.html">Rpg</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>   <span class="keyword">using namespace </span>Util;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>   <span class="comment">// CUDA kernels (anonymous namespace - used only in this file)</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>   <span class="keyword">namespace </span>{</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <span class="comment">/*</span></div>
@@ -418,7 +418,7 @@ $(function() {
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1FilmFieldGenMask_html_a7d08f6fffc6886a8697ec9755e1e9f96"><div class="ttname"><a href="classPscf_1_1Rpg_1_1FilmFieldGenMask.html#a7d08f6fffc6886a8697ec9755e1e9f96">Pscf::Rpg::FilmFieldGenMask::~FilmFieldGenMask</a></div><div class="ttdeci">~FilmFieldGenMask()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00169">rpg/environment/FilmFieldGenMask.tpp:169</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1FilmFieldGenMask_html_a973bda634049c4f65f97d4fd3956d7d3"><div class="ttname"><a href="classPscf_1_1Rpg_1_1FilmFieldGenMask.html#a973bda634049c4f65f97d4fd3956d7d3">Pscf::Rpg::FilmFieldGenMask::FilmFieldGenMask</a></div><div class="ttdeci">FilmFieldGenMask()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00151">rpg/environment/FilmFieldGenMask.tpp:151</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1FilmFieldGenMask_html_ad51b52ecae8cd4d92f7916a81d5f1094"><div class="ttname"><a href="classPscf_1_1Rpg_1_1FilmFieldGenMask.html#ad51b52ecae8cd4d92f7916a81d5f1094">Pscf::Rpg::FilmFieldGenMask::systemLatticeVector</a></div><div class="ttdeci">RealVec&lt; D &gt; systemLatticeVector(int id) const</div><div class="ttdoc">Get one of the lattice vectors for this system.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2environment_2FilmFieldGenMask_8h_source.html#l00157">rpg/environment/FilmFieldGenMask.h:157</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a></div><div class="ttdoc">Main class, representing a complete physical system.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2system_2System_8h_source.html#l00037">rpg/system/System.h:38</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a></div><div class="ttdoc">Main class, representing a complete physical system.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2system_2System_8h_source.html#l00035">rpg/system/System.h:36</a></div></div>
 <div class="ttc" id="aclassUtil_1_1Array_html_a2d8d82e1f566c5787ef21951cf7f2859"><div class="ttname"><a href="classUtil_1_1Array.html#a2d8d82e1f566c5787ef21951cf7f2859">Util::Array::cArray</a></div><div class="ttdeci">Data * cArray()</div><div class="ttdoc">Return a pointer to the underlying C array.</div><div class="ttdef"><b>Definition</b> <a href="Array_8h_source.html#l00214">Array.h:214</a></div></div>
 <div class="ttc" id="aclassUtil_1_1Array_html_a66a4be07c83c3b49eae3536a3afd9fb0"><div class="ttname"><a href="classUtil_1_1Array.html#a66a4be07c83c3b49eae3536a3afd9fb0">Util::Array::capacity</a></div><div class="ttdeci">int capacity() const</div><div class="ttdoc">Return allocated size.</div><div class="ttdef"><b>Definition</b> <a href="Array_8h_source.html#l00159">Array.h:159</a></div></div>
 <div class="ttc" id="aclassUtil_1_1FSArray_html"><div class="ttname"><a href="classUtil_1_1FSArray.html">Util::FSArray</a></div><div class="ttdoc">A fixed capacity (static) contiguous array with a variable logical size.</div><div class="ttdef"><b>Definition</b> <a href="FSArray_8h_source.html#l00037">FSArray.h:38</a></div></div>

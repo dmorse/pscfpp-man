@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -80,7 +80,7 @@ Example: SCFT calculation</h1>
 <li>"WRITE_THERMO out/data" appends information about thermodynamic properties of the converged solution to the end of file out/data.</li>
 <li>FINISH instructs the main program to stop execution and return.</li>
 </ul>
-<p>All pscf_1d that read or write field files use the same field file format, described <a class="el" href="scft_field_r1d_page.html">here</a>. The last line in every PSCF command script must be a FINISH command. Anything that appears after the FINISH command will be ignored.</p>
+<p>All pscf_1d that read or write field files use the same field file format, described <a class="el" href="user_field_r1d_page.html">here</a>. The last line in every PSCF command script must be a FINISH command. Anything that appears after the FINISH command will be ignored.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_command_1d_sweep_sec"></a>
 Example: SCFT sweep</h1>
 <p>Here is an example of a command file to perform a sweep. The SWEEP command can only be used if the parameter file that was read by pscf_1d before reading this command file contains an appropriate Sweep block. </p><div class="fragment"><div class="line">READ_W    in/w</div>

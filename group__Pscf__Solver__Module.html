@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -61,11 +61,11 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:Pscf_3A_3ABlockTmpl_3C_20QT_20_3E" id="r_Pscf_3A_3ABlockTmpl_3C_20QT_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl&lt; QT &gt;</a></td></tr>
+<tr class="memitem:Pscf_3A_3ABlockTmpl_3C_20QT_2C_20FT_20_3E" id="r_Pscf_3A_3ABlockTmpl_3C_20QT_2C_20FT_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl&lt; QT, FT &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class template for a block solver in a block copolymer.  <a href="classPscf_1_1BlockTmpl.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Pscf_3A_3AMixtureTmpl_3C_20PT_2C_20ST_20_3E" id="r_Pscf_3A_3AMixtureTmpl_3C_20PT_2C_20ST_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl&lt; PT, ST &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solvers for a mixture of polymer and solvent species.  <a href="classPscf_1_1MixtureTmpl.html#details">More...</a><br /></td></tr>
-<tr class="memitem:Pscf_3A_3APolymerTmpl_3C_20BT_20_3E" id="r_Pscf_3A_3APolymerTmpl_3C_20BT_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PolymerTmpl.html">Pscf::PolymerTmpl&lt; BT &gt;</a></td></tr>
+<tr class="memitem:Pscf_3A_3APolymerTmpl_3C_20BT_2C_20PT_20_3E" id="r_Pscf_3A_3APolymerTmpl_3C_20BT_2C_20PT_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PolymerTmpl.html">Pscf::PolymerTmpl&lt; BT, PT &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template for an MDE solver and descriptor for a block polymer.  <a href="classPscf_1_1PolymerTmpl.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Pscf_3A_3APropagatorTmpl_3C_20QT_20_3E" id="r_Pscf_3A_3APropagatorTmpl_3C_20QT_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PropagatorTmpl.html">Pscf::PropagatorTmpl&lt; QT &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template for propagator classes.  <a href="classPscf_1_1PropagatorTmpl.html#details">More...</a><br /></td></tr>
@@ -77,8 +77,8 @@ Classes</h2></td></tr>
 <p>To define an implementation of polymer field theory, one must define the following set of solver classes within an implementation-level subspace of <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a>:</p>
 <ul>
 <li>class Propagator, derived from <a class="el" href="classPscf_1_1PropagatorTmpl.html">PropagatorTmpl&lt;Propagator&gt;</a></li>
-<li>class Block, derived from <a class="el" href="classPscf_1_1BlockTmpl.html">BlockTmpl&lt;Propagator&gt;</a></li>
-<li>class Polymer, derived from <a class="el" href="classPscf_1_1PolymerTmpl.html">PolymerTmpl&lt;Block&gt;</a></li>
+<li>class Block, derived from <a class="el" href="classPscf_1_1BlockTmpl.html" title="Class template for a block solver in a block copolymer.">BlockTmpl&lt;Propagator&gt;</a></li>
+<li>class Polymer, derived from <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Template for an MDE solver and descriptor for a block polymer.">PolymerTmpl&lt;Block&gt;</a></li>
 <li>class Solvent, derived from <a class="el" href="classPscf_1_1SolventSpecies.html" title="Descriptor for a solvent species.">SolventSpecies</a></li>
 <li>class Mixture, derived from <a class="el" href="classPscf_1_1MixtureTmpl.html">MixtureTmpl&lt;Polymer, Solvent&gt;</a> </li>
 </ul>

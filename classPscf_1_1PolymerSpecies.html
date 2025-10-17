@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -72,17 +72,17 @@ Inheritance diagram for Pscf::PolymerSpecies:</div>
  <div class="center">
   <img src="classPscf_1_1PolymerSpecies.png" usemap="#Pscf_3A_3APolymerSpecies_map" alt=""/>
   <map id="Pscf_3A_3APolymerSpecies_map" name="Pscf_3A_3APolymerSpecies_map">
-<area href="classPscf_1_1Species.html" title="Base class for a molecular species (polymer or solvent)." alt="Pscf::Species" shape="rect" coords="426,168,629,192"/>
-<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="426,112,629,136"/>
-<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="426,56,629,80"/>
-<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="319,0,522,24"/>
-<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="532,0,735,24"/>
-<area href="classPscf_1_1PolymerTmpl.html" alt="Pscf::PolymerTmpl&lt; Block&lt; D &gt; &gt;" shape="rect" coords="106,280,309,304"/>
-<area href="classPscf_1_1PolymerTmpl.html" alt="Pscf::PolymerTmpl&lt; Block &gt;" shape="rect" coords="426,280,629,304"/>
-<area href="classPscf_1_1PolymerTmpl.html" title="Template for an MDE solver and descriptor for a block polymer." alt="Pscf::PolymerTmpl&lt; BT &gt;" shape="rect" coords="639,280,842,304"/>
-<area href="classPscf_1_1Rpc_1_1Polymer.html" title="Descriptor and solver for one polymer species." alt="Pscf::Rpc::Polymer&lt; D &gt;" shape="rect" coords="0,336,203,360"/>
-<area href="classPscf_1_1Rpg_1_1Polymer.html" title="Descriptor and solver for one polymer species." alt="Pscf::Rpg::Polymer&lt; D &gt;" shape="rect" coords="213,336,416,360"/>
-<area href="classPscf_1_1R1d_1_1Polymer.html" title="Descriptor and solver for a block polymer species." alt="Pscf::R1d::Polymer" shape="rect" coords="426,336,629,360"/>
+<area href="classPscf_1_1Species.html" title="Base class for a molecular species (polymer or solvent)." alt="Pscf::Species" shape="rect" coords="636,168,944,192"/>
+<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="636,112,944,136"/>
+<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="636,56,944,80"/>
+<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="477,0,785,24"/>
+<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="795,0,1103,24"/>
+<area href="classPscf_1_1PolymerTmpl.html" alt="Pscf::PolymerTmpl&lt; Block&lt; D &gt;, Propagator&lt; D &gt; &gt;" shape="rect" coords="159,280,467,304"/>
+<area href="classPscf_1_1PolymerTmpl.html" alt="Pscf::PolymerTmpl&lt; Block, Propagator &gt;" shape="rect" coords="636,280,944,304"/>
+<area href="classPscf_1_1PolymerTmpl.html" title="Template for an MDE solver and descriptor for a block polymer." alt="Pscf::PolymerTmpl&lt; BT, PT &gt;" shape="rect" coords="954,280,1262,304"/>
+<area href="classPscf_1_1Rpc_1_1Polymer.html" title="Descriptor and solver for one polymer species." alt="Pscf::Rpc::Polymer&lt; D &gt;" shape="rect" coords="0,336,308,360"/>
+<area href="classPscf_1_1Rpg_1_1Polymer.html" title="Descriptor and solver for one polymer species." alt="Pscf::Rpg::Polymer&lt; D &gt;" shape="rect" coords="318,336,626,360"/>
+<area href="classPscf_1_1R1d_1_1Polymer.html" title="Descriptor and solver for a block polymer species." alt="Pscf::R1d::Polymer" shape="rect" coords="636,336,944,360"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -379,7 +379,7 @@ Additional Inherited Members</h2></td></tr>
 <p>A <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">PolymerSpecies</a> has an array of <a class="el" href="classPscf_1_1Vertex.html" title="A junction or chain end in a block polymer.">Vertex</a> objects and an associated array of <a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within a block polymer.">Edge</a> objects. Together, these provide a description of the connectivity graph, block lengths and block monomer types of blocks within a block polymer. A <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">PolymerSpecies</a> object does not provide function required to solve the modified diffusion equation (MDE), and so is a descriptor but not a solver for a polymer species.</p>
 <p><a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">PolymerSpecies</a> is an abstract base class for classes that act as MDE solvers as well as descriptors. Each implementation level sub-namespace of <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a> (i.e., <a class="el" href="namespacePscf_1_1R1d.html" title="SCFT with real 1D fields.">R1d</a>, <a class="el" href="namespacePscf_1_1Rpc.html" title="Real periodic fields, SCFT and PS-FTS (CPU).">Rpc</a> or <a class="el" href="namespacePscf_1_1Rpg.html" title="SCFT and PS-FTS with real periodic fields (GPU)">Rpg</a>) contains a subclass of <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">PolymerSpecies</a> named Polymer that defines a function named compute() that solves the MDE for all blocks of a block polymer. <br  />
  Each such implementation level sub-namespace also contains a subclass of <a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within a block polymer.">Edge</a> named Block that is an MDE solver and descriptor for a single block within a block polymer.</p>
-<p>The Polymer class in each implementation-level namespace is derived directly from an template instantiation <a class="el" href="classPscf_1_1PolymerTmpl.html">Pscf::PolymerTmpl&lt;Block&gt;</a> of the class template <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Template for an MDE solver and descriptor for a block polymer.">Pscf::PolymerTmpl</a>, while <a class="el" href="classPscf_1_1PolymerTmpl.html">PolymerTmpl&lt;Block&gt;</a> is derived directly from <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">PolymerSpecies</a>. A <a class="el" href="classPscf_1_1PolymerTmpl.html">PolymerTmpl&lt;Block&gt;</a> has a private member variable that is an array of Block solver objects. The <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Template for an MDE solver and descriptor for a block polymer.">PolymerTmpl</a> template defines implementations of <a class="el" href="#a5d96c576b19d4de170c0bd18ab686fa1" title="Get a specified Edge (block descriptor) by non-const reference.">edge(int id)</a> functions that are declared as pure virtual functions of <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">PolymerSpecies</a>, each of which which returns a specific Block solver object as a reference to an <a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within a block polymer.">Edge</a>.</p>
+<p>The Polymer class in each implementation-level namespace is derived directly from an template instantiation <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Template for an MDE solver and descriptor for a block polymer.">Pscf::PolymerTmpl&lt;Block&gt;</a> of the class template <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Template for an MDE solver and descriptor for a block polymer.">Pscf::PolymerTmpl</a>, while <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Template for an MDE solver and descriptor for a block polymer.">PolymerTmpl&lt;Block&gt;</a> is derived directly from <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">PolymerSpecies</a>. A <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Template for an MDE solver and descriptor for a block polymer.">PolymerTmpl&lt;Block&gt;</a> has a private member variable that is an array of Block solver objects. The <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Template for an MDE solver and descriptor for a block polymer.">PolymerTmpl</a> template defines implementations of <a class="el" href="#a5d96c576b19d4de170c0bd18ab686fa1" title="Get a specified Edge (block descriptor) by non-const reference.">edge(int id)</a> functions that are declared as pure virtual functions of <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">PolymerSpecies</a>, each of which which returns a specific Block solver object as a reference to an <a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within a block polymer.">Edge</a>.</p>
 <p>The <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">PolymerSpecies</a> class provides a generic description of polymer structure that only uses names of generic descriptor types (such as as <a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within a block polymer.">Edge</a> and <a class="el" href="classPscf_1_1Vertex.html" title="A junction or chain end in a block polymer.">Vertex</a>) that are defined directly in the <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a> namespace. The <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">PolymerSpecies</a> interface does not use any of the specialized solver classes that are defined in each implementation level sub-namespaces of <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a>, such as the different Block and Polymer classes defined in different sub-namespaces for use in different implementations. A reference to such a specialized Polymer solver object as a generic <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">PolymerSpecies</a> can thus be used as an argument to a generic function that requires a description of the polymer molecular structure, but that does not actually solve the MDE. </p>
 
 <p class="definition">Definition at line <a class="el" href="PolymerSpecies_8h_source.html#l00070">70</a> of file <a class="el" href="PolymerSpecies_8h_source.html">PolymerSpecies.h</a>.</p>
@@ -405,7 +405,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="reference">References <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>, and <a class="el" href="Species_8cpp_source.html#l00018">Pscf::Species::Species()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PolymerTmpl_8tpp_source.html#l00023">Pscf::PolymerTmpl&lt; BT &gt;::PolymerTmpl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PolymerTmpl_8tpp_source.html#l00022">Pscf::PolymerTmpl&lt; BT, PT &gt;::PolymerTmpl()</a>.</p>
 
 </div>
 </div>
@@ -455,7 +455,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Read parameters and initialize. </p>
-<p>The default implementation of this function calls the virtual protected functions <a class="el" href="#a4b401ab63cadf2b6fd7def1a71836e61" title="Allocate array of blocks.">allocateBlocks()</a> and <a class="el" href="#a02a723b1af20891f662d98a03e656d1e" title="Read array of blocks from parameter file.">readBlocks()</a> to access data that is owned by the <a class="el" href="classPscf_1_1PolymerTmpl.html">PolymerTmpl&lt;Block&gt;</a> subclass.</p>
+<p>The default implementation of this function calls the virtual protected functions <a class="el" href="#a4b401ab63cadf2b6fd7def1a71836e61" title="Allocate array of blocks.">allocateBlocks()</a> and <a class="el" href="#a02a723b1af20891f662d98a03e656d1e" title="Read array of blocks from parameter file.">readBlocks()</a> to access data that is owned by the <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Template for an MDE solver and descriptor for a block polymer.">PolymerTmpl&lt;Block&gt;</a> subclass.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">in</td><td>input parameter stream </td></tr>
@@ -465,13 +465,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classPscf_1_1Species.html#a2b1c7f158fe2cfaaa1399935ea54c16b">Pscf::Species</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPscf_1_1PolymerTmpl.html#ab5cfed6d34003e9d17729cf3c4b72c1f">Pscf::PolymerTmpl&lt; BT &gt;</a>, <a class="el" href="classPscf_1_1PolymerTmpl.html#ab5cfed6d34003e9d17729cf3c4b72c1f">Pscf::PolymerTmpl&lt; Block &gt;</a>, and <a class="el" href="classPscf_1_1PolymerTmpl.html#ab5cfed6d34003e9d17729cf3c4b72c1f">Pscf::PolymerTmpl&lt; Block&lt; D &gt; &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classPscf_1_1PolymerTmpl.html#a857d1f386c5159cb36c27c5e5050838c">Pscf::PolymerTmpl&lt; BT, PT &gt;</a>, <a class="el" href="classPscf_1_1PolymerTmpl.html#a857d1f386c5159cb36c27c5e5050838c">Pscf::PolymerTmpl&lt; Block, Propagator &gt;</a>, and <a class="el" href="classPscf_1_1PolymerTmpl.html#a857d1f386c5159cb36c27c5e5050838c">Pscf::PolymerTmpl&lt; Block&lt; D &gt;, Propagator&lt; D &gt; &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="PolymerSpecies_8cpp_source.html#l00043">43</a> of file <a class="el" href="PolymerSpecies_8cpp_source.html">PolymerSpecies.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="#a4b401ab63cadf2b6fd7def1a71836e61">allocateBlocks()</a>, <a class="el" href="#a5d96c576b19d4de170c0bd18ab686fa1">edge()</a>, <a class="el" href="PolymerSpecies_8cpp_source.html#l00165">makePaths()</a>, <a class="el" href="PolymerSpecies_8cpp_source.html#l00114">makePlan()</a>, <a class="el" href="ParamComposite_8h_source.html#l01248">Util::ParamComposite::read()</a>, <a class="el" href="#a02a723b1af20891f662d98a03e656d1e">readBlocks()</a>, <a class="el" href="ParamComposite_8h_source.html#l01256">Util::ParamComposite::readOptional()</a>, <a class="el" href="Species_8cpp_source.html#l00028">Pscf::Species::readParameters()</a>, <a class="el" href="Edge_8cpp_source.html#l00038">Pscf::Edge::setId()</a>, <a class="el" href="Edge_8cpp_source.html#l00077">Pscf::Edge::setPolymerType()</a>, <a class="el" href="Edge_8cpp_source.html#l00050">Pscf::Edge::setVertexIds()</a>, and <a class="el" href="Edge_8h_source.html#l00296">Pscf::Edge::vertexId()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PolymerTmpl_8tpp_source.html#l00053">Pscf::PolymerTmpl&lt; BT &gt;::readParameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PolymerTmpl_8tpp_source.html#l00052">Pscf::PolymerTmpl&lt; BT, PT &gt;::readParameters()</a>.</p>
 
 </div>
 </div>
@@ -499,7 +499,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get a specified <a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within a block polymer.">Edge</a> (block descriptor) by non-const reference. </p>
-<p>This function is implemented by class template <a class="el" href="classPscf_1_1PolymerTmpl.html">PolymerTmpl&lt;Block&gt;</a>, which is a subclass of PolmerSpecies, in which the template argument Block must be a subclass of class <a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within a block polymer.">Pscf::Edge</a>.</p>
+<p>This function is implemented by class template <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Template for an MDE solver and descriptor for a block polymer.">PolymerTmpl&lt;Block&gt;</a>, which is a subclass of PolmerSpecies, in which the template argument Block must be a subclass of class <a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within a block polymer.">Pscf::Edge</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>block index, 0 &lt;= id &lt; nBlock </td></tr>
@@ -507,9 +507,9 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classPscf_1_1PolymerTmpl.html#aef57b0629441758a7d930ea9518042c8">Pscf::PolymerTmpl&lt; BT &gt;</a>, <a class="el" href="classPscf_1_1PolymerTmpl.html#aef57b0629441758a7d930ea9518042c8">Pscf::PolymerTmpl&lt; Block &gt;</a>, <a class="el" href="classPscf_1_1PolymerTmpl.html#aef57b0629441758a7d930ea9518042c8">Pscf::PolymerTmpl&lt; Block&lt; D &gt; &gt;</a>, <a class="el" href="classPscf_1_1Rpc_1_1Polymer.html#aa5bd380e9c8856d7e6aa7815700cb373">Pscf::Rpc::Polymer&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1Polymer.html#aa5bd380e9c8856d7e6aa7815700cb373">Pscf::Rpg::Polymer&lt; D &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classPscf_1_1PolymerTmpl.html#ae9c75c2465fc08882d987dfbe206e2dc">Pscf::PolymerTmpl&lt; BT, PT &gt;</a>, <a class="el" href="classPscf_1_1PolymerTmpl.html#ae9c75c2465fc08882d987dfbe206e2dc">Pscf::PolymerTmpl&lt; Block, Propagator &gt;</a>, <a class="el" href="classPscf_1_1PolymerTmpl.html#ae9c75c2465fc08882d987dfbe206e2dc">Pscf::PolymerTmpl&lt; Block&lt; D &gt;, Propagator&lt; D &gt; &gt;</a>, <a class="el" href="classPscf_1_1Rpc_1_1Polymer.html#a5d02dc6787042e775abc79f94a260534">Pscf::Rpc::Polymer&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1Polymer.html#a5d02dc6787042e775abc79f94a260534">Pscf::Rpg::Polymer&lt; D &gt;</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2fts_2compressor_2IntraCorrelation_8tpp_source.html#l00056">Pscf::Rpc::IntraCorrelation&lt; D &gt;::computeIntraCorrelations()</a>, <a class="el" href="rpg_2fts_2compressor_2IntraCorrelation_8tpp_source.html#l00048">Pscf::Rpg::IntraCorrelation&lt; D &gt;::computeIntraCorrelations()</a>, <a class="el" href="pscf_2floryHuggins_2Mixture_8cpp_source.html#l00098">Pscf::FloryHuggins::Mixture::initialize()</a>, <a class="el" href="PolymerSpecies_8cpp_source.html#l00403">length()</a>, <a class="el" href="PolymerSpecies_8cpp_source.html#l00165">makePaths()</a>, <a class="el" href="PolymerSpecies_8cpp_source.html#l00114">makePlan()</a>, <a class="el" href="PolymerSpecies_8cpp_source.html#l00416">nBead()</a>, and <a class="el" href="PolymerSpecies_8cpp_source.html#l00043">readParameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2fts_2compressor_2IntraCorrelation_8tpp_source.html#l00060">Pscf::Rpc::IntraCorrelation&lt; D &gt;::computeIntraCorrelations()</a>, <a class="el" href="rpg_2fts_2compressor_2IntraCorrelation_8tpp_source.html#l00055">Pscf::Rpg::IntraCorrelation&lt; D &gt;::computeIntraCorrelations()</a>, <a class="el" href="pscf_2floryHuggins_2Mixture_8cpp_source.html#l00098">Pscf::FloryHuggins::Mixture::initialize()</a>, <a class="el" href="PolymerSpecies_8cpp_source.html#l00403">length()</a>, <a class="el" href="PolymerSpecies_8cpp_source.html#l00165">makePaths()</a>, <a class="el" href="PolymerSpecies_8cpp_source.html#l00114">makePlan()</a>, <a class="el" href="PolymerSpecies_8cpp_source.html#l00416">nBead()</a>, and <a class="el" href="PolymerSpecies_8cpp_source.html#l00043">readParameters()</a>.</p>
 
 </div>
 </div>
@@ -544,7 +544,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classPscf_1_1PolymerTmpl.html#ac71c6552cd829688c08d0309e67797ce">Pscf::PolymerTmpl&lt; BT &gt;</a>, <a class="el" href="classPscf_1_1PolymerTmpl.html#ac71c6552cd829688c08d0309e67797ce">Pscf::PolymerTmpl&lt; Block&lt; D &gt; &gt;</a>, <a class="el" href="classPscf_1_1Rpc_1_1Polymer.html#ab03552eec48a0fe3cea2d088cd6a9cc6">Pscf::Rpc::Polymer&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1Polymer.html#ab03552eec48a0fe3cea2d088cd6a9cc6">Pscf::Rpg::Polymer&lt; D &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classPscf_1_1PolymerTmpl.html#a7533b73e33ae127791348b8312f5a593">Pscf::PolymerTmpl&lt; BT, PT &gt;</a>, <a class="el" href="classPscf_1_1PolymerTmpl.html#a7533b73e33ae127791348b8312f5a593">Pscf::PolymerTmpl&lt; Block&lt; D &gt;, Propagator&lt; D &gt; &gt;</a>, <a class="el" href="classPscf_1_1Rpc_1_1Polymer.html#af05a2e824a16a7ca7fc386139548f0b8">Pscf::Rpc::Polymer&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1Polymer.html#af05a2e824a16a7ca7fc386139548f0b8">Pscf::Rpg::Polymer&lt; D &gt;</a>.</p>
 
 </div>
 </div>
@@ -582,7 +582,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PolymerSpecies_8h_source.html#l00317">317</a> of file <a class="el" href="PolymerSpecies_8h_source.html">PolymerSpecies.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PolymerSpecies_8cpp_source.html#l00165">makePaths()</a>, and <a class="el" href="classPscf_1_1PolymerTmpl.html#ab4e506d171a2fcdee0963608bb4b90a9">Pscf::PolymerTmpl&lt; Block&lt; D &gt; &gt;::propagator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PolymerSpecies_8cpp_source.html#l00165">makePaths()</a>, and <a class="el" href="classPscf_1_1PolymerTmpl.html#a5df9820ee8525d49e4d158d8d6b846cb">Pscf::PolymerTmpl&lt; Block&lt; D &gt;, Propagator&lt; D &gt; &gt;::propagator()</a>.</p>
 
 </div>
 </div>
@@ -613,7 +613,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PolymerSpecies_8h_source.html#l00298">298</a> of file <a class="el" href="PolymerSpecies_8h_source.html">PolymerSpecies.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2fts_2compressor_2IntraCorrelation_8tpp_source.html#l00056">Pscf::Rpc::IntraCorrelation&lt; D &gt;::computeIntraCorrelations()</a>, <a class="el" href="rpg_2fts_2compressor_2IntraCorrelation_8tpp_source.html#l00048">Pscf::Rpg::IntraCorrelation&lt; D &gt;::computeIntraCorrelations()</a>, <a class="el" href="pscf_2floryHuggins_2Mixture_8cpp_source.html#l00098">Pscf::FloryHuggins::Mixture::initialize()</a>, and <a class="el" href="classPscf_1_1PolymerTmpl.html#ab4e506d171a2fcdee0963608bb4b90a9">Pscf::PolymerTmpl&lt; Block&lt; D &gt; &gt;::propagator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2fts_2compressor_2IntraCorrelation_8tpp_source.html#l00060">Pscf::Rpc::IntraCorrelation&lt; D &gt;::computeIntraCorrelations()</a>, <a class="el" href="rpg_2fts_2compressor_2IntraCorrelation_8tpp_source.html#l00055">Pscf::Rpg::IntraCorrelation&lt; D &gt;::computeIntraCorrelations()</a>, <a class="el" href="pscf_2floryHuggins_2Mixture_8cpp_source.html#l00098">Pscf::FloryHuggins::Mixture::initialize()</a>, and <a class="el" href="classPscf_1_1PolymerTmpl.html#a5df9820ee8525d49e4d158d8d6b846cb">Pscf::PolymerTmpl&lt; Block&lt; D &gt;, Propagator&lt; D &gt; &gt;::propagator()</a>.</p>
 
 </div>
 </div>
@@ -645,7 +645,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PolymerSpecies_8h_source.html#l00304">304</a> of file <a class="el" href="PolymerSpecies_8h_source.html">PolymerSpecies.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classPscf_1_1PolymerTmpl.html#ab4e506d171a2fcdee0963608bb4b90a9">Pscf::PolymerTmpl&lt; Block&lt; D &gt; &gt;::propagator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classPscf_1_1PolymerTmpl.html#a5df9820ee8525d49e4d158d8d6b846cb">Pscf::PolymerTmpl&lt; Block&lt; D &gt;, Propagator&lt; D &gt; &gt;::propagator()</a>.</p>
 
 </div>
 </div>
@@ -676,7 +676,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PolymerSpecies_8h_source.html#l00310">310</a> of file <a class="el" href="PolymerSpecies_8h_source.html">PolymerSpecies.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classPscf_1_1PolymerTmpl.html#ab4e506d171a2fcdee0963608bb4b90a9">Pscf::PolymerTmpl&lt; Block&lt; D &gt; &gt;::propagator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classPscf_1_1PolymerTmpl.html#a5df9820ee8525d49e4d158d8d6b846cb">Pscf::PolymerTmpl&lt; Block&lt; D &gt;, Propagator&lt; D &gt; &gt;::propagator()</a>.</p>
 
 </div>
 </div>
@@ -702,7 +702,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#a5d96c576b19d4de170c0bd18ab686fa1">edge()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, <a class="el" href="Edge_8h_source.html#l00311">Pscf::Edge::length()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ScftThermoTmpl_8tpp_source.html#l00051">Pscf::Prdc::ScftThermoTmpl&lt; D, ST &gt;::compute()</a>, and <a class="el" href="classPscf_1_1PolymerTmpl.html#ab4e506d171a2fcdee0963608bb4b90a9">Pscf::PolymerTmpl&lt; Block&lt; D &gt; &gt;::propagator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ScftThermoTmpl_8tpp_source.html#l00053">Pscf::Prdc::ScftThermoTmpl&lt; D, ST &gt;::compute()</a>, and <a class="el" href="classPscf_1_1PolymerTmpl.html#a5df9820ee8525d49e4d158d8d6b846cb">Pscf::PolymerTmpl&lt; Block&lt; D &gt;, Propagator&lt; D &gt; &gt;::propagator()</a>.</p>
 
 </div>
 </div>
@@ -728,7 +728,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#a5d96c576b19d4de170c0bd18ab686fa1">edge()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00075">Pscf::PolymerModel::isBead()</a>, <a class="el" href="Edge_8h_source.html#l00302">Pscf::Edge::nBead()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ScftThermoTmpl_8tpp_source.html#l00051">Pscf::Prdc::ScftThermoTmpl&lt; D, ST &gt;::compute()</a>, and <a class="el" href="classPscf_1_1PolymerTmpl.html#ab4e506d171a2fcdee0963608bb4b90a9">Pscf::PolymerTmpl&lt; Block&lt; D &gt; &gt;::propagator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ScftThermoTmpl_8tpp_source.html#l00053">Pscf::Prdc::ScftThermoTmpl&lt; D, ST &gt;::compute()</a>, and <a class="el" href="classPscf_1_1PolymerTmpl.html#a5df9820ee8525d49e4d158d8d6b846cb">Pscf::PolymerTmpl&lt; Block&lt; D &gt;, Propagator&lt; D &gt; &gt;::propagator()</a>.</p>
 
 </div>
 </div>
@@ -759,7 +759,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PolymerSpecies_8h_source.html#l00348">348</a> of file <a class="el" href="PolymerSpecies_8h_source.html">PolymerSpecies.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classPscf_1_1PolymerTmpl.html#ab4e506d171a2fcdee0963608bb4b90a9">Pscf::PolymerTmpl&lt; Block&lt; D &gt; &gt;::propagator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classPscf_1_1PolymerTmpl.html#a5df9820ee8525d49e4d158d8d6b846cb">Pscf::PolymerTmpl&lt; Block&lt; D &gt;, Propagator&lt; D &gt; &gt;::propagator()</a>.</p>
 
 </div>
 </div>
@@ -800,7 +800,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classPscf_1_1PolymerTmpl.html#ab4e506d171a2fcdee0963608bb4b90a9">Pscf::PolymerTmpl&lt; Block&lt; D &gt; &gt;::propagator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classPscf_1_1PolymerTmpl.html#a5df9820ee8525d49e4d158d8d6b846cb">Pscf::PolymerTmpl&lt; Block&lt; D &gt;, Propagator&lt; D &gt; &gt;::propagator()</a>.</p>
 
 </div>
 </div>
@@ -845,7 +845,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PolymerSpecies_8cpp_source.html#l00165">makePaths()</a>, and <a class="el" href="classPscf_1_1PolymerTmpl.html#ab4e506d171a2fcdee0963608bb4b90a9">Pscf::PolymerTmpl&lt; Block&lt; D &gt; &gt;::propagator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PolymerSpecies_8cpp_source.html#l00165">makePaths()</a>, and <a class="el" href="classPscf_1_1PolymerTmpl.html#a5df9820ee8525d49e4d158d8d6b846cb">Pscf::PolymerTmpl&lt; Block&lt; D &gt;, Propagator&lt; D &gt; &gt;::propagator()</a>.</p>
 
 </div>
 </div>
@@ -874,7 +874,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Allocate array of blocks. </p>
 
-<p>Implemented in <a class="el" href="classPscf_1_1PolymerTmpl.html#a1c76626f1fed689daa38c46aa91e2aa0">Pscf::PolymerTmpl&lt; BT &gt;</a>, <a class="el" href="classPscf_1_1PolymerTmpl.html#a1c76626f1fed689daa38c46aa91e2aa0">Pscf::PolymerTmpl&lt; Block &gt;</a>, and <a class="el" href="classPscf_1_1PolymerTmpl.html#a1c76626f1fed689daa38c46aa91e2aa0">Pscf::PolymerTmpl&lt; Block&lt; D &gt; &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classPscf_1_1PolymerTmpl.html#aaf3d91cb54c6b11ec1f1630941e8cac6">Pscf::PolymerTmpl&lt; BT, PT &gt;</a>, <a class="el" href="classPscf_1_1PolymerTmpl.html#aaf3d91cb54c6b11ec1f1630941e8cac6">Pscf::PolymerTmpl&lt; Block, Propagator &gt;</a>, and <a class="el" href="classPscf_1_1PolymerTmpl.html#aaf3d91cb54c6b11ec1f1630941e8cac6">Pscf::PolymerTmpl&lt; Block&lt; D &gt;, Propagator&lt; D &gt; &gt;</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="PolymerSpecies_8cpp_source.html#l00043">readParameters()</a>.</p>
 
@@ -911,7 +911,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classPscf_1_1PolymerTmpl.html#a4e79ee2d8bb1ceddc9f1dc9b86888a7b">Pscf::PolymerTmpl&lt; BT &gt;</a>, <a class="el" href="classPscf_1_1PolymerTmpl.html#a4e79ee2d8bb1ceddc9f1dc9b86888a7b">Pscf::PolymerTmpl&lt; Block &gt;</a>, and <a class="el" href="classPscf_1_1PolymerTmpl.html#a4e79ee2d8bb1ceddc9f1dc9b86888a7b">Pscf::PolymerTmpl&lt; Block&lt; D &gt; &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classPscf_1_1PolymerTmpl.html#a408783bab7b79b964baf54709d5c30fe">Pscf::PolymerTmpl&lt; BT, PT &gt;</a>, <a class="el" href="classPscf_1_1PolymerTmpl.html#a408783bab7b79b964baf54709d5c30fe">Pscf::PolymerTmpl&lt; Block, Propagator &gt;</a>, and <a class="el" href="classPscf_1_1PolymerTmpl.html#a408783bab7b79b964baf54709d5c30fe">Pscf::PolymerTmpl&lt; Block&lt; D &gt;, Propagator&lt; D &gt; &gt;</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="PolymerSpecies_8cpp_source.html#l00043">readParameters()</a>.</p>
 

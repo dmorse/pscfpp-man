@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -70,57 +70,55 @@ $(function() {
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// Header file includes</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;prdc/system/SystemTmpl.h&gt;</span>    <span class="comment">// base class template</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;rpg/system/Types.h&gt;</span>          <span class="comment">// base class template param</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;rpg/solvers/Mixture.h&gt;</span>       <span class="comment">// member</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;rpg/field/Domain.h&gt;</span>          <span class="comment">// member</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;rpg/field/WFields.h&gt;</span>         <span class="comment">// member</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;rpg/field/CFields.h&gt;</span>         <span class="comment">// member</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;rpg/field/Mask.h&gt;</span>            <span class="comment">// member</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpg.html">Rpg</a> {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>   <span class="keyword">using namespace </span>Util;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Prdc</a>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>   <span class="keyword">using namespace </span>Prdc::Cuda;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1System.html">   37</a></span>   <span class="keyword">class </span><a class="code hl_function" href="classPscf_1_1Rpg_1_1System.html#a99602e11837fc6c0baf2b63e246f0ab0">System</a> : <span class="keyword">public</span> <a class="code hl_function" href="classPscf_1_1Prdc_1_1SystemTmpl.html#ad14797d4d1a8de6a411cc8810ee9c74e">SystemTmpl</a>&lt; D, Types&lt;D&gt; &gt;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>   {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>   <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      <a class="code hl_function" href="classPscf_1_1Rpg_1_1System.html#a99602e11837fc6c0baf2b63e246f0ab0">System</a>();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      <a class="code hl_function" href="classPscf_1_1Rpg_1_1System.html#a99602e11837fc6c0baf2b63e246f0ab0">System</a>(<a class="code hl_function" href="classPscf_1_1Rpg_1_1System.html#a99602e11837fc6c0baf2b63e246f0ab0">System&lt;D&gt;</a> <span class="keyword">const</span> &amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      <a class="code hl_function" href="classPscf_1_1Rpg_1_1System.html#a99602e11837fc6c0baf2b63e246f0ab0">System&lt;D&gt;</a>&amp; operator = (<a class="code hl_function" href="classPscf_1_1Rpg_1_1System.html#a99602e11837fc6c0baf2b63e246f0ab0">System&lt;D&gt;</a> <span class="keyword">const</span> &amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>   <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1System.html#a9ac8d55378d6c2d73a863ccf8656f2ba">setThreadCount</a>(<span class="keywordtype">int</span> nThread) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>   };</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;rpg/field/WFields.h&gt;</span>         <span class="comment">// member</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;rpg/field/CFields.h&gt;</span>         <span class="comment">// member</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;rpg/field/Mask.h&gt;</span>            <span class="comment">// member</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpg.html">Rpg</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>   <span class="keyword">using namespace </span>Util;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Prdc</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>   <span class="keyword">using namespace </span>Prdc::Cuda;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1System.html">   35</a></span>   <span class="keyword">class </span><a class="code hl_function" href="classPscf_1_1Rpg_1_1System.html#a99602e11837fc6c0baf2b63e246f0ab0">System</a> : <span class="keyword">public</span> <a class="code hl_function" href="classPscf_1_1Prdc_1_1SystemTmpl.html#ad14797d4d1a8de6a411cc8810ee9c74e">SystemTmpl</a>&lt; D, Types&lt;D&gt; &gt;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>   {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>   <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <a class="code hl_function" href="classPscf_1_1Rpg_1_1System.html#a99602e11837fc6c0baf2b63e246f0ab0">System</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      <a class="code hl_function" href="classPscf_1_1Rpg_1_1System.html#a99602e11837fc6c0baf2b63e246f0ab0">System</a>(<a class="code hl_function" href="classPscf_1_1Rpg_1_1System.html#a99602e11837fc6c0baf2b63e246f0ab0">System&lt;D&gt;</a> <span class="keyword">const</span> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      <a class="code hl_function" href="classPscf_1_1Rpg_1_1System.html#a99602e11837fc6c0baf2b63e246f0ab0">System&lt;D&gt;</a>&amp; operator = (<a class="code hl_function" href="classPscf_1_1Rpg_1_1System.html#a99602e11837fc6c0baf2b63e246f0ab0">System&lt;D&gt;</a> <span class="keyword">const</span> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>   <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1System.html#a9ac8d55378d6c2d73a863ccf8656f2ba">setThreadCount</a>(<span class="keywordtype">int</span> nThread) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>   };</div>
 </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>   <span class="comment">// Explicit instantiation declarations</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System&lt;1&gt;</a>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System&lt;2&gt;</a>;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System&lt;3&gt;</a>;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>} <span class="comment">// namespace Rpg</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Prdc</a> {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>   <span class="comment">// Explicit instantiation declarations of base class</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span>SystemTmpl&lt;1, Rpg::Types&lt;1&gt; &gt;;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span>SystemTmpl&lt;2, Rpg::Types&lt;1&gt; &gt;;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span>SystemTmpl&lt;3, Rpg::Types&lt;1&gt; &gt;;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>} <span class="comment">// namespace Prdc </span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>} <span class="comment">// namespace Pscf</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassPscf_1_1Prdc_1_1SystemTmpl_html_ad14797d4d1a8de6a411cc8810ee9c74e"><div class="ttname"><a href="classPscf_1_1Prdc_1_1SystemTmpl.html#ad14797d4d1a8de6a411cc8810ee9c74e">Pscf::Prdc::SystemTmpl&lt; D, Types&lt; D &gt; &gt;::SystemTmpl</a></div><div class="ttdeci">SystemTmpl(typename Types&lt; D &gt;::System &amp;system)</div><div class="ttdef"><b>Definition</b> <a href="SystemTmpl_8tpp_source.html#l00133">SystemTmpl.tpp:37</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a></div><div class="ttdoc">Main class, representing a complete physical system.</div><div class="ttdef"><b>Definition</b> <a href="#l00037">rpg/system/System.h:38</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html_a99602e11837fc6c0baf2b63e246f0ab0"><div class="ttname"><a href="classPscf_1_1Rpg_1_1System.html#a99602e11837fc6c0baf2b63e246f0ab0">Pscf::Rpg::System::System</a></div><div class="ttdeci">System()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="System_8cu_source.html#l00048">System.cu:48</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html_a9ac8d55378d6c2d73a863ccf8656f2ba"><div class="ttname"><a href="classPscf_1_1Rpg_1_1System.html#a9ac8d55378d6c2d73a863ccf8656f2ba">Pscf::Rpg::System::setThreadCount</a></div><div class="ttdeci">virtual void setThreadCount(int nThread) override</div><div class="ttdoc">Explicitly set maximum number of threads per block.</div><div class="ttdef"><b>Definition</b> <a href="System_8cu_source.html#l00059">System.cu:59</a></div></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>   <span class="comment">// Explicit instantiation declarations</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System&lt;1&gt;</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System&lt;2&gt;</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1System.html">System&lt;3&gt;</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>} <span class="comment">// namespace Rpg</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Prdc</a> {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>   <span class="comment">// Explicit instantiation declarations of base class</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span>SystemTmpl&lt;1, Rpg::Types&lt;1&gt; &gt;;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span>SystemTmpl&lt;2, Rpg::Types&lt;1&gt; &gt;;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span>SystemTmpl&lt;3, Rpg::Types&lt;1&gt; &gt;;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>} <span class="comment">// namespace Prdc </span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>} <span class="comment">// namespace Pscf</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassPscf_1_1Prdc_1_1SystemTmpl_html_ad14797d4d1a8de6a411cc8810ee9c74e"><div class="ttname"><a href="classPscf_1_1Prdc_1_1SystemTmpl.html#ad14797d4d1a8de6a411cc8810ee9c74e">Pscf::Prdc::SystemTmpl&lt; D, Types&lt; D &gt; &gt;::SystemTmpl</a></div><div class="ttdeci">SystemTmpl(typename Types&lt; D &gt;::System &amp;system)</div><div class="ttdef"><b>Definition</b> <a href="SystemTmpl_8tpp_source.html#l00135">SystemTmpl.tpp:41</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1System.html">Pscf::Rpg::System</a></div><div class="ttdoc">Main class, representing a complete physical system.</div><div class="ttdef"><b>Definition</b> <a href="#l00035">rpg/system/System.h:36</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html_a99602e11837fc6c0baf2b63e246f0ab0"><div class="ttname"><a href="classPscf_1_1Rpg_1_1System.html#a99602e11837fc6c0baf2b63e246f0ab0">Pscf::Rpg::System::System</a></div><div class="ttdeci">System()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="System_8cu_source.html#l00051">System.cu:51</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1System_html_a9ac8d55378d6c2d73a863ccf8656f2ba"><div class="ttname"><a href="classPscf_1_1Rpg_1_1System.html#a9ac8d55378d6c2d73a863ccf8656f2ba">Pscf::Rpg::System::setThreadCount</a></div><div class="ttdeci">virtual void setThreadCount(int nThread) override</div><div class="ttdoc">Explicitly set maximum number of threads per block.</div><div class="ttdef"><b>Definition</b> <a href="System_8cu_source.html#l00062">System.cu:62</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_html"><div class="ttname"><a href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div><div class="ttdoc">Periodic fields and crystallography.</div><div class="ttdef"><b>Definition</b> <a href="CField_8cpp_source.html#l00011">CField.cpp:11</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Rpg_html"><div class="ttname"><a href="namespacePscf_1_1Rpg.html">Pscf::Rpg</a></div><div class="ttdoc">SCFT and PS-FTS with real periodic fields (GPU)</div><div class="ttdef"><b>Definition</b> <a href="rpg_2environment_2environment_8mod_source.html#l00003">rpg/environment/environment.mod:3</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>

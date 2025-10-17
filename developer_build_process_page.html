@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -66,14 +66,14 @@ $(function() {
 <li>Creating a static library files for each namespace-level subdirectory of the src directory</li>
 <li>Creating the executable files pscf_1d, pscf_pc, and pscf_pg and installing them (by default) in the bin directory</li>
 </ul>
-<p>All files in the PSCF repository that contain C++ or CUDA C++ code are located in the src directory tree. Files with file name extension *.cpp or *.cu are compiled by the build system, and are referred to here as either compilable source files or simply source files. When each such source file is compiled, the build system creates two associated files that we refer to as an object file and a dependency file:</p>
+<p>All files in the PSCF repository that contain C++ or CUDA C++ code are located in the src directory tree. Files with file name suffix *.cpp or *.cu are compiled by the build system, and are referred to here as either compilable source files or simply source files. When each such source file is compiled, the build system creates two associated files that we refer to as an object file and a dependency file:</p>
 <ul>
-<li>An object file is a file with file name extension .o that contains the object code created by compiling the associated source file.</li>
-<li>A dependency file is a makefile fragment with file name extension .d that contains a lists of all the the prerequisites of the associated object file.</li>
+<li>An object file is a file with file name suffix .o that contains the object code created by compiling the associated source file.</li>
+<li>A dependency file is a makefile fragment with file name suffix .d that contains a lists of all the the prerequisites of the associated object file.</li>
 </ul>
-<p>The object and dependency file that are created by compiling a source file have the same base file name as the associated source file, with different file name extensions.</p>
+<p>The object and dependency file that are created by compiling a source file have the same base file name as the associated source file, with different file name suffixs.</p>
 <p>Each dependency file contains a list of paths to files that are "prerequisites" of the corresponding object file. This list includes the associated source file and all other C++ files (e.g., header files) that are directly or indirectly included into the source file via preprocessor "include" statements. This list of prerequisites is used by the PSCF build system to keep track of when an existing object file has become out-of-date due to modifications of one or more prerequisite files.</p>
-<p>The PSCF build system also creates a static library with file name extension .a in each namespace-level subdirectory of the src directory. Each such library contains all of the object code this is created by compiling the source files in the corresponding namespace-level subdirectory of src. The name of each library file is given by a prefix "lib", followed by the name of the associated namespace-level directory, followed by a suffix ".a". For example, the file "librpc.a" is a library file in the src/rpc directory that contains the contents of all of the object files that are created by compiling source files in the src/rpc namespace level directory.</p>
+<p>The PSCF build system also creates a static library with file name suffix .a in each namespace-level subdirectory of the src directory. Each such library contains all of the object code this is created by compiling the source files in the corresponding namespace-level subdirectory of src. The name of each library file is given by a prefix "lib", followed by the name of the associated namespace-level directory, followed by a suffix ".a". For example, the file "librpc.a" is a library file in the src/rpc directory that contains the contents of all of the object files that are created by compiling source files in the src/rpc namespace level directory.</p>
 <p>The object (*.o), dependency (*.d), and library (*.a) files that are created during the build process are referred to collectively as "intermediate" files. The directory in which all such intermediate files are placed is referred to as the build directory.</p>
 <p>The PSCF makefile system is designed to allow a user to perform either an "out-of-source" build or an "in-source" build. In an "out-of-source" build, all intermediate files are placed in a build directory that is distinct from the src directory. By default, PSCF uses the bld subdirectory of the PSCF root directory as the build directory for out-of-source builds. In an "in-source" build, these intermediate files are instead placed within the src directory.</p>
 <p>During an in-source build, the PSCF build system places the *.o object file and the *.d dependency file that are created by compiling each source file in the same subdirectory of src as the associated source (*.cpp or *.cu) file. During an out-of-source build, these two files are instead placed in an analogous subdirectory of the bld directory tree. To make this possible, the bld directory has an internal directory structure analogous to that of the src directory.</p>

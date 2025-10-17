@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -68,86 +68,90 @@ $(function() {
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;Mixture.h&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;rpg/field/FieldIo.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;prdc/solvers/MixturePrdc.tpp&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;prdc/cuda/FFT.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;prdc/cuda/RField.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpg.html">Rpg</a> {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Prdc</a>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>   <span class="keyword">using namespace </span>Prdc::Cuda;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">   * Constructor</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Mixture.html#aae49e892ce87518a34a338ffc2629fff">   27</a></span>   <a class="code hl_function" href="classPscf_1_1Rpg_1_1Mixture.html#aae49e892ce87518a34a338ffc2629fff">Mixture&lt;D&gt;::Mixture</a>()</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    : <a class="code hl_typedef" href="classPscf_1_1Rpg_1_1Mixture.html#a8b5e20d7503470d7acdb112351866b85">MixturePrdcT</a>(),</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      useBatchedFFT_(true)</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>   {}</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;Polymer.h&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;Solvent.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;Block.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;Propagator.h&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;rpg/field/FieldIo.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;prdc/solvers/MixturePrdc.tpp&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;prdc/cuda/FFT.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;prdc/cuda/RField.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpg.html">Rpg</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Prdc</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>   <span class="keyword">using namespace </span>Prdc::Cuda;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">   * Constructor</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Mixture.html#aae49e892ce87518a34a338ffc2629fff">   31</a></span>   <a class="code hl_function" href="classPscf_1_1Rpg_1_1Mixture.html#aae49e892ce87518a34a338ffc2629fff">Mixture&lt;D&gt;::Mixture</a>()</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    : <a class="code hl_typedef" href="classPscf_1_1Rpg_1_1Mixture.html#ac536dbd75ad9d5027b71fbd021d4ef00">MixturePrdcT</a>(),</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      useBatchedFFT_(true)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>   {}</div>
 </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">   * Read all parameters and initialize.</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Mixture.html#a2103242537ebf911e2bf4db38b36db79">   36</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Mixture.html#a2103242537ebf911e2bf4db38b36db79">Mixture&lt;D&gt;::readParameters</a>(std::istream&amp; in)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>   {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      MixturePrdcT::readParameters(in);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      <span class="comment">// Optionally read useBatchedFFT boolean</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      useBatchedFFT_ = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">ParamComposite::readOptional</a>(in, <span class="stringliteral">&quot;useBatchedFFT&quot;</span>, useBatchedFFT_);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>   }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">   * Read all parameters and initialize.</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Mixture.html#a2103242537ebf911e2bf4db38b36db79">   40</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Mixture.html#a2103242537ebf911e2bf4db38b36db79">Mixture&lt;D&gt;::readParameters</a>(std::istream&amp; in)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>   {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      MixturePrdcT::readParameters(in);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      <span class="comment">// Optionally read useBatchedFFT boolean</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      useBatchedFFT_ = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">ParamComposite::readOptional</a>(in, <span class="stringliteral">&quot;useBatchedFFT&quot;</span>, useBatchedFFT_);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>   }</div>
 </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">   * Set all elements of a field to a single scalar: A[i] = c.</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>   <span class="keywordtype">void</span> Mixture&lt;D&gt;::eqS(FieldT&amp; A, <span class="keywordtype">double</span> c)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">   </span>{</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> nx = mesh().size();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(nx == A.capacity());</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1VecOp.html#ab657e2619b153713611b49e6d1117de6">VecOp::eqS</a>(A,c);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>   }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">   * Compound addition-assignment of two fields: A[i] += B[i]</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>   <span class="keywordtype">void</span> Mixture&lt;D&gt;::addEqV(FieldT&amp; A, FieldT <span class="keyword">const</span> &amp; B)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">   </span>{</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> nx = mesh().size();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(nx == A.capacity());</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(nx == B.capacity());</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1VecOp.html#a25039feced2a872505861c151214a2cd">VecOp::addEqV</a>(A, B);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>   }</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">   * Allocate memory for all blocks.</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>   <span class="keywordtype">void</span> Mixture&lt;D&gt;::allocateBlocks()</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>   {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      <span class="keywordtype">int</span> i, j;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      <span class="keywordflow">for</span> (i = 0; i &lt; nPolymer(); ++i) {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>         <span class="keywordflow">for</span> (j = 0; j &lt; polymer(i).nBlock(); ++j) {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            polymer(i).block(j).allocate(ds(), useBatchedFFT_);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>         }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>   }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>} <span class="comment">// namespace Rpg</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>} <span class="comment">// namespace Pscf</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Mixture_html_a2103242537ebf911e2bf4db38b36db79"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Mixture.html#a2103242537ebf911e2bf4db38b36db79">Pscf::Rpg::Mixture::readParameters</a></div><div class="ttdeci">void readParameters(std::istream &amp;in) override</div><div class="ttdoc">Read all parameters and initialize.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">rpg/solvers/Mixture.tpp:36</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Mixture_html_a8b5e20d7503470d7acdb112351866b85"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Mixture.html#a8b5e20d7503470d7acdb112351866b85">Pscf::Rpg::Mixture::MixturePrdcT</a></div><div class="ttdeci">typename Prdc::MixturePrdc&lt; D, Polymer&lt; D &gt;, Solvent&lt; D &gt; &gt; MixturePrdcT</div><div class="ttdoc">Direct (parent) base class.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2solvers_2Mixture_8h_source.html#l00035">rpg/solvers/Mixture.h:35</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Mixture_html_aae49e892ce87518a34a338ffc2629fff"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Mixture.html#aae49e892ce87518a34a338ffc2629fff">Pscf::Rpg::Mixture::Mixture</a></div><div class="ttdeci">Mixture()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00027">rpg/solvers/Mixture.tpp:27</a></div></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">   * Set all elements of a field to a single scalar: A[i] = c.</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>   <span class="keywordtype">void</span> Mixture&lt;D&gt;::eqS(FieldT&amp; A, <span class="keywordtype">double</span> c)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">   </span>{</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> nx = mesh().size();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(nx == A.capacity());</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1VecOp.html#ab657e2619b153713611b49e6d1117de6">VecOp::eqS</a>(A,c);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>   }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">   * Compound addition-assignment of two fields: A[i] += B[i]</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>   <span class="keywordtype">void</span> Mixture&lt;D&gt;::addEqV(FieldT&amp; A, FieldT <span class="keyword">const</span> &amp; B)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">   </span>{</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> nx = mesh().size();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(nx == A.capacity());</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(nx == B.capacity());</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1VecOp.html#a25039feced2a872505861c151214a2cd">VecOp::addEqV</a>(A, B);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>   }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">   * Allocate memory for all blocks.</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>   <span class="keywordtype">void</span> Mixture&lt;D&gt;::allocateBlocks()</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>   {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      <span class="keywordflow">for</span> (i = 0; i &lt; nPolymer(); ++i) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>         <span class="keywordflow">for</span> (j = 0; j &lt; polymer(i).nBlock(); ++j) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            polymer(i).block(j).allocate(ds(), useBatchedFFT_);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>         }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>   }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>} <span class="comment">// namespace Rpg</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>} <span class="comment">// namespace Pscf</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Mixture_html_a2103242537ebf911e2bf4db38b36db79"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Mixture.html#a2103242537ebf911e2bf4db38b36db79">Pscf::Rpg::Mixture::readParameters</a></div><div class="ttdeci">void readParameters(std::istream &amp;in) override</div><div class="ttdoc">Read all parameters and initialize.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">rpg/solvers/Mixture.tpp:40</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Mixture_html_aae49e892ce87518a34a338ffc2629fff"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Mixture.html#aae49e892ce87518a34a338ffc2629fff">Pscf::Rpg::Mixture::Mixture</a></div><div class="ttdeci">Mixture()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00031">rpg/solvers/Mixture.tpp:31</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Mixture_html_ac536dbd75ad9d5027b71fbd021d4ef00"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Mixture.html#ac536dbd75ad9d5027b71fbd021d4ef00">Pscf::Rpg::Mixture::MixturePrdcT</a></div><div class="ttdeci">typename Prdc::MixturePrdc&lt; D, Polymer&lt; D &gt;, Solvent&lt; D &gt;, Types&lt; D &gt; &gt; MixturePrdcT</div><div class="ttdoc">Direct (parent) base class.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2solvers_2Mixture_8h_source.html#l00042">rpg/solvers/Mixture.h:42</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a5d9f133993e0aa0b18cd59938ccf8700"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">Util::ParamComposite::readOptional</a></div><div class="ttdeci">ScalarParam&lt; Type &gt; &amp; readOptional(std::istream &amp;in, const char *label, Type &amp;value)</div><div class="ttdoc">Add and read a new optional ScalarParam &lt; Type &gt; object.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8h_source.html#l01256">ParamComposite.h:1256</a></div></div>
 <div class="ttc" id="aglobal_8h_html_aaf3bc07accafc94019d126e4cffa81e7"><div class="ttname"><a href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a></div><div class="ttdeci">#define UTIL_CHECK(condition)</div><div class="ttdoc">Assertion macro suitable for serial or parallel production code.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00068">global.h:68</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1VecOp_html_a25039feced2a872505861c151214a2cd"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1VecOp.html#a25039feced2a872505861c151214a2cd">Pscf::Prdc::Cpu::VecOp::addEqV</a></div><div class="ttdeci">void addEqV(Array&lt; double &gt; &amp;a, Array&lt; double &gt; const &amp;b)</div><div class="ttdoc">Vector addition in-place, a[i] += b[i].</div><div class="ttdef"><b>Definition</b> <a href="VecOp_8cpp_source.html#l00199">VecOp.cpp:199</a></div></div>

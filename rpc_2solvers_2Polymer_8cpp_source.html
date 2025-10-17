@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -67,15 +67,21 @@ $(function() {
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Polymer.tpp&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpc.html">Rpc</a> { </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>   <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1Polymer.html">Polymer&lt;1&gt;</a>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>   <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1Polymer.html">Polymer&lt;2&gt;</a>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>   <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1Polymer.html">Polymer&lt;3&gt;</a>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1Polymer_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Polymer.html">Pscf::Rpc::Polymer</a></div><div class="ttdoc">Descriptor and solver for one polymer species.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2solvers_2Polymer_8h_source.html#l00054">rpc/solvers/Polymer.h:55</a></div></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>   <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1PolymerTmpl.html">PolymerTmpl&lt; Rpc::Block&lt;1&gt;</a>, <a class="code hl_class" href="classPscf_1_1Rpc_1_1Propagator.html">Rpc::Propagator&lt;1&gt;</a> &gt;;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>   <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1PolymerTmpl.html">PolymerTmpl&lt; Rpc::Block&lt;2&gt;</a>, <a class="code hl_class" href="classPscf_1_1Rpc_1_1Propagator.html">Rpc::Propagator&lt;2&gt;</a> &gt;;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>   <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1PolymerTmpl.html">PolymerTmpl&lt; Rpc::Block&lt;3&gt;</a>, <a class="code hl_class" href="classPscf_1_1Rpc_1_1Propagator.html">Rpc::Propagator&lt;3&gt;</a> &gt;;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>   <span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpc.html">Rpc</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>      <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1Polymer.html">Polymer&lt;1&gt;</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>      <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1Polymer.html">Polymer&lt;2&gt;</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>      <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpc_1_1Polymer.html">Polymer&lt;3&gt;</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>   }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
+<div class="ttc" id="aclassPscf_1_1PolymerTmpl_html"><div class="ttname"><a href="classPscf_1_1PolymerTmpl.html">Pscf::PolymerTmpl</a></div><div class="ttdoc">Template for an MDE solver and descriptor for a block polymer.</div><div class="ttdef"><b>Definition</b> <a href="PolymerTmpl_8h_source.html#l00044">PolymerTmpl.h:45</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1Polymer_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Polymer.html">Pscf::Rpc::Polymer</a></div><div class="ttdoc">Descriptor and solver for one polymer species.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2solvers_2Polymer_8h_source.html#l00060">rpc/solvers/Polymer.h:61</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1Propagator_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Propagator.html">Pscf::Rpc::Propagator</a></div><div class="ttdoc">MDE solver for one direction of one block.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2solvers_2Propagator_8h_source.html#l00054">rpc/solvers/Propagator.h:55</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Rpc_html"><div class="ttname"><a href="namespacePscf_1_1Rpc.html">Pscf::Rpc</a></div><div class="ttdoc">Real periodic fields, SCFT and PS-FTS (CPU).</div><div class="ttdef"><b>Definition</b> <a href="param__pc_8dox_source.html#l00002">param_pc.dox:2</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

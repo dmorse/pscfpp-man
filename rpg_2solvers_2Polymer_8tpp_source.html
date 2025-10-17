@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -69,145 +69,147 @@ $(function() {
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;Polymer.h&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;rpg/solvers/Block.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;prdc/cuda/RField.h&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;pscf/chem/PolymerModel.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpg.html">Rpg</a> { </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">   * Constructor.</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Polymer.html#aff52a8f7b65e3ed6a7c820939d51f26f">   23</a></span>   <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#aff52a8f7b65e3ed6a7c820939d51f26f">Polymer&lt;D&gt;::Polymer</a>()</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    : nParams_(0)</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>   {  <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">ParamComposite::setClassName</a>(<span class="stringliteral">&quot;Polymer&quot;</span>); }</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;rpg/solvers/Propagator.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;prdc/cuda/RField.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;pscf/solvers/PolymerTmpl.tpp&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;pscf/chem/PolymerModel.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpg.html">Rpg</a> { </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">   * Constructor.</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Polymer.html#aff52a8f7b65e3ed6a7c820939d51f26f">   25</a></span>   <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#aff52a8f7b65e3ed6a7c820939d51f26f">Polymer&lt;D&gt;::Polymer</a>()</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    : nParam_(0)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>   {  <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">ParamComposite::setClassName</a>(<span class="stringliteral">&quot;Polymer&quot;</span>); }</div>
 </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">   * Destructor.</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Polymer.html#acdeb922f4d49a5e4ab9a1b742ce20e5c">   31</a></span>   <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#acdeb922f4d49a5e4ab9a1b742ce20e5c">Polymer&lt;D&gt;::~Polymer</a>()</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>   {}</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">   * Destructor.</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Polymer.html#acdeb922f4d49a5e4ab9a1b742ce20e5c">   33</a></span>   <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#acdeb922f4d49a5e4ab9a1b742ce20e5c">Polymer&lt;D&gt;::~Polymer</a>()</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>   {}</div>
 </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">   * Store the number of lattice parameters in the unit cell.</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">   */</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Polymer.html#a64c504ea0cb248a4877f647804c7ab6c">   38</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a64c504ea0cb248a4877f647804c7ab6c">Polymer&lt;D&gt;::setNParams</a>(<span class="keywordtype">int</span> nParams)</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>   {  nParams_ = nParams; }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">   * Store the number of lattice parameters in the unit cell.</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">   */</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Polymer.html#a64c504ea0cb248a4877f647804c7ab6c">   40</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a64c504ea0cb248a4877f647804c7ab6c">Polymer&lt;D&gt;::setNParams</a>(<span class="keywordtype">int</span> nParams)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>   {  nParam_ = nParams; }</div>
 </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">   * Clear all data that depends on unit cell dimensions.</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Polymer.html#a5063c8e7a304f4cedc1f39008d675bd1">   45</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a5063c8e7a304f4cedc1f39008d675bd1">Polymer&lt;D&gt;::clearUnitCellData</a>()</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>   {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a9de76c8bdb004ba7de73184aab67625f">nBlock</a>(); ++j) {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>         <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#ad7a22018f049945228c49f59a11b198f">block</a>(j).clearUnitCellData();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      stress_.clear();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>   }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">   * Clear all data that depends on unit cell dimensions.</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Polymer.html#a5063c8e7a304f4cedc1f39008d675bd1">   47</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a5063c8e7a304f4cedc1f39008d675bd1">Polymer&lt;D&gt;::clearUnitCellData</a>()</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>   {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a9de76c8bdb004ba7de73184aab67625f">nBlock</a>(); ++j) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>         <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a5a375785e96a1d942abd13053d207951">block</a>(j).clearUnitCellData();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      stress_.clear();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>   }</div>
 </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">   * Compute solution to MDE and concentrations.</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">   */</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Polymer.html#a37db56d349ee222d28ea606ecc4e1d62">   57</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a37db56d349ee222d28ea606ecc4e1d62">Polymer&lt;D&gt;::compute</a>(<a class="code hl_class" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField&lt;D&gt;</a> &gt; <span class="keyword">const</span> &amp; wFields, </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                            <span class="keywordtype">double</span> phiTot)</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>   {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      <span class="comment">// Setup solvers for all blocks</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      <span class="keywordtype">int</span> monomerId;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a9de76c8bdb004ba7de73184aab67625f">nBlock</a>(); ++j) {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>         monomerId = <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#ad7a22018f049945228c49f59a11b198f">block</a>(j).monomerId();</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>         <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#ad7a22018f049945228c49f59a11b198f">block</a>(j).setupSolver(wFields[monomerId]);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      <span class="comment">// Call base class PolymerTmpl solve() function</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <span class="comment">// This solves the MDE for all propagators in a precalculated order</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      solve(phiTot);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      <span class="comment">// Compute block concentration fields</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="keywordtype">double</span> prefactor;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacePscf_1_1PolymerModel.html#a808c2831a6584875c7ec72c9d415e88e">PolymerModel::isThread</a>()) {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>         prefactor = <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a1956df7c7b319005c9f8b6cc274a7dc7">phi</a>() / ( <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#afb8506f32d739b0183c4e09612958663">q</a>() * <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#ae94f574daa6ca92e594827be50678187">length</a>() );</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a9de76c8bdb004ba7de73184aab67625f">nBlock</a>(); ++i) {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#ad7a22018f049945228c49f59a11b198f">block</a>(i).computeConcentrationThread(prefactor);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>         }</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>         prefactor = <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a1956df7c7b319005c9f8b6cc274a7dc7">phi</a>() / ( <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#afb8506f32d739b0183c4e09612958663">q</a>() * (double)<a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a94aaf98a48d27a2ae1888624d4e1732b">nBead</a>() );</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a9de76c8bdb004ba7de73184aab67625f">nBlock</a>(); ++i) {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#ad7a22018f049945228c49f59a11b198f">block</a>(i).computeConcentrationBead(prefactor);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>         }</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>   }</div>
-</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">   * Compute solution to MDE and concentrations.</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">   */</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Polymer.html#a37db56d349ee222d28ea606ecc4e1d62">   59</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a37db56d349ee222d28ea606ecc4e1d62">Polymer&lt;D&gt;::compute</a>(<a class="code hl_class" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField&lt;D&gt;</a> &gt; <span class="keyword">const</span> &amp; wFields, </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                            <span class="keywordtype">double</span> phiTot)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>   {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <span class="comment">// Setup solvers for all blocks</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      <span class="keywordtype">int</span> monomerId;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a9de76c8bdb004ba7de73184aab67625f">nBlock</a>(); ++j) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>         monomerId = <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a5a375785e96a1d942abd13053d207951">block</a>(j).monomerId();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>         <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a5a375785e96a1d942abd13053d207951">block</a>(j).setupSolver(wFields[monomerId]);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      <span class="comment">// Call base class PolymerTmpl solve() function</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <span class="comment">// This solves the MDE for all propagators in a precalculated order</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      solve(phiTot);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="comment">// Compute block concentration fields</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      <span class="keywordtype">double</span> prefactor;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacePscf_1_1PolymerModel.html#a808c2831a6584875c7ec72c9d415e88e">PolymerModel::isThread</a>()) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>         prefactor = <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a1956df7c7b319005c9f8b6cc274a7dc7">phi</a>() / ( <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#afb8506f32d739b0183c4e09612958663">q</a>() * <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#ae94f574daa6ca92e594827be50678187">length</a>() );</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a9de76c8bdb004ba7de73184aab67625f">nBlock</a>(); ++i) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a5a375785e96a1d942abd13053d207951">block</a>(i).computeConcentrationThread(prefactor);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>         }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>         prefactor = <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a1956df7c7b319005c9f8b6cc274a7dc7">phi</a>() / ( <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#afb8506f32d739b0183c4e09612958663">q</a>() * (double)<a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a94aaf98a48d27a2ae1888624d4e1732b">nBead</a>() );</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a9de76c8bdb004ba7de73184aab67625f">nBlock</a>(); ++i) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a5a375785e96a1d942abd13053d207951">block</a>(i).computeConcentrationBead(prefactor);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>         }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      }</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">   * Compute stress contribution from a polymer species.</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Polymer.html#a000f97d51621027cfe0c5b15e7f9d8c0">   91</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a000f97d51621027cfe0c5b15e7f9d8c0">Polymer&lt;D&gt;::computeStress</a>()</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>   {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(nParams_ &gt; 0);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      <span class="comment">// Compute stress contributions for all blocks</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      <span class="keywordtype">double</span> prefactor;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacePscf_1_1PolymerModel.html#a808c2831a6584875c7ec72c9d415e88e">PolymerModel::isThread</a>()) {</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>         prefactor = <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a1956df7c7b319005c9f8b6cc274a7dc7">phi</a>() / ( <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#afb8506f32d739b0183c4e09612958663">q</a>() * <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#ae94f574daa6ca92e594827be50678187">length</a>() );</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a9de76c8bdb004ba7de73184aab67625f">nBlock</a>(); ++i) {</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#ad7a22018f049945228c49f59a11b198f">block</a>(i).computeStressThread(prefactor);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>         }</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>         prefactor = <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a1956df7c7b319005c9f8b6cc274a7dc7">phi</a>() / ( <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#afb8506f32d739b0183c4e09612958663">q</a>() * (double)<a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a94aaf98a48d27a2ae1888624d4e1732b">nBead</a>() );</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a9de76c8bdb004ba7de73184aab67625f">nBlock</a>(); ++i) {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#ad7a22018f049945228c49f59a11b198f">block</a>(i).computeStressBead(prefactor);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>         }</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      }</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      <span class="comment">// Initialize all stress_ elements to zero</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      stress_.clear();</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nParams_; ++i) {</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        stress_.append(0.0);</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      }</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      <span class="comment">// Sum over all block stress contributions</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a9de76c8bdb004ba7de73184aab67625f">nBlock</a>(); ++i) {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0; j &lt; nParams_; ++j){</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            stress_[j] += <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#ad7a22018f049945228c49f59a11b198f">block</a>(i).stress(j);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>         }</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      }</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>   }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>   }</div>
 </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">   * Compute stress contribution from a polymer species.</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="}">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Polymer.html#a000f97d51621027cfe0c5b15e7f9d8c0">   93</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a000f97d51621027cfe0c5b15e7f9d8c0">Polymer&lt;D&gt;::computeStress</a>()</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>   {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(nParam_ &gt; 0);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>      <span class="comment">// Compute stress contributions for all blocks</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      <span class="keywordtype">double</span> prefactor;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacePscf_1_1PolymerModel.html#a808c2831a6584875c7ec72c9d415e88e">PolymerModel::isThread</a>()) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>         prefactor = <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a1956df7c7b319005c9f8b6cc274a7dc7">phi</a>() / ( <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#afb8506f32d739b0183c4e09612958663">q</a>() * <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#ae94f574daa6ca92e594827be50678187">length</a>() );</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a9de76c8bdb004ba7de73184aab67625f">nBlock</a>(); ++i) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a5a375785e96a1d942abd13053d207951">block</a>(i).computeStressThread(prefactor);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>         }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>         prefactor = <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a1956df7c7b319005c9f8b6cc274a7dc7">phi</a>() / ( <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#afb8506f32d739b0183c4e09612958663">q</a>() * (double)<a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a94aaf98a48d27a2ae1888624d4e1732b">nBead</a>() );</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a9de76c8bdb004ba7de73184aab67625f">nBlock</a>(); ++i) {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a5a375785e96a1d942abd13053d207951">block</a>(i).computeStressBead(prefactor);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>         }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      <span class="comment">// Initialize all stress_ elements to zero</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      stress_.clear();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nParam_; ++i) {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        stress_.append(0.0);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <span class="comment">// Sum over all block stress contributions</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a9de76c8bdb004ba7de73184aab67625f">nBlock</a>(); ++i) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0; j &lt; nParam_; ++j){</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            stress_[j] += <a class="code hl_function" href="classPscf_1_1Rpg_1_1Polymer.html#a5a375785e96a1d942abd13053d207951">block</a>(i).stress(j);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>         }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      }</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>}</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>}</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>   }</div>
+</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>}</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassPscf_1_1Prdc_1_1Cpu_1_1RField_html"><div class="ttname"><a href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">Pscf::Prdc::Cpu::RField</a></div><div class="ttdoc">Field of real double precision values on an FFT mesh.</div><div class="ttdef"><b>Definition</b> <a href="cpu_2RField_8h_source.html#l00028">cpu/RField.h:29</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_a000f97d51621027cfe0c5b15e7f9d8c0"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#a000f97d51621027cfe0c5b15e7f9d8c0">Pscf::Rpg::Polymer::computeStress</a></div><div class="ttdeci">void computeStress()</div><div class="ttdoc">Compute SCFT stress contribution from this polymer species.</div><div class="ttdef"><b>Definition</b> <a href="#l00091">rpg/solvers/Polymer.tpp:91</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_a000f97d51621027cfe0c5b15e7f9d8c0"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#a000f97d51621027cfe0c5b15e7f9d8c0">Pscf::Rpg::Polymer::computeStress</a></div><div class="ttdeci">void computeStress()</div><div class="ttdoc">Compute SCFT stress contribution from this polymer species.</div><div class="ttdef"><b>Definition</b> <a href="#l00093">rpg/solvers/Polymer.tpp:93</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_a1956df7c7b319005c9f8b6cc274a7dc7"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#a1956df7c7b319005c9f8b6cc274a7dc7">Pscf::Rpg::Polymer::phi</a></div><div class="ttdeci">double phi() const</div><div class="ttdoc">Get the overall volume fraction for this species.</div><div class="ttdef"><b>Definition</b> <a href="Species_8h_source.html#l00062">Species.h:149</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_a37db56d349ee222d28ea606ecc4e1d62"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#a37db56d349ee222d28ea606ecc4e1d62">Pscf::Rpg::Polymer::compute</a></div><div class="ttdeci">void compute(DArray&lt; RField&lt; D &gt; &gt; const &amp;wFields, double phiTot=1.0)</div><div class="ttdoc">Compute MDE solutions and block concentrations.</div><div class="ttdef"><b>Definition</b> <a href="#l00057">rpg/solvers/Polymer.tpp:57</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_a5063c8e7a304f4cedc1f39008d675bd1"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#a5063c8e7a304f4cedc1f39008d675bd1">Pscf::Rpg::Polymer::clearUnitCellData</a></div><div class="ttdeci">void clearUnitCellData()</div><div class="ttdoc">Clear all data that depends on unit cell parameters.</div><div class="ttdef"><b>Definition</b> <a href="#l00045">rpg/solvers/Polymer.tpp:45</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_a64c504ea0cb248a4877f647804c7ab6c"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#a64c504ea0cb248a4877f647804c7ab6c">Pscf::Rpg::Polymer::setNParams</a></div><div class="ttdeci">void setNParams(int nParams)</div><div class="ttdoc">Set the number of unit cell parameters.</div><div class="ttdef"><b>Definition</b> <a href="#l00038">rpg/solvers/Polymer.tpp:38</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_a37db56d349ee222d28ea606ecc4e1d62"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#a37db56d349ee222d28ea606ecc4e1d62">Pscf::Rpg::Polymer::compute</a></div><div class="ttdeci">void compute(DArray&lt; RField&lt; D &gt; &gt; const &amp;wFields, double phiTot=1.0)</div><div class="ttdoc">Compute MDE solutions and block concentrations.</div><div class="ttdef"><b>Definition</b> <a href="#l00059">rpg/solvers/Polymer.tpp:59</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_a5063c8e7a304f4cedc1f39008d675bd1"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#a5063c8e7a304f4cedc1f39008d675bd1">Pscf::Rpg::Polymer::clearUnitCellData</a></div><div class="ttdeci">void clearUnitCellData()</div><div class="ttdoc">Clear all data that depends on unit cell parameters.</div><div class="ttdef"><b>Definition</b> <a href="#l00047">rpg/solvers/Polymer.tpp:47</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_a5a375785e96a1d942abd13053d207951"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#a5a375785e96a1d942abd13053d207951">Pscf::Rpg::Polymer::block</a></div><div class="ttdeci">Block&lt; D &gt; &amp; block(int id)</div><div class="ttdoc">Get a specified Block (solver and descriptor).</div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_a64c504ea0cb248a4877f647804c7ab6c"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#a64c504ea0cb248a4877f647804c7ab6c">Pscf::Rpg::Polymer::setNParams</a></div><div class="ttdeci">void setNParams(int nParams)</div><div class="ttdoc">Set the number of unit cell parameters.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">rpg/solvers/Polymer.tpp:40</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_a94aaf98a48d27a2ae1888624d4e1732b"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#a94aaf98a48d27a2ae1888624d4e1732b">Pscf::Rpg::Polymer::nBead</a></div><div class="ttdeci">int nBead() const</div><div class="ttdoc">Total number of beads in the polymer (bead model).</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8cpp_source.html#l00160">PolymerSpecies.cpp:416</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_a9de76c8bdb004ba7de73184aab67625f"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#a9de76c8bdb004ba7de73184aab67625f">Pscf::Rpg::Polymer::nBlock</a></div><div class="ttdeci">int nBlock() const</div><div class="ttdoc">Number of blocks.</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8h_source.html#l00133">PolymerSpecies.h:298</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_acdeb922f4d49a5e4ab9a1b742ce20e5c"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#acdeb922f4d49a5e4ab9a1b742ce20e5c">Pscf::Rpg::Polymer::~Polymer</a></div><div class="ttdeci">~Polymer()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00031">rpg/solvers/Polymer.tpp:31</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_ad7a22018f049945228c49f59a11b198f"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#ad7a22018f049945228c49f59a11b198f">Pscf::Rpg::Polymer::block</a></div><div class="ttdeci">Block&lt; D &gt; &amp; block(int id)</div><div class="ttdoc">Get a specified Block (solver and descriptor).</div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_acdeb922f4d49a5e4ab9a1b742ce20e5c"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#acdeb922f4d49a5e4ab9a1b742ce20e5c">Pscf::Rpg::Polymer::~Polymer</a></div><div class="ttdeci">~Polymer()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00033">rpg/solvers/Polymer.tpp:33</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_ae94f574daa6ca92e594827be50678187"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#ae94f574daa6ca92e594827be50678187">Pscf::Rpg::Polymer::length</a></div><div class="ttdeci">double length() const</div><div class="ttdoc">Sum of the lengths of all blocks in the polymer (thread model).</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8cpp_source.html#l00153">PolymerSpecies.cpp:403</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_afb8506f32d739b0183c4e09612958663"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#afb8506f32d739b0183c4e09612958663">Pscf::Rpg::Polymer::q</a></div><div class="ttdeci">double q() const</div><div class="ttdoc">Get the molecular partition function for this species.</div><div class="ttdef"><b>Definition</b> <a href="Species_8h_source.html#l00072">Species.h:161</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_aff52a8f7b65e3ed6a7c820939d51f26f"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#aff52a8f7b65e3ed6a7c820939d51f26f">Pscf::Rpg::Polymer::Polymer</a></div><div class="ttdeci">Polymer()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00023">rpg/solvers/Polymer.tpp:23</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Polymer_html_aff52a8f7b65e3ed6a7c820939d51f26f"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Polymer.html#aff52a8f7b65e3ed6a7c820939d51f26f">Pscf::Rpg::Polymer::Polymer</a></div><div class="ttdeci">Polymer()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00025">rpg/solvers/Polymer.tpp:25</a></div></div>
 <div class="ttc" id="aclassUtil_1_1DArray_html"><div class="ttname"><a href="classUtil_1_1DArray.html">Util::DArray</a></div><div class="ttdoc">Dynamically allocatable contiguous array template.</div><div class="ttdef"><b>Definition</b> <a href="DArray_8h_source.html#l00031">DArray.h:32</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a30752567fd7b8b93e5c8476bbe8592c5"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">Util::ParamComposite::setClassName</a></div><div class="ttdeci">void setClassName(const char *className)</div><div class="ttdoc">Set class name string.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8cpp_source.html#l00379">ParamComposite.cpp:379</a></div></div>
 <div class="ttc" id="aglobal_8h_html_aaf3bc07accafc94019d126e4cffa81e7"><div class="ttname"><a href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a></div><div class="ttdeci">#define UTIL_CHECK(condition)</div><div class="ttdoc">Assertion macro suitable for serial or parallel production code.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00068">global.h:68</a></div></div>

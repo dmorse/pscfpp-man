@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: Pscf::BlockTmpl&lt; QT &gt; Class Template Reference</title>
+<title>PSCF: Pscf::BlockTmpl&lt; QT, FT &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -58,7 +58,7 @@ $(function() {
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classPscf_1_1BlockTmpl-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Pscf::BlockTmpl&lt; QT &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Base__Module.html">Pscf Common</a> &raquo; <a class="el" href="group__Pscf__Solver__Module.html">Solver Templates</a></div></div></div>
+  <div class="headertitle"><div class="title">Pscf::BlockTmpl&lt; QT, FT &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Base__Module.html">Pscf Common</a> &raquo; <a class="el" href="group__Pscf__Solver__Module.html">Solver Templates</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -67,38 +67,40 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Pscf::BlockTmpl&lt; QT &gt;:</div>
+Inheritance diagram for Pscf::BlockTmpl&lt; QT, FT &gt;:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classPscf_1_1BlockTmpl.png" usemap="#Pscf_3A_3ABlockTmpl_3C_20QT_20_3E_map" alt=""/>
-  <map id="Pscf_3A_3ABlockTmpl_3C_20QT_20_3E_map" name="Pscf_3A_3ABlockTmpl_3C_20QT_20_3E_map">
-<area href="classPscf_1_1Edge.html" title="Descriptor for a block within a block polymer." alt="Pscf::Edge" shape="rect" coords="0,0,141,24"/>
+  <img src="classPscf_1_1BlockTmpl.png" usemap="#Pscf_3A_3ABlockTmpl_3C_20QT_2C_20FT_20_3E_map" alt=""/>
+  <map id="Pscf_3A_3ABlockTmpl_3C_20QT_2C_20FT_20_3E_map" name="Pscf_3A_3ABlockTmpl_3C_20QT_2C_20FT_20_3E_map">
+<area href="classPscf_1_1Edge.html" title="Descriptor for a block within a block polymer." alt="Pscf::Edge" shape="rect" coords="0,0,165,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a1fec7c7047766843349c248760eb8510" id="r_a1fec7c7047766843349c248760eb8510"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fec7c7047766843349c248760eb8510">PropagatorT</a> = QT</td></tr>
-<tr class="memdesc:a1fec7c7047766843349c248760eb8510"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modified diffusion equation solver (propagator) type.  <br /></td></tr>
+<tr class="memitem:a51c9740a6d0d6a4602be8283539df888" id="r_a51c9740a6d0d6a4602be8283539df888"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51c9740a6d0d6a4602be8283539df888">PropagatorT</a> = QT</td></tr>
+<tr class="memdesc:a51c9740a6d0d6a4602be8283539df888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modified diffusion equation solver (propagator) type.  <br /></td></tr>
+<tr class="memitem:a6398b526499f9650643f984d1be328b3" id="r_a6398b526499f9650643f984d1be328b3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6398b526499f9650643f984d1be328b3">FieldT</a> = FT</td></tr>
+<tr class="memdesc:a6398b526499f9650643f984d1be328b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Field type.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a899a9b62272da6502355f83d443dbfc9" id="r_a899a9b62272da6502355f83d443dbfc9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a899a9b62272da6502355f83d443dbfc9">BlockTmpl</a> ()</td></tr>
-<tr class="memdesc:a899a9b62272da6502355f83d443dbfc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="memitem:ad8001e7b5a0ad2c42f9468a3c60b9385" id="r_ad8001e7b5a0ad2c42f9468a3c60b9385"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8001e7b5a0ad2c42f9468a3c60b9385">~BlockTmpl</a> ()</td></tr>
-<tr class="memdesc:ad8001e7b5a0ad2c42f9468a3c60b9385"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:a69342af2698a20f6466bc8f61f7be84e" id="r_a69342af2698a20f6466bc8f61f7be84e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69342af2698a20f6466bc8f61f7be84e">setKuhn</a> (double <a class="el" href="#a7fb0d9a883ead68bd7397b877e68bf91">kuhn</a>)</td></tr>
-<tr class="memdesc:a69342af2698a20f6466bc8f61f7be84e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set monomer statistical segment length.  <br /></td></tr>
-<tr class="memitem:a46f4520279dc082e90235c1a58730310" id="r_a46f4520279dc082e90235c1a58730310"><td class="memItemLeft" align="right" valign="top">QT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46f4520279dc082e90235c1a58730310">propagator</a> (int directionId)</td></tr>
-<tr class="memdesc:a46f4520279dc082e90235c1a58730310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a Propagator for a specified direction.  <br /></td></tr>
-<tr class="memitem:a95aa7c55ecbb9e0fc875e6a64d1530cd" id="r_a95aa7c55ecbb9e0fc875e6a64d1530cd"><td class="memItemLeft" align="right" valign="top">QT const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95aa7c55ecbb9e0fc875e6a64d1530cd">propagator</a> (int directionId) const</td></tr>
-<tr class="memdesc:a95aa7c55ecbb9e0fc875e6a64d1530cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a const Propagator for a specified direction.  <br /></td></tr>
-<tr class="memitem:acb4a61df23a87d28ab72cc879d27c0e3" id="r_acb4a61df23a87d28ab72cc879d27c0e3"><td class="memItemLeft" align="right" valign="top">QT::FieldT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb4a61df23a87d28ab72cc879d27c0e3">cField</a> ()</td></tr>
-<tr class="memdesc:acb4a61df23a87d28ab72cc879d27c0e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the associated monomer concentration field.  <br /></td></tr>
-<tr class="memitem:a1e0be37cbee326b82b9d01ceaccabb7c" id="r_a1e0be37cbee326b82b9d01ceaccabb7c"><td class="memItemLeft" align="right" valign="top">QT::FieldT const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e0be37cbee326b82b9d01ceaccabb7c">cField</a> () const</td></tr>
-<tr class="memdesc:a1e0be37cbee326b82b9d01ceaccabb7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the associated const monomer concentration field.  <br /></td></tr>
-<tr class="memitem:a7fb0d9a883ead68bd7397b877e68bf91" id="r_a7fb0d9a883ead68bd7397b877e68bf91"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fb0d9a883ead68bd7397b877e68bf91">kuhn</a> () const</td></tr>
-<tr class="memdesc:a7fb0d9a883ead68bd7397b877e68bf91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get monomer statistical segment length.  <br /></td></tr>
+<tr class="memitem:aedb852097b6ea6da25b71a613ff300f5" id="r_aedb852097b6ea6da25b71a613ff300f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedb852097b6ea6da25b71a613ff300f5">BlockTmpl</a> ()</td></tr>
+<tr class="memdesc:aedb852097b6ea6da25b71a613ff300f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:aa1c4d51929e53c484db57a28983f5fe8" id="r_aa1c4d51929e53c484db57a28983f5fe8"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1c4d51929e53c484db57a28983f5fe8">~BlockTmpl</a> ()</td></tr>
+<tr class="memdesc:aa1c4d51929e53c484db57a28983f5fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:a6cf6614758b28da7cb0ed93921928f7a" id="r_a6cf6614758b28da7cb0ed93921928f7a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cf6614758b28da7cb0ed93921928f7a">setKuhn</a> (double <a class="el" href="#a9e5880b811250fe6856cf2d9101a9576">kuhn</a>)</td></tr>
+<tr class="memdesc:a6cf6614758b28da7cb0ed93921928f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set monomer statistical segment length.  <br /></td></tr>
+<tr class="memitem:abbf0162e536b9888cc5f5f5795d75b50" id="r_abbf0162e536b9888cc5f5f5795d75b50"><td class="memItemLeft" align="right" valign="top">QT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbf0162e536b9888cc5f5f5795d75b50">propagator</a> (int directionId)</td></tr>
+<tr class="memdesc:abbf0162e536b9888cc5f5f5795d75b50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a Propagator for a specified direction.  <br /></td></tr>
+<tr class="memitem:ad1f4745bbcee7363e53bc40dab055191" id="r_ad1f4745bbcee7363e53bc40dab055191"><td class="memItemLeft" align="right" valign="top">QT const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1f4745bbcee7363e53bc40dab055191">propagator</a> (int directionId) const</td></tr>
+<tr class="memdesc:ad1f4745bbcee7363e53bc40dab055191"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a const Propagator for a specified direction.  <br /></td></tr>
+<tr class="memitem:affbb3888675306278952cec564dfae2c" id="r_affbb3888675306278952cec564dfae2c"><td class="memItemLeft" align="right" valign="top">FT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affbb3888675306278952cec564dfae2c">cField</a> ()</td></tr>
+<tr class="memdesc:affbb3888675306278952cec564dfae2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the associated monomer concentration field.  <br /></td></tr>
+<tr class="memitem:a5f84d84d87d732aac33d69a3a1707a63" id="r_a5f84d84d87d732aac33d69a3a1707a63"><td class="memItemLeft" align="right" valign="top">FT const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f84d84d87d732aac33d69a3a1707a63">cField</a> () const</td></tr>
+<tr class="memdesc:a5f84d84d87d732aac33d69a3a1707a63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the associated const monomer concentration field.  <br /></td></tr>
+<tr class="memitem:a9e5880b811250fe6856cf2d9101a9576" id="r_a9e5880b811250fe6856cf2d9101a9576"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e5880b811250fe6856cf2d9101a9576">kuhn</a> () const</td></tr>
+<tr class="memdesc:a9e5880b811250fe6856cf2d9101a9576"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get monomer statistical segment length.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classPscf_1_1Edge"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1Edge')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1Edge.html">Pscf::Edge</a></td></tr>
 <tr class="memitem:acd9d733adff349df9a04be1bb814a6e6 inherit pub_methods_classPscf_1_1Edge" id="r_acd9d733adff349df9a04be1bb814a6e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Edge.html#acd9d733adff349df9a04be1bb814a6e6">Edge</a> ()</td></tr>
 <tr class="memdesc:acd9d733adff349df9a04be1bb814a6e6 inherit pub_methods_classPscf_1_1Edge"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
@@ -135,20 +137,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a21533bc06e4a9080596d5221b71b4d8f inherit pub_methods_classPscf_1_1Edge"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of the parent polymer (branched or linear).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;class QT&gt;<br />
-class Pscf::BlockTmpl&lt; QT &gt;</div><p>Class template for a block solver in a block copolymer. </p>
-<p>Class template argument QT is a concrete propagator class. A BlockTmpl&lt;QT&gt; object has:</p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class QT, class FT&gt;<br />
+class Pscf::BlockTmpl&lt; QT, FT &gt;</div><p>Class template for a block solver in a block copolymer. </p>
+<p>Class template argument QT is a concrete propagator class, while argument FT is a field type. A BlockTmpl&lt;QT,FT&gt; object has:</p>
 <ul>
-<li>two QT propagator objects, one per direction</li>
-<li>a monomer concentration field for the block</li>
+<li>an array of two QT propagator objects, one per direction</li>
+<li>a FT monomer concentration field for the block</li>
 <li>a kuhn length</li>
 </ul>
-<p>Each implementation of SCFT and/or FTS is defined in a different enclosed namespace of <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a>. Each such implementation defines a concrete propagator class and a concrete block class. By convention, these are named Propagator and Block, respectively. The Block class in each implementation is derived from <a class="el" href="classPscf_1_1BlockTmpl.html">BlockTmpl&lt;Propagator&gt;</a>, using the following syntax: </p><div class="fragment"><div class="line"><span class="keyword">class </span>Block : <span class="keyword">public</span> <a class="code hl_function" href="#a899a9b62272da6502355f83d443dbfc9">BlockTmpl</a>&lt;Propagator&gt;</div>
+<p>These are in addition to the members of the <a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within a block polymer.">Edge</a> base class.</p>
+<p>Each implementation of SCFT and/or FTS is defined in a different enclosed namespace of <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a>. Each such implementation defines a concrete propagator class and a concrete block class. By convention, these are named Propagator and Block, respectively. The Block class in each implementation is derived from BlockTmpl&lt;Propagator, Field&gt;, using the following syntax: </p><div class="fragment"><div class="line"><span class="keyword">class </span>Block : <span class="keyword">public</span> <a class="code hl_function" href="#aedb852097b6ea6da25b71a613ff300f5">BlockTmpl</a>&lt;Propagator, Field&gt;</div>
 <div class="line">{</div>
 <div class="line">  ....</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassPscf_1_1BlockTmpl_html_a899a9b62272da6502355f83d443dbfc9"><div class="ttname"><a href="#a899a9b62272da6502355f83d443dbfc9">Pscf::BlockTmpl::BlockTmpl</a></div><div class="ttdeci">BlockTmpl()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="BlockTmpl_8h_source.html#l00232">BlockTmpl.h:232</a></div></div>
-</div><!-- fragment --><p>Design notes:</p>
+<div class="ttc" id="aclassPscf_1_1BlockTmpl_html_aedb852097b6ea6da25b71a613ff300f5"><div class="ttname"><a href="#aedb852097b6ea6da25b71a613ff300f5">Pscf::BlockTmpl::BlockTmpl</a></div><div class="ttdeci">BlockTmpl()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="BlockTmpl_8tpp_source.html#l00019">BlockTmpl.tpp:19</a></div></div>
+</div><!-- fragment --><p> where Field denotes the relevant field data type.</p>
+<p>Design notes:</p>
 <p>The Block class of a polymer field theory implementation has member variables that specify all the data that is needed to describe the block. This includes but is not limited to the monomer type id and block length (defined by the <a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within a block polymer.">Edge</a> base class) and the kuhn length (defined by this class template). In addition, each such Block class may define a variety of member variables that define the numerical discretization of the block and any related parameters needed by the algorithm that solves the modified diffusion equation.</p>
 <p>The Block class will normally define one or more public functions that can be called repeatedly by the Propagator::solve() function in order to implement individual steps of the stepping algorithm used to solve the MDE.</p>
 <p>The Block class also normally provides a void function named computeConcentration() that integrates the product of the two associated propagators with respect to contour length in order to compute the monomer concentration field associated with the block. This is normally called within the implementation of solve() function of the associated Polymer class, within a loop over all blocks of the molecule that is called after solution of the modified diffusion equation for all propagators.</p>
@@ -158,11 +162,11 @@ class Pscf::BlockTmpl&lt; QT &gt;</div><p>Class template for a block solver in a
 <div class="line"><span class="comment">// \param in   input q-field from previous step</span></div>
 <div class="line"><span class="comment">// \param out  output q-field at next step</span></div>
 <div class="line"><span class="comment">// -------------------------------------------------------------</span></div>
-<div class="line"><span class="keywordtype">void</span> step(Propagator::FieldT <span class="keyword">const</span> &amp; in, Propagator::FieldT&amp; out);</div>
+<div class="line"><span class="keywordtype">void</span> step(FT <span class="keyword">const</span> &amp; in, FT&amp; out);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// -------------------------------------------------------------</span></div>
 <div class="line"><span class="comment">// Compute monomer concentration field for this block.</span></div>
-<div class="line"><span class="comment">// </span></div>
+<div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="comment">// \param prefactor  numerical prefactor of phi/(Q*length)</span></div>
 <div class="line"><span class="comment">// -------------------------------------------------------------</span></div>
 <div class="line"><span class="keywordtype">void</span> computeConcentration(<span class="keywordtype">double</span> prefactor);</div>
@@ -170,16 +174,16 @@ class Pscf::BlockTmpl&lt; QT &gt;</div><p>Class template for a block solver in a
 
 <p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00106">106</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
-<a id="a1fec7c7047766843349c248760eb8510" name="a1fec7c7047766843349c248760eb8510"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fec7c7047766843349c248760eb8510">&#9670;&#160;</a></span>PropagatorT</h2>
+<a id="a51c9740a6d0d6a4602be8283539df888" name="a51c9740a6d0d6a4602be8283539df888"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51c9740a6d0d6a4602be8283539df888">&#9670;&#160;</a></span>PropagatorT</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class QT&gt; </div>
+template&lt;class QT, class FT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT &gt;::PropagatorT = QT</td>
+          <td class="memname">using <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT, FT &gt;::PropagatorT = QT</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -190,17 +194,37 @@ template&lt;class QT&gt; </div>
 
 </div>
 </div>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a899a9b62272da6502355f83d443dbfc9" name="a899a9b62272da6502355f83d443dbfc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a899a9b62272da6502355f83d443dbfc9">&#9670;&#160;</a></span>BlockTmpl()</h2>
+<a id="a6398b526499f9650643f984d1be328b3" name="a6398b526499f9650643f984d1be328b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6398b526499f9650643f984d1be328b3">&#9670;&#160;</a></span>FieldT</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class QT&gt; </div>
+template&lt;class QT, class FT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT &gt;::BlockTmpl </td>
+          <td class="memname">using <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT, FT &gt;::FieldT = FT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Field type. </p>
+
+<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00121">121</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aedb852097b6ea6da25b71a613ff300f5" name="aedb852097b6ea6da25b71a613ff300f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedb852097b6ea6da25b71a613ff300f5">&#9670;&#160;</a></span>BlockTmpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class QT, class FT&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT, FT &gt;::BlockTmpl </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -210,25 +234,25 @@ template&lt;class QT&gt; </div>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00232">232</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlockTmpl_8tpp_source.html#l00019">19</a> of file <a class="el" href="BlockTmpl_8tpp_source.html">BlockTmpl.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="BlockTmpl_8h_source.html#l00192">propagator()</a>.</p>
+<p class="reference">References <a class="el" href="BlockTmpl_8h_source.html#l00197">propagator()</a>.</p>
 
 </div>
 </div>
-<a id="ad8001e7b5a0ad2c42f9468a3c60b9385" name="ad8001e7b5a0ad2c42f9468a3c60b9385"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8001e7b5a0ad2c42f9468a3c60b9385">&#9670;&#160;</a></span>~BlockTmpl()</h2>
+<a id="aa1c4d51929e53c484db57a28983f5fe8" name="aa1c4d51929e53c484db57a28983f5fe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1c4d51929e53c484db57a28983f5fe8">&#9670;&#160;</a></span>~BlockTmpl()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class QT&gt; </div>
+template&lt;class QT, class FT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT &gt;::~<a class="el" href="classPscf_1_1BlockTmpl.html">BlockTmpl</a> </td>
+          <td class="memname"><a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT, FT &gt;::~<a class="el" href="classPscf_1_1BlockTmpl.html">BlockTmpl</a> </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -243,24 +267,24 @@ template&lt;class QT&gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00247">247</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlockTmpl_8tpp_source.html#l00035">35</a> of file <a class="el" href="BlockTmpl_8tpp_source.html">BlockTmpl.tpp</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a69342af2698a20f6466bc8f61f7be84e" name="a69342af2698a20f6466bc8f61f7be84e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69342af2698a20f6466bc8f61f7be84e">&#9670;&#160;</a></span>setKuhn()</h2>
+<a id="a6cf6614758b28da7cb0ed93921928f7a" name="a6cf6614758b28da7cb0ed93921928f7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cf6614758b28da7cb0ed93921928f7a">&#9670;&#160;</a></span>setKuhn()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class QT&gt; </div>
+template&lt;class QT, class FT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT &gt;::setKuhn </td>
+          <td class="memname">void <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT, FT &gt;::setKuhn </td>
           <td>(</td>
           <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>kuhn</em></span></td><td>)</td>
           <td></td>
@@ -283,25 +307,25 @@ template&lt;class QT&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classPscf_1_1Rpc_1_1Block.html#a1e280b339a5b6eaaa465fdd4fd762a06">Pscf::Rpc::Block&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1Block.html#a4ef128b154202fbd87777919924ab7ef">Pscf::Rpg::Block&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00254">254</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlockTmpl_8tpp_source.html#l00042">42</a> of file <a class="el" href="BlockTmpl_8tpp_source.html">BlockTmpl.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="BlockTmpl_8h_source.html#l00223">kuhn()</a>.</p>
+<p class="reference">References <a class="el" href="BlockTmpl_8h_source.html#l00226">kuhn()</a>.</p>
 
 </div>
 </div>
-<a id="a46f4520279dc082e90235c1a58730310" name="a46f4520279dc082e90235c1a58730310"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46f4520279dc082e90235c1a58730310">&#9670;&#160;</a></span>propagator() <span class="overload">[1/2]</span></h2>
+<a id="abbf0162e536b9888cc5f5f5795d75b50" name="abbf0162e536b9888cc5f5f5795d75b50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbf0162e536b9888cc5f5f5795d75b50">&#9670;&#160;</a></span>propagator() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class QT&gt; </div>
+template&lt;class QT, class FT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QT &amp; <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT &gt;::propagator </td>
+          <td class="memname">QT &amp; <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT, FT &gt;::propagator </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>directionId</em></span></td><td>)</td>
           <td></td>
@@ -323,25 +347,25 @@ template&lt;class QT&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00192">192</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00197">197</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BlockTmpl_8h_source.html#l00232">BlockTmpl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BlockTmpl_8tpp_source.html#l00019">BlockTmpl()</a>.</p>
 
 </div>
 </div>
-<a id="a95aa7c55ecbb9e0fc875e6a64d1530cd" name="a95aa7c55ecbb9e0fc875e6a64d1530cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95aa7c55ecbb9e0fc875e6a64d1530cd">&#9670;&#160;</a></span>propagator() <span class="overload">[2/2]</span></h2>
+<a id="ad1f4745bbcee7363e53bc40dab055191" name="ad1f4745bbcee7363e53bc40dab055191"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1f4745bbcee7363e53bc40dab055191">&#9670;&#160;</a></span>propagator() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class QT&gt; </div>
+template&lt;class QT, class FT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QT const  &amp; <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT &gt;::propagator </td>
+          <td class="memname">QT const  &amp; <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT, FT &gt;::propagator </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>directionId</em></span></td><td>)</td>
           <td> const</td>
@@ -363,23 +387,23 @@ template&lt;class QT&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00200">200</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00205">205</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
 
 </div>
 </div>
-<a id="acb4a61df23a87d28ab72cc879d27c0e3" name="acb4a61df23a87d28ab72cc879d27c0e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb4a61df23a87d28ab72cc879d27c0e3">&#9670;&#160;</a></span>cField() <span class="overload">[1/2]</span></h2>
+<a id="affbb3888675306278952cec564dfae2c" name="affbb3888675306278952cec564dfae2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affbb3888675306278952cec564dfae2c">&#9670;&#160;</a></span>cField() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class QT&gt; </div>
+template&lt;class QT, class FT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QT::FieldT &amp; <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT &gt;::cField </td>
+          <td class="memname">FT &amp; <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT, FT &gt;::cField </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -394,23 +418,23 @@ template&lt;class QT&gt; </div>
 
 <p>Get the associated monomer concentration field. </p>
 
-<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00208">208</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00212">212</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
 
 </div>
 </div>
-<a id="a1e0be37cbee326b82b9d01ceaccabb7c" name="a1e0be37cbee326b82b9d01ceaccabb7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e0be37cbee326b82b9d01ceaccabb7c">&#9670;&#160;</a></span>cField() <span class="overload">[2/2]</span></h2>
+<a id="a5f84d84d87d732aac33d69a3a1707a63" name="a5f84d84d87d732aac33d69a3a1707a63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f84d84d87d732aac33d69a3a1707a63">&#9670;&#160;</a></span>cField() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class QT&gt; </div>
+template&lt;class QT, class FT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QT::FieldT const  &amp; <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT &gt;::cField </td>
+          <td class="memname">FT const  &amp; <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT, FT &gt;::cField </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -425,23 +449,23 @@ template&lt;class QT&gt; </div>
 
 <p>Get the associated const monomer concentration field. </p>
 
-<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00216">216</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00219">219</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
 
 </div>
 </div>
-<a id="a7fb0d9a883ead68bd7397b877e68bf91" name="a7fb0d9a883ead68bd7397b877e68bf91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fb0d9a883ead68bd7397b877e68bf91">&#9670;&#160;</a></span>kuhn()</h2>
+<a id="a9e5880b811250fe6856cf2d9101a9576" name="a9e5880b811250fe6856cf2d9101a9576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e5880b811250fe6856cf2d9101a9576">&#9670;&#160;</a></span>kuhn()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class QT&gt; </div>
+template&lt;class QT, class FT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT &gt;::kuhn </td>
+          <td class="memname">double <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; QT, FT &gt;::kuhn </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -456,14 +480,15 @@ template&lt;class QT&gt; </div>
 
 <p>Get monomer statistical segment length. </p>
 
-<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00223">223</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlockTmpl_8h_source.html#l00226">226</a> of file <a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BlockTmpl_8h_source.html#l00254">setKuhn()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BlockTmpl_8tpp_source.html#l00042">setKuhn()</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="BlockTmpl_8h_source.html">BlockTmpl.h</a></li>
+<li><a class="el" href="BlockTmpl_8tpp_source.html">BlockTmpl.tpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

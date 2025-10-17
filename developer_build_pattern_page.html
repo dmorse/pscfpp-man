@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -129,8 +129,8 @@ Makefile variable definitions</h1>
 <h1 class="doxsection"><a class="anchor" id="developer_build_pattern_rules_sec"></a>
 Pattern Rules</h1>
 <p>Each patterns.mk file defines pattern rules for creating *.o object files by compiling *.cpp and/or *.cu source files, and for creating executable files that run unit tests. Analogous rules in different patterns.mk files have very similar structure.</p>
-<p>We first consider pattern rules for creating *.o object file targets. The patterns.mk file in each namespace-level directory that contains C++ source files with file name extension .cpp contains a rule for compiling such *.cpp file to create a *.o object file. In directories that contain CUDA C++ source files with file name extension .cu, the patterns.mk file will contain a pattern rule for compiling these files, which uses the NVIDIA CUDA compiler rather than a C++ compiler. Both rules may exist in patterns.mk directories that contain both types of source file. <br  />
- Both types of rule creating an object file with file name extension *.o in a subdirectory of the build directory, $(BLD_DIR), by compiling a .cpp or *.cu source file with the same base name in the corresponding subdirectory of the source directory, $(SRC_DIR).</p>
+<p>We first consider pattern rules for creating *.o object file targets. The patterns.mk file in each namespace-level directory that contains C++ source files with file name suffix .cpp contains a rule for compiling such *.cpp file to create a *.o object file. In directories that contain CUDA C++ source files with file name suffix .cu, the patterns.mk file will contain a pattern rule for compiling these files, which uses the NVIDIA CUDA compiler rather than a C++ compiler. Both rules may exist in patterns.mk directories that contain both types of source file. <br  />
+ Both types of rule creating an object file with file name suffix *.o in a subdirectory of the build directory, $(BLD_DIR), by compiling a .cpp or *.cu source file with the same base name in the corresponding subdirectory of the source directory, $(SRC_DIR).</p>
 <h2 class="doxsection"><a class="anchor" id="developer_build_pattern_cpp_sub"></a>
 Rule: Compiling C++ source files</h2>
 <p>A pattern rule for compiling standard C++ source files always looks something like this: </p><pre class="fragment">$(BLD_DIR)/%.o: $(SRC_DIR)/%.cpp
@@ -139,7 +139,7 @@ Rule: Compiling C++ source files</h2>
     $(MAKEDEP) $(MAKEDEP_CMD) $(MAKEDEP_ARGS) $&lt;
 </pre><p> Pattern rules for compiling CUDA files are closely analogous, and will be discussed separately below.</p>
 <p>In this pattern rule, the symbol % is a wildcard that represents a string that appears in the path for the target file that may also appear in one or more pre-requisites. The rule shown above thus describes how to create a target object file in the build directory with a path of the form $(BLD_DIR)%.o by compiling a corresponding source file in the source directory with a path of the form $(SRC_DIR)/%.cpp, in which the symbol % represents a string that appears in both paths. The shared part of these paths may include one or more directory separator symbols and the name or names of subdirectories of the src directory, as well as the base file name. The PSCF bld directory is required to have the same internal directory structure as the src directory in order to allow this pattern rule to work correctly for out-of-source builds,</p>
-<p>The recipe of the rule shown above contains three lines with different purposes. The first defines a sequence of shell command that checks if the directory in which the target should be installed exists, and attempts to create it if that directory does not yet exist. This part of the recipe is a convenience, and is not an essential part of the rule. The second line of the recipe is the heart of the matter: This line is a shell command that invokes the compiler command, given by the makefile variable value $(CXX), in order to compile the source file and create the object file target. The third line of the recipe calls a script, whose name is given by the variable value $(MAKEDEP), that creates a corresponding dependency file with extension .d. <br  />
+<p>The recipe of the rule shown above contains three lines with different purposes. The first defines a sequence of shell command that checks if the directory in which the target should be installed exists, and attempts to create it if that directory does not yet exist. This part of the recipe is a convenience, and is not an essential part of the rule. The second line of the recipe is the heart of the matter: This line is a shell command that invokes the compiler command, given by the makefile variable value $(CXX), in order to compile the source file and create the object file target. The third line of the recipe calls a script, whose name is given by the variable value $(MAKEDEP), that creates a corresponding dependency file with file name suffix .d. <br  />
 </p>
 <p>The two essential actions taken by this pattern rule are thus to compile the source file to create an *.o object file, and to create a *.d dependency file as a side-effect of compilation. These two actions are discussed separately below.</p>
 <p><b> Source file compilation </b>:</p>
@@ -167,13 +167,13 @@ Rule: Compiling C++ source files</h2>
 <p>The value of MAKEDEP_ARGS is a string of other arguments required by the MAKEDEP script. The value of this variable is defined in the patterns.mk file.</p>
 <h2 class="doxsection"><a class="anchor" id="developer_build_pattern_cuda_sub"></a>
 Rule: Compiling CUDA C++ source files</h2>
-<p>In namespace-level directories that contain CUDA code, the patterns.mk file contains a separate pattern rule for compiling CUDA C++ source files with file name extension *.cu. Such a rule always looks like this: </p><pre class="fragment">$(BLD_DIR)/%.o: $(SRC_DIR)/%.cu
+<p>In namespace-level directories that contain CUDA code, the patterns.mk file contains a separate pattern rule for compiling CUDA C++ source files with file name suffix *.cu. Such a rule always looks like this: </p><pre class="fragment">$(BLD_DIR)/%.o: $(SRC_DIR)/%.cu
     @SDIR=$$(dirname "$@"); if [ ! -d "$$SDIR" ]; then mkdir -p "$$SDIR"; fi
     $(NVXX) $(CPPFLAGS) $(INCLUDES) $(NVXXFLAGS) -c -o $@ $&lt;
     $(MAKEDEP_CUDA) $(MAKEDEP_CUDA_CMD) $(MAKEDEP_ARGS) $&lt;
 </pre><p> This pattern rule is closely analogous to that used to compile *.cpp files. The differences are:</p>
 <ul>
-<li>The file name pattern for the source file prerequisite uses a file name extension .cu rather than .cpp</li>
+<li>The file name pattern for the source file prerequisite uses a file name suffix .cu rather than .cpp</li>
 <li>The name of the compiler is represented by a variable value $(NVXX), which gives the name of the NVIDA nvxx CUDA C++ compiler.</li>
 <li>The variable value $(NVXXFLAGS) contains a set of compiler flags that are designed for the NVIDIA compiler, which are generally different from those used by the C++ compiler.</li>
 <li>The rule for creating a dependency file uses different variables $(MAKEDEP_CUDA) and $(MAKEDEP_CUDA_CMD) to represent the name of the script that is used to create the dependency list and the name of the compiler command that it calls internall, respectively.</li>
@@ -181,7 +181,7 @@ Rule: Compiling CUDA C++ source files</h2>
 <p>Values of NVXX, NVXXFLAGS, MAKEDEP_CUDA and MAKEDEP_CUDA_CMD are all defined in the config.mk file, while the value of MAKE_DEP_ARGS is defined in the patterns.mk file.</p>
 <h2 class="doxsection"><a class="anchor" id="developer_build_pattern_test_sub"></a>
 Rule: Creating unit test executable files</h2>
-<p>Every namespace-level subdirectory of the src directory has a subdirectory named "tests" that contains code for unit tests. Within each such "tests" directory are one or more source files that can be compiled and linked to create executables that run unit tests. By convention, such files are compiled and linked to create executable files with names that end in Test (e.g., Test, cpuTest or cudaTest). The name of the object file used to create each such executable is given by the name of the executable followed by a .o filename extension. Each tests directory may contain multiple source files for unit tests, some which may be located in subdirectories of the "tests" directory, each of which is designed to run a different subset of the available unit tests. Because there may be multiple source files for unit tests that obey a set of conventions, a pattern rule is used.</p>
+<p>Every namespace-level subdirectory of the src directory has a subdirectory named "tests" that contains code for unit tests. Within each such "tests" directory are one or more source files that can be compiled and linked to create executables that run unit tests. By convention, such files are compiled and linked to create executable files with names that end in Test (e.g., Test, cpuTest or cudaTest). The name of the object file used to create each such executable is given by the name of the executable followed by a .o filename suffix. Each tests directory may contain multiple source files for unit tests, some which may be located in subdirectories of the "tests" directory, each of which is designed to run a different subset of the available unit tests. Because there may be multiple source files for unit tests that obey a set of conventions, a pattern rule is used.</p>
 <p>The pattern.mk file in each namespace-level directory contains a pattern rule that is designed to create executable files by linking a corresponding object file to a list of relevant libraries. The rule generally in a directory that contains only standard C++ files generally looks like this </p><pre class="fragment">$(BLD_DIR)/%Test: $(BLD_DIR)/%Test.o $(PSCF_LIBS)
     $(CXX) $(LDFLAGS) -o $@ $&lt; $(LIBS) 
 </pre><p> The symbols $@ and $&lt; refer to the target of the rule (the executable) and the first prerequisite (the object file). The meanings of the variables used in this rule are:</p>

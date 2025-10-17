@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -67,7 +67,7 @@ $(function() {
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">* Distributed under the terms of the GNU General Public License.</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;MixtureTmpl.h&quot;</span>                   <span class="comment">// base class</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;MixtureTmpl.h&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
@@ -100,7 +100,7 @@ $(function() {
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> PT, <span class="keyword">class</span> ST&gt;</div>
 <div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classPscf_1_1MixtureTmpl.html#a31dceed4752d4033112b3a5c8c89f1c6">   38</a></span>   <a class="code hl_class" href="classPscf_1_1PolymerSpecies.html">PolymerSpecies</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1MixtureTmpl.html#a31dceed4752d4033112b3a5c8c89f1c6">MixtureTmpl&lt;PT,ST&gt;::polymerSpecies</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">   </span>{  </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">   </span>{</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(<span class="keywordtype">id</span> &lt; nPolymer_);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      <span class="keywordflow">return</span> polymers_[id];</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>   }</div>
@@ -109,35 +109,34 @@ $(function() {
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">   * Get a SolventSpecies descriptor by const reference.</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> PT, <span class="keyword">class</span> ST&gt;</div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classPscf_1_1MixtureTmpl.html#a95c2f31b239dacdd15c4045898c5de22">   47</a></span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> PT, <span class="keyword">class</span> ST&gt;</div>
 <div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classPscf_1_1MixtureTmpl.html#ab0a2be05784beba7797b55c0cc07868c">   48</a></span>   <a class="code hl_class" href="classPscf_1_1SolventSpecies.html">SolventSpecies</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1MixtureTmpl.html#ab0a2be05784beba7797b55c0cc07868c">MixtureTmpl&lt;PT,ST&gt;::solventSpecies</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">   </span>{  </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">   </span>{</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(<span class="keywordtype">id</span> &lt; nSolvent_);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keywordflow">return</span> solvents_[id]; </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>   }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keywordflow">return</span> solvents_[id];</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classPscf_1_1MixtureTmpl.html#a6326edbb0056ed7bfb760a193fe9392c">   52</a></span>   }</div>
 </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">   * Read all parameters and initialize.</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">   */</span></div>
-<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classPscf_1_1MixtureTmpl.html#a95c2f31b239dacdd15c4045898c5de22">   57</a></span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> PT, <span class="keyword">class</span> ST&gt;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> PT, <span class="keyword">class</span> ST&gt;</div>
 <div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classPscf_1_1MixtureTmpl.html#a573ad6cc4afc7a187a10a94bcb213f88">   58</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1MixtureTmpl.html#a573ad6cc4afc7a187a10a94bcb213f88">MixtureTmpl&lt;PT,ST&gt;::readParameters</a>(std::istream&amp; in)</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>   {</div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classPscf_1_1MixtureTmpl.html#a573ad6cc4afc7a187a10a94bcb213f88">   59</a></span>   {</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      <span class="comment">// Read nMonomer and monomers array</span></div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a21c4ae1412ec944d4189cb7c7b6a3171">read&lt;int&gt;</a>(in, <span class="stringliteral">&quot;nMonomer&quot;</span>, nMonomer_);</div>
-<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classPscf_1_1MixtureTmpl.html#a6326edbb0056ed7bfb760a193fe9392c">   62</a></span>      monomers_.allocate(nMonomer_);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      monomers_.allocate(nMonomer_);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nMonomer_; ++i) {</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>         monomers_[i].setId(i);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      readDArray&lt; Monomer &gt;(in, <span class="stringliteral">&quot;monomers&quot;</span>, monomers_, nMonomer_);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a1592472a30ff22139667f019b3e2026f">readDArray&lt; Monomer &gt;</a>(in, <span class="stringliteral">&quot;monomers&quot;</span>, monomers_, nMonomer_);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <span class="comment">/*</span></div>
-<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classPscf_1_1MixtureTmpl.html#a573ad6cc4afc7a187a10a94bcb213f88">   69</a></span><span class="comment">      * The input format for a single monomer is defined in the istream</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">      * The input format for a single monomer is defined in the istream</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">      * extraction operation (operator &gt;&gt;) for a Pscf::Monomer, in file</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">      * pscf/chem/Monomer.cpp. The text representation contains only the</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">      * value for the monomer statistical segment Monomer::kuhn.</span></div>
@@ -160,15 +159,16 @@ $(function() {
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <a class="code hl_function" href="classUtil_1_1ParamComposite.html#ab2372dcc5d7d8db632b2b9844caf206e">readParamComposite</a>(in, <a class="code hl_function" href="classPscf_1_1MixtureTmpl.html#a82065970af9741682735874205e121af">polymer</a>(i));</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            nBlock_ = nBlock_ + <a class="code hl_function" href="classPscf_1_1MixtureTmpl.html#a82065970af9741682735874205e121af">polymer</a>(i).nBlock();</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>         }</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>   </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>         <span class="comment">// Set statistical segment lengths for all blocks</span></div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>         <span class="keywordtype">double</span> kuhn;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>         <span class="keywordtype">int</span> monomerId;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nPolymer_; ++i) {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; polymer(i).nBlock(); ++j) {</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>               monomerId = polymer(i).block(j).monomerId();</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>               kuhn = monomer(monomerId).kuhn();</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>               polymer(i).block(j).setKuhn(kuhn);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_function" href="classPscf_1_1MixtureTmpl.html#a82065970af9741682735874205e121af">polymer</a>(i).nBlock(); ++j) {</div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classPscf_1_1Prdc_1_1MixturePrdc.html#a31dceed4752d4033112b3a5c8c89f1c6">   98</a></span>               monomerId = <a class="code hl_function" href="classPscf_1_1Prdc_1_1MixturePrdc.html#a82065970af9741682735874205e121af">polymer</a>(i).block(j).monomerId();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>               kuhn = <a class="code hl_function" href="classPscf_1_1Prdc_1_1MixturePrdc.html#a586004320f96946bea159f8e4d639091">monomer</a>(monomerId).kuhn();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>               <a class="code hl_function" href="classPscf_1_1Prdc_1_1MixturePrdc.html#a82065970af9741682735874205e121af">polymer</a>(i).block(j).setKuhn(kuhn);</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            }</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>         }</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
@@ -176,11 +176,10 @@ $(function() {
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>      <span class="comment">// Read solvents</span></div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      <span class="keywordflow">if</span> (nSolvent_ &gt; 0) {</div>
-<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classPscf_1_1Prdc_1_1MixturePrdc.html#a31dceed4752d4033112b3a5c8c89f1c6">  108</a></span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>         solvents_.allocate(nSolvent_);</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nSolvent_; ++i) {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <a class="code hl_function" href="classUtil_1_1ParamComposite.html#ab2372dcc5d7d8db632b2b9844caf206e">readParamComposite</a>(in, <a class="code hl_function" href="classPscf_1_1Prdc_1_1MixturePrdc.html#a09b99a61b5fed739ed5074198af4c824">solvent</a>(i));</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            readParamComposite(in, solvent(i));</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>         }</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      }</div>
@@ -190,7 +189,8 @@ $(function() {
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      readOptional(in, <span class="stringliteral">&quot;vMonomer&quot;</span>, vMonomer_);</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>   }</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="foldopen" id="foldopen00121" data-start="{" data-end="}">
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="classPscf_1_1Prdc_1_1MixturePrdc.html#ab0a2be05784beba7797b55c0cc07868c">  121</a></span> </div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#endif</span></div>
 </div>
@@ -202,12 +202,14 @@ $(function() {
 <div class="ttc" id="aclassPscf_1_1MixtureTmpl_html_a31dceed4752d4033112b3a5c8c89f1c6"><div class="ttname"><a href="classPscf_1_1MixtureTmpl.html#a31dceed4752d4033112b3a5c8c89f1c6">Pscf::MixtureTmpl::polymerSpecies</a></div><div class="ttdeci">PolymerSpecies const &amp; polymerSpecies(int id) const final</div><div class="ttdoc">Get a PolymerSpecies descriptor by const reference.</div><div class="ttdef"><b>Definition</b> <a href="#l00038">MixtureTmpl.tpp:38</a></div></div>
 <div class="ttc" id="aclassPscf_1_1MixtureTmpl_html_a573ad6cc4afc7a187a10a94bcb213f88"><div class="ttname"><a href="classPscf_1_1MixtureTmpl.html#a573ad6cc4afc7a187a10a94bcb213f88">Pscf::MixtureTmpl::readParameters</a></div><div class="ttdeci">virtual void readParameters(std::istream &amp;in)</div><div class="ttdoc">Read parameters from file and initialize.</div><div class="ttdef"><b>Definition</b> <a href="#l00058">MixtureTmpl.tpp:58</a></div></div>
 <div class="ttc" id="aclassPscf_1_1MixtureTmpl_html_a6326edbb0056ed7bfb760a193fe9392c"><div class="ttname"><a href="classPscf_1_1MixtureTmpl.html#a6326edbb0056ed7bfb760a193fe9392c">Pscf::MixtureTmpl::~MixtureTmpl</a></div><div class="ttdeci">~MixtureTmpl()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00031">MixtureTmpl.tpp:31</a></div></div>
-<div class="ttc" id="aclassPscf_1_1MixtureTmpl_html_a82065970af9741682735874205e121af"><div class="ttname"><a href="classPscf_1_1MixtureTmpl.html#a82065970af9741682735874205e121af">Pscf::MixtureTmpl&lt; Polymer, Solvent &gt;::polymer</a></div><div class="ttdeci">PolymerT &amp; polymer(int id)</div><div class="ttdef"><b>Definition</b> <a href="MixtureTmpl_8h_source.html#l00092">MixtureTmpl.h:164</a></div></div>
+<div class="ttc" id="aclassPscf_1_1MixtureTmpl_html_a82065970af9741682735874205e121af"><div class="ttname"><a href="classPscf_1_1MixtureTmpl.html#a82065970af9741682735874205e121af">Pscf::MixtureTmpl&lt; Polymer, Solvent &gt;::polymer</a></div><div class="ttdeci">PolymerT &amp; polymer(int id)</div><div class="ttdef"><b>Definition</b> <a href="MixtureTmpl_8h_source.html#l00082">MixtureTmpl.h:154</a></div></div>
 <div class="ttc" id="aclassPscf_1_1MixtureTmpl_html_a95c2f31b239dacdd15c4045898c5de22"><div class="ttname"><a href="classPscf_1_1MixtureTmpl.html#a95c2f31b239dacdd15c4045898c5de22">Pscf::MixtureTmpl::MixtureTmpl</a></div><div class="ttdeci">MixtureTmpl()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00020">MixtureTmpl.tpp:20</a></div></div>
 <div class="ttc" id="aclassPscf_1_1MixtureTmpl_html_ab0a2be05784beba7797b55c0cc07868c"><div class="ttname"><a href="classPscf_1_1MixtureTmpl.html#ab0a2be05784beba7797b55c0cc07868c">Pscf::MixtureTmpl::solventSpecies</a></div><div class="ttdeci">SolventSpecies const &amp; solventSpecies(int id) const final</div><div class="ttdoc">Set a SolventSpecies descriptor object by const reference.</div><div class="ttdef"><b>Definition</b> <a href="#l00048">MixtureTmpl.tpp:48</a></div></div>
 <div class="ttc" id="aclassPscf_1_1PolymerSpecies_html"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html">Pscf::PolymerSpecies</a></div><div class="ttdoc">Descriptor for a linear or acyclic branched block polymer.</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8h_source.html#l00070">PolymerSpecies.h:71</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Prdc_1_1MixturePrdc_html_a09b99a61b5fed739ed5074198af4c824"><div class="ttname"><a href="classPscf_1_1Prdc_1_1MixturePrdc.html#a09b99a61b5fed739ed5074198af4c824">Pscf::Prdc::MixturePrdc::solvent</a></div><div class="ttdeci">SolventT &amp; solvent(int id)</div><div class="ttdoc">Get a solvent solver object.</div><div class="ttdef"><b>Definition</b> <a href="MixtureTmpl_8h_source.html#l00115">MixtureTmpl.h:178</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Prdc_1_1MixturePrdc_html_a586004320f96946bea159f8e4d639091"><div class="ttname"><a href="classPscf_1_1Prdc_1_1MixturePrdc.html#a586004320f96946bea159f8e4d639091">Pscf::Prdc::MixturePrdc::monomer</a></div><div class="ttdeci">Monomer const &amp; monomer(int id) const</div><div class="ttdoc">Get a Monomer type descriptor by const reference.</div><div class="ttdef"><b>Definition</b> <a href="MixtureBase_8h_source.html#l00124">MixtureBase.h:204</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Prdc_1_1MixturePrdc_html_a82065970af9741682735874205e121af"><div class="ttname"><a href="classPscf_1_1Prdc_1_1MixturePrdc.html#a82065970af9741682735874205e121af">Pscf::Prdc::MixturePrdc::polymer</a></div><div class="ttdeci">PolymerT &amp; polymer(int id)</div><div class="ttdoc">Get a polymer solver object by non-const reference.</div><div class="ttdef"><b>Definition</b> <a href="MixtureTmpl_8h_source.html#l00082">MixtureTmpl.h:154</a></div></div>
 <div class="ttc" id="aclassPscf_1_1SolventSpecies_html"><div class="ttname"><a href="classPscf_1_1SolventSpecies.html">Pscf::SolventSpecies</a></div><div class="ttdoc">Descriptor for a solvent species.</div><div class="ttdef"><b>Definition</b> <a href="SolventSpecies_8h_source.html#l00033">SolventSpecies.h:34</a></div></div>
+<div class="ttc" id="aclassUtil_1_1ParamComposite_html_a1592472a30ff22139667f019b3e2026f"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a1592472a30ff22139667f019b3e2026f">Util::ParamComposite::readDArray</a></div><div class="ttdeci">DArrayParam&lt; Type &gt; &amp; readDArray(std::istream &amp;in, const char *label, DArray&lt; Type &gt; &amp;array, int n)</div><div class="ttdoc">Add and read a required DArray &lt; Type &gt; parameter.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8h_source.html#l01400">ParamComposite.h:1400</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a21c4ae1412ec944d4189cb7c7b6a3171"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a21c4ae1412ec944d4189cb7c7b6a3171">Util::ParamComposite::read</a></div><div class="ttdeci">ScalarParam&lt; Type &gt; &amp; read(std::istream &amp;in, const char *label, Type &amp;value)</div><div class="ttdoc">Add and read a new required ScalarParam &lt; Type &gt; object.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8h_source.html#l01248">ParamComposite.h:1248</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a5d9f133993e0aa0b18cd59938ccf8700"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">Util::ParamComposite::readOptional</a></div><div class="ttdeci">ScalarParam&lt; Type &gt; &amp; readOptional(std::istream &amp;in, const char *label, Type &amp;value)</div><div class="ttdoc">Add and read a new optional ScalarParam &lt; Type &gt; object.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8h_source.html#l01256">ParamComposite.h:1256</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a873eea7d2dbc19cde816d1bef602496c"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a873eea7d2dbc19cde816d1bef602496c">Util::ParamComposite::ParamComposite</a></div><div class="ttdeci">ParamComposite()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8cpp_source.html#l00023">ParamComposite.cpp:23</a></div></div>

@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -95,8 +95,8 @@ Directories with no enclosed subdirectories (not namespace-level)</h1>
 pscf_chem_OBJS=\
      $(addprefix $(BLD_DIR)/, $(pscf_chem_:.cpp=.o))
 </pre><p> The value assigned to pscf_chem_ in this example uses a makefile syntax in which a backslash (\) character is used to continue a statement to the next line. Lines 2 - 12 of this example thus assign a value to pscf_chem that is simply a list of file paths separated by spaces.</p>
-<p>The value assigned to pscf_chem_ in this example is a list of all of the compilable source files in the relevant subdirectory, src/pscf/chem. All paths in this list must be given as relative paths, defined relative to the src/ directory. In this example, these source files are all standard C++ source files with a file name extension .cpp. Source file lists in other directories may, however, also contain CUDA C++ files with file name extension *.cu.</p>
-<p>The object file list variable pscf_chem_OBJS_ is constructed in the last two lines of this example. The value that is assigned to pscf_chem_OBJS is a corresponding list of absolute paths for object files, with filename extension *.o. This list is constructed here by applying two makefile text manipulation functions to the value of the source file list pscf_chem_. First, the ":" operator is used in the expression $(pscf_chem_:.cpp=.o) to replace the .cpp extension with .o in each of the relative paths in $(pscf_chem_). The built in "addprefix" function is then used to add the value / as a common prefix to every name in the list. Here,  is the absolute path to the build directory, which is defined in the relevant config.mk configuration file. These manipulations yield a list of absolute paths to all of the *.o object files that should be created by compiling the files in the source file list.</p>
+<p>The value assigned to pscf_chem_ in this example is a list of all of the compilable source files in the relevant subdirectory, src/pscf/chem. All paths in this list must be given as relative paths, defined relative to the src/ directory. In this example, these source files are all standard C++ source files with a file name suffix .cpp. Source file lists in other directories may, however, also contain CUDA C++ files with file name suffix *.cu.</p>
+<p>The object file list variable pscf_chem_OBJS_ is constructed in the last two lines of this example. The value that is assigned to pscf_chem_OBJS is a corresponding list of absolute paths for object files, with filename suffix *.o. This list is constructed here by applying two makefile text manipulation functions to the value of the source file list pscf_chem_. First, the ":" operator is used in the expression $(pscf_chem_:.cpp=.o) to replace the .cpp suffix with .o in each of the relative paths in $(pscf_chem_). The built in "addprefix" function is then used to add the value / as a common prefix to every name in the list. Here,  is the absolute path to the build directory, which is defined in the relevant config.mk configuration file. These manipulations yield a list of absolute paths to all of the *.o object files that should be created by compiling the files in the source file list.</p>
 <h1 class="doxsection"><a class="anchor" id="developer_build_list_example2_sec"></a>
 Directories with subdirectories (not namespace-level)</h1>
 <p>We now consider sources.mk file for a subdirectory of src/ that is not a namespace-level directory, but that contains one or more enclosed <br  />

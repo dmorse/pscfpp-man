@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -167,7 +167,7 @@ class Pscf::Rpc::Propagator&lt; D &gt;</div><p>MDE solver for one direction of o
 <p>A fully initialized Propagator&lt;D&gt; has an associations with a <a class="el" href="classPscf_1_1Rpc_1_1Block.html" title="Block within a linear or branched block polymer.">Block&lt;D&gt;</a> object that owns this propagator and its partner, and with a partner Propagator&lt;D&gt; that solves the MDE within the same block in the opposite direction. It also has an association with a <a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh&lt;D&gt;</a> that describes a spatial grid, and associations with zero or more source Propagator&lt;D&gt; objects that are used to compute an initial condition for this propagator at the head vertex.</p>
 <p>The associated <a class="el" href="classPscf_1_1Rpc_1_1Block.html" title="Block within a linear or branched block polymer.">Block&lt;D&gt;</a> stores information required to numerically solve the modified diffusion equation (MDE), including quantities that depend upon the w-field associated with this block, the unit cell parameters and (in the thread model) the contour step size. These quantities are set and stored by the block because their values are the same for the two propagators owned by each block, but may be different for different blocks. The algorithm used by a <a class="el" href="classPscf_1_1Rpc_1_1Propagator.html" title="MDE solver for one direction of one block.">Propagator</a> to solve the MDE repeatedly calls step functions provided by the parent <a class="el" href="classPscf_1_1Rpc_1_1Block.html" title="Block within a linear or branched block polymer.">Block</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00051">51</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00054">54</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="affe3c5ae37d8a57c662e2af766393661" name="affe3c5ae37d8a57c662e2af766393661"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#affe3c5ae37d8a57c662e2af766393661">&#9670;&#160;</a></span>Base</h2>
@@ -185,7 +185,7 @@ template&lt;int D&gt; </div>
 
 <p><a class="el" href="#affe3c5ae37d8a57c662e2af766393661" title="Base class (partial template specialization).">Base</a> class (partial template specialization). </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00061">61</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00064">64</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
 
 </div>
 </div>
@@ -205,7 +205,7 @@ template&lt;int D&gt; </div>
 
 <p>Field type (function of position, defined on a r-space grid). </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00066">66</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00069">69</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
 
 </div>
 </div>
@@ -290,9 +290,9 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00300">300</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00303">303</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
 
-<p class="reference">References <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00279">block()</a>.</p>
+<p class="reference">References <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00282">block()</a>.</p>
 
 </div>
 </div>
@@ -331,7 +331,7 @@ template&lt;int D&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00043">43</a> of file <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html">rpc/solvers/Propagator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Mesh_8h_source.html#l00217">Pscf::Mesh&lt; D &gt;::dimensions()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00289">ns()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="Mesh_8h_source.html#l00217">Pscf::Mesh&lt; D &gt;::dimensions()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00292">ns()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -364,7 +364,7 @@ template&lt;int D&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00060">60</a> of file <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html">rpc/solvers/Propagator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00289">ns()</a>, <a class="el" href="#a700ce09f6793caad4c9a5a4c48403b57">setIsSolved()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00292">ns()</a>, <a class="el" href="#a700ce09f6793caad4c9a5a4c48403b57">setIsSolved()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -390,7 +390,7 @@ template&lt;int D&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00136">136</a> of file <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html">rpc/solvers/Propagator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="group__Pscf__Math__Complex__Module.html#gaa93ab368ac13499fa495713dc9b53f56">Pscf::assign()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00279">block()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00293">isAllocated()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00075">Pscf::PolymerModel::isBead()</a>, <a class="el" href="#a4cc5ce94cc34b29ae7d0ce09c5f49002">isHeadEnd()</a>, <a class="el" href="#a7719b0df1e0d30730fab0d3244088c07">isTailEnd()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, <a class="el" href="#a700ce09f6793caad4c9a5a4c48403b57">setIsSolved()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="group__Pscf__Math__Complex__Module.html#gaa93ab368ac13499fa495713dc9b53f56">Pscf::assign()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00282">block()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00296">isAllocated()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00075">Pscf::PolymerModel::isBead()</a>, <a class="el" href="#a4cc5ce94cc34b29ae7d0ce09c5f49002">isHeadEnd()</a>, <a class="el" href="#a7719b0df1e0d30730fab0d3244088c07">isTailEnd()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, <a class="el" href="#a700ce09f6793caad4c9a5a4c48403b57">setIsSolved()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
 </div>
 </div>
@@ -422,7 +422,7 @@ template&lt;int D&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00187">187</a> of file <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html">rpc/solvers/Propagator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="group__Pscf__Math__Complex__Module.html#gaa93ab368ac13499fa495713dc9b53f56">Pscf::assign()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00279">block()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00246">head()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00075">Pscf::PolymerModel::isBead()</a>, <a class="el" href="#a4cc5ce94cc34b29ae7d0ce09c5f49002">isHeadEnd()</a>, <a class="el" href="#a7719b0df1e0d30730fab0d3244088c07">isTailEnd()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, <a class="el" href="#a700ce09f6793caad4c9a5a4c48403b57">setIsSolved()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="group__Pscf__Math__Complex__Module.html#gaa93ab368ac13499fa495713dc9b53f56">Pscf::assign()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00282">block()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00249">head()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00075">Pscf::PolymerModel::isBead()</a>, <a class="el" href="#a4cc5ce94cc34b29ae7d0ce09c5f49002">isHeadEnd()</a>, <a class="el" href="#a7719b0df1e0d30730fab0d3244088c07">isTailEnd()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, <a class="el" href="#a700ce09f6793caad4c9a5a4c48403b57">setIsSolved()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
 </div>
 </div>
@@ -449,7 +449,7 @@ template&lt;int D&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00243">243</a> of file <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html">rpc/solvers/Propagator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="#adf7eae92318c12f18fe2233ad0d42241">hasPartner()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00246">head()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00075">Pscf::PolymerModel::isBead()</a>, <a class="el" href="#a4cc5ce94cc34b29ae7d0ce09c5f49002">isHeadEnd()</a>, <a class="el" href="#a73935788b43eb3aaf01c75677e44aa57">isSolved()</a>, <a class="el" href="#a7719b0df1e0d30730fab0d3244088c07">isTailEnd()</a>, <a class="el" href="#a3f824c3c00b05d89a0efe707e93d09dc">partner()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="#adf7eae92318c12f18fe2233ad0d42241">hasPartner()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00249">head()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00075">Pscf::PolymerModel::isBead()</a>, <a class="el" href="#a4cc5ce94cc34b29ae7d0ce09c5f49002">isHeadEnd()</a>, <a class="el" href="#a73935788b43eb3aaf01c75677e44aa57">isSolved()</a>, <a class="el" href="#a7719b0df1e0d30730fab0d3244088c07">isTailEnd()</a>, <a class="el" href="#a3f824c3c00b05d89a0efe707e93d09dc">partner()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
 </div>
 </div>
@@ -486,11 +486,11 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00268">268</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00271">271</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
 
 <p class="reference">References <a class="el" href="#a73935788b43eb3aaf01c75677e44aa57">isSolved()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00494">Pscf::Rpc::Block&lt; D &gt;::computeConcentrationBead()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00432">Pscf::Rpc::Block&lt; D &gt;::computeConcentrationThread()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00617">Pscf::Rpc::Block&lt; D &gt;::computeStressBead()</a>, and <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00535">Pscf::Rpc::Block&lt; D &gt;::computeStressThread()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00496">Pscf::Rpc::Block&lt; D &gt;::computeConcentrationBead()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00434">Pscf::Rpc::Block&lt; D &gt;::computeConcentrationThread()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00619">Pscf::Rpc::Block&lt; D &gt;::computeStressBead()</a>, and <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00537">Pscf::Rpc::Block&lt; D &gt;::computeStressThread()</a>.</p>
 
 </div>
 </div>
@@ -521,7 +521,7 @@ template&lt;int D&gt; </div>
 
 <p>Return q-field at beginning of the block (initial condition). </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00246">246</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00249">249</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
 
 <p class="reference">References <a class="el" href="#a73935788b43eb3aaf01c75677e44aa57">isSolved()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -557,7 +557,7 @@ template&lt;int D&gt; </div>
 <p>Return q-field at the end of the block. </p>
 <p>This function throws an <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a> if invoked while the bead model is in use (i.e., if <a class="el" href="namespacePscf_1_1PolymerModel.html#a808c2831a6584875c7ec72c9d415e88e" title="Is the thread model in use ?">PolymerModel::isThread()</a> == false) and the tail for this propagator is a chain end (i.e., if <a class="el" href="#a7719b0df1e0d30730fab0d3244088c07" title="Is the tail vertex a chain end?">isTailEnd()</a> == true). In this case, the tail slice is not needed, and so is not computed. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00256">256</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00259">259</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
 
 <p class="reference">References <a class="el" href="#a73935788b43eb3aaf01c75677e44aa57">isSolved()</a>, <a class="el" href="#a7719b0df1e0d30730fab0d3244088c07">isTailEnd()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -590,11 +590,11 @@ template&lt;int D&gt; </div>
 
 <p>Get the associated <a class="el" href="classPscf_1_1Rpc_1_1Block.html" title="Block within a linear or branched block polymer.">Block</a> object by const reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00279">279</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00282">282</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00075">UTIL_ASSERT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00300">setBlock()</a>, <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00136">solve()</a>, and <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00187">solve()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00303">setBlock()</a>, <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00136">solve()</a>, and <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00187">solve()</a>.</p>
 
 </div>
 </div>
@@ -626,7 +626,7 @@ template&lt;int D&gt; </div>
 <p>Get the number of values of s (or slices), including head and tail. </p>
 <p>The value of ns is the number of values of s at which q(r,s) is calculated, including the end values at the terminating vertices (the head and tail). In the bead model, this is two more than the number of beads in the block. In the thread model, this is one more than the number length/ds of contour length steps. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00289">289</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00292">292</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00043">allocate()</a>, and <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00060">reallocate()</a>.</p>
 
@@ -659,9 +659,9 @@ template&lt;int D&gt; </div>
 
 <p>Has memory been allocated for this propagator? </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00293">293</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00296">296</a> of file <a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00535">Pscf::Rpc::Block&lt; D &gt;::computeStressThread()</a>, and <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00136">solve()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00537">Pscf::Rpc::Block&lt; D &gt;::computeStressThread()</a>, and <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00136">solve()</a>.</p>
 
 </div>
 </div>
@@ -778,7 +778,7 @@ template&lt;int D&gt; </div>
 
 <p>Has the modified diffusion equation been solved? </p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00243">computeQ()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00617">Pscf::Rpc::Block&lt; D &gt;::computeStressBead()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00246">head()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00268">q()</a>, and <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00256">tail()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00243">computeQ()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00619">Pscf::Rpc::Block&lt; D &gt;::computeStressBead()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00249">head()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00271">q()</a>, and <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00259">tail()</a>.</p>
 
 </div>
 </div>
@@ -825,7 +825,7 @@ template&lt;int D&gt; </div>
 <p>Is the head vertex a chain end? </p>
 <p>Precondition: <a class="el" href="namespacePscf_1_1PolymerModel.html#af5c7a9c517a218fe8198b2a48c45a1ab" title="Is the bead model in use ?">PolymerModel::isBead()</a> </p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00243">computeQ()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00617">Pscf::Rpc::Block&lt; D &gt;::computeStressBead()</a>, <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00136">solve()</a>, and <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00187">solve()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00243">computeQ()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00619">Pscf::Rpc::Block&lt; D &gt;::computeStressBead()</a>, <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00136">solve()</a>, and <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00187">solve()</a>.</p>
 
 </div>
 </div>
@@ -849,11 +849,12 @@ template&lt;int D&gt; </div>
 <p>Is the tail vertex a chain end? </p>
 <p>Precondition: <a class="el" href="namespacePscf_1_1PolymerModel.html#af5c7a9c517a218fe8198b2a48c45a1ab" title="Is the bead model in use ?">PolymerModel::isBead()</a> </p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00243">computeQ()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00617">Pscf::Rpc::Block&lt; D &gt;::computeStressBead()</a>, <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00136">solve()</a>, <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00187">solve()</a>, and <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00256">tail()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00243">computeQ()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00619">Pscf::Rpc::Block&lt; D &gt;::computeStressBead()</a>, <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00136">solve()</a>, <a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html#l00187">solve()</a>, and <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00259">tail()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="rpc_2solvers_2Block_8h_source.html">rpc/solvers/Block.h</a></li>
 <li><a class="el" href="rpc_2solvers_2Propagator_8h_source.html">rpc/solvers/Propagator.h</a></li>
 <li><a class="el" href="rpc_2solvers_2Propagator_8tpp_source.html">rpc/solvers/Propagator.tpp</a></li>
 </ul>

@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -70,27 +70,34 @@ $(function() {
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;Domain.h&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;prdc/field/DomainTmpl.tpp&gt;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpc.html">Rpc</a> {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>   <span class="keyword">using namespace </span>Util;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc_1_1Cpu.html">Pscf::Prdc::Cpu</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;rpc/field/FieldIo.tpp&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;prdc/cpu/WaveList.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;prdc/cpu/FFT.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpc.html">Rpc</a> {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1Domain.html#a6de724965da78f350ea93508461c03f6">   22</a></span>   <a class="code hl_function" href="classPscf_1_1Rpc_1_1Domain.html#a6de724965da78f350ea93508461c03f6">Domain&lt;D&gt;::Domain</a>()</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    : <a class="code hl_function" href="classPscf_1_1Prdc_1_1DomainTmpl.html#a26eabaae499bfb2a85174db4a4fce977">DomainTmpl</a>&lt;D, <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">FFT</a>&lt;D&gt;, <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1WaveList.html">WaveList</a>&lt;D&gt;, <a class="code hl_class" href="classPscf_1_1Rpc_1_1FieldIo.html">FieldIo</a>&lt;D&gt; &gt;()</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>   {  <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">ParamComposite::setClassName</a>(<span class="stringliteral">&quot;Domain&quot;</span>); }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>   <span class="keyword">using namespace </span>Util;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc_1_1Cpu.html">Pscf::Prdc::Cpu</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">   * Constructor.</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpc_1_1Domain.html#a6de724965da78f350ea93508461c03f6">   29</a></span>   <a class="code hl_function" href="classPscf_1_1Rpc_1_1Domain.html#a6de724965da78f350ea93508461c03f6">Domain&lt;D&gt;::Domain</a>()</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    : <a class="code hl_function" href="classPscf_1_1Prdc_1_1DomainTmpl.html#a26eabaae499bfb2a85174db4a4fce977">DomainTmpl</a>&lt;D, <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">FFT</a>&lt;D&gt;, <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cpu_1_1WaveList.html">WaveList</a>&lt;D&gt;, <a class="code hl_class" href="classPscf_1_1Rpc_1_1FieldIo.html">FieldIo</a>&lt;D&gt; &gt;()</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>   {  <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">ParamComposite::setClassName</a>(<span class="stringliteral">&quot;Domain&quot;</span>); }</div>
 </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>} <span class="comment">// namespace Rpc</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>} <span class="comment">// namespace Pscf</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>} <span class="comment">// namespace Rpc</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>} <span class="comment">// namespace Pscf</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassPscf_1_1Prdc_1_1Cpu_1_1FFT_html"><div class="ttname"><a href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cpu::FFT</a></div><div class="ttdoc">Fourier transform wrapper.</div><div class="ttdef"><b>Definition</b> <a href="cpu_2FFT_8h_source.html#l00037">cpu/FFT.h:38</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Prdc_1_1Cpu_1_1WaveList_html"><div class="ttname"><a href="classPscf_1_1Prdc_1_1Cpu_1_1WaveList.html">Pscf::Prdc::Cpu::WaveList</a></div><div class="ttdoc">Class to calculate and store properties of wavevectors.</div><div class="ttdef"><b>Definition</b> <a href="cpu_2WaveList_8h_source.html#l00046">cpu/WaveList.h:47</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Prdc_1_1DomainTmpl_html_a26eabaae499bfb2a85174db4a4fce977"><div class="ttname"><a href="classPscf_1_1Prdc_1_1DomainTmpl.html#a26eabaae499bfb2a85174db4a4fce977">Pscf::Prdc::DomainTmpl&lt; D, FFT&lt; D &gt;, WaveList&lt; D &gt;, FieldIo&lt; D &gt; &gt;::DomainTmpl</a></div><div class="ttdeci">DomainTmpl()</div></div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1Domain_html_a6de724965da78f350ea93508461c03f6"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Domain.html#a6de724965da78f350ea93508461c03f6">Pscf::Rpc::Domain::Domain</a></div><div class="ttdeci">Domain()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00022">rpc/field/Domain.tpp:22</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1Domain_html_a6de724965da78f350ea93508461c03f6"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Domain.html#a6de724965da78f350ea93508461c03f6">Pscf::Rpc::Domain::Domain</a></div><div class="ttdeci">Domain()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00029">rpc/field/Domain.tpp:29</a></div></div>
 <div class="ttc" id="aclassPscf_1_1Rpc_1_1FieldIo_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1FieldIo.html">Pscf::Rpc::FieldIo</a></div><div class="ttdoc">File input/output operations and format conversions for fields.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2field_2FieldIo_8h_source.html#l00057">rpc/field/FieldIo.h:59</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a30752567fd7b8b93e5c8476bbe8592c5"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">Util::ParamComposite::setClassName</a></div><div class="ttdeci">void setClassName(const char *className)</div><div class="ttdoc">Set class name string.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8cpp_source.html#l00379">ParamComposite.cpp:379</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu.html">Pscf::Prdc::Cpu</a></div><div class="ttdoc">Fields and FFTs for periodic boundary conditions (CPU)</div><div class="ttdef"><b>Definition</b> <a href="CField_8cpp_source.html#l00012">CField.cpp:12</a></div></div>

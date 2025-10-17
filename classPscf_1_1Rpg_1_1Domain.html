@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -82,8 +82,8 @@ Inheritance diagram for Pscf::Rpg::Domain&lt; D &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a41f60fa0d79e30ac636cba5a0e2c0828" id="r_a41f60fa0d79e30ac636cba5a0e2c0828"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classPscf_1_1Prdc_1_1DomainTmpl.html">DomainTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">FFT</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1WaveList.html">WaveList</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41f60fa0d79e30ac636cba5a0e2c0828">Base</a></td></tr>
-<tr class="memdesc:a41f60fa0d79e30ac636cba5a0e2c0828"><td class="mdescLeft">&#160;</td><td class="mdescRight">Typedef for base class.  <br /></td></tr>
+<tr class="memitem:a545348a5d760df060c1411d3df1376b9" id="r_a545348a5d760df060c1411d3df1376b9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a545348a5d760df060c1411d3df1376b9">Base</a> = <a class="el" href="classPscf_1_1Prdc_1_1DomainTmpl.html">DomainTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">FFT</a>&lt;D&gt;, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1WaveList.html">WaveList</a>&lt;D&gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt;D&gt; &gt;</td></tr>
+<tr class="memdesc:a545348a5d760df060c1411d3df1376b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Typename alias base class.  <br /></td></tr>
 <tr class="inherit_header pub_types_classUtil_1_1Serializable"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classUtil_1_1Serializable')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="classUtil_1_1Serializable.html">Util::Serializable</a></td></tr>
 <tr class="memitem:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable" id="r_aca43a1eea5ec5f13189a57892a7a6d04"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileOArchive.html">BinaryFileOArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#aca43a1eea5ec5f13189a57892a7a6d04">OArchive</a></td></tr>
 <tr class="memdesc:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of output archive used by save method.  <br /></td></tr>
@@ -416,10 +416,10 @@ Additional Inherited Members</h2></td></tr>
 class Pscf::Rpg::Domain&lt; D &gt;</div><p>Spatial domain for a periodic structure with real fields, on a GPU. </p>
 <p>See the interface of the <a class="el" href="classPscf_1_1Prdc_1_1DomainTmpl.html" title="Spatial domain for a periodic structure with real fields.">Prdc::DomainTmpl</a> base class template for complete API documentation. The <a class="el" href="classPscf_1_1Rpg_1_1Domain.html" title="Spatial domain for a periodic structure with real fields, on a GPU.">Rpg::Domain</a> class template is basically a named partial specialization of the base class template, defined using template type parameters <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html" title="Fourier transform wrapper.">FFT</a> = <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1FFT.html" title="Fourier transform wrapper for real or complex data.">Prdc::Cuda::FFT&lt;D&gt;</a>, WLT = <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1WaveList.html" title="Class to calculate and store properties of wavevectors.">Prdc::Cuda::WaveList&lt;D&gt;</a>, and FIT = <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">Rpg::FieldIo&lt;D&gt;</a> . The public interface is identical to that of the base class. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2field_2Domain_8h_source.html#l00036">36</a> of file <a class="el" href="rpg_2field_2Domain_8h_source.html">rpg/field/Domain.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2field_2Domain_8h_source.html#l00059">59</a> of file <a class="el" href="rpg_2field_2Domain_8h_source.html">rpg/field/Domain.h</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
-<a id="a41f60fa0d79e30ac636cba5a0e2c0828" name="a41f60fa0d79e30ac636cba5a0e2c0828"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41f60fa0d79e30ac636cba5a0e2c0828">&#9670;&#160;</a></span>Base</h2>
+<a id="a545348a5d760df060c1411d3df1376b9" name="a545348a5d760df060c1411d3df1376b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a545348a5d760df060c1411d3df1376b9">&#9670;&#160;</a></span>Base</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -427,14 +427,14 @@ class Pscf::Rpg::Domain&lt; D &gt;</div><p>Spatial domain for a periodic structu
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classPscf_1_1Prdc_1_1DomainTmpl.html">DomainTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">FFT</a>&lt;D&gt;, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1WaveList.html">WaveList</a>&lt;D&gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt;D&gt; &gt; <a class="el" href="classPscf_1_1Rpg_1_1Domain.html">Pscf::Rpg::Domain</a>&lt; D &gt;::Base</td>
+          <td class="memname">using <a class="el" href="classPscf_1_1Rpg_1_1Domain.html">Pscf::Rpg::Domain</a>&lt; D &gt;::Base = <a class="el" href="classPscf_1_1Prdc_1_1DomainTmpl.html">DomainTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">FFT</a>&lt;D&gt;, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1WaveList.html">WaveList</a>&lt;D&gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt;D&gt; &gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Typedef for base class. </p>
+<p>Typename alias base class. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2field_2Domain_8h_source.html#l00050">50</a> of file <a class="el" href="rpg_2field_2Domain_8h_source.html">rpg/field/Domain.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2field_2Domain_8h_source.html#l00073">73</a> of file <a class="el" href="rpg_2field_2Domain_8h_source.html">rpg/field/Domain.h</a>.</p>
 
 </div>
 </div>
@@ -459,7 +459,7 @@ template&lt;int D&gt; </div>
 <p>Constructor. </p>
 <p>Sets the class name used in the parameter file to "Domain". </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2field_2Domain_8tpp_source.html#l00022">22</a> of file <a class="el" href="rpg_2field_2Domain_8tpp_source.html">rpg/field/Domain.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2field_2Domain_8tpp_source.html#l00029">29</a> of file <a class="el" href="rpg_2field_2Domain_8tpp_source.html">rpg/field/Domain.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="classPscf_1_1Prdc_1_1DomainTmpl.html#a26eabaae499bfb2a85174db4a4fce977">Pscf::Prdc::DomainTmpl&lt; D, FFT&lt; D &gt;, WaveList&lt; D &gt;, FieldIo&lt; D &gt; &gt;::DomainTmpl()</a>, and <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>.</p>
 
@@ -603,7 +603,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the <a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html" title="Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.">UnitCell</a> by non-const reference. </p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00192">Pscf::Rpg::Simulator&lt; D &gt;::computeHamiltonian()</a>, <a class="el" href="rpg_2fts_2analyzer_2ConcentrationWriter_8tpp_source.html#l00061">Pscf::Rpg::ConcentrationWriter&lt; D &gt;::writeFrame()</a>, <a class="el" href="rpg_2fts_2analyzer_2TrajectoryWriter_8tpp_source.html#l00084">Pscf::Rpg::TrajectoryWriter&lt; D &gt;::writeFrame()</a>, and <a class="el" href="rpg_2fts_2analyzer_2ConcentrationWriter_8tpp_source.html#l00080">Pscf::Rpg::ConcentrationWriter&lt; D &gt;::writeHeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00196">Pscf::Rpg::Simulator&lt; D &gt;::computeHamiltonian()</a>, <a class="el" href="rpg_2fts_2analyzer_2ConcentrationWriter_8tpp_source.html#l00063">Pscf::Rpg::ConcentrationWriter&lt; D &gt;::writeFrame()</a>, <a class="el" href="rpg_2fts_2analyzer_2TrajectoryWriter_8tpp_source.html#l00085">Pscf::Rpg::TrajectoryWriter&lt; D &gt;::writeFrame()</a>, and <a class="el" href="rpg_2fts_2analyzer_2ConcentrationWriter_8tpp_source.html#l00082">Pscf::Rpg::ConcentrationWriter&lt; D &gt;::writeHeader()</a>.</p>
 
 </div>
 </div>
@@ -647,7 +647,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the <a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh</a> by non-const reference. </p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00192">Pscf::Rpg::Simulator&lt; D &gt;::computeHamiltonian()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpg_2fts_2simulator_2Simulator_8tpp_source.html#l00196">Pscf::Rpg::Simulator&lt; D &gt;::computeHamiltonian()</a>.</p>
 
 </div>
 </div>
@@ -838,7 +838,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">FieldIo</a> by non-const reference. </p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2analyzer_2ConcentrationWriter_8tpp_source.html#l00061">Pscf::Rpg::ConcentrationWriter&lt; D &gt;::writeFrame()</a>, <a class="el" href="rpg_2fts_2analyzer_2TrajectoryWriter_8tpp_source.html#l00084">Pscf::Rpg::TrajectoryWriter&lt; D &gt;::writeFrame()</a>, and <a class="el" href="rpg_2fts_2analyzer_2ConcentrationWriter_8tpp_source.html#l00080">Pscf::Rpg::ConcentrationWriter&lt; D &gt;::writeHeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpg_2fts_2analyzer_2ConcentrationWriter_8tpp_source.html#l00063">Pscf::Rpg::ConcentrationWriter&lt; D &gt;::writeFrame()</a>, <a class="el" href="rpg_2fts_2analyzer_2TrajectoryWriter_8tpp_source.html#l00085">Pscf::Rpg::TrajectoryWriter&lt; D &gt;::writeFrame()</a>, and <a class="el" href="rpg_2fts_2analyzer_2ConcentrationWriter_8tpp_source.html#l00082">Pscf::Rpg::ConcentrationWriter&lt; D &gt;::writeHeader()</a>.</p>
 
 </div>
 </div>

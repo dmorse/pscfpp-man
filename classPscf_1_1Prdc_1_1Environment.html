@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -88,9 +88,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8e294735187880dd3d59be10c425b29d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 <tr class="memitem:a9bf96c5e6b817be1595b24992cde8e82" id="r_a9bf96c5e6b817be1595b24992cde8e82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bf96c5e6b817be1595b24992cde8e82">reset</a> ()</td></tr>
 <tr class="memdesc:a9bf96c5e6b817be1595b24992cde8e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <a class="el" href="classPscf_1_1EnvironmentBase.html#a1272abd3148d888580ba4b2705e6a356" title="Does this Environment need to be updated?">needsUpdate()</a> to true and <a class="el" href="#acb36074370bbeebfb2cd5ad24445e6ac" title="Has the stress been calculated?">hasStress()</a> to false.  <br /></td></tr>
-<tr class="memitem:aa9933a96a4f2236c575aad6b84c91c81" id="r_aa9933a96a4f2236c575aad6b84c91c81"><td class="memTemplParams" colspan="2">template&lt;int D, class PT, class ST&gt; </td></tr>
-<tr class="memitem:aa9933a96a4f2236c575aad6b84c91c81 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9933a96a4f2236c575aad6b84c91c81">computeStress</a> (<a class="el" href="classPscf_1_1Prdc_1_1MixturePrdc.html">MixturePrdc</a>&lt; D, PT, ST &gt; const &amp;mixture, <a class="el" href="classUtil_1_1FSArray.html">FSArray</a>&lt; bool, 6 &gt; const &amp;flexibleParams)</td></tr>
-<tr class="memdesc:aa9933a96a4f2236c575aad6b84c91c81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute and store the environment-modified SCFT stress.  <br /></td></tr>
+<tr class="memitem:ab0d005439b84d3664163172a7d80347e" id="r_ab0d005439b84d3664163172a7d80347e"><td class="memTemplParams" colspan="2">template&lt;int D, class PT, class ST, class TT&gt; </td></tr>
+<tr class="memitem:ab0d005439b84d3664163172a7d80347e template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0d005439b84d3664163172a7d80347e">computeStress</a> (<a class="el" href="classPscf_1_1Prdc_1_1MixturePrdc.html">MixturePrdc</a>&lt; D, PT, ST, TT &gt; const &amp;mixture, <a class="el" href="classUtil_1_1FSArray.html">FSArray</a>&lt; bool, 6 &gt; const &amp;flexibleParams)</td></tr>
+<tr class="memdesc:ab0d005439b84d3664163172a7d80347e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute and store the environment-modified SCFT stress.  <br /></td></tr>
 <tr class="memitem:a4ea210cc96d26137afe7b7c56c29c195" id="r_a4ea210cc96d26137afe7b7c56c29c195"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ea210cc96d26137afe7b7c56c29c195">modifyStress</a> (int paramId, double <a class="el" href="#aadbbf95d973eab3bcbc57df09e717ced">stress</a>) const</td></tr>
 <tr class="memdesc:a4ea210cc96d26137afe7b7c56c29c195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modify stress to account for <a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a>, for one lattice parameter.  <br /></td></tr>
 <tr class="memitem:aadbbf95d973eab3bcbc57df09e717ced" id="r_aadbbf95d973eab3bcbc57df09e717ced"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadbbf95d973eab3bcbc57df09e717ced">stress</a> (int paramId) const</td></tr>
@@ -450,18 +450,18 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="aa9933a96a4f2236c575aad6b84c91c81" name="aa9933a96a4f2236c575aad6b84c91c81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9933a96a4f2236c575aad6b84c91c81">&#9670;&#160;</a></span>computeStress()</h2>
+<a id="ab0d005439b84d3664163172a7d80347e" name="ab0d005439b84d3664163172a7d80347e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0d005439b84d3664163172a7d80347e">&#9670;&#160;</a></span>computeStress()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int D, class PT, class ST&gt; </div>
+template&lt;int D, class PT, class ST, class TT&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void Environment::computeStress </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1Prdc_1_1MixturePrdc.html">MixturePrdc</a>&lt; D, PT, ST &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>mixture</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1Prdc_1_1MixturePrdc.html">MixturePrdc</a>&lt; D, PT, ST, TT &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>mixture</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -484,7 +484,7 @@ template&lt;int D, class PT, class ST&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="Environment_8h_source.html#l00176">176</a> of file <a class="el" href="Environment_8h_source.html">Environment.h</a>.</p>
 
-<p class="reference">References <a class="el" href="MixturePrdc_8h_source.html#l00475">Pscf::Prdc::MixturePrdc&lt; D, PT, ST &gt;::hasStress()</a>, <a class="el" href="Environment_8cpp_source.html#l00033">modifyStress()</a>, <a class="el" href="EnvironmentBase_8h_source.html#l00175">Pscf::EnvironmentBase::needsUpdate()</a>, <a class="el" href="Environment_8cpp_source.html#l00037">stress()</a>, <a class="el" href="MixturePrdc_8h_source.html#l00482">Pscf::Prdc::MixturePrdc&lt; D, PT, ST &gt;::stress()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="MixturePrdc_8h_source.html#l00475">Pscf::Prdc::MixturePrdc&lt; D, PT, ST, TT &gt;::hasStress()</a>, <a class="el" href="Environment_8cpp_source.html#l00033">modifyStress()</a>, <a class="el" href="EnvironmentBase_8h_source.html#l00175">Pscf::EnvironmentBase::needsUpdate()</a>, <a class="el" href="Environment_8cpp_source.html#l00037">stress()</a>, <a class="el" href="MixturePrdc_8h_source.html#l00482">Pscf::Prdc::MixturePrdc&lt; D, PT, ST, TT &gt;::stress()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>

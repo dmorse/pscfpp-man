@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -56,12 +56,8 @@ $(function() {
 <div class="textblock"><p>PSCF is a software package for field-theoretic simulation of inhomogeneous equilibrium structures formed by polymer liquids with constituents that tend to phase separate. The current version of PSCF can perform either self-consistent field theory calculations or stochastic field theoretic simulations that use a partial saddle-point approximation.</p>
 <p>PSCF is written primarily in C++, supplemented by CUDA to use a NVIDIA graphics processing unit if one is available. The package is only distributed in source code form, and so must be compiled by the user. PSCF is designed for a unix-like environment, and is regularly tested on Linux and Mac OS X operating systems.</p>
 <p>PSCF is free, open source software. It is distributed under the terms of the GNU General Public License as (GPL) published by the Free Software Foundation, either version 3 of the License or (at your option) any later version. See the LICENSE file or the <a href="http://www.gnu.org/licenses/">gnu web page</a> for details. Development of PSCF is currently supported by the National Science Foundation program for Cyberinfrastructure for Sustained Scientific Development (CSSI) under Grant No. 2103627.</p>
-<h2>Manual Organization:</h2>
-<p>This web manual is designed to provide both thorough usage information for users who may never look at the source code, and complete aplication programming interface (API) documentation for those who do.</p>
-<p>Information for users about how to install and run PSCF is provided in chapters 1-5 of the web manual that is outlined below. Some additional general information aimed at developers is given in chapter 6, <a class="el" href="developer_page.html">Developer Information</a>.</p>
-<p>Detailed API documentation that is extracted from comments in the source code is instead accessible via the "Topics", "Namespaces", "Classes", and "Files" tabs that appear at the top of every web manual page. Clicking on a highlighted name of a function, class or class template anywhere in this web manual also links you to the technical API documentation for that entity. The "Topics" tab provides a hierarchical list of C++ classes and functions, organized by C++ namespace and, within each namespace, into named groups of functionally related classes.</p>
-<p>The web manual for the most recent release of PSCF is available online at  <a href="https://dmorse.github.io/pscfpp-man">https://dmorse.github.io/pscfpp-man</a> .</p>
-<h2>Manual outline:</h2>
+<p>The web manual for the most recent tagged release of PSCF is available online at  <a href="https://dmorse.github.io/pscfpp-man">https://dmorse.github.io/pscfpp-man</a> .</p>
+<h2>Table of contents:</h2>
 <ol type="1">
 <li>
 <a class="el" href="about_page.html">About</a> <ol type="1">
@@ -110,11 +106,13 @@ $(function() {
 <li>
 <a class="el" href="user_calculation_page.html">Types of Calculation</a>  </li>
 <li>
+<a class="el" href="user_example_page.html">Examples</a>  </li>
+<li>
 <a class="el" href="user_param_page.html">Parameter Files</a>  </li>
 <li>
 <a class="el" href="user_command_page.html">Command Files</a>  </li>
 <li>
-<a class="el" href="user_example_page.html">Examples</a>  </li>
+<a class="el" href="user_field_page.html">Field Files</a>  </li>
 </ol>
 </li>
 <li>
@@ -128,31 +126,15 @@ $(function() {
 <li>
 <a class="el" href="scft_param_page.html">Parameter Files</a>  </li>
 <li>
-<a class="el" href="scft_field_page.html">Field Files</a>  </li>
-<li>
 <a class="el" href="scft_command_page.html">Command Files</a>  </li>
 <li>
 <a class="el" href="scft_thermo_page.html">Thermodynamic Properties</a>  </li>
-<li>
-<a class="el" href="scft_unitcell_page.html">Crystal Unit Cells</a>  </li>
-<li>
-<a class="el" href="scft_groups_page.html">Space Groups</a>  </li>
 <li>
 <a class="el" href="scft_environment_page.html">Environments &ndash; Confinement and External Fields</a>  </li>
 <li>
 <a class="el" href="scft_thin_films_page.html">Thin-Film Confinement</a>  </li>
 <li>
-<a class="el" href="scft_visualize_page.html">Visualization</a>  </li>
-<li>
-<a class="el" href="scft_python_page.html">Python Tools</a>  </li>
-<li>
 <a class="el" href="scft_propagator_page.html">Appendix: Modified Diffusion Equations</a>  </li>
-<li>
-<a class="el" href="scft_fourier_page.html">Appendix: Periodic Functions and Fourier Series</a>  </li>
-<li>
-<a class="el" href="scft_symmetry_page.html">Appendix: Space Group Symmetry</a>  </li>
-<li>
-<a class="el" href="scft_basis_page.html">Appendix: Symmetry-Adapted Bases</a>  </li>
 </ol>
 </li>
 <li>
@@ -176,9 +158,33 @@ $(function() {
 </ol>
 </li>
 <li>
+<a class="el" href="analysis_page.html">Data Analysis Tools</a> <ol type="1">
+<li>
+<a class="el" href="analysis_visualize_page.html">Visualization</a>  </li>
+<li>
+<a class="el" href="analysis_python_page.html">Python Tools</a>  </li>
+</ol>
+</li>
+<li>
+<a class="el" href="prdc_page.html">Periodic Systems</a> <ol type="1">
+<li>
+<a class="el" href="prdc_unitcell_page.html">Crystal Unit Cells</a>  </li>
+<li>
+<a class="el" href="prdc_groups_page.html">Space Groups</a>  </li>
+<li>
+<a class="el" href="prdc_fourier_page.html">Periodic Functions and Fourier Series</a>  </li>
+<li>
+<a class="el" href="prdc_symmetry_page.html">Space Group Symmetry</a>  </li>
+<li>
+<a class="el" href="prdc_basis_page.html">Symmetry-Adapted Fourier Bases</a>  </li>
+</ol>
+</li>
+<li>
 <a class="el" href="developer_page.html">Developer Information</a> <ol type="1">
 <li>
 <a class="el" href="developer_directory_page.html">Directory Structure</a>  </li>
+<li>
+<a class="el" href="developer_filetypes_page.html">File Types</a>  </li>
 <li>
 <a class="el" href="developer_build_page.html">Build System</a>  </li>
 <li>
@@ -192,6 +198,10 @@ $(function() {
 </ol>
 </li>
 </ol>
+<h2>Manual Organization:</h2>
+<p>This web manual is designed to provide both thorough usage information for users who may never look at the source code, and aplication programming interface (API) documentation for those who do.</p>
+<p><b>Users</b>: Information for users about how to install and run PSCF is provided in chapters 1-7 of the web manual, as outlined above, and via links that are accessible there.</p>
+<p><b>Developers </b>: General information about the package for developers and others who inspect the source code is given in chapter 8 of the web manul, entitled <a class="el" href="developer_page.html">Developer Information</a>. Detailed API documentation that is extracted from comments in the source code is also accessible via the "Topics", "Namespaces", "Classes", and "Files" tabs that appear at the top of every web manual page. The "Topics" tab provides a hierarchical grouping of C++ classes and functions, organized by C++ namespace and then, within each namespace, into groups of closely related classes. Clicking on a highlighted name of a class, class template, or function anywhere in the web manual normally links you to the API documentation for that entity. </p>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->

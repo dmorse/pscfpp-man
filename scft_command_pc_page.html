@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -92,6 +92,10 @@ Commands</h1>
 <td><a class="el" href="#scft_command_pc_readwbasis_sub">READ_W_BASIS</a> </td><td>filename [string] </td><td>Read w fields from file filename, in symmetry-adapted basis format </td></tr>
 <tr>
 <td><a class="el" href="#scft_command_pc_readwrgrid_sub">READ_W_RGRID</a> </td><td>filename [string] </td><td>Read w fields from file filename, in real-space grid (r-grid) format. See <a class="el" href="#scft_command_pc_readwrgrid_sub">discussion</a> for constraints on usage. </td></tr>
+<tr>
+<td colspan="3" style="text-align:center"><a class="el" href="#scft_command_pc_unitcell_sec">Unit Cell Initialization</a> </td></tr>
+<tr>
+<td><a class="el" href="#scft_command_pc_unitcell_sec">SET_UNIT_CELL</a> </td><td>lattice [string], parameters Array[double] </td><td>Set unit parameters to values given as command arguments. </td></tr>
 <tr>
 <td colspan="3" style="text-align:center"><a class="el" href="#scft_command_pc_compute_sec">Computation</a> </td></tr>
 <tr>
@@ -173,10 +177,6 @@ Commands</h1>
 <tr>
 <td><a class="el" href="#scft_command_pc_replicate_sub">REPLICATE_UNIT_CELL</a> </td><td>inFile [string], outFile [string], replicas Array[int] </td><td>Read r-grid fields from inFile, output in replicated unit cell to outFile, with cell replicated replicas[i] times in direction i. </td></tr>
 <tr>
-<td colspan="3" style="text-align:center"><a class="el" href="#scft_command_pc_unitcell_sec">Unit Cell Initialization</a> </td></tr>
-<tr>
-<td><a class="el" href="#scft_command_pc_unitcell_sec">SET_UNIT_CELL</a> </td><td>lattice [string], parameters Array[double] </td><td>Set unit parameters to values given as command arguments. </td></tr>
-<tr>
 <td colspan="3" style="text-align:center"><a class="el" href="#scft_command_pc_external_sec">External Fields</a> </td></tr>
 <tr>
 <td><a class="el" href="#scft_command_pc_external_sec">READ_H_BASIS</a> </td><td>filename [string] </td><td>Read external (h) fields from file filename, in symmetry-adapted basis format </td></tr>
@@ -187,7 +187,7 @@ Commands</h1>
 <tr>
 <td><a class="el" href="#scft_command_pc_external_sec">WRITE_H_RGRID</a> </td><td>filename [string] </td><td>Write external potential fields (h fields) to file filename, in r-grid format </td></tr>
 <tr>
-<td colspan="3" style="text-align:center"><a class="el" href="#scft_command_pc_mask_sec">Mask Fields (Inhomogeneous Density Constraints)</a> </td></tr>
+<td colspan="3" style="text-align:center"><a class="el" href="#scft_command_pc_mask_sec">Mask Field (Inhomogeneous Density Constraints)</a> </td></tr>
 <tr>
 <td><a class="el" href="#scft_command_pc_mask_sec">READ_MASK_BASIS</a> </td><td>filename [string] </td><td>Read a mask field from file filename, in symmetry-adapted basis format </td></tr>
 <tr>
@@ -217,7 +217,7 @@ W field initialization</h1>
 <h1 class="doxsection"><a class="anchor" id="scft_command_pc_unitcell_sec"></a>
 Unit Cell Initialization</h1>
 <p>The SET_UNIT_CELL command can be used to set or reset the parameters (lengths and angles) of the periodic unit cell. It is usually not necessary, however, to use this command to set unit cell parameters because these parameters are also set to the values given in a field file header whenever the READ_W_BASIS or READ_W_RGRID command is used to read W fields from a file. The SET_UNIT_CELL provides an alternate mechanism to set these parameters, in order to manually override values that previously been read from a field file, or to set initial unit cell parameters prior to reading a field file.</p>
-<p>The SET_UNIT_CELL command take a string argument that must be the name name of a lattice type of the appropriate dimension (e.g., cubic, for a system with D=3) by a followed by a list of unit cell parameter values (one or more lengths, and sometimes angles). The lattice type string argument must match the lattice parameter given in the Domain section of the parameter file. The number and interpretation of the unit cell parameter values depends on the lattice type, as discussed <a class="el" href="scft_unitcell_page.html">elsewhere</a>.</p>
+<p>The SET_UNIT_CELL command take a string argument that must be the name name of a lattice type of the appropriate dimension (e.g., cubic, for a system with D=3) by a followed by a list of unit cell parameter values (one or more lengths, and sometimes angles). The lattice type string argument must match the lattice parameter given in the Domain section of the parameter file. The number and interpretation of the unit cell parameter values depends on the lattice type, as discussed <a class="el" href="prdc_unitcell_page.html">elsewhere</a>.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_command_pc_compute_sec"></a>
 SCFT Computations</h1>
 <p>The COMPUTE, ITERATE and SWEEP commands perform the primary computations involved in a self-consistent field calculation. Each performs the same operation as the analogous command for the pscf_1d program. Each of these commands requires an initialized set of w fields and unit cell parameters as an input, which must have been initialized by a previous call to READ_W_BASIS or READ_W_RGRID.</p>
@@ -230,7 +230,7 @@ Data output commands</h1>
 <p><a class="anchor" id="scft_command_pc_param_sub"></a><b> WRITE_PARAM </b>: The WRITE_PARAM writes a slightly modified copy of the parameter file to a file whose name that is specified as a command parameter. The version of the parameter file written by this command outputs the current values for all parameters, and excludes any Sweep block. The output of this command is designed to serve as a record of the input parameters associated with a single SCFT calculation.</p>
 <p><a class="anchor" id="scft_command_pc_thermo_sub"></a><b> WRITE_THERMO </b>: The WRITE_THERMO command outputs a report of values for thermodynamic properties obtained after solution of a SCFT problem. The details of the output of this command can be found on the <a class="el" href="scft_thermo_page.html">Thermodynamic Properties</a> page.</p>
 <p>If the file whose name is passed to the WRITE_THERMO command already exists, the report of thermodynamic properties will be appended to the end of this file, rather than overwriting the file. This is designed to allow users to output a parameter file block that contains the input parameters followed by a report of computed thermodynamic properties in a single file, if desired, by invoking WRITE_PARAM and WRITE_THERMO with the same file name parameter.</p>
-<p><a class="anchor" id="scft_command_pc_stress_sub"></a><b> WRITE_STRESS </b>: The WRITE_STRESS command outputs a report of values of derivatives of the SCFT free energy with respect to unit cell parameters. These derivatives should be zero to within numerical error for a converged SCFT solution of a problem with a flexible unit cell, for which the unit cell parameters should minimize the free energy, but are generally nonzero for the solution of an SCFT problem in a rigid unit cell. Results are derivatives of the Helmholtz free energy per monomer (as output by the WRITE_THERMO command) with respect to unit cell parameters. These derivatives are listed the conventional order of the unit cell parameters for the relevant lattice type, as described <a class="el" href="scft_unitcell_page.html">here</a>.</p>
+<p><a class="anchor" id="scft_command_pc_stress_sub"></a><b> WRITE_STRESS </b>: The WRITE_STRESS command outputs a report of values of derivatives of the SCFT free energy with respect to unit cell parameters. These derivatives should be zero to within numerical error for a converged SCFT solution of a problem with a flexible unit cell, for which the unit cell parameters should minimize the free energy, but are generally nonzero for the solution of an SCFT problem in a rigid unit cell. Results are derivatives of the Helmholtz free energy per monomer (as output by the WRITE_THERMO command) with respect to unit cell parameters. These derivatives are listed the conventional order of the unit cell parameters for the relevant lattice type, as described <a class="el" href="prdc_unitcell_page.html">here</a>.</p>
 <p>In a system that contains an <a class="el" href="scft_environment_page.html">Environment</a>, the environment-modified stresses are also written, if they were calculated. These stresses take into account the presence of a mask and/or external field in the stress calculation, and may perform additional modifications so that the stress can minimize a property other than the Helmholtz free energy per monomer. The specific meaning of an environment-modified stress depends on the type of Environment, as documented <a class="el" href="scft_environment_page.html">elsewhere</a>.</p>
 <p>As with WRITE_THERMO, if the file passed to WRITE_STRESS already exists, then the stress data will be appended to the end of this file.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_command_pc_fieldout_sec"></a>

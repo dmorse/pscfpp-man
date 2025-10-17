@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -417,7 +417,7 @@ class Pscf::Rpc::Domain&lt; D &gt;</div><p>Spatial domain for a periodic structu
 <p>The public interface of this class is identical to that of the <a class="el" href="classPscf_1_1Prdc_1_1DomainTmpl.html" title="Spatial domain for a periodic structure with real fields.">Prdc::DomainTmpl</a> base class template. Please see documentation of that base class for API documentation.</p>
 <p>The <a class="el" href="classPscf_1_1Rpc_1_1Domain.html" title="Spatial domain for a periodic structure with real fields, on a CPU.">Rpc::Domain</a>&lt;D&gt; class template is a named partial specialization of the base class template <a class="el" href="classPscf_1_1Prdc_1_1DomainTmpl.html" title="Spatial domain for a periodic structure with real fields.">Prdc::DomainTmpl&lt;D, FFT, WLT, FIT&gt;</a> that is designed to use standard CPU hardware, defined using template type parameters <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html" title="Fourier transform wrapper.">FFT</a> = <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html" title="Fourier transform wrapper.">Prdc::Cpu::FFT</a>&lt;D&gt;, WLT = <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1WaveList.html" title="Class to calculate and store properties of wavevectors.">Prdc::Cpu::WaveList</a>&lt;D&gt;, and FIT = <a class="el" href="classPscf_1_1Rpc_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">Rpc::FieldIo</a>&lt;D&gt; . </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2field_2Domain_8h_source.html#l00039">39</a> of file <a class="el" href="rpc_2field_2Domain_8h_source.html">rpc/field/Domain.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2field_2Domain_8h_source.html#l00062">62</a> of file <a class="el" href="rpc_2field_2Domain_8h_source.html">rpc/field/Domain.h</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="a9f6d13c09a9b9683da2251c2e63a64ed" name="a9f6d13c09a9b9683da2251c2e63a64ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9f6d13c09a9b9683da2251c2e63a64ed">&#9670;&#160;</a></span>Base</h2>
@@ -435,7 +435,7 @@ template&lt;int D&gt; </div>
 
 <p>Typedef for base class. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2field_2Domain_8h_source.html#l00053">53</a> of file <a class="el" href="rpc_2field_2Domain_8h_source.html">rpc/field/Domain.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2field_2Domain_8h_source.html#l00076">76</a> of file <a class="el" href="rpc_2field_2Domain_8h_source.html">rpc/field/Domain.h</a>.</p>
 
 </div>
 </div>
@@ -460,7 +460,7 @@ template&lt;int D&gt; </div>
 <p>Constructor. </p>
 <p>Sets the class name used in the parameter file to "Domain". </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2field_2Domain_8tpp_source.html#l00022">22</a> of file <a class="el" href="rpc_2field_2Domain_8tpp_source.html">rpc/field/Domain.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2field_2Domain_8tpp_source.html#l00029">29</a> of file <a class="el" href="rpc_2field_2Domain_8tpp_source.html">rpc/field/Domain.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="classPscf_1_1Prdc_1_1DomainTmpl.html#a26eabaae499bfb2a85174db4a4fce977">Pscf::Prdc::DomainTmpl&lt; D, FFT&lt; D &gt;, WaveList&lt; D &gt;, FieldIo&lt; D &gt; &gt;::DomainTmpl()</a>, and <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>.</p>
 
@@ -604,7 +604,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the <a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html" title="Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.">UnitCell</a> by non-const reference. </p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00187">Pscf::Rpc::Simulator&lt; D &gt;::computeHamiltonian()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00059">Pscf::Rpc::FilmFieldGenMask&lt; D &gt;::stress()</a>, <a class="el" href="rpc_2fts_2analyzer_2ConcentrationWriter_8tpp_source.html#l00068">Pscf::Rpc::ConcentrationWriter&lt; D &gt;::writeFrame()</a>, <a class="el" href="rpc_2fts_2analyzer_2TrajectoryWriter_8tpp_source.html#l00062">Pscf::Rpc::TrajectoryWriter&lt; D &gt;::writeFrame()</a>, <a class="el" href="rpc_2fts_2analyzer_2ConcentrationWriter_8tpp_source.html#l00087">Pscf::Rpc::ConcentrationWriter&lt; D &gt;::writeHeader()</a>, and <a class="el" href="rpc_2fts_2analyzer_2TrajectoryWriter_8tpp_source.html#l00077">Pscf::Rpc::TrajectoryWriter&lt; D &gt;::writeHeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00191">Pscf::Rpc::Simulator&lt; D &gt;::computeHamiltonian()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00062">Pscf::Rpc::FilmFieldGenMask&lt; D &gt;::stress()</a>, <a class="el" href="rpc_2fts_2analyzer_2ConcentrationWriter_8tpp_source.html#l00068">Pscf::Rpc::ConcentrationWriter&lt; D &gt;::writeFrame()</a>, <a class="el" href="rpc_2fts_2analyzer_2TrajectoryWriter_8tpp_source.html#l00064">Pscf::Rpc::TrajectoryWriter&lt; D &gt;::writeFrame()</a>, <a class="el" href="rpc_2fts_2analyzer_2ConcentrationWriter_8tpp_source.html#l00087">Pscf::Rpc::ConcentrationWriter&lt; D &gt;::writeHeader()</a>, and <a class="el" href="rpc_2fts_2analyzer_2TrajectoryWriter_8tpp_source.html#l00079">Pscf::Rpc::TrajectoryWriter&lt; D &gt;::writeHeader()</a>.</p>
 
 </div>
 </div>
@@ -648,7 +648,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the <a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh</a> by non-const reference. </p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00187">Pscf::Rpc::Simulator&lt; D &gt;::computeHamiltonian()</a>, and <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00059">Pscf::Rpc::FilmFieldGenMask&lt; D &gt;::stress()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2fts_2simulator_2Simulator_8tpp_source.html#l00191">Pscf::Rpc::Simulator&lt; D &gt;::computeHamiltonian()</a>, and <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00062">Pscf::Rpc::FilmFieldGenMask&lt; D &gt;::stress()</a>.</p>
 
 </div>
 </div>
@@ -839,7 +839,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the <a class="el" href="classPscf_1_1Rpc_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">FieldIo</a> by non-const reference. </p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2fts_2analyzer_2ConcentrationWriter_8tpp_source.html#l00068">Pscf::Rpc::ConcentrationWriter&lt; D &gt;::writeFrame()</a>, <a class="el" href="rpc_2fts_2analyzer_2TrajectoryWriter_8tpp_source.html#l00062">Pscf::Rpc::TrajectoryWriter&lt; D &gt;::writeFrame()</a>, <a class="el" href="rpc_2fts_2analyzer_2ConcentrationWriter_8tpp_source.html#l00087">Pscf::Rpc::ConcentrationWriter&lt; D &gt;::writeHeader()</a>, and <a class="el" href="rpc_2fts_2analyzer_2TrajectoryWriter_8tpp_source.html#l00077">Pscf::Rpc::TrajectoryWriter&lt; D &gt;::writeHeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2fts_2analyzer_2ConcentrationWriter_8tpp_source.html#l00068">Pscf::Rpc::ConcentrationWriter&lt; D &gt;::writeFrame()</a>, <a class="el" href="rpc_2fts_2analyzer_2TrajectoryWriter_8tpp_source.html#l00064">Pscf::Rpc::TrajectoryWriter&lt; D &gt;::writeFrame()</a>, <a class="el" href="rpc_2fts_2analyzer_2ConcentrationWriter_8tpp_source.html#l00087">Pscf::Rpc::ConcentrationWriter&lt; D &gt;::writeHeader()</a>, and <a class="el" href="rpc_2fts_2analyzer_2TrajectoryWriter_8tpp_source.html#l00079">Pscf::Rpc::TrajectoryWriter&lt; D &gt;::writeHeader()</a>.</p>
 
 </div>
 </div>
@@ -883,7 +883,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the lattice system (enumeration value). </p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00059">Pscf::Rpc::FilmFieldGenMask&lt; D &gt;::stress()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00062">Pscf::Rpc::FilmFieldGenMask&lt; D &gt;::stress()</a>.</p>
 
 </div>
 </div>

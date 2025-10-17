@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -78,10 +78,8 @@ Inheritance diagram for Pscf::R1d::Propagator:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a29008859c02f6ffd6142e11f2d9558d9" id="r_a29008859c02f6ffd6142e11f2d9558d9"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29008859c02f6ffd6142e11f2d9558d9">FieldT</a></td></tr>
-<tr class="memdesc:a29008859c02f6ffd6142e11f2d9558d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic field (function of position).  <br /></td></tr>
-<tr class="memitem:a2bfb2e152c29fc184b653eb824e53a3c" id="r_a2bfb2e152c29fc184b653eb824e53a3c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bfb2e152c29fc184b653eb824e53a3c">QFieldT</a></td></tr>
-<tr class="memdesc:a2bfb2e152c29fc184b653eb824e53a3c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1R1d_1_1Propagator.html" title="MDE solver for one-direction of one block.">Propagator</a> q-field type.  <br /></td></tr>
+<tr class="memitem:af6953b7273cf5792d5abf93ce8d3c929" id="r_af6953b7273cf5792d5abf93ce8d3c929"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6953b7273cf5792d5abf93ce8d3c929">FieldT</a> = <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt;double&gt;</td></tr>
+<tr class="memdesc:af6953b7273cf5792d5abf93ce8d3c929"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic field (function of position).  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -97,16 +95,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae3a47ade6b1b1eec222e81e1eac18af8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reallocate memory used by this propagator.  <br /></td></tr>
 <tr class="memitem:a7f8008fcc059506f779c9b4f23033a15" id="r_a7f8008fcc059506f779c9b4f23033a15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f8008fcc059506f779c9b4f23033a15">solve</a> ()</td></tr>
 <tr class="memdesc:a7f8008fcc059506f779c9b4f23033a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the modified diffusion equation (MDE) for this block.  <br /></td></tr>
-<tr class="memitem:a3eba400207dbcb3f2602598846505378" id="r_a3eba400207dbcb3f2602598846505378"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3eba400207dbcb3f2602598846505378">solve</a> (const <a class="el" href="#a2bfb2e152c29fc184b653eb824e53a3c">QFieldT</a> &amp;<a class="el" href="#aa67cdc1567f2ad38dc960373eeddf130">head</a>)</td></tr>
-<tr class="memdesc:a3eba400207dbcb3f2602598846505378"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the MDE for a specified initial condition.  <br /></td></tr>
+<tr class="memitem:a3beda137be14b17fe20daab2f943fd16" id="r_a3beda137be14b17fe20daab2f943fd16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3beda137be14b17fe20daab2f943fd16">solve</a> (const <a class="el" href="#af6953b7273cf5792d5abf93ce8d3c929">FieldT</a> &amp;<a class="el" href="#a25d6d88e6a0924328b0455be9748be64">head</a>)</td></tr>
+<tr class="memdesc:a3beda137be14b17fe20daab2f943fd16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the MDE for a specified initial condition.  <br /></td></tr>
 <tr class="memitem:ad00f62fcded22702b1ef38baca0fff90" id="r_ad00f62fcded22702b1ef38baca0fff90"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad00f62fcded22702b1ef38baca0fff90">computeQ</a> ()</td></tr>
 <tr class="memdesc:ad00f62fcded22702b1ef38baca0fff90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute and return partition function for the molecule.  <br /></td></tr>
-<tr class="memitem:a15f775f6d80e2bd350d4469bf765e96f" id="r_a15f775f6d80e2bd350d4469bf765e96f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a2bfb2e152c29fc184b653eb824e53a3c">QFieldT</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15f775f6d80e2bd350d4469bf765e96f">q</a> (int i) const</td></tr>
-<tr class="memdesc:a15f775f6d80e2bd350d4469bf765e96f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return q-field at specified step.  <br /></td></tr>
-<tr class="memitem:aa67cdc1567f2ad38dc960373eeddf130" id="r_aa67cdc1567f2ad38dc960373eeddf130"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a2bfb2e152c29fc184b653eb824e53a3c">QFieldT</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa67cdc1567f2ad38dc960373eeddf130">head</a> () const</td></tr>
-<tr class="memdesc:aa67cdc1567f2ad38dc960373eeddf130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return q-field at beginning of block (initial condition).  <br /></td></tr>
-<tr class="memitem:a50a21a6856be1761369fd31a6d2406f1" id="r_a50a21a6856be1761369fd31a6d2406f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a2bfb2e152c29fc184b653eb824e53a3c">QFieldT</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50a21a6856be1761369fd31a6d2406f1">tail</a> () const</td></tr>
-<tr class="memdesc:a50a21a6856be1761369fd31a6d2406f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return q-field at end of block.  <br /></td></tr>
+<tr class="memitem:a615c91f9a854baa1d83f5e4e6c644593" id="r_a615c91f9a854baa1d83f5e4e6c644593"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#af6953b7273cf5792d5abf93ce8d3c929">FieldT</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a615c91f9a854baa1d83f5e4e6c644593">q</a> (int i) const</td></tr>
+<tr class="memdesc:a615c91f9a854baa1d83f5e4e6c644593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return q-field at specified step.  <br /></td></tr>
+<tr class="memitem:a25d6d88e6a0924328b0455be9748be64" id="r_a25d6d88e6a0924328b0455be9748be64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#af6953b7273cf5792d5abf93ce8d3c929">FieldT</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25d6d88e6a0924328b0455be9748be64">head</a> () const</td></tr>
+<tr class="memdesc:a25d6d88e6a0924328b0455be9748be64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return q-field at beginning of block (initial condition).  <br /></td></tr>
+<tr class="memitem:a44e9196712ae4aba0eddfc35b3f8b38b" id="r_a44e9196712ae4aba0eddfc35b3f8b38b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#af6953b7273cf5792d5abf93ce8d3c929">FieldT</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44e9196712ae4aba0eddfc35b3f8b38b">tail</a> () const</td></tr>
+<tr class="memdesc:a44e9196712ae4aba0eddfc35b3f8b38b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return q-field at end of block.  <br /></td></tr>
 <tr class="memitem:a619d7cec06ee83d9d5b8e36a34ff4e98" id="r_a619d7cec06ee83d9d5b8e36a34ff4e98"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a619d7cec06ee83d9d5b8e36a34ff4e98">ns</a> () const</td></tr>
 <tr class="memdesc:a619d7cec06ee83d9d5b8e36a34ff4e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of values of s (or slices), including head and tail.  <br /></td></tr>
 <tr class="memitem:a38ccd94ea08a6418e0a7cc34bbab1e2c" id="r_a38ccd94ea08a6418e0a7cc34bbab1e2c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38ccd94ea08a6418e0a7cc34bbab1e2c">isAllocated</a> () const</td></tr>
@@ -146,41 +144,23 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>MDE solver for one-direction of one block. </p>
 
-<p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00026">26</a> of file <a class="el" href="r1d_2solvers_2Propagator_8h_source.html">r1d/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00025">25</a> of file <a class="el" href="r1d_2solvers_2Propagator_8h_source.html">r1d/solvers/Propagator.h</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
-<a id="a29008859c02f6ffd6142e11f2d9558d9" name="a29008859c02f6ffd6142e11f2d9558d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29008859c02f6ffd6142e11f2d9558d9">&#9670;&#160;</a></span>FieldT</h2>
+<a id="af6953b7273cf5792d5abf93ce8d3c929" name="af6953b7273cf5792d5abf93ce8d3c929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6953b7273cf5792d5abf93ce8d3c929">&#9670;&#160;</a></span>FieldT</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt;double&gt; <a class="el" href="#a29008859c02f6ffd6142e11f2d9558d9">Pscf::R1d::Propagator::FieldT</a></td>
+          <td class="memname">using <a class="el" href="#af6953b7273cf5792d5abf93ce8d3c929">Pscf::R1d::Propagator::FieldT</a> = <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt;double&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Generic field (function of position). </p>
 
-<p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00036">36</a> of file <a class="el" href="r1d_2solvers_2Propagator_8h_source.html">r1d/solvers/Propagator.h</a>.</p>
-
-</div>
-</div>
-<a id="a2bfb2e152c29fc184b653eb824e53a3c" name="a2bfb2e152c29fc184b653eb824e53a3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bfb2e152c29fc184b653eb824e53a3c">&#9670;&#160;</a></span>QFieldT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt;double&gt; <a class="el" href="#a2bfb2e152c29fc184b653eb824e53a3c">Pscf::R1d::Propagator::QFieldT</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classPscf_1_1R1d_1_1Propagator.html" title="MDE solver for one-direction of one block.">Propagator</a> q-field type. </p>
-
-<p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00041">41</a> of file <a class="el" href="r1d_2solvers_2Propagator_8h_source.html">r1d/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00035">35</a> of file <a class="el" href="r1d_2solvers_2Propagator_8h_source.html">r1d/solvers/Propagator.h</a>.</p>
 
 </div>
 </div>
@@ -259,7 +239,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00220">220</a> of file <a class="el" href="r1d_2solvers_2Propagator_8h_source.html">r1d/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00214">214</a> of file <a class="el" href="r1d_2solvers_2Propagator_8h_source.html">r1d/solvers/Propagator.h</a>.</p>
 
 </div>
 </div>
@@ -293,7 +273,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8cpp_source.html#l00037">37</a> of file <a class="el" href="r1d_2solvers_2Propagator_8cpp_source.html">r1d/solvers/Propagator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00214">ns()</a>.</p>
+<p class="reference">References <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00208">ns()</a>.</p>
 
 </div>
 </div>
@@ -324,7 +304,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8cpp_source.html#l00051">51</a> of file <a class="el" href="r1d_2solvers_2Propagator_8cpp_source.html">r1d/solvers/Propagator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00214">ns()</a>, <a class="el" href="PropagatorTmpl_8h_source.html#l00336">Pscf::PropagatorTmpl&lt; Propagator &gt;::setIsSolved()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00208">ns()</a>, <a class="el" href="PropagatorTmpl_8h_source.html#l00336">Pscf::PropagatorTmpl&lt; Propagator &gt;::setIsSolved()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -352,8 +332,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3eba400207dbcb3f2602598846505378" name="a3eba400207dbcb3f2602598846505378"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3eba400207dbcb3f2602598846505378">&#9670;&#160;</a></span>solve() <span class="overload">[2/2]</span></h2>
+<a id="a3beda137be14b17fe20daab2f943fd16" name="a3beda137be14b17fe20daab2f943fd16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3beda137be14b17fe20daab2f943fd16">&#9670;&#160;</a></span>solve() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -361,7 +341,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Pscf::R1d::Propagator::solve </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a2bfb2e152c29fc184b653eb824e53a3c">QFieldT</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>head</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="#af6953b7273cf5792d5abf93ce8d3c929">FieldT</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>head</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -378,7 +358,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8cpp_source.html#l00119">119</a> of file <a class="el" href="r1d_2solvers_2Propagator_8cpp_source.html">r1d/solvers/Propagator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00187">head()</a>, and <a class="el" href="PropagatorTmpl_8h_source.html#l00336">Pscf::PropagatorTmpl&lt; Propagator &gt;::setIsSolved()</a>.</p>
+<p class="reference">References <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00181">head()</a>, and <a class="el" href="PropagatorTmpl_8h_source.html#l00336">Pscf::PropagatorTmpl&lt; Propagator &gt;::setIsSolved()</a>.</p>
 
 </div>
 </div>
@@ -402,12 +382,12 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8cpp_source.html#l00137">137</a> of file <a class="el" href="r1d_2solvers_2Propagator_8cpp_source.html">r1d/solvers/Propagator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="PropagatorTmpl_8h_source.html#l00250">Pscf::PropagatorTmpl&lt; Propagator &gt;::hasPartner()</a>, <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00187">head()</a>, <a class="el" href="PropagatorTmpl_8h_source.html#l00271">Pscf::PropagatorTmpl&lt; Propagator &gt;::isSolved()</a>, <a class="el" href="PropagatorTmpl_8h_source.html#l00343">Pscf::PropagatorTmpl&lt; Propagator &gt;::partner()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="PropagatorTmpl_8h_source.html#l00250">Pscf::PropagatorTmpl&lt; Propagator &gt;::hasPartner()</a>, <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00181">head()</a>, <a class="el" href="PropagatorTmpl_8h_source.html#l00271">Pscf::PropagatorTmpl&lt; Propagator &gt;::isSolved()</a>, <a class="el" href="PropagatorTmpl_8h_source.html#l00343">Pscf::PropagatorTmpl&lt; Propagator &gt;::partner()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
 </div>
 </div>
-<a id="a15f775f6d80e2bd350d4469bf765e96f" name="a15f775f6d80e2bd350d4469bf765e96f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15f775f6d80e2bd350d4469bf765e96f">&#9670;&#160;</a></span>q()</h2>
+<a id="a615c91f9a854baa1d83f5e4e6c644593" name="a615c91f9a854baa1d83f5e4e6c644593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a615c91f9a854baa1d83f5e4e6c644593">&#9670;&#160;</a></span>q()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -416,7 +396,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a2bfb2e152c29fc184b653eb824e53a3c">Propagator::QFieldT</a> const  &amp; Pscf::R1d::Propagator::q </td>
+          <td class="memname"><a class="el" href="#af6953b7273cf5792d5abf93ce8d3c929">Propagator::FieldT</a> const  &amp; Pscf::R1d::Propagator::q </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
           <td> const</td>
@@ -437,14 +417,14 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00199">199</a> of file <a class="el" href="r1d_2solvers_2Propagator_8h_source.html">r1d/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00193">193</a> of file <a class="el" href="r1d_2solvers_2Propagator_8h_source.html">r1d/solvers/Propagator.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="r1d_2solvers_2Block_8cpp_source.html#l00242">Pscf::R1d::Block::computeConcentration()</a>, <a class="el" href="r1d_2System_8cpp_source.html#l00722">Pscf::R1d::System::writeQ()</a>, and <a class="el" href="r1d_2System_8cpp_source.html#l00682">Pscf::R1d::System::writeQSlice()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="r1d_2solvers_2Block_8cpp_source.html#l00247">Pscf::R1d::Block::computeConcentration()</a>, <a class="el" href="r1d_2System_8cpp_source.html#l00724">Pscf::R1d::System::writeQ()</a>, and <a class="el" href="r1d_2System_8cpp_source.html#l00684">Pscf::R1d::System::writeQSlice()</a>.</p>
 
 </div>
 </div>
-<a id="aa67cdc1567f2ad38dc960373eeddf130" name="aa67cdc1567f2ad38dc960373eeddf130"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa67cdc1567f2ad38dc960373eeddf130">&#9670;&#160;</a></span>head()</h2>
+<a id="a25d6d88e6a0924328b0455be9748be64" name="a25d6d88e6a0924328b0455be9748be64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25d6d88e6a0924328b0455be9748be64">&#9670;&#160;</a></span>head()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -453,7 +433,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a2bfb2e152c29fc184b653eb824e53a3c">Propagator::QFieldT</a> const  &amp; Pscf::R1d::Propagator::head </td>
+          <td class="memname"><a class="el" href="#af6953b7273cf5792d5abf93ce8d3c929">Propagator::FieldT</a> const  &amp; Pscf::R1d::Propagator::head </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -468,14 +448,14 @@ Public Member Functions</h2></td></tr>
 
 <p>Return q-field at beginning of block (initial condition). </p>
 
-<p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00187">187</a> of file <a class="el" href="r1d_2solvers_2Propagator_8h_source.html">r1d/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00181">181</a> of file <a class="el" href="r1d_2solvers_2Propagator_8h_source.html">r1d/solvers/Propagator.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="r1d_2solvers_2Propagator_8cpp_source.html#l00137">computeQ()</a>, and <a class="el" href="r1d_2solvers_2Propagator_8cpp_source.html#l00119">solve()</a>.</p>
 
 </div>
 </div>
-<a id="a50a21a6856be1761369fd31a6d2406f1" name="a50a21a6856be1761369fd31a6d2406f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50a21a6856be1761369fd31a6d2406f1">&#9670;&#160;</a></span>tail()</h2>
+<a id="a44e9196712ae4aba0eddfc35b3f8b38b" name="a44e9196712ae4aba0eddfc35b3f8b38b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44e9196712ae4aba0eddfc35b3f8b38b">&#9670;&#160;</a></span>tail()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -484,7 +464,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a2bfb2e152c29fc184b653eb824e53a3c">Propagator::QFieldT</a> const  &amp; Pscf::R1d::Propagator::tail </td>
+          <td class="memname"><a class="el" href="#af6953b7273cf5792d5abf93ce8d3c929">Propagator::FieldT</a> const  &amp; Pscf::R1d::Propagator::tail </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -499,7 +479,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return q-field at end of block. </p>
 
-<p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00193">193</a> of file <a class="el" href="r1d_2solvers_2Propagator_8h_source.html">r1d/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00187">187</a> of file <a class="el" href="r1d_2solvers_2Propagator_8h_source.html">r1d/solvers/Propagator.h</a>.</p>
 
 </div>
 </div>
@@ -529,9 +509,9 @@ Public Member Functions</h2></td></tr>
 <p>Number of values of s (or slices), including head and tail. </p>
 <p>The value of ns is the number of values of s at which q(r,s) is calculated, including the end values at the terminating vertices (the head and tail). This is one more than the number of contour variable steps. </p>
 
-<p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00214">214</a> of file <a class="el" href="r1d_2solvers_2Propagator_8h_source.html">r1d/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="r1d_2solvers_2Propagator_8h_source.html#l00208">208</a> of file <a class="el" href="r1d_2solvers_2Propagator_8h_source.html">r1d/solvers/Propagator.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="r1d_2solvers_2Propagator_8cpp_source.html#l00037">allocate()</a>, <a class="el" href="r1d_2solvers_2Propagator_8cpp_source.html#l00051">reallocate()</a>, and <a class="el" href="r1d_2System_8cpp_source.html#l00722">Pscf::R1d::System::writeQ()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="r1d_2solvers_2Propagator_8cpp_source.html#l00037">allocate()</a>, <a class="el" href="r1d_2solvers_2Propagator_8cpp_source.html#l00051">reallocate()</a>, and <a class="el" href="r1d_2System_8cpp_source.html#l00724">Pscf::R1d::System::writeQ()</a>.</p>
 
 </div>
 </div>

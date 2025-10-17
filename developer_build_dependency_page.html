@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -59,7 +59,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p><a class="el" href="developer_build_source_page.html">Source List (sources.mk) Files</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="developer_build_pattern_page.html">Pattern Rule (patterns.mk) Files</a> (Next) <br  />
 </p>
-<p>The pattern rules used by PSCF to compile a source file create both an object file with file extension .o and a corresponding dependency file with file extension *.d. The resulting dependency file defines a makefile rule that lists all of the files that are prerequisites of the resulting object file. The pre-requisites of an object file are the files that are combined by the C preprocessor to create the translation unit that is compiled to create that object file. These prerequisites include both the associated *.cpp or *.cu source file and all of the header files and (in some cases) template implementation files that are directly or indirectly included into the source file via preprocessor #include directives.</p>
+<p>The pattern rules used by PSCF to compile a source file create both an object file with file name suffix .o and a corresponding dependency file with file suffix *.d. The resulting dependency file defines a makefile rule that lists all of the files that are prerequisites of the resulting object file. The pre-requisites of an object file are the files that are combined by the C preprocessor to create the translation unit that is compiled to create that object file. These prerequisites include both the associated *.cpp or *.cu source file and all of the header files and (in some cases) template implementation files that are directly or indirectly included into the source file via preprocessor #include directives.</p>
 <p>The dependency file associated with an object file named Class.o defines a makefile rule that, is simplified form, might look something like this: </p><div class="fragment"><div class="line">Class.o: Class.cpp Class.h Header1.h Header2.h ....</div>
 </div><!-- fragment --><p> Here, Header1.h, Header2.h, etc. represent header files other than the header containing the class definition that are directly or indirectly included into Class.cpp.</p>
 <p>The rule defined in a dependency file does not contain a recipe. The make command instead infers the required recipe from an applicable pattern rule. The pattern rules for compiling *.cpp and *.cu files are defined in the pattern rule (atterns.mk) file in the relevant namespace level directory.</p>

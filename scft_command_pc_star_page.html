@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
    </div>
   </td>
  </tr>
@@ -60,7 +60,7 @@ $(function() {
 <div class="textblock"><p><a class="el" href="scft_command_pc_page.html">Commands - pscf_pc and pscf_pg</a> (Up/Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_thermo_page.html">Thermodynamic Properties</a> (Next) <br  />
 </p>
 <p>THE WRITE_STARS command accepted by pscf_pc and pscf_pg programs writes a compact report of information about the stars of wavevectors that are related by space group symmetries. A more detailed report that contains information about individual wavevectors within each such star may be obtained by invoking the <a class="el" href="scft_command_pc_wave_page.html">WRITE_WAVES</a> command.</p>
-<p><em> Conceptual background </em>: As background, before reading this description of the output of the WRITE_STARS, we strongly recommend that users read the discussion of the relationships between "stars" and basis functions given in the documentation of the <a class="el" href="scft_field_basis_page.html">basis file format</a>. Users who would like a more complete discussion can also consult appendices that discuss crystallographic space group <a class="el" href="scft_symmetry_page.html">symmetry operations</a> and <a class="el" href="scft_basis_page.html">symmetry-adapted bases</a>.</p>
+<p><em> Conceptual background </em>: As background, before reading this description of the output of the WRITE_STARS, we strongly recommend that users read the discussion of the relationships between "stars" and basis functions given in the documentation of the <a class="el" href="user_field_basis_page.html">basis file format</a>. Users who would like a more complete discussion can also consult appendices that discuss crystallographic space group <a class="el" href="prdc_symmetry_page.html">symmetry operations</a> and <a class="el" href="prdc_basis_page.html">symmetry-adapted bases</a>.</p>
 <p><em> For users who examine the source code </em>: The format of this report is defined by the outputStars function of class template Basis&lt;int D&gt;, which is defined in the file src/pscf/crystal/Basis.tpp.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_command_pc_star_format_sec"></a>
 File Format (Overview)</h1>
