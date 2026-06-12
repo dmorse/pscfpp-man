@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -59,7 +59,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classPscf_1_1DeviceArray-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Pscf::DeviceArray&lt; Data &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Base__Module.html">Pscf Common</a> &raquo; <a class="el" href="group__Pscf__Cuda__Module.html">CUDA Utilities</a></div></div></div>
+  <div class="headertitle"><div class="title">Pscf::DeviceArray&lt; Data &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Base__Module.html">Pscf - Base Module</a> &raquo; <a class="el" href="group__Pscf__Cuda__Module.html">CUDA Utilities</a> &raquo; <a class="el" href="group__Pscf__Cuda__Containers__Module.html">Containers (GPU)</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -70,8 +70,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a178bbd0c20769260b52cfa3562426520" id="r_a178bbd0c20769260b52cfa3562426520"><td class="memItemLeft" align="right" valign="top">typedef Data&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a178bbd0c20769260b52cfa3562426520">ElementType</a></td></tr>
-<tr class="memdesc:a178bbd0c20769260b52cfa3562426520"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data type of each element.  <br /></td></tr>
+<tr class="memitem:af985b1a12e8d2dd67e64fec1ba9983cc" id="r_af985b1a12e8d2dd67e64fec1ba9983cc"><td class="memItemLeft" align="right" valign="top">typedef Data&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af985b1a12e8d2dd67e64fec1ba9983cc">ValueType</a></td></tr>
+<tr class="memdesc:af985b1a12e8d2dd67e64fec1ba9983cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data type of each element.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -81,26 +81,34 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5c91ae0c62b2ade92bd49511e01485ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocating constructor.  <br /></td></tr>
 <tr class="memitem:abf86bd2853bc441be66c4af4a998481d" id="r_abf86bd2853bc441be66c4af4a998481d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf86bd2853bc441be66c4af4a998481d">DeviceArray</a> (<a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; Data &gt; const &amp;other)</td></tr>
 <tr class="memdesc:abf86bd2853bc441be66c4af4a998481d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
+<tr class="memitem:a9a32e7d97960a293aae5f809adbef3ef" id="r_a9a32e7d97960a293aae5f809adbef3ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a32e7d97960a293aae5f809adbef3ef">DeviceArray</a> (<a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; Data &gt; const &amp;other)</td></tr>
+<tr class="memdesc:a9a32e7d97960a293aae5f809adbef3ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor, deep copy <a class="el" href="classUtil_1_1DArray.html" title="Dynamically allocatable contiguous array template.">DArray&lt;Data&gt;</a> from host to device.  <br /></td></tr>
 <tr class="memitem:a7cafb36150398610cdd82d1575d86c1c" id="r_a7cafb36150398610cdd82d1575d86c1c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cafb36150398610cdd82d1575d86c1c">~DeviceArray</a> ()</td></tr>
 <tr class="memdesc:a7cafb36150398610cdd82d1575d86c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 <tr class="memitem:acf0e7eef50f54159e0d1bbf7c355f3c2" id="r_acf0e7eef50f54159e0d1bbf7c355f3c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf0e7eef50f54159e0d1bbf7c355f3c2">allocate</a> (int <a class="el" href="#aac902e929dc8df89b772d712aa7b7bca">capacity</a>)</td></tr>
 <tr class="memdesc:acf0e7eef50f54159e0d1bbf7c355f3c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate the underlying C array on the device.  <br /></td></tr>
-<tr class="memitem:aa45d5bf2de4ee19cedb64487935c4812" id="r_aa45d5bf2de4ee19cedb64487935c4812"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa45d5bf2de4ee19cedb64487935c4812">associate</a> (<a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; Data &gt; &amp;arr, int beginId, int <a class="el" href="#aac902e929dc8df89b772d712aa7b7bca">capacity</a>)</td></tr>
-<tr class="memdesc:aa45d5bf2de4ee19cedb64487935c4812"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate this object with a slice of a different <a class="el" href="classPscf_1_1DeviceArray.html" title="Dynamic array on the GPU device with aligned data.">DeviceArray</a>.  <br /></td></tr>
 <tr class="memitem:a380440982065fb63a97fd1d6e7e2b06f" id="r_a380440982065fb63a97fd1d6e7e2b06f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a380440982065fb63a97fd1d6e7e2b06f">deallocate</a> ()</td></tr>
 <tr class="memdesc:a380440982065fb63a97fd1d6e7e2b06f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dellocate the underlying C array.  <br /></td></tr>
+<tr class="memitem:aa45d5bf2de4ee19cedb64487935c4812" id="r_aa45d5bf2de4ee19cedb64487935c4812"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa45d5bf2de4ee19cedb64487935c4812">associate</a> (<a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; Data &gt; &amp;arr, int beginId, int <a class="el" href="#aac902e929dc8df89b772d712aa7b7bca">capacity</a>)</td></tr>
+<tr class="memdesc:aa45d5bf2de4ee19cedb64487935c4812"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate this object with a slice of a different <a class="el" href="classPscf_1_1DeviceArray.html" title="Dynamic array on the GPU device with aligned data.">DeviceArray</a>.  <br /></td></tr>
+<tr class="memitem:a37b306594eba6a4dafdcfe805ea3a748" id="r_a37b306594eba6a4dafdcfe805ea3a748"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37b306594eba6a4dafdcfe805ea3a748">associate</a> (<a class="el" href="classPscf_1_1DeviceMemory.html">DeviceMemory</a> &amp;arr, int <a class="el" href="#aac902e929dc8df89b772d712aa7b7bca">capacity</a>)</td></tr>
+<tr class="memdesc:a37b306594eba6a4dafdcfe805ea3a748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate this object with a <a class="el" href="classPscf_1_1DeviceMemory.html" title="Block of bare memory allocated on the GPU device.">DeviceMemory</a> container.  <br /></td></tr>
 <tr class="memitem:a758be5bdfa20dc26a3a3d44f9ec2a308" id="r_a758be5bdfa20dc26a3a3d44f9ec2a308"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a758be5bdfa20dc26a3a3d44f9ec2a308">dissociate</a> ()</td></tr>
-<tr class="memdesc:a758be5bdfa20dc26a3a3d44f9ec2a308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dissociate this object from the associated array.  <br /></td></tr>
+<tr class="memdesc:a758be5bdfa20dc26a3a3d44f9ec2a308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dissociate this object from an externally owned memory block.  <br /></td></tr>
+<tr class="memitem:a2b66b93a2b23fe9926852b5e1089a245" id="r_a2b66b93a2b23fe9926852b5e1089a245"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b66b93a2b23fe9926852b5e1089a245">addReference</a> (<a class="el" href="classUtil_1_1CountedReference.html">CountedReference</a> &amp;reference)</td></tr>
+<tr class="memdesc:a2b66b93a2b23fe9926852b5e1089a245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate a reference with reference counter for this container.  <br /></td></tr>
 <tr class="memitem:a96f5a45526916c27ac2d31e7764ec51b" id="r_a96f5a45526916c27ac2d31e7764ec51b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; Data &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96f5a45526916c27ac2d31e7764ec51b">operator=</a> (const <a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; Data &gt; &amp;other)</td></tr>
 <tr class="memdesc:a96f5a45526916c27ac2d31e7764ec51b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator, assign from another DeviceArray&lt;Data&gt; array.  <br /></td></tr>
-<tr class="memitem:ac040fe35165d81562046bfc9d51db415" id="r_ac040fe35165d81562046bfc9d51db415"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; Data &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac040fe35165d81562046bfc9d51db415">operator=</a> (const <a class="el" href="classPscf_1_1HostDArray.html">HostDArray</a>&lt; Data &gt; &amp;other)</td></tr>
-<tr class="memdesc:ac040fe35165d81562046bfc9d51db415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator, assignment from <a class="el" href="classPscf_1_1HostDArray.html" title="Template for dynamic array stored in host CPU memory.">HostDArray&lt;Data&gt;</a> host array.  <br /></td></tr>
+<tr class="memitem:a20aaa6e5ba41206eacefeead8fc641cb" id="r_a20aaa6e5ba41206eacefeead8fc641cb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; Data &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20aaa6e5ba41206eacefeead8fc641cb">operator=</a> (const <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; Data &gt; &amp;other)</td></tr>
+<tr class="memdesc:a20aaa6e5ba41206eacefeead8fc641cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator, assignment from <a class="el" href="classUtil_1_1DArray.html" title="Dynamically allocatable contiguous array template.">Util::DArray&lt;Data&gt;</a> host array.  <br /></td></tr>
 <tr class="memitem:aac902e929dc8df89b772d712aa7b7bca" id="r_aac902e929dc8df89b772d712aa7b7bca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac902e929dc8df89b772d712aa7b7bca">capacity</a> () const</td></tr>
-<tr class="memdesc:aac902e929dc8df89b772d712aa7b7bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return allocated capacity.  <br /></td></tr>
+<tr class="memdesc:aac902e929dc8df89b772d712aa7b7bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return array capacity.  <br /></td></tr>
 <tr class="memitem:a9756f28aae439b2bfbd05793b1e19c95" id="r_a9756f28aae439b2bfbd05793b1e19c95"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9756f28aae439b2bfbd05793b1e19c95">isAllocated</a> () const</td></tr>
-<tr class="memdesc:a9756f28aae439b2bfbd05793b1e19c95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the array has been allocated, false otherwise.  <br /></td></tr>
+<tr class="memdesc:a9756f28aae439b2bfbd05793b1e19c95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the array has allocated data, false otherwise.  <br /></td></tr>
 <tr class="memitem:a1a8ae81934bd38ac9568482d16478014" id="r_a1a8ae81934bd38ac9568482d16478014"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a8ae81934bd38ac9568482d16478014">isOwner</a> () const</td></tr>
-<tr class="memdesc:a1a8ae81934bd38ac9568482d16478014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this object own the underlying data?  <br /></td></tr>
+<tr class="memdesc:a1a8ae81934bd38ac9568482d16478014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this container own an allocated memory block?  <br /></td></tr>
+<tr class="memitem:a0c12b6a1a757354462ebc82f70bc4a1f" id="r_a0c12b6a1a757354462ebc82f70bc4a1f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c12b6a1a757354462ebc82f70bc4a1f">isAssociated</a> () const</td></tr>
+<tr class="memdesc:a0c12b6a1a757354462ebc82f70bc4a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this container associated with a memory block it does not own?  <br /></td></tr>
 <tr class="memitem:aedc681c6110fffabf4d72160619d0d45" id="r_aedc681c6110fffabf4d72160619d0d45"><td class="memItemLeft" align="right" valign="top">Data *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedc681c6110fffabf4d72160619d0d45">cArray</a> ()</td></tr>
 <tr class="memdesc:aedc681c6110fffabf4d72160619d0d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pointer to underlying C array.  <br /></td></tr>
 <tr class="memitem:ad7b15857176ec46517f4dbf774c7f50c" id="r_ad7b15857176ec46517f4dbf774c7f50c"><td class="memItemLeft" align="right" valign="top">Data const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7b15857176ec46517f4dbf774c7f50c">cArray</a> () const</td></tr>
@@ -112,23 +120,34 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:ab736ffcf52ee02fe44b6089a8714fddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to a C array of Data elements on the GPU device.  <br /></td></tr>
 <tr class="memitem:a5fe289337264d6f71fb55dc2e7eaedb8" id="r_a5fe289337264d6f71fb55dc2e7eaedb8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fe289337264d6f71fb55dc2e7eaedb8">capacity_</a></td></tr>
 <tr class="memdesc:a5fe289337264d6f71fb55dc2e7eaedb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocated size (capacity) of the array.  <br /></td></tr>
-<tr class="memitem:a326bbe648866e31f1255daa15a9e73b1" id="r_a326bbe648866e31f1255daa15a9e73b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; Data &gt; const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a326bbe648866e31f1255daa15a9e73b1">ownerPtr_</a></td></tr>
-<tr class="memdesc:a326bbe648866e31f1255daa15a9e73b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to array that owns this data, if isOwner_ == false.  <br /></td></tr>
-<tr class="memitem:a8dca95225b2f1908cbb5903636a86081" id="r_a8dca95225b2f1908cbb5903636a86081"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dca95225b2f1908cbb5903636a86081">ownerCapacity_</a></td></tr>
-<tr class="memdesc:a8dca95225b2f1908cbb5903636a86081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Capacity of parent array, if isOwner_ == false.  <br /></td></tr>
-<tr class="memitem:a9674921ca7679135b1ea3e3d171d48f7" id="r_a9674921ca7679135b1ea3e3d171d48f7"><td class="memItemLeft" align="right" valign="top">Data const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9674921ca7679135b1ea3e3d171d48f7">ownerDataPtr_</a></td></tr>
-<tr class="memdesc:a9674921ca7679135b1ea3e3d171d48f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Const pointer to parent array, if isOwner_ == false.  <br /></td></tr>
+<tr class="memitem:a3dec8eead5c66b919d4e8736fb04f2a0" id="r_a3dec8eead5c66b919d4e8736fb04f2a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1ReferenceCounter.html">ReferenceCounter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dec8eead5c66b919d4e8736fb04f2a0">refCounter_</a></td></tr>
+<tr class="memdesc:a3dec8eead5c66b919d4e8736fb04f2a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter for any arrays that use data owned by this.  <br /></td></tr>
+<tr class="memitem:a888854c120fb36dd71ae85a6f90fa050" id="r_a888854c120fb36dd71ae85a6f90fa050"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1CountedReference.html">CountedReference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a888854c120fb36dd71ae85a6f90fa050">ref_</a></td></tr>
+<tr class="memdesc:a888854c120fb36dd71ae85a6f90fa050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to another array that owns memory used by this one.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename Data&gt;<br />
 class Pscf::DeviceArray&lt; Data &gt;</div><p>Dynamic array on the GPU device with aligned data. </p>
 <p>This class wraps an aligned C array with elements of type Data that is allocated in GPU device global memory. All member functions may be called from the CPU host, but this class does not offer access to individual elements via the subscript operator, operator[].</p>
-<p>A <a class="el" href="classPscf_1_1DeviceArray.html" title="Dynamic array on the GPU device with aligned data.">DeviceArray</a> can have one of two different relationships with its underlying data. In case 1, the data are owned by this object, so the allocation and destruction of the C array are performed by this object. In case 2, this object is instead "associated" with a slice of an array owned by a different <a class="el" href="classPscf_1_1DeviceArray.html" title="Dynamic array on the GPU device with aligned data.">DeviceArray</a>. If this is the case, this object is not responsible for allocation or destruction of the underlying C array, and merely acts as a reference to the slice of the other array to which it is associated. </p>
+<p>A <a class="el" href="classPscf_1_1DeviceArray.html" title="Dynamic array on the GPU device with aligned data.">DeviceArray</a> can be in any of three states:</p>
+<p>(1) Unallocated: In this state, there is no associated memory, so <a class="el" href="#aac902e929dc8df89b772d712aa7b7bca" title="Return array capacity.">capacity()</a> returns 0, while <a class="el" href="#a9756f28aae439b2bfbd05793b1e19c95" title="Return true if the array has allocated data, false otherwise.">isAllocated()</a>, <a class="el" href="#a1a8ae81934bd38ac9568482d16478014" title="Does this container own an allocated memory block?">isOwner()</a> and <a class="el" href="#a0c12b6a1a757354462ebc82f70bc4a1f" title="Is this container associated with a memory block it does not own?">isAssociated()</a> all return false.</p>
+<p>(2) A data owner: In this case, this object owns a block of memory that it is responsible for de-allocating. In this state, <a class="el" href="#aac902e929dc8df89b772d712aa7b7bca" title="Return array capacity.">capacity()</a> returns a positive integer value, <a class="el" href="#a9756f28aae439b2bfbd05793b1e19c95" title="Return true if the array has allocated data, false otherwise.">isAllocated()</a> and <a class="el" href="#a1a8ae81934bd38ac9568482d16478014" title="Does this container own an allocated memory block?">isOwner()</a> return true, and <a class="el" href="#a0c12b6a1a757354462ebc82f70bc4a1f" title="Is this container associated with a memory block it does not own?">isAssociated()</a> returns false.</p>
+<p>(3) A data user: In this case, this object has a pointer to a block of device memory that is owned by a different container. We describe this by saying this <a class="el" href="classPscf_1_1DeviceArray.html" title="Dynamic array on the GPU device with aligned data.">DeviceArray</a> (the data user) is "associated" with or "references" memory owned by another container (the data owner). In this state, <a class="el" href="#aac902e929dc8df89b772d712aa7b7bca" title="Return array capacity.">capacity()</a> returns a positive value, <a class="el" href="#a9756f28aae439b2bfbd05793b1e19c95" title="Return true if the array has allocated data, false otherwise.">isAllocated()</a> and <a class="el" href="#a0c12b6a1a757354462ebc82f70bc4a1f" title="Is this container associated with a memory block it does not own?">isAssociated()</a> return true, and <a class="el" href="#a1a8ae81934bd38ac9568482d16478014" title="Does this container own an allocated memory block?">isOwner()</a> returns false.</p>
+<p><a class="el" href="classUtil_1_1Memory.html" title="Provides method to allocate array.">Memory</a> that is owned by a <a class="el" href="classPscf_1_1DeviceArray.html" title="Dynamic array on the GPU device with aligned data.">DeviceArray</a> may be allocated and deallocated by the <a class="el" href="#acf0e7eef50f54159e0d1bbf7c355f3c2" title="Allocate the underlying C array on the device.">allocate()</a> and <a class="el" href="#a380440982065fb63a97fd1d6e7e2b06f" title="Dellocate the underlying C array.">deallocate()</a> member functions. <a class="el" href="classUtil_1_1Memory.html" title="Provides method to allocate array.">Memory</a> owned by a <a class="el" href="classPscf_1_1DeviceArray.html" title="Dynamic array on the GPU device with aligned data.">DeviceArray</a> is also dellocated when the <a class="el" href="classPscf_1_1DeviceArray.html" title="Dynamic array on the GPU device with aligned data.">DeviceArray</a> is destroyed.</p>
+<p>A DeviceArray&lt;Data&gt; object may be associated as a data user with:</p>
+<ul>
+<li>A slice of an array of Data objects owned by another DeviceArray&lt;Data&gt;, or</li>
+<li>A block of bare memory owned by a <a class="el" href="classPscf_1_1DeviceMemory.html" title="Block of bare memory allocated on the GPU device.">DeviceMemory</a> container</li>
+</ul>
+<p>Associations with either type of data owner can be created and destroyed by calling the associate and dissociate member functions of the data user. Attempts to create an association cause an <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a> to be thrown if the requested slice of shared data would exceed the bounds of the block owned by the data owner.</p>
+<p>A DeviceArray&lt;Data&gt; that serves as an owner of data that is used by one or more other associated DeviceArray&lt;Data&gt; objects maintains a count of how many associated objects refer to its data. This counter is incremented when an association is created by a data user and decremented when the user destroys the association.</p>
+<p>When a DeviceArray&lt;Data&gt; object is destroyed, any data that it owns is automatically deallocated, and any association with external data is destroyed.</p>
+<p>It is an error to deallocate memory owned by a <a class="el" href="classPscf_1_1DeviceArray.html" title="Dynamic array on the GPU device with aligned data.">DeviceArray</a> or <a class="el" href="classPscf_1_1DeviceMemory.html" title="Block of bare memory allocated on the GPU device.">DeviceMemory</a> container that is still referred to by one or more associated <a class="el" href="classPscf_1_1DeviceArray.html" title="Dynamic array on the GPU device with aligned data.">DeviceArray</a> data users. Doing so is illegal because it creates dangling pointers. Attempts to prematurely deallocate such a shared memory block either cause an <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a> to be thrown, if it occurs within the deallocate function, or cause an error message to be written to std::cout if the error occurs in the <a class="el" href="classPscf_1_1DeviceArray.html" title="Dynamic array on the GPU device with aligned data.">DeviceArray</a> destructor function. All references to such a shared data block must thus be released, by calling the <a class="el" href="#a758be5bdfa20dc26a3a3d44f9ec2a308" title="Dissociate this object from an externally owned memory block.">dissociate()</a> member function of each data user, before the data owner can be safely destroyed. </p>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00042">42</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00095">95</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
-<a id="a178bbd0c20769260b52cfa3562426520" name="a178bbd0c20769260b52cfa3562426520"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a178bbd0c20769260b52cfa3562426520">&#9670;&#160;</a></span>ElementType</h2>
+<a id="af985b1a12e8d2dd67e64fec1ba9983cc" name="af985b1a12e8d2dd67e64fec1ba9983cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af985b1a12e8d2dd67e64fec1ba9983cc">&#9670;&#160;</a></span>ValueType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,20 +155,20 @@ class Pscf::DeviceArray&lt; Data &gt;</div><p>Dynamic array on the GPU device wi
 template&lt;typename Data&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef Data <a class="el" href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a>&lt; Data &gt;::ElementType</td>
+          <td class="memname">typedef Data <a class="el" href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a>&lt; Data &gt;::ValueType</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Data type of each element. </p>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00050">50</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00103">103</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
 </div>
 </div>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0fe2b80b4127647db71da668fe9a8a45" name="a0fe2b80b4127647db71da668fe9a8a45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0fe2b80b4127647db71da668fe9a8a45">&#9670;&#160;</a></span>DeviceArray() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fe2b80b4127647db71da668fe9a8a45">&#9670;&#160;</a></span>DeviceArray() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,16 +186,16 @@ template&lt;typename Data&gt; </div>
 
 <p>Default constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00210">210</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00346">346</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00179">capacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00176">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00195">ownerCapacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00203">ownerDataPtr_</a>, and <a class="el" href="DeviceArray_8h_source.html#l00187">ownerPtr_</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00292">capacity_</a>, and <a class="el" href="DeviceArray_8h_source.html#l00289">dataPtr_</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DeviceArray_8h_source.html#l00285">associate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00236">DeviceArray()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00350">operator=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DeviceArray_8h_source.html#l00459">associate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00366">DeviceArray()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00528">operator=()</a>.</p>
 
 </div>
 </div>
 <a id="a5c91ae0c62b2ade92bd49511e01485ba" name="a5c91ae0c62b2ade92bd49511e01485ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c91ae0c62b2ade92bd49511e01485ba">&#9670;&#160;</a></span>DeviceArray() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c91ae0c62b2ade92bd49511e01485ba">&#9670;&#160;</a></span>DeviceArray() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,14 +220,14 @@ template&lt;typename Data&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00222">222</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00355">355</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00264">allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00460">capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00179">capacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00176">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00195">ownerCapacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00203">ownerDataPtr_</a>, and <a class="el" href="DeviceArray_8h_source.html#l00187">ownerPtr_</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00424">allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00308">capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00292">capacity_</a>, and <a class="el" href="DeviceArray_8h_source.html#l00289">dataPtr_</a>.</p>
 
 </div>
 </div>
 <a id="abf86bd2853bc441be66c4af4a998481d" name="abf86bd2853bc441be66c4af4a998481d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf86bd2853bc441be66c4af4a998481d">&#9670;&#160;</a></span>DeviceArray() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abf86bd2853bc441be66c4af4a998481d">&#9670;&#160;</a></span>DeviceArray() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -232,9 +251,40 @@ template&lt;typename Data&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00236">236</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00366">366</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00264">allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00179">capacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00176">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00210">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00444">isAllocated()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00424">allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00292">capacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00590">cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00289">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00346">DeviceArray()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00315">isAllocated()</a>.</p>
+
+</div>
+</div>
+<a id="a9a32e7d97960a293aae5f809adbef3ef" name="a9a32e7d97960a293aae5f809adbef3ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a32e7d97960a293aae5f809adbef3ef">&#9670;&#160;</a></span>DeviceArray() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Data&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a>&lt; Data &gt;::DeviceArray </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; Data &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy constructor, deep copy <a class="el" href="classUtil_1_1DArray.html" title="Dynamically allocatable contiguous array template.">DArray&lt;Data&gt;</a> from host to device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="classUtil_1_1DArray.html" title="Dynamically allocatable contiguous array template.">DArray&lt;Data&gt;</a> to be copied (input) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00386">386</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00424">allocate()</a>, <a class="el" href="Array_8h_source.html#l00144">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00292">capacity_</a>, <a class="el" href="Array_8h_source.html#l00199">Util::Array&lt; Data &gt;::cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00289">dataPtr_</a>, and <a class="el" href="DArray_8h_source.html#l00151">Util::DArray&lt; Data &gt;::isAllocated()</a>.</p>
 
 </div>
 </div>
@@ -266,9 +316,9 @@ template&lt;typename Data&gt; </div>
 <p>Destructor. </p>
 <p>Deletes underlying C array, if allocated previously. </p>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00252">252</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00404">404</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00179">capacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00176">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00444">isAllocated()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00467">isOwner()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00289">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00322">isOwner()</a>, <a class="el" href="DeviceArray_8h_source.html#l00298">ref_</a>, and <a class="el" href="DeviceArray_8h_source.html#l00295">refCounter_</a>.</p>
 
 </div>
 </div>
@@ -304,16 +354,48 @@ template&lt;typename Data&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00264">264</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00424">424</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00179">capacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00176">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00444">isAllocated()</a>, <a class="el" href="DeviceArray_8h_source.html#l00187">ownerPtr_</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00308">capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00292">capacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00289">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00315">isAllocated()</a>, <a class="el" href="DeviceArray_8h_source.html#l00298">ref_</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DeviceArray_8h_source.html#l00236">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00222">DeviceArray()</a>, <a class="el" href="Reduce_8cu_source.html#l00891">Pscf::Prdc::Cuda::Reduce::innerProduct()</a>, <a class="el" href="Reduce_8cu_source.html#l00569">Pscf::Prdc::Cuda::Reduce::max()</a>, <a class="el" href="Reduce_8cu_source.html#l00648">Pscf::Prdc::Cuda::Reduce::maxAbs()</a>, <a class="el" href="Reduce_8cu_source.html#l00730">Pscf::Prdc::Cuda::Reduce::min()</a>, <a class="el" href="Reduce_8cu_source.html#l00809">Pscf::Prdc::Cuda::Reduce::minAbs()</a>, <a class="el" href="DeviceArray_8h_source.html#l00350">operator=()</a>, <a class="el" href="DeviceArray_8h_source.html#l00383">operator=()</a>, and <a class="el" href="Reduce_8cu_source.html#l00480">Pscf::Prdc::Cuda::Reduce::sum()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cuda_2CField_8tpp_source.html#l00093">Pscf::Prdc::Cuda::CField&lt; D &gt;::allocate()</a>, <a class="el" href="cuda_2RField_8tpp_source.html#l00056">Pscf::Prdc::Cuda::RField&lt; D &gt;::allocate()</a>, <a class="el" href="cuda_2RFieldDft_8tpp_source.html#l00098">Pscf::Prdc::Cuda::RFieldDft&lt; D &gt;::allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00386">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00366">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00355">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00561">operator=()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00528">operator=()</a>.</p>
+
+</div>
+</div>
+<a id="a380440982065fb63a97fd1d6e7e2b06f" name="a380440982065fb63a97fd1d6e7e2b06f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a380440982065fb63a97fd1d6e7e2b06f">&#9670;&#160;</a></span>deallocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Data&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a>&lt; Data &gt;::deallocate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dellocate the underlying C array. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a></td><td>if the array is not allocated. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a></td><td>if this object does not own the array. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00445">445</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00292">capacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00289">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00298">ref_</a>, <a class="el" href="DeviceArray_8h_source.html#l00295">refCounter_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
 <a id="aa45d5bf2de4ee19cedb64487935c4812" name="aa45d5bf2de4ee19cedb64487935c4812"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa45d5bf2de4ee19cedb64487935c4812">&#9670;&#160;</a></span>associate()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa45d5bf2de4ee19cedb64487935c4812">&#9670;&#160;</a></span>associate() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -349,21 +431,21 @@ template&lt;typename Data&gt; </div>
   <table class="params">
     <tr><td class="paramname">arr</td><td>parent array that owns the data </td></tr>
     <tr><td class="paramname">beginId</td><td>index in the parent array at which this array starts </td></tr>
-    <tr><td class="paramname">capacity</td><td>number of elements to allocate </td></tr>
+    <tr><td class="paramname">capacity</td><td>number of elements associated with this container </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00285">285</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00459">459</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00460">capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00179">capacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00176">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00210">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00444">isAllocated()</a>, <a class="el" href="DeviceArray_8h_source.html#l00467">isOwner()</a>, <a class="el" href="DeviceArray_8h_source.html#l00195">ownerCapacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00203">ownerDataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00187">ownerPtr_</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00520">addReference()</a>, <a class="el" href="DeviceArray_8h_source.html#l00308">capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00292">capacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00590">cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00289">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00346">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00315">isAllocated()</a>, <a class="el" href="DeviceArray_8h_source.html#l00322">isOwner()</a>, <a class="el" href="DeviceArray_8h_source.html#l00298">ref_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="cuda_2CField_8tpp_source.html#l00108">Pscf::Prdc::Cuda::CField&lt; D &gt;::associate()</a>, <a class="el" href="cuda_2RField_8tpp_source.html#l00071">Pscf::Prdc::Cuda::RField&lt; D &gt;::associate()</a>, and <a class="el" href="cuda_2RFieldDft_8tpp_source.html#l00118">Pscf::Prdc::Cuda::RFieldDft&lt; D &gt;::associate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cuda_2CField_8tpp_source.html#l00108">Pscf::Prdc::Cuda::CField&lt; D &gt;::associate()</a>, <a class="el" href="cuda_2RField_8tpp_source.html#l00071">Pscf::Prdc::Cuda::RField&lt; D &gt;::associate()</a>, <a class="el" href="cuda_2RFieldDft_8tpp_source.html#l00118">Pscf::Prdc::Cuda::RFieldDft&lt; D &gt;::associate()</a>, <a class="el" href="Reduce_8cu_source.html#l00352">Pscf::Reduce::innerProduct()</a>, <a class="el" href="Reduce_8cu_source.html#l00410">Pscf::Reduce::maxAbs()</a>, <a class="el" href="Reduce_8cu_source.html#l00465">Pscf::Reduce::minAbs()</a>, <a class="el" href="Reduce_8cu_source.html#l00304">Pscf::Reduce::sumSq()</a>, <a class="el" href="Reduce_8cu_source.html#l00281">Pscf::Reduce::sumSq()</a>, and <a class="el" href="Reduce_8cu_source.html#l00328">Pscf::Reduce::sumSqAbs()</a>.</p>
 
 </div>
 </div>
-<a id="a380440982065fb63a97fd1d6e7e2b06f" name="a380440982065fb63a97fd1d6e7e2b06f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a380440982065fb63a97fd1d6e7e2b06f">&#9670;&#160;</a></span>deallocate()</h2>
+<a id="a37b306594eba6a4dafdcfe805ea3a748" name="a37b306594eba6a4dafdcfe805ea3a748"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37b306594eba6a4dafdcfe805ea3a748">&#9670;&#160;</a></span>associate() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -371,28 +453,38 @@ template&lt;typename Data&gt; </div>
 template&lt;typename Data&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a>&lt; Data &gt;::deallocate </td>
+          <td class="memname">void <a class="el" href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a>&lt; Data &gt;::associate </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1DeviceMemory.html">DeviceMemory</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>arr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>capacity</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Dellocate the underlying C array. </p>
+<p>Associate this object with a <a class="el" href="classPscf_1_1DeviceMemory.html" title="Block of bare memory allocated on the GPU device.">DeviceMemory</a> container. </p>
+<p>When a DeviceArray&lt;Data&gt; is associated with a <a class="el" href="classPscf_1_1DeviceMemory.html" title="Block of bare memory allocated on the GPU device.">DeviceMemory</a> container, the shared data block begins at the first byte of the block owned by the <a class="el" href="classPscf_1_1DeviceMemory.html" title="Block of bare memory allocated on the GPU device.">DeviceMemory</a>. The number of byes in such a shared block is equal to capacity * sizeof(Data). This must be less than or equal to the number of byes in the block owned by the <a class="el" href="classPscf_1_1DeviceMemory.html" title="Block of bare memory allocated on the GPU device.">DeviceMemory</a>, or this function will throw an <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a>.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a></td><td>if the array is not allocated. </td></tr>
-    <tr><td class="paramname"><a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a></td><td>if this object does not own the array. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a></td><td>if the array is already allocated </td></tr>
+    <tr><td class="paramname"><a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a></td><td>if the requested memory block is too large</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td><a class="el" href="classPscf_1_1DeviceMemory.html" title="Block of bare memory allocated on the GPU device.">DeviceMemory</a> container that owns the data </td></tr>
+    <tr><td class="paramname">capacity</td><td>number of elements of type Data </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00311">311</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00482">482</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00179">capacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00176">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00444">isAllocated()</a>, <a class="el" href="DeviceArray_8h_source.html#l00467">isOwner()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Reduce_8cu_source.html#l00891">Pscf::Prdc::Cuda::Reduce::innerProduct()</a>, <a class="el" href="Reduce_8cu_source.html#l00569">Pscf::Prdc::Cuda::Reduce::max()</a>, <a class="el" href="Reduce_8cu_source.html#l00648">Pscf::Prdc::Cuda::Reduce::maxAbs()</a>, <a class="el" href="Reduce_8cu_source.html#l00730">Pscf::Prdc::Cuda::Reduce::min()</a>, <a class="el" href="Reduce_8cu_source.html#l00809">Pscf::Prdc::Cuda::Reduce::minAbs()</a>, and <a class="el" href="Reduce_8cu_source.html#l00480">Pscf::Prdc::Cuda::Reduce::sum()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceMemory_8cu_source.html#l00096">Pscf::DeviceMemory::addReference()</a>, <a class="el" href="DeviceArray_8h_source.html#l00308">capacity()</a>, <a class="el" href="DeviceMemory_8h_source.html#l00143">Pscf::DeviceMemory::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00292">capacity_</a>, <a class="el" href="DeviceMemory_8cu_source.html#l00102">Pscf::DeviceMemory::cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00289">dataPtr_</a>, <a class="el" href="DeviceMemory_8h_source.html#l00136">Pscf::DeviceMemory::isAllocated()</a>, <a class="el" href="DeviceArray_8h_source.html#l00298">ref_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -413,17 +505,55 @@ template&lt;typename Data&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Dissociate this object from the associated array. </p>
+<p>Dissociate this object from an externally owned memory block. </p>
+<p>This function can destroy an association with either another <a class="el" href="classPscf_1_1DeviceArray.html" title="Dynamic array on the GPU device with aligned data.">DeviceArray</a> or with a <a class="el" href="classPscf_1_1DeviceMemory.html" title="Block of bare memory allocated on the GPU device.">DeviceMemory</a>. After successful exit, <a class="el" href="#a9756f28aae439b2bfbd05793b1e19c95" title="Return true if the array has allocated data, false otherwise.">isAllocated()</a> and <a class="el" href="#a0c12b6a1a757354462ebc82f70bc4a1f" title="Is this container associated with a memory block it does not own?">isAssociated()</a> will both return false.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a></td><td>if this object is not associated with an array. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a></td><td>if this is not associated with external memory </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00330">330</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00502">502</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00179">capacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00176">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00444">isAllocated()</a>, <a class="el" href="DeviceArray_8h_source.html#l00467">isOwner()</a>, <a class="el" href="DeviceArray_8h_source.html#l00195">ownerCapacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00203">ownerDataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00187">ownerPtr_</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00292">capacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00289">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00298">ref_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Reduce_8cu_source.html#l00352">Pscf::Reduce::innerProduct()</a>, <a class="el" href="Reduce_8cu_source.html#l00410">Pscf::Reduce::maxAbs()</a>, <a class="el" href="Reduce_8cu_source.html#l00465">Pscf::Reduce::minAbs()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00469">Pscf::Rpg::Block&lt; D &gt;::stepThread()</a>, <a class="el" href="Reduce_8cu_source.html#l00304">Pscf::Reduce::sumSq()</a>, <a class="el" href="Reduce_8cu_source.html#l00281">Pscf::Reduce::sumSq()</a>, and <a class="el" href="Reduce_8cu_source.html#l00328">Pscf::Reduce::sumSqAbs()</a>.</p>
+
+</div>
+</div>
+<a id="a2b66b93a2b23fe9926852b5e1089a245" name="a2b66b93a2b23fe9926852b5e1089a245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b66b93a2b23fe9926852b5e1089a245">&#9670;&#160;</a></span>addReference()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Data&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a>&lt; Data &gt;::addReference </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classUtil_1_1CountedReference.html">CountedReference</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>reference</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Associate a reference with reference counter for this container. </p>
+<p>This function should normally only be called within the associate member function of a container that is referring to data owned by this array, as part of the process of creating an association. It should not be called by users in any other context.</p>
+<p>On exit, the <a class="el" href="classUtil_1_1ReferenceCounter.html" title="Reference counter.">ReferenceCounter</a> owned by this <a class="el" href="classPscf_1_1DeviceMemory.html" title="Block of bare memory allocated on the GPU device.">DeviceMemory</a> is incremented by one and the <a class="el" href="classUtil_1_1CountedReference.html" title="Reference to a shared resource.">CountedReference</a> contains a pointer to the <a class="el" href="classUtil_1_1ReferenceCounter.html" title="Reference counter.">ReferenceCounter</a>. This pointer can later be used as part of the process of destroying the association.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reference</td><td>reference to be included by reference counter </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00520">520</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+
+<p class="reference">References <a class="el" href="CountedReference_8cpp_source.html#l00025">Util::CountedReference::associate()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00295">refCounter_</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DeviceArray_8h_source.html#l00459">associate()</a>.</p>
 
 </div>
 </div>
@@ -454,7 +584,7 @@ template&lt;typename Data&gt; </div>
 
 <p>Assignment operator, assign from another DeviceArray&lt;Data&gt; array. </p>
 <p>Performs a deep copy, by copying values of all elements from device memory to device memory.</p>
-<p>This function will allocate memory if this (LHS) array is not allocated. If this is allocated, it must have the same dimensions as the RHS DeviceArray&lt;Data&gt;.</p>
+<p>This function will allocate memory if this (LHS) array is not allocated. If this array is arleady allocated, it must have the same capacity as the other (RHS) DeviceArray&lt;Data&gt;.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">other</td><td>DeviceArray&lt;Data&gt; on rhs of assignent (input) </td></tr>
@@ -462,16 +592,16 @@ template&lt;typename Data&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00350">350</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00528">528</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00264">allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00460">capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00179">capacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00176">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00210">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00444">isAllocated()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00424">allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00308">capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00292">capacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00590">cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00289">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00346">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00315">isAllocated()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="cuda_2CField_8tpp_source.html#l00070">Pscf::Prdc::Cuda::CField&lt; D &gt;::operator=()</a>, <a class="el" href="cuda_2RField_8tpp_source.html#l00099">Pscf::Prdc::Cuda::RField&lt; D &gt;::operator=()</a>, and <a class="el" href="cuda_2RFieldDft_8tpp_source.html#l00075">Pscf::Prdc::Cuda::RFieldDft&lt; D &gt;::operator=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cuda_2CField_8tpp_source.html#l00058">Pscf::Prdc::Cuda::CField&lt; D &gt;::operator=()</a>, <a class="el" href="cuda_2CField_8tpp_source.html#l00070">Pscf::Prdc::Cuda::CField&lt; D &gt;::operator=()</a>, <a class="el" href="cuda_2RField_8tpp_source.html#l00099">Pscf::Prdc::Cuda::RField&lt; D &gt;::operator=()</a>, <a class="el" href="cuda_2RField_8tpp_source.html#l00087">Pscf::Prdc::Cuda::RField&lt; D &gt;::operator=()</a>, <a class="el" href="cuda_2RFieldDft_8tpp_source.html#l00075">Pscf::Prdc::Cuda::RFieldDft&lt; D &gt;::operator=()</a>, and <a class="el" href="cuda_2RFieldDft_8tpp_source.html#l00058">Pscf::Prdc::Cuda::RFieldDft&lt; D &gt;::operator=()</a>.</p>
 
 </div>
 </div>
-<a id="ac040fe35165d81562046bfc9d51db415" name="ac040fe35165d81562046bfc9d51db415"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac040fe35165d81562046bfc9d51db415">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a20aaa6e5ba41206eacefeead8fc641cb" name="a20aaa6e5ba41206eacefeead8fc641cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20aaa6e5ba41206eacefeead8fc641cb">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -484,7 +614,7 @@ template&lt;typename Data&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; Data &gt; &amp; <a class="el" href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a>&lt; Data &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPscf_1_1HostDArray.html">HostDArray</a>&lt; Data &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; Data &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -495,19 +625,19 @@ template&lt;typename Data&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Assignment operator, assignment from <a class="el" href="classPscf_1_1HostDArray.html" title="Template for dynamic array stored in host CPU memory.">HostDArray&lt;Data&gt;</a> host array. </p>
-<p>Performs a deep copy from a RHS <a class="el" href="classPscf_1_1HostDArray.html" title="Template for dynamic array stored in host CPU memory.">HostDArray&lt;Data&gt;</a> host array to this LHS DeviceArray&lt;Data&gt; device array, by copying underlying C array from host memory to device memory.</p>
-<p>This function will allocate memory if this (LHS) DeviceArray&lt;Data&gt; is not allocated. If this is allocated, it must have the same dimensions as the RHS <a class="el" href="classPscf_1_1HostDArray.html" title="Template for dynamic array stored in host CPU memory.">HostDArray&lt;Data&gt;</a>.</p>
+<p>Assignment operator, assignment from <a class="el" href="classUtil_1_1DArray.html" title="Dynamically allocatable contiguous array template.">Util::DArray&lt;Data&gt;</a> host array. </p>
+<p>Performs a deep copy from a RHS <a class="el" href="classUtil_1_1DArray.html" title="Dynamically allocatable contiguous array template.">DArray&lt;Data&gt;</a> host array to this LHS DeviceArray&lt;Data&gt;, by copying underlying C array from host memory to device memory.</p>
+<p>If this (LHS) DeviceArray&lt;Data&gt; is not allocated on entry, required memory will be allocated before data is copied. If this LHS object is already allocated, it must have the same capacity as the RHS <a class="el" href="classUtil_1_1DArray.html" title="Dynamically allocatable contiguous array template.">DArray&lt;Data&gt;</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">other</td><td><a class="el" href="classPscf_1_1HostDArray.html" title="Template for dynamic array stored in host CPU memory.">HostDArray&lt;Data&gt;</a> on RHS of assignent (input) </td></tr>
+    <tr><td class="paramname">other</td><td><a class="el" href="classUtil_1_1DArray.html" title="Dynamically allocatable contiguous array template.">DArray&lt;Data&gt;</a> on RHS of assignent (input) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00383">383</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00561">561</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00264">allocate()</a>, <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00179">capacity_</a>, <a class="el" href="Array_8h_source.html#l00214">Util::Array&lt; Data &gt;::cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00176">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00444">isAllocated()</a>, <a class="el" href="DArray_8h_source.html#l00247">Util::DArray&lt; Data &gt;::isAllocated()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00424">allocate()</a>, <a class="el" href="Array_8h_source.html#l00144">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00292">capacity_</a>, <a class="el" href="Array_8h_source.html#l00199">Util::Array&lt; Data &gt;::cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00289">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00315">isAllocated()</a>, <a class="el" href="DArray_8h_source.html#l00151">Util::DArray&lt; Data &gt;::isAllocated()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
 </div>
 </div>
@@ -536,14 +666,14 @@ template&lt;typename Data&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Return allocated capacity. </p>
-<dl class="section return"><dt>Returns</dt><dd>Number of elements allocated in array </dd></dl>
+<p>Return array capacity. </p>
+<dl class="section return"><dt>Returns</dt><dd>number of elements in array </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00460">460</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00308">308</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00179">capacity_</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00292">capacity_</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="cuda_2VecOp_8h_source.html#l01083">Pscf::Prdc::Cuda::VecOp::addEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01739">Pscf::Prdc::Cuda::VecOp::addEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01103">Pscf::Prdc::Cuda::VecOp::addEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01754">Pscf::Prdc::Cuda::VecOp::addEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01063">Pscf::Prdc::Cuda::VecOp::addEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01724">Pscf::Prdc::Cuda::VecOp::addEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01020">Pscf::Prdc::Cuda::VecOp::addEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01689">Pscf::Prdc::Cuda::VecOp::addEqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01042">Pscf::Prdc::Cuda::VecOp::addEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01707">Pscf::Prdc::Cuda::VecOp::addEqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00999">Pscf::Prdc::Cuda::VecOp::addEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01672">Pscf::Prdc::Cuda::VecOp::addEqV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00343">Pscf::Prdc::Cuda::VecOp::addEqVc()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00304">Pscf::Prdc::Cuda::VecOp::addVcVc()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00322">Pscf::Prdc::Cuda::VecOp::addVcVcVc()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00320">Pscf::Prdc::Cuda::VecOp::addVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01196">Pscf::Prdc::Cuda::VecOp::addVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00370">Pscf::Prdc::Cuda::VecOp::addVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01230">Pscf::Prdc::Cuda::VecOp::addVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00345">Pscf::Prdc::Cuda::VecOp::addVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01213">Pscf::Prdc::Cuda::VecOp::addVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00295">Pscf::Prdc::Cuda::VecOp::addVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01179">Pscf::Prdc::Cuda::VecOp::addVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00215">Pscf::Prdc::Cuda::VecOp::addVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01122">Pscf::Prdc::Cuda::VecOp::addVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00269">Pscf::Prdc::Cuda::VecOp::addVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01160">Pscf::Prdc::Cuda::VecOp::addVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00242">Pscf::Prdc::Cuda::VecOp::addVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01141">Pscf::Prdc::Cuda::VecOp::addVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00189">Pscf::Prdc::Cuda::VecOp::addVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01103">Pscf::Prdc::Cuda::VecOp::addVV()</a>, <a class="el" href="DeviceArray_8h_source.html#l00264">allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00285">associate()</a>, <a class="el" href="VecOpFts_8cu_source.html#l00112">Pscf::Rpg::VecOpFts::computeDField()</a>, <a class="el" href="VecOpFts_8cu_source.html#l00133">Pscf::Rpg::VecOpFts::computeForceBias()</a>, <a class="el" href="HostDArray_8h_source.html#l00184">Pscf::HostDArray&lt; Data &gt;::copySlice()</a>, <a class="el" href="DeviceArray_8h_source.html#l00222">DeviceArray()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01449">Pscf::Prdc::Cuda::VecOp::divEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02013">Pscf::Prdc::Cuda::VecOp::divEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01429">Pscf::Prdc::Cuda::VecOp::divEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01998">Pscf::Prdc::Cuda::VecOp::divEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01408">Pscf::Prdc::Cuda::VecOp::divEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01981">Pscf::Prdc::Cuda::VecOp::divEqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01387">Pscf::Prdc::Cuda::VecOp::divEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01964">Pscf::Prdc::Cuda::VecOp::divEqV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00377">Pscf::Prdc::Cuda::VecOp::divEqVc()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00927">Pscf::Prdc::Cuda::VecOp::divSV()</a>, <a class="el" href="VecOp_8cu_source.html#l01619">Pscf::Prdc::Cuda::VecOp::divSV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00902">Pscf::Prdc::Cuda::VecOp::divVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01600">Pscf::Prdc::Cuda::VecOp::divVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00877">Pscf::Prdc::Cuda::VecOp::divVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01582">Pscf::Prdc::Cuda::VecOp::divVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00851">Pscf::Prdc::Cuda::VecOp::divVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01563">Pscf::Prdc::Cuda::VecOp::divVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00825">Pscf::Prdc::Cuda::VecOp::divVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01544">Pscf::Prdc::Cuda::VecOp::divVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00160">Pscf::Prdc::Cuda::VecOp::eqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01088">Pscf::Prdc::Cuda::VecOp::eqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00140">Pscf::Prdc::Cuda::VecOp::eqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01073">Pscf::Prdc::Cuda::VecOp::eqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00119">Pscf::Prdc::Cuda::VecOp::eqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01056">Pscf::Prdc::Cuda::VecOp::eqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00098">Pscf::Prdc::Cuda::VecOp::eqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01039">Pscf::Prdc::Cuda::VecOp::eqV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00409">Pscf::Prdc::Cuda::VecOp::eqVPair()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00973">Pscf::Prdc::Cuda::VecOp::expV()</a>, <a class="el" href="VecOp_8cu_source.html#l01655">Pscf::Prdc::Cuda::VecOp::expV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00952">Pscf::Prdc::Cuda::VecOp::expV()</a>, <a class="el" href="VecOp_8cu_source.html#l01638">Pscf::Prdc::Cuda::VecOp::expV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00393">Pscf::Prdc::Cuda::VecOp::expVc()</a>, <a class="el" href="FFTBatched_8tpp_source.html#l00191">Pscf::Prdc::Cuda::FFTBatched&lt; D &gt;::forwardTransform()</a>, <a class="el" href="VecOpFts_8cu_source.html#l00092">Pscf::Rpg::VecOpFts::fourierMove()</a>, <a class="el" href="Reduce_8cu_source.html#l00891">Pscf::Prdc::Cuda::Reduce::innerProduct()</a>, <a class="el" href="FFTBatched_8tpp_source.html#l00225">Pscf::Prdc::Cuda::FFTBatched&lt; D &gt;::inverseTransformUnsafe()</a>, <a class="el" href="Reduce_8cu_source.html#l00569">Pscf::Prdc::Cuda::Reduce::max()</a>, <a class="el" href="Reduce_8cu_source.html#l00648">Pscf::Prdc::Cuda::Reduce::maxAbs()</a>, <a class="el" href="VecOpFts_8cu_source.html#l00077">Pscf::Rpg::VecOpFts::mcftsScale()</a>, <a class="el" href="Reduce_8cu_source.html#l00730">Pscf::Prdc::Cuda::Reduce::min()</a>, <a class="el" href="Reduce_8cu_source.html#l00809">Pscf::Prdc::Cuda::Reduce::minAbs()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01342">Pscf::Prdc::Cuda::VecOp::mulEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01933">Pscf::Prdc::Cuda::VecOp::mulEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01362">Pscf::Prdc::Cuda::VecOp::mulEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01949">Pscf::Prdc::Cuda::VecOp::mulEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01322">Pscf::Prdc::Cuda::VecOp::mulEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01918">Pscf::Prdc::Cuda::VecOp::mulEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01279">Pscf::Prdc::Cuda::VecOp::mulEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01884">Pscf::Prdc::Cuda::VecOp::mulEqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01301">Pscf::Prdc::Cuda::VecOp::mulEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01901">Pscf::Prdc::Cuda::VecOp::mulEqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01257">Pscf::Prdc::Cuda::VecOp::mulEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01867">Pscf::Prdc::Cuda::VecOp::mulEqV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00448">Pscf::Prdc::Cuda::VecOp::mulEqVPair()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00742">Pscf::Prdc::Cuda::VecOp::mulVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01489">Pscf::Prdc::Cuda::VecOp::mulVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00794">Pscf::Prdc::Cuda::VecOp::mulVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01526">Pscf::Prdc::Cuda::VecOp::mulVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00768">Pscf::Prdc::Cuda::VecOp::mulVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01507">Pscf::Prdc::Cuda::VecOp::mulVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00717">Pscf::Prdc::Cuda::VecOp::mulVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01471">Pscf::Prdc::Cuda::VecOp::mulVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00637">Pscf::Prdc::Cuda::VecOp::mulVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01414">Pscf::Prdc::Cuda::VecOp::mulVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00691">Pscf::Prdc::Cuda::VecOp::mulVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01452">Pscf::Prdc::Cuda::VecOp::mulVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00664">Pscf::Prdc::Cuda::VecOp::mulVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01433">Pscf::Prdc::Cuda::VecOp::mulVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00611">Pscf::Prdc::Cuda::VecOp::mulVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01395">Pscf::Prdc::Cuda::VecOp::mulVV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00426">Pscf::Prdc::Cuda::VecOp::mulVVPair()</a>, <a class="el" href="CudaRandom_8cu_source.html#l00104">Pscf::CudaRandom::normal()</a>, <a class="el" href="CudaRandom_8cu_source.html#l00084">Pscf::CudaRandom::normal()</a>, <a class="el" href="DeviceArray_8h_source.html#l00350">operator=()</a>, <a class="el" href="HostDArray_8h_source.html#l00155">Pscf::HostDArray&lt; Data &gt;::operator=()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00585">Pscf::Prdc::Cuda::VecOp::sqNormV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00600">Pscf::Prdc::Cuda::VecOp::sqSqNormV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01212">Pscf::Prdc::Cuda::VecOp::subEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01837">Pscf::Prdc::Cuda::VecOp::subEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01232">Pscf::Prdc::Cuda::VecOp::subEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01852">Pscf::Prdc::Cuda::VecOp::subEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01192">Pscf::Prdc::Cuda::VecOp::subEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01822">Pscf::Prdc::Cuda::VecOp::subEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01149">Pscf::Prdc::Cuda::VecOp::subEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01787">Pscf::Prdc::Cuda::VecOp::subEqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01171">Pscf::Prdc::Cuda::VecOp::subEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01805">Pscf::Prdc::Cuda::VecOp::subEqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01128">Pscf::Prdc::Cuda::VecOp::subEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01769">Pscf::Prdc::Cuda::VecOp::subEqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00530">Pscf::Prdc::Cuda::VecOp::subVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01341">Pscf::Prdc::Cuda::VecOp::subVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00581">Pscf::Prdc::Cuda::VecOp::subVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01377">Pscf::Prdc::Cuda::VecOp::subVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00555">Pscf::Prdc::Cuda::VecOp::subVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01359">Pscf::Prdc::Cuda::VecOp::subVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00505">Pscf::Prdc::Cuda::VecOp::subVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01323">Pscf::Prdc::Cuda::VecOp::subVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00426">Pscf::Prdc::Cuda::VecOp::subVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01266">Pscf::Prdc::Cuda::VecOp::subVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00479">Pscf::Prdc::Cuda::VecOp::subVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01304">Pscf::Prdc::Cuda::VecOp::subVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00453">Pscf::Prdc::Cuda::VecOp::subVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01285">Pscf::Prdc::Cuda::VecOp::subVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00400">Pscf::Prdc::Cuda::VecOp::subVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01247">Pscf::Prdc::Cuda::VecOp::subVV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00359">Pscf::Prdc::Cuda::VecOp::subVVS()</a>, <a class="el" href="Reduce_8cu_source.html#l00480">Pscf::Prdc::Cuda::Reduce::sum()</a>, <a class="el" href="CudaRandom_8cu_source.html#l00069">Pscf::CudaRandom::uniform()</a>, and <a class="el" href="CudaRandom_8cu_source.html#l00054">Pscf::CudaRandom::uniform()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cuda_2VecOp_8h_source.html#l01966">Pscf::VecOp::absV()</a>, <a class="el" href="VecOp_8cu_source.html#l02538">Pscf::VecOp::absV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01353">Pscf::VecOp::addEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02116">Pscf::VecOp::addEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01379">Pscf::VecOp::addEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02134">Pscf::VecOp::addEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01327">Pscf::VecOp::addEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02098">Pscf::VecOp::addEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01272">Pscf::VecOp::addEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02032">Pscf::VecOp::addEqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01300">Pscf::VecOp::addEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02077">Pscf::VecOp::addEqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01244">Pscf::VecOp::addEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02012">Pscf::VecOp::addEqV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00457">Pscf::VecOp::addEqVc()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00387">Pscf::VecOp::addVcS()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00365">Pscf::VecOp::addVcVc()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00431">Pscf::VecOp::addVcVcS()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00406">Pscf::VecOp::addVcVcVc()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00448">Pscf::VecOp::addVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01502">Pscf::VecOp::addVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00512">Pscf::VecOp::addVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01542">Pscf::VecOp::addVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00480">Pscf::VecOp::addVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01522">Pscf::VecOp::addVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00415">Pscf::VecOp::addVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01482">Pscf::VecOp::addVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00314">Pscf::VecOp::addVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01410">Pscf::VecOp::addVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00382">Pscf::VecOp::addVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01458">Pscf::VecOp::addVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00348">Pscf::VecOp::addVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01434">Pscf::VecOp::addVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00280">Pscf::VecOp::addVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01386">Pscf::VecOp::addVV()</a>, <a class="el" href="DeviceArray_8h_source.html#l00424">allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00459">associate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00482">associate()</a>, <a class="el" href="cuda_2CFieldComparison_8tpp_source.html#l00028">Pscf::Prdc::Cuda::CFieldComparison&lt; D &gt;::compare()</a>, <a class="el" href="RFieldComparison_8tpp_source.html#l00044">Pscf::Prdc::Cuda::RFieldComparison&lt; D &gt;::compare()</a>, <a class="el" href="RFieldComparison_8tpp_source.html#l00025">Pscf::Prdc::Cuda::RFieldComparison&lt; D &gt;::compare()</a>, <a class="el" href="cuda_2RFieldDftComparison_8tpp_source.html#l00028">Pscf::Prdc::Cuda::RFieldDftComparison&lt; D &gt;::compare()</a>, <a class="el" href="cuda_2WaveList_8tpp_source.html#l00699">Pscf::Prdc::Cuda::WaveList&lt; D &gt;::computedKSq()</a>, <a class="el" href="IntraCorrelation_8cu_source.html#l00038">Pscf::Rpg::IntraCorrelation&lt; D &gt;::computeOmegaTotal()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00259">Pscf::Rpg::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00284">Pscf::Rpg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="HostDArray_8h_source.html#l00205">Pscf::HostDArray&lt; Data &gt;::copySlice()</a>, <a class="el" href="DeviceArray_8h_source.html#l00355">DeviceArray()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01816">Pscf::VecOp::divEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02432">Pscf::VecOp::divEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01790">Pscf::VecOp::divEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02414">Pscf::VecOp::divEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01763">Pscf::VecOp::divEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02394">Pscf::VecOp::divEqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01735">Pscf::VecOp::divEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02374">Pscf::VecOp::divEqV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00476">Pscf::VecOp::divEqVc()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01213">Pscf::VecOp::divSV()</a>, <a class="el" href="VecOp_8cu_source.html#l01989">Pscf::VecOp::divSV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01181">Pscf::VecOp::divVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01966">Pscf::VecOp::divVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01149">Pscf::VecOp::divVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01943">Pscf::VecOp::divVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01117">Pscf::VecOp::divVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01919">Pscf::VecOp::divVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01083">Pscf::VecOp::divVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01897">Pscf::VecOp::divVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00246">Pscf::VecOp::eqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01366">Pscf::VecOp::eqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00220">Pscf::VecOp::eqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01348">Pscf::VecOp::eqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01260">Pscf::VecOp::eqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00193">Pscf::VecOp::eqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01304">Pscf::VecOp::eqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00165">Pscf::VecOp::eqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01282">Pscf::VecOp::eqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00109">Pscf::VecOp::eqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01231">Pscf::VecOp::eqV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00512">Pscf::VecOp::eqVPair()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01875">Pscf::VecOp::expV()</a>, <a class="el" href="VecOp_8cu_source.html#l02472">Pscf::VecOp::expV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01846">Pscf::VecOp::expV()</a>, <a class="el" href="VecOp_8cu_source.html#l02452">Pscf::VecOp::expV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00494">Pscf::VecOp::expVc()</a>, <a class="el" href="cuda_2FFT_8tpp_source.html#l00213">Pscf::Prdc::Cuda::FFT&lt; D &gt;::forwardTransform()</a>, <a class="el" href="cuda_2FFT_8tpp_source.html#l00134">Pscf::Prdc::Cuda::FFT&lt; D &gt;::forwardTransform()</a>, <a class="el" href="FFTBatched_8tpp_source.html#l00191">Pscf::Prdc::Cuda::FFTBatched&lt; D &gt;::forwardTransform()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00310">Pscf::Rpg::FieldIo&lt; D &gt;::hasSymmetry()</a>, <a class="el" href="HostDArray_8h_source.html#l00150">Pscf::HostDArray&lt; Data &gt;::HostDArray()</a>, <a class="el" href="Reduce_8cu_source.html#l00352">Pscf::Reduce::innerProduct()</a>, <a class="el" href="cuda_2FFT_8tpp_source.html#l00246">Pscf::Prdc::Cuda::FFT&lt; D &gt;::inverseTransform()</a>, <a class="el" href="cuda_2FFT_8tpp_source.html#l00165">Pscf::Prdc::Cuda::FFT&lt; D &gt;::inverseTransformUnsafe()</a>, <a class="el" href="FFTBatched_8tpp_source.html#l00225">Pscf::Prdc::Cuda::FFTBatched&lt; D &gt;::inverseTransformUnsafe()</a>, <a class="el" href="Reduce_8cu_source.html#l00381">Pscf::Reduce::max()</a>, <a class="el" href="Reduce_8cu_source.html#l00394">Pscf::Reduce::max()</a>, <a class="el" href="Reduce_8cu_source.html#l00410">Pscf::Reduce::maxAbs()</a>, <a class="el" href="Reduce_8cu_source.html#l00436">Pscf::Reduce::min()</a>, <a class="el" href="Reduce_8cu_source.html#l00449">Pscf::Reduce::min()</a>, <a class="el" href="Reduce_8cu_source.html#l00465">Pscf::Reduce::minAbs()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01679">Pscf::VecOp::mulEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02336">Pscf::VecOp::mulEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01705">Pscf::VecOp::mulEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02354">Pscf::VecOp::mulEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01654">Pscf::VecOp::mulEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02320">Pscf::VecOp::mulEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01600">Pscf::VecOp::mulEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02284">Pscf::VecOp::mulEqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01628">Pscf::VecOp::mulEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02302">Pscf::VecOp::mulEqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01572">Pscf::VecOp::mulEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02266">Pscf::VecOp::mulEqV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00557">Pscf::VecOp::mulEqVPair()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00982">Pscf::VecOp::mulVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01838">Pscf::VecOp::mulVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01046">Pscf::VecOp::mulVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01877">Pscf::VecOp::mulVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01014">Pscf::VecOp::mulVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01858">Pscf::VecOp::mulVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00950">Pscf::VecOp::mulVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01817">Pscf::VecOp::mulVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00850">Pscf::VecOp::mulVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01751">Pscf::VecOp::mulVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00917">Pscf::VecOp::mulVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01795">Pscf::VecOp::mulVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00883">Pscf::VecOp::mulVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01773">Pscf::VecOp::mulVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00816">Pscf::VecOp::mulVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01730">Pscf::VecOp::mulVV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00532">Pscf::VecOp::mulVVPair()</a>, <a class="el" href="CudaVecRandom_8cu_source.html#l00193">Pscf::CudaVecRandom::normal()</a>, <a class="el" href="CudaVecRandom_8cu_source.html#l00172">Pscf::CudaVecRandom::normal()</a>, <a class="el" href="DeviceArray_8h_source.html#l00528">operator=()</a>, <a class="el" href="HostDArray_8h_source.html#l00176">Pscf::HostDArray&lt; Data &gt;::operator=()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01995">Pscf::VecOp::sqAbsV()</a>, <a class="el" href="VecOp_8cu_source.html#l02559">Pscf::VecOp::sqAbsV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00709">Pscf::VecOp::sqSqAbsV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01935">Pscf::VecOp::sqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02515">Pscf::VecOp::sqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01906">Pscf::VecOp::sqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02494">Pscf::VecOp::sqV()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00541">Pscf::Rpg::Block&lt; D &gt;::stepBondBead()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00527">Pscf::Rpg::Block&lt; D &gt;::stepFieldBead()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00567">Pscf::Rpg::Block&lt; D &gt;::stepHalfBondBead()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenMask_8tpp_source.html#l00176">Pscf::Rpg::FilmFieldGenMask&lt; D &gt;::stress()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01516">Pscf::VecOp::subEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02230">Pscf::VecOp::subEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01542">Pscf::VecOp::subEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02248">Pscf::VecOp::subEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01491">Pscf::VecOp::subEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02212">Pscf::VecOp::subEqS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01437">Pscf::VecOp::subEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02172">Pscf::VecOp::subEqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01465">Pscf::VecOp::subEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02192">Pscf::VecOp::subEqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l01409">Pscf::VecOp::subEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02152">Pscf::VecOp::subEqV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00715">Pscf::VecOp::subVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01671">Pscf::VecOp::subVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00779">Pscf::VecOp::subVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01710">Pscf::VecOp::subVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00747">Pscf::VecOp::subVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01691">Pscf::VecOp::subVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00683">Pscf::VecOp::subVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01650">Pscf::VecOp::subVS()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00581">Pscf::VecOp::subVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01584">Pscf::VecOp::subVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00650">Pscf::VecOp::subVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01628">Pscf::VecOp::subVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00616">Pscf::VecOp::subVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01606">Pscf::VecOp::subVV()</a>, <a class="el" href="cuda_2VecOp_8h_source.html#l00549">Pscf::VecOp::subVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01562">Pscf::VecOp::subVV()</a>, <a class="el" href="Reduce_8cu_source.html#l00249">Pscf::Reduce::sum()</a>, <a class="el" href="Reduce_8cu_source.html#l00264">Pscf::Reduce::sum()</a>, <a class="el" href="Reduce_8cu_source.html#l00216">Pscf::Reduce::sum()</a>, <a class="el" href="Reduce_8cu_source.html#l00231">Pscf::Reduce::sum()</a>, <a class="el" href="Reduce_8cu_source.html#l00304">Pscf::Reduce::sumSq()</a>, <a class="el" href="Reduce_8cu_source.html#l00281">Pscf::Reduce::sumSq()</a>, <a class="el" href="Reduce_8cu_source.html#l00328">Pscf::Reduce::sumSqAbs()</a>, <a class="el" href="CudaVecRandom_8cu_source.html#l00134">Pscf::CudaVecRandom::uniform()</a>, <a class="el" href="CudaVecRandom_8cu_source.html#l00118">Pscf::CudaVecRandom::uniform()</a>, and <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00166">Pscf::Rpg::FieldIo&lt; D &gt;::writeFieldRGrid()</a>.</p>
 
 </div>
 </div>
@@ -554,6 +684,9 @@ template&lt;typename Data&gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename Data&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool <a class="el" href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a>&lt; Data &gt;::isAllocated </td>
@@ -562,15 +695,21 @@ template&lt;typename Data&gt; </div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Return true if the array has been allocated, false otherwise. </p>
+<p>Return true if the array has allocated data, false otherwise. </p>
+<p>A <a class="el" href="classPscf_1_1DeviceArray.html" title="Dynamic array on the GPU device with aligned data.">DeviceArray</a> is considered allocated if it has non-null pointer to an data block, which may either be a block that it owns or a block owned by another container. </p>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00444">444</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00315">315</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00176">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00195">ownerCapacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00203">ownerDataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00187">ownerPtr_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00289">dataPtr_</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DeviceArray_8h_source.html#l00264">allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00285">associate()</a>, <a class="el" href="HostDArray_8h_source.html#l00184">Pscf::HostDArray&lt; Data &gt;::copySlice()</a>, <a class="el" href="DeviceArray_8h_source.html#l00311">deallocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00236">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00330">dissociate()</a>, <a class="el" href="Reduce_8cu_source.html#l00891">Pscf::Prdc::Cuda::Reduce::innerProduct()</a>, <a class="el" href="Reduce_8cu_source.html#l00569">Pscf::Prdc::Cuda::Reduce::max()</a>, <a class="el" href="Reduce_8cu_source.html#l00648">Pscf::Prdc::Cuda::Reduce::maxAbs()</a>, <a class="el" href="Reduce_8cu_source.html#l00730">Pscf::Prdc::Cuda::Reduce::min()</a>, <a class="el" href="Reduce_8cu_source.html#l00809">Pscf::Prdc::Cuda::Reduce::minAbs()</a>, <a class="el" href="DeviceArray_8h_source.html#l00350">operator=()</a>, <a class="el" href="DeviceArray_8h_source.html#l00383">operator=()</a>, <a class="el" href="HostDArray_8h_source.html#l00155">Pscf::HostDArray&lt; Data &gt;::operator=()</a>, <a class="el" href="Reduce_8cu_source.html#l00480">Pscf::Prdc::Cuda::Reduce::sum()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00252">~DeviceArray()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DeviceArray_8h_source.html#l00424">allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00459">associate()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00259">Pscf::Rpg::FieldIo&lt; D &gt;::convertBasisToKGrid()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00284">Pscf::Rpg::FieldIo&lt; D &gt;::convertKGridToBasis()</a>, <a class="el" href="HostDArray_8h_source.html#l00205">Pscf::HostDArray&lt; Data &gt;::copySlice()</a>, <a class="el" href="DeviceArray_8h_source.html#l00366">DeviceArray()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00310">Pscf::Rpg::FieldIo&lt; D &gt;::hasSymmetry()</a>, <a class="el" href="HostDArray_8h_source.html#l00150">Pscf::HostDArray&lt; Data &gt;::HostDArray()</a>, <a class="el" href="Reduce_8cu_source.html#l00352">Pscf::Reduce::innerProduct()</a>, <a class="el" href="Reduce_8cu_source.html#l00381">Pscf::Reduce::max()</a>, <a class="el" href="Reduce_8cu_source.html#l00394">Pscf::Reduce::max()</a>, <a class="el" href="Reduce_8cu_source.html#l00410">Pscf::Reduce::maxAbs()</a>, <a class="el" href="Reduce_8cu_source.html#l00436">Pscf::Reduce::min()</a>, <a class="el" href="Reduce_8cu_source.html#l00449">Pscf::Reduce::min()</a>, <a class="el" href="Reduce_8cu_source.html#l00465">Pscf::Reduce::minAbs()</a>, <a class="el" href="DeviceArray_8h_source.html#l00561">operator=()</a>, <a class="el" href="DeviceArray_8h_source.html#l00528">operator=()</a>, <a class="el" href="HostDArray_8h_source.html#l00176">Pscf::HostDArray&lt; Data &gt;::operator=()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00351">Pscf::Rpg::FieldIo&lt; D &gt;::scaleFieldRGrid()</a>, <a class="el" href="Reduce_8cu_source.html#l00249">Pscf::Reduce::sum()</a>, <a class="el" href="Reduce_8cu_source.html#l00264">Pscf::Reduce::sum()</a>, <a class="el" href="Reduce_8cu_source.html#l00216">Pscf::Reduce::sum()</a>, <a class="el" href="Reduce_8cu_source.html#l00231">Pscf::Reduce::sum()</a>, <a class="el" href="Reduce_8cu_source.html#l00304">Pscf::Reduce::sumSq()</a>, <a class="el" href="Reduce_8cu_source.html#l00281">Pscf::Reduce::sumSq()</a>, and <a class="el" href="Reduce_8cu_source.html#l00328">Pscf::Reduce::sumSqAbs()</a>.</p>
 
 </div>
 </div>
@@ -599,13 +738,48 @@ template&lt;typename Data&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Does this object own the underlying data? </p>
+<p>Does this container own an allocated memory block? </p>
+<p>If <a class="el" href="#a9756f28aae439b2bfbd05793b1e19c95" title="Return true if the array has allocated data, false otherwise.">isAllocated()</a> is false, <a class="el" href="#a1a8ae81934bd38ac9568482d16478014" title="Does this container own an allocated memory block?">isOwner()</a> must be false. </p>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00467">467</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00322">322</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00176">dataPtr_</a>, and <a class="el" href="DeviceArray_8h_source.html#l00187">ownerPtr_</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00289">dataPtr_</a>, and <a class="el" href="DeviceArray_8h_source.html#l00298">ref_</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DeviceArray_8h_source.html#l00285">associate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00311">deallocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00330">dissociate()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00252">~DeviceArray()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DeviceArray_8h_source.html#l00459">associate()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00404">~DeviceArray()</a>.</p>
+
+</div>
+</div>
+<a id="a0c12b6a1a757354462ebc82f70bc4a1f" name="a0c12b6a1a757354462ebc82f70bc4a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c12b6a1a757354462ebc82f70bc4a1f">&#9670;&#160;</a></span>isAssociated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Data&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a>&lt; Data &gt;::isAssociated </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is this container associated with a memory block it does not own? </p>
+<p>If <a class="el" href="#a9756f28aae439b2bfbd05793b1e19c95" title="Return true if the array has allocated data, false otherwise.">isAllocated()</a> is false, <a class="el" href="#a0c12b6a1a757354462ebc82f70bc4a1f" title="Is this container associated with a memory block it does not own?">isAssociated()</a> must be false. </p>
+
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00329">329</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00289">dataPtr_</a>, and <a class="el" href="DeviceArray_8h_source.html#l00298">ref_</a>.</p>
 
 </div>
 </div>
@@ -628,11 +802,11 @@ template&lt;typename Data&gt; </div>
 
 <p>Return pointer to underlying C array. </p>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00412">412</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00590">590</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00176">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00195">ownerCapacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00203">ownerDataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00187">ownerPtr_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00289">dataPtr_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="VecOp_8cu_source.html#l01739">Pscf::Prdc::Cuda::VecOp::addEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01754">Pscf::Prdc::Cuda::VecOp::addEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01724">Pscf::Prdc::Cuda::VecOp::addEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01689">Pscf::Prdc::Cuda::VecOp::addEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01707">Pscf::Prdc::Cuda::VecOp::addEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01672">Pscf::Prdc::Cuda::VecOp::addEqV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00343">Pscf::Prdc::Cuda::VecOp::addEqVc()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00304">Pscf::Prdc::Cuda::VecOp::addVcVc()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00322">Pscf::Prdc::Cuda::VecOp::addVcVcVc()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00465">Pscf::Prdc::Cuda::VecOp::addVMany()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00495">Pscf::Prdc::Cuda::VecOp::addVMany()</a>, <a class="el" href="VecOp_8cu_source.html#l01196">Pscf::Prdc::Cuda::VecOp::addVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01230">Pscf::Prdc::Cuda::VecOp::addVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01213">Pscf::Prdc::Cuda::VecOp::addVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01179">Pscf::Prdc::Cuda::VecOp::addVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01122">Pscf::Prdc::Cuda::VecOp::addVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01160">Pscf::Prdc::Cuda::VecOp::addVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01141">Pscf::Prdc::Cuda::VecOp::addVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01103">Pscf::Prdc::Cuda::VecOp::addVV()</a>, <a class="el" href="DeviceArray_8h_source.html#l00285">associate()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8tpp_source.html#l00260">Pscf::Rpg::FilmFieldGenExt&lt; D &gt;::compute()</a>, <a class="el" href="VecOpFts_8cu_source.html#l00112">Pscf::Rpg::VecOpFts::computeDField()</a>, <a class="el" href="VecOpFts_8cu_source.html#l00133">Pscf::Rpg::VecOpFts::computeForceBias()</a>, <a class="el" href="HostDArray_8h_source.html#l00184">Pscf::HostDArray&lt; Data &gt;::copySlice()</a>, <a class="el" href="DeviceArray_8h_source.html#l00236">DeviceArray()</a>, <a class="el" href="VecOp_8cu_source.html#l02013">Pscf::Prdc::Cuda::VecOp::divEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01998">Pscf::Prdc::Cuda::VecOp::divEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01981">Pscf::Prdc::Cuda::VecOp::divEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01964">Pscf::Prdc::Cuda::VecOp::divEqV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00377">Pscf::Prdc::Cuda::VecOp::divEqVc()</a>, <a class="el" href="VecOp_8cu_source.html#l01619">Pscf::Prdc::Cuda::VecOp::divSV()</a>, <a class="el" href="VecOp_8cu_source.html#l01600">Pscf::Prdc::Cuda::VecOp::divVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01582">Pscf::Prdc::Cuda::VecOp::divVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01563">Pscf::Prdc::Cuda::VecOp::divVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01544">Pscf::Prdc::Cuda::VecOp::divVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01088">Pscf::Prdc::Cuda::VecOp::eqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01073">Pscf::Prdc::Cuda::VecOp::eqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01056">Pscf::Prdc::Cuda::VecOp::eqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01039">Pscf::Prdc::Cuda::VecOp::eqV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00409">Pscf::Prdc::Cuda::VecOp::eqVPair()</a>, <a class="el" href="VecOp_8cu_source.html#l01655">Pscf::Prdc::Cuda::VecOp::expV()</a>, <a class="el" href="VecOp_8cu_source.html#l01638">Pscf::Prdc::Cuda::VecOp::expV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00393">Pscf::Prdc::Cuda::VecOp::expVc()</a>, <a class="el" href="FFTBatched_8tpp_source.html#l00191">Pscf::Prdc::Cuda::FFTBatched&lt; D &gt;::forwardTransform()</a>, <a class="el" href="VecOpFts_8cu_source.html#l00092">Pscf::Rpg::VecOpFts::fourierMove()</a>, <a class="el" href="Reduce_8cu_source.html#l00891">Pscf::Prdc::Cuda::Reduce::innerProduct()</a>, <a class="el" href="FFTBatched_8tpp_source.html#l00225">Pscf::Prdc::Cuda::FFTBatched&lt; D &gt;::inverseTransformUnsafe()</a>, <a class="el" href="Reduce_8cu_source.html#l00569">Pscf::Prdc::Cuda::Reduce::max()</a>, <a class="el" href="Reduce_8cu_source.html#l00648">Pscf::Prdc::Cuda::Reduce::maxAbs()</a>, <a class="el" href="VecOpFts_8cu_source.html#l00077">Pscf::Rpg::VecOpFts::mcftsScale()</a>, <a class="el" href="Reduce_8cu_source.html#l00730">Pscf::Prdc::Cuda::Reduce::min()</a>, <a class="el" href="Reduce_8cu_source.html#l00809">Pscf::Prdc::Cuda::Reduce::minAbs()</a>, <a class="el" href="VecOp_8cu_source.html#l01933">Pscf::Prdc::Cuda::VecOp::mulEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01949">Pscf::Prdc::Cuda::VecOp::mulEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01918">Pscf::Prdc::Cuda::VecOp::mulEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01884">Pscf::Prdc::Cuda::VecOp::mulEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01901">Pscf::Prdc::Cuda::VecOp::mulEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01867">Pscf::Prdc::Cuda::VecOp::mulEqV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00448">Pscf::Prdc::Cuda::VecOp::mulEqVPair()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00525">Pscf::Prdc::Cuda::VecOp::mulVMany()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00555">Pscf::Prdc::Cuda::VecOp::mulVMany()</a>, <a class="el" href="VecOp_8cu_source.html#l01489">Pscf::Prdc::Cuda::VecOp::mulVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01526">Pscf::Prdc::Cuda::VecOp::mulVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01507">Pscf::Prdc::Cuda::VecOp::mulVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01471">Pscf::Prdc::Cuda::VecOp::mulVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01414">Pscf::Prdc::Cuda::VecOp::mulVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01452">Pscf::Prdc::Cuda::VecOp::mulVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01433">Pscf::Prdc::Cuda::VecOp::mulVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01395">Pscf::Prdc::Cuda::VecOp::mulVV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00426">Pscf::Prdc::Cuda::VecOp::mulVVPair()</a>, <a class="el" href="CudaRandom_8cu_source.html#l00104">Pscf::CudaRandom::normal()</a>, <a class="el" href="CudaRandom_8cu_source.html#l00084">Pscf::CudaRandom::normal()</a>, <a class="el" href="DeviceArray_8h_source.html#l00350">operator=()</a>, <a class="el" href="HostDArray_8h_source.html#l00155">Pscf::HostDArray&lt; Data &gt;::operator=()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00585">Pscf::Prdc::Cuda::VecOp::sqNormV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00600">Pscf::Prdc::Cuda::VecOp::sqSqNormV()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8tpp_source.html#l00195">Pscf::Rpg::FilmFieldGenExt&lt; D &gt;::stress()</a>, <a class="el" href="VecOp_8cu_source.html#l01837">Pscf::Prdc::Cuda::VecOp::subEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01852">Pscf::Prdc::Cuda::VecOp::subEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01822">Pscf::Prdc::Cuda::VecOp::subEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01787">Pscf::Prdc::Cuda::VecOp::subEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01805">Pscf::Prdc::Cuda::VecOp::subEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01769">Pscf::Prdc::Cuda::VecOp::subEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01341">Pscf::Prdc::Cuda::VecOp::subVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01377">Pscf::Prdc::Cuda::VecOp::subVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01359">Pscf::Prdc::Cuda::VecOp::subVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01323">Pscf::Prdc::Cuda::VecOp::subVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01266">Pscf::Prdc::Cuda::VecOp::subVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01304">Pscf::Prdc::Cuda::VecOp::subVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01285">Pscf::Prdc::Cuda::VecOp::subVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01247">Pscf::Prdc::Cuda::VecOp::subVV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00359">Pscf::Prdc::Cuda::VecOp::subVVS()</a>, <a class="el" href="Reduce_8cu_source.html#l00480">Pscf::Prdc::Cuda::Reduce::sum()</a>, <a class="el" href="CudaRandom_8cu_source.html#l00069">Pscf::CudaRandom::uniform()</a>, and <a class="el" href="CudaRandom_8cu_source.html#l00054">Pscf::CudaRandom::uniform()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="VecOp_8cu_source.html#l02538">Pscf::VecOp::absV()</a>, <a class="el" href="VecOp_8cu_source.html#l02116">Pscf::VecOp::addEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02134">Pscf::VecOp::addEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02098">Pscf::VecOp::addEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02032">Pscf::VecOp::addEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02077">Pscf::VecOp::addEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02012">Pscf::VecOp::addEqV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00457">Pscf::VecOp::addEqVc()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00387">Pscf::VecOp::addVcS()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00365">Pscf::VecOp::addVcVc()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00431">Pscf::VecOp::addVcVcS()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00406">Pscf::VecOp::addVcVcVc()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00577">Pscf::VecOp::addVMany()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00610">Pscf::VecOp::addVMany()</a>, <a class="el" href="VecOp_8cu_source.html#l01502">Pscf::VecOp::addVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01542">Pscf::VecOp::addVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01522">Pscf::VecOp::addVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01482">Pscf::VecOp::addVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01410">Pscf::VecOp::addVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01458">Pscf::VecOp::addVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01434">Pscf::VecOp::addVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01386">Pscf::VecOp::addVV()</a>, <a class="el" href="DeviceArray_8h_source.html#l00459">associate()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8tpp_source.html#l00260">Pscf::Rpg::FilmFieldGenExt&lt; D &gt;::compute()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenMask_8tpp_source.html#l00276">Pscf::Rpg::FilmFieldGenMask&lt; D &gt;::compute()</a>, <a class="el" href="cuda_2WaveList_8tpp_source.html#l00699">Pscf::Prdc::Cuda::WaveList&lt; D &gt;::computedKSq()</a>, <a class="el" href="cuda_2WaveList_8tpp_source.html#l00650">Pscf::Prdc::Cuda::WaveList&lt; D &gt;::computeKSq()</a>, <a class="el" href="cuda_2WaveList_8tpp_source.html#l00571">Pscf::Prdc::Cuda::WaveList&lt; D &gt;::computeMinimumImages()</a>, <a class="el" href="HostDArray_8h_source.html#l00205">Pscf::HostDArray&lt; Data &gt;::copySlice()</a>, <a class="el" href="DeviceArray_8h_source.html#l00366">DeviceArray()</a>, <a class="el" href="VecOp_8cu_source.html#l02432">Pscf::VecOp::divEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02414">Pscf::VecOp::divEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02394">Pscf::VecOp::divEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02374">Pscf::VecOp::divEqV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00476">Pscf::VecOp::divEqVc()</a>, <a class="el" href="VecOp_8cu_source.html#l01989">Pscf::VecOp::divSV()</a>, <a class="el" href="VecOp_8cu_source.html#l01966">Pscf::VecOp::divVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01943">Pscf::VecOp::divVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01919">Pscf::VecOp::divVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01897">Pscf::VecOp::divVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01366">Pscf::VecOp::eqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01348">Pscf::VecOp::eqS()</a>, <a class="el" href="VecOp_8cu_source.html#l01260">Pscf::VecOp::eqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01304">Pscf::VecOp::eqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01282">Pscf::VecOp::eqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01231">Pscf::VecOp::eqV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00512">Pscf::VecOp::eqVPair()</a>, <a class="el" href="VecOp_8cu_source.html#l02472">Pscf::VecOp::expV()</a>, <a class="el" href="VecOp_8cu_source.html#l02452">Pscf::VecOp::expV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00494">Pscf::VecOp::expVc()</a>, <a class="el" href="cuda_2FFT_8tpp_source.html#l00213">Pscf::Prdc::Cuda::FFT&lt; D &gt;::forwardTransform()</a>, <a class="el" href="cuda_2FFT_8tpp_source.html#l00134">Pscf::Prdc::Cuda::FFT&lt; D &gt;::forwardTransform()</a>, <a class="el" href="FFTBatched_8tpp_source.html#l00191">Pscf::Prdc::Cuda::FFTBatched&lt; D &gt;::forwardTransform()</a>, <a class="el" href="HostDArray_8h_source.html#l00150">Pscf::HostDArray&lt; Data &gt;::HostDArray()</a>, <a class="el" href="cuda_2FFT_8tpp_source.html#l00246">Pscf::Prdc::Cuda::FFT&lt; D &gt;::inverseTransform()</a>, <a class="el" href="cuda_2FFT_8tpp_source.html#l00165">Pscf::Prdc::Cuda::FFT&lt; D &gt;::inverseTransformUnsafe()</a>, <a class="el" href="FFTBatched_8tpp_source.html#l00225">Pscf::Prdc::Cuda::FFTBatched&lt; D &gt;::inverseTransformUnsafe()</a>, <a class="el" href="Reduce_8cu_source.html#l00381">Pscf::Reduce::max()</a>, <a class="el" href="Reduce_8cu_source.html#l00394">Pscf::Reduce::max()</a>, <a class="el" href="Reduce_8cu_source.html#l00436">Pscf::Reduce::min()</a>, <a class="el" href="Reduce_8cu_source.html#l00449">Pscf::Reduce::min()</a>, <a class="el" href="VecOp_8cu_source.html#l02336">Pscf::VecOp::mulEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02354">Pscf::VecOp::mulEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02320">Pscf::VecOp::mulEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02284">Pscf::VecOp::mulEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02302">Pscf::VecOp::mulEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02266">Pscf::VecOp::mulEqV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00557">Pscf::VecOp::mulEqVPair()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00643">Pscf::VecOp::mulVMany()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00676">Pscf::VecOp::mulVMany()</a>, <a class="el" href="VecOp_8cu_source.html#l01838">Pscf::VecOp::mulVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01877">Pscf::VecOp::mulVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01858">Pscf::VecOp::mulVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01817">Pscf::VecOp::mulVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01751">Pscf::VecOp::mulVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01795">Pscf::VecOp::mulVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01773">Pscf::VecOp::mulVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01730">Pscf::VecOp::mulVV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00532">Pscf::VecOp::mulVVPair()</a>, <a class="el" href="CudaVecRandom_8cu_source.html#l00193">Pscf::CudaVecRandom::normal()</a>, <a class="el" href="CudaVecRandom_8cu_source.html#l00172">Pscf::CudaVecRandom::normal()</a>, <a class="el" href="DeviceArray_8h_source.html#l00528">operator=()</a>, <a class="el" href="HostDArray_8h_source.html#l00176">Pscf::HostDArray&lt; Data &gt;::operator=()</a>, <a class="el" href="VecOp_8cu_source.html#l02559">Pscf::VecOp::sqAbsV()</a>, <a class="el" href="VecOpMisc_8cu_source.html#l00709">Pscf::VecOp::sqSqAbsV()</a>, <a class="el" href="VecOp_8cu_source.html#l02515">Pscf::VecOp::sqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02494">Pscf::VecOp::sqV()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8tpp_source.html#l00195">Pscf::Rpg::FilmFieldGenExt&lt; D &gt;::stress()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenMask_8tpp_source.html#l00176">Pscf::Rpg::FilmFieldGenMask&lt; D &gt;::stress()</a>, <a class="el" href="VecOp_8cu_source.html#l02230">Pscf::VecOp::subEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02248">Pscf::VecOp::subEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02212">Pscf::VecOp::subEqS()</a>, <a class="el" href="VecOp_8cu_source.html#l02172">Pscf::VecOp::subEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02192">Pscf::VecOp::subEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l02152">Pscf::VecOp::subEqV()</a>, <a class="el" href="VecOp_8cu_source.html#l01671">Pscf::VecOp::subVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01710">Pscf::VecOp::subVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01691">Pscf::VecOp::subVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01650">Pscf::VecOp::subVS()</a>, <a class="el" href="VecOp_8cu_source.html#l01584">Pscf::VecOp::subVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01628">Pscf::VecOp::subVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01606">Pscf::VecOp::subVV()</a>, <a class="el" href="VecOp_8cu_source.html#l01562">Pscf::VecOp::subVV()</a>, <a class="el" href="Reduce_8cu_source.html#l00249">Pscf::Reduce::sum()</a>, <a class="el" href="Reduce_8cu_source.html#l00264">Pscf::Reduce::sum()</a>, <a class="el" href="Reduce_8cu_source.html#l00216">Pscf::Reduce::sum()</a>, <a class="el" href="Reduce_8cu_source.html#l00231">Pscf::Reduce::sum()</a>, <a class="el" href="CudaVecRandom_8cu_source.html#l00134">Pscf::CudaVecRandom::uniform()</a>, and <a class="el" href="CudaVecRandom_8cu_source.html#l00118">Pscf::CudaVecRandom::uniform()</a>.</p>
 
 </div>
 </div>
@@ -655,9 +829,9 @@ template&lt;typename Data&gt; </div>
 
 <p>Return const pointer to underlying C array. </p>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00428">428</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00600">600</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00176">dataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00195">ownerCapacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00203">ownerDataPtr_</a>, <a class="el" href="DeviceArray_8h_source.html#l00187">ownerPtr_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00289">dataPtr_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -686,9 +860,9 @@ template&lt;typename Data&gt; </div>
 
 <p>Pointer to a C array of Data elements on the GPU device. </p>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00176">176</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00289">289</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DeviceArray_8h_source.html#l00264">allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00285">associate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00428">cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00311">deallocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00210">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00236">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00222">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00330">dissociate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00444">isAllocated()</a>, <a class="el" href="DeviceArray_8h_source.html#l00467">isOwner()</a>, <a class="el" href="DeviceArray_8h_source.html#l00350">operator=()</a>, <a class="el" href="DeviceArray_8h_source.html#l00383">operator=()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00252">~DeviceArray()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DeviceArray_8h_source.html#l00424">allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00459">associate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00482">associate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00590">cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00600">cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00445">deallocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00346">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00386">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00366">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00355">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00502">dissociate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00315">isAllocated()</a>, <a class="el" href="DeviceArray_8h_source.html#l00329">isAssociated()</a>, <a class="el" href="DeviceArray_8h_source.html#l00322">isOwner()</a>, <a class="el" href="DeviceArray_8h_source.html#l00561">operator=()</a>, <a class="el" href="DeviceArray_8h_source.html#l00528">operator=()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00404">~DeviceArray()</a>.</p>
 
 </div>
 </div>
@@ -716,14 +890,14 @@ template&lt;typename Data&gt; </div>
 
 <p>Allocated size (capacity) of the array. </p>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00179">179</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00292">292</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DeviceArray_8h_source.html#l00264">allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00285">associate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00460">capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00311">deallocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00210">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00236">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00222">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00330">dissociate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00350">operator=()</a>, <a class="el" href="DeviceArray_8h_source.html#l00383">operator=()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00252">~DeviceArray()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DeviceArray_8h_source.html#l00424">allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00459">associate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00482">associate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00308">capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00445">deallocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00346">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00386">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00366">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00355">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00502">dissociate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00561">operator=()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00528">operator=()</a>.</p>
 
 </div>
 </div>
-<a id="a326bbe648866e31f1255daa15a9e73b1" name="a326bbe648866e31f1255daa15a9e73b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a326bbe648866e31f1255daa15a9e73b1">&#9670;&#160;</a></span>ownerPtr_</h2>
+<a id="a3dec8eead5c66b919d4e8736fb04f2a0" name="a3dec8eead5c66b919d4e8736fb04f2a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dec8eead5c66b919d4e8736fb04f2a0">&#9670;&#160;</a></span>refCounter_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -734,7 +908,7 @@ template&lt;typename Data&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt;Data&gt; const* <a class="el" href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a>&lt; Data &gt;::ownerPtr_</td>
+          <td class="memname"><a class="el" href="classUtil_1_1ReferenceCounter.html">ReferenceCounter</a> <a class="el" href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a>&lt; Data &gt;::refCounter_</td>
         </tr>
       </table>
   </td>
@@ -744,17 +918,16 @@ template&lt;typename Data&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Pointer to array that owns this data, if isOwner_ == false. </p>
-<p>Used to check that parent array has not been deallocated and/or reallocated. </p>
+<p>Counter for any arrays that use data owned by this. </p>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00187">187</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00295">295</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DeviceArray_8h_source.html#l00264">allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00285">associate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00428">cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00210">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00222">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00330">dissociate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00444">isAllocated()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00467">isOwner()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DeviceArray_8h_source.html#l00520">addReference()</a>, <a class="el" href="DeviceArray_8h_source.html#l00445">deallocate()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00404">~DeviceArray()</a>.</p>
 
 </div>
 </div>
-<a id="a8dca95225b2f1908cbb5903636a86081" name="a8dca95225b2f1908cbb5903636a86081"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8dca95225b2f1908cbb5903636a86081">&#9670;&#160;</a></span>ownerCapacity_</h2>
+<a id="a888854c120fb36dd71ae85a6f90fa050" name="a888854c120fb36dd71ae85a6f90fa050"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a888854c120fb36dd71ae85a6f90fa050">&#9670;&#160;</a></span>ref_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -765,7 +938,7 @@ template&lt;typename Data&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a>&lt; Data &gt;::ownerCapacity_</td>
+          <td class="memname"><a class="el" href="classUtil_1_1CountedReference.html">CountedReference</a> <a class="el" href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a>&lt; Data &gt;::ref_</td>
         </tr>
       </table>
   </td>
@@ -775,43 +948,11 @@ template&lt;typename Data&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Capacity of parent array, if isOwner_ == false. </p>
-<p>Used to check that parent array has not been deallocated and/or reallocated. </p>
+<p>Reference to another array that owns memory used by this one. </p>
 
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00195">195</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00298">298</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DeviceArray_8h_source.html#l00285">associate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00428">cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00210">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00222">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00330">dissociate()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00444">isAllocated()</a>.</p>
-
-</div>
-</div>
-<a id="a9674921ca7679135b1ea3e3d171d48f7" name="a9674921ca7679135b1ea3e3d171d48f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9674921ca7679135b1ea3e3d171d48f7">&#9670;&#160;</a></span>ownerDataPtr_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Data&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Data const* <a class="el" href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray</a>&lt; Data &gt;::ownerDataPtr_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Const pointer to parent array, if isOwner_ == false. </p>
-<p>Used to check that parent array has not been deallocated and/or reallocated. </p>
-
-<p class="definition">Definition at line <a class="el" href="DeviceArray_8h_source.html#l00203">203</a> of file <a class="el" href="DeviceArray_8h_source.html">DeviceArray.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="DeviceArray_8h_source.html#l00285">associate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00412">cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00428">cArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00210">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00222">DeviceArray()</a>, <a class="el" href="DeviceArray_8h_source.html#l00330">dissociate()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00444">isAllocated()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DeviceArray_8h_source.html#l00424">allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00459">associate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00482">associate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00445">deallocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00502">dissociate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00329">isAssociated()</a>, <a class="el" href="DeviceArray_8h_source.html#l00322">isOwner()</a>, and <a class="el" href="DeviceArray_8h_source.html#l00404">~DeviceArray()</a>.</p>
 
 </div>
 </div>

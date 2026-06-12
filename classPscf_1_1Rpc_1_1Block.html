@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -79,8 +79,8 @@ Inheritance diagram for Pscf::Rpc::Block&lt; D &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a170016d95ef39984cba3f4894287deb6" id="r_a170016d95ef39984cba3f4894287deb6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a170016d95ef39984cba3f4894287deb6">Base</a> = <a class="el" href="classPscf_1_1BlockTmpl.html">BlockTmpl</a>&lt; <a class="el" href="classPscf_1_1Rpc_1_1Propagator.html">Propagator</a>&lt;D&gt;, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt;D&gt; &gt;</td></tr>
-<tr class="memdesc:a170016d95ef39984cba3f4894287deb6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a170016d95ef39984cba3f4894287deb6" title="Base class.">Base</a> class.  <br /></td></tr>
+<tr class="memitem:afef0423a0d958028f031a2bb95786f4c" id="r_afef0423a0d958028f031a2bb95786f4c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afef0423a0d958028f031a2bb95786f4c">BlockTmplT</a> = <a class="el" href="classPscf_1_1BlockTmpl.html">BlockTmpl</a>&lt; <a class="el" href="classPscf_1_1Rpc_1_1Propagator.html">Propagator</a>&lt;D&gt;, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt;D&gt; &gt;</td></tr>
+<tr class="memdesc:afef0423a0d958028f031a2bb95786f4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direct (parent) base class.  <br /></td></tr>
 <tr class="inherit_header pub_types_classPscf_1_1BlockTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classPscf_1_1BlockTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl&lt; Propagator&lt; D &gt;, RField&lt; D &gt; &gt;</a></td></tr>
 <tr class="memitem:a51c9740a6d0d6a4602be8283539df888 inherit pub_types_classPscf_1_1BlockTmpl" id="r_a51c9740a6d0d6a4602be8283539df888"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1BlockTmpl.html#a51c9740a6d0d6a4602be8283539df888">PropagatorT</a></td></tr>
 <tr class="memdesc:a51c9740a6d0d6a4602be8283539df888 inherit pub_types_classPscf_1_1BlockTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modified diffusion equation solver (propagator) type.  <br /></td></tr>
@@ -93,18 +93,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1322c17e447bcae245322388168536f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:abbd6afab2c428944349a50df9f52b5a3" id="r_abbd6afab2c428944349a50df9f52b5a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbd6afab2c428944349a50df9f52b5a3">~Block</a> ()</td></tr>
 <tr class="memdesc:abbd6afab2c428944349a50df9f52b5a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:a5891284ffdd23627ae258b79b1cfe2b3" id="r_a5891284ffdd23627ae258b79b1cfe2b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5891284ffdd23627ae258b79b1cfe2b3">associate</a> (<a class="el" href="classPscf_1_1Mesh.html">Mesh</a>&lt; D &gt; const &amp;mesh, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">FFT</a>&lt; D &gt; const &amp;fft, <a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;cell, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1WaveList.html">WaveList</a>&lt; D &gt; &amp;wavelist)</td></tr>
-<tr class="memdesc:a5891284ffdd23627ae258b79b1cfe2b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create permanent associations with related objects.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Initialization and State Mutators</div></td></tr>
+<tr class="memitem:a635c9089efbd3ec3fbbf0b622c653b43" id="r_a635c9089efbd3ec3fbbf0b622c653b43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a635c9089efbd3ec3fbbf0b622c653b43">associate</a> (<a class="el" href="classPscf_1_1Mesh.html">Mesh</a>&lt; D &gt; const &amp;mesh, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">FFT</a>&lt; D &gt; const &amp;fft, <a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;cell, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1WaveList.html">WaveList</a>&lt; D &gt; &amp;waveList)</td></tr>
+<tr class="memdesc:a635c9089efbd3ec3fbbf0b622c653b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create permanent associations with related objects.  <br /></td></tr>
 <tr class="memitem:a379640adf003e804553674111aacfb62" id="r_a379640adf003e804553674111aacfb62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a379640adf003e804553674111aacfb62">allocate</a> (double <a class="el" href="#aabc8c1ecfa0a5b0db7329998c720e6b6">ds</a>)</td></tr>
 <tr class="memdesc:a379640adf003e804553674111aacfb62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory and set contour step size.  <br /></td></tr>
 <tr class="memitem:a2a132c935f19b2fc53d67fb602e40f9a" id="r_a2a132c935f19b2fc53d67fb602e40f9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a132c935f19b2fc53d67fb602e40f9a">clearUnitCellData</a> ()</td></tr>
 <tr class="memdesc:a2a132c935f19b2fc53d67fb602e40f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all internal data that depends on the unit cell parameters.  <br /></td></tr>
 <tr class="memitem:a116d8a913b48aded5303a09d8342564f" id="r_a116d8a913b48aded5303a09d8342564f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a116d8a913b48aded5303a09d8342564f">setLength</a> (double newLength)</td></tr>
 <tr class="memdesc:a116d8a913b48aded5303a09d8342564f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set or reset block length (only used in thread model).  <br /></td></tr>
-<tr class="memitem:a1e280b339a5b6eaaa465fdd4fd762a06" id="r_a1e280b339a5b6eaaa465fdd4fd762a06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e280b339a5b6eaaa465fdd4fd762a06">setKuhn</a> (double <a class="el" href="#a36ffb76652d2c92dad2ad161b9d408ca">kuhn</a>)</td></tr>
+<tr class="memitem:a1e280b339a5b6eaaa465fdd4fd762a06" id="r_a1e280b339a5b6eaaa465fdd4fd762a06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e280b339a5b6eaaa465fdd4fd762a06">setKuhn</a> (double <a class="el" href="classPscf_1_1BlockTmpl.html#a9e5880b811250fe6856cf2d9101a9576">kuhn</a>)</td></tr>
 <tr class="memdesc:a1e280b339a5b6eaaa465fdd4fd762a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set or reset monomer statistical segment length.  <br /></td></tr>
 <tr class="memitem:a3040246e4405bcbfb6072bf988232474" id="r_a3040246e4405bcbfb6072bf988232474"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3040246e4405bcbfb6072bf988232474">setupSolver</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;w)</td></tr>
 <tr class="memdesc:a3040246e4405bcbfb6072bf988232474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up the MDE solver for this block.  <br /></td></tr>
+<tr id="pub-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader">MDE Step Functions</div></td></tr>
 <tr class="memitem:aa5745de535e99e71fc6701281c6fb7a8" id="r_aa5745de535e99e71fc6701281c6fb7a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5745de535e99e71fc6701281c6fb7a8">stepThread</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;qin, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp;qout) const</td></tr>
 <tr class="memdesc:aa5745de535e99e71fc6701281c6fb7a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute one step of solution of MDE for the thread model.  <br /></td></tr>
 <tr class="memitem:ae7673ff7fdc46bd0672fe8d629962f1f" id="r_ae7673ff7fdc46bd0672fe8d629962f1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7673ff7fdc46bd0672fe8d629962f1f">stepBead</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;qin, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp;qout) const</td></tr>
@@ -115,53 +117,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a11423f5d2d5b78bf2701b56d4d417bf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a bond operator for the bead model.  <br /></td></tr>
 <tr class="memitem:acbaf384e85e71c6b231f7ebf47a6f681" id="r_acbaf384e85e71c6b231f7ebf47a6f681"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbaf384e85e71c6b231f7ebf47a6f681">stepHalfBondBead</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;qin, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp;qout) const</td></tr>
 <tr class="memdesc:acbaf384e85e71c6b231f7ebf47a6f681"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a half-bond operator for the bead model.  <br /></td></tr>
+<tr id="pub-methods-2" class="groupHeader"><td colspan="2"><div class="groupHeader">Monomer Concentration Computation</div></td></tr>
 <tr class="memitem:aa477e68952969806f65e09f65cd1fd5a" id="r_aa477e68952969806f65e09f65cd1fd5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa477e68952969806f65e09f65cd1fd5a">computeConcentrationThread</a> (double prefactor)</td></tr>
 <tr class="memdesc:aa477e68952969806f65e09f65cd1fd5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the concentration for this block, for the thread model.  <br /></td></tr>
 <tr class="memitem:a1300601289c529ebe0ab617f8995a40a" id="r_a1300601289c529ebe0ab617f8995a40a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1300601289c529ebe0ab617f8995a40a">computeConcentrationBead</a> (double prefactor)</td></tr>
 <tr class="memdesc:a1300601289c529ebe0ab617f8995a40a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the concentration for this block, using the bead model.  <br /></td></tr>
+<tr id="pub-methods-3" class="groupHeader"><td colspan="2"><div class="groupHeader">Stress Computation</div></td></tr>
 <tr class="memitem:aa878cd28b15241bf8bf1e2a28fd45351" id="r_aa878cd28b15241bf8bf1e2a28fd45351"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa878cd28b15241bf8bf1e2a28fd45351">computeStressThread</a> (double prefactor)</td></tr>
 <tr class="memdesc:aa878cd28b15241bf8bf1e2a28fd45351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute stress contribution for this block, using thread model.  <br /></td></tr>
 <tr class="memitem:a4ad83c9a8ccb26a6b09b853042717964" id="r_a4ad83c9a8ccb26a6b09b853042717964"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ad83c9a8ccb26a6b09b853042717964">computeStressBead</a> (double prefactor)</td></tr>
 <tr class="memdesc:a4ad83c9a8ccb26a6b09b853042717964"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute stress contribution for this block, using bead model.  <br /></td></tr>
 <tr class="memitem:a180e0ec6fc594ab5dcd5a19c5d125fc2" id="r_a180e0ec6fc594ab5dcd5a19c5d125fc2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a180e0ec6fc594ab5dcd5a19c5d125fc2">stress</a> (int n) const</td></tr>
 <tr class="memdesc:a180e0ec6fc594ab5dcd5a19c5d125fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get derivative of free energy w/ respect to a unit cell parameter.  <br /></td></tr>
-<tr class="memitem:aabc8c1ecfa0a5b0db7329998c720e6b6" id="r_aabc8c1ecfa0a5b0db7329998c720e6b6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabc8c1ecfa0a5b0db7329998c720e6b6">ds</a> () const</td></tr>
-<tr class="memdesc:aabc8c1ecfa0a5b0db7329998c720e6b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get contour length step size.  <br /></td></tr>
-<tr class="memitem:ab434b1ce6580fa9fdba0a2ff11e9e446" id="r_ab434b1ce6580fa9fdba0a2ff11e9e446"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab434b1ce6580fa9fdba0a2ff11e9e446">ns</a> () const</td></tr>
-<tr class="memdesc:ab434b1ce6580fa9fdba0a2ff11e9e446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of contour grid points, including end points.  <br /></td></tr>
-<tr class="memitem:a5c76946645ddc1f96b1f7e648f78d57d" id="r_a5c76946645ddc1f96b1f7e648f78d57d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpc_1_1Propagator.html">Propagator</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c76946645ddc1f96b1f7e648f78d57d">propagator</a> (int directionId)</td></tr>
-<tr class="memdesc:a5c76946645ddc1f96b1f7e648f78d57d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a <a class="el" href="classPscf_1_1Rpc_1_1Propagator.html" title="MDE solver for one direction of one block.">Propagator</a> for a specified direction.  <br /></td></tr>
-<tr class="memitem:a88991ca44dfe81ea5258e787d1284996" id="r_a88991ca44dfe81ea5258e787d1284996"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpc_1_1Propagator.html">Propagator</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88991ca44dfe81ea5258e787d1284996">propagator</a> (int directionId) const</td></tr>
-<tr class="memdesc:a88991ca44dfe81ea5258e787d1284996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a const <a class="el" href="classPscf_1_1Rpc_1_1Propagator.html" title="MDE solver for one direction of one block.">Propagator</a> for a specified direction.  <br /></td></tr>
-<tr class="memitem:ad289615517ab1d805201446e8c039fa3" id="r_ad289615517ab1d805201446e8c039fa3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad289615517ab1d805201446e8c039fa3">cField</a> ()</td></tr>
-<tr class="memdesc:ad289615517ab1d805201446e8c039fa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the associated monomer concentration field.  <br /></td></tr>
-<tr class="memitem:a0cad920b2c20e9aea7022d555ff325bb" id="r_a0cad920b2c20e9aea7022d555ff325bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cad920b2c20e9aea7022d555ff325bb">cField</a> () const</td></tr>
-<tr class="memdesc:a0cad920b2c20e9aea7022d555ff325bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the associated const monomer concentration field.  <br /></td></tr>
-<tr class="memitem:a36ffb76652d2c92dad2ad161b9d408ca" id="r_a36ffb76652d2c92dad2ad161b9d408ca"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36ffb76652d2c92dad2ad161b9d408ca">kuhn</a> () const</td></tr>
-<tr class="memdesc:a36ffb76652d2c92dad2ad161b9d408ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get monomer statistical segment length.  <br /></td></tr>
-<tr class="memitem:adfab7a96d545aa786d54bd9879aa2350" id="r_adfab7a96d545aa786d54bd9879aa2350"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfab7a96d545aa786d54bd9879aa2350">setId</a> (int <a class="el" href="#a186132dde83313515f13225159bf5218">id</a>)</td></tr>
-<tr class="memdesc:adfab7a96d545aa786d54bd9879aa2350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the id for this block.  <br /></td></tr>
-<tr class="memitem:a2eac28704a3c4922029fdd8b6612e442" id="r_a2eac28704a3c4922029fdd8b6612e442"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2eac28704a3c4922029fdd8b6612e442">setVertexIds</a> (int vertexId0, int vertexId1)</td></tr>
-<tr class="memdesc:a2eac28704a3c4922029fdd8b6612e442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set indices of associated vertices.  <br /></td></tr>
-<tr class="memitem:ad4baf11af8a59e2dffe2df47ce2d0288" id="r_ad4baf11af8a59e2dffe2df47ce2d0288"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4baf11af8a59e2dffe2df47ce2d0288">setMonomerId</a> (int <a class="el" href="#ab70225daf76b835884b66c5ee6be2a90">monomerId</a>)</td></tr>
-<tr class="memdesc:ad4baf11af8a59e2dffe2df47ce2d0288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the monomer type id.  <br /></td></tr>
-<tr class="memitem:a186132dde83313515f13225159bf5218" id="r_a186132dde83313515f13225159bf5218"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a186132dde83313515f13225159bf5218">id</a> () const</td></tr>
-<tr class="memdesc:a186132dde83313515f13225159bf5218"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the id of this block (unique within the polymer).  <br /></td></tr>
-<tr class="memitem:ab70225daf76b835884b66c5ee6be2a90" id="r_ab70225daf76b835884b66c5ee6be2a90"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab70225daf76b835884b66c5ee6be2a90">monomerId</a> () const</td></tr>
-<tr class="memdesc:ab70225daf76b835884b66c5ee6be2a90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the monomer type id for this block.  <br /></td></tr>
-<tr class="memitem:a4a4a9e4e6b98adcdb20489e6f6c0d8a4" id="r_a4a4a9e4e6b98adcdb20489e6f6c0d8a4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classUtil_1_1Pair.html">Pair</a>&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a4a9e4e6b98adcdb20489e6f6c0d8a4">vertexIds</a> () const</td></tr>
-<tr class="memdesc:a4a4a9e4e6b98adcdb20489e6f6c0d8a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pair of associated vertex ids.  <br /></td></tr>
-<tr class="memitem:acefe9771ab840c6f260aa2175888a876" id="r_acefe9771ab840c6f260aa2175888a876"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acefe9771ab840c6f260aa2175888a876">vertexId</a> (int i) const</td></tr>
-<tr class="memdesc:acefe9771ab840c6f260aa2175888a876"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the id of one associated vertex.  <br /></td></tr>
-<tr class="memitem:aec0d15902ecf9b1f972944fa735a1807" id="r_aec0d15902ecf9b1f972944fa735a1807"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec0d15902ecf9b1f972944fa735a1807">length</a> () const</td></tr>
-<tr class="memdesc:aec0d15902ecf9b1f972944fa735a1807"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the length of this block, in the thread model.  <br /></td></tr>
-<tr class="memitem:a4b86f5c7c354394133e88dc93fffcc4c" id="r_a4b86f5c7c354394133e88dc93fffcc4c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b86f5c7c354394133e88dc93fffcc4c">nBead</a> () const</td></tr>
-<tr class="memdesc:a4b86f5c7c354394133e88dc93fffcc4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of beads in this block, in the bead model.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classPscf_1_1BlockTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1BlockTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl&lt; Propagator&lt; D &gt;, RField&lt; D &gt; &gt;</a></td></tr>
-<tr class="memitem:aedb852097b6ea6da25b71a613ff300f5 inherit pub_methods_classPscf_1_1BlockTmpl" id="r_aedb852097b6ea6da25b71a613ff300f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1BlockTmpl.html#aedb852097b6ea6da25b71a613ff300f5">BlockTmpl</a> ()</td></tr>
-<tr class="memdesc:aedb852097b6ea6da25b71a613ff300f5 inherit pub_methods_classPscf_1_1BlockTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="memitem:aa1c4d51929e53c484db57a28983f5fe8 inherit pub_methods_classPscf_1_1BlockTmpl" id="r_aa1c4d51929e53c484db57a28983f5fe8"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1BlockTmpl.html#aa1c4d51929e53c484db57a28983f5fe8">~BlockTmpl</a> ()</td></tr>
-<tr class="memdesc:aa1c4d51929e53c484db57a28983f5fe8 inherit pub_methods_classPscf_1_1BlockTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 <tr class="memitem:abbf0162e536b9888cc5f5f5795d75b50 inherit pub_methods_classPscf_1_1BlockTmpl" id="r_abbf0162e536b9888cc5f5f5795d75b50"><td class="memItemLeft" align="right" valign="top">Propagator&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1BlockTmpl.html#abbf0162e536b9888cc5f5f5795d75b50">propagator</a> (int directionId)</td></tr>
 <tr class="memdesc:abbf0162e536b9888cc5f5f5795d75b50 inherit pub_methods_classPscf_1_1BlockTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a Propagator for a specified direction.  <br /></td></tr>
 <tr class="memitem:ad1f4745bbcee7363e53bc40dab055191 inherit pub_methods_classPscf_1_1BlockTmpl" id="r_ad1f4745bbcee7363e53bc40dab055191"><td class="memItemLeft" align="right" valign="top">Propagator&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1BlockTmpl.html#ad1f4745bbcee7363e53bc40dab055191">propagator</a> (int directionId) const</td></tr>
@@ -175,8 +143,8 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_classPscf_1_1Edge"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1Edge')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1Edge.html">Pscf::Edge</a></td></tr>
 <tr class="memitem:acd9d733adff349df9a04be1bb814a6e6 inherit pub_methods_classPscf_1_1Edge" id="r_acd9d733adff349df9a04be1bb814a6e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Edge.html#acd9d733adff349df9a04be1bb814a6e6">Edge</a> ()</td></tr>
 <tr class="memdesc:acd9d733adff349df9a04be1bb814a6e6 inherit pub_methods_classPscf_1_1Edge"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="memitem:abe14d03da4753ea71463d9ca94ab3fce inherit pub_methods_classPscf_1_1Edge" id="r_abe14d03da4753ea71463d9ca94ab3fce"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Edge.html#abe14d03da4753ea71463d9ca94ab3fce">~Edge</a> ()</td></tr>
-<tr class="memdesc:abe14d03da4753ea71463d9ca94ab3fce inherit pub_methods_classPscf_1_1Edge"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:a82b49c65f31cb1ee84ffac9c2ecb9278 inherit pub_methods_classPscf_1_1Edge" id="r_a82b49c65f31cb1ee84ffac9c2ecb9278"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Edge.html#a82b49c65f31cb1ee84ffac9c2ecb9278">~Edge</a> ()=default</td></tr>
+<tr class="memdesc:a82b49c65f31cb1ee84ffac9c2ecb9278 inherit pub_methods_classPscf_1_1Edge"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 <tr class="memitem:a930e6202b901d4f2548ee88d4ecef58d inherit pub_methods_classPscf_1_1Edge" id="r_a930e6202b901d4f2548ee88d4ecef58d"><td class="memTemplParams" colspan="2">template&lt;class Archive&gt; </td></tr>
 <tr class="memitem:a930e6202b901d4f2548ee88d4ecef58d inherit pub_methods_classPscf_1_1Edge template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Edge.html#a930e6202b901d4f2548ee88d4ecef58d">serialize</a> (Archive &amp;ar, unsigned int versionId)</td></tr>
 <tr class="memdesc:a930e6202b901d4f2548ee88d4ecef58d inherit pub_methods_classPscf_1_1Edge"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to/from archive.  <br /></td></tr>
@@ -204,6 +172,29 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4b86f5c7c354394133e88dc93fffcc4c inherit pub_methods_classPscf_1_1Edge"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of beads in this block, in the bead model.  <br /></td></tr>
 <tr class="memitem:a21533bc06e4a9080596d5221b71b4d8f inherit pub_methods_classPscf_1_1Edge" id="r_a21533bc06e4a9080596d5221b71b4d8f"><td class="memItemLeft" align="right" valign="top">PolymerType::Enum&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Edge.html#a21533bc06e4a9080596d5221b71b4d8f">polymerType</a> () const</td></tr>
 <tr class="memdesc:a21533bc06e4a9080596d5221b71b4d8f inherit pub_methods_classPscf_1_1Edge"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of the parent polymer (branched or linear).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+Accessors</h2></td></tr>
+<tr class="memitem:aabc8c1ecfa0a5b0db7329998c720e6b6" id="r_aabc8c1ecfa0a5b0db7329998c720e6b6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabc8c1ecfa0a5b0db7329998c720e6b6">ds</a> () const</td></tr>
+<tr class="memdesc:aabc8c1ecfa0a5b0db7329998c720e6b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get contour length step size.  <br /></td></tr>
+<tr class="memitem:ab434b1ce6580fa9fdba0a2ff11e9e446" id="r_ab434b1ce6580fa9fdba0a2ff11e9e446"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab434b1ce6580fa9fdba0a2ff11e9e446">ns</a> () const</td></tr>
+<tr class="memdesc:ab434b1ce6580fa9fdba0a2ff11e9e446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of contour grid points, including end points.  <br /></td></tr>
+<tr class="memitem:a5c76946645ddc1f96b1f7e648f78d57d" id="r_a5c76946645ddc1f96b1f7e648f78d57d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpc_1_1Propagator.html">Propagator</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c76946645ddc1f96b1f7e648f78d57d">propagator</a> (int directionId)</td></tr>
+<tr class="memdesc:a5c76946645ddc1f96b1f7e648f78d57d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a <a class="el" href="classPscf_1_1Rpc_1_1Propagator.html" title="MDE solver for one direction of one block.">Propagator</a> for a specified direction.  <br /></td></tr>
+<tr class="memitem:a88991ca44dfe81ea5258e787d1284996" id="r_a88991ca44dfe81ea5258e787d1284996"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpc_1_1Propagator.html">Propagator</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88991ca44dfe81ea5258e787d1284996">propagator</a> (int directionId) const</td></tr>
+<tr class="memdesc:a88991ca44dfe81ea5258e787d1284996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a const <a class="el" href="classPscf_1_1Rpc_1_1Propagator.html" title="MDE solver for one direction of one block.">Propagator</a> for a specified direction.  <br /></td></tr>
+<tr class="memitem:ad289615517ab1d805201446e8c039fa3" id="r_ad289615517ab1d805201446e8c039fa3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad289615517ab1d805201446e8c039fa3">cField</a> ()</td></tr>
+<tr class="memdesc:ad289615517ab1d805201446e8c039fa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the associated monomer concentration field.  <br /></td></tr>
+<tr class="memitem:a0cad920b2c20e9aea7022d555ff325bb" id="r_a0cad920b2c20e9aea7022d555ff325bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cad920b2c20e9aea7022d555ff325bb">cField</a> () const</td></tr>
+<tr class="memdesc:a0cad920b2c20e9aea7022d555ff325bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the associated const monomer concentration field.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classPscf_1_1BlockTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classPscf_1_1BlockTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl&lt; Propagator&lt; D &gt;, RField&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:aedb852097b6ea6da25b71a613ff300f5 inherit pro_methods_classPscf_1_1BlockTmpl" id="r_aedb852097b6ea6da25b71a613ff300f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1BlockTmpl.html#aedb852097b6ea6da25b71a613ff300f5">BlockTmpl</a> ()</td></tr>
+<tr class="memdesc:aedb852097b6ea6da25b71a613ff300f5 inherit pro_methods_classPscf_1_1BlockTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:a311a8314adb0f5d602cdb76e84c4d828 inherit pro_methods_classPscf_1_1BlockTmpl" id="r_a311a8314adb0f5d602cdb76e84c4d828"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1BlockTmpl.html#a311a8314adb0f5d602cdb76e84c4d828">~BlockTmpl</a> ()=default</td></tr>
+<tr class="memdesc:a311a8314adb0f5d602cdb76e84c4d828 inherit pro_methods_classPscf_1_1BlockTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
@@ -211,10 +202,10 @@ class Pscf::Rpc::Block&lt; D &gt;</div><p><a class="el" href="classPscf_1_1Rpc_1
 <p>A <a class="el" href="classPscf_1_1Rpc_1_1Block.html" title="Block within a linear or branched block polymer.">Block</a> has two <a class="el" href="classPscf_1_1Rpc_1_1Propagator.html" title="MDE solver for one direction of one block.">Propagator&lt;D&gt;</a> members, and a <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField&lt;D&gt;</a> concentration field.</p>
 <p><a class="el" href="user_param_mixture_page.html#user_param_block_sec">Manual Page</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8h_source.html#l00059">59</a> of file <a class="el" href="rpc_2solvers_2Block_8h_source.html">rpc/solvers/Block.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8h_source.html#l00049">49</a> of file <a class="el" href="rpc_2solvers_2Block_8h_source.html">rpc/solvers/Block.h</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
-<a id="a170016d95ef39984cba3f4894287deb6" name="a170016d95ef39984cba3f4894287deb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a170016d95ef39984cba3f4894287deb6">&#9670;&#160;</a></span>Base</h2>
+<a id="afef0423a0d958028f031a2bb95786f4c" name="afef0423a0d958028f031a2bb95786f4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afef0423a0d958028f031a2bb95786f4c">&#9670;&#160;</a></span>BlockTmplT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -222,14 +213,14 @@ class Pscf::Rpc::Block&lt; D &gt;</div><p><a class="el" href="classPscf_1_1Rpc_1
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classPscf_1_1Rpc_1_1Block.html">Pscf::Rpc::Block</a>&lt; D &gt;::Base = <a class="el" href="classPscf_1_1BlockTmpl.html">BlockTmpl</a>&lt; <a class="el" href="classPscf_1_1Rpc_1_1Propagator.html">Propagator</a>&lt;D&gt;, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt;D&gt; &gt;</td>
+          <td class="memname">using <a class="el" href="classPscf_1_1Rpc_1_1Block.html">Pscf::Rpc::Block</a>&lt; D &gt;::BlockTmplT = <a class="el" href="classPscf_1_1BlockTmpl.html">BlockTmpl</a>&lt; <a class="el" href="classPscf_1_1Rpc_1_1Propagator.html">Propagator</a>&lt;D&gt;, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt;D&gt; &gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="#a170016d95ef39984cba3f4894287deb6" title="Base class.">Base</a> class. </p>
+<p>Direct (parent) base class. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8h_source.html#l00067">67</a> of file <a class="el" href="rpc_2solvers_2Block_8h_source.html">rpc/solvers/Block.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8h_source.html#l00057">57</a> of file <a class="el" href="rpc_2solvers_2Block_8h_source.html">rpc/solvers/Block.h</a>.</p>
 
 </div>
 </div>
@@ -278,13 +269,13 @@ template&lt;int D&gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00062">62</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00063">63</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a5891284ffdd23627ae258b79b1cfe2b3" name="a5891284ffdd23627ae258b79b1cfe2b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5891284ffdd23627ae258b79b1cfe2b3">&#9670;&#160;</a></span>associate()</h2>
+<a id="a635c9089efbd3ec3fbbf0b622c653b43" name="a635c9089efbd3ec3fbbf0b622c653b43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a635c9089efbd3ec3fbbf0b622c653b43">&#9670;&#160;</a></span>associate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -309,24 +300,24 @@ template&lt;int D&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1WaveList.html">WaveList</a>&lt; D &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>wavelist</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1WaveList.html">WaveList</a>&lt; D &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>waveList</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Create permanent associations with related objects. </p>
-<p>This function creates associations of this block with the <a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh</a>, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html" title="Fourier transform wrapper.">FFT</a>, <a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html" title="Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.">UnitCell</a> and <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1WaveList.html" title="Class to calculate and store properties of wavevectors.">WaveList</a> objects by storing their addresses. It must be called before <a class="el" href="#a379640adf003e804553674111aacfb62" title="Allocate memory and set contour step size.">allocate()</a>.</p>
+<p>This function creates associations of this block with the <a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh</a>, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html" title="Fourier transform wrapper.">FFT</a>, <a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html" title="Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.">UnitCell</a> and <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1WaveList.html" title="Class to compute and store properties associated with wavevectors.">WaveList</a> objects by storing their addresses. It must be called before <a class="el" href="#a379640adf003e804553674111aacfb62" title="Allocate memory and set contour step size.">allocate()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mesh</td><td><a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh&lt;D&gt;</a> object, spatial discretization meth </td></tr>
     <tr><td class="paramname">fft</td><td><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html" title="Fourier transform wrapper.">FFT&lt;D&gt;</a> object, Fast Fourier Transform </td></tr>
     <tr><td class="paramname">cell</td><td><a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html" title="Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.">UnitCell&lt;D&gt;</a> object, crystallographic unit cell </td></tr>
-    <tr><td class="paramname">wavelist</td><td><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1WaveList.html" title="Class to calculate and store properties of wavevectors.">WaveList&lt;D&gt;</a>, container for wavevector properties </td></tr>
+    <tr><td class="paramname">waveList</td><td><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1WaveList.html" title="Class to compute and store properties associated with wavevectors.">WaveList&lt;D&gt;</a>, container for wavevector properties </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00069">69</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00070">70</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -361,9 +352,9 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00090">90</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00091">91</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="#ad289615517ab1d805201446e8c039fa3">cField()</a>, <a class="el" href="cpu_2FFT_8tpp_source.html#l00262">Pscf::Prdc::Cpu::FFT&lt; D &gt;::computeKMesh()</a>, <a class="el" href="rpc_2solvers_2Block_8h_source.html#l00459">ds()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00075">Pscf::PolymerModel::isBead()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, <a class="el" href="Edge_8h_source.html#l00311">length()</a>, <a class="el" href="Edge_8h_source.html#l00302">nBead()</a>, <a class="el" href="#a5c76946645ddc1f96b1f7e648f78d57d">propagator()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="#ad289615517ab1d805201446e8c039fa3">cField()</a>, <a class="el" href="cpu_2FFT_8tpp_source.html#l00264">Pscf::Prdc::Cpu::FFT&lt; D &gt;::computeKMesh()</a>, <a class="el" href="rpc_2solvers_2Block_8h_source.html#l00447">ds()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00075">Pscf::PolymerModel::isBead()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, <a class="el" href="Edge_8h_source.html#l00311">Pscf::Edge::length()</a>, <a class="el" href="Edge_8h_source.html#l00302">Pscf::Edge::nBead()</a>, <a class="el" href="#a5c76946645ddc1f96b1f7e648f78d57d">propagator()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -387,7 +378,7 @@ template&lt;int D&gt; </div>
 <p>Clear all internal data that depends on the unit cell parameters. </p>
 <p>This function must be called once after every time the unit cell parameters change. The function marks all class member variables that depend on the unit cell parameters as being outdated. All such variables are then recomputed just before they are needed. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00195">195</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00197">197</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
 
 </div>
 </div>
@@ -427,9 +418,9 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classPscf_1_1Edge.html#a80653e04b11a378fc5075e7ce3c13dc0">Pscf::Edge</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00152">152</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00154">154</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, <a class="el" href="Edge_8h_source.html#l00311">length()</a>, <a class="el" href="#a5c76946645ddc1f96b1f7e648f78d57d">propagator()</a>, <a class="el" href="Edge_8cpp_source.html#l00068">Pscf::Edge::setLength()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, <a class="el" href="Edge_8h_source.html#l00311">Pscf::Edge::length()</a>, <a class="el" href="#a5c76946645ddc1f96b1f7e648f78d57d">propagator()</a>, <a class="el" href="Edge_8cpp_source.html#l00062">Pscf::Edge::setLength()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -468,9 +459,9 @@ template&lt;int D&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classPscf_1_1BlockTmpl.html#a6cf6614758b28da7cb0ed93921928f7a">Pscf::BlockTmpl&lt; Propagator&lt; D &gt;, RField&lt; D &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00185">185</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00187">187</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="#a36ffb76652d2c92dad2ad161b9d408ca">kuhn()</a>, and <a class="el" href="classPscf_1_1BlockTmpl.html#a6cf6614758b28da7cb0ed93921928f7a">Pscf::BlockTmpl&lt; Propagator&lt; D &gt;, RField&lt; D &gt; &gt;::setKuhn()</a>.</p>
+<p class="reference">References <a class="el" href="classPscf_1_1BlockTmpl.html#a9e5880b811250fe6856cf2d9101a9576">Pscf::BlockTmpl&lt; Propagator&lt; D &gt;, RField&lt; D &gt; &gt;::kuhn()</a>, and <a class="el" href="classPscf_1_1BlockTmpl.html#a6cf6614758b28da7cb0ed93921928f7a">Pscf::BlockTmpl&lt; Propagator&lt; D &gt;, RField&lt; D &gt; &gt;::setKuhn()</a>.</p>
 
 </div>
 </div>
@@ -492,7 +483,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Set up the MDE solver for this block. </p>
-<p>This should be called once after every change in w fields, before entering the loop used to solve the MDE for either propagator. This function is called by <a class="el" href="classPscf_1_1Rpc_1_1Polymer.html#a4f6ced519d12c22a2894e777fead70a9" title="Compute solution to MDE and block concentrations.">Polymer&lt;D&gt;::compute</a>.</p>
+<p>This should be called once after every change in w fields, before entering the loop used to solve the MDE for either propagator. This function is called by <a class="el" href="classPscf_1_1Rp_1_1Polymer.html#a7232cd0d1f25897b0240d8b4c1e61096">Polymer&lt;D&gt;::compute</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">w</td><td>chemical potential field for this monomer type </td></tr>
@@ -500,7 +491,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00241">241</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00244">244</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="PolymerModel_8cpp_source.html#l00075">Pscf::PolymerModel::isBead()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
@@ -528,7 +519,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Compute one step of solution of MDE for the thread model. </p>
-<p>This function is called internally by the <a class="el" href="classPscf_1_1Rpc_1_1Propagator.html#a095cefad2e3953874d213a3651ba5d9f" title="Solve the modified diffusion equation (MDE) for this block.">Propagator::solve</a> function within a loop over steps. It is implemented in the <a class="el" href="classPscf_1_1Rpc_1_1Block.html" title="Block within a linear or branched block polymer.">Block</a> class because the same private data structures are needed for the two propagators associated with a <a class="el" href="classPscf_1_1Rpc_1_1Block.html" title="Block within a linear or branched block polymer.">Block</a>.</p>
+<p>This function is called internally by the <a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a76dfc315228eb8321be1a6772ca5ac27">Propagator::solve</a> function within a loop over steps. It is implemented in the <a class="el" href="classPscf_1_1Rpc_1_1Block.html" title="Block within a linear or branched block polymer.">Block</a> class because the same private data structures are needed for the two propagators associated with a <a class="el" href="classPscf_1_1Rpc_1_1Block.html" title="Block within a linear or branched block polymer.">Block</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">qin</td><td>input slice of q, from step i </td></tr>
@@ -537,9 +528,9 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00277">277</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00280">280</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="FftwDArray_8h_source.html#l00102">Pscf::Prdc::Cpu::FftwDArray&lt; Data &gt;::isAllocated()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="Array_8h_source.html#l00144">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="FftwDArray_8h_source.html#l00107">Pscf::Prdc::Cpu::FftwDArray&lt; Data &gt;::isAllocated()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -565,7 +556,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Compute one step of solution of MDE for the bead model. </p>
-<p>This function is called internally by the <a class="el" href="classPscf_1_1Rpc_1_1Propagator.html#a095cefad2e3953874d213a3651ba5d9f" title="Solve the modified diffusion equation (MDE) for this block.">Propagator::solve</a> function within a loop over steps. It is implemented in the <a class="el" href="classPscf_1_1Rpc_1_1Block.html" title="Block within a linear or branched block polymer.">Block</a> class because the same private data structures are needed for the two propagators associated with a <a class="el" href="classPscf_1_1Rpc_1_1Block.html" title="Block within a linear or branched block polymer.">Block</a>.</p>
+<p>This function is called internally by the <a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a76dfc315228eb8321be1a6772ca5ac27">Propagator::solve</a> function within a loop over steps. It is implemented in the <a class="el" href="classPscf_1_1Rpc_1_1Block.html" title="Block within a linear or branched block polymer.">Block</a> class because the same private data structures are needed for the two propagators associated with a <a class="el" href="classPscf_1_1Rpc_1_1Block.html" title="Block within a linear or branched block polymer.">Block</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">qin</td><td>input slice of q, from step i </td></tr>
@@ -574,9 +565,9 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00353">353</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00356">356</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="PolymerModel_8cpp_source.html#l00075">Pscf::PolymerModel::isBead()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00364">stepBondBead()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00416">stepFieldBead()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="PolymerModel_8cpp_source.html#l00075">Pscf::PolymerModel::isBead()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00367">stepBondBead()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00419">stepFieldBead()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -606,11 +597,11 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00416">416</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00419">419</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="Array_8h_source.html#l00144">Util::Array&lt; Data &gt;::capacity()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00353">stepBead()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00356">stepBead()</a>.</p>
 
 </div>
 </div>
@@ -645,11 +636,11 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00364">364</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00367">367</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="Array_8h_source.html#l00144">Util::Array&lt; Data &gt;::capacity()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00353">stepBead()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00356">stepBead()</a>.</p>
 
 </div>
 </div>
@@ -675,7 +666,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Apply a half-bond operator for the bead model. </p>
-<p>This function applies exp( nabla^2 b^2 / 12 ), where nabla^2 denotes a Laplacian operator with eigenvalues given by -G^2 for reciprocal lattice vectors. It is used in the <a class="el" href="classPscf_1_1Rpc_1_1Propagator.html#a095cefad2e3953874d213a3651ba5d9f" title="Solve the modified diffusion equation (MDE) for this block.">Propagator::solve</a> function to deal with half-bonds at block ends.</p>
+<p>This function applies exp( nabla^2 b^2 / 12 ), where nabla^2 denotes a Laplacian operator with eigenvalues given by -G^2 for reciprocal lattice vectors. It is used in the <a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a76dfc315228eb8321be1a6772ca5ac27">Propagator::solve</a> function to deal with half-bonds at block ends.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">qin</td><td>input slice of q, from step i </td></tr>
@@ -684,9 +675,9 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00390">390</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00393">393</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="Array_8h_source.html#l00144">Util::Array&lt; Data &gt;::capacity()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -708,7 +699,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Compute the concentration for this block, for the thread model. </p>
-<p>This function is called by <a class="el" href="classPscf_1_1Rpc_1_1Polymer.html#a4f6ced519d12c22a2894e777fead70a9" title="Compute solution to MDE and block concentrations.">Polymer::compute</a> if a thread model is is used.</p>
+<p>This function is called by <a class="el" href="classPscf_1_1Rp_1_1Polymer.html#a7232cd0d1f25897b0240d8b4c1e61096">Polymer::compute</a> if a thread model is is used.</p>
 <p>The "prefactor" parameter must equal \( \phi / (L_{tot} Q) \), where \( \phi \) is the species volume fraction, \( L_{tot} \) is the total length of all blocks in this polymer species and Q is the species partition function.</p>
 <p>Upon return, grid point r of the array returned by the member function <a class="el" href="#ad289615517ab1d805201446e8c039fa3" title="Get the associated monomer concentration field.">cField()</a> contains the integal   </p><p class="formulaDsp">
 \[     p \int_{0}^{l} ds q_{0}(r,s) q_{1}(r, L - s)
@@ -722,9 +713,9 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00434">434</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00437">437</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="#ad289615517ab1d805201446e8c039fa3">cField()</a>, <a class="el" href="#a5c76946645ddc1f96b1f7e648f78d57d">propagator()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00271">Pscf::Rpc::Propagator&lt; D &gt;::q()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="#ad289615517ab1d805201446e8c039fa3">cField()</a>, <a class="el" href="#a5c76946645ddc1f96b1f7e648f78d57d">propagator()</a>, <a class="el" href="rp_2solvers_2Propagator_8h_source.html#l00269">Pscf::Rp::Propagator&lt; D, T &gt;::q()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -746,7 +737,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Compute the concentration for this block, using the bead model. </p>
-<p>This function is called by <a class="el" href="classPscf_1_1Rpc_1_1Polymer.html#a4f6ced519d12c22a2894e777fead70a9" title="Compute solution to MDE and block concentrations.">Polymer::compute</a> if a bead model is is used.</p>
+<p>This function is called by <a class="el" href="classPscf_1_1Rp_1_1Polymer.html#a7232cd0d1f25897b0240d8b4c1e61096">Polymer::compute</a> if a bead model is is used.</p>
 <p>The "prefactor" parameter must equal \( \phi /(N_{tot} Q) \), where \( \phi \) is the species volume fraction, \( N_{tot} \) is the total number of beads in all blocks of the polymer, and \( Q \) is the species partition function.</p>
 <p>Upon return, grid point r of the array returned by member function <a class="el" href="#ad289615517ab1d805201446e8c039fa3" title="Get the associated monomer concentration field.">cField()</a> contains the sum   </p><p class="formulaDsp">
 \[     p \sum_{s} q_{0}(r,s) q_{1}(r, N-s) \exp(W(r)*ds)
@@ -760,9 +751,9 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00496">496</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00499">499</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="#ad289615517ab1d805201446e8c039fa3">cField()</a>, <a class="el" href="#a5c76946645ddc1f96b1f7e648f78d57d">propagator()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00271">Pscf::Rpc::Propagator&lt; D &gt;::q()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="#ad289615517ab1d805201446e8c039fa3">cField()</a>, <a class="el" href="#a5c76946645ddc1f96b1f7e648f78d57d">propagator()</a>, <a class="el" href="rp_2solvers_2Propagator_8h_source.html#l00269">Pscf::Rp::Propagator&lt; D, T &gt;::q()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -784,7 +775,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Compute stress contribution for this block, using thread model. </p>
-<p>This function is called by <a class="el" href="classPscf_1_1Rpc_1_1Polymer.html#a8cfd61c707adcd0fe0daa22780bbedf4" title="Compute SCFT stress contribution from this polymer species.">Polymer&lt;D&gt;::computeStress</a>. The prefactor parameter must be equal to that passed to function <a class="el" href="#aa477e68952969806f65e09f65cd1fd5a" title="Compute the concentration for this block, for the thread model.">computeConcentrationThread(double )</a>.</p>
+<p>This function is called by <a class="el" href="classPscf_1_1Rp_1_1Polymer.html#aa883bbb0fea7087ca6e037965dec02f6">Polymer&lt;D&gt;::computeStress</a>. The prefactor parameter must be equal to that passed to function <a class="el" href="#aa477e68952969806f65e09f65cd1fd5a" title="Compute the concentration for this block, for the thread model.">computeConcentrationThread(double )</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">prefactor</td><td>constant multiplying integral over s </td></tr>
@@ -792,9 +783,9 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00537">537</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00540">540</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="FSArray_8h_source.html#l00258">Util::FSArray&lt; Data, Capacity &gt;::append()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00296">Pscf::Rpc::Propagator&lt; D &gt;::isAllocated()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, <a class="el" href="#a36ffb76652d2c92dad2ad161b9d408ca">kuhn()</a>, <a class="el" href="#a5c76946645ddc1f96b1f7e648f78d57d">propagator()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00271">Pscf::Rpc::Propagator&lt; D &gt;::q()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="FSArray_8h_source.html#l00258">Util::FSArray&lt; Data, Capacity &gt;::append()</a>, <a class="el" href="rp_2solvers_2Propagator_8h_source.html#l00316">Pscf::Rp::Propagator&lt; D, T &gt;::isAllocated()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, <a class="el" href="classPscf_1_1BlockTmpl.html#a9e5880b811250fe6856cf2d9101a9576">Pscf::BlockTmpl&lt; Propagator&lt; D &gt;, RField&lt; D &gt; &gt;::kuhn()</a>, <a class="el" href="#a5c76946645ddc1f96b1f7e648f78d57d">propagator()</a>, <a class="el" href="rp_2solvers_2Propagator_8h_source.html#l00269">Pscf::Rp::Propagator&lt; D, T &gt;::q()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -816,7 +807,7 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Compute stress contribution for this block, using bead model. </p>
-<p>This function is called by <a class="el" href="classPscf_1_1Rpc_1_1Polymer.html#a8cfd61c707adcd0fe0daa22780bbedf4" title="Compute SCFT stress contribution from this polymer species.">Polymer&lt;D&gt;::computeStress</a>. The prefactor parameter must be equal to that passed to function <a class="el" href="#a1300601289c529ebe0ab617f8995a40a" title="Compute the concentration for this block, using the bead model.">computeConcentrationBead(double )</a>.</p>
+<p>This function is called by <a class="el" href="classPscf_1_1Rp_1_1Polymer.html#aa883bbb0fea7087ca6e037965dec02f6">Polymer&lt;D&gt;::computeStress</a>. The prefactor parameter must be equal to that passed to function <a class="el" href="#a1300601289c529ebe0ab617f8995a40a" title="Compute the concentration for this block, using the bead model.">computeConcentrationBead(double )</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">prefactor</td><td>constant multiplying sum over beads </td></tr>
@@ -824,9 +815,9 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00619">619</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00623">623</a> of file <a class="el" href="rpc_2solvers_2Block_8tpp_source.html">rpc/solvers/Block.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="FSArray_8h_source.html#l00258">Util::FSArray&lt; Data, Capacity &gt;::append()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00075">Pscf::PolymerModel::isBead()</a>, <a class="el" href="classPscf_1_1Rpc_1_1Propagator.html#a4cc5ce94cc34b29ae7d0ce09c5f49002">Pscf::Rpc::Propagator&lt; D &gt;::isHeadEnd()</a>, <a class="el" href="classPscf_1_1Rpc_1_1Propagator.html#a73935788b43eb3aaf01c75677e44aa57">Pscf::Rpc::Propagator&lt; D &gt;::isSolved()</a>, <a class="el" href="classPscf_1_1Rpc_1_1Propagator.html#a7719b0df1e0d30730fab0d3244088c07">Pscf::Rpc::Propagator&lt; D &gt;::isTailEnd()</a>, <a class="el" href="#a36ffb76652d2c92dad2ad161b9d408ca">kuhn()</a>, <a class="el" href="#a5c76946645ddc1f96b1f7e648f78d57d">propagator()</a>, <a class="el" href="rpc_2solvers_2Propagator_8h_source.html#l00271">Pscf::Rpc::Propagator&lt; D &gt;::q()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="FSArray_8h_source.html#l00258">Util::FSArray&lt; Data, Capacity &gt;::append()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00075">Pscf::PolymerModel::isBead()</a>, <a class="el" href="PropagatorTmpl_8h_source.html#l00267">Pscf::PropagatorTmpl&lt; QT &gt;::isHeadEnd()</a>, <a class="el" href="PropagatorTmpl_8h_source.html#l00281">Pscf::PropagatorTmpl&lt; QT &gt;::isSolved()</a>, <a class="el" href="PropagatorTmpl_8h_source.html#l00274">Pscf::PropagatorTmpl&lt; QT &gt;::isTailEnd()</a>, <a class="el" href="classPscf_1_1BlockTmpl.html#a9e5880b811250fe6856cf2d9101a9576">Pscf::BlockTmpl&lt; Propagator&lt; D &gt;, RField&lt; D &gt; &gt;::kuhn()</a>, <a class="el" href="#a5c76946645ddc1f96b1f7e648f78d57d">propagator()</a>, <a class="el" href="rp_2solvers_2Propagator_8h_source.html#l00269">Pscf::Rp::Propagator&lt; D, T &gt;::q()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -864,7 +855,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8h_source.html#l00464">464</a> of file <a class="el" href="rpc_2solvers_2Block_8h_source.html">rpc/solvers/Block.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8h_source.html#l00452">452</a> of file <a class="el" href="rpc_2solvers_2Block_8h_source.html">rpc/solvers/Block.h</a>.</p>
 
 </div>
 </div>
@@ -895,9 +886,9 @@ template&lt;int D&gt; </div>
 
 <p>Get contour length step size. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8h_source.html#l00459">459</a> of file <a class="el" href="rpc_2solvers_2Block_8h_source.html">rpc/solvers/Block.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8h_source.html#l00447">447</a> of file <a class="el" href="rpc_2solvers_2Block_8h_source.html">rpc/solvers/Block.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00090">allocate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00091">allocate()</a>.</p>
 
 </div>
 </div>
@@ -930,7 +921,7 @@ template&lt;int D&gt; </div>
 <p>Thread mdoel: For the thread model, ns is always an odd number ns &gt;= 3 chosen to give an even number ns - 1 of steps of with a step length ds = length/(ns - 1) as close as possible to the target value of ds passed to the allocate function.</p>
 <p>Bead model: For the bead model, ns is equal to nBead + 2, so as to include slices for all beads and two attached phantom vertices. Beads are indexed 1, ..., ns - 2, vertices have indices 0 and ns - 1. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8h_source.html#l00454">454</a> of file <a class="el" href="rpc_2solvers_2Block_8h_source.html">rpc/solvers/Block.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpc_2solvers_2Block_8h_source.html#l00442">442</a> of file <a class="el" href="rpc_2solvers_2Block_8h_source.html">rpc/solvers/Block.h</a>.</p>
 
 </div>
 </div>
@@ -960,7 +951,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00090">allocate()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00041">Block()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00496">computeConcentrationBead()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00434">computeConcentrationThread()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00619">computeStressBead()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00537">computeStressThread()</a>, and <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00152">setLength()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00091">allocate()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00041">Block()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00499">computeConcentrationBead()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00437">computeConcentrationThread()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00623">computeStressBead()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00540">computeStressThread()</a>, and <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00154">setLength()</a>.</p>
 
 </div>
 </div>
@@ -1011,7 +1002,7 @@ template&lt;int D&gt; </div>
 
 <p>Get the associated monomer concentration field. </p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00090">allocate()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00496">computeConcentrationBead()</a>, and <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00434">computeConcentrationThread()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00091">allocate()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00499">computeConcentrationBead()</a>, and <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00437">computeConcentrationThread()</a>.</p>
 
 </div>
 </div>
@@ -1033,321 +1024,6 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Get the associated const monomer concentration field. </p>
-
-</div>
-</div>
-<a id="a36ffb76652d2c92dad2ad161b9d408ca" name="a36ffb76652d2c92dad2ad161b9d408ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36ffb76652d2c92dad2ad161b9d408ca">&#9670;&#160;</a></span>kuhn()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl</a>&lt; <a class="el" href="classPscf_1_1Rpc_1_1Propagator.html">Propagator</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &gt;::kuhn </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get monomer statistical segment length. </p>
-
-<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00619">computeStressBead()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00537">computeStressThread()</a>, and <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00185">setKuhn()</a>.</p>
-
-</div>
-</div>
-<a id="adfab7a96d545aa786d54bd9879aa2350" name="adfab7a96d545aa786d54bd9879aa2350"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfab7a96d545aa786d54bd9879aa2350">&#9670;&#160;</a></span>setId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void Pscf::Edge::setId </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the id for this block. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>integer index for this block </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="Edge_8cpp_source.html#l00089">89</a> of file <a class="el" href="Edge_8cpp_source.html">Edge.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>.</p>
-
-</div>
-</div>
-<a id="a2eac28704a3c4922029fdd8b6612e442" name="a2eac28704a3c4922029fdd8b6612e442"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2eac28704a3c4922029fdd8b6612e442">&#9670;&#160;</a></span>setVertexIds()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void Pscf::Edge::setVertexIds </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>vertexId0</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>vertexId1</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set indices of associated vertices. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">vertexId0</td><td>integer id of vertex 0 </td></tr>
-    <tr><td class="paramname">vertexId1</td><td>integer id of vertex 1 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="Edge_8cpp_source.html#l00104">104</a> of file <a class="el" href="Edge_8cpp_source.html">Edge.cpp</a>.</p>
-
-</div>
-</div>
-<a id="ad4baf11af8a59e2dffe2df47ce2d0288" name="ad4baf11af8a59e2dffe2df47ce2d0288"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4baf11af8a59e2dffe2df47ce2d0288">&#9670;&#160;</a></span>setMonomerId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void Pscf::Edge::setMonomerId </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>monomerId</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the monomer type id. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">monomerId</td><td>integer id of monomer type </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="Edge_8cpp_source.html#l00096">96</a> of file <a class="el" href="Edge_8cpp_source.html">Edge.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a186132dde83313515f13225159bf5218" name="a186132dde83313515f13225159bf5218"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a186132dde83313515f13225159bf5218">&#9670;&#160;</a></span>id()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Pscf::Edge::id </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the id of this block (unique within the polymer). </p>
-
-<p class="definition">Definition at line <a class="el" href="Edge_8h_source.html#l00147">147</a> of file <a class="el" href="Edge_8h_source.html">Edge.h</a>.</p>
-
-</div>
-</div>
-<a id="ab70225daf76b835884b66c5ee6be2a90" name="ab70225daf76b835884b66c5ee6be2a90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab70225daf76b835884b66c5ee6be2a90">&#9670;&#160;</a></span>monomerId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Pscf::Edge::monomerId </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the monomer type id for this block. </p>
-
-<p class="definition">Definition at line <a class="el" href="Edge_8h_source.html#l00152">152</a> of file <a class="el" href="Edge_8h_source.html">Edge.h</a>.</p>
-
-</div>
-</div>
-<a id="a4a4a9e4e6b98adcdb20489e6f6c0d8a4" name="a4a4a9e4e6b98adcdb20489e6f6c0d8a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a4a9e4e6b98adcdb20489e6f6c0d8a4">&#9670;&#160;</a></span>vertexIds()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classUtil_1_1Pair.html">Pair</a>&lt; int &gt; &amp; Pscf::Edge::vertexIds </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the pair of associated vertex ids. </p>
-
-<p class="definition">Definition at line <a class="el" href="Edge_8h_source.html#l00157">157</a> of file <a class="el" href="Edge_8h_source.html">Edge.h</a>.</p>
-
-</div>
-</div>
-<a id="acefe9771ab840c6f260aa2175888a876" name="acefe9771ab840c6f260aa2175888a876"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acefe9771ab840c6f260aa2175888a876">&#9670;&#160;</a></span>vertexId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Pscf::Edge::vertexId </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the id of one associated vertex. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">i</td><td>index of vertex (0 or 1) </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="Edge_8h_source.html#l00164">164</a> of file <a class="el" href="Edge_8h_source.html">Edge.h</a>.</p>
-
-</div>
-</div>
-<a id="aec0d15902ecf9b1f972944fa735a1807" name="aec0d15902ecf9b1f972944fa735a1807"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec0d15902ecf9b1f972944fa735a1807">&#9670;&#160;</a></span>length()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double Pscf::Edge::length </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the length of this block, in the thread model. </p>
-<p>Precondition: <a class="el" href="namespacePscf_1_1PolymerModel.html#a808c2831a6584875c7ec72c9d415e88e" title="Is the thread model in use ?">PolymerModel::isThread()</a> </p>
-
-<p class="definition">Definition at line <a class="el" href="Edge_8h_source.html#l00171">171</a> of file <a class="el" href="Edge_8h_source.html">Edge.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00090">allocate()</a>, and <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00152">setLength()</a>.</p>
-
-</div>
-</div>
-<a id="a4b86f5c7c354394133e88dc93fffcc4c" name="a4b86f5c7c354394133e88dc93fffcc4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b86f5c7c354394133e88dc93fffcc4c">&#9670;&#160;</a></span>nBead()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Pscf::Edge::nBead </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the number of beads in this block, in the bead model. </p>
-<p>Precondition: <a class="el" href="namespacePscf_1_1PolymerModel.html#af5c7a9c517a218fe8198b2a48c45a1ab" title="Is the bead model in use ?">PolymerModel::isBead()</a> </p>
-
-<p class="definition">Definition at line <a class="el" href="Edge_8h_source.html#l00178">178</a> of file <a class="el" href="Edge_8h_source.html">Edge.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00090">allocate()</a>.</p>
 
 </div>
 </div>

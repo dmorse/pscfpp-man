@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -132,7 +132,7 @@ $(function() {
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>     : <a class="code hl_function" href="classUtil_1_1Matrix.html#ab405e09dfdf9c17a7ca3ba09dc80d9a0">Matrix</a>&lt;Data&gt;()</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>   {</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>      <span class="comment">// Precondition</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>      <span class="keywordflow">if</span> (other.<a class="code hl_variable" href="classUtil_1_1Matrix.html#a58613069a43b06ca55b00760e9f2a025">data_</a> == 0) {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>      <span class="keywordflow">if</span> (!other.<a class="code hl_variable" href="classUtil_1_1Matrix.html#a58613069a43b06ca55b00760e9f2a025">data_</a>) {</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>         UTIL_THROW(<span class="stringliteral">&quot;Other DMatrix must be allocated&quot;</span>);</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      }</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
@@ -155,11 +155,11 @@ $(function() {
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>      <span class="keywordflow">if</span> (<span class="keyword">this</span> == &amp;other) <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      <span class="comment">// Precondition</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      <span class="keywordflow">if</span> (other.<a class="code hl_variable" href="classUtil_1_1Matrix.html#a58613069a43b06ca55b00760e9f2a025">data_</a> == 0) {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      <span class="keywordflow">if</span> (!other.<a class="code hl_variable" href="classUtil_1_1Matrix.html#a58613069a43b06ca55b00760e9f2a025">data_</a>) {</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;RHS DMatrix must be allocated before assignment&quot;</span>);</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      }</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUtil_1_1Matrix.html#a58613069a43b06ca55b00760e9f2a025">data_</a> == 0) {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classUtil_1_1Matrix.html#a58613069a43b06ca55b00760e9f2a025">data_</a>) {</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>         <span class="comment">// If this DMatrix if not allocated, allocate now.</span></div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>         <a class="code hl_function" href="classUtil_1_1DMatrix.html#a8a6eee18a2a8458ccad0cd58df0d6846">allocate</a>(other.<a class="code hl_variable" href="classUtil_1_1Matrix.html#ab2aa000328441c9173452ebed40a52b9">capacity1_</a>, other.<a class="code hl_variable" href="classUtil_1_1Matrix.html#a6c524474706b1819f6f20f245c5bbf85">capacity2_</a>);</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      } <span class="keywordflow">else</span> {</div>
@@ -207,7 +207,7 @@ $(function() {
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>      <span class="comment">// Preconditions</span></div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classUtil_1_1Matrix.html#ac9dae1ea955cf776d7915e8126ffdf04">capacity1</a> &lt;= 0) <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Capacity1 must be positive&quot;</span>);</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classUtil_1_1Matrix.html#a479ba9941d5e43042e8382baa433c07f">capacity2</a> &lt;= 0) <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Capacity2 must be positive&quot;</span>);</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUtil_1_1Matrix.html#a58613069a43b06ca55b00760e9f2a025">data_</a>  != 0) <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Attempt to re-allocate a Matrix&quot;</span>);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUtil_1_1Matrix.html#a58613069a43b06ca55b00760e9f2a025">data_</a>) <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Attempt to re-allocate a Matrix&quot;</span>);</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      <a class="code hl_function" href="classUtil_1_1Memory.html#af6003f193ae6c7a0fc049d7e443e0348">Memory::allocate&lt;Data&gt;</a>(<a class="code hl_variable" href="classUtil_1_1Matrix.html#a58613069a43b06ca55b00760e9f2a025">data_</a>, <a class="code hl_function" href="classUtil_1_1Matrix.html#ac9dae1ea955cf776d7915e8126ffdf04">capacity1</a>*<a class="code hl_function" href="classUtil_1_1Matrix.html#a479ba9941d5e43042e8382baa433c07f">capacity2</a>);</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>      <a class="code hl_variable" href="classUtil_1_1Matrix.html#ab2aa000328441c9173452ebed40a52b9">capacity1_</a> = <a class="code hl_function" href="classUtil_1_1Matrix.html#ac9dae1ea955cf776d7915e8126ffdf04">capacity1</a>;</div>
@@ -220,7 +220,7 @@ $(function() {
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="comment">   *</span></div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="comment">   * Throw an Exception if this DMatrix is not allocated.</span></div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00188" data-start="{" data-end="}">
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classUtil_1_1DMatrix.html#aa988d5f2e55572e801e44cdedba4ce69">  188</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classUtil_1_1DMatrix.html#aa988d5f2e55572e801e44cdedba4ce69">DMatrix&lt;Data&gt;::deallocate</a>()</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>   {</div>
@@ -236,16 +236,16 @@ $(function() {
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="comment">   * Return true if the DMatrix has been allocated, false otherwise.</span></div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00202" data-start="{" data-end="}">
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="classUtil_1_1DMatrix.html#aa30c56e4ba49d083f22f0200219746cd">  202</a></span>   <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classUtil_1_1DMatrix.html#aa30c56e4ba49d083f22f0200219746cd">DMatrix&lt;Data&gt;::isAllocated</a>()<span class="keyword"> const </span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> !(<a class="code hl_variable" href="classUtil_1_1Matrix.html#a58613069a43b06ca55b00760e9f2a025">data_</a> == 0); }</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> (<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classUtil_1_1Matrix.html#a58613069a43b06ca55b00760e9f2a025">data_</a>; }</div>
 </div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="comment">   * Serialize a DMatrix to/from an Archive.</span></div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Archive&gt;</div>
 <div class="foldopen" id="foldopen00210" data-start="{" data-end="}">
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="classUtil_1_1DMatrix.html#a78d6c405fc3a05d4a154e19bcf9cd2e1">  210</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classUtil_1_1DMatrix.html#a78d6c405fc3a05d4a154e19bcf9cd2e1">DMatrix&lt;Data&gt;::serialize</a>(Archive&amp; ar, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> version)</div>
@@ -305,8 +305,8 @@ $(function() {
 <div class="ttc" id="aclassUtil_1_1Matrix_html_ab2aa000328441c9173452ebed40a52b9"><div class="ttname"><a href="classUtil_1_1Matrix.html#ab2aa000328441c9173452ebed40a52b9">Util::Matrix::capacity1_</a></div><div class="ttdeci">int capacity1_</div><div class="ttdoc">Number of rows (range of first index).</div><div class="ttdef"><b>Definition</b> <a href="Matrix_8h_source.html#l00087">Matrix.h:87</a></div></div>
 <div class="ttc" id="aclassUtil_1_1Matrix_html_ab405e09dfdf9c17a7ca3ba09dc80d9a0"><div class="ttname"><a href="classUtil_1_1Matrix.html#ab405e09dfdf9c17a7ca3ba09dc80d9a0">Util::Matrix::Matrix</a></div><div class="ttdeci">Matrix()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition</b> <a href="Matrix_8h_source.html#l00119">Matrix.h:119</a></div></div>
 <div class="ttc" id="aclassUtil_1_1Matrix_html_ac9dae1ea955cf776d7915e8126ffdf04"><div class="ttname"><a href="classUtil_1_1Matrix.html#ac9dae1ea955cf776d7915e8126ffdf04">Util::Matrix&lt; double &gt;::capacity1</a></div><div class="ttdeci">int capacity1() const</div><div class="ttdef"><b>Definition</b> <a href="Matrix_8h_source.html#l00048">Matrix.h:136</a></div></div>
-<div class="ttc" id="aclassUtil_1_1Memory_html_a3ded7c631c8cbdb6968f03f8084485a2"><div class="ttname"><a href="classUtil_1_1Memory.html#a3ded7c631c8cbdb6968f03f8084485a2">Util::Memory::deallocate</a></div><div class="ttdeci">static void deallocate(Data *&amp;ptr, size_t size)</div><div class="ttdoc">Deallocate a C++ array.</div><div class="ttdef"><b>Definition</b> <a href="Memory_8h_source.html#l00152">Memory.h:152</a></div></div>
-<div class="ttc" id="aclassUtil_1_1Memory_html_af6003f193ae6c7a0fc049d7e443e0348"><div class="ttname"><a href="classUtil_1_1Memory.html#af6003f193ae6c7a0fc049d7e443e0348">Util::Memory::allocate</a></div><div class="ttdeci">static void allocate(Data *&amp;ptr, size_t size)</div><div class="ttdoc">Allocate a C++ array.</div><div class="ttdef"><b>Definition</b> <a href="Memory_8h_source.html#l00132">Memory.h:132</a></div></div>
+<div class="ttc" id="aclassUtil_1_1Memory_html_a3ded7c631c8cbdb6968f03f8084485a2"><div class="ttname"><a href="classUtil_1_1Memory.html#a3ded7c631c8cbdb6968f03f8084485a2">Util::Memory::deallocate</a></div><div class="ttdeci">static void deallocate(Data *&amp;ptr, size_t size)</div><div class="ttdoc">Deallocate a C++ array.</div><div class="ttdef"><b>Definition</b> <a href="Memory_8h_source.html#l00157">Memory.h:157</a></div></div>
+<div class="ttc" id="aclassUtil_1_1Memory_html_af6003f193ae6c7a0fc049d7e443e0348"><div class="ttname"><a href="classUtil_1_1Memory.html#af6003f193ae6c7a0fc049d7e443e0348">Util::Memory::allocate</a></div><div class="ttdeci">static void allocate(Data *&amp;ptr, size_t size)</div><div class="ttdoc">Allocate a C++ array.</div><div class="ttdef"><b>Definition</b> <a href="Memory_8h_source.html#l00136">Memory.h:136</a></div></div>
 <div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="global_8h.html">global.h</a></div><div class="ttdoc">File containing preprocessor macros for error handling.</div></div>
 <div class="ttc" id="aglobal_8h_html_ad2512f8bd062d41d66799cf900151487"><div class="ttname"><a href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a></div><div class="ttdeci">#define UTIL_THROW(msg)</div><div class="ttdoc">Macro for throwing an Exception, reporting function, file and line number.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00049">global.h:49</a></div></div>
 <div class="ttc" id="anamespaceUtil_html"><div class="ttname"><a href="namespaceUtil.html">Util</a></div><div class="ttdoc">Utility classes for scientific computation.</div><div class="ttdef"><b>Definition</b> <a href="accumulators_8mod_source.html#l00001">accumulators.mod:1</a></div></div>

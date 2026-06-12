@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -129,7 +129,7 @@ $(function() {
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00130" data-start="{" data-end="}">
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="classUtil_1_1ArrayStack.html#a0e4921bfb900602dc04cd9e59d7ba7a7">  130</a></span>   <a class="code hl_function" href="classUtil_1_1ArrayStack.html#a0e4921bfb900602dc04cd9e59d7ba7a7">ArrayStack&lt;Data&gt;::ArrayStack</a>()</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    : ptrs_(0),</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    : ptrs_(nullptr),</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      capacity_(0),</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>      size_(0)</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>   {}</div>
@@ -167,7 +167,7 @@ $(function() {
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>      <span class="comment">// Nullify all Data* pointer elements</span></div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; capacity_; ++i) {</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>         ptrs_[i] =  0;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>         ptrs_[i] =  <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      }</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>   }</div>
 </div>
@@ -216,7 +216,7 @@ $(function() {
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Attempt to pop from empty stack&quot;</span>);</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>      }</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>      Data *ptr = ptrs_[size_-1];</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>      ptrs_[size_-1] = 0;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>      ptrs_[size_-1] = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>      --size_;</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>      <span class="keywordflow">return</span> *ptr;</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>   }</div>
@@ -257,15 +257,15 @@ $(function() {
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;size_ &gt; capacity_&quot;</span>);</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>      }</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      <span class="keywordflow">if</span> (ptrs_ != 0) {</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      <span class="keywordflow">if</span> (ptrs_) {</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>         <span class="keywordtype">int</span> i;</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>         <span class="keywordflow">for</span> (i = 0; i &lt; size_ ; ++i) {</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            <span class="keywordflow">if</span> (ptrs_[i] == 0) {</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            <span class="keywordflow">if</span> (!ptrs_[i]) {</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>               <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Null ptrs_[i] for i &lt; size_&quot;</span>);</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            }</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>         }</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>         <span class="keywordflow">for</span> (i = size_; i &lt; capacity_ ; ++i) {</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            <span class="keywordflow">if</span> (ptrs_[i] != 0) {</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            <span class="keywordflow">if</span> (ptrs_[i]) {</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>               <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Non-null ptrs_[i] for i &gt;= size_&quot;</span>);</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            }</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>         }</div>
@@ -284,7 +284,7 @@ $(function() {
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00265" data-start="{" data-end="}">
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="classUtil_1_1ArrayStack.html#a03704454022fda5c11e74b7c92f3ecd8">  265</a></span>   <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classUtil_1_1ArrayStack.html#a03704454022fda5c11e74b7c92f3ecd8">ArrayStack&lt;Data&gt;::isAllocated</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> (ptrs_ != 0); }</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> (<span class="keywordtype">bool</span>) ptrs_; }</div>
 </div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>}</div>
@@ -299,8 +299,8 @@ $(function() {
 <div class="ttc" id="aclassUtil_1_1ArrayStack_html_a7d20f6c7d2f067ba8f74d120ec8ce4d5"><div class="ttname"><a href="classUtil_1_1ArrayStack.html#a7d20f6c7d2f067ba8f74d120ec8ce4d5">Util::ArrayStack::push</a></div><div class="ttdeci">void push(Data &amp;data)</div><div class="ttdoc">Push an element onto the Stack.</div><div class="ttdef"><b>Definition</b> <a href="#l00187">ArrayStack.h:187</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ArrayStack_html_aeec5b99e22d2a72b94a0a8be984f5600"><div class="ttname"><a href="classUtil_1_1ArrayStack.html#aeec5b99e22d2a72b94a0a8be984f5600">Util::ArrayStack::capacity</a></div><div class="ttdeci">int capacity() const</div><div class="ttdoc">Return capacity of the underlying array.</div><div class="ttdef"><b>Definition</b> <a href="#l00173">ArrayStack.h:173</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ArrayStack_html_af0c55e24d3ccb45ed50711bc15468d7f"><div class="ttname"><a href="classUtil_1_1ArrayStack.html#af0c55e24d3ccb45ed50711bc15468d7f">Util::ArrayStack::allocate</a></div><div class="ttdeci">void allocate(int capacity)</div><div class="ttdoc">Initialize and allocate required memory.</div><div class="ttdef"><b>Definition</b> <a href="#l00151">ArrayStack.h:151</a></div></div>
-<div class="ttc" id="aclassUtil_1_1Memory_html_a3ded7c631c8cbdb6968f03f8084485a2"><div class="ttname"><a href="classUtil_1_1Memory.html#a3ded7c631c8cbdb6968f03f8084485a2">Util::Memory::deallocate</a></div><div class="ttdeci">static void deallocate(Data *&amp;ptr, size_t size)</div><div class="ttdoc">Deallocate a C++ array.</div><div class="ttdef"><b>Definition</b> <a href="Memory_8h_source.html#l00152">Memory.h:152</a></div></div>
-<div class="ttc" id="aclassUtil_1_1Memory_html_af6003f193ae6c7a0fc049d7e443e0348"><div class="ttname"><a href="classUtil_1_1Memory.html#af6003f193ae6c7a0fc049d7e443e0348">Util::Memory::allocate</a></div><div class="ttdeci">static void allocate(Data *&amp;ptr, size_t size)</div><div class="ttdoc">Allocate a C++ array.</div><div class="ttdef"><b>Definition</b> <a href="Memory_8h_source.html#l00132">Memory.h:132</a></div></div>
+<div class="ttc" id="aclassUtil_1_1Memory_html_a3ded7c631c8cbdb6968f03f8084485a2"><div class="ttname"><a href="classUtil_1_1Memory.html#a3ded7c631c8cbdb6968f03f8084485a2">Util::Memory::deallocate</a></div><div class="ttdeci">static void deallocate(Data *&amp;ptr, size_t size)</div><div class="ttdoc">Deallocate a C++ array.</div><div class="ttdef"><b>Definition</b> <a href="Memory_8h_source.html#l00157">Memory.h:157</a></div></div>
+<div class="ttc" id="aclassUtil_1_1Memory_html_af6003f193ae6c7a0fc049d7e443e0348"><div class="ttname"><a href="classUtil_1_1Memory.html#af6003f193ae6c7a0fc049d7e443e0348">Util::Memory::allocate</a></div><div class="ttdeci">static void allocate(Data *&amp;ptr, size_t size)</div><div class="ttdoc">Allocate a C++ array.</div><div class="ttdef"><b>Definition</b> <a href="Memory_8h_source.html#l00136">Memory.h:136</a></div></div>
 <div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="global_8h.html">global.h</a></div><div class="ttdoc">File containing preprocessor macros for error handling.</div></div>
 <div class="ttc" id="aglobal_8h_html_ad2512f8bd062d41d66799cf900151487"><div class="ttname"><a href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a></div><div class="ttdeci">#define UTIL_THROW(msg)</div><div class="ttdoc">Macro for throwing an Exception, reporting function, file and line number.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00049">global.h:49</a></div></div>
 <div class="ttc" id="anamespaceUtil_html"><div class="ttname"><a href="namespaceUtil.html">Util</a></div><div class="ttdoc">Utility classes for scientific computation.</div><div class="ttdef"><b>Definition</b> <a href="accumulators_8mod_source.html#l00001">accumulators.mod:1</a></div></div>

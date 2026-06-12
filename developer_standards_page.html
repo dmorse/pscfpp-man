@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -57,56 +57,36 @@ $(function() {
   <div class="headertitle"><div class="title">Coding Standards </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="el" href="developer_build_page.html">Build System</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="developer_template_page.html">C++ Class Templates</a> (Next) <br  />
+<div class="textblock"><p><a class="el" href="developer_build_page.html">Build System</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="developer_template_page.html">C++ Templates</a> (Next) <br  />
 </p>
-<p>This file documents programming and formatting conventions that should be used throughout the source code of PSCF:</p>
-<h1 class="doxsection"><a class="anchor" id="file_section"></a>
-File names</h1>
+<p>This file documents conventions for names, code formatting and design decisions that should be used throughout the source code of PSCF:</p>
+<h1 class="doxsection"><a class="anchor" id="developer_standards_file_sec"></a>
+File names and locations</h1>
 <ul>
-<li>Header files that may be included in other files use file name suffix *.h</li>
-<li>Files that contain definitions of member functions for class templates are often separated from the header file and given names that end in an suffix *.tpp.</li>
-<li>Compilable C++ source files use file name suffix *.cpp</li>
-<li>Compilable CUDA C++ source files use file name suffix *.cu</li>
-<li>One class per file: Avoid including definitions or definitions involving more than one public class in a single file.</li>
-<li>Use the same base name for the header and implementation for the same class: The header and source files for a class named MyClass should be MyClass.h and MyClass.cpp. If MyClass is class template, some of the implementatiom may be defined in a file MyClass.tpp.</li>
-<li>Place the header and implementation files for each class or class template in the same directory within the src/ directory tree. An analogous directory must exist in the bld/ directory tree.</li>
-<li>Use header guards in all header (*.h) files.</li>
-<li>See the page about <a class="el" href="developer_template_page.html">C++ templates</a> for a detailed discussion of different usage patterns for templates in PSCF.</li>
+<li>Names of header file end with the file name suffix *.h. Header files may be included into other files with few restrictions.</li>
+<li>Names of template implementation files use file name suffix *.tpp. These are files that contain definitions of function templates (either free function templates or class template member function) that are declared in an associated header file.</li>
+<li>Names of standard C++ source files that are compiled by the build system end with suffix *.cpp.</li>
+<li>Names of CUDA C++ source files that are compiled by the build system end with suffix *.cu.</li>
+<li>One class per file rule: Avoid placing definitions or definitions involving more than one public class or class template in a single file.</li>
+<li>The base name for all files associated with a single class or class template should be given by the name of the class or class template. The header and source files for a class named MyClass should thus be MyClass.h and MyClass.cpp. The name of a template implementation file associated with a class template named MyClass should be MyClass.tpp.</li>
+<li>Place all C++ and CUDA C++ files associated with a single class or class template in the same directory, within the src/ directory tree.</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="name_section"></a>
-Symbol names</h1>
+<h1 class="doxsection"><a class="anchor" id="developer_standards_name_sec"></a>
+Symbol names and capitalization</h1>
 <ul>
 <li>Names of functions and variables are lower case camel, as in "myVariable" or "myData".</li>
-<li>Names of user-defined types (class, typedef, and enum) and namespaces are upper case camel, as in "MyClass" or "Util".</li>
+<li>Names of all user-defined types (class, typedef, and enum types) and namespaces are upper case camel, as in "MyClass" or "Util".</li>
 <li>Names of private or protected class member variables must end with with a single trailing underscore, like "data_" or "outputFile_".</li>
 <li>Public static constant class member variable names are upper case camel, as in "MaxDimension".</li>
-<li>Use plural nouns for names of arrays and other containers. A private array of Monomer objects might thus be named "monomers_".</li>
+<li>Use plural nouns for names of arrays and other containers. A private member variable that represents array in which each element is an object of type Monomer might thus be named "monomers_".</li>
 <li>Names of pointer variables end with a suffix Ptr. A local Thing* pointer variable within a function might thus be called "thingPtr". A Thing* pointer that is a private or protected class member variable might be called "thinkPtr_". Do not use this convention for pointers that point at C arrays (and avoid bare C-arrays): The suffix "Ptr" denotes a pointer that will point at a single object.</li>
-<li>Names of preprocessor macros are upper case, with underscores between words.</li>
+<li>Names of C/C++ preprocessor macros are upper case, with underscores between words. Full upper case names should be avoided for other symbols.</li>
 <li>Use the same parameter names in the declaration of a function and in the corresponding definition.</li>
-<li>Names of functions that are not simple accessors (discussed below) should usually be verbs.</li>
-<li>The name of a "setter" class member function that is passed a value for a non-public member variable should begin with the prefix "set". <br  />
- The name of the function parameter that holds the new value should be the same as the name of the non-public member variable, without any trailing underscore. The same convention is used whether the value is passed by value or by reference. For example: <div class="fragment"><div class="line"><span class="keywordtype">void</span> Thing::setData(<span class="keywordtype">int</span> data)</div>
-<div class="line">{  data_ = data; }</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> Thing::setPosition(<span class="keyword">const</span> Vector &amp;position)</div>
-<div class="line">{  position_ = position; }</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> Thing::setMolecule(Molecule &amp;molecule)</div>
-<div class="line">{  moleculePtr_ = &amp;molecule; }</div>
-</div><!-- fragment --></li>
-<li>The name of a simple accessor ("getter") class member function that returns a non-public member variable by value or by reference should simply be the name of the member variable, without any trailing underscore. PSCF thus does NOT use the convention of appending a prefix "get" to the names of accessor functions. This same name convention is used for accessors that return by value, const reference, or non-const reference. Thus, for example: <div class="fragment"><div class="line"><span class="keywordtype">int</span> Thing::data()<span class="keyword"> const</span></div>
-<div class="line"><span class="keyword"></span>{  <span class="keywordflow">return</span> data_; }</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">const</span> Vector&amp; Thing::position()<span class="keyword"> const</span></div>
-<div class="line"><span class="keyword"></span>{  <span class="keywordflow">return</span> position_; }</div>
-<div class="line"> </div>
-<div class="line">Vector&amp; Thing::position()</div>
-<div class="line">{  <span class="keywordflow">return</span> position_; }</div>
-<div class="line"> </div>
-<div class="line">Molecule&amp; Thing::molecule()</div>
-<div class="line">{  <span class="keywordflow">return</span> *moleculePtr_; }</div>
-</div><!-- fragment --></li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="developer_standards_guard_sec"></a>
+Header guards</h1>
+<ul>
+<li>All header (*.h) files must contain header guards.</li>
 <li>The name of the preprocessor macro used in a header guard should be the name of a parent namespace followed by the file name, in upper case, with underscores between words. A header file named "SillyClass.h" that contains a class Util::SillyClass in namespace <a class="el" href="namespaceUtil.html" title="Utility classes for scientific computation.">Util</a> should be enclosed with header guards like this: <pre class="fragment">#ifndef UTIL_SILLY_CLASS_H
 #define UTIL_SILLY_CLASS_H
 
@@ -122,39 +102,41 @@ namespace Util
 #endif
 </pre></li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="format_section"></a>
-Code formatting</h1>
+<h1 class="doxsection"><a class="anchor" id="developer_standards_format_sec"></a>
+Code format standards</h1>
+<h2 class="doxsection"><a class="anchor" id="developer_standards_format_indent_sub"></a>
+Indentation and line wraps</h2>
 <ul>
-<li>Indent exactly 3 spaces per level. Do NOT ever use tabs for indentation.</li>
-<li>For control structures (if, for, while, etc.), place the opening brace at the end of a line, and the closing brace on a line by itself, aligned with the beginning of the opening line, like this: <div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; end; ++i) {</div>
-<div class="line">   doSomething();</div>
-<div class="line">}</div>
-</div><!-- fragment --></li>
-<li>For functions with more than one line, put the opening brace on a separate line, and align opening and closing braces, like this: <div class="fragment"><div class="line"><span class="keywordtype">int</span> SillyClass::sillyMethod(<span class="keywordtype">int</span> param1, <span class="keywordtype">int</span> max)</div>
-<div class="line">{</div>
-<div class="line">   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; max; ++i) {</div>
-<div class="line">      param1++;</div>
-<div class="line">   }</div>
+<li>Indent exactly 3 spaces per level. Use only spaces for indentation: Do NOT ever use tabs for indentation.</li>
+<li>Break lines at less than approximately 76 characters per line whenever possible, to preserve readability in printouts and relatively small screens. Much of the code has been written using the vi editor with line number turned on with the command "set nu" on a screen with a total of 80 columns, and should fit within the remaining columns without line wraps when displayed in this way.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="developer_standards_format_namespace_sub"></a>
+Namespace declarations</h2>
+<ul>
+<li>All source code in the PSCF repository must be enclosed within the <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a> or <a class="el" href="namespaceUtil.html" title="Utility classes for scientific computation.">Util</a> namespace, or enclosed sub-namespaces of these.</li>
+<li>All source code must thus be enclosed in namespace declarations blocks. All or almost all of the code in one file is usually enclosed in a single namespace. Start this namespace declaration in the first column.</li>
+<li>To save horizontal space, namespace declarations for two or more nested namespaces that enclose most or all of the code in a file may each start in the first column. A file that contains code that is declared in namespace <a class="el" href="namespacePscf_1_1Prdc.html" title="Periodic fields and crystallography.">Pscf::Prdc</a> may thus be enclosed in namespace declarations that are formatted as shown below: <div class="fragment"><div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
+<div class="line"><span class="keyword">namespace </span>Prdc {</div>
 <div class="line"> </div>
-<div class="line">   <span class="keywordflow">if</span> (param1 &gt; 0) {</div>
-<div class="line">      <span class="keywordflow">return</span> 0;</div>
-<div class="line">   } <span class="keywordflow">else</span> {</div>
-<div class="line">      <span class="keywordflow">return</span> 1;</div>
-<div class="line">   }</div>
+<div class="line">   \\ Omitted code <span class="keywordflow">for</span> entities declared in <a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div>
+<div class="line"> </div>
 <div class="line">}</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_html"><div class="ttname"><a href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div><div class="ttdoc">Periodic fields and crystallography.</div><div class="ttdef"><b>Definition</b> <a href="complex_8cpp_source.html#l00011">complex.cpp:11</a></div></div>
+<div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></li>
-<li>For one-line functions, the function definition may be given on a single line, like this: <div class="fragment"><div class="line"><span class="keyword">inline</span> <span class="keywordtype">int</span> SillyClass::data()</div>
-<div class="line">{  <span class="keywordflow">return</span> data_; }</div>
-</div><!-- fragment --></li>
-<li>Set off the operators =, ==, &lt;, &gt;, +, and - by one space on either side, with occasional exceptions. Multipication (*) and division (/) operators may or may not be set off by white space. Allow some exceptions when doing so can avoid a line wrap.</li>
-<li>Use one space to separate keywords, parentheseses, and opening braces in conditional statements. Use one space after each semi-colon in for-loop statements, and one space after each comma in function parameter lists.</li>
-<li>Do not follow opening parentheses or precede closing parentheses by a space. Do not add whitespace space before commas or semicolons.</li>
-<li>Consecutive function declarations or definitions within a file, along with associated documentation blocks, should be separated by a single blank line.</li>
-<li>Break lines at less than 75 characters per line whenever possible, to preserve readability in printouts and small laptop terminal screens. Much of the code has been written using the vi editor with line number turned on with the command "set nu" on a screen with a total of 80 columns, and should fit within the remaining columns without line wraps when displayed in this way.</li>
-<li>Wrap every source file in the src/ directory in a namespace block. Start the namespace declaration in the first column.</li>
-<li>In class definitions, align "public:", "protected:", and "private:" declarations with the beginning of the class definition statement, and with the closing brace. List public members first, then protected, then private. Within each block, list member variables first, then member functions</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="developer_standards_format_class_sub"></a>
+Class definitions</h2>
+<p>All guidelines give here apply to definitions of both classes and class templates:</p>
+<ul>
+<li>Begin definitions of public classes one indentation level (3 spaces) inside the enclosing namespace declaration.</li>
+<li>In class definitions, align "public:", "protected:", and "private:" declarations with the beginning of the class definition statement, and with the closing brace. List public members first, then protected, then private.</li>
+<li>Within the private block, list member variables first, then any private member functions.</li>
+<li>Within a protected block, list member functions first, then member variables. These gives a contiguous block of member function declarations spanning the public and protected blocks, and a contiguous block of member variables spanning the protected and private blocks.</li>
+<li>Do not define public member variables.</li>
 <li>List any friend declarations at the end of a class definition in a "pseudo-block" that is preceded by a comment "//friends:" on a line by itself, after the private members. The "//friends:" comment should be aligned with "public:" and "private:" declarations.</li>
-<li>Inline method definitions should usually be given outside the class definition, within the header file. The word "inline" should be added to this function definition, but not the function declaration.</li>
+<li>Inline method definitions should usually be given outside the class definition, within the header file. The word "inline" should be added to this function definition, but not to the function declaration.</li>
 <li>Example (with doxygen documentation): <pre class="fragment">#ifndef UTIL_SILLY_CLASS_H
 #define UTIL_SILLY_CLASS_H
 
@@ -212,26 +194,58 @@ namespace Util
 #endif
 </pre></li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="Dox_section"></a>
+<h2 class="doxsection"><a class="anchor" id="developer_standards_format_function_sub"></a>
+Function definitions</h2>
+<p>These guidelines apply to both class member functions and free functions:</p>
+<ul>
+<li>Place one space after each comma in each function parameter list. Do not place any additional space immediately after the opening parentheses or before the closing parenthesis in a function parameter list.</li>
+<li>For functions with more than one line, put the opening brace on a separate line, and align opening and closing braces, like this: <div class="fragment"><div class="line"><span class="keywordtype">int</span> SillyClass::sillyMethod(<span class="keywordtype">int</span> param1, <span class="keywordtype">int</span> max)</div>
+<div class="line">{</div>
+<div class="line">   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; max; ++i) {</div>
+<div class="line">      param1++;</div>
+<div class="line">   }</div>
+<div class="line"> </div>
+<div class="line">   <span class="keywordflow">if</span> (param1 &gt; 0) {</div>
+<div class="line">      <span class="keywordflow">return</span> 0;</div>
+<div class="line">   } <span class="keywordflow">else</span> {</div>
+<div class="line">      <span class="keywordflow">return</span> 1;</div>
+<div class="line">   }</div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
+<li>For one-line functions, the function definition may be given on a single line, like this: <div class="fragment"><div class="line"><span class="keyword">inline</span> <span class="keywordtype">int</span> SillyClass::data()</div>
+<div class="line">{  <span class="keywordflow">return</span> data_; }</div>
+</div><!-- fragment --></li>
+<li>For control structures (if, for, while, etc.), place the opening brace at the end of a line, and the closing brace on a line by itself, aligned with the beginning of the opening line, like this: <div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; end; ++i) {</div>
+<div class="line">   doSomething();</div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
+<li>Usually set off the operators =, ==, &lt;, &gt;, +, and - by one space on either side, with occasional exceptions to avoid line wraps. Multipication (*) and division (/) operators may or may not be set off by white space.</li>
+<li>Use one space before the opening parentheses of a conditional statement in a control structure (if, for, while, etc) and one space after the closing parentheseses and before any opening brace.</li>
+<li>Do not follow opening parentheses or precede closing parentheses by a space in parentheses that enclose a function parameter lists or the condition for a control structures. Do not add whitespace space before commas or semicolons.</li>
+<li>Consecutive function declarations or definitions within a file, along with associated documentation blocks, should be separated by a single blank line.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="developer_standards_dox_sec"></a>
 Documentation (via doxygen)</h1>
-<p>PSCF uses the doxygen (www.doxygen.org) utility to create html documentation from documentations blocks that are extracted from the source code. Doxygen will extracts any multi-line comment that begin with a slash and two asterisks ("/\*\*"), or single line comments that begin with three slashes ("///"). See comments in the following example: </p><pre class="fragment">   /**
-   * This comment will be extracted by doxygen (note the extra asterisk)
+<p>PSCF uses the doxygen utility (www.doxygen.org) to create html documentation from documentations blocks that are embedded within the source code. Doxygen scans the source code and extracts lines of comments that are marked for extraction. Specifically, Doxygen extracts multi-line comment that begin with a slash and two asterisks ("/\*\*") and single line comments that begin with three slashes ("///"). See comments in the following example: </p><pre class="fragment">   /**
+   * This comment will be extracted by doxygen and included in the
+   * web manual (note the extra asterisk)
    */
 
    /// So is this one (note the extra slash)
 
    /*
-   * This comment, however, will not be extracted by doxygen.
+   * This comment, however, will be ignored by doxygen.
    */
 
-   // Nor will this one.
+   // This will also be ignored.
 </pre><p> Comments within functions that you do not wish to be extracted by doxygen should use the usual form for C comments, using only a single asterisk for multi-line comments or only two slashes for for single line comments, as indicated in the above example.</p>
+<p>Guidelines:</p>
 <ul>
-<li>Create dOxygen documentation blocks for public and protected named quantities, i.e., all classes, public and protected member functions, protected member variables, namespaces, global functions, typedefs, enums, and constants.</li>
+<li>Create doxygen documentation blocks for public and protected named quantities, i.e., all classes, public and protected member functions, protected member variables, namespaces, global functions, typedefs, enums, and constants.</li>
 <li>The doxygen documentation block for a class should appear immediately above the first line of the class definition.</li>
-<li>The doxygen documentation block for a class member function should be immediately above the function declaration, within the class definition, in the header file.</li>
+<li>The doxygen documentation block for a class member function should be immediately above the first line of the function declaration. In the case of a class member function, this will appear with the class definition, in the associated header file.</li>
 <li>Prefer doxygen multiline comments for documentation of classes and class member functions.</li>
-<li>Document all parameters of public and protected functions, using the dOxygen param keyword.</li>
+<li>Document all parameters of public and protected functions, using the doxygen param keyword.</li>
 <li>The documentation for every class and public or protected function should begin with a brief single-sentence description, which must end with a period and be followed by a blank line. The brief description should usually not extend beyond one line. This brief description is often sufficient. If needed, more detailed discussion may be given in one or more subsequent paragraphs, separated by blank lines.</li>
 </ul>
 <p>Example: </p><pre class="fragment">   /**
@@ -250,101 +264,129 @@ Documentation (via doxygen)</h1>
    */
    double alignUniverse(double thing1, bool thing2);
 </pre><ul>
-<li>Document private class member variables using either the multi-line or single line doxygen format. Documemtation of private members does not normally appear in the html documentation, but can be included if desired. Documentation of the meaning of member variables is important for developers who must read the implementation, though not strictly necessary for users.</li>
-<li>Do not use doxygen-style comments for the function definitions that are given outside the class definition. Use a conventional C/C++ comment format (with one asterisk) above each such function definition, like this: <pre class="fragment">   /*
-   * Brief reminder of purpose. Possibly comments on implementation.
-   */
-   void MyClass:myFunction(int param)
-   {
-       // Do something here
-   }
-</pre></li>
+<li>Private class member functions and member variables should also be documentated, but the use of multi-line or single-line doxygen form is optional for these class members. Documemtation of private members does not normally appear in the html documentation, but formatted documentation blocks can be included if desired by changing a setting in the configuration file for doxygen.</li>
+<li>Do not use doxygen-style comments for the function definitions that are given outside the class definition. Instead, use a conventional C/C++ comment format (with one asterisk) above each such function definition, like this: <div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment">* Brief reminder of purpose. Possibly comments on implementation.</span></div>
+<div class="line"><span class="comment">*/</span></div>
+<div class="line"><span class="keywordtype">void</span> MyClass:myFunction(<span class="keywordtype">int</span> param)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Do something here</span></div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="using_section"></a>
-Use of names from other namespaces</h1>
-<p>Code in each namespace-level subdirectory of the src directory of PSCF may only use names of classes, functions, and other entities that are defined in the same namespace-level directory or in a specific set of other namespace-level directories. This relationship is described by saying that each namespace-level directory <a class="el" href="developer_directory_page.html">depend</a> of others. By convention PSCF also names from namespace level directories that are related in this way to be used without explicit namespace qualifiers, as explained below:</p>
-<ul>
-<li>If a namespace-level subdirectory of src named "b" that defines symbol names in namespace B depends on a namespace-level directory named "a" that defines symbols in namespace A, then symbols defined in namespace A may be used without an explicit namespace qualifier A:: throughout files in subdirectory "b", and throughout namespace "B". For example, names defined in directory src/util and namespace <a class="el" href="namespaceUtil.html" title="Utility classes for scientific computation.">Util</a> may be used without the qualifier <a class="el" href="namespaceUtil.html" title="Utility classes for scientific computation.">Util</a>:: in any other namespace-level subdirectory of src, and thus throughout namespace <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a> and all of its enclosed subnamespaces. Similarly, symbols defined in files in subdirectory src/prdc (or namespace <a class="el" href="namespacePscf_1_1Prdc.html" title="Periodic fields and crystallography.">Pscf::Prdc</a>) can be used without any explicit namespace qualifier throughout files in subdirectories src/rpc and src/rpg (or namespaces <a class="el" href="namespacePscf_1_1Rpc.html" title="Real periodic fields, SCFT and PS-FTS (CPU).">Pscf::Rpc</a> and <a class="el" href="namespacePscf_1_1Rpg.html" title="SCFT and PS-FTS with real periodic fields (GPU)">Pscf::Rpg</a>) but not in subdirectories src/util, src/pscf, or src/r1d.</li>
-<li>To make this convention possible, in the situation described above, any C++ files in subdirectory "src/b" may contain "using namespace A" declarations within namespace B, in any header or source files, as needed to avoid the need for explicit namespace qualifiers of names from namespace A. For example header files for classes defined in src/pscf often contain "using namespace Util" declarations.</li>
-</ul>
-<p>This usage of "using namespace" declarations is illustrated in the following example:</p>
-<pre class="fragment">#ifndef PSCF_THING_H
-#define PSCF_THING_H
-
-#include &lt;src/util/DArray.h&gt;
-#include &lt;src/param/ParamComposite.h&gt;
-#include &lt;string&gt;
-
-namespace Pscf {
-
-   using namespace Util:
-
-   /**
-   * A really useful thing.
-   */
-   class Thing : public ParamComposite 
-   {
-
-   public:
-
-      /**
-      * Some action.
-      */
-      void doSomething();
-
-   private:
-
-      /// An array of integers.
-      DArray&lt;int&gt; array_;
-
-      /// A name string.
-      std::string name_;
-
-   };
-
-}
-#endif PSCF_THING_H
-</pre><p> This header file defines a class named Thing in namespace <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a> that uses definitions of a class named ParamComposite and a class template named DArray that are both defined in namespace <a class="el" href="namespaceUtil.html" title="Utility classes for scientific computation.">Util</a>. These two names from namespace <a class="el" href="namespaceUtil.html" title="Utility classes for scientific computation.">Util</a> are defined in header files <a class="el" href="ParamComposite_8h_source.html">src/util/param/ParamComposite.h</a> and <a class="el" href="DArray_8h_source.html">src/util/containers/DArray.h</a>, respectively, both of which are included into this header file. Note that ParamComposite is used as a base class for class Thing, and the class template name DArray is used to define the type of a member variable named array_, which is of type DArray&lt;int&gt;. Both of these names are, however, used here without any explicit <a class="el" href="namespaceUtil.html" title="Utility classes for scientific computation.">Util</a>:: qualifiers. This is possible because the "using namespace Util;" declaration that appears before the class definition puts the entire <a class="el" href="namespaceUtil.html" title="Utility classes for scientific computation.">Util</a> namespace in scope throughout the remainder of the A namespace, both in this header file and in any file that directly or indirectly includes this file.</p>
-<p>Names defined in the C++ standard library namespace should, however, usually be referred to using an explicit std:: qualifier. Specifically,</p>
-<ul>
-<li>Explicitly qualified names must be used for all standard library symbols such as std::string that appear in *.h header files and *.tpp class template implementation files.</li>
-<li>NEVER use a "using namespace std" statement to load the entire C++ standard library namespace into any C++ file.</li>
-</ul>
-<p>This convention is also illustrated in the above example, in which the type of the member variable Thing::name_ is given as std::string, using the explicit std:: qualifier to refer to the C++ standard library namespace.</p>
-<h1 class="doxsection"><a class="anchor" id="header_section"></a>
+<h1 class="doxsection"><a class="anchor" id="developer_standards_header_sec"></a>
 Header file includes</h1>
 <ul>
 <li>Files that are define in the PSCF src directory tree may be included by giving the path relative to the src directory within angle brackets. For example, to include the header file <a class="el" href="ParamComposite_8h_source.html">src/util/param/ParamComposite.h</a>, one could us an include directive <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;util/param/ParamComposite.h&gt;</span></div>
-</div><!-- fragment --> This is possible because the PSCF build system add the PSCF src directory to the list of directories that the preprocessor should search for included files.</li>
-<li>In header files, prefer forward class declarations over inclusion of class headers whenever possible. Forward declarations are sufficient for classes or class templates that used in a header file only in function declarations (as parameter or return types) or in the declaration of types for pointer member variables.</li>
-<li>Inclusion of header files is generally necessary in header files only for headers that define base classes or member objects, and for classes that are used in the implementation of inline functions.</li>
-<li>Header files that are needed in definitions of non-inline class member functions but that are not needed in the class definition or inline member functions should usually be included in the class or class template implementation file that contains definitions of the member functions, rather than in the class or class template header file.</li>
-<li>Header files that provide information that is required in a C++ file should normally be included explicitly, even if it is known that they would be indirectly included via another included header file. Reliance on indirect inclusion is fragile, and explicit inclusion helps document the dependency. Exceptions are: <ul>
+</div><!-- fragment --> This is possible because the PSCF build system adds the PSCF src directory to the list of directories that the preprocessor should search for included files.</li>
+<li>In header files, prefer use of forward declarations over header file inclusion. Forward declarations are sufficient for classes or class templates that used in a header file only in function declarations (as a function parameter or return type) or in the declaration of types for pointer member variables.</li>
+<li>Inclusion of header files is generally necessary in header files only for headers that define base classes or types for member objects, and for classes that are used in the implementation of inline functions.</li>
+<li>Use explanatory comments to document reasons for the inclusion of a header file includes rather than a forward declarations within a header file. Put a brief single-line explanatory comment at the end of each line that begins with a header file include directive within a header file. Such comments might say something like "base class", "member" or "inline function" to document the reason that inclusion of the associated header header file is necessary. This practice helps force the developer to think about whether a header file include could be replaced by a forward declaration, and documents their reasoning for others.</li>
+<li>Header files that are needed in definitions of non-inline class member functions but that are not needed in the class definition or inline member functions should usually be included in the file that contains contains definitions of the member functions, whenever this is separate from the header file, rather than in the class or class template header file. Their is no need to document reasons for including header files in such files.</li>
+<li>Header files that provide information that is required in a C++ file should usually be included explicitly, even if it is known that they would be indirectly included via another included header file. Reliance on indirect inclusion is fragile, and explicit inclusion helps document the dependency. Exceptions include: <ul>
 <li>
-A class implementation file MyClass.cpp may rely on indirect inclusion of header files that are included by the corresponding header file MyClass.h  </li>
+A compilable source file MyClass.cpp or class template implementation file MyClass.tpp may rely on indirect inclusion of header files that are included by the corresponding header file MyClass.h  </li>
 <li>
-A derived class may sometimes rely on indirect inclusion of header files that are included by a base class.  </li>
+A derived class may sometimes rely on indirect inclusion of header files that are included by a base class (though there is no harm in instead explicitly including all required headers).  </li>
 <li>
-The <a class="el" href="Exception_8h_source.html">Exception.h</a> header is should always be included indirectly by inclusion of <a class="el" href="global_8h.html" title="File containing preprocessor macros for error handling.">src/util/global.h</a>.  </li>
+The <a class="el" href="Exception_8h_source.html">util/misc/Exception.h</a> header should generally be included indirectly by inclusion of <a class="el" href="global_8h.html" title="File containing preprocessor macros for error handling.">src/util/global.h</a>.  </li>
 </ul>
 </li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="interface_section"></a>
-Interface design guidelines</h1>
+<h1 class="doxsection"><a class="anchor" id="developer_standards_data_sec"></a>
+Data structures</h1>
 <ul>
-<li>Make all nonstatic class member variables private or (less frequently) protected.</li>
-<li>Pass and return primitive C/C++ data types by value. Pass primitive data types to functions by non-const reference only when they must be modified within the function.</li>
-<li>Pass objects (class instances) to functions by reference, not by value. Pass by const reference if the object is not modified.</li>
+<li>Use the C++ iostream classes for all file IO. For consistency, avoid the C fscan() and fprint() methods. Use the wrapper classes in the src/util/format directory as needed to simplify coding of formatted output in fields of specified width to ostreams.</li>
+<li>Use std::string to represent character strings whenever possible.</li>
+<li>Prefer the array container templates defined in the src/util/containers directory over bare C arrays and STL containers. The most commonly used container, named DArray, is a dynamically allocated array in which space for all elements is allocated at run time by calling a member function named "allocate". This preference for the home-brewed containers is based primarily on two considerations: <ul>
+<li>
+<p class="startli">Our home-brewed containers provide optional bounds checking, which is enabled only when UTIL_DEBUG is defined. The standard library containers do not provide an equally convenient way to globally enable bounds-checking on to facilitate debugging during development and disable it to maximize performance in production code. </p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli">The most heavily used array containers treat allocation as a single event that can be performed once. In PSCF, most arrays are allocated during processing of the parameter file, before any computation is performed. This is the most convenient interface for memory management for scientific computations that involve involve large arrays that retain a fixed size after initialization, but this behavior is not provided by any the C++ standard containers. </p>
+<p class="endli"></p>
+</li>
+</ul>
+</li>
+<li>C++ STL containers such as std::vector should be used only when there is not an equivalent home-brewed container, or when use of standard library container simplifies access to standard library algorithms (e.g., to the sorting algorithm).</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="developer_standards_io_sec"></a>
+File I/O</h1>
+<ul>
+<li>Use the C++ iostream classes for all file IO.</li>
+<li>Do not use the C fscan() and fprint() methods.</li>
+<li>Use the I/O wrapper classes in the src/util/format directory (<a class="el" href="classUtil_1_1Int.html" title="Wrapper for an int, for formatted ostream output.">Util::Int</a>, <a class="el" href="classUtil_1_1Dbl.html" title="Wrapper for a double precision number, for formatted ostream output.">Util::Dbl</a>, <a class="el" href="classUtil_1_1Str.html" title="Wrapper for a std::string, for formatted ostream output.">Util::Str</a>, etc) as needed for formatted output to ostreams in fields of specified width.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="developer_standards_template_sec"></a>
+Use of C++ templates</h1>
+<ul>
+<li>In code for periodic systems defined in namespaces <a class="el" href="namespacePscf_1_1Prdc.html" title="Periodic fields and crystallography.">Pscf::Prdc</a>, <a class="el" href="namespacePscf_1_1Rpc.html" title="Real periodic fields, SCFT and PS-FTS (CPU).">Pscf::Rpc</a> and <a class="el" href="namespacePscf_1_1Rpg.html" title="SCFT and PS-FTS with real periodic fields (GPU)">Pscf::Rpg</a>, the dimension D of space is always treated as a template parameter. As a result, most of the files in directories src/prdc, src/rpc, and src/rpg define class templates for which D is a template parameter.</li>
+<li>Specializations of class templates in which the dimension of space D is the only template parameter should be explicitly instantiated for the three possible valid values of D=1, 2, or 3. The header file for each such class should contain explicit instantiation declarations for these three specializations.</li>
+<li>Definitions of non-inlined member function of class templates are often placed in a template implementation file with file name suffix .tpp. In the case a standard template that is designed to allow implicit instantiation, this .tpp file is usually included by the associated header file, by an include statement placed near the end of the header file.</li>
+<li>See the pages about <a class="el" href="developer_template_page.html">C++ templates</a> for a detailed discussion of different usage patterns for class templates that are designed to be explicitly instantiated.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="developer_standards_error_sec"></a>
+Error handling</h1>
+<ul>
+<li>Use the <a class="el" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7" title="Assertion macro suitable for serial or parallel production code.">UTIL_CHECK(...)</a>, <a class="el" href="global_8h.html#aeb3d01af710489fd0112efe3054345b4" title="Assertion macro suitable for debugging serial or parallel code.">UTIL_ASSERT(...)</a>, or <a class="el" href="global_8h.html#ad2512f8bd062d41d66799cf900151487" title="Macro for throwing an Exception, reporting function, file and line number.">UTIL_THROW(...)</a> preprocessor function macros for error tests. If an error is encountered, these macros all print an error statement to a Log file that displays the file and line number location of the error macro, and then throw a <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Util::Exception</a>. Exceptions thrown by these macros are generally not caught elsewhere, and thus cause execution to halt.</li>
+<li>All files that use these macros for error tests must include the header file "util/global.h" This file defines the UTIL_CHECK, UTIL_ASSERT, and UTIL_THROW macros, includes the "util/misc/Exception.h" and "util/misc/Log.h" header files that are used by these macros, and enables execution of optional debugging tests if the UTIL_DEBUG preprocessor macro is defined on entry to this file.</li>
+<li>The "setopts" script may be used to define or undefine the UTIL_DEBUG macro, and thus enable or disable conditional compilation of optional "debugging" tests. The command "./setopts -d0" comments out a line in a config.mk configuration file that defines UTIL_DEBUG, thereby disabling optional debugging tests, while "./setopts -d1" uncomments (restores) that line, and thus enables these optional tests.</li>
+<li>Do not use exceptions for control flow. Exceptions should be used only for unrecoverable errors, and should cause the program to terminate after printing an error message.</li>
+<li>Prefer use of UTIL_CHECK for most mandatory tests and UTIL_ASSERT for optional debugging tests. Reserve use of UTIL_THROW for rare cases for which a more detailed error message is required.</li>
+<li>The <a class="el" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7" title="Assertion macro suitable for serial or parallel production code.">UTIL_CHECK(condition)</a> macro takes a logical (bool) expression as an argument. If the expression is false, it prints an error message to the Log file and throws a <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Util::Exception</a> object. The error message includes the text of the logical condition that failed, as well as a file name and line number of the UTIL_CHECK macro. This macro is always enabled, independent of the value of the UTIL_DEBUG macro, and so is used for mandatory tests.</li>
+<li>The <a class="el" href="global_8h.html#aeb3d01af710489fd0112efe3054345b4" title="Assertion macro suitable for debugging serial or parallel code.">UTIL_ASSERT(condition)</a> is identical to UTIL_CHECK, except that this macro is enabled if and only if the UTIL_DEBUG macro is defined (i.e., only if optional debugging tests are enabled). The purpose and behavior are similar to those of the built-in C "assert" macro.</li>
+<li>THE <a class="el" href="global_8h.html#ad2512f8bd062d41d66799cf900151487" title="Macro for throwing an Exception, reporting function, file and line number.">UTIL_THROW(message)</a> takes a character string containing an error message as an argument, and always prints and error message and then throws an exception. The error message contains the text of the macro argument, along with file name and line number information that is added automatically. Because this macro does not test a logical condition, and always throws an Exception, it normally must be placed inside the body of C/C++ if statement block that tests a logical error condition, so that it is executed only if an error is found. The UTIL_THROW macro may be preceded within the body of such an if statement block by statements that print out more detailed information about values of the variables and the nature of the error, to aid debugging. Like UTIL_CHECK, the UTIL_THROW macro is always enabled, whether or not the UTIL_DEBUG macro is defined. The UTIL_THROW can be used to output more detailed error messages than those produced by UTIL_CHECK, at the cost of more verbose code for error checking.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="developer_standards_function_name_sec"></a>
+Function name guidelines</h1>
+<ul>
+<li>Names of functions that are not simple accessors (discussed below) should usually be verbs.</li>
+<li>Names of functions that compute something often start with the word "compute"</li>
+<li>The name of a simple accessor ("getter") class member function that returns a non-public member variable by value or by reference should simply be the name of the member variable, without any trailing underscore. This same name convention is used for accessors that return by value, const reference, or non-const reference. Thus, for example: <div class="fragment"><div class="line"><span class="keywordtype">int</span> Thing::data()<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword"></span>{  <span class="keywordflow">return</span> data_; }</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> Vector&amp; Thing::position()<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword"></span>{  <span class="keywordflow">return</span> position_; }</div>
+<div class="line"> </div>
+<div class="line">Vector&amp; Thing::position()</div>
+<div class="line">{  <span class="keywordflow">return</span> position_; }</div>
+<div class="line"> </div>
+<div class="line">Molecule&amp; Thing::molecule()</div>
+<div class="line">{  <span class="keywordflow">return</span> *moleculePtr_; }</div>
+</div><!-- fragment --></li>
+<li>The name of a "setter" class member function that is passed a value for a non-public member variable should begin with the prefix "set". The name of the function parameter that holds the new value should be the same as the name of the non-public member variable, without any trailing underscore. The same convention is used whether the value is passed by value or by reference, and is also used for functions that store either the address of an object or a copy of its value. For example: <div class="fragment"><div class="line"><span class="keywordtype">void</span> Thing::setData(<span class="keywordtype">int</span> data)</div>
+<div class="line">{  data_ = data; }</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> Thing::setPosition(Vector <span class="keyword">const</span>&amp; position)</div>
+<div class="line">{  position_ = position; }</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> Thing::setMolecule(Molecule &amp;molecule)</div>
+<div class="line">{  moleculePtr_ = &amp;molecule; }</div>
+</div><!-- fragment --></li>
+<li>Class member functions that are used to create associations between objects, by storing the address of an associated object in a pointer member variable, may use names that start with the prefix "set".</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="developer_standards_function_interface_sec"></a>
+Function interface guidelines</h1>
+<ul>
+<li>Prefer passing and returning primitive C/C++ data types by value. Pass primitive data types to functions by non-const reference only when they must be modified within the function.</li>
+<li>Prefer passing objects (class instances) to functions by reference, not by value. Pass by const reference if the object is not modified.</li>
 <li>Prefer references over pointers as function parameters. Pass pointers to functions only if: i) a null value for the pointer is a meaningful possibility, or ii) the pointer contains an address that must be re-assigned within the function.</li>
-<li>Prefer references over pointers as function return values. Return a pointer only if a null pointer is a meaningful possibility.</li>
+<li>Prefer references over pointers as function return values when returning a handle to a persistent object to provide access without delegating ownership (i.e,. responsibility for destruction).</li>
+<li>Factory functions that create a new object and then relinquish ownership return a pointer to the newly created object, and return a nullptr if allocation fails.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="developer_standards_interface_sec"></a>
+Class interface guidelines</h1>
+<ul>
+<li>Make all nonstatic class member variables private or (less frequently) protected. Prefer private variables over protected whenever possible.</li>
 <li>Practice strict "const correctness". Mark function parameters and class member functions as const whenever possible.</li>
 <li>Class member functions should be marked const if they do not change the logical state of the object.</li>
 <li>If a member function does not modify the logical state of an object in a manner that is detectable from outside the class, but modifies an private member variable that is being used as, e.g., work space or an internal bookkeeping device, it may sometimes be appropriate to declare that private variable to be "mutable" in order to be able to declare the member function to be "const".</li>
-<li>Read-only access to a member variable of a primitive C/C++ type should be provided (when needed) by an accessor function that returns the member variable by value. Read-only access to an object that is an instance of a class may be provided by an accessor function that returns the object by const reference.</li>
-<li>Read-write access to a member of a class may be provided by an accessor that returns the object by non-const reference. Such accessors should not be marked const, since they provide access that can modify the state of a member variable.</li>
-<li>Simple read-only accessors that return a member variable by value or by const reference should be declared as const functions. For example, if a class has an int member variable data_ and a member object_ that is an instance of class Object, you might consider providing any or (none) of the following member accessor functions:</li>
-</ul>
-<div class="fragment"><div class="line"></div>
+<li>Read-only access to a member variable of primitive C/C++ type should be provided (when needed) by an accessor function that returns the member variable by value. Read-only access to an object that is an instance of a class may be provided by an accessor function that returns the object by const reference.</li>
+<li>Simple accessors functions that provide read-only access to a member variable value or by const reference should be declared as const functions. <br  />
+</li>
+<li>Read-write access to a member of a class may be provided by an accessor that returns the object by non-const reference. Such read-write accessors should not be marked const, since they provide access that allows external code to modify the state of a member variable.</li>
+<li>Example: If a class has an int member variable data_ and a member object_ that is an instance of class Object, you might consider providing any or (none) of the following member accessor functions: <div class="fragment"><div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> Thing::data()<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword"></span>{  <span class="keywordflow">return</span> data_; }</div>
 <div class="line"></div>
@@ -353,59 +395,35 @@ Interface design guidelines</h1>
 <div class="line"></div>
 <div class="line">Object&amp; Thing::&amp;object_()</div>
 <div class="line">{  <span class="keywordflow">return</span> object_; }</div>
-</div><!-- fragment --><ul>
-<li>Providing an non-const accessor function that returns a non-const reference to a member object is equivalent to making the member public, and should be used when this is the desired behavior. Do not instead simply make the data member a public member.</li>
-<li>Accessors that return non-const references provide pseudo-public access to data members (i.e., variables or objects). The advantages of this scheme over simply making selected data members public are: <ul>
+</div><!-- fragment --></li>
+<li>Providing a non-const accessor function that returns a non-const reference to a member variable is equivalent to making the member public, and may be used when this is the desired behavior. Do not instead simply make a data member a public member.</li>
+<li>An accessor that returns a non-const reference to a member variable provide pseudo-public access to that members. The advantages of providing such a function when this is the desired behavior over simply making that data member public are: <ul>
 <li>
-Uniform interface: All members must be accessed through accessors, so users need not remember which members are public and which are accessed through accessor functions.  </li>
+Uniform interface: If members can only be accessed through accessor functions, users do need not remember which members are public and which are accessed through accessor functions.  </li>
 <li>
 Uniform name conventions: The name of the accessor that returns a member is always the name of the member variable, without amy underscore. This allows us to use an underscore to mark member variable names, without exposing underscored names outside the class implementation.  </li>
 <li>
 Uniform access: The same name convention is used for accessors that return by value, const reference, or reference, but the compiler can still enforce access control.  </li>
 <li>
-Implementation hiding: The same convention is used for functions that access members of a class and those that access objects through a pointer. Use of accessor functions also makes it convenient to add and remove sanity checks for debugging, such as checks that pointers are not null. </li>
-</ul>
-</li>
-<li>Write access to a class instance may also sometimes be provided by an explicit "set" function. The use of a set function allows the inclusion of code to check preconditions or carry out operations necessary to guarantee data validity.</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="data_section"></a>
-Data structures</h1>
-<ul>
-<li>Use the C++ iostream classes for all file IO. For consistency, avoid the C fscan() and fprint() methods. Use the wrapper classes in the src/util/format directory as needed to simplify coding of formatted output to ostreams.</li>
-<li>Use std::string to represent character strings whenever possible.</li>
-<li>Prefer the array container templates in src/util/containers over bare C arrays and STL containers. STL containers such as std::vector should be used only when there is not an equivalent home-brewed container, or when use of std library container simplifies access to standard library algorithms (e.g., the sorting algorithm). This preference for the home-brewed containers is based on the fact that: <ul>
+Implementation hiding: The same interface convention is used for a function that accesses a member variable of a class and one that access a dynamically allocated "pseudo-member" object through a pointer member variable. The choice of whether to use a member variable or a pointer is thus hidden from users of the class.  </li>
 <li>
-<p class="startli">Our home-brewed containers provide optional bounds checking, which is enabled only when UTIL_DEBUG is defined. </p>
-<p class="endli"></p>
+Error checking: Consistent use of accessor functions make it convenient to add and remove mandatory or optional sanity checks as desired, such as a checks that a pointers is not null before it is de-referenced.  </li>
+</ul>
 </li>
+<li>Write access to a member variable may sometimes instead be provided by an explicit "set" function, which is a void function for which the name begins with the prefix "set" and for which a value or object is passed as an argument. Such "set" functions and accessors that return non-const references thus provide two alternate ways of granting write access to a member variable.</li>
+<li>A void "set" function is often used in preference to an accessor that returns a non-const reference if the function has either of the following two purposes: <ul>
 <li>
-<p class="startli">Most of our home-brewed array containers treat allocation as a step that is separate from both construction and from addition of an element. This is similar to the behavior of dynamic arrays in modern Fortran and is usually the most convenient interface for scientific computations involving large arrays that retain a fixed size after a single allocation event. </p>
-<p class="endli"></p>
-</li>
+<b>Setting a simple data value</b> : Setting a value for a member variable that is an instance of a primitive C/C++ types, an enumeration, or some very simple class types.  </li>
 <li>
-Unlike std::vector, the most commonly used home-brewed array template, DArray, is not automatically resizable, and so will never be silently moved to a new location in memory. Addresses of objects that are constructed as elements of an array thus cannot change for mysterious reasons during program execution. </li>
+<b>Creating an association</b> : In this case, an association with an object that is passed as an argument is created by storing the address of that object in a pointer member variable. <br  />
+  </li>
 </ul>
-</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="template_section"></a>
-Use of C++ templates</h1>
-<ul>
-<li>In code for periodic systems defined in namespaces <a class="el" href="namespacePscf_1_1Prdc.html" title="Periodic fields and crystallography.">Pscf::Prdc</a>, <a class="el" href="namespacePscf_1_1Rpc.html" title="Real periodic fields, SCFT and PS-FTS (CPU).">Pscf::Rpc</a> and <a class="el" href="namespacePscf_1_1Rpg.html" title="SCFT and PS-FTS with real periodic fields (GPU)">Pscf::Rpg</a>, the dimension D of space is always treated as a template parameter. As a result, almost all of the files in the corresponding namespace-level directories src/prdc, src/rpc, and src/rpg define class templates, rather than classes.</li>
-<li>Specializations of templates in which the dimension D of space is the only template parameter should be explicitly instantiated for the three possible values of D=1, 2, or 3. More generally, if a class template has only a very small number of possible valid specializations, those specializations should be explicitly instantiated.</li>
-<li>Definitions of member functions for class templates are often placed in a "template implementation file" with file name suffix .tpp. This file can be included into the *.h header file for standard templates that are designed to be implicitly instantiated or can be included into a compilable source file that instantiates all valid specializations for a class template that is designed to be compiled by explicit instantiation of all valid specializations.</li>
-<li>See the <a class="el" href="developer_template_page.html">next page</a> about the use of C++ templates in PSCF for a more in-depth discussion of several use cases.</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="error_section"></a>
-Error handling</h1>
-<ul>
-<li>Include the file &lt;<a class="el" href="global_8h.html" title="File containing preprocessor macros for error handling.">util/global.h</a>&gt; in all files that use C assert() statements or that can throw exceptions. This automatically includes the "Exception.h" and "Log.h" header files, defines the UTIL_THROW(..) and <a class="el" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7" title="Assertion macro suitable for serial or parallel production code.">UTIL_CHECK(...)</a> macro that can be used to throw exceptions, and enables assert() and UTIL_ASSERT(..) statements if UTIL_DEBUG is defined,</li>
-<li>For checks that are intended only for debugging, use C assert() statements or <a class="el" href="global_8h.html#aeb3d01af710489fd0112efe3054345b4" title="Assertion macro suitable for debugging serial or parallel code.">UTIL_ASSERT()</a> macros, or enclose the entire test in an ifndef UTIL_DEBUG .... endif conditional compilation block.</li>
-<li>Use the UTIL_THROW or UTIL_CHECK macros defined in <a class="el" href="global_8h.html" title="File containing preprocessor macros for error handling.">src/util/global.h</a> to throw Exception objects for all errors, except those caught in debugging mode by C assert() statements or the <a class="el" href="global_8h.html#aeb3d01af710489fd0112efe3054345b4" title="Assertion macro suitable for debugging serial or parallel code.">UTIL_ASSERT()</a> macro. <br  />
- Like the standard assert() macro, the macros defined in this file all print a message and show the file and line number from which an Exception is thrown, as an aid to debugging.</li>
-<li>Do not use Exceptions for control flow. Exceptions should be used only for actual errors, and should usually cause the program to terminate.</li>
+In these two cases, the use of the "set" prefix documents intent, making it clear that the purpose is to set a value or create an association by setting an address value.</li>
+<li>An accessor that returns a member variable by non-const reference is usually preferred over a void "set" function when the relevant member variable is an instance of a class that defines member functions, and when users are likely to use the accessor to invoke these member functions. The accessor syntax is convenient for this purpose because it allows calls to member functions to be chained, allowing statements like this: <div class="fragment"><div class="line">iterator().iterate();</div>
+</div><!-- fragment --> Use of the accessor syntax thus provides a convenient syntax for accessing members of objects that are nested within an ownership hierarchy, while allowing the same syntax to be used to invoke const and non-const member functions of nested objects.</li>
 </ul>
 <p><br  />
- <a class="el" href="developer_build_page.html">Build System</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="developer_page.html">Developer Information</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="developer_template_page.html">C++ Class Templates</a> (Next) </p>
+ <a class="el" href="developer_build_page.html">Build System</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="developer_page.html">Developer Information</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="developer_template_page.html">C++ Templates</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -75,31 +75,30 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1ThreadMesh.html">ThreadMesh</a> {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>   <span class="keywordtype">void</span> <a class="code hl_function" href="group__Pscf__Cuda__ThreadMesh__Module.html#ga52366327d3932d135ea0b98b24cd7c4b">setConfig</a>(IntVec&lt;D&gt; <span class="keyword">const</span> &amp; <a class="code hl_function" href="group__Pscf__Cuda__ThreadMesh__Module.html#ga9ff7bb32bed366156462809274e91fee">meshDims</a>, <span class="keywordtype">bool</span> invert, </div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                  <span class="keywordtype">int</span> blockSize = -1);</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>   <span class="keywordtype">void</span> <a class="code hl_function" href="group__Pscf__Cuda__ThreadMesh__Module.html#ga52bbe34cbab01828b56c234011c6bec9">checkConfig</a>();</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>   <span class="keywordtype">void</span> <a class="code hl_function" href="group__Pscf__Cuda__ThreadMesh__Module.html#gae84d7410f96ab9de17332d8a44041c00">setThreadsPerBlock</a>(<span class="keywordtype">int</span> blockSize);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>   <span class="comment">// Accessors</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>   dim3 <a class="code hl_function" href="group__Pscf__Cuda__ThreadMesh__Module.html#ga6754b994ec02790084492bdc53c3c87a">gridDims</a>();</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>   dim3 <a class="code hl_function" href="group__Pscf__Cuda__ThreadMesh__Module.html#gab7d1ee50d3a864513d65f0ff545c0e40">blockDims</a>();</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>   dim3 <a class="code hl_function" href="group__Pscf__Cuda__ThreadMesh__Module.html#ga9ff7bb32bed366156462809274e91fee">meshDims</a>();</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span></div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>   <span class="keywordtype">int</span> <a class="code hl_function" href="group__Pscf__Cuda__ThreadMesh__Module.html#ga0efc60c3e963d8cce16a62338e148725">warpSize</a>();</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>   <span class="keywordtype">bool</span> <a class="code hl_function" href="group__Pscf__Cuda__ThreadMesh__Module.html#ga62e2a31309b04a3d2cfc3c41ae8aa83d">hasUnusedThreads</a>();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>   <span class="keywordtype">void</span> <a class="code hl_function" href="group__Pscf__Cuda__ThreadMesh__Module.html#ga52bbe34cbab01828b56c234011c6bec9">checkConfig</a>();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>   <span class="keywordtype">void</span> <a class="code hl_function" href="group__Pscf__Cuda__ThreadMesh__Module.html#gae84d7410f96ab9de17332d8a44041c00">setThreadsPerBlock</a>(<span class="keywordtype">int</span> blockSize);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>   <span class="comment">// Accessors</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>   dim3 <a class="code hl_function" href="group__Pscf__Cuda__ThreadMesh__Module.html#ga6754b994ec02790084492bdc53c3c87a">gridDims</a>();</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>   dim3 <a class="code hl_function" href="group__Pscf__Cuda__ThreadMesh__Module.html#gab7d1ee50d3a864513d65f0ff545c0e40">blockDims</a>();</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>   dim3 <a class="code hl_function" href="group__Pscf__Cuda__ThreadMesh__Module.html#ga9ff7bb32bed366156462809274e91fee">meshDims</a>();</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span></div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>} <span class="comment">// namespace ThreadMesh</span></div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>} <span class="comment">// namespace Pscf</span></div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>   <span class="keywordtype">int</span> <a class="code hl_function" href="group__Pscf__Cuda__ThreadMesh__Module.html#ga0efc60c3e963d8cce16a62338e148725">warpSize</a>();</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>   <span class="keywordtype">bool</span> <a class="code hl_function" href="group__Pscf__Cuda__ThreadMesh__Module.html#ga62e2a31309b04a3d2cfc3c41ae8aa83d">hasUnusedThreads</a>();</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>} <span class="comment">// namespace ThreadMesh</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>} <span class="comment">// namespace Pscf</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="global_8h.html">global.h</a></div><div class="ttdoc">File containing preprocessor macros for error handling.</div></div>
 <div class="ttc" id="agroup__Pscf__Cuda__ThreadMesh__Module_html_ga0efc60c3e963d8cce16a62338e148725"><div class="ttname"><a href="group__Pscf__Cuda__ThreadMesh__Module.html#ga0efc60c3e963d8cce16a62338e148725">Pscf::ThreadMesh::warpSize</a></div><div class="ttdeci">int warpSize()</div><div class="ttdoc">Get the warp size.</div><div class="ttdef"><b>Definition</b> <a href="ThreadMesh_8cu_source.html#l00373">ThreadMesh.cu:373</a></div></div>
 <div class="ttc" id="agroup__Pscf__Cuda__ThreadMesh__Module_html_ga52366327d3932d135ea0b98b24cd7c4b"><div class="ttname"><a href="group__Pscf__Cuda__ThreadMesh__Module.html#ga52366327d3932d135ea0b98b24cd7c4b">Pscf::ThreadMesh::setConfig</a></div><div class="ttdeci">void setConfig(IntVec&lt; D &gt; const &amp;meshDims, bool invert, int blockSize)</div><div class="ttdoc">Given a multidimensional grid of threads, set execution configuration.</div><div class="ttdef"><b>Definition</b> <a href="ThreadMesh_8cu_source.html#l00088">ThreadMesh.cu:88</a></div></div>

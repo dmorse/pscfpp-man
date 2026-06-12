@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -65,7 +65,7 @@ $(function() {
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Solvent.h&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;r1d/domain/Domain.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;r1d/field/Domain.h&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1R1d.html">R1d</a> { </div>
@@ -75,7 +75,7 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">   */</span></div>
 <div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classPscf_1_1R1d_1_1Solvent.html#aa24434dcad35385435c0d87436bb8587">   17</a></span>   <a class="code hl_function" href="classPscf_1_1R1d_1_1Solvent.html#aa24434dcad35385435c0d87436bb8587">Solvent::Solvent</a>() </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    : <a class="code hl_function" href="classPscf_1_1SolventSpecies.html#a0f13148b7d67caa9395e803ddd404dcb">SolventSpecies</a>()  </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    : <a class="code hl_function" href="classPscf_1_1SolventSpecies.html#a0f8b8b8653d2dcc4b640760c41412da5">SolventSpecies</a>()  </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>   {  <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">setClassName</a>(<span class="stringliteral">&quot;Solvent&quot;</span>); }</div>
 </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
@@ -111,7 +111,7 @@ $(function() {
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      <span class="comment">// Evaluate unnormalized concentration, Boltzmann weight</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      <span class="keywordtype">int</span> nx = <a class="code hl_function" href="classPscf_1_1R1d_1_1Solvent.html#ac992852ec7273f00bb202ae121c6bcbd">domain</a>().<a class="code hl_function" href="classPscf_1_1R1d_1_1Domain.html#a9976ecdfcffabfc7e49d51cb7ca10b69">nx</a>();</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      <span class="keywordtype">double</span> s = <a class="code hl_function" href="classPscf_1_1SolventSpecies.html#aff4406300ec515e7a798ea561ced2e25">size</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      <span class="keywordtype">double</span> s = <a class="code hl_function" href="classPscf_1_1SolventSpecies.html#a39d3c6a5f77e5303523fd789fc619310">size</a>();</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nx; ++i) {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>          cField_[i] = exp(-s*wField[i]);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      }</div>
@@ -120,47 +120,35 @@ $(function() {
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <span class="keywordtype">double</span> Q = <a class="code hl_function" href="classPscf_1_1R1d_1_1Solvent.html#ac992852ec7273f00bb202ae121c6bcbd">domain</a>().<a class="code hl_function" href="classPscf_1_1R1d_1_1Domain.html#ab6f037805f36d44afb7fc815e9922980">spatialAverage</a>(cField_);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      <span class="comment">// Set q and compute mu or phi (depending on ensemble)</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <a class="code hl_function" href="classPscf_1_1Species.html#a5a2496c97ef452469f485eacdba6384a">Species::setQ</a>(Q);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <a class="code hl_function" href="classPscf_1_1Species.html#aae50ad652b4367a14715ff72acb6a5c3">Species::setQ</a>(Q);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">      #if 0</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      <span class="keywordtype">double</span> prefactor;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classPscf_1_1Species.html#ade886c269cb418b071b3e6da63652989">ensemble</a>() == Species::Closed) {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>         prefactor = phi_/q_;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>         mu_ = log(prefactor);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>         prefactor = exp(mu_);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>         phi_ = prefactor*q_;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      }</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">      #endif</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <span class="comment">// Normalize concentration </span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      <span class="keywordtype">double</span> prefactor = <a class="code hl_function" href="classPscf_1_1Species.html#a1956df7c7b319005c9f8b6cc274a7dc7">phi</a>()/Q;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nx; ++i) {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>          cField_[i] *= prefactor;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>   }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <span class="comment">// Normalize concentration </span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      <span class="keywordtype">double</span> prefactor = <a class="code hl_function" href="classPscf_1_1Species.html#af5b975e9cde24c5319a271ffa4b02bed">phi</a>()/Q;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nx; ++i) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>          cField_[i] *= prefactor;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>   }</div>
 </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
-<div class="ttc" id="aclassPscf_1_1R1d_1_1Domain_html"><div class="ttname"><a href="classPscf_1_1R1d_1_1Domain.html">Pscf::R1d::Domain</a></div><div class="ttdoc">One-dimensional spatial domain and discretization grid.</div><div class="ttdef"><b>Definition</b> <a href="r1d_2domain_2Domain_8h_source.html#l00026">r1d/domain/Domain.h:27</a></div></div>
-<div class="ttc" id="aclassPscf_1_1R1d_1_1Domain_html_a9976ecdfcffabfc7e49d51cb7ca10b69"><div class="ttname"><a href="classPscf_1_1R1d_1_1Domain.html#a9976ecdfcffabfc7e49d51cb7ca10b69">Pscf::R1d::Domain::nx</a></div><div class="ttdeci">int nx() const</div><div class="ttdoc">Get number of spatial grid points, including both endpoints.</div><div class="ttdef"><b>Definition</b> <a href="r1d_2domain_2Domain_8h_source.html#l00213">r1d/domain/Domain.h:213</a></div></div>
-<div class="ttc" id="aclassPscf_1_1R1d_1_1Domain_html_ab6f037805f36d44afb7fc815e9922980"><div class="ttname"><a href="classPscf_1_1R1d_1_1Domain.html#ab6f037805f36d44afb7fc815e9922980">Pscf::R1d::Domain::spatialAverage</a></div><div class="ttdeci">double spatialAverage(Field const &amp;f) const</div><div class="ttdoc">Compute spatial average of a field.</div><div class="ttdef"><b>Definition</b> <a href="r1d_2domain_2Domain_8cpp_source.html#l00119">r1d/domain/Domain.cpp:119</a></div></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+<div class="ttc" id="aclassPscf_1_1R1d_1_1Domain_html"><div class="ttname"><a href="classPscf_1_1R1d_1_1Domain.html">Pscf::R1d::Domain</a></div><div class="ttdoc">One-dimensional spatial domain and discretization grid.</div><div class="ttdef"><b>Definition</b> <a href="r1d_2field_2Domain_8h_source.html#l00026">r1d/field/Domain.h:27</a></div></div>
+<div class="ttc" id="aclassPscf_1_1R1d_1_1Domain_html_a9976ecdfcffabfc7e49d51cb7ca10b69"><div class="ttname"><a href="classPscf_1_1R1d_1_1Domain.html#a9976ecdfcffabfc7e49d51cb7ca10b69">Pscf::R1d::Domain::nx</a></div><div class="ttdeci">int nx() const</div><div class="ttdoc">Get number of spatial grid points, including both endpoints.</div><div class="ttdef"><b>Definition</b> <a href="r1d_2field_2Domain_8h_source.html#l00213">r1d/field/Domain.h:213</a></div></div>
+<div class="ttc" id="aclassPscf_1_1R1d_1_1Domain_html_ab6f037805f36d44afb7fc815e9922980"><div class="ttname"><a href="classPscf_1_1R1d_1_1Domain.html#ab6f037805f36d44afb7fc815e9922980">Pscf::R1d::Domain::spatialAverage</a></div><div class="ttdeci">double spatialAverage(Field const &amp;f) const</div><div class="ttdoc">Compute spatial average of a field.</div><div class="ttdef"><b>Definition</b> <a href="r1d_2field_2Domain_8cpp_source.html#l00119">r1d/field/Domain.cpp:119</a></div></div>
 <div class="ttc" id="aclassPscf_1_1R1d_1_1Solvent_html_a063a7f6528762a78323b86a7e559ec54"><div class="ttname"><a href="classPscf_1_1R1d_1_1Solvent.html#a063a7f6528762a78323b86a7e559ec54">Pscf::R1d::Solvent::setDiscretization</a></div><div class="ttdeci">void setDiscretization(Domain const &amp;domain)</div><div class="ttdoc">Set association with Domain and allocate concentration field array.</div><div class="ttdef"><b>Definition</b> <a href="#l00030">r1d/solvers/Solvent.cpp:30</a></div></div>
 <div class="ttc" id="aclassPscf_1_1R1d_1_1Solvent_html_a0a072f8bc6cfecaed1fe8826b9198273"><div class="ttname"><a href="classPscf_1_1R1d_1_1Solvent.html#a0a072f8bc6cfecaed1fe8826b9198273">Pscf::R1d::Solvent::FieldT</a></div><div class="ttdeci">typename Propagator::FieldT FieldT</div><div class="ttdoc">Field type.</div><div class="ttdef"><b>Definition</b> <a href="r1d_2solvers_2Solvent_8h_source.html#l00036">r1d/solvers/Solvent.h:36</a></div></div>
 <div class="ttc" id="aclassPscf_1_1R1d_1_1Solvent_html_a0c1999757753eb632822095e39ac5c97"><div class="ttname"><a href="classPscf_1_1R1d_1_1Solvent.html#a0c1999757753eb632822095e39ac5c97">Pscf::R1d::Solvent::~Solvent</a></div><div class="ttdeci">~Solvent()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00024">r1d/solvers/Solvent.cpp:24</a></div></div>
 <div class="ttc" id="aclassPscf_1_1R1d_1_1Solvent_html_a5673f9e279927fef6221fd7b9033d2af"><div class="ttname"><a href="classPscf_1_1R1d_1_1Solvent.html#a5673f9e279927fef6221fd7b9033d2af">Pscf::R1d::Solvent::compute</a></div><div class="ttdeci">void compute(FieldT const &amp;wField)</div><div class="ttdoc">Compute monomer concentration field, q and phi and/or mu.</div><div class="ttdef"><b>Definition</b> <a href="#l00042">r1d/solvers/Solvent.cpp:42</a></div></div>
 <div class="ttc" id="aclassPscf_1_1R1d_1_1Solvent_html_aa24434dcad35385435c0d87436bb8587"><div class="ttname"><a href="classPscf_1_1R1d_1_1Solvent.html#aa24434dcad35385435c0d87436bb8587">Pscf::R1d::Solvent::Solvent</a></div><div class="ttdeci">Solvent()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00017">r1d/solvers/Solvent.cpp:17</a></div></div>
 <div class="ttc" id="aclassPscf_1_1R1d_1_1Solvent_html_ac992852ec7273f00bb202ae121c6bcbd"><div class="ttname"><a href="classPscf_1_1R1d_1_1Solvent.html#ac992852ec7273f00bb202ae121c6bcbd">Pscf::R1d::Solvent::domain</a></div><div class="ttdeci">Domain const &amp; domain() const</div><div class="ttdoc">Return associated domain by reference.</div><div class="ttdef"><b>Definition</b> <a href="r1d_2solvers_2Solvent_8h_source.html#l00098">r1d/solvers/Solvent.h:98</a></div></div>
-<div class="ttc" id="aclassPscf_1_1SolventSpecies_html_a0f13148b7d67caa9395e803ddd404dcb"><div class="ttname"><a href="classPscf_1_1SolventSpecies.html#a0f13148b7d67caa9395e803ddd404dcb">Pscf::SolventSpecies::SolventSpecies</a></div><div class="ttdeci">SolventSpecies()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="SolventSpecies_8cpp_source.html#l00015">SolventSpecies.cpp:15</a></div></div>
-<div class="ttc" id="aclassPscf_1_1SolventSpecies_html_aff4406300ec515e7a798ea561ced2e25"><div class="ttname"><a href="classPscf_1_1SolventSpecies.html#aff4406300ec515e7a798ea561ced2e25">Pscf::SolventSpecies::size</a></div><div class="ttdeci">double size() const</div><div class="ttdoc">Get the size (number of monomers) in this solvent.</div><div class="ttdef"><b>Definition</b> <a href="SolventSpecies_8h_source.html#l00113">SolventSpecies.h:113</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Species_html_a1956df7c7b319005c9f8b6cc274a7dc7"><div class="ttname"><a href="classPscf_1_1Species.html#a1956df7c7b319005c9f8b6cc274a7dc7">Pscf::Species::phi</a></div><div class="ttdeci">double phi() const</div><div class="ttdoc">Get the overall volume fraction for this species.</div><div class="ttdef"><b>Definition</b> <a href="Species_8h_source.html#l00149">Species.h:149</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Species_html_a5a2496c97ef452469f485eacdba6384a"><div class="ttname"><a href="classPscf_1_1Species.html#a5a2496c97ef452469f485eacdba6384a">Pscf::Species::setQ</a></div><div class="ttdeci">void setQ(double q)</div><div class="ttdoc">Set q and compute phi or mu (depending on the ensemble).</div><div class="ttdef"><b>Definition</b> <a href="Species_8cpp_source.html#l00063">Species.cpp:63</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Species_html_ade886c269cb418b071b3e6da63652989"><div class="ttname"><a href="classPscf_1_1Species.html#ade886c269cb418b071b3e6da63652989">Pscf::Species::ensemble</a></div><div class="ttdeci">Ensemble ensemble() const</div><div class="ttdoc">Get the statistical ensemble for this species (open or closed).</div><div class="ttdef"><b>Definition</b> <a href="Species_8h_source.html#l00167">Species.h:167</a></div></div>
+<div class="ttc" id="aclassPscf_1_1SolventSpecies_html_a0f8b8b8653d2dcc4b640760c41412da5"><div class="ttname"><a href="classPscf_1_1SolventSpecies.html#a0f8b8b8653d2dcc4b640760c41412da5">Pscf::SolventSpecies&lt; double &gt;::SolventSpecies</a></div><div class="ttdeci">SolventSpecies()</div></div>
+<div class="ttc" id="aclassPscf_1_1SolventSpecies_html_a39d3c6a5f77e5303523fd789fc619310"><div class="ttname"><a href="classPscf_1_1SolventSpecies.html#a39d3c6a5f77e5303523fd789fc619310">Pscf::SolventSpecies&lt; double &gt;::size</a></div><div class="ttdeci">double size() const</div></div>
+<div class="ttc" id="aclassPscf_1_1Species_html_aae50ad652b4367a14715ff72acb6a5c3"><div class="ttname"><a href="classPscf_1_1Species.html#aae50ad652b4367a14715ff72acb6a5c3">Pscf::Species::setQ</a></div><div class="ttdeci">void setQ(WT q)</div><div class="ttdoc">Set q and compute phi or mu (depending on the ensemble).</div><div class="ttdef"><b>Definition</b> <a href="Species_8tpp_source.html#l00076">Species.tpp:76</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Species_html_af5b975e9cde24c5319a271ffa4b02bed"><div class="ttname"><a href="classPscf_1_1Species.html#af5b975e9cde24c5319a271ffa4b02bed">Pscf::Species&lt; double &gt;::phi</a></div><div class="ttdeci">double phi() const</div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a30752567fd7b8b93e5c8476bbe8592c5"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">Util::ParamComposite::setClassName</a></div><div class="ttdeci">void setClassName(const char *className)</div><div class="ttdoc">Set class name string.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8cpp_source.html#l00379">ParamComposite.cpp:379</a></div></div>
 <div class="ttc" id="aglobal_8h_html_aaf3bc07accafc94019d126e4cffa81e7"><div class="ttname"><a href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a></div><div class="ttdeci">#define UTIL_CHECK(condition)</div><div class="ttdoc">Assertion macro suitable for serial or parallel production code.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00068">global.h:68</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1R1d_html"><div class="ttname"><a href="namespacePscf_1_1R1d.html">Pscf::R1d</a></div><div class="ttdoc">SCFT with real 1D fields.</div><div class="ttdef"><b>Definition</b> <a href="r1d_2domain_2Domain_8cpp_source.html#l00012">r1d/domain/Domain.cpp:13</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1R1d_html"><div class="ttname"><a href="namespacePscf_1_1R1d.html">Pscf::R1d</a></div><div class="ttdoc">SCFT with real 1D fields.</div><div class="ttdef"><b>Definition</b> <a href="r1d_2field_2Domain_8cpp_source.html#l00012">r1d/field/Domain.cpp:13</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

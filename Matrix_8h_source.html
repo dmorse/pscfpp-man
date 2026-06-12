@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -126,7 +126,7 @@ $(function() {
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00119" data-start="{" data-end="}">
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classUtil_1_1Matrix.html#ab405e09dfdf9c17a7ca3ba09dc80d9a0">  119</a></span>   <span class="keyword">inline</span> <a class="code hl_function" href="classUtil_1_1Matrix.html#ab405e09dfdf9c17a7ca3ba09dc80d9a0">Matrix&lt;Data&gt;::Matrix</a>()</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    : <a class="code hl_variable" href="classUtil_1_1Matrix.html#a58613069a43b06ca55b00760e9f2a025">data_</a>(0),</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    : <a class="code hl_variable" href="classUtil_1_1Matrix.html#a58613069a43b06ca55b00760e9f2a025">data_</a>(nullptr),</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      <a class="code hl_variable" href="classUtil_1_1Matrix.html#ab2aa000328441c9173452ebed40a52b9">capacity1_</a>(0),</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      <a class="code hl_variable" href="classUtil_1_1Matrix.html#a6c524474706b1819f6f20f245c5bbf85">capacity2_</a>(0)</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>   {}</div>
@@ -167,7 +167,7 @@ $(function() {
 <div class="foldopen" id="foldopen00150" data-start="{" data-end="}">
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classUtil_1_1Matrix.html#ab3fedca73185c89d0537114a37bb2d04">  150</a></span>   <span class="keyword">inline</span> Data <span class="keyword">const</span> &amp; <a class="code hl_function" href="classUtil_1_1Matrix.html#ab3fedca73185c89d0537114a37bb2d04">Matrix&lt;Data&gt;::operator() </a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="keyword">   </span>{</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      assert(<a class="code hl_variable" href="classUtil_1_1Matrix.html#a58613069a43b06ca55b00760e9f2a025">data_</a> != 0);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      assert(<a class="code hl_variable" href="classUtil_1_1Matrix.html#a58613069a43b06ca55b00760e9f2a025">data_</a>);</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>      assert(i &gt;= 0);</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>      assert(i &lt; <a class="code hl_variable" href="classUtil_1_1Matrix.html#ab2aa000328441c9173452ebed40a52b9">capacity1_</a>);</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>      assert(j &gt;= 0);</div>
@@ -183,7 +183,7 @@ $(function() {
 <div class="foldopen" id="foldopen00164" data-start="{" data-end="}">
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="classUtil_1_1Matrix.html#a07e47001d8275fb7ad593bd195ba3906">  164</a></span>   <span class="keyword">inline</span> Data&amp; <a class="code hl_function" href="classUtil_1_1Matrix.html#ab3fedca73185c89d0537114a37bb2d04">Matrix&lt;Data&gt;::operator() </a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j)</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>   {</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      assert(<a class="code hl_variable" href="classUtil_1_1Matrix.html#a58613069a43b06ca55b00760e9f2a025">data_</a> != 0);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      assert(<a class="code hl_variable" href="classUtil_1_1Matrix.html#a58613069a43b06ca55b00760e9f2a025">data_</a>);</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>      assert(i &gt;= 0);</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>      assert(i &lt; <a class="code hl_variable" href="classUtil_1_1Matrix.html#ab2aa000328441c9173452ebed40a52b9">capacity1_</a>);</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>      assert(j &gt;= 0);</div>

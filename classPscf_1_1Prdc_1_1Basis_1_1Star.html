@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -82,8 +82,8 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a7938d55cc5228f57ba4a1d444093038b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Prdc_1_1Basis_1_1Wave.html" title="Wavevector used to construct a basis function.">Wave</a> index of first wavevector of the next star.  <br /></td></tr>
 <tr class="memitem:a3ddb31d3bad79f96ea153852d0d98e34" id="r_a3ddb31d3bad79f96ea153852d0d98e34"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ddb31d3bad79f96ea153852d0d98e34">invertFlag</a></td></tr>
 <tr class="memdesc:a3ddb31d3bad79f96ea153852d0d98e34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index for inversion symmetry of star.  <br /></td></tr>
-<tr class="memitem:a32820cb0e1e7178f5c3c0b05b930df6e" id="r_a32820cb0e1e7178f5c3c0b05b930df6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32820cb0e1e7178f5c3c0b05b930df6e">waveBz</a></td></tr>
-<tr class="memdesc:a32820cb0e1e7178f5c3c0b05b930df6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer indices indicesBz of a characteristic wave of this star.  <br /></td></tr>
+<tr class="memitem:a31a670e51798ed508647e15f4c7966c3" id="r_a31a670e51798ed508647e15f4c7966c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31a670e51798ed508647e15f4c7966c3">waveMin</a></td></tr>
+<tr class="memdesc:a31a670e51798ed508647e15f4c7966c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer indices indicesMin of a characteristic wave of this star.  <br /></td></tr>
 <tr class="memitem:ab27c18c44e38d7275f02762b09b8ece8" id="r_ab27c18c44e38d7275f02762b09b8ece8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab27c18c44e38d7275f02762b09b8ece8">starId</a></td></tr>
 <tr class="memdesc:ab27c18c44e38d7275f02762b09b8ece8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of this star in ordered array of all stars.  <br /></td></tr>
 <tr class="memitem:a1be0f1686f94f40a951997bce663c1b2" id="r_a1be0f1686f94f40a951997bce663c1b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1be0f1686f94f40a951997bce663c1b2">basisId</a></td></tr>
@@ -94,9 +94,9 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
 class Pscf::Prdc::Basis&lt; D &gt;::Star</div><p>A list of wavevectors that are related by space-group symmetries. </p>
-<p>The wavevectors in a star form a continuous block within the array waves defined by the <a class="el" href="classPscf_1_1Prdc_1_1Basis.html" title="Symmetry-adapted Fourier basis for pseudo-spectral SCFT.">Basis</a> classes. Within this block, waves are listed in descending lexigraphical order of their integer (ijk) indices as given by <a class="el" href="classPscf_1_1Prdc_1_1Basis_1_1Wave.html#aba3f08c81fee24c8c415ec0fa8555f5e" title="Integer indices of wave, in first Brillouin zone.">Basis::Wave::indicesBz</a>. </p>
+<p>The wavevectors in a star form a continuous block within the array waves defined by the <a class="el" href="classPscf_1_1Prdc_1_1Basis.html" title="Symmetry-adapted Fourier basis for pseudo-spectral SCFT.">Basis</a> classes. Within this block, waves are listed in descending lexigraphical order of their integer (ijk) indices as given by <a class="el" href="classPscf_1_1Prdc_1_1Basis_1_1Wave.html#a96ad0f22eec4fe4e0ec02c94a2bbea1b" title="Integer indices of wave, in first Brillouin zone.">Basis::Wave::indicesMin</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00481">481</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00482">482</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a316fbb52ca81468111012dcca4ca53c7" name="a316fbb52ca81468111012dcca4ca53c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a316fbb52ca81468111012dcca4ca53c7">&#9670;&#160;</a></span>Star()</h2>
@@ -125,9 +125,9 @@ template&lt;int D&gt; </div>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00583">583</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00584">584</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Basis_8h_source.html#l00563">basisId</a>, <a class="el" href="Basis_8h_source.html#l00494">beginId</a>, <a class="el" href="Basis_8h_source.html#l00578">cancel</a>, <a class="el" href="Basis_8h_source.html#l00502">endId</a>, <a class="el" href="Basis_8h_source.html#l00531">invertFlag</a>, <a class="el" href="Basis_8h_source.html#l00489">size</a>, <a class="el" href="Basis_8h_source.html#l00551">starId</a>, and <a class="el" href="Basis_8h_source.html#l00544">waveBz</a>.</p>
+<p class="reference">References <a class="el" href="Basis_8h_source.html#l00564">basisId</a>, <a class="el" href="Basis_8h_source.html#l00495">beginId</a>, <a class="el" href="Basis_8h_source.html#l00579">cancel</a>, <a class="el" href="Basis_8h_source.html#l00503">endId</a>, <a class="el" href="Basis_8h_source.html#l00532">invertFlag</a>, <a class="el" href="Basis_8h_source.html#l00490">size</a>, <a class="el" href="Basis_8h_source.html#l00552">starId</a>, and <a class="el" href="Basis_8h_source.html#l00545">waveMin</a>.</p>
 
 </div>
 </div>
@@ -148,9 +148,9 @@ template&lt;int D&gt; </div>
 
 <p>Number of wavevectors in this star. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00489">489</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00490">490</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file_8py_source.html#l00166">pscfpp.file.File::__eq__()</a>, <a class="el" href="file_8py_source.html#l00110">pscfpp.file.File::__init__()</a>, <a class="el" href="text_8py_source.html#l00097">pscfpp.text.Record::__init__()</a>, <a class="el" href="file_8py_source.html#l00126">pscfpp.file.File::__repr__()</a>, <a class="el" href="text_8py_source.html#l00131">pscfpp.text.Record::__str__()</a>, <a class="el" href="fieldIoUtil_8tpp_source.html#l00455">Pscf::Prdc::readBasisData()</a>, <a class="el" href="Basis_8h_source.html#l00583">Star()</a>, and <a class="el" href="fieldIoUtil_8tpp_source.html#l00733">Pscf::Prdc::writeBasisData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file_8py_source.html#l00166">pscfpp.file.File::__eq__()</a>, <a class="el" href="file_8py_source.html#l00110">pscfpp.file.File::__init__()</a>, <a class="el" href="text_8py_source.html#l00097">pscfpp.text.Record::__init__()</a>, <a class="el" href="file_8py_source.html#l00126">pscfpp.file.File::__repr__()</a>, <a class="el" href="text_8py_source.html#l00131">pscfpp.text.Record::__str__()</a>, <a class="el" href="rFieldIo_8tpp_source.html#l00233">Pscf::Prdc::readBasisData()</a>, <a class="el" href="Basis_8h_source.html#l00584">Star()</a>, and <a class="el" href="rFieldIo_8tpp_source.html#l00511">Pscf::Prdc::writeBasisData()</a>.</p>
 
 </div>
 </div>
@@ -170,9 +170,9 @@ template&lt;int D&gt; </div>
 
 <p><a class="el" href="classPscf_1_1Prdc_1_1Basis_1_1Wave.html" title="Wavevector used to construct a basis function.">Wave</a> index of first wavevector in star. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00494">494</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00495">495</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fieldIoUtil_8tpp_source.html#l00455">Pscf::Prdc::readBasisData()</a>, and <a class="el" href="Basis_8h_source.html#l00583">Star()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rFieldIo_8tpp_source.html#l00233">Pscf::Prdc::readBasisData()</a>, and <a class="el" href="Basis_8h_source.html#l00584">Star()</a>.</p>
 
 </div>
 </div>
@@ -193,9 +193,9 @@ template&lt;int D&gt; </div>
 <p><a class="el" href="classPscf_1_1Prdc_1_1Basis_1_1Wave.html" title="Wavevector used to construct a basis function.">Wave</a> index of first wavevector of the next star. </p>
 <p>This index is one past the wave index of the last wavevector of this star. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00502">502</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00503">503</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Basis_8h_source.html#l00583">Star()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Basis_8h_source.html#l00584">Star()</a>.</p>
 
 </div>
 </div>
@@ -220,14 +220,14 @@ template&lt;int D&gt; </div>
 <p>In a centro-symmetric group (i.e., a group that includes the inversion operation, with an inversion center at the origin of the coordinate system), all stars are closed under inversion. In this case, all stars in the basis must thus have starInvert = 0.</p>
 <p>In a non-centro-symmetric group, a stars may either be closed closed under inversion (starInvert = 0) or belong to a pair of consecutive stars that are related by inversion (starInver = +1 or -1). </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00531">531</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00532">532</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fieldIoUtil_8tpp_source.html#l00455">Pscf::Prdc::readBasisData()</a>, and <a class="el" href="Basis_8h_source.html#l00583">Star()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rFieldIo_8tpp_source.html#l00233">Pscf::Prdc::readBasisData()</a>, and <a class="el" href="Basis_8h_source.html#l00584">Star()</a>.</p>
 
 </div>
 </div>
-<a id="a32820cb0e1e7178f5c3c0b05b930df6e" name="a32820cb0e1e7178f5c3c0b05b930df6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32820cb0e1e7178f5c3c0b05b930df6e">&#9670;&#160;</a></span>waveBz</h2>
+<a id="a31a670e51798ed508647e15f4c7966c3" name="a31a670e51798ed508647e15f4c7966c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31a670e51798ed508647e15f4c7966c3">&#9670;&#160;</a></span>waveMin</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -235,18 +235,18 @@ template&lt;int D&gt; </div>
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt;D&gt; <a class="el" href="classPscf_1_1Prdc_1_1Basis.html">Pscf::Prdc::Basis</a>&lt; D &gt;::Star::waveBz</td>
+          <td class="memname"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt;D&gt; <a class="el" href="classPscf_1_1Prdc_1_1Basis.html">Pscf::Prdc::Basis</a>&lt; D &gt;::Star::waveMin</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Integer indices indicesBz of a characteristic wave of this star. </p>
-<p><a class="el" href="classPscf_1_1Prdc_1_1Basis_1_1Wave.html" title="Wavevector used to construct a basis function.">Wave</a> given here is the value of indicesBz for a characteristic wave for the star. For invertFlag = 0 or 1, the characteristic wave is the first wave in the star. For invertFlag = -1, this is the negation of the waveBz of the partner star for which invertFlag = 1.</p>
-<p>The coefficient of wave waveBz is always real and positive. </p>
+<p>Integer indices indicesMin of a characteristic wave of this star. </p>
+<p><a class="el" href="classPscf_1_1Prdc_1_1Basis_1_1Wave.html" title="Wavevector used to construct a basis function.">Wave</a> given here is the value of indicesMin for a characteristic wave for the star. For invertFlag = 0 or 1, the characteristic wave is the first wave in the star. For invertFlag = -1, this is the negation of the waveMin of the partner star for which invertFlag = 1.</p>
+<p>The coefficient of wave waveMin is always real and positive. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00544">544</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00545">545</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fieldIoUtil_8tpp_source.html#l00455">Pscf::Prdc::readBasisData()</a>, <a class="el" href="Basis_8h_source.html#l00583">Star()</a>, and <a class="el" href="fieldIoUtil_8tpp_source.html#l00733">Pscf::Prdc::writeBasisData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rFieldIo_8tpp_source.html#l00233">Pscf::Prdc::readBasisData()</a>, <a class="el" href="Basis_8h_source.html#l00584">Star()</a>, and <a class="el" href="rFieldIo_8tpp_source.html#l00511">Pscf::Prdc::writeBasisData()</a>.</p>
 
 </div>
 </div>
@@ -267,9 +267,9 @@ template&lt;int D&gt; </div>
 <p>Index of this star in ordered array of all stars. </p>
 <p>This is the index of this star within array stars_. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00551">551</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00552">552</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Basis_8h_source.html#l00583">Star()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Basis_8h_source.html#l00584">Star()</a>.</p>
 
 </div>
 </div>
@@ -288,12 +288,12 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Index of basis function associated with this star. </p>
-<p>If this star is not cancelled (cancel == false), then basisId is set equal to the index of the associated basis function in in a list of nonzero basis functions or (equivalently) in a list of non-cancelled stars.</p>
+<p>If this star is not cancelled (cancel == false), then basisId is set equal to the index of the associated basis function in a list of nonzero basis functions or (equivalently) in a list of non-cancelled stars.</p>
 <p>If this star is cancelled (cancel == true), then basisId = -1. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00563">563</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00564">564</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fieldIoUtil_8tpp_source.html#l00455">Pscf::Prdc::readBasisData()</a>, and <a class="el" href="Basis_8h_source.html#l00583">Star()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rFieldIo_8tpp_source.html#l00233">Pscf::Prdc::readBasisData()</a>, and <a class="el" href="Basis_8h_source.html#l00584">Star()</a>.</p>
 
 </div>
 </div>
@@ -315,9 +315,9 @@ template&lt;int D&gt; </div>
 <p>The cancel flag is true iff no nonzero basis function can be constructed from the waves of this star that is invariant under all elements of the space group. <a class="el" href="classPscf_1_1Prdc_1_1Basis.html" title="Symmetry-adapted Fourier basis for pseudo-spectral SCFT.">Basis</a> functions are thus associated only with stars for which cancel == false.</p>
 <p>Each cancelled star contains a set of waves that are related by symmetry for which the X-ray or neutron scattering intensity would exhibit a systematic cancellation required by the space group symmetry. </p>
 
-<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00578">578</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Basis_8h_source.html#l00579">579</a> of file <a class="el" href="Basis_8h_source.html">Basis.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fieldIoUtil_8tpp_source.html#l00455">Pscf::Prdc::readBasisData()</a>, <a class="el" href="Basis_8h_source.html#l00583">Star()</a>, and <a class="el" href="fieldIoUtil_8tpp_source.html#l00733">Pscf::Prdc::writeBasisData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rFieldIo_8tpp_source.html#l00233">Pscf::Prdc::readBasisData()</a>, <a class="el" href="Basis_8h_source.html#l00584">Star()</a>, and <a class="el" href="rFieldIo_8tpp_source.html#l00511">Pscf::Prdc::writeBasisData()</a>.</p>
 
 </div>
 </div>

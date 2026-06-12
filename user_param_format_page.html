@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -61,9 +61,9 @@ $(function() {
 </p>
 <p>Users of PSCF require complete documentation of the required format for each type of block that can appear within a parameter file. This manual page discusses a representation that is used throughout the PSCF documentation to describe the required format of parameter file blocks. This format representation looks similar to that of the actual block, except for thus use of notation to indicate data types of parameter values (rather than actual values), and by the use of special symbols to indicate syntactical elements such as array-valued parameters, optional elements and selectable subblocks.</p>
 <h1 class="doxsection"><a class="anchor" id="user_param_format_example1_sec"></a>
-Example 1: SCFT parameter file for a periodic structure</h1>
-<p>As a simple first example of this sort of format description, the overall format for a pscf_pc or pscf_pg parameter file used to initialize a SCFT calculation is shown below: </p><div class="fragment"><div class="line">System{</div>
-<div class="line">   polymerModel*  enumeration (<span class="stringliteral">&quot;thread&quot;</span> or <span class="stringliteral">&quot;bead&quot;</span>, <span class="stringliteral">&quot;thread&quot;</span> by <span class="keywordflow">default</span>)</div>
+Example 1: SCFT parameter file</h1>
+<p>As a simple first example of this sort of format description, the overall format for a pscf_rpc or pscf_rpg parameter file used to initialize a SCFT calculation is shown below: </p><div class="fragment"><div class="line">System{</div>
+<div class="line">   polymerModel*  string (<span class="stringliteral">&quot;thread&quot;</span> or <span class="stringliteral">&quot;bead&quot;</span>, <span class="stringliteral">&quot;thread&quot;</span> by <span class="keywordflow">default</span>)</div>
 <div class="line">   Mixture{ ... }</div>
 <div class="line">   Interaction{ .... }</div>
 <div class="line">   Domain{ ... }</div>
@@ -71,10 +71,10 @@ Example 1: SCFT parameter file for a periodic structure</h1>
 <div class="line">   Sweep#*{ ... }</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> This description should look familiar, except for the inclusion of a Sweep{...} block, which is an optional element that was omitted from our earlier example. In such a description, the syntax Label{...} is used to indicate a nested subblock, for which the format of the subblock must be described separately somewhere else. The appearance of an asterisk (*) after any block or parameter label is used to indicate that an element is optional (i.e., omittable). Parameters and block labels that are not followed by an asterisk are thus labels for required elements. The appearance of a "#" symbol after a block label indicate that the block is selectable. The above description thus indicates that the Iterator and Sweep blocks are both optional and selectable.</p>
-<p>For simplicity, the above format description only shows allowed elements of the System block that are relevant to SCFT calculations for spatially periodic structure. A complete format description for the System block of the pscf_pc program, which includes additional optional elements, is given <a class="el" href="rpc_System_page.html">here</a>.</p>
+<p>For simplicity, the above format description only shows allowed elements of the System block that are relevant to SCFT calculations for spatially periodic structure. A complete format description for the System block of the pscf_rpc program, which includes additional optional elements, is given <a class="el" href="rp_System_page.html">here</a>.</p>
 <h1 class="doxsection"><a class="anchor" id="user_param_format_example2_sec"></a>
 Example 2: Mixture block</h1>
-<p>Every PSCF parameter file contains a Mixture block, which is always a required element of the System block. Different PSCF programs use a Mixture block with very similar file formats. The format used by both pscf_1d and pscf_pc can be described compactly as follows: </p><div class="fragment"><div class="line">Mixture{</div>
+<p>Every PSCF parameter file contains a Mixture block, which is always a required element of the System block. Different PSCF programs use a Mixture block with very similar file formats. The format used by both pscf_r1d and pscf_rpc can be described compactly as follows: </p><div class="fragment"><div class="line">Mixture{</div>
 <div class="line">  nMonomer   <span class="keywordtype">int</span></div>
 <div class="line">  monomers   Array [ real ]</div>
 <div class="line">  nPolymer   <span class="keywordtype">int</span></div>
@@ -88,7 +88,7 @@ Example 2: Mixture block</h1>
 <div class="line">}</div>
 </div><!-- fragment --><p>In this example, we see that the locations at which values of individual parameters would appear in an actual parameter file have been replaced by labels that specify the type of parameter value, such as int or real. The word Array followed by opening a closing square brackets enclosing a type descriptor is describe an array-value parameter. Note that default values for some optional elements (nSolvent and vMonomer) are given as comments enclosed in parentheses.</p>
 <p>A Mixture block may contain multiple Polymer and Solvent blocks, as indicated by ellipses in the above format description. The number of Polymer and Solvent blocks must match the values of nPolymer and nSolvent, respectively.</p>
-<p>The sort of compact format description shown above is usually supplemented by a table and/or text discussion that contains an explanation of the the meaning of each parameter, as well comments about allowed values for particular parameters, values for dimensions of arrays or matrices, relationships among choices of parameter values, and any other required supplementary information.</p>
+<p>The sort of compact format description shown above is often supplemented by a table and/or text discussion that contains an explanation of the meaning of each parameter, as well comments about allowed values for particular parameters, values for dimensions of arrays or matrices, relationships among choices of parameter values, and any other required supplementary information.</p>
 <h1 class="doxsection"><a class="anchor" id="user_param_format_conventions_sec"></a>
 Element descriptors</h1>
 <p>The following conventions are used to describe different types of element that may appear in the description of a parameter block format:</p>
@@ -98,7 +98,7 @@ Element descriptors</h1>
 <li><p class="startli"><b> Individual parameters </b>: Individual parameters are indicated using the syntax </p><div class="fragment"><div class="line">label   type</div>
 </div><!-- fragment --><p> where "label" denotes the name (or label string) of the parameter and "type" is a string that identifies the data type of the parameter value (e.g., int, real, string, etc.).</p>
 <p class="startli">The main labels used to indicate elementary data types are "int" for integer, "real" for a real (i.e., floating point) number, "bool" for a boolean value, a "string" for a string. Values of boolean variables are given as 0 for false and 1 for true. String parameters may not contain any whitespace.</p>
-<p class="startli">Values for parameters that are represented internally by a enumeration may be indicated by the data type "enumeration", followed by a list of the string representations of all allowed values.</p>
+<p class="startli">Values for parameters that are represented internally by a enumeration are generally indicated by the data type "string", followed by a list of string representations of all allowed values.</p>
 </li>
 <li><b> Vectors </b>: Vector-valued parameters are indicated using the syntax <div class="fragment"><div class="line">label  Vector[ type ]</div>
 </div><!-- fragment --> where "label" is the name of the array, and "type" is a string that identifies the data type of a single element. For example, "mesh Vector[int]" indicates that the "mesh" parameter is a vector in which each element is an integer. Vectors are similar to arrays, but use a single-line parameter file format with no delimiters, rather than the mult-line format used for an array.</li>
@@ -108,15 +108,20 @@ Element descriptors</h1>
 </div><!-- fragment --> where "type" is the data type for a single element.</li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="user_param_format_optional_sec"></a>
-Optional and Selectable Elements</h1>
-<p>Optional elements and selectable blocks are identified using the following conventions:</p>
+Optional elements</h1>
+<p>Optional elements are identified using the following conventions:</p>
 <ul>
 <li><b> Optional elements </b>: Optional parameters and blocks (i.e., elements that may be omitted from the file) are indicated by an asterisk after the subblock or parameter label. The description for an optional individual parameter is thus of the form <div class="fragment"><div class="line">label*   type</div>
-</div><!-- fragment --> where "label" denotes the actual label string. Similarly, the description of an optional block would be of the form <div class="fragment"><div class="line">Label*{ </div>
+</div><!-- fragment --> where "label" denotes the actual label string. Similarly, the description of an optional block would be of the form <div class="fragment"><div class="line">Label*{</div>
 <div class="line">  ....</div>
 <div class="line">}</div>
 </div><!-- fragment --> where "Label" denotes the block label string.</li>
 <li><b> Default values </b>: Default values for optional parameters may be indicated by a comment enclosed in parentheses after the label and data type. The comment is often of the form "( ... by default)", where ... denotes the actual default value. The default value is the value assigned to the associated variable if the parameter is omitted from the parameter file.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="user_param_format_selectable_sec"></a>
+Selectable subblocks</h1>
+<p>Selectable subbblocks (such as the Iterator block) are described using the following rules:</p>
+<ul>
 <li><b> Selectable subblocks </b>: Selectable subblocks are indicated by adding a "#" symbol after the subblock label and before the opening curly bracket, using the syntax <div class="fragment"><div class="line">Label#{ ... }</div>
 </div><!-- fragment --> for a required but selectable subblock. The label for a selectable subblock in a format description should be the generic name for the subblock (e.g., the generic name "Iterator", rather than the name of a class that implements a specific iterator algorithm). This generic name can also be used as a block label to select the default choice for this block.</li>
 <li><b> Selectable optional subblocks </b>: The label for a selectable block that is also optional should contain an asterisk after the # symbol, giving a format description of the form <div class="fragment"><div class="line">Label#*{ ... }</div>

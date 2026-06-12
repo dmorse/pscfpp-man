@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -72,8 +72,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:adb0b4731bfae5fb29f3aa93a8d705f29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
 <tr class="memitem:a62e5b6921c58caabf5f482230b1b4851" id="r_a62e5b6921c58caabf5f482230b1b4851"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62e5b6921c58caabf5f482230b1b4851">SymmetryGroup</a> (const <a class="el" href="classPscf_1_1Prdc_1_1SymmetryGroup.html">SymmetryGroup</a>&lt; Symmetry &gt; &amp;other)</td></tr>
 <tr class="memdesc:a62e5b6921c58caabf5f482230b1b4851"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
-<tr class="memitem:a85ff56854a4f31b871ccb2ec5008601e" id="r_a85ff56854a4f31b871ccb2ec5008601e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85ff56854a4f31b871ccb2ec5008601e">~SymmetryGroup</a> ()</td></tr>
-<tr class="memdesc:a85ff56854a4f31b871ccb2ec5008601e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:aee4c7fb731993a276a1cbf832d500fed" id="r_aee4c7fb731993a276a1cbf832d500fed"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee4c7fb731993a276a1cbf832d500fed">~SymmetryGroup</a> ()=default</td></tr>
+<tr class="memdesc:aee4c7fb731993a276a1cbf832d500fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 <tr class="memitem:a84daea363bc1dc2e3356ac2a7a90b1e7" id="r_a84daea363bc1dc2e3356ac2a7a90b1e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1SymmetryGroup.html">SymmetryGroup</a>&lt; Symmetry &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84daea363bc1dc2e3356ac2a7a90b1e7">operator=</a> (const <a class="el" href="classPscf_1_1Prdc_1_1SymmetryGroup.html">SymmetryGroup</a>&lt; Symmetry &gt; &amp;other)</td></tr>
 <tr class="memdesc:a84daea363bc1dc2e3356ac2a7a90b1e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator.  <br /></td></tr>
 <tr class="memitem:a1ccfe4a5d55faa255461bdd6cd41f942" id="r_a1ccfe4a5d55faa255461bdd6cd41f942"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ccfe4a5d55faa255461bdd6cd41f942">add</a> (Symmetry &amp;symmetry)</td></tr>
@@ -104,7 +104,13 @@ Public Member Functions</h2></td></tr>
 class Pscf::Prdc::SymmetryGroup&lt; Symmetry &gt;</div><p>Class template for a group of elements. </p>
 <p>This is written as a template to allow the creation of groups that use different types of objects to represent symmetry elements. The simplest distinction is between point groups and full space groups.</p>
 <p>The algorithm requires only the template parameter class Symmetry satisfy the following requirements:</p>
-<p>1) A Symmetry must be default constructible. 2) An operator * is provided to represent element multiplication. 3) Operators == and != are provided to represent equality &amp; inequality. 4) A method Symmetry::inverse() must return the inverse of a Symmetry. 5) A static method Symmetry::identity() must return the identity. </p>
+<ul>
+<li>A Symmetry must be default constructible.</li>
+<li>An operator * is provided to represent element multiplication.</li>
+<li>Operators == and != are provided to represent equality &amp; inequality.</li>
+<li>A method Symmetry::inverse() must return the inverse of a Symmetry.</li>
+<li>A static method Symmetry::identity() must return the identity. </li>
+</ul>
 
 <p class="definition">Definition at line <a class="el" href="SymmetryGroup_8h_source.html#l00036">36</a> of file <a class="el" href="SymmetryGroup_8h_source.html">SymmetryGroup.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -130,7 +136,7 @@ template&lt;class Symmetry&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="SymmetryGroup_8tpp_source.html#l00025">25</a> of file <a class="el" href="SymmetryGroup_8tpp_source.html">SymmetryGroup.tpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SymmetryGroup_8tpp_source.html#l00189">operator!=()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00056">operator=()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00165">operator==()</a>, and <a class="el" href="SymmetryGroup_8tpp_source.html#l00035">SymmetryGroup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SymmetryGroup_8tpp_source.html#l00182">operator!=()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00049">operator=()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00158">operator==()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00035">SymmetryGroup()</a>, and <a class="el" href="#aee4c7fb731993a276a1cbf832d500fed">~SymmetryGroup()</a>.</p>
 
 </div>
 </div>
@@ -159,26 +165,34 @@ template&lt;class Symmetry&gt; </div>
 
 </div>
 </div>
-<a id="a85ff56854a4f31b871ccb2ec5008601e" name="a85ff56854a4f31b871ccb2ec5008601e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85ff56854a4f31b871ccb2ec5008601e">&#9670;&#160;</a></span>~SymmetryGroup()</h2>
+<a id="aee4c7fb731993a276a1cbf832d500fed" name="aee4c7fb731993a276a1cbf832d500fed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee4c7fb731993a276a1cbf832d500fed">&#9670;&#160;</a></span>~SymmetryGroup()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Symmetry&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1SymmetryGroup.html">Pscf::Prdc::SymmetryGroup</a>&lt; Symmetry &gt;::~<a class="el" href="classPscf_1_1Prdc_1_1SymmetryGroup.html">SymmetryGroup</a> </td>
+          <td class="memname">virtual <a class="el" href="classPscf_1_1Prdc_1_1SymmetryGroup.html">Pscf::Prdc::SymmetryGroup</a>&lt; Symmetry &gt;::~<a class="el" href="classPscf_1_1Prdc_1_1SymmetryGroup.html">SymmetryGroup</a> </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="SymmetryGroup_8tpp_source.html#l00048">48</a> of file <a class="el" href="SymmetryGroup_8tpp_source.html">SymmetryGroup.tpp</a>.</p>
+<p class="reference">References <a class="el" href="SymmetryGroup_8tpp_source.html#l00025">SymmetryGroup()</a>.</p>
 
 </div>
 </div>
@@ -202,7 +216,7 @@ template&lt;class Symmetry&gt; </div>
 
 <p>Assignment operator. </p>
 
-<p class="definition">Definition at line <a class="el" href="SymmetryGroup_8tpp_source.html#l00056">56</a> of file <a class="el" href="SymmetryGroup_8tpp_source.html">SymmetryGroup.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SymmetryGroup_8tpp_source.html#l00049">49</a> of file <a class="el" href="SymmetryGroup_8tpp_source.html">SymmetryGroup.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="SymmetryGroup_8h_source.html#l00169">identity()</a>, <a class="el" href="SymmetryGroup_8h_source.html#l00161">size()</a>, and <a class="el" href="SymmetryGroup_8tpp_source.html#l00025">SymmetryGroup()</a>.</p>
 
@@ -235,7 +249,7 @@ template&lt;class Symmetry&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if this is a new element, false if already present. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="SymmetryGroup_8tpp_source.html#l00090">90</a> of file <a class="el" href="SymmetryGroup_8tpp_source.html">SymmetryGroup.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SymmetryGroup_8tpp_source.html#l00083">83</a> of file <a class="el" href="SymmetryGroup_8tpp_source.html">SymmetryGroup.tpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SpaceGroup_8h_source.html#l00131">Pscf::Prdc::operator&gt;&gt;()</a>.</p>
 
@@ -260,9 +274,9 @@ template&lt;class Symmetry&gt; </div>
 
 <p>Generate a complete group from the current elements. </p>
 
-<p class="definition">Definition at line <a class="el" href="SymmetryGroup_8tpp_source.html#l00110">110</a> of file <a class="el" href="SymmetryGroup_8tpp_source.html">SymmetryGroup.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SymmetryGroup_8tpp_source.html#l00103">103</a> of file <a class="el" href="SymmetryGroup_8tpp_source.html">SymmetryGroup.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="group__Pscf__Math__Complex__Module.html#gae8c86042da9b6b4392de34155a1c31f1">Pscf::add()</a>, and <a class="el" href="SymmetryGroup_8h_source.html#l00161">size()</a>.</p>
+<p class="reference">References <a class="el" href="cpu_2complex_8h_source.html#l00194">Pscf::add()</a>, and <a class="el" href="SymmetryGroup_8h_source.html#l00161">size()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SpaceGroup_8tpp_source.html#l00162">Pscf::Prdc::readGroup()</a>.</p>
 
@@ -288,7 +302,7 @@ template&lt;class Symmetry&gt; </div>
 <p>Remove all elements except the identity. </p>
 <p>Return group to its state after default construction. </p>
 
-<p class="definition">Definition at line <a class="el" href="SymmetryGroup_8tpp_source.html#l00152">152</a> of file <a class="el" href="SymmetryGroup_8tpp_source.html">SymmetryGroup.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SymmetryGroup_8tpp_source.html#l00145">145</a> of file <a class="el" href="SymmetryGroup_8tpp_source.html">SymmetryGroup.tpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SpaceGroup_8h_source.html#l00131">Pscf::Prdc::operator&gt;&gt;()</a>.</p>
 
@@ -314,9 +328,11 @@ template&lt;class Symmetry&gt; </div>
 <p>Find a symmetry within a group. </p>
 <p>Return a pointer to a symmetry if it is in the group, or a null pointer if it is not. </p>
 
-<p class="definition">Definition at line <a class="el" href="SymmetryGroup_8tpp_source.html#l00074">74</a> of file <a class="el" href="SymmetryGroup_8tpp_source.html">SymmetryGroup.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SymmetryGroup_8tpp_source.html#l00067">67</a> of file <a class="el" href="SymmetryGroup_8tpp_source.html">SymmetryGroup.tpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="make_8py_source.html#l00333">pscfpp.make.MakeMaker::find()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00196">isValid()</a>, and <a class="el" href="SymmetryGroup_8tpp_source.html#l00165">operator==()</a>.</p>
+<p class="reference">References <a class="el" href="SymmetryGroup_8h_source.html#l00161">size()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="make_8py_source.html#l00333">pscfpp.make.MakeMaker::find()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00189">isValid()</a>, and <a class="el" href="SymmetryGroup_8tpp_source.html#l00158">operator==()</a>.</p>
 
 </div>
 </div>
@@ -349,7 +365,7 @@ template&lt;class Symmetry&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="SymmetryGroup_8h_source.html#l00169">169</a> of file <a class="el" href="SymmetryGroup_8h_source.html">SymmetryGroup.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SymmetryGroup_8tpp_source.html#l00056">operator=()</a>, and <a class="el" href="SymmetryGroup_8tpp_source.html#l00035">SymmetryGroup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SymmetryGroup_8tpp_source.html#l00049">operator=()</a>, and <a class="el" href="SymmetryGroup_8tpp_source.html#l00035">SymmetryGroup()</a>.</p>
 
 </div>
 </div>
@@ -382,7 +398,7 @@ template&lt;class Symmetry&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="SymmetryGroup_8h_source.html#l00161">161</a> of file <a class="el" href="SymmetryGroup_8h_source.html">SymmetryGroup.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="FilmFieldGenExtBase_8tpp_source.html#l00122">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::checkCompatibility()</a>, <a class="el" href="FilmFieldGenMaskBase_8tpp_source.html#l00122">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::checkSpaceGroup()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00196">isValid()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00110">makeCompleteGroup()</a>, <a class="el" href="SpaceGroup_8h_source.html#l00110">Pscf::Prdc::operator&lt;&lt;()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00056">operator=()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00165">operator==()</a>, and <a class="el" href="SymmetryGroup_8tpp_source.html#l00035">SymmetryGroup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FilmFieldGenExtBase_8tpp_source.html#l00122">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::checkCompatibility()</a>, <a class="el" href="FilmFieldGenMaskBase_8tpp_source.html#l00122">Pscf::Prdc::FilmFieldGenMaskBase&lt; D &gt;::checkSpaceGroup()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00067">find()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00189">isValid()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00103">makeCompleteGroup()</a>, <a class="el" href="SpaceGroup_8h_source.html#l00110">Pscf::Prdc::operator&lt;&lt;()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00049">operator=()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00158">operator==()</a>, and <a class="el" href="SymmetryGroup_8tpp_source.html#l00035">SymmetryGroup()</a>.</p>
 
 </div>
 </div>
@@ -486,9 +502,9 @@ template&lt;class Symmetry&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SymmetryGroup_8tpp_source.html#l00164">164</a> of file <a class="el" href="SymmetryGroup_8tpp_source.html">SymmetryGroup.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SymmetryGroup_8tpp_source.html#l00157">157</a> of file <a class="el" href="SymmetryGroup_8tpp_source.html">SymmetryGroup.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SymmetryGroup_8tpp_source.html#l00074">find()</a>, <a class="el" href="SymmetryGroup_8h_source.html#l00161">size()</a>, and <a class="el" href="SymmetryGroup_8tpp_source.html#l00025">SymmetryGroup()</a>.</p>
+<p class="reference">References <a class="el" href="SymmetryGroup_8tpp_source.html#l00067">find()</a>, <a class="el" href="SymmetryGroup_8h_source.html#l00161">size()</a>, and <a class="el" href="SymmetryGroup_8tpp_source.html#l00025">SymmetryGroup()</a>.</p>
 
 </div>
 </div>
@@ -518,7 +534,7 @@ template&lt;class Symmetry&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SymmetryGroup_8tpp_source.html#l00188">188</a> of file <a class="el" href="SymmetryGroup_8tpp_source.html">SymmetryGroup.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SymmetryGroup_8tpp_source.html#l00181">181</a> of file <a class="el" href="SymmetryGroup_8tpp_source.html">SymmetryGroup.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="SymmetryGroup_8tpp_source.html#l00025">SymmetryGroup()</a>.</p>
 
@@ -543,9 +559,9 @@ template&lt;class Symmetry&gt; </div>
 
 <p>Return true if valid complete group, or throw an <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="SymmetryGroup_8tpp_source.html#l00196">196</a> of file <a class="el" href="SymmetryGroup_8tpp_source.html">SymmetryGroup.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SymmetryGroup_8tpp_source.html#l00189">189</a> of file <a class="el" href="SymmetryGroup_8tpp_source.html">SymmetryGroup.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SymmetryGroup_8tpp_source.html#l00074">find()</a>, <a class="el" href="SymmetryGroup_8h_source.html#l00161">size()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="SymmetryGroup_8tpp_source.html#l00067">find()</a>, <a class="el" href="SymmetryGroup_8h_source.html#l00161">size()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
 </div>
 </div>

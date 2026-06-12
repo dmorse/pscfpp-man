@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -67,18 +67,18 @@ Example</h1>
 
 # PSCF-specific static libraries needed in src/rpc (the order matters)
 # Variables $(rpc_LIB) etc. are defined in namespace config.mk files
-PSCF_LIBS= $(rpc_LIB) $(prdc_LIB) $(pscf_LIB) $(util_LIB) 
+PSCF_LIBS= $(rpc_LIB) $(prdc_LIB) $(pscf_LIB) $(util_LIB)
 
-# All libraries needed by main program pscf_pc (including external libs)
+# All libraries needed by main program pscf_rpc (including external libs)
 LIBS=$(PSCF_LIBS)
 
 # Add header include and library paths to Gnu scientific library
 INCLUDES+=$(GSL_INC)
-LIBS+=$(GSL_LIB) 
+LIBS+=$(GSL_LIB)
 
 # Add header and library paths to FFTW Fast Fourier transform library
 INCLUDES+=$(FFTW_INC)
-LIBS+=$(FFTW_LIB) 
+LIBS+=$(FFTW_LIB)
 
 # Arguments for MAKEDEP
 MAKEDEP_ARGS=$(CPPFLAGS) $(INCLUDES)
@@ -100,11 +100,11 @@ $(BLD_DIR)/%.o: $(SRC_DIR)/%.cpp
 $(BLD_DIR)/%Test: $(BLD_DIR)/%Test.o $(PSCF_LIBS)
    $(CXX) $(LDFLAGS) -o $@ $&lt; $(LIBS)
 
-# Note: In the linking rule for tests, we include the list $(PSCF_LIBS) 
-# of PSCF-specific libraries as prerequisites but link to the list 
+# Note: In the linking rule for tests, we include the list $(PSCF_LIBS)
+# of PSCF-specific libraries as prerequisites but link to the list
 # $(LIBS) of libraries that includes external libraries
 
-# Note: There are no *.cu CUDA source files in src/rpc, and so no rule to 
+# Note: There are no *.cu CUDA source files in src/rpc, and so no rule to
 # compile them is defined in this directory.
 </pre><p> This file is divded into two main sections. The first section defines several variables that are used in pattern rules, and the second defines several pattern rules.</p>
 <h1 class="doxsection"><a class="anchor" id="developer_build_pattern_var_sec"></a>
@@ -129,8 +129,7 @@ Makefile variable definitions</h1>
 <h1 class="doxsection"><a class="anchor" id="developer_build_pattern_rules_sec"></a>
 Pattern Rules</h1>
 <p>Each patterns.mk file defines pattern rules for creating *.o object files by compiling *.cpp and/or *.cu source files, and for creating executable files that run unit tests. Analogous rules in different patterns.mk files have very similar structure.</p>
-<p>We first consider pattern rules for creating *.o object file targets. The patterns.mk file in each namespace-level directory that contains C++ source files with file name suffix .cpp contains a rule for compiling such *.cpp file to create a *.o object file. In directories that contain CUDA C++ source files with file name suffix .cu, the patterns.mk file will contain a pattern rule for compiling these files, which uses the NVIDIA CUDA compiler rather than a C++ compiler. Both rules may exist in patterns.mk directories that contain both types of source file. <br  />
- Both types of rule creating an object file with file name suffix *.o in a subdirectory of the build directory, $(BLD_DIR), by compiling a .cpp or *.cu source file with the same base name in the corresponding subdirectory of the source directory, $(SRC_DIR).</p>
+<p>We first consider pattern rules for creating *.o object file targets. The patterns.mk file in each namespace-level directory that contains C++ source files with file name suffix .cpp contains a rule for compiling such *.cpp file to create a *.o object file. In directories that contain CUDA C++ source files with file name suffix .cu, the patterns.mk file will contain a pattern rule for compiling these files, which uses the NVIDIA CUDA compiler rather than a C++ compiler. Both rules may exist in patterns.mk directories that contain both types of source file. Both types of rule creating an object file with file name suffix *.o in a subdirectory of the build directory, $(BLD_DIR), by compiling a .cpp or *.cu source file with the same base name in the corresponding subdirectory of the source directory, $(SRC_DIR).</p>
 <h2 class="doxsection"><a class="anchor" id="developer_build_pattern_cpp_sub"></a>
 Rule: Compiling C++ source files</h2>
 <p>A pattern rule for compiling standard C++ source files always looks something like this: </p><pre class="fragment">$(BLD_DIR)/%.o: $(SRC_DIR)/%.cpp
@@ -139,8 +138,7 @@ Rule: Compiling C++ source files</h2>
     $(MAKEDEP) $(MAKEDEP_CMD) $(MAKEDEP_ARGS) $&lt;
 </pre><p> Pattern rules for compiling CUDA files are closely analogous, and will be discussed separately below.</p>
 <p>In this pattern rule, the symbol % is a wildcard that represents a string that appears in the path for the target file that may also appear in one or more pre-requisites. The rule shown above thus describes how to create a target object file in the build directory with a path of the form $(BLD_DIR)%.o by compiling a corresponding source file in the source directory with a path of the form $(SRC_DIR)/%.cpp, in which the symbol % represents a string that appears in both paths. The shared part of these paths may include one or more directory separator symbols and the name or names of subdirectories of the src directory, as well as the base file name. The PSCF bld directory is required to have the same internal directory structure as the src directory in order to allow this pattern rule to work correctly for out-of-source builds,</p>
-<p>The recipe of the rule shown above contains three lines with different purposes. The first defines a sequence of shell command that checks if the directory in which the target should be installed exists, and attempts to create it if that directory does not yet exist. This part of the recipe is a convenience, and is not an essential part of the rule. The second line of the recipe is the heart of the matter: This line is a shell command that invokes the compiler command, given by the makefile variable value $(CXX), in order to compile the source file and create the object file target. The third line of the recipe calls a script, whose name is given by the variable value $(MAKEDEP), that creates a corresponding dependency file with file name suffix .d. <br  />
-</p>
+<p>The recipe of the rule shown above contains three lines with different purposes. The first defines a sequence of shell command that checks if the directory in which the target should be installed exists, and attempts to create it if that directory does not yet exist. This part of the recipe is a convenience, and is not an essential part of the rule. The second line of the recipe is the heart of the matter: This line is a shell command that invokes the compiler command, given by the makefile variable value $(CXX), in order to compile the source file and create the object file target. The third line of the recipe calls a script, whose name is given by the variable value $(MAKEDEP), that creates a corresponding dependency file with file name suffix .d.</p>
 <p>The two essential actions taken by this pattern rule are thus to compile the source file to create an *.o object file, and to create a *.d dependency file as a side-effect of compilation. These two actions are discussed separately below.</p>
 <p><b> Source file compilation </b>:</p>
 <p>The line of the recipe that actually compiles the source file in this example is given by </p><pre class="fragment">    $(CXX) $(CPPFLAGS) $(INCLUDES) $(CXXFLAGS) -c -o $@ $&lt;

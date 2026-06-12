@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -77,24 +77,27 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>   <span class="comment">// Default Constructor</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>   <a class="code hl_function" href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldDftComparison.html#abb40011493cad54d23f594a98b6a19b2">RFieldDftComparison&lt;D&gt;::RFieldDftComparison</a>()</div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldDftComparison.html#abb40011493cad54d23f594a98b6a19b2">   21</a></span>   <a class="code hl_function" href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldDftComparison.html#abb40011493cad54d23f594a98b6a19b2">RFieldDftComparison&lt;D&gt;::RFieldDftComparison</a>()</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    : maxDiff_(0.0),</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      rmsDiff_(0.0)</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>   {};</div>
+</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>   <span class="comment">// Comparator for individual fields.</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>   <span class="keywordtype">double</span> RFieldDftComparison&lt;D&gt;::compare(RFieldDft&lt;D&gt; <span class="keyword">const</span>&amp; a, </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                                          RFieldDft&lt;D&gt; <span class="keyword">const</span>&amp; b)</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldDftComparison.html#aa037cda89a55432033e123aa641f5e34">   28</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldDftComparison.html#aa037cda89a55432033e123aa641f5e34">RFieldDftComparison&lt;D&gt;::compare</a>(<a class="code hl_class" href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldDft.html">RFieldDft&lt;D&gt;</a> <span class="keyword">const</span>&amp; a, </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                                          <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldDft.html">RFieldDft&lt;D&gt;</a> <span class="keyword">const</span>&amp; b)</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>   {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(a.capacity() &gt; 0);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(a.capacity() == b.capacity());</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      <span class="keywordtype">int</span> capacity = a.capacity();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(a.<a class="code hl_function" href="classPscf_1_1DeviceArray.html#aac902e929dc8df89b772d712aa7b7bca">capacity</a>() &gt; 0);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(a.<a class="code hl_function" href="classPscf_1_1DeviceArray.html#aac902e929dc8df89b772d712aa7b7bca">capacity</a>() == b.<a class="code hl_function" href="classPscf_1_1DeviceArray.html#aac902e929dc8df89b772d712aa7b7bca">capacity</a>());</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      <span class="keywordtype">int</span> capacity = a.<a class="code hl_function" href="classPscf_1_1DeviceArray.html#aac902e929dc8df89b772d712aa7b7bca">capacity</a>();</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      HostDArray&lt;cudaComplex&gt; ha;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      HostDArray&lt;cudaComplex&gt; hb;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      ha.allocate(capacity);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      hb.allocate(capacity);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <a class="code hl_class" href="classPscf_1_1HostDArray.html">HostDArray&lt;cudaComplex&gt;</a> ha;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <a class="code hl_class" href="classPscf_1_1HostDArray.html">HostDArray&lt;cudaComplex&gt;</a> hb;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      ha.<a class="code hl_function" href="classUtil_1_1DArray.html#a1ffe3de1a78d48c67fc0186dbb0c6f36">allocate</a>(capacity);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      hb.<a class="code hl_function" href="classUtil_1_1DArray.html#a1ffe3de1a78d48c67fc0186dbb0c6f36">allocate</a>(capacity);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      ha = a;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      hb = b;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
@@ -115,11 +118,13 @@ $(function() {
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      rmsDiff_ = sqrt(rmsDiff_);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <span class="keywordflow">return</span> maxDiff_;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>   }</div>
+</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>   <span class="comment">// Comparator for arrays of fields</span></div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>   <span class="keywordtype">double</span> RFieldDftComparison&lt;D&gt;::compare(<a class="code hl_class" href="classUtil_1_1DArray.html">DArray</a>&lt; RFieldDft&lt;D&gt; &gt; <span class="keyword">const</span> &amp; a,</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                                          <a class="code hl_class" href="classUtil_1_1DArray.html">DArray</a>&lt; RFieldDft&lt;D&gt; &gt; <span class="keyword">const</span> &amp; b)</div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldDftComparison.html#a020627f9f652ca7c56c7baf200c8f645">   62</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldDftComparison.html#aa037cda89a55432033e123aa641f5e34">RFieldDftComparison&lt;D&gt;::compare</a>(<a class="code hl_class" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldDft.html">RFieldDft&lt;D&gt;</a> &gt; <span class="keyword">const</span> &amp; a,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                                          <a class="code hl_class" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="code hl_class" href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldDft.html">RFieldDft&lt;D&gt;</a> &gt; <span class="keyword">const</span> &amp; b)</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>   {</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(a.capacity() &gt; 0);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(a.capacity() == b.capacity());</div>
@@ -158,17 +163,22 @@ $(function() {
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      rmsDiff_ = sqrt(rmsDiff_);</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      <span class="keywordflow">return</span> maxDiff_;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>   }</div>
+</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassPscf_1_1Prdc_1_1Cuda_1_1RFieldDftComparison_html_abb40011493cad54d23f594a98b6a19b2"><div class="ttname"><a href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldDftComparison.html#abb40011493cad54d23f594a98b6a19b2">Pscf::Prdc::Cuda::RFieldDftComparison::RFieldDftComparison</a></div><div class="ttdeci">RFieldDftComparison()</div><div class="ttdoc">Default constructor.</div></div>
+<div class="ttc" id="aclassPscf_1_1DeviceArray_html_aac902e929dc8df89b772d712aa7b7bca"><div class="ttname"><a href="classPscf_1_1DeviceArray.html#aac902e929dc8df89b772d712aa7b7bca">Pscf::DeviceArray::capacity</a></div><div class="ttdeci">int capacity() const</div><div class="ttdoc">Return array capacity.</div><div class="ttdef"><b>Definition</b> <a href="DeviceArray_8h_source.html#l00308">DeviceArray.h:308</a></div></div>
+<div class="ttc" id="aclassPscf_1_1HostDArray_html"><div class="ttname"><a href="classPscf_1_1HostDArray.html">Pscf::HostDArray</a></div><div class="ttdoc">Template for dynamic array stored in host CPU memory.</div><div class="ttdef"><b>Definition</b> <a href="HostDArray_8h_source.html#l00040">HostDArray.h:41</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Prdc_1_1Cuda_1_1RFieldDftComparison_html_aa037cda89a55432033e123aa641f5e34"><div class="ttname"><a href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldDftComparison.html#aa037cda89a55432033e123aa641f5e34">Pscf::Prdc::Cuda::RFieldDftComparison::compare</a></div><div class="ttdeci">double compare(RFieldDft&lt; D &gt; const &amp;a, RFieldDft&lt; D &gt; const &amp;b)</div><div class="ttdoc">Compare individual fields.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">cuda/RFieldDftComparison.tpp:28</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Prdc_1_1Cuda_1_1RFieldDftComparison_html_abb40011493cad54d23f594a98b6a19b2"><div class="ttname"><a href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldDftComparison.html#abb40011493cad54d23f594a98b6a19b2">Pscf::Prdc::Cuda::RFieldDftComparison::RFieldDftComparison</a></div><div class="ttdeci">RFieldDftComparison()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00021">cuda/RFieldDftComparison.tpp:21</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Prdc_1_1Cuda_1_1RFieldDft_html"><div class="ttname"><a href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldDft.html">Pscf::Prdc::Cuda::RFieldDft</a></div><div class="ttdoc">Discrete Fourier Transform (DFT) of a real field, allocated on a GPU.</div><div class="ttdef"><b>Definition</b> <a href="cuda_2RFieldDft_8h_source.html#l00033">cuda/RFieldDft.h:34</a></div></div>
 <div class="ttc" id="aclassUtil_1_1DArray_html"><div class="ttname"><a href="classUtil_1_1DArray.html">Util::DArray</a></div><div class="ttdoc">Dynamically allocatable contiguous array template.</div><div class="ttdef"><b>Definition</b> <a href="DArray_8h_source.html#l00031">DArray.h:32</a></div></div>
-<div class="ttc" id="aclassUtil_1_1DArray_html_a1ffe3de1a78d48c67fc0186dbb0c6f36"><div class="ttname"><a href="classUtil_1_1DArray.html#a1ffe3de1a78d48c67fc0186dbb0c6f36">Util::DArray::allocate</a></div><div class="ttdeci">void allocate(int capacity)</div><div class="ttdoc">Allocate the underlying C array.</div><div class="ttdef"><b>Definition</b> <a href="DArray_8h_source.html#l00199">DArray.h:199</a></div></div>
+<div class="ttc" id="aclassUtil_1_1DArray_html_a1ffe3de1a78d48c67fc0186dbb0c6f36"><div class="ttname"><a href="classUtil_1_1DArray.html#a1ffe3de1a78d48c67fc0186dbb0c6f36">Util::DArray::allocate</a></div><div class="ttdeci">void allocate(int capacity)</div><div class="ttdoc">Allocate the underlying C array.</div><div class="ttdef"><b>Definition</b> <a href="DArray_8h_source.html#l00269">DArray.h:269</a></div></div>
 <div class="ttc" id="aglobal_8h_html_aaf3bc07accafc94019d126e4cffa81e7"><div class="ttname"><a href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a></div><div class="ttdeci">#define UTIL_CHECK(condition)</div><div class="ttdoc">Assertion macro suitable for serial or parallel production code.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00068">global.h:68</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a></div><div class="ttdoc">Fields, FFTs, and utilities for periodic boundary conditions (CUDA)</div><div class="ttdef"><b>Definition</b> <a href="CField_8cu_source.html#l00012">CField.cu:12</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_html"><div class="ttname"><a href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div><div class="ttdoc">Periodic fields and crystallography.</div><div class="ttdef"><b>Definition</b> <a href="CField_8cpp_source.html#l00011">CField.cpp:11</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a></div><div class="ttdoc">Fields, FFTs, and utilities for periodic boundary conditions (CUDA).</div><div class="ttdef"><b>Definition</b> <a href="CField_8cu_source.html#l00012">CField.cu:12</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_html"><div class="ttname"><a href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div><div class="ttdoc">Periodic fields and crystallography.</div><div class="ttdef"><b>Definition</b> <a href="complex_8cpp_source.html#l00011">complex.cpp:11</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

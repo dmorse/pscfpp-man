@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -49,7 +49,7 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_3672192d8e7f6b6bab87e896e99ed11f.html">pscf</a></li><li class="navelem"><a href="dir_259e4198ed3c09eda8f0c3e2a41e5fa3.html">chem</a></li>  </ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_3672192d8e7f6b6bab87e896e99ed11f.html">pscf</a></li><li class="navelem"><a href="dir_4c3f87532c2353cab05d33ae1b2bd826.html">correlation</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -57,8 +57,8 @@ $(function() {
   <div class="headertitle"><div class="title">Debye.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef PSCF_DEBYE_H</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define PSCF_DEBYE_H</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef PSCF_CORRELATION_DEBYE_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define PSCF_CORRELATION_DEBYE_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">* PSCF - Polymer Self-Consistent Field</span></div>
@@ -68,25 +68,24 @@ $(function() {
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Debye.html">Debye</a> {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>   <span class="keywordtype">double</span> <a class="code hl_function" href="group__Pscf__Chem__Module.html#ga6ed490f195b2afcf04d1879b6ffc4514">dt</a>(<span class="keywordtype">double</span> ksq, <span class="keywordtype">double</span> length, <span class="keywordtype">double</span> kuhn);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>   <span class="keywordtype">double</span> <a class="code hl_function" href="group__Pscf__Chem__Module.html#gabe772dd05f45d59d7f11a82a820d95f5">db</a>(<span class="keywordtype">double</span> ksq, <span class="keywordtype">double</span> nBead, <span class="keywordtype">double</span> kuhn);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>   <span class="keywordtype">double</span> <a class="code hl_function" href="group__Pscf__Chem__Module.html#ga7340773117d06d425ea88f1f5f892371">et</a>(<span class="keywordtype">double</span> ksq, <span class="keywordtype">double</span> length, <span class="keywordtype">double</span> kuhn);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>   <span class="keywordtype">double</span> <a class="code hl_function" href="group__Pscf__Chem__Module.html#gaa540b365907d7a59d6dca7b5e4a55f23">eb</a>(<span class="keywordtype">double</span> ksq, <span class="keywordtype">double</span> nBead, <span class="keywordtype">double</span> kuhn);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>} <span class="comment">// namespace Debye</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>} <span class="comment">// namespace Pscf</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="agroup__Pscf__Chem__Module_html_ga6ed490f195b2afcf04d1879b6ffc4514"><div class="ttname"><a href="group__Pscf__Chem__Module.html#ga6ed490f195b2afcf04d1879b6ffc4514">Pscf::Debye::dt</a></div><div class="ttdeci">double dt(double ksq, double length, double kuhn)</div><div class="ttdoc">Compute and return intrablock correlation function (thread model)</div><div class="ttdef"><b>Definition</b> <a href="Debye_8cpp_source.html#l00017">Debye.cpp:17</a></div></div>
-<div class="ttc" id="agroup__Pscf__Chem__Module_html_ga7340773117d06d425ea88f1f5f892371"><div class="ttname"><a href="group__Pscf__Chem__Module.html#ga7340773117d06d425ea88f1f5f892371">Pscf::Debye::et</a></div><div class="ttdeci">double et(double ksq, double length, double kuhn)</div><div class="ttdoc">Compute and return one-sided factor for one block (thread model).</div><div class="ttdef"><b>Definition</b> <a href="Debye_8cpp_source.html#l00053">Debye.cpp:53</a></div></div>
-<div class="ttc" id="agroup__Pscf__Chem__Module_html_gaa540b365907d7a59d6dca7b5e4a55f23"><div class="ttname"><a href="group__Pscf__Chem__Module.html#gaa540b365907d7a59d6dca7b5e4a55f23">Pscf::Debye::eb</a></div><div class="ttdeci">double eb(double ksq, double nBead, double kuhn)</div><div class="ttdoc">Compute and return one-sided factor for one block (thread model).</div><div class="ttdef"><b>Definition</b> <a href="Debye_8cpp_source.html#l00069">Debye.cpp:69</a></div></div>
-<div class="ttc" id="agroup__Pscf__Chem__Module_html_gabe772dd05f45d59d7f11a82a820d95f5"><div class="ttname"><a href="group__Pscf__Chem__Module.html#gabe772dd05f45d59d7f11a82a820d95f5">Pscf::Debye::db</a></div><div class="ttdeci">double db(double ksq, double nBead, double kuhn)</div><div class="ttdoc">Compute and return an intrablock correlation function (bead model)</div><div class="ttdef"><b>Definition</b> <a href="Debye_8cpp_source.html#l00033">Debye.cpp:33</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Debye_html"><div class="ttname"><a href="namespacePscf_1_1Debye.html">Pscf::Debye</a></div><div class="ttdoc">Functions used to compute intramolecular correlation functions.</div><div class="ttdef"><b>Definition</b> <a href="Debye_8cpp_source.html#l00012">Debye.cpp:12</a></div></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Correlation.html">Correlation</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>   <span class="keywordtype">double</span> <a class="code hl_function" href="group__Pscf__Correlation__Module.html#ga17d719e6b12e1f1b6282174e0fb5582d">dt</a>(<span class="keywordtype">double</span> ksq, <span class="keywordtype">double</span> length, <span class="keywordtype">double</span> kuhn);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>   <span class="keywordtype">double</span> <a class="code hl_function" href="group__Pscf__Correlation__Module.html#gaa74523c434d7d0b6bb7f614e73d3484f">db</a>(<span class="keywordtype">double</span> ksq, <span class="keywordtype">double</span> nBead, <span class="keywordtype">double</span> kuhn);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>   <span class="keywordtype">double</span> <a class="code hl_function" href="group__Pscf__Correlation__Module.html#ga3e795e9aa237be1d574fa130b8c748a0">et</a>(<span class="keywordtype">double</span> ksq, <span class="keywordtype">double</span> length, <span class="keywordtype">double</span> kuhn);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>   <span class="keywordtype">double</span> <a class="code hl_function" href="group__Pscf__Correlation__Module.html#ga677c1960634fdcd23c0a1a60f9394349">eb</a>(<span class="keywordtype">double</span> ksq, <span class="keywordtype">double</span> nBead, <span class="keywordtype">double</span> kuhn);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>} <span class="comment">// namespace Correlation</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>} <span class="comment">// namespace Pscf</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__Pscf__Correlation__Module_html_ga17d719e6b12e1f1b6282174e0fb5582d"><div class="ttname"><a href="group__Pscf__Correlation__Module.html#ga17d719e6b12e1f1b6282174e0fb5582d">Pscf::Correlation::dt</a></div><div class="ttdeci">double dt(double ksq, double length, double kuhn)</div><div class="ttdoc">Compute and return intrablock correlation function (thread model)</div><div class="ttdef"><b>Definition</b> <a href="Debye_8cpp_source.html#l00017">Debye.cpp:17</a></div></div>
+<div class="ttc" id="agroup__Pscf__Correlation__Module_html_ga3e795e9aa237be1d574fa130b8c748a0"><div class="ttname"><a href="group__Pscf__Correlation__Module.html#ga3e795e9aa237be1d574fa130b8c748a0">Pscf::Correlation::et</a></div><div class="ttdeci">double et(double ksq, double length, double kuhn)</div><div class="ttdoc">Compute and return one-sided factor for one block (thread model).</div><div class="ttdef"><b>Definition</b> <a href="Debye_8cpp_source.html#l00053">Debye.cpp:53</a></div></div>
+<div class="ttc" id="agroup__Pscf__Correlation__Module_html_ga677c1960634fdcd23c0a1a60f9394349"><div class="ttname"><a href="group__Pscf__Correlation__Module.html#ga677c1960634fdcd23c0a1a60f9394349">Pscf::Correlation::eb</a></div><div class="ttdeci">double eb(double ksq, double nBead, double kuhn)</div><div class="ttdoc">Compute and return one-sided factor for one block (bead model).</div><div class="ttdef"><b>Definition</b> <a href="Debye_8cpp_source.html#l00069">Debye.cpp:69</a></div></div>
+<div class="ttc" id="agroup__Pscf__Correlation__Module_html_gaa74523c434d7d0b6bb7f614e73d3484f"><div class="ttname"><a href="group__Pscf__Correlation__Module.html#gaa74523c434d7d0b6bb7f614e73d3484f">Pscf::Correlation::db</a></div><div class="ttdeci">double db(double ksq, double nBead, double kuhn)</div><div class="ttdoc">Compute and return an intrablock correlation function (bead model)</div><div class="ttdef"><b>Definition</b> <a href="Debye_8cpp_source.html#l00033">Debye.cpp:33</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Correlation_html"><div class="ttname"><a href="namespacePscf_1_1Correlation.html">Pscf::Correlation</a></div><div class="ttdoc">Intramolecular correlations in homogeneous systems.</div><div class="ttdef"><b>Definition</b> <a href="correlation_8mod_source.html#l00006">correlation.mod:6</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

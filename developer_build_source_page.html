@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -67,8 +67,7 @@ Source and object file lists</h1>
 </pre><p> Here, the directory path pscf/chem defined relative to the src directory has been converted into the variable name pscf_chem_ . The value of this variable is a list of paths to all compilable source files that are located in the directory tree rooted at the directory that contains this sources.mk file. Each path in this list must be given as a relative path, defined relative to the src directory.</p>
 <p>Every sources.mk file also defines a second makefile variable with a name of the form [directory]_OBJS that contains a list of paths to corresponding *.o object file targets. For example, the file src/pscf/chem/sources.mk defines a variable named </p><pre class="fragment">pscf_chem_OBJS
 </pre><p> The value of this variable is a list of paths to all of the object file targets that are created by compiling source files listed in the list corresponding source file list. Every path in this list must be an absolute path, defined relative to the root of the entire file system.</p>
-<p>In what follows, we refer to the [directory]_ variable in each such file as a source file list, and the [directory]_OBJS variable as an object file list. The source file list must be maintained by developers. <br  />
- The object file list is created automatically by applying some simple text manipulation operations to the source file list, as shown below.</p>
+<p>In what follows, we refer to the [directory]_ variable in each such file as a source file list, and the [directory]_OBJS variable as an object file list. The source file list must be maintained by developers. The object file list is created automatically by applying some simple text manipulation operations to the source file list, as shown below.</p>
 <p>In the remainder of this page, we discuss examples of sources.mk source list files located at three different levels of the src directory tree:</p>
 <ul>
 <li>Directories that are not namespace-level directories, and have no enclosed subdirectories</li>
@@ -99,8 +98,7 @@ pscf_chem_OBJS=\
 <p>The object file list variable pscf_chem_OBJS_ is constructed in the last two lines of this example. The value that is assigned to pscf_chem_OBJS is a corresponding list of absolute paths for object files, with filename suffix *.o. This list is constructed here by applying two makefile text manipulation functions to the value of the source file list pscf_chem_. First, the ":" operator is used in the expression $(pscf_chem_:.cpp=.o) to replace the .cpp suffix with .o in each of the relative paths in $(pscf_chem_). The built in "addprefix" function is then used to add the value / as a common prefix to every name in the list. Here,  is the absolute path to the build directory, which is defined in the relevant config.mk configuration file. These manipulations yield a list of absolute paths to all of the *.o object files that should be created by compiling the files in the source file list.</p>
 <h1 class="doxsection"><a class="anchor" id="developer_build_list_example2_sec"></a>
 Directories with subdirectories (not namespace-level)</h1>
-<p>We now consider sources.mk file for a subdirectory of src/ that is not a namespace-level directory, but that contains one or more enclosed <br  />
- subdirectories. In this case, the value of the source file list variable [directory]_ must be a list of paths for all of the source files in the directory tree rooted at the directory that contains the source.mk file. This list is created by including source.mk files in enclosed subdirectories and concatenating values of the source file list variables that are defined in those subdirectories.</p>
+<p>We now consider sources.mk file for a subdirectory of src/ that is not a namespace-level directory, but that contains one or more enclosed subdirectories. In this case, the value of the source file list variable [directory]_ must be a list of paths for all of the source files in the directory tree rooted at the directory that contains the source.mk file. This list is created by including source.mk files in enclosed subdirectories and concatenating values of the source file list variables that are defined in those subdirectories.</p>
 <p><b> Example </b>: Here is the content of the file src/rpc/fts//sources.mk in a directory src/rpc/fts that contains several subirectories, but that is not a namespace-level directory:</p>
 <pre class="fragment"># Include source list files from subdirectories
 include $(SRC_DIR)/rpc/fts/simulator/sources.mk

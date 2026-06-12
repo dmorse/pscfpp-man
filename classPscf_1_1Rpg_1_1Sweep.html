@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -56,14 +56,12 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classPscf_1_1Rpg_1_1Sweep-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Pscf::Rpg::Sweep&lt; D &gt; Class Template Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+  <div class="headertitle"><div class="title">Pscf::Rpg::Sweep&lt; D &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Rpg__Module.html">Pscf::Rpg - Real Periodic Fields (GPU)</a> &raquo; <a class="el" href="group__Rpg__Scft__Module.html">Self-Consistent Field Theory (SCFT)</a> &raquo; <a class="el" href="group__Rpg__Scft__Sweep__Module.html">Sweep</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Solve a sequence of problems along a line in parameter space.  
+<p>Solve a sequence of SCFT problems along a line in parameter space.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html">Sweep.h</a>&gt;</code></p>
@@ -73,34 +71,35 @@ Inheritance diagram for Pscf::Rpg::Sweep&lt; D &gt;:</div>
  <div class="center">
   <img src="classPscf_1_1Rpg_1_1Sweep.png" usemap="#Pscf_3A_3ARpg_3A_3ASweep_3C_20D_20_3E_map" alt=""/>
   <map id="Pscf_3A_3ARpg_3A_3ASweep_3C_20D_20_3E_map" name="Pscf_3A_3ARpg_3A_3ASweep_3C_20D_20_3E_map">
-<area href="classPscf_1_1SweepTmpl.html" alt="Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;" shape="rect" coords="130,168,380,192"/>
-<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="130,112,380,136"/>
-<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="130,56,380,80"/>
-<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="0,0,250,24"/>
-<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="260,0,510,24"/>
-<area href="classPscf_1_1Rpg_1_1LinearSweep.html" title="Base class for a sweep in parameter space where parameters change linearly with the sweep variable." alt="Pscf::Rpg::LinearSweep&lt; D &gt;" shape="rect" coords="130,280,380,304"/>
+<area href="classPscf_1_1Rp_1_1Sweep.html" alt="Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;" shape="rect" coords="150,224,440,248"/>
+<area href="classPscf_1_1SweepTmpl.html" title="Solve a sequence of problems along a path through parameter space." alt="Pscf::SweepTmpl&lt; State &gt;" shape="rect" coords="150,168,440,192"/>
+<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="150,112,440,136"/>
+<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="150,56,440,80"/>
+<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="0,0,290,24"/>
+<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="300,0,590,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa60b6403a4fd008e71e7eeaf85fc0fe8" id="r_aa60b6403a4fd008e71e7eeaf85fc0fe8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa60b6403a4fd008e71e7eeaf85fc0fe8">Sweep</a> ()</td></tr>
-<tr class="memdesc:aa60b6403a4fd008e71e7eeaf85fc0fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor.  <br /></td></tr>
-<tr class="memitem:a1c5144c5a813d72606b4b602b40b565c" id="r_a1c5144c5a813d72606b4b602b40b565c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c5144c5a813d72606b4b602b40b565c">Sweep</a> (<a class="el" href="classPscf_1_1Rpg_1_1System.html">System</a>&lt; D &gt; &amp;<a class="el" href="#acf76c4700bf76deeb324714572a0b39a">system</a>)</td></tr>
+<tr class="memdesc:aa60b6403a4fd008e71e7eeaf85fc0fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
+<tr class="memitem:a1c5144c5a813d72606b4b602b40b565c" id="r_a1c5144c5a813d72606b4b602b40b565c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c5144c5a813d72606b4b602b40b565c">Sweep</a> (<a class="el" href="classPscf_1_1Rpg_1_1System.html">System</a>&lt; D &gt; &amp;<a class="el" href="classPscf_1_1Rp_1_1Sweep.html#acb958ba3224df85f7cf4e6151eb94cb0">system</a>)</td></tr>
 <tr class="memdesc:a1c5144c5a813d72606b4b602b40b565c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor, creates assocation with parent system.  <br /></td></tr>
-<tr class="memitem:ae3c042183821c15309396d8145e0df29" id="r_ae3c042183821c15309396d8145e0df29"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3c042183821c15309396d8145e0df29">~Sweep</a> ()</td></tr>
-<tr class="memdesc:ae3c042183821c15309396d8145e0df29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:ad0d5897bcb3ba422420388a0fa5b518e" id="r_ad0d5897bcb3ba422420388a0fa5b518e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0d5897bcb3ba422420388a0fa5b518e">setSystem</a> (<a class="el" href="classPscf_1_1Rpg_1_1System.html">System</a>&lt; D &gt; &amp;<a class="el" href="#acf76c4700bf76deeb324714572a0b39a">system</a>)</td></tr>
-<tr class="memdesc:ad0d5897bcb3ba422420388a0fa5b518e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set association with parent <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing a complete physical system.">System</a>.  <br /></td></tr>
-<tr class="memitem:a26ff716a80d44c0a2dbe2580a76e43b4" id="r_a26ff716a80d44c0a2dbe2580a76e43b4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26ff716a80d44c0a2dbe2580a76e43b4">readParameters</a> (std::istream &amp;in)</td></tr>
-<tr class="memdesc:a26ff716a80d44c0a2dbe2580a76e43b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameters from param file.  <br /></td></tr>
-<tr class="inherit_header pub_methods_classPscf_1_1SweepTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1SweepTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1SweepTmpl.html">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a></td></tr>
-<tr class="memitem:a2352b4a01d6dcb3eb778c22381825d8b inherit pub_methods_classPscf_1_1SweepTmpl" id="r_a2352b4a01d6dcb3eb778c22381825d8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#a2352b4a01d6dcb3eb778c22381825d8b">~SweepTmpl</a> ()</td></tr>
-<tr class="memdesc:a2352b4a01d6dcb3eb778c22381825d8b inherit pub_methods_classPscf_1_1SweepTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:a22d2ef67a0fdd415888335e611884341" id="r_a22d2ef67a0fdd415888335e611884341"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22d2ef67a0fdd415888335e611884341">~Sweep</a> ()=default</td></tr>
+<tr class="memdesc:a22d2ef67a0fdd415888335e611884341"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="inherit_header pub_methods_classPscf_1_1Rp_1_1Sweep"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1Rp_1_1Sweep')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1Rp_1_1Sweep.html">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:a391550256381f61e373624924813177a inherit pub_methods_classPscf_1_1Rp_1_1Sweep" id="r_a391550256381f61e373624924813177a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Sweep.html#a391550256381f61e373624924813177a">setSystem</a> (typename Types&lt; D &gt;::System &amp;<a class="el" href="classPscf_1_1Rp_1_1Sweep.html#acb958ba3224df85f7cf4e6151eb94cb0">system</a>)</td></tr>
+<tr class="memdesc:a391550256381f61e373624924813177a inherit pub_methods_classPscf_1_1Rp_1_1Sweep"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set association with parent system.  <br /></td></tr>
+<tr class="memitem:addf2f7c69274671352f5d489fbfb8868 inherit pub_methods_classPscf_1_1Rp_1_1Sweep" id="r_addf2f7c69274671352f5d489fbfb8868"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Sweep.html#addf2f7c69274671352f5d489fbfb8868">readParameters</a> (std::istream &amp;in)</td></tr>
+<tr class="memdesc:addf2f7c69274671352f5d489fbfb8868 inherit pub_methods_classPscf_1_1Rp_1_1Sweep"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameters from param file.  <br /></td></tr>
+<tr class="inherit_header pub_methods_classPscf_1_1SweepTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1SweepTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1SweepTmpl.html">Pscf::SweepTmpl&lt; State &gt;</a></td></tr>
 <tr class="memitem:ab0bfbf0d804e157d997b65edddf58a3b inherit pub_methods_classPscf_1_1SweepTmpl" id="r_ab0bfbf0d804e157d997b65edddf58a3b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#ab0bfbf0d804e157d997b65edddf58a3b">sweep</a> ()</td></tr>
 <tr class="memdesc:ab0bfbf0d804e157d997b65edddf58a3b inherit pub_methods_classPscf_1_1SweepTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate to solution.  <br /></td></tr>
 <tr class="memitem:aa9d5f196ffcb2f276d304617ab2827ef inherit pub_methods_classPscf_1_1SweepTmpl" id="r_aa9d5f196ffcb2f276d304617ab2827ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#aa9d5f196ffcb2f276d304617ab2827ef">addParameterType</a> (std::string name, int nId, <a class="el" href="classPscf_1_1ParameterModifier.html">ParameterModifier</a> &amp;modifier)</td></tr>
 <tr class="memdesc:aa9d5f196ffcb2f276d304617ab2827ef inherit pub_methods_classPscf_1_1SweepTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare a specialized parameter type.  <br /></td></tr>
+<tr class="memitem:af517c988ea5fdb5a4e0e8f9ab468cb53 inherit pub_methods_classPscf_1_1SweepTmpl" id="r_af517c988ea5fdb5a4e0e8f9ab468cb53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#af517c988ea5fdb5a4e0e8f9ab468cb53">addParameterType</a> (<a class="el" href="structPscf_1_1ParameterType.html">ParameterType</a> paramType)</td></tr>
+<tr class="memdesc:af517c988ea5fdb5a4e0e8f9ab468cb53 inherit pub_methods_classPscf_1_1SweepTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare a single specialized sweep parameter type.  <br /></td></tr>
 <tr class="memitem:a06ad01e0b22042239e2c3906a92c0d9d inherit pub_methods_classPscf_1_1SweepTmpl" id="r_a06ad01e0b22042239e2c3906a92c0d9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#a06ad01e0b22042239e2c3906a92c0d9d">addParameterTypes</a> (<a class="el" href="classUtil_1_1GArray.html">GArray</a>&lt; <a class="el" href="structPscf_1_1ParameterType.html">ParameterType</a> &gt; paramTypes)</td></tr>
 <tr class="memdesc:a06ad01e0b22042239e2c3906a92c0d9d inherit pub_methods_classPscf_1_1SweepTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare an array of specialized sweep parameter types.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classUtil_1_1ParamComposite"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classUtil_1_1ParamComposite')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComposite.html">Util::ParamComposite</a></td></tr>
@@ -275,35 +274,51 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af2787f522a78daada06b2241ce368128 inherit pub_methods_classUtil_1_1MpiFileIo" id="r_af2787f522a78daada06b2241ce368128"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1MpiFileIo.html#af2787f522a78daada06b2241ce368128">isIoProcessor</a> () const</td></tr>
 <tr class="memdesc:af2787f522a78daada06b2241ce368128 inherit pub_methods_classUtil_1_1MpiFileIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can this processor do file I/O ?  <br /></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a31893e48195e5379efae3b357cd659a9" id="r_a31893e48195e5379efae3b357cd659a9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31893e48195e5379efae3b357cd659a9">checkAllocation</a> (<a class="el" href="classPscf_1_1Rpg_1_1BasisFieldState.html">BasisFieldState</a>&lt; D &gt; &amp;<a class="el" href="classPscf_1_1SweepTmpl.html#a32eab66c048953bf5c3e4c8e2666708d">state</a>)</td></tr>
-<tr class="memdesc:a31893e48195e5379efae3b357cd659a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check allocation state of fields in one state, allocate if necessary.  <br /></td></tr>
-<tr class="memitem:a60916e25a0318501615c5c24cb68d47f" id="r_a60916e25a0318501615c5c24cb68d47f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60916e25a0318501615c5c24cb68d47f">setup</a> ()</td></tr>
-<tr class="memdesc:a60916e25a0318501615c5c24cb68d47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup operation at the beginning of a sweep.  <br /></td></tr>
-<tr class="memitem:aa4187e2b7fc4b87abc826dbf4a85936b" id="r_aa4187e2b7fc4b87abc826dbf4a85936b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4187e2b7fc4b87abc826dbf4a85936b">setParameters</a> (double sNew)=0</td></tr>
-<tr class="memdesc:aa4187e2b7fc4b87abc826dbf4a85936b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set non-adjustable system parameters to new values.  <br /></td></tr>
-<tr class="memitem:a49d3fcfb65a50c070453ad6c82809e11" id="r_a49d3fcfb65a50c070453ad6c82809e11"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49d3fcfb65a50c070453ad6c82809e11">extrapolate</a> (double sNew)</td></tr>
-<tr class="memdesc:a49d3fcfb65a50c070453ad6c82809e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a guess for adjustable variables by continuation.  <br /></td></tr>
-<tr class="memitem:a1a23b8376906206fdb134a208caef47a" id="r_a1a23b8376906206fdb134a208caef47a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a23b8376906206fdb134a208caef47a">solve</a> (bool isContinuation)</td></tr>
-<tr class="memdesc:a1a23b8376906206fdb134a208caef47a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call current iterator to solve SCFT problem.  <br /></td></tr>
-<tr class="memitem:a9646611381ee6fe4bf6d27a56329e189" id="r_a9646611381ee6fe4bf6d27a56329e189"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9646611381ee6fe4bf6d27a56329e189">reset</a> ()</td></tr>
-<tr class="memdesc:a9646611381ee6fe4bf6d27a56329e189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset system to previous solution after iterature failure.  <br /></td></tr>
-<tr class="memitem:a0afa9ae79b260a3a1bb09ddba7380d88" id="r_a0afa9ae79b260a3a1bb09ddba7380d88"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0afa9ae79b260a3a1bb09ddba7380d88">getSolution</a> ()</td></tr>
-<tr class="memdesc:a0afa9ae79b260a3a1bb09ddba7380d88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update state(0) and output data after successful convergence.  <br /></td></tr>
-<tr class="memitem:ae3b19c5f98370051109840e1ae398de9" id="r_ae3b19c5f98370051109840e1ae398de9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3b19c5f98370051109840e1ae398de9">cleanup</a> ()</td></tr>
-<tr class="memdesc:ae3b19c5f98370051109840e1ae398de9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleanup operation at the beginning of a sweep.  <br /></td></tr>
-<tr class="memitem:a781c087d658fe43eac5fccc9101e68a1" id="r_a781c087d658fe43eac5fccc9101e68a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a781c087d658fe43eac5fccc9101e68a1">hasSystem</a> ()</td></tr>
-<tr class="memdesc:a781c087d658fe43eac5fccc9101e68a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has an association with the parent <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing a complete physical system.">System</a> been set?  <br /></td></tr>
-<tr class="memitem:acf76c4700bf76deeb324714572a0b39a" id="r_acf76c4700bf76deeb324714572a0b39a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1System.html">System</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf76c4700bf76deeb324714572a0b39a">system</a> ()</td></tr>
-<tr class="memdesc:acf76c4700bf76deeb324714572a0b39a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the parent system by reference.  <br /></td></tr>
-<tr class="memitem:a5d9f133993e0aa0b18cd59938ccf8700" id="r_a5d9f133993e0aa0b18cd59938ccf8700"><td class="memTemplParams" colspan="2">template&lt;typename Type&gt; </td></tr>
-<tr class="memitem:a5d9f133993e0aa0b18cd59938ccf8700 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1ScalarParam.html">ScalarParam</a>&lt; Type &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d9f133993e0aa0b18cd59938ccf8700">readOptional</a> (std::istream &amp;in, const char *label, Type &amp;value)</td></tr>
-<tr class="memdesc:a5d9f133993e0aa0b18cd59938ccf8700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add and read a new optional <a class="el" href="classUtil_1_1ScalarParam.html" title="Template for a Parameter object associated with a scalar variable.">ScalarParam</a> &lt; Type &gt; object.  <br /></td></tr>
-<tr class="inherit_header pro_methods_classPscf_1_1SweepTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classPscf_1_1SweepTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classPscf_1_1SweepTmpl.html">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classUtil_1_1Serializable"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classUtil_1_1Serializable')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="classUtil_1_1Serializable.html">Util::Serializable</a></td></tr>
+<tr class="memitem:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable" id="r_aca43a1eea5ec5f13189a57892a7a6d04"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileOArchive.html">BinaryFileOArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#aca43a1eea5ec5f13189a57892a7a6d04">OArchive</a></td></tr>
+<tr class="memdesc:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of output archive used by save method.  <br /></td></tr>
+<tr class="memitem:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable" id="r_ac6bcbf9bac926cada5a398804410e891"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileIArchive.html">BinaryFileIArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">IArchive</a></td></tr>
+<tr class="memdesc:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of input archive used by load method.  <br /></td></tr>
+<tr class="inherit_header pub_static_methods_classUtil_1_1ParamComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classUtil_1_1ParamComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Static Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComponent.html">Util::ParamComponent</a></td></tr>
+<tr class="memitem:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_a5350c0432130f7feba8392f5b3a75cb4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a5350c0432130f7feba8392f5b3a75cb4">initStatic</a> ()</td></tr>
+<tr class="memdesc:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize static echo member to false.  <br /></td></tr>
+<tr class="memitem:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_add72ad7add98e0b90979ee2638c7468d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#add72ad7add98e0b90979ee2638c7468d">setEcho</a> (bool <a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a>=true)</td></tr>
+<tr class="memdesc:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable echoing for all subclasses of <a class="el" href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file.">ParamComponent</a>.  <br /></td></tr>
+<tr class="memitem:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_ac5808de278115409092e94f9c72362c2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a> ()</td></tr>
+<tr class="memdesc:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get echo parameter.  <br /></td></tr>
+<tr class="inherit_header pro_methods_classPscf_1_1Rp_1_1Sweep"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classPscf_1_1Rp_1_1Sweep')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classPscf_1_1Rp_1_1Sweep.html">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:a164647c766053cb1b67ba968ad2f3c54 inherit pro_methods_classPscf_1_1Rp_1_1Sweep" id="r_a164647c766053cb1b67ba968ad2f3c54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Sweep.html#a164647c766053cb1b67ba968ad2f3c54">Sweep</a> ()</td></tr>
+<tr class="memdesc:a164647c766053cb1b67ba968ad2f3c54 inherit pro_methods_classPscf_1_1Rp_1_1Sweep"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
+<tr class="memitem:afcc981e8d8070849e328ce60fffbb876 inherit pro_methods_classPscf_1_1Rp_1_1Sweep" id="r_afcc981e8d8070849e328ce60fffbb876"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Sweep.html#afcc981e8d8070849e328ce60fffbb876">~Sweep</a> ()</td></tr>
+<tr class="memdesc:afcc981e8d8070849e328ce60fffbb876 inherit pro_methods_classPscf_1_1Rp_1_1Sweep"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:afeae02b06f11b3722c29b5e225fd7177 inherit pro_methods_classPscf_1_1Rp_1_1Sweep" id="r_afeae02b06f11b3722c29b5e225fd7177"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Sweep.html#afeae02b06f11b3722c29b5e225fd7177">checkAllocation</a> (typename Types&lt; D &gt;::BasisFieldState &amp;<a class="el" href="classPscf_1_1SweepTmpl.html#a32eab66c048953bf5c3e4c8e2666708d">state</a>)</td></tr>
+<tr class="memdesc:afeae02b06f11b3722c29b5e225fd7177 inherit pro_methods_classPscf_1_1Rp_1_1Sweep"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check allocation of fields in one state, allocate if necessary.  <br /></td></tr>
+<tr class="memitem:a19ef55106eff1d45d3cffa66adf5ce92 inherit pro_methods_classPscf_1_1Rp_1_1Sweep" id="r_a19ef55106eff1d45d3cffa66adf5ce92"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Sweep.html#a19ef55106eff1d45d3cffa66adf5ce92">setup</a> ()</td></tr>
+<tr class="memdesc:a19ef55106eff1d45d3cffa66adf5ce92 inherit pro_methods_classPscf_1_1Rp_1_1Sweep"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup operation at the beginning of a sweep.  <br /></td></tr>
+<tr class="memitem:aa154992cdd6d5d9d711d36194bb749cc inherit pro_methods_classPscf_1_1Rp_1_1Sweep" id="r_aa154992cdd6d5d9d711d36194bb749cc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Sweep.html#aa154992cdd6d5d9d711d36194bb749cc">setParameters</a> (double sNew)=0</td></tr>
+<tr class="memdesc:aa154992cdd6d5d9d711d36194bb749cc inherit pro_methods_classPscf_1_1Rp_1_1Sweep"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set system parameters to new values.  <br /></td></tr>
+<tr class="memitem:af4c1b62b0c09a980f0bf36841c08fb92 inherit pro_methods_classPscf_1_1Rp_1_1Sweep" id="r_af4c1b62b0c09a980f0bf36841c08fb92"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Sweep.html#af4c1b62b0c09a980f0bf36841c08fb92">extrapolate</a> (double sNew)</td></tr>
+<tr class="memdesc:af4c1b62b0c09a980f0bf36841c08fb92 inherit pro_methods_classPscf_1_1Rp_1_1Sweep"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a guess for adjustable variables by continuation.  <br /></td></tr>
+<tr class="memitem:a7b4786739c9095106ba71ea63c6fbed5 inherit pro_methods_classPscf_1_1Rp_1_1Sweep" id="r_a7b4786739c9095106ba71ea63c6fbed5"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Sweep.html#a7b4786739c9095106ba71ea63c6fbed5">solve</a> (bool isContinuation)</td></tr>
+<tr class="memdesc:a7b4786739c9095106ba71ea63c6fbed5 inherit pro_methods_classPscf_1_1Rp_1_1Sweep"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call current iterator to solve SCFT problem.  <br /></td></tr>
+<tr class="memitem:af964234d5ffd45c1b2fa6701be22c96d inherit pro_methods_classPscf_1_1Rp_1_1Sweep" id="r_af964234d5ffd45c1b2fa6701be22c96d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Sweep.html#af964234d5ffd45c1b2fa6701be22c96d">reset</a> ()</td></tr>
+<tr class="memdesc:af964234d5ffd45c1b2fa6701be22c96d inherit pro_methods_classPscf_1_1Rp_1_1Sweep"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset system to previous solution after iterature failure.  <br /></td></tr>
+<tr class="memitem:a3c95a30c63e9f89a05f5e2dc27bab847 inherit pro_methods_classPscf_1_1Rp_1_1Sweep" id="r_a3c95a30c63e9f89a05f5e2dc27bab847"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Sweep.html#a3c95a30c63e9f89a05f5e2dc27bab847">getSolution</a> ()</td></tr>
+<tr class="memdesc:a3c95a30c63e9f89a05f5e2dc27bab847 inherit pro_methods_classPscf_1_1Rp_1_1Sweep"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update state(0) and output data after successful convergence.  <br /></td></tr>
+<tr class="memitem:a6bdb22cbd692a08c9b4552d4f09d6bc2 inherit pro_methods_classPscf_1_1Rp_1_1Sweep" id="r_a6bdb22cbd692a08c9b4552d4f09d6bc2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Sweep.html#a6bdb22cbd692a08c9b4552d4f09d6bc2">cleanup</a> ()</td></tr>
+<tr class="memdesc:a6bdb22cbd692a08c9b4552d4f09d6bc2 inherit pro_methods_classPscf_1_1Rp_1_1Sweep"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleanup operation at the beginning of a sweep.  <br /></td></tr>
+<tr class="memitem:a1a274e3a5da37a8b3fdc9e1721268c85 inherit pro_methods_classPscf_1_1Rp_1_1Sweep" id="r_a1a274e3a5da37a8b3fdc9e1721268c85"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Sweep.html#a1a274e3a5da37a8b3fdc9e1721268c85">hasSystem</a> ()</td></tr>
+<tr class="memdesc:a1a274e3a5da37a8b3fdc9e1721268c85 inherit pro_methods_classPscf_1_1Rp_1_1Sweep"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does an association with the parent system exist?  <br /></td></tr>
+<tr class="memitem:acb958ba3224df85f7cf4e6151eb94cb0 inherit pro_methods_classPscf_1_1Rp_1_1Sweep" id="r_acb958ba3224df85f7cf4e6151eb94cb0"><td class="memItemLeft" align="right" valign="top">Types&lt; D &gt;::System &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Sweep.html#acb958ba3224df85f7cf4e6151eb94cb0">system</a> ()</td></tr>
+<tr class="memdesc:acb958ba3224df85f7cf4e6151eb94cb0 inherit pro_methods_classPscf_1_1Rp_1_1Sweep"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the parent system by reference.  <br /></td></tr>
+<tr class="inherit_header pro_methods_classPscf_1_1SweepTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classPscf_1_1SweepTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classPscf_1_1SweepTmpl.html">Pscf::SweepTmpl&lt; State &gt;</a></td></tr>
 <tr class="memitem:a727193df8b1c170a39f6e1d68ba6ce62 inherit pro_methods_classPscf_1_1SweepTmpl" id="r_a727193df8b1c170a39f6e1d68ba6ce62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#a727193df8b1c170a39f6e1d68ba6ce62">SweepTmpl</a> (int <a class="el" href="classPscf_1_1SweepTmpl.html#af76fb2e9fa7a94b06b98d5138ee19f65">historyCapacity</a>)</td></tr>
 <tr class="memdesc:a727193df8b1c170a39f6e1d68ba6ce62 inherit pro_methods_classPscf_1_1SweepTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor (protected).  <br /></td></tr>
-<tr class="memitem:a32eab66c048953bf5c3e4c8e2666708d inherit pro_methods_classPscf_1_1SweepTmpl" id="r_a32eab66c048953bf5c3e4c8e2666708d"><td class="memItemLeft" align="right" valign="top">BasisFieldState&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#a32eab66c048953bf5c3e4c8e2666708d">state</a> (int i)</td></tr>
+<tr class="memitem:a2352b4a01d6dcb3eb778c22381825d8b inherit pro_methods_classPscf_1_1SweepTmpl" id="r_a2352b4a01d6dcb3eb778c22381825d8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#a2352b4a01d6dcb3eb778c22381825d8b">~SweepTmpl</a> ()</td></tr>
+<tr class="memdesc:a2352b4a01d6dcb3eb778c22381825d8b inherit pro_methods_classPscf_1_1SweepTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:a32eab66c048953bf5c3e4c8e2666708d inherit pro_methods_classPscf_1_1SweepTmpl" id="r_a32eab66c048953bf5c3e4c8e2666708d"><td class="memItemLeft" align="right" valign="top">State &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#a32eab66c048953bf5c3e4c8e2666708d">state</a> (int i)</td></tr>
 <tr class="memdesc:a32eab66c048953bf5c3e4c8e2666708d inherit pro_methods_classPscf_1_1SweepTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get reference to a stored state, with i=0 being most recent.  <br /></td></tr>
 <tr class="memitem:aed59e7b51803bf2025b4a569274b8a9c inherit pro_methods_classPscf_1_1SweepTmpl" id="r_aed59e7b51803bf2025b4a569274b8a9c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#aed59e7b51803bf2025b4a569274b8a9c">s</a> (int i) const</td></tr>
 <tr class="memdesc:aed59e7b51803bf2025b4a569274b8a9c inherit pro_methods_classPscf_1_1SweepTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of s for a stored solution, with i = 0 most recent.  <br /></td></tr>
@@ -317,7 +332,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a7f8ddf99447ca320802ac85171c2c9fb inherit pro_methods_classPscf_1_1SweepTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of converged solutions accepted thus far.  <br /></td></tr>
 <tr class="memitem:a4f89c1b6dc890d1548eea4e1c9def426 inherit pro_methods_classPscf_1_1SweepTmpl" id="r_a4f89c1b6dc890d1548eea4e1c9def426"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#a4f89c1b6dc890d1548eea4e1c9def426">initialize</a> ()</td></tr>
 <tr class="memdesc:a4f89c1b6dc890d1548eea4e1c9def426 inherit pro_methods_classPscf_1_1SweepTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize variables that track history of solutions.  <br /></td></tr>
-<tr class="memitem:a28f2f99d84d6ae3b738800e43b38b47c inherit pro_methods_classPscf_1_1SweepTmpl" id="r_a28f2f99d84d6ae3b738800e43b38b47c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#a28f2f99d84d6ae3b738800e43b38b47c">checkAllocation</a> (BasisFieldState&lt; D &gt; &amp;<a class="el" href="classPscf_1_1SweepTmpl.html#a32eab66c048953bf5c3e4c8e2666708d">state</a>)=0</td></tr>
+<tr class="memitem:a28f2f99d84d6ae3b738800e43b38b47c inherit pro_methods_classPscf_1_1SweepTmpl" id="r_a28f2f99d84d6ae3b738800e43b38b47c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#a28f2f99d84d6ae3b738800e43b38b47c">checkAllocation</a> (State &amp;<a class="el" href="classPscf_1_1SweepTmpl.html#a32eab66c048953bf5c3e4c8e2666708d">state</a>)=0</td></tr>
 <tr class="memdesc:a28f2f99d84d6ae3b738800e43b38b47c inherit pro_methods_classPscf_1_1SweepTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check allocation of one state, allocate if necessary.  <br /></td></tr>
 <tr class="memitem:a8e49bca07b1e2b8930a3b72cdf8de646 inherit pro_methods_classPscf_1_1SweepTmpl" id="r_a8e49bca07b1e2b8930a3b72cdf8de646"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#a8e49bca07b1e2b8930a3b72cdf8de646">setCoefficients</a> (double sNew)</td></tr>
 <tr class="memdesc:a8e49bca07b1e2b8930a3b72cdf8de646 inherit pro_methods_classPscf_1_1SweepTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute coefficients of previous states for continuation.  <br /></td></tr>
@@ -357,43 +372,31 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a6f859f325ca7d36747d28c9677fe0bfc inherit pro_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:ae979e22ecef3a94c0e826224b3761df9 inherit pro_methods_classUtil_1_1ParamComponent" id="r_ae979e22ecef3a94c0e826224b3761df9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ae979e22ecef3a94c0e826224b3761df9">ParamComponent</a> (const <a class="el" href="classUtil_1_1ParamComponent.html">ParamComponent</a> &amp;other)</td></tr>
 <tr class="memdesc:ae979e22ecef3a94c0e826224b3761df9 inherit pro_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a70d4642bdcb3e672bf7270ae1619cd57" id="r_a70d4642bdcb3e672bf7270ae1619cd57"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70d4642bdcb3e672bf7270ae1619cd57">writeCRGrid_</a></td></tr>
-<tr class="memdesc:a70d4642bdcb3e672bf7270ae1619cd57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to write real space concentration field files.  <br /></td></tr>
-<tr class="memitem:a0f148c7fe532d77ea71c014be469ee8a" id="r_a0f148c7fe532d77ea71c014be469ee8a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f148c7fe532d77ea71c014be469ee8a">writeCBasis_</a></td></tr>
-<tr class="memdesc:a0f148c7fe532d77ea71c014be469ee8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to write concentration field files in basis format.  <br /></td></tr>
-<tr class="memitem:a6e36521064be9f6e55c286a8c1dfa920" id="r_a6e36521064be9f6e55c286a8c1dfa920"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e36521064be9f6e55c286a8c1dfa920">writeWRGrid_</a></td></tr>
-<tr class="memdesc:a6e36521064be9f6e55c286a8c1dfa920"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to write real space potential field files.  <br /></td></tr>
-<tr class="inherit_header pro_attribs_classPscf_1_1SweepTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classPscf_1_1SweepTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classPscf_1_1SweepTmpl.html">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a></td></tr>
+<tr class="inherit_header pro_attribs_classPscf_1_1Rp_1_1Sweep"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classPscf_1_1Rp_1_1Sweep')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classPscf_1_1Rp_1_1Sweep.html">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:a63e3a7eff226702128f40755657769f4 inherit pro_attribs_classPscf_1_1Rp_1_1Sweep" id="r_a63e3a7eff226702128f40755657769f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Sweep.html#a63e3a7eff226702128f40755657769f4">writeCRGrid_</a></td></tr>
+<tr class="memdesc:a63e3a7eff226702128f40755657769f4 inherit pro_attribs_classPscf_1_1Rp_1_1Sweep"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should concentration fields be written to file in r-grid format?  <br /></td></tr>
+<tr class="memitem:af389da8dcbb472c86b212f1a62f88b31 inherit pro_attribs_classPscf_1_1Rp_1_1Sweep" id="r_af389da8dcbb472c86b212f1a62f88b31"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Sweep.html#af389da8dcbb472c86b212f1a62f88b31">writeCBasis_</a></td></tr>
+<tr class="memdesc:af389da8dcbb472c86b212f1a62f88b31 inherit pro_attribs_classPscf_1_1Rp_1_1Sweep"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should concentration fields be written to file in basis format?  <br /></td></tr>
+<tr class="memitem:a0a149a77f68ab85ef4b03b2d922fe8e1 inherit pro_attribs_classPscf_1_1Rp_1_1Sweep" id="r_a0a149a77f68ab85ef4b03b2d922fe8e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Sweep.html#a0a149a77f68ab85ef4b03b2d922fe8e1">writeWRGrid_</a></td></tr>
+<tr class="memdesc:a0a149a77f68ab85ef4b03b2d922fe8e1 inherit pro_attribs_classPscf_1_1Rp_1_1Sweep"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should converged w fields be written to file in r-grid format?  <br /></td></tr>
+<tr class="inherit_header pro_attribs_classPscf_1_1SweepTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classPscf_1_1SweepTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classPscf_1_1SweepTmpl.html">Pscf::SweepTmpl&lt; State &gt;</a></td></tr>
 <tr class="memitem:ad4af028fd5c12528298c897f3dc1c6c6 inherit pro_attribs_classPscf_1_1SweepTmpl" id="r_ad4af028fd5c12528298c897f3dc1c6c6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#ad4af028fd5c12528298c897f3dc1c6c6">ns_</a></td></tr>
 <tr class="memdesc:ad4af028fd5c12528298c897f3dc1c6c6 inherit pro_attribs_classPscf_1_1SweepTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of steps.  <br /></td></tr>
 <tr class="memitem:a3751653f74fa721d9a5b14c9fbc0e613 inherit pro_attribs_classPscf_1_1SweepTmpl" id="r_a3751653f74fa721d9a5b14c9fbc0e613"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#a3751653f74fa721d9a5b14c9fbc0e613">baseFileName_</a></td></tr>
 <tr class="memdesc:a3751653f74fa721d9a5b14c9fbc0e613 inherit pro_attribs_classPscf_1_1SweepTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base name for output files.  <br /></td></tr>
 <tr class="memitem:ae06cb0a4b31a154b8c92b129d56db811 inherit pro_attribs_classPscf_1_1SweepTmpl" id="r_ae06cb0a4b31a154b8c92b129d56db811"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1GArray.html">GArray</a>&lt; <a class="el" href="structPscf_1_1ParameterType.html">ParameterType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SweepTmpl.html#ae06cb0a4b31a154b8c92b129d56db811">parameterTypes_</a></td></tr>
 <tr class="memdesc:ae06cb0a4b31a154b8c92b129d56db811 inherit pro_attribs_classPscf_1_1SweepTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classUtil_1_1Array.html" title="Array container class template.">Array</a> of specialized parameter types.  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classUtil_1_1Serializable"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classUtil_1_1Serializable')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="classUtil_1_1Serializable.html">Util::Serializable</a></td></tr>
-<tr class="memitem:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable" id="r_aca43a1eea5ec5f13189a57892a7a6d04"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileOArchive.html">BinaryFileOArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#aca43a1eea5ec5f13189a57892a7a6d04">OArchive</a></td></tr>
-<tr class="memdesc:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of output archive used by save method.  <br /></td></tr>
-<tr class="memitem:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable" id="r_ac6bcbf9bac926cada5a398804410e891"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileIArchive.html">BinaryFileIArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">IArchive</a></td></tr>
-<tr class="memdesc:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of input archive used by load method.  <br /></td></tr>
-<tr class="inherit_header pub_static_methods_classUtil_1_1ParamComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classUtil_1_1ParamComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Static Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComponent.html">Util::ParamComponent</a></td></tr>
-<tr class="memitem:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_a5350c0432130f7feba8392f5b3a75cb4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a5350c0432130f7feba8392f5b3a75cb4">initStatic</a> ()</td></tr>
-<tr class="memdesc:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize static echo member to false.  <br /></td></tr>
-<tr class="memitem:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_add72ad7add98e0b90979ee2638c7468d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#add72ad7add98e0b90979ee2638c7468d">setEcho</a> (bool <a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a>=true)</td></tr>
-<tr class="memdesc:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable echoing for all subclasses of <a class="el" href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file.">ParamComponent</a>.  <br /></td></tr>
-<tr class="memitem:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_ac5808de278115409092e94f9c72362c2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a> ()</td></tr>
-<tr class="memdesc:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get echo parameter.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
-class Pscf::Rpg::Sweep&lt; D &gt;</div><p>Solve a sequence of problems along a line in parameter space. </p>
+class Pscf::Rpg::Sweep&lt; D &gt;</div><p>Solve a sequence of SCFT problems along a line in parameter space. </p>
+<p>Specializations of this template with D=1, 2, and 3 are derived from corresponding specializations of the base class template <a class="el" href="classPscf_1_1Rp_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space.">Rp::Sweep</a>, and inherit their public interface and almost all of their source code from this base class. <br  />
+</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classPscf_1_1Rp_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space.">Rp::Sweep</a> </dd>
+<dd>
+<a class="el" href="scft_sweep_page.html">Manual page</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00027">27</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html">rpg/scft/sweep/Sweep.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00035">35</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html">rpg/scft/sweep/Sweep.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa60b6403a4fd008e71e7eeaf85fc0fe8" name="aa60b6403a4fd008e71e7eeaf85fc0fe8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa60b6403a4fd008e71e7eeaf85fc0fe8">&#9670;&#160;</a></span>Sweep() <span class="overload">[1/2]</span></h2>
@@ -412,13 +415,13 @@ template&lt;int D&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Default Constructor. </p>
+<p>Default constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00037">37</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html">rpg/scft/sweep/Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Sweep_8cu_source.html#l00027">27</a> of file <a class="el" href="Sweep_8cu_source.html">Sweep.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepTmpl_8tpp_source.html#l00022">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::SweepTmpl()</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00144">writeCBasis_</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00141">writeCRGrid_</a>, and <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00147">writeWRGrid_</a>.</p>
+<p class="reference">References <a class="el" href="Sweep_8cu_source.html#l00027">Sweep()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2sweep_2LinearSweep_8tpp_source.html#l00021">Pscf::Rpg::LinearSweep&lt; D &gt;::LinearSweep()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Sweep_8cu_source.html#l00027">Sweep()</a>, and <a class="el" href="Sweep_8cu_source.html#l00033">Sweep()</a>.</p>
 
 </div>
 </div>
@@ -440,631 +443,51 @@ template&lt;int D&gt; </div>
 </div><div class="memdoc">
 
 <p>Constructor, creates assocation with parent system. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">system</td><td>parent system </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00049">49</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html">rpg/scft/sweep/Sweep.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Sweep_8cu_source.html#l00033">33</a> of file <a class="el" href="Sweep_8cu_source.html">Sweep.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepTmpl_8tpp_source.html#l00181">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::addParameterTypes()</a>, <a class="el" href="SweepTmpl_8tpp_source.html#l00022">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::SweepTmpl()</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00137">system()</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00144">writeCBasis_</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00141">writeCRGrid_</a>, and <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00147">writeWRGrid_</a>.</p>
+<p class="reference">References <a class="el" href="Sweep_8cu_source.html#l00027">Sweep()</a>.</p>
 
 </div>
 </div>
-<a id="ae3c042183821c15309396d8145e0df29" name="ae3c042183821c15309396d8145e0df29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3c042183821c15309396d8145e0df29">&#9670;&#160;</a></span>~Sweep()</h2>
+<a id="a22d2ef67a0fdd415888335e611884341" name="a22d2ef67a0fdd415888335e611884341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22d2ef67a0fdd415888335e611884341">&#9670;&#160;</a></span>~Sweep()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Pscf::Rpg::Sweep</a>&lt; D &gt;::~<a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Sweep</a> </td>
+          <td class="memname">virtual <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Pscf::Rpg::Sweep</a>&lt; D &gt;::~<a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Sweep</a> </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Destructor. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00066">66</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html">rpg/scft/sweep/Sweep.tpp</a>.</p>
-
-</div>
-</div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="ad0d5897bcb3ba422420388a0fa5b518e" name="ad0d5897bcb3ba422420388a0fa5b518e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0d5897bcb3ba422420388a0fa5b518e">&#9670;&#160;</a></span>setSystem()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Pscf::Rpg::Sweep</a>&lt; D &gt;::setSystem </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1Rpg_1_1System.html">System</a>&lt; D &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>system</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set association with parent <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing a complete physical system.">System</a>. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00073">73</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html">rpg/scft/sweep/Sweep.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00137">system()</a>.</p>
-
-</div>
-</div>
-<a id="a26ff716a80d44c0a2dbe2580a76e43b4" name="a26ff716a80d44c0a2dbe2580a76e43b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26ff716a80d44c0a2dbe2580a76e43b4">&#9670;&#160;</a></span>readParameters()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Pscf::Rpg::Sweep</a>&lt; D &gt;::readParameters </td>
-          <td>(</td>
-          <td class="paramtype">std::istream &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Read parameters from param file. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">in</td><td>Input stream from param file. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="classPscf_1_1SweepTmpl.html#adc647826663fc40402cbbf73168b222d">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a>.</p>
-
-<p>Reimplemented in <a class="el" href="classPscf_1_1Rpg_1_1LinearSweep.html#ab8f70b3fe9afed00fbc752110167141f">Pscf::Rpg::LinearSweep&lt; D &gt;</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00080">80</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html">rpg/scft/sweep/Sweep.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="ParamComposite_8h_source.html#l01256">readOptional()</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00080">readParameters()</a>, <a class="el" href="SweepTmpl_8tpp_source.html#l00022">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::SweepTmpl()</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00144">writeCBasis_</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00141">writeCRGrid_</a>, and <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00147">writeWRGrid_</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2sweep_2LinearSweep_8tpp_source.html#l00026">Pscf::Rpg::LinearSweep&lt; D &gt;::readParameters()</a>, and <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00080">readParameters()</a>.</p>
-
-</div>
-</div>
-<a id="a31893e48195e5379efae3b357cd659a9" name="a31893e48195e5379efae3b357cd659a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31893e48195e5379efae3b357cd659a9">&#9670;&#160;</a></span>checkAllocation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Pscf::Rpg::Sweep</a>&lt; D &gt;::checkAllocation </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1Rpg_1_1BasisFieldState.html">BasisFieldState</a>&lt; D &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Check allocation state of fields in one state, allocate if necessary. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">state</td><td>object that represents a stored state of the system. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00095">95</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html">rpg/scft/sweep/Sweep.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00131">hasSystem()</a>, <a class="el" href="SweepTmpl_8h_source.html#l00127">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::state()</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00137">system()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00107">setup()</a>.</p>
-
-</div>
-</div>
-<a id="a60916e25a0318501615c5c24cb68d47f" name="a60916e25a0318501615c5c24cb68d47f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60916e25a0318501615c5c24cb68d47f">&#9670;&#160;</a></span>setup()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Pscf::Rpg::Sweep</a>&lt; D &gt;::setup </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Setup operation at the beginning of a sweep. </p>
-
-<p>Implements <a class="el" href="classPscf_1_1SweepTmpl.html#a6bc4a04128d08bb23ab564bbc2a040dd">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a>.</p>
-
-<p>Reimplemented in <a class="el" href="classPscf_1_1Rpg_1_1LinearSweep.html#a198a08334d849fd1e560f7423c3c1f33">Pscf::Rpg::LinearSweep&lt; D &gt;</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00107">107</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html">rpg/scft/sweep/Sweep.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00091">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::baseFileName_</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00095">checkAllocation()</a>, <a class="el" href="SweepTmpl_8tpp_source.html#l00199">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::initialize()</a>, and <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00137">system()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2sweep_2LinearSweep_8tpp_source.html#l00057">Pscf::Rpg::LinearSweep&lt; D &gt;::setup()</a>.</p>
-
-</div>
-</div>
-<a id="aa4187e2b7fc4b87abc826dbf4a85936b" name="aa4187e2b7fc4b87abc826dbf4a85936b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4187e2b7fc4b87abc826dbf4a85936b">&#9670;&#160;</a></span>setParameters()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Pscf::Rpg::Sweep</a>&lt; D &gt;::setParameters </td>
-          <td>(</td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>sNew</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set non-adjustable system parameters to new values. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">sNew</td><td>contour variable value for new trial solution. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="classPscf_1_1SweepTmpl.html#abd616e591b4c17888f4f623d0cc06b72">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a>.</p>
-
-<p>Implemented in <a class="el" href="classPscf_1_1Rpg_1_1LinearSweep.html#ab523fe606a89b9b3de4be8588cff4cee">Pscf::Rpg::LinearSweep&lt; D &gt;</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00124">124</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html">rpg/scft/sweep/Sweep.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00142">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::s()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
-
-</div>
-</div>
-<a id="a49d3fcfb65a50c070453ad6c82809e11" name="a49d3fcfb65a50c070453ad6c82809e11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49d3fcfb65a50c070453ad6c82809e11">&#9670;&#160;</a></span>extrapolate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Pscf::Rpg::Sweep</a>&lt; D &gt;::extrapolate </td>
-          <td>(</td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>sNew</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Create a guess for adjustable variables by continuation. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">sNew</td><td>contour variable value for new trial solution. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="classPscf_1_1SweepTmpl.html#a204d5f1b29a41a92ed149168c8b76e94">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00134">134</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html">rpg/scft/sweep/Sweep.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00167">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::c()</a>, <a class="el" href="SweepTmpl_8h_source.html#l00188">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::historyCapacity()</a>, <a class="el" href="SweepTmpl_8h_source.html#l00177">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::historySize()</a>, <a class="el" href="SweepTmpl_8tpp_source.html#l00252">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::setCoefficients()</a>, <a class="el" href="FSArray_8h_source.html#l00207">Util::FSArray&lt; Data, Capacity &gt;::size()</a>, <a class="el" href="SweepTmpl_8h_source.html#l00127">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::state()</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00137">system()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-</div>
-</div>
-<a id="a1a23b8376906206fdb134a208caef47a" name="a1a23b8376906206fdb134a208caef47a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a23b8376906206fdb134a208caef47a">&#9670;&#160;</a></span>solve()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Pscf::Rpg::Sweep</a>&lt; D &gt;::solve </td>
-          <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isContinuation</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Call current iterator to solve SCFT problem. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">isContinuation</td><td>true iff is continuation in a sweep </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 for sucessful solution, 1 on failure to converge </dd></dl>
-
-<p>Implements <a class="el" href="classPscf_1_1SweepTmpl.html#abddfa9c19dad8cfbd5ff20691da6d440">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00245">245</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html">rpg/scft/sweep/Sweep.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00137">system()</a>.</p>
-
-</div>
-</div>
-<a id="a9646611381ee6fe4bf6d27a56329e189" name="a9646611381ee6fe4bf6d27a56329e189"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9646611381ee6fe4bf6d27a56329e189">&#9670;&#160;</a></span>reset()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Pscf::Rpg::Sweep</a>&lt; D &gt;::reset </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reset system to previous solution after iterature failure. </p>
-<p>The implementation of this function should reset the system state to correspond to that stored in state(0), i.e., the previous converged solution. </p>
-
-<p>Implements <a class="el" href="classPscf_1_1SweepTmpl.html#af36b40cbf32dde6b3dfa3eb0321c4e2a">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00255">255</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html">rpg/scft/sweep/Sweep.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00127">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::state()</a>, and <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00137">system()</a>.</p>
-
-</div>
-</div>
-<a id="a0afa9ae79b260a3a1bb09ddba7380d88" name="a0afa9ae79b260a3a1bb09ddba7380d88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0afa9ae79b260a3a1bb09ddba7380d88">&#9670;&#160;</a></span>getSolution()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Pscf::Rpg::Sweep</a>&lt; D &gt;::getSolution </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Update state(0) and output data after successful convergence. </p>
-<p>The implementation of this function should copy the current system state into state(0) and output any desired information about the current converged solution. </p>
-
-<p>Implements <a class="el" href="classPscf_1_1SweepTmpl.html#a068b815a618e98f8873a8ec87d952785">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00269">269</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html">rpg/scft/sweep/Sweep.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00127">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;::state()</a>, and <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00137">system()</a>.</p>
-
-</div>
-</div>
-<a id="ae3b19c5f98370051109840e1ae398de9" name="ae3b19c5f98370051109840e1ae398de9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3b19c5f98370051109840e1ae398de9">&#9670;&#160;</a></span>cleanup()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Pscf::Rpg::Sweep</a>&lt; D &gt;::cleanup </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Cleanup operation at the beginning of a sweep. </p>
-
-<p>Reimplemented from <a class="el" href="classPscf_1_1SweepTmpl.html#a47c747feb697f7f2f560b87098f03c0f">Pscf::SweepTmpl&lt; BasisFieldState&lt; D &gt; &gt;</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00354">354</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html">rpg/scft/sweep/Sweep.tpp</a>.</p>
-
-</div>
-</div>
-<a id="a781c087d658fe43eac5fccc9101e68a1" name="a781c087d658fe43eac5fccc9101e68a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a781c087d658fe43eac5fccc9101e68a1">&#9670;&#160;</a></span>hasSystem()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Pscf::Rpg::Sweep</a>&lt; D &gt;::hasSystem </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Has an association with the parent <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing a complete physical system.">System</a> been set? </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00131">131</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html">rpg/scft/sweep/Sweep.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00095">checkAllocation()</a>, and <a class="el" href="rpg_2scft_2sweep_2LinearSweep_8tpp_source.html#l00057">Pscf::Rpg::LinearSweep&lt; D &gt;::setup()</a>.</p>
-
-</div>
-</div>
-<a id="acf76c4700bf76deeb324714572a0b39a" name="acf76c4700bf76deeb324714572a0b39a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf76c4700bf76deeb324714572a0b39a">&#9670;&#160;</a></span>system()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1System.html">System</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Pscf::Rpg::Sweep</a>&lt; D &gt;::system </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return the parent system by reference. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00137">137</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html">rpg/scft/sweep/Sweep.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00095">checkAllocation()</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00134">extrapolate()</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00269">getSolution()</a>, <a class="el" href="rpg_2scft_2sweep_2LinearSweep_8tpp_source.html#l00021">Pscf::Rpg::LinearSweep&lt; D &gt;::LinearSweep()</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00255">reset()</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00073">setSystem()</a>, <a class="el" href="rpg_2scft_2sweep_2LinearSweep_8tpp_source.html#l00057">Pscf::Rpg::LinearSweep&lt; D &gt;::setup()</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00107">setup()</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00245">solve()</a>, and <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00049">Sweep()</a>.</p>
-
-</div>
-</div>
-<a id="a5d9f133993e0aa0b18cd59938ccf8700" name="a5d9f133993e0aa0b18cd59938ccf8700"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d9f133993e0aa0b18cd59938ccf8700">&#9670;&#160;</a></span>readOptional()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<div class="memtemplate">
-template&lt;typename Type&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classUtil_1_1ScalarParam.html">ScalarParam</a>&lt; Type &gt; &amp; Util::ParamComposite::readOptional </td>
-          <td>(</td>
-          <td class="paramtype">std::istream &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>label</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Type &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Add and read a new optional <a class="el" href="classUtil_1_1ScalarParam.html" title="Template for a Parameter object associated with a scalar variable.">ScalarParam</a> &lt; Type &gt; object. </p>
-<p>This is equivalent to ScalarParam&lt;Type&gt;(in, label, value, false).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">in</td><td>input stream for reading </td></tr>
-    <tr><td class="paramname">label</td><td><a class="el" href="classUtil_1_1Label.html" title="A label string in a file format.">Label</a> string </td></tr>
-    <tr><td class="paramname">value</td><td>reference to new <a class="el" href="classUtil_1_1ScalarParam.html" title="Template for a Parameter object associated with a scalar variable.">ScalarParam&lt; Type &gt;</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="ParamComposite_8h_source.html#l00319">319</a> of file <a class="el" href="ParamComposite_8h_source.html">ParamComposite.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00080">readParameters()</a>.</p>
-
-</div>
-</div>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="a70d4642bdcb3e672bf7270ae1619cd57" name="a70d4642bdcb3e672bf7270ae1619cd57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70d4642bdcb3e672bf7270ae1619cd57">&#9670;&#160;</a></span>writeCRGrid_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Pscf::Rpg::Sweep</a>&lt; D &gt;::writeCRGrid_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Whether to write real space concentration field files. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00141">141</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html">rpg/scft/sweep/Sweep.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00080">readParameters()</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00037">Sweep()</a>, and <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00049">Sweep()</a>.</p>
-
-</div>
-</div>
-<a id="a0f148c7fe532d77ea71c014be469ee8a" name="a0f148c7fe532d77ea71c014be469ee8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f148c7fe532d77ea71c014be469ee8a">&#9670;&#160;</a></span>writeCBasis_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Pscf::Rpg::Sweep</a>&lt; D &gt;::writeCBasis_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Whether to write concentration field files in basis format. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00144">144</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html">rpg/scft/sweep/Sweep.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00080">readParameters()</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00037">Sweep()</a>, and <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00049">Sweep()</a>.</p>
-
-</div>
-</div>
-<a id="a6e36521064be9f6e55c286a8c1dfa920" name="a6e36521064be9f6e55c286a8c1dfa920"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e36521064be9f6e55c286a8c1dfa920">&#9670;&#160;</a></span>writeWRGrid_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html">Pscf::Rpg::Sweep</a>&lt; D &gt;::writeWRGrid_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Whether to write real space potential field files. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html#l00147">147</a> of file <a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html">rpg/scft/sweep/Sweep.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00080">readParameters()</a>, <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00037">Sweep()</a>, and <a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html#l00049">Sweep()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="rpg_2scft_2sweep_2Sweep_8h_source.html">rpg/scft/sweep/Sweep.h</a></li>
-<li><a class="el" href="rpg_2scft_2sweep_2Sweep_8tpp_source.html">rpg/scft/sweep/Sweep.tpp</a></li>
+<li><a class="el" href="Sweep_8cu_source.html">Sweep.cu</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -150,7 +150,7 @@ $(function() {
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00217" data-start="{" data-end="}">
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="classUtil_1_1GridArray.html#a11cdade45c5cd81161874bfde605c19a">  217</a></span>   <span class="keyword">inline</span> <a class="code hl_function" href="classUtil_1_1GridArray.html#a11cdade45c5cd81161874bfde605c19a">GridArray&lt;Data&gt;::GridArray</a>()</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    : data_(0),</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    : data_(nullptr),</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>      offsets_(),</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>      dimensions_(),</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>      size_(0)</div>
@@ -179,13 +179,13 @@ $(function() {
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00242" data-start="{" data-end="}">
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="classUtil_1_1GridArray.html#ab7e57841a62a6769f4db8037520bf519">  242</a></span>   <a class="code hl_function" href="classUtil_1_1GridArray.html#a11cdade45c5cd81161874bfde605c19a">GridArray&lt;Data&gt;::GridArray</a>(<a class="code hl_function" href="classUtil_1_1GridArray.html#a11cdade45c5cd81161874bfde605c19a">GridArray&lt;Data&gt;</a> <span class="keyword">const</span> &amp; other)</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    : data_(0),</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    : data_(nullptr),</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      offsets_(),</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>      dimensions_(),</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>      size_(0)</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>   {</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      <span class="comment">// Precondition</span></div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      <span class="keywordflow">if</span> (other.data_ == 0) {</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      <span class="keywordflow">if</span> (!other.data_) {</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>         UTIL_THROW(<span class="stringliteral">&quot;Other GridArray must be allocated&quot;</span>);</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>      }</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      if (<a class="code hl_function" href="classUtil_1_1GridArray.html#a4cd7035a162526210f07484e2a7ca05a">isAllocated</a>()) {</div>
@@ -219,7 +219,7 @@ $(function() {
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>      }</div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>      <span class="comment">// Precondition</span></div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>      <span class="keywordflow">if</span> (other.data_ == 0) {</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>      <span class="keywordflow">if</span> (!other.data_) {</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Other GridArray must be allocated before assignment&quot;</span>);</div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>      }</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
@@ -276,7 +276,7 @@ $(function() {
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="comment">   * Serialize a GridArray to/from an Archive.</span></div>
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Archive&gt;</div>
 <div class="foldopen" id="foldopen00337" data-start="{" data-end="}">
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno"><a class="line" href="classUtil_1_1GridArray.html#a960e22d85ee204b6db1b91cf85ad4403">  337</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classUtil_1_1GridArray.html#a960e22d85ee204b6db1b91cf85ad4403">GridArray&lt;Data&gt;::serialize</a>(Archive&amp; ar, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> version)</div>
@@ -309,7 +309,7 @@ $(function() {
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span><span class="comment">   * Get dimension in direction i.</span></div>
 <div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00365" data-start="{" data-end="}">
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno"><a class="line" href="classUtil_1_1GridArray.html#a9fb066c66fc7205db343bf6e39dc2d52">  365</a></span>   <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classUtil_1_1GridArray.html#a9fb066c66fc7205db343bf6e39dc2d52">GridArray&lt;Data&gt;::dimension</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> dimensions_[i]; }</div>
@@ -318,7 +318,7 @@ $(function() {
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="comment">   * Get total number of grid points.</span></div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00372" data-start="{" data-end="}">
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno"><a class="line" href="classUtil_1_1GridArray.html#aeb008b6145eb688076e5d87c552f567a">  372</a></span>   <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classUtil_1_1GridArray.html#aeb008b6145eb688076e5d87c552f567a">GridArray&lt;Data&gt;::size</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> size_; }</div>
@@ -487,10 +487,10 @@ $(function() {
 <div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span><span class="comment">   * Return true if the GridArray has been allocated, false otherwise.</span></div>
 <div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00519" data-start="{" data-end="}">
 <div class="line"><a id="l00519" name="l00519"></a><span class="lineno"><a class="line" href="classUtil_1_1GridArray.html#a4cd7035a162526210f07484e2a7ca05a">  519</a></span>   <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classUtil_1_1GridArray.html#a4cd7035a162526210f07484e2a7ca05a">GridArray&lt;Data&gt;::isAllocated</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> (<span class="keywordtype">bool</span>)(data_ != 0); }</div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> (<span class="keywordtype">bool</span>)data_; }</div>
 </div>
 <div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span> </div>
 <div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>}</div>
@@ -512,8 +512,8 @@ $(function() {
 <div class="ttc" id="aclassUtil_1_1GridArray_html_aca012394896b04457fb865dac7f3e75e"><div class="ttname"><a href="classUtil_1_1GridArray.html#aca012394896b04457fb865dac7f3e75e">Util::GridArray::dimensions</a></div><div class="ttdeci">IntVector const &amp; dimensions()</div><div class="ttdoc">Get all dimensions of array as an IntVector.</div><div class="ttdef"><b>Definition</b> <a href="#l00358">GridArray.h:358</a></div></div>
 <div class="ttc" id="aclassUtil_1_1GridArray_html_aeb008b6145eb688076e5d87c552f567a"><div class="ttname"><a href="classUtil_1_1GridArray.html#aeb008b6145eb688076e5d87c552f567a">Util::GridArray::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">Get total number of grid points.</div><div class="ttdef"><b>Definition</b> <a href="#l00372">GridArray.h:372</a></div></div>
 <div class="ttc" id="aclassUtil_1_1IntVector_html"><div class="ttname"><a href="classUtil_1_1IntVector.html">Util::IntVector</a></div><div class="ttdoc">An IntVector is an integer Cartesian vector.</div><div class="ttdef"><b>Definition</b> <a href="IntVector_8h_source.html#l00073">IntVector.h:74</a></div></div>
-<div class="ttc" id="aclassUtil_1_1Memory_html_a3ded7c631c8cbdb6968f03f8084485a2"><div class="ttname"><a href="classUtil_1_1Memory.html#a3ded7c631c8cbdb6968f03f8084485a2">Util::Memory::deallocate</a></div><div class="ttdeci">static void deallocate(Data *&amp;ptr, size_t size)</div><div class="ttdoc">Deallocate a C++ array.</div><div class="ttdef"><b>Definition</b> <a href="Memory_8h_source.html#l00152">Memory.h:152</a></div></div>
-<div class="ttc" id="aclassUtil_1_1Memory_html_af6003f193ae6c7a0fc049d7e443e0348"><div class="ttname"><a href="classUtil_1_1Memory.html#af6003f193ae6c7a0fc049d7e443e0348">Util::Memory::allocate</a></div><div class="ttdeci">static void allocate(Data *&amp;ptr, size_t size)</div><div class="ttdoc">Allocate a C++ array.</div><div class="ttdef"><b>Definition</b> <a href="Memory_8h_source.html#l00132">Memory.h:132</a></div></div>
+<div class="ttc" id="aclassUtil_1_1Memory_html_a3ded7c631c8cbdb6968f03f8084485a2"><div class="ttname"><a href="classUtil_1_1Memory.html#a3ded7c631c8cbdb6968f03f8084485a2">Util::Memory::deallocate</a></div><div class="ttdeci">static void deallocate(Data *&amp;ptr, size_t size)</div><div class="ttdoc">Deallocate a C++ array.</div><div class="ttdef"><b>Definition</b> <a href="Memory_8h_source.html#l00157">Memory.h:157</a></div></div>
+<div class="ttc" id="aclassUtil_1_1Memory_html_af6003f193ae6c7a0fc049d7e443e0348"><div class="ttname"><a href="classUtil_1_1Memory.html#af6003f193ae6c7a0fc049d7e443e0348">Util::Memory::allocate</a></div><div class="ttdeci">static void allocate(Data *&amp;ptr, size_t size)</div><div class="ttdoc">Allocate a C++ array.</div><div class="ttdef"><b>Definition</b> <a href="Memory_8h_source.html#l00136">Memory.h:136</a></div></div>
 <div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="global_8h.html">global.h</a></div><div class="ttdoc">File containing preprocessor macros for error handling.</div></div>
 <div class="ttc" id="aglobal_8h_html_ad2512f8bd062d41d66799cf900151487"><div class="ttname"><a href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a></div><div class="ttdeci">#define UTIL_THROW(msg)</div><div class="ttdoc">Macro for throwing an Exception, reporting function, file and line number.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00049">global.h:49</a></div></div>
 <div class="ttc" id="agroup__Space__Module_html_ga2772f5ec799816685d37798d8d358ef7"><div class="ttname"><a href="group__Space__Module.html#ga2772f5ec799816685d37798d8d358ef7">Util::Dimension</a></div><div class="ttdeci">const int Dimension</div><div class="ttdoc">Dimensionality of space.</div><div class="ttdef"><b>Definition</b> <a href="Dimension_8h_source.html#l00019">Dimension.h:19</a></div></div>

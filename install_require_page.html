@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: Requirements and Dependencies</title>
+<title>PSCF: System Requirements</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -54,16 +54,16 @@ $(function() {
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">Requirements and Dependencies </div></div>
+  <div class="headertitle"><div class="title">System Requirements </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="el" href="install_page.html">Installation</a> (Up/ Prev) &#160; &#160; &#160; &#160; <a class="el" href="install_source_page.html">Getting the Source Code</a> (Next) <br  />
+<div class="textblock"><p><a class="el" href="install_page.html">Installation</a> (Up/ Prev) &#160; &#160; &#160; &#160; <a class="el" href="install_external_page.html">Installing Dependencies: GSL and FFTW</a> (Next) <br  />
 </p>
-<p>PSCF is designed to be compiled from source and run in a unix-like environment. The package has been tested and used on systems running either linux or recent versions of the Mac OS X operating systems. PSCF can take advantage of a CUDA-capable Nvidia GPU if one is available, or can run on standard CPU hardware. Compilation is controlled by a system of unix makefiles.</p>
 <p>PSCF is distributed only as source code, and so must be compiled by the user. All C++ source code follows the ANSI 2011 C++ language standard. Code that uses an NVIDIA (GPU) is written in CUDA.</p>
+<p>PSCF is designed to be compiled and run in a unix-like environment. The package has been tested and used on systems running either linux or recent versions of the Mac OS X operating systems. PSCF can take advantage of a CUDA-capable Nvidia GPU if one is available, or can run on standard CPU hardware. Compilation is controlled by a system of unix makefiles.</p>
 <h1 class="doxsection"><a class="anchor" id="require_overview_section"></a>
 Overview</h1>
-<p>PSCF currently provides two programs that are designed to run on a conventional CPU (pscf_1d and pscf_pg), and one that is designed to use an NVIDIA GPU (pscf_pg). We distinguish these in what follows by referring to CPU programs and a GPU-enabled program.</p>
+<p>PSCF currently contains code for two programs that are designed to run on a conventional CPU (pscf_r1d and pscf_rpg), and one that is designed to use an NVIDIA GPU (pscf_rpg). We distinguish these in what follows by referring to CPU programs and a GPU-enabled program.</p>
 <p>In order to compile just the two CPU programs in the PSCF package, the system on which the code is compiled and run must have:</p>
 <ul>
 <li>a git version control client</li>
@@ -72,78 +72,58 @@ Overview</h1>
 <li>the GNU Scientific Library (GSL) (header and library)</li>
 <li>the FFTW fast Fourier transform library (header and library)</li>
 </ul>
-<p>A git client is needed to obtain the source code, by cloning the git repository in which PSCF is maintained on the github.com site. A Python interpreter is needed during compilation because the build system that compiles PSCF uses several Python scripts that are provided within the PSCF repository. A git client, C++ compiler and Python interpreter will all normally come pre-installed in common linux distributions or in a Mac OS operating system in which <a class="el" href="#require_mac_commandtools_section">command line tools</a> have been installed. The GNU scientific library is used by several programs within the package for linear algebra operations. The FFTW Fast Fourier transform library is used extensively by the pscf_pc programs for periodic microstructures.</p>
-<p>In order to compile the GPU-enabled pscf_pg program, the user's system must also have:</p>
+<p>A git client is needed to obtain the source code, by cloning the git repository in which PSCF is maintained on the github.com site. A Python interpreter is needed during compilation because the build system that compiles PSCF uses several Python scripts that are provided within the PSCF repository. A git client, C++ compiler and Python interpreter will all normally come pre-installed in common linux distributions or in a Mac OS operating system in which <a class="el" href="#require_mac_commandtools_section">command line tools</a> have been installed. The GNU scientific library is used by several programs within the package for linear algebra operations. The FFTW fast Fourier transform library is used extensively by the pscf_rpc programs for periodic microstructures.</p>
+<p>In order to compile the GPU-enabled pscf_rpg program, the user's system must also have:</p>
 <ul>
 <li>a CUDA-enabled NVIDIA graphics card</li>
 <li>the <a href="https://developer.nvidia.com/cuda-toolkit">NVIDIA CUDA Toolkit</a></li>
 </ul>
 <p>The CUDA Toolkit is a development environment that provides the nvcc C++/CUDA compiler and a variety of GPU-accelerated libraries, including the cuFFT fast Fourier transform library.</p>
-<p>Users who wish to generate a local copy of this web manual as a set of html pages that reside on the user's computer, will also need to install the "doxygen" documentation utility.</p>
+<p>Users who wish to generate a local copy of this web manual, as a set of html pages that reside on the user's computer, will also need to install the "doxygen" documentation utility.</p>
 <h1 class="doxsection"><a class="anchor" id="require_mac_commandtools_section"></a>
-Mac OS X command line tools</h1>
-<p>In order to compile the PSCF CPU programs in Mac OS X, the operatign system must first be configured to provide a unix command-line development environment. One can do this by installing the Mac Command Line Tools package for XCode. In recent versions of Mac OS X, it is not necessary to install the rather large XCode integrated development environment (IDE) to obtain just the much smaller set of command line tools. The command line tools package is all that is needed to compile and use PSCF.</p>
+Mac XCode command line tools</h1>
+<p>In order to compile the PSCF CPU programs in Mac OS X, the user's operating system must first be configured to provide a unix command-line development environment. This can be done by installing the Mac Command Line Tools package for XCode. In recent versions of Mac OS X, it is not necessary to install the large XCode integrated development environment (IDE) to obtain just the much smaller set of command line tools. The full XCode environment is not needed to compile and use PSCF.</p>
 <p>To install just the command line tools, follow the instructions given <a href="https://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/">here</a>. Briefly, the instructions are to:</p>
 <ul>
-<li>Launch the Terminal application, found in Applications/Utilities</li>
+<li>Launch the Terminal application, found in the Applications/Utilities folder</li>
 <li>From a terminal, type the command string: "xcode-select --install"</li>
 </ul>
-<p>This will a cause a software update window that contains the following text: "The xcode-select command requires the command line developer 
+<p>This will a open a software update window that contains the following text: "The xcode-select command requires the command line developer
 tools.  Would you like to install the tools now?" Confirm by clicking the "Install" button on this window. When prompted, also agree to the Terms of Service. The package will then download and install.</p>
-<p>If you choose to install the full XCode package from the Apple App store, installation of the Command Line Tools is offered as an option during the installation process.</p>
+<p>If you choose to install the full XCode package from the Apple App store, installation of the Command Line Tools is offered as an option during the installation process, which you should accept.</p>
 <p>To use PSCF on a Mac, you must type commands from a terminal window, as in a traditional unix command line environment. Mac users may thus want to add the Terminal app to their Dock for easy access.</p>
+<h1 class="doxsection"><a class="anchor" id="require_check_section"></a>
+Searching for executable files</h1>
+<p>In the following instructions, we recommend that users use the unix "command -v" built in shell command to check whether several required executable files are installed on their system. This command takes the name of an executable command an argument and, if possible, returns the full path to a corresponding executable file of that name. For example, on systems on which the g++ command invokes a C++ compiler, invoking </p><div class="fragment"><div class="line">command -v g++</div>
+</div><!-- fragment --><p> from a command line will normally return a path such as "/usr/bin/g++". This is the full path to the "g++" executable file, if one is found. The unix shell searches for executable files in a list of directories that are listed by the PATH environment variable. If the operating system cannot find a command of the specified name in this list of directories, then "command -v" instead returns nothing.</p>
+<p>The "which" command is another utility that is essentially equivalent to "command -v", and that is also available on most unix systems. If the "which" command exists, one could invoke </p><div class="fragment"><div class="line">which g++</div>
+</div><!-- fragment --><p> as an alternate way to search for the g++ executable file. Like "command -v", this command returns a path to an executable file with a specified base name (e.g., "g++") if one is found, and returns nothing if no matching file is found.</p>
+<p>We suggest use of "command -v" in this manual primarily because this command is required to exist by the POSIX portability standard for unix operating systems, while the "which" command is not required by POSIX. In practice, both commands exist on many unix systems, while a few variants of unix have one but not the other.</p>
 <h1 class="doxsection"><a class="anchor" id="require_git_section"></a>
 Git client</h1>
 <p>The source code for the C++/CUDA version of PSCF described here is hosted on the github server, at <a href="http://github.com">github.com</a>, as project dmorse/pscfpp. The older Fortran PSCF program is maintained in a separate github repository, as project dmorse/pscf.</p>
-<p>The source code of this current version of PSCF may be obtained by using a git version control manager to clone the public <a href="https://github.com/dmorse/pscfpp">git repository</a>. To do this, a git client must be installed on your computer.</p>
-<p>One can check whether a git client is already installed by entering </p><div class="fragment"><div class="line">git --version</div>
-</div><!-- fragment --><p> from the unix command line. If git is installed and functional, this should return a git version number, such as "git version 2.30.1".</p>
-<p>One can also perform a simpler check that the shell can find an exectuable named "git" by entering the command </p><div class="fragment"><div class="line">which git</div>
-</div><!-- fragment --><p> If the git executable is found, this should return a valid path, such as /usr/bin/git . If this command does not return a valid path, you probably need to install git before proceeding.</p>
-<p>Instructions for installing git on different platforms are given in the documentation on the <a href="http://git-scm.com">git web page</a>, and in chapter 1.5 of the <a href="https://git-scm.com/book/en/v2">Pro Git book </a> by Scott Chacon, which is available to be read for free online. If you are using linux, and git is not already installed, you should use the preferred package manager on your linux distribution to install a git client. If you are using Mac OS X, a git client should be installed as a component of the XCode Command Line Tools package, which is also needed for other purposes.</p>
+<p>The source code of the current version of PSCF should be obtained by using the git version control manager to clone the public <a href="https://github.com/dmorse/pscfpp">git repository</a>, as will be described in detail <a class="el" href="install_source_page.html">elsewhere</a>. To get the source code in this way, a git client must be installed on your computer.</p>
+<p>One can check whether the git package is already installed by entering </p><div class="fragment"><div class="line">git --version</div>
+</div><!-- fragment --><p> from the unix command line. If git is installed and functional, this should return a git version number, such as "git version 2.30.1". One can also check that the shell can find an exectuable named "git" by entering </p><div class="fragment"><div class="line">command -v git</div>
+</div><!-- fragment --><p> and checking if this returns a valid path, such as /usr/bin/git .</p>
+<p>Instructions for installing git on different platforms are given on the <a href="http://git-scm.com/install">git web page</a>, and in chapter 1.5 of the <a href="https://git-scm.com/book/en/v2">Pro Git book </a> by Scott Chacon, which is available to be read for free online. If you are using linux, and git is not already installed, you should use the preferred package manager on your linux distribution to install a git client. If you are using Mac OS X, a git client should be installed as a part of the XCode Command Line Tools package, which is also needed by PSCF for other purposes.</p>
 <h1 class="doxsection"><a class="anchor" id="install_require_python"></a>
 Python interpeter</h1>
 <p>The system used to compile and install PSCF requires access to a Python 3 interpreter. One can check if a python interpreter is accessible by issuing the command </p><div class="fragment"><div class="line">python3 --version</div>
-</div><!-- fragment --><p> and confirming that the command works, and returns a version number 3.0 or greater. Alternatively, one can issue the command </p><div class="fragment"><div class="line">which python3</div>
-</div><!-- fragment --><p> and confirm that it returns a non-empty path such as /user/bin/python3. We recommend using of the command "python3" rather than "python" to make sure that you access a python 3 interpreter on any system in which a Python 2.* interpreter may still also be installed. A Python 3 interpeter should be available from the command line by default in any common linux distribution (e.g., Ubuntu or Fedora), and should be available in Mac OS X after installation of the command line tools package.</p>
+</div><!-- fragment --><p> confirming that the command works, and confirming that it returns a version number 3.0 or greater. In addition, one can issue the command </p><div class="fragment"><div class="line">command -v python3</div>
+</div><!-- fragment --><p> and check that it returns a non-empty path such as /user/bin/python3.</p>
+<p>We recommend using the command "python3" rather than "python" to make sure that you access a python 3 interpreter on any system in which a Python 2 interpreter may still also be installed. A Python 3 interpeter should be available from the command line by default in any common linux distribution (e.g., Ubuntu or Fedora), and should be installed on a Mac OS X as part of the XCode command line tools package.</p>
 <h1 class="doxsection"><a class="anchor" id="install_require_compiler_cpp"></a>
 C++ compiler</h1>
-<p>By default, the PSCF build system invokes a C++ compiler using the compiler commnd name "g++". On linux systems, this command normally invokes the GNU compiler collection (GCC) C++ compiler. On an Apple computer running Mac OS X that is configured for unix C++ development (see above), the "g++" command is normally a link to the Clang compiler, which is the default compiler for C++ development on Mac OS X. The Clang compiler accepts almost all the same command line options as the GNU compiler, and so functions as a compatible replacement for the GCC C++ compiler.</p>
-<p>It is possible to configure the PSCF build system during the initial configuration process so as to instead use a different C++ compiler, as discussed <a class="el" href="install_configure_page.html">here</a>. Even when a different compiler command is used to compile source code, however, the PSCF build system will still invoke the "g++" command with appropriate options to analyse dependencies among source files. The PSCF makefile system thus always requires that the "g++" command be available to the build system.</p>
-<p>One can check if the command "g++" exists by entering </p><div class="fragment"><div class="line">which g++</div>
-</div><!-- fragment --><p> from a terminal command line. If the "which" utility returns a valid nonempty path, such as /usr/bin/g++, then the command g++ exists and can be located by the operating system.</p>
+<p>By default, the PSCF build system invokes a C++ compiler using the compiler command name "g++". On linux systems, this command normally invokes the GNU compiler collection (GCC) C++ compiler. On an Apple computer running Mac OS X that is configured for unix C++ development (see above), the "g++" command is normally a link to the Clang compiler, which is the default compiler for C++ development on Mac OS X. The Clang compiler accepts almost all the same command line options as the GNU compiler, and so functions as a compatible replacement for the GCC C++ compiler.</p>
+<p>It is possible to configure the PSCF build system during the initial configuration process so as to instead use a different C++ compiler, as discussed <a class="el" href="install_configure_page.html">here</a>. Even when a different compiler command is used to compile source code, however, the PSCF build system will still invoke the "g++" command with appropriate options to analyse dependencies among source files. The PSCF makefile system thus always requires that the "g++" command be available.</p>
+<p>One can check if the "g++" command exists by entering "command -v g++", as described above.</p>
 <p>The name of the command used to invoke the compiler when compiling C++ files and the choices of options passed to the compiler can be changed by modifying a compiler configuration file that is read during initial configuration of the build system. The configuration process is described in more detail <a class="el" href="install_configure_page.html">here</a>.</p>
 <h1 class="doxsection"><a class="anchor" id="install_require_compiler_cuda"></a>
 CUDA compiler</h1>
-<p>To compile the GPU-accelerated pscf_pg program, the system must have an appropriate NVIDIA GPU and a CUDA development package installed. The NVIDIA nvcc C++/CUDA compiler is designed to integrate with the GNU g++ compiler, so we recommend using the GNU compiler to compile C++ source files if you are planning to compile CUDA code for use on the same machine.</p>
-<h1 class="doxsection"><a class="anchor" id="install_require_ubuntu"></a>
-Packages: Ubuntu and other Debian-based linux systems</h1>
-<p>The CPU programs in PSCF require access to development versions of the Gnu Scientific Library (GSL) and FFTW packages. These may be installed on Ubuntu or other Debian based linux distribution later on version 16.0 or later using the commands: </p><div class="fragment"><div class="line">sudo apt install libfftw3-dev  </div>
-<div class="line">sudo apt install libgsl-dev  </div>
-</div><!-- fragment --><p> To also install the doxygen documentation generator utility, use the command </p><div class="fragment"><div class="line">sudo apt install doxygen</div>
-</div><!-- fragment --><p> Installing doxygen is not necessary to compile PSCF, but allows you to generate a local copy of this web documentation.</p>
-<p>On older Debian-based systems, or as a lower level alternative, one may use the "apt-get" command rather than "apt" with the same arguments.</p>
-<h1 class="doxsection"><a class="anchor" id="install_require_mac"></a>
-Packages: Mac OS X</h1>
-<p>We recommend using a package manager to install GSL and FFTW on Mac OS X. If you are not already using a package manager for managing unix programs on Max OS X, we recommend that you install the <a href="https://brew.sh/">Homebrew </a> package manager, following instructions given on the Homebrew web site. Possible alternatives include the older MacPorts or Fink package managers, or compiling the required packages directly from source files obtained from package home pages.</p>
-<p>Using Homebrew, you may install the GSL and FFTW packages with the commands </p><div class="fragment"><div class="line">brew install gsl</div>
-<div class="line">brew install fftw</div>
-</div><!-- fragment --><p> To also install doxygen, issue the command </p><div class="fragment"><div class="line">brew install doxygen</div>
-</div><!-- fragment --><p>Mac users should be aware that Homebrew installs files in different locations on newer Macs that use Apple silicon (e.g., an M1 or M2 chip) than the file locations used by Homebrew on older Macs that use an Intel CPU.</p>
-<p>On Macs with an Intel CPU, Homebrew installed links to required header and library files in subdirectories of the /usr/local directory. Because /usr/local is one of the standard directories in which a unix shell normally looks for such files, PSCF can be installed on such machines using a default configuration for the makefile system that is the same as the default used on linux machines.</p>
-<p>On Macs with Apple silicon, Homebrew instead installs all files in /opt/homebrew. This requires users to add paths to this directory and/or some of its subdirectories to the search paths used by the compiler to find header and library files. A compiler configuration file that modifies these search paths is provided as part of PSCF, as discussed <a class="el" href="install_configure_page.html#install_configure_compiler_file_sec">here</a>.</p>
-<h1 class="doxsection"><a class="anchor" id="install_require_module"></a>
-Linux software modules</h1>
-<p>At the University of Minnesota, PSCF is often run on a cluster provided by the Minnesota Supercomputer Institute (MSI). The computer clusters at MSI, at at many similar multi-user facilities, use the linux "module" command to allow users to load particular software packages, including particular choices of compiler. The module command is the user interface to the "Modules" package, which is a system for automating changes in a users unix shell environment that are required in order to use particular software packages.</p>
-<p>On a multi-user system that uses linux modules, the command </p><div class="fragment"><div class="line"><span class="keyword">module</span> avail</div>
-</div><!-- fragment --><p> should give a listing of all software modules available for use on a particular system. The syntax for the command to load a particular module is </p><div class="fragment"><div class="line"><span class="keyword">module</span> load  module-name</div>
-</div><!-- fragment --><p> where module-name represents the name of a particular software module, as listed by the "module avail" command.</p>
-<p>On the computer cluster at MSI, we currently normally set up the compilation environment by invoking </p><div class="fragment"><div class="line"><span class="keyword">module</span> load fftw/3.3.6-double-gnu-7.2.0</div>
-<div class="line">module load cuda</div>
-</div><!-- fragment --><p> before compiling PSCF. We use a version of fftw that was compiled with GCC version 7.2.0, rather than the most recent version, because the current version of CUDA (v10.0) isn't compatible with GCC versions with primary version numbers greater than 7.</p>
-<p>These module load commands can be either be entered manually from the command line by the user after logging in, or they can be configured to be entered automatically on login by adding them to the users .profile or .bash_profile script.</p>
+<p>To compile the GPU-accelerated pscf_rpg program, the system must have an appropriate NVIDIA GPU and a CUDA development toolkit installed. The NVIDIA nvcc C++/CUDA compiler is designed to integrate with the GNU g++ compiler, so we recommend using the GNU compiler to compile C++ source files if you are planning to compile CUDA code for use on the same machine.</p>
 <p><br  />
- <a class="el" href="install_page.html">Installation</a> (Up / Prev) &#160; &#160; &#160; &#160; <a class="el" href="install_source_page.html">Getting the Source Code</a> (Next) </p>
+ <a class="el" href="install_page.html">Installation</a> (Up / Prev) &#160; &#160; &#160; &#160; <a class="el" href="install_external_page.html">Installing Dependencies: GSL and FFTW</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

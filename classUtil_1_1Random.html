@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -97,7 +97,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3beaaca47a8a62535b86b545061574ce" id="r_a3beaaca47a8a62535b86b545061574ce"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3beaaca47a8a62535b86b545061574ce">uniform</a> (double range1, double range2)</td></tr>
 <tr class="memdesc:a3beaaca47a8a62535b86b545061574ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a random floating point number x, uniformly distributed in the range range1 &lt;= x &lt; range2.  <br /></td></tr>
 <tr class="memitem:a2a7f4c20d13a3ea0bc532c224aecc40e" id="r_a2a7f4c20d13a3ea0bc532c224aecc40e"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a7f4c20d13a3ea0bc532c224aecc40e">uniformInt</a> (long range1, long range2)</td></tr>
-<tr class="memdesc:a2a7f4c20d13a3ea0bc532c224aecc40e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return random long int x uniformly distributed in range1 &lt;= x &lt; range2.  <br /></td></tr>
+<tr class="memdesc:a2a7f4c20d13a3ea0bc532c224aecc40e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return random long int x uniform in range1 &lt;= x &lt; range2.  <br /></td></tr>
 <tr class="memitem:a1b4a276aed589e7c73f33e2d22a8ebb5" id="r_a1b4a276aed589e7c73f33e2d22a8ebb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b4a276aed589e7c73f33e2d22a8ebb5">getPoint</a> (double minR[], double maxR[], double r[])</td></tr>
 <tr class="memdesc:a1b4a276aed589e7c73f33e2d22a8ebb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a random point in a box.  <br /></td></tr>
 <tr class="memitem:ae4056fb996c7072ec2a8815d818c7102" id="r_ae4056fb996c7072ec2a8815d818c7102"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4056fb996c7072ec2a8815d818c7102">gaussian</a> (void)</td></tr>
@@ -534,7 +534,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Random_8cpp_source.html#l00057">57</a> of file <a class="el" href="Random_8cpp_source.html">Random.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Random_8h_source.html#l00277">seed()</a>, and <a class="el" href="Random_8cpp_source.html#l00057">setSeed()</a>.</p>
+<p class="reference">References <a class="el" href="Random_8h_source.html#l00278">seed()</a>, and <a class="el" href="Random_8cpp_source.html#l00057">setSeed()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Random_8cpp_source.html#l00028">readParameters()</a>, and <a class="el" href="Random_8cpp_source.html#l00057">setSeed()</a>.</p>
 
@@ -568,7 +568,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Random_8h_source.html#l00203">203</a> of file <a class="el" href="Random_8h_source.html">Random.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Random_8h_source.html#l00237">drawFrom()</a>, <a class="el" href="Random_8cpp_source.html#l00092">gaussian()</a>, <a class="el" href="Random_8h_source.html#l00251">getPoint()</a>, <a class="el" href="Random_8h_source.html#l00260">metropolis()</a>, <a class="el" href="Random_8h_source.html#l00224">uniformInt()</a>, and <a class="el" href="Random_8cpp_source.html#l00122">unitVector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Random_8h_source.html#l00238">drawFrom()</a>, <a class="el" href="Random_8cpp_source.html#l00092">gaussian()</a>, <a class="el" href="Random_8h_source.html#l00252">getPoint()</a>, <a class="el" href="Random_8h_source.html#l00261">metropolis()</a>, <a class="el" href="Random_8h_source.html#l00224">uniformInt()</a>, and <a class="el" href="Random_8cpp_source.html#l00122">unitVector()</a>.</p>
 
 </div>
 </div>
@@ -633,7 +633,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return random long int x uniformly distributed in range1 &lt;= x &lt; range2. </p>
+<p>Return random long int x uniform in range1 &lt;= x &lt; range2. </p>
 <p>Parameters range1 and range2 must be within the range of long integers.</p>
 <dl class="section return"><dt>Returns</dt><dd>random integer </dd></dl>
 
@@ -685,7 +685,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Random_8h_source.html#l00251">251</a> of file <a class="el" href="Random_8h_source.html">Random.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Random_8h_source.html#l00252">252</a> of file <a class="el" href="Random_8h_source.html">Random.h</a>.</p>
 
 <p class="reference">References <a class="el" href="Random_8h_source.html#l00203">uniform()</a>.</p>
 
@@ -777,7 +777,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if accepted, false if rejected </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Random_8h_source.html#l00260">260</a> of file <a class="el" href="Random_8h_source.html">Random.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Random_8h_source.html#l00261">261</a> of file <a class="el" href="Random_8h_source.html">Random.h</a>.</p>
 
 <p class="reference">References <a class="el" href="Random_8h_source.html#l00203">uniform()</a>.</p>
 
@@ -821,7 +821,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>random integer index of element of probability[] array </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Random_8h_source.html#l00237">237</a> of file <a class="el" href="Random_8h_source.html">Random.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Random_8h_source.html#l00238">238</a> of file <a class="el" href="Random_8h_source.html">Random.h</a>.</p>
 
 <p class="reference">References <a class="el" href="Random_8h_source.html#l00203">uniform()</a>.</p>
 
@@ -850,7 +850,7 @@ template&lt;class Archive&gt; </div>
 
 <p>Serialize to/from an archive. </p>
 
-<p class="definition">Definition at line <a class="el" href="Random_8h_source.html#l00284">284</a> of file <a class="el" href="Random_8h_source.html">Random.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Random_8h_source.html#l00285">285</a> of file <a class="el" href="Random_8h_source.html">Random.h</a>.</p>
 
 </div>
 </div>
@@ -880,7 +880,7 @@ template&lt;class Archive&gt; </div>
 <p>Returns value of random seed (private member variable seed_). </p>
 <dl class="section return"><dt>Returns</dt><dd>value of random number generator seed. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Random_8h_source.html#l00277">277</a> of file <a class="el" href="Random_8h_source.html">Random.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Random_8h_source.html#l00278">278</a> of file <a class="el" href="Random_8h_source.html">Random.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Random_8cpp_source.html#l00057">setSeed()</a>.</p>
 

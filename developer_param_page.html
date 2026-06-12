@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -57,58 +57,133 @@ $(function() {
   <div class="headertitle"><div class="title">Parameter File I/O </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="el" href="developer_template_page.html">C++ Class Templates</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="developer_test_page.html">Unit Tests</a> (Next) <br  />
+<div class="textblock"><p><a class="el" href="developer_periodic_page.html">Periodic Systems: CPU vs. GPU</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="developer_test_page.html">Unit Tests</a> (Next) <br  />
 </p>
-<p>The format of the parameter file (discussed in <a class="el" href="user_param_page.html">Parameter Files</a>) consists of a set of nested blocks, in which each block contains the data required to initialize an instance of a particular class. Each class that reads data from the parameter file is derived from the <a class="el" href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file.">Util::ParamComposite</a> base class, and must provide an implementation of one or the other (but not both) of the following two virtual functions: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> readParameters(std::istream&amp; in);</div>
-<div class="line"><span class="keywordtype">void</span> readParam(std::istream&amp; in);</div>
-</div><!-- fragment --><p> The readParameters() method to defines the file format for the body of a parameter file block, excluding the lines containing the opening and closing brackets. The readParam() method defines the file format for a parameter file block. The default implementation of ParamComposite::readParam() calls readParameters() and adds opening and closing lines. Most subclasses of ParamComposite re-implement the readParameters() method and rely on the default implementation of readParam() to provide the opening and closing lines. A few (including all the Manager classes) instead re-implement readParam().</p>
-<p>The source code for the readParameters() or readParam() method of a class is thus the most reliable documentation of the format of the associated parameter file block. It is thus useful for users, as well as developers, to be able to read the implementation of these method, so that they can check the source code to resolve any questions about the file format. In the examples below, we discuss the implementation of a readParameters() function.</p>
-<p>The implementation of readParameters() typically uses a several protected methods that are inherited from the parent <a class="el" href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file.">Util::ParamComposite</a> class. These are: </p><ul style="list-style: none;">
-<li>
-read &lt; T &gt;(std::istream&amp; in, const char* label, T&amp; data) is a method template that reads an single parameter of type T.  </li>
-<li>
-readParamComposite(std::istream&amp; in, ParamComposite&amp; child) invokes the readParam() method of a child ParamComposite object.  </li>
+<p>The format of the parameter file (discussed <a class="el" href="user_param_page.html">here</a> ) consists of a set of nested blocks, in which each block contains the data required to initialize an instance of a particular class. Every class that reads a block of the parameter file must be directly or indirectly derived from the <a class="el" href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file.">Util::ParamComposite</a> base class, and uses functions defined in that base class to define the format of the associated parameter file block.</p>
+<h1 class="doxsection"><a class="anchor" id="developer_param_readparameters_sec"></a>
+The readParameters function</h1>
+<p>The read a parameter file block, a subclass of <a class="el" href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file.">Util::ParamComposite</a> normally must override the inherited virtual function ParamComposite::readParameters. The interface of this function is </p><div class="fragment"><div class="line"><span class="keyword">virtual</span> <span class="keywordtype">void</span> readParameters(std::istream&amp; in);</div>
+</div><!-- fragment --><p> This class has an empty (do-nothing) default implementation. Any subclasses of ParamComposite may define a non-trivial implementation in order to define the required format of the body of the parameter file block associated with that class. This file format is defined by source cod that uses other functions inherited from ParamComposite that are used used to read individual parameters and nested subblocks in a specified order.</p>
+<p>The readParameters function is usually called by another protected member function of ParamComposite named ParamComposite::readParam. Like the readParameters function, the readParam function takes a std::iostream as its only parameter. The difference is that the readParam function reads the lines containing the opening and closing braces of a parameter file block, while readParameters reads only the body of the block, between those two lines. ParamComposite defines a default implementation of readParam function that reads the opening line of a parameter file block, calls the virtual readParameters function to read the body of the block, and then reads the line containing a closing brace. The readParam method is also declared virtual, and so can also be overridden, but most subclasses of ParamComposite override the readParameters function and simply use the default implementation of the readParam function.</p>
+<p>Most classes thus override the ParamComposite::readParameters function to define a parameter file format. In this case, the source code of this function is the most complete documentation of the format of the associated parameter file block.</p>
+<h1 class="doxsection"><a class="anchor" id="developer_param_classname_sec"></a>
+Setting the class name label</h1>
+<p>A parameter file block associated with an instance of a subclass of ParamComposite class begins with a line containing a label for the class, which is generally the name of the class or class template, followed by an opening curly bracket. For example, the opening and closing lines of a block associated with a class named "Domain" looks something like this </p><div class="fragment"><div class="line">Domain{</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> where ellipses represented the omitted body of this block. When the code that reads a required block of a parameter file reads the first line, it compares the label that precedes the opening curly bracket to an expected value, and halts execution if these strings do not exactly match.</p>
+<p>The expected value for the class name label that appears in this opening line is set by a function named "setClassName" that is inherited from ParamComposite. This function has the interface </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> setClassName(<span class="keywordtype">char</span> <span class="keyword">const</span> * className)</div>
+</div><!-- fragment --><p> Here, the className parameter is a string literal that gives the required label. The setClassName function is usually called in the constructor of a subclass of ParamComposite, and passed a string argument that is normally the name of the relevant class or class template.</p>
+<h1 class="doxsection"><a class="anchor" id="developer_param_parameters_sec"></a>
+Reading parameters</h1>
+<p>The of the readParameters() function typically uses one of several protected function templates that are inherited from the <a class="el" href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file.">Util::ParamComposite</a> class. The simplest of these are the read and readOptional function templates, either of which can be used to read a single parameter of any type.</p>
+<p>The read function template of class ParamComposite is a function template that takes the data type of a required parameter value as a template parameter. The interface for this member class template is given in part by </p><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> T&gt;</div>
+<div class="line">read(std::istream&amp; in, <span class="keyword">const</span> <span class="keywordtype">char</span>* label, T&amp; data)</div>
+</div><!-- fragment --><p> where template parameter T denotes the relevant data type. The readOptional function is used to read and optional parameter but is otherwise identical, and has an interface </p><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> T&gt;</div>
+<div class="line">readOptional(std::istream&amp; in, <span class="keyword">const</span> <span class="keywordtype">char</span>* label, T&amp; data)</div>
+</div><!-- fragment --><p> In both of these function template:</p>
+<ul>
+<li>parameter "in" represents an input stream associated with a parameter file. <br  />
+</li>
+<li>parameter "label" is a string literal that gives the expected value of the label string for a parameter or a parameter block.</li>
+<li>parameter "data" is a reference to the variable that will hold the parameter value extracted from the parameter file.</li>
 </ul>
-<p>In these methods, the parameter "in" represents an input stream. The parameter "label" is a string literal that represents the expect value of the label string for a parameter or a parameter block. Other more specialized read* methods to read parameters that are represented by arrays and matrices are discussed in the class documentation for <a class="el" href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file.">Util::ParamComposite</a>.</p>
-<p>As an example, consider a class A that has an int member variable var1_, a double member var2_, and a member thingy_ that is an instance of another class B: </p><div class="fragment"><div class="line"><span class="keyword">using </span>namepace <a class="code hl_namespace" href="namespaceUtil.html">Util</a>;</div>
+<p>For simplicity, the type of return parameter has been omitted from both of the above interface descriptions. This is because the return value is actually almost never retained or used, and the actual type of the return value is somewhat a specialized type, <a class="el" href="classUtil_1_1ScalarParam.html" title="Template for a Parameter object associated with a scalar variable.">Util::ScalarParam&lt;T&gt;</a>. Both of these function templates are thus normally used as if they were void functions.</p>
+<p>The read template is used for required parameters, and throws an Exception if the part of the stream that it reads does not begin with a string that exactly matches the "label" parameter. The readOptional template is used for optional parametrs, and so will exit with throwing an Exception if it does not encounter a label string that matches the label parameter, since this indicates only that the relevant optional parameter was omitted.</p>
+<p><b>Example</b>: As a simple example, consider the following skeleton of the definition for a class named A: </p><div class="fragment"><div class="line"><span class="keyword">using </span>namepace <a class="code hl_namespace" href="namespaceUtil.html">Util</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>A : <span class="keyword">public</span> ParamComposite</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line"></div>
+<div class="line">   A();</div>
+<div class="line"></div>
+<div class="line">   <span class="keywordtype">void</span> readParameters(std::istream&amp; in) <span class="keyword">override</span>;</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// other member functions</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line"> </div>
+<div class="line">   <span class="keywordtype">int</span>    var1_;</div>
+<div class="line">   <span class="keywordtype">double</span> var2_;</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespaceUtil_html"><div class="ttname"><a href="namespaceUtil.html">Util</a></div><div class="ttdoc">Utility classes for scientific computation.</div><div class="ttdef"><b>Definition</b> <a href="accumulators_8mod_source.html#l00001">accumulators.mod:1</a></div></div>
+</div><!-- fragment --><p> Class A has an int member variable var1_, and a double precision real member variable var2_. Suppose that values of both var1_ and var2_ need to be read from a parameter file block, and that the desired parameter block format for a block associated with class A is as shown below: </p><pre class="fragment">A{
+  var1     int
+  var2*    double
+}
+</pre><p> This parameter file format is shown in a <a class="el" href="user_param_format_page.html">standard form</a>, in which the strings var1 and var2 represent literal parameter label strings, the typenames int and double indicate the required types of the corresponding parameter values, and the asterisk after the var2 label indicates that var2 is an <a class="el" href="user_param_format_page.html">optional</a> double precision parameter. <br  />
+</p>
+<p>Minimal implementations of the constructor and readParameters member functions required to parse this parameter block format are show below: </p><div class="fragment"><div class="line">A::A()</div>
+<div class="line">{ setClassName(<span class="stringliteral">&quot;A&quot;</span>); }</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> A::readParameters(std::istream&amp; in)</div>
+<div class="line">{</div>
+<div class="line">   var2_ = 0.0;</div>
+<div class="line">   read(in, <span class="stringliteral">&quot;var1&quot;</span>, var1_);</div>
+<div class="line">   readOptional(in, <span class="stringliteral">&quot;var2&quot;</span>, var2_);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> The label string "A" that appears in the opening line of the block is passed an argument to the setClassName class in the constructor. The required label strings "var1", and "var2" for individual parameters are instead passed as parameters to the read and readOptional functions. The line "var2_ = 0.0" assigns a zero default value to parameter var2_, which will be used if a line containing this optional parameter does not appear in the parameter file.</p>
+<p>Often, the implementation of a readParameters() method also contains code to validate input values, allocate any required memory, and take any other actions that are required to initialize an instance of the class but require knowledge of values of parameters that are read from the parameter file. No such additional initialization steps are needed for this simple example.</p>
+<h1 class="doxsection"><a class="anchor" id="developer_param_array_sec"></a>
+Reading array valued parameters</h1>
+<p>The ParaComposite class also provides several other protected member functions that can be used by subclass to read array- and matrix-valued parameters, for which values of multiple elements can be placed in any of several different types of container. <br  />
+</p>
+<p>For example, the readDArray and readOptionalDArray function templates are designed to read required and optional array-valued parameters for which the elements are stored DArray containers. Like the read and readOptional functions, these are function templates for which type of each element is a template parameter. The interface for the ParamComposite::readDArray function template (without the type of the seldom-used return value) is: </p><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line">readDArray(std::istream &amp;in, <span class="keyword">const</span> <span class="keywordtype">char</span> *label, DArray&lt;Type&gt;&amp; array, <span class="keywordtype">int</span> n)</div>
+</div><!-- fragment --><p> The readDArrayOptional member function template has an identical interface. For both of these function templates, the "in" and "label" parameters have the same meaning as for individual parameters, while:</p>
+<ul>
+<li>parameter "array" is a reference to a DArray whose elements will hold an array parameter values</li>
+<li>n is the expected number of elements in the array</li>
+</ul>
+<p>The parameter file format for an array-valued parameter starts with a line containing the label string following by an opening square bracket ([) followed by elements values on separate lines and ending with a closing square bracket (]), as discussed <a class="el" href="user_param_format_page.html">Parameter File - Format Descriptions</a> previously .</p>
+<p>The ParamComposite base class provides several other protected member functions that subclasses can use read arrays and matrices of parameters into other types of containers. These include functions designe to store values in a bare C arrays, a fixed size FArray containers, and a DMatrix matrix container. Please consult the developer documentation for the <a class="el" href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file.">Util::ParamComposite</a> class for more complete information.</p>
+<h1 class="doxsection"><a class="anchor" id="developer_param_subblocks_sec"></a>
+Reading nested subblocks</h1>
+<p>The ParamComposite class also provides two protected inherited functions named readParamComposite and readOptionalParamComposite that may be used by subclasses to read nested subblocks. Slightly simplified versions of interfaces for these functions (omitting an optional parameter that is rarely used) are </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> readParamComposite(std::istream in, ParamComposite &amp;child)</div>
+</div><!-- fragment --><p> and </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> readParamCompositeOptional(std::istream in, ParamComposite &amp;child)</div>
+</div><!-- fragment --><p> Here, "parameter" in is an input parameter file stream, while "child" is a reference to an instance of a class that is another subclass of ParamComposite which must read a nested subblock. Both functions are designed to read a nested subblock associated with a member of another subclass that of ParamComposite. The function readParamComposite is used for required subblocks, while readParamCompositeOptional is used for optional subblocks.</p>
+<p><b> Example </b>: To see how this works, we consider slightly more complicated version of the class named A that is defined above. We suppose for this purpose that A has a third member variable that holds an instance of another class named B, as shown below: below: </p><div class="fragment"><div class="line"><span class="keyword">using </span>namepace <a class="code hl_namespace" href="namespaceUtil.html">Util</a>;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">class </span>A : <span class="keyword">public</span> ParamComposite</div>
 <div class="line">{</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line"> </div>
-<div class="line">   <span class="comment">// other methods</span></div>
+<div class="line">   <span class="comment">// Default constructor</span></div>
+<div class="line">   A();</div>
 <div class="line"> </div>
+<div class="line">   <span class="comment">// Read the body of the parameter file</span></div>
 <div class="line">   <span class="keywordtype">void</span> readParameters(std::istream&amp; in);</div>
 <div class="line"> </div>
-<div class="line">   <span class="comment">// other methods</span></div>
+<div class="line">   <span class="comment">// other member functions</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">private</span>:</div>
 <div class="line"> </div>
 <div class="line">   <span class="keywordtype">int</span>    var1_;</div>
 <div class="line">   <span class="keywordtype">double</span> var2_;</div>
-<div class="line">   B      thingy_;</div>
+<div class="line">   B      varB_;</div>
 <div class="line">}</div>
-<div class="ttc" id="anamespaceUtil_html"><div class="ttname"><a href="namespaceUtil.html">Util</a></div><div class="ttdoc">Utility classes for scientific computation.</div><div class="ttdef"><b>Definition</b> <a href="accumulators_8mod_source.html#l00001">accumulators.mod:1</a></div></div>
-</div><!-- fragment --><p> We assume here that B is a also subclass of ParamComposite, which is associated with a nested subblock in the parameter file format for class A.</p>
-<p>The parameter block format for class A might look like this: </p><div class="fragment"><div class="line">A{</div>
-<div class="line">  var1      1</div>
-<div class="line">  var2    1.5</div>
-<div class="line">  B{</div>
-<div class="line">    ...</div>
-<div class="line">  }</div>
-<div class="line">}</div>
-</div><!-- fragment --><p> where B{ ... } represents the (unspecified) parameter file format for class B.</p>
-<p>The minimum implementation of A::readParam() required to parse this file format is show below: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> A::readParameters(std::istream&amp; in)</div>
+</div><!-- fragment --><p> We also suppose that B is itself a subclass of ParamComposite, and that the parameter file format for class A includes a nested subblock that is associated with the variable varB_ of type B, giving the following parameter file format: </p><pre class="fragment">A{
+  var1    [int]
+  var2*   [double]
+  B{ 
+    ...  
+  }
+}
+</pre><p> Here, ellipses (...) are used to indicate the omitted indented body of a nested parameter file subblock associated with variable varB_. In this example, var1 and the B block are required, while var2 is optional. <br  />
+</p>
+<p>A minimal version of the readParameters function required to read this modified format is shown below </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> A::readParameters(std::istream&amp; in)</div>
 <div class="line">{</div>
-<div class="line">   read&lt;int&gt;(in, <span class="stringliteral">&quot;var1&quot;</span>, var1_);</div>
-<div class="line">   read&lt;double&gt;(in, <span class="stringliteral">&quot;var2&quot;</span>, var2_);</div>
-<div class="line">   readParamComposite(in, thingy_);</div>
+<div class="line">   read(in, <span class="stringliteral">&quot;var1&quot;</span>, var1_);</div>
+<div class="line">   readOptional(in, <span class="stringliteral">&quot;var2&quot;</span>, var2_);</div>
+<div class="line">   readParamComposite(in, varB_);</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> For a real class, the implementation of readParam() might also contain code to validate input, allocate any required memory, and do whatever else is required to initialize an instance of A.</p>
-<p>The expected label strings "var1", and "var2" are all passed as string literals to the relevant read* methods. Each of these methods throws an Exception, and thereby abort program execution, if the expected label is not found. The readParam() method of a ParamComposite also checks that class name before the opening bracket in the opening line of a parameter file block matches the expected class name, or compares this name to a list of possible names in the case of a polymorphic parameter file block.</p>
+</div><!-- fragment --><p> The readParamCompositeOptional function would have been used to read the nest block associatd with varB_ if that block was optional rather than required.</p>
+<p>Note that the readParamComposite or readParamCompositeOptional functions do not require a label string as an input parameter. This is because each subclass of ParamComposite must instead use the inherited "setClassName" function to define the class name label that should appear in the opening line of an associated parameter file block. In this example, all constructors of class B are thus assumed to contain the statement setClassName("B").</p>
 <p><br  />
- <a class="el" href="developer_template_page.html">C++ Class Templates</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="developer_page.html">Developer Information</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="developer_test_page.html">Unit Tests</a> (Next) </p>
+ <a class="el" href="developer_periodic_page.html">Periodic Systems: CPU vs. GPU</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="developer_page.html">Developer Information</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="developer_test_page.html">Unit Tests</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

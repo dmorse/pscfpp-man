@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -67,7 +67,7 @@ $(function() {
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">* Distributed under the terms of the GNU General Public License.</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;pscf/chem/Species.h&gt;</span>           <span class="comment">// base class</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;pscf/chem/Species.h&gt;</span>           <span class="comment">// base class template</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;pscf/chem/Vertex.h&gt;</span>            <span class="comment">// member</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;pscf/chem/PolymerType.h&gt;</span>       <span class="comment">// member</span></div>
@@ -83,183 +83,178 @@ $(function() {
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>   <span class="keyword">using namespace </span>Util;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
-<div class="foldopen" id="foldopen00070" data-start="{" data-end="};">
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html">   70</a></span>   <span class="keyword">class </span><a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a216b773f72feb4d7e76b337548374eeb">PolymerSpecies</a> : <span class="keyword">public</span> <a class="code hl_function" href="classPscf_1_1Species.html#af697d1f9ab74d40e20717a229fc2e5f3">Species</a></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>   {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>   <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a216b773f72feb4d7e76b337548374eeb">PolymerSpecies</a>();</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a89f1cfde1849a96e0db3b39d8a18888d">~PolymerSpecies</a>();</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a669997da55add219693c9fa6e8446259">readParameters</a>(std::istream&amp; in);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a5d96c576b19d4de170c0bd18ab686fa1">  108</a></span>      <span class="keyword">virtual</span> <a class="code hl_class" href="classPscf_1_1Edge.html">Edge</a>&amp; <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a5d96c576b19d4de170c0bd18ab686fa1">edge</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) = 0;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a09534c482ef5bc2bab30a2bb376b0785">  115</a></span>      <span class="keyword">virtual</span> <a class="code hl_class" href="classPscf_1_1Edge.html">Edge</a> <span class="keyword">const</span>&amp; <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a09534c482ef5bc2bab30a2bb376b0785">edge</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span></div>
-<div class="foldopen" id="foldopen00124" data-start="{" data-end="}">
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerTmpl.html#a01945dca17c487e068d3f941625c6845">  124</a></span>      <span class="keyword">const</span> <a class="code hl_class" href="classPscf_1_1Vertex.html">Vertex</a>&amp; <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a01945dca17c487e068d3f941625c6845">vertex</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span></div>
-<div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerTmpl.html#a9de76c8bdb004ba7de73184aab67625f">  133</a></span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a9de76c8bdb004ba7de73184aab67625f">nBlock</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
-<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerTmpl.html#a5a69c4eb67fafa3e4d8a3e7157cdcf91">  141</a></span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a5a69c4eb67fafa3e4d8a3e7157cdcf91">nVertex</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span></div>
-<div class="foldopen" id="foldopen00146" data-start="{" data-end="}">
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerTmpl.html#a840d1875e810fea65a9368c6caf76468">  146</a></span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a840d1875e810fea65a9368c6caf76468">nPropagator</a>() <span class="keyword">const</span>;  <span class="comment">//</span></div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#ae94f574daa6ca92e594827be50678187">length</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span></div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a94aaf98a48d27a2ae1888624d4e1732b">nBead</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span></div>
-<div class="foldopen" id="foldopen00165" data-start="{" data-end="}">
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerTmpl.html#af7354f7a413656cf93d0ddb7e4f313d0">  165</a></span>      PolymerType::Enum <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#af7354f7a413656cf93d0ddb7e4f313d0">type</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span></div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span></div>
-<div class="foldopen" id="foldopen00192" data-start="{" data-end="}">
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerTmpl.html#aed0f37c2e0c9ea9dfdff0e1c402da509">  192</a></span>      <a class="code hl_class" href="classUtil_1_1Pair.html">Pair&lt;int&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#aed0f37c2e0c9ea9dfdff0e1c402da509">propagatorId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span></div>
-<div class="foldopen" id="foldopen00212" data-start="{" data-end="}">
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerTmpl.html#a44a255cb903e721ccde2c14c42c224fc">  212</a></span>      <a class="code hl_class" href="classUtil_1_1Pair.html">Pair&lt;int&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a44a255cb903e721ccde2c14c42c224fc">path</a>(<span class="keywordtype">int</span> is, <span class="keywordtype">int</span> it) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span></div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>   <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span></div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a4b401ab63cadf2b6fd7def1a71836e61">  221</a></span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a4b401ab63cadf2b6fd7def1a71836e61">allocateBlocks</a>() = 0;</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span></div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a02a723b1af20891f662d98a03e656d1e">  228</a></span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a02a723b1af20891f662d98a03e656d1e">readBlocks</a>(std::istream&amp; in) = 0;</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span></div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a6f47be4fd854f06054fff89a3211f59f">makePlan</a>();</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span></div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a3df5670db61d570af3372884889b1933">makePaths</a>();</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>   <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span></div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>      <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;Vertex&gt;</a> vertices_;</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span></div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>      <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt; Pair&lt;int&gt;</a> &gt; propagatorIds_;</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span></div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>      <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt; DArray&lt; Pair&lt;int&gt;</a> &gt; &gt; paths_;</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span></div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>      <span class="keywordtype">int</span> nBlock_;</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span></div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>      <span class="keywordtype">int</span> nVertex_;</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span></div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>      <span class="keywordtype">int</span> nPropagator_;</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span></div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>      PolymerType::Enum type_;</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span></div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>      <span class="keywordtype">void</span> isValid();</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>   };</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>   <span class="comment">// Inline functions</span></div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span><span class="comment">   * Number of blocks in this polymer.</span></div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="comment">   */</span></div>
-<div class="foldopen" id="foldopen00298" data-start="{" data-end="}">
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a9de76c8bdb004ba7de73184aab67625f">  298</a></span>   <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a9de76c8bdb004ba7de73184aab67625f">PolymerSpecies::nBlock</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> nBlock_; }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> WT=<span class="keywordtype">double</span>&gt;</div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="};">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html">   71</a></span>   <span class="keyword">class </span><a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a5e1a1a06ade9935bee63a2c38fb6599b">PolymerSpecies</a> : <span class="keyword">public</span> <a class="code hl_function" href="classPscf_1_1Species.html#a76f5a9f466a53516f9213897522874a1">Species</a>&lt;WT&gt;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>   {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>   <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a5e1a1a06ade9935bee63a2c38fb6599b">   79</a></span>      <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a5e1a1a06ade9935bee63a2c38fb6599b">PolymerSpecies</a>();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#abf1daed1a37271c0206cf30eef871e93">   84</a></span>      <span class="keyword">virtual</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#abf1daed1a37271c0206cf30eef871e93">~PolymerSpecies</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a5f9a5554f20607fd8059b08832615402">   95</a></span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a5f9a5554f20607fd8059b08832615402">readParameters</a>(std::istream&amp; in);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a1445ac36357034a0d75f2afc797cce25">  109</a></span>      <span class="keyword">virtual</span> <a class="code hl_class" href="classPscf_1_1Edge.html">Edge</a>&amp; <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a1445ac36357034a0d75f2afc797cce25">edge</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) = 0;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a25ba885b0a84cbccfce5fc4bdde6a793">  116</a></span>      <span class="keyword">virtual</span> <a class="code hl_class" href="classPscf_1_1Edge.html">Edge</a> <span class="keyword">const</span>&amp; <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a25ba885b0a84cbccfce5fc4bdde6a793">edge</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a6ba9dcfa94cae17619337b5a5bf76584">  125</a></span>      <span class="keyword">const</span> <a class="code hl_class" href="classPscf_1_1Vertex.html">Vertex</a>&amp; <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a6ba9dcfa94cae17619337b5a5bf76584">vertex</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a733b057c92ddb2670199d19d585afc96">  134</a></span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a733b057c92ddb2670199d19d585afc96">nBlock</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a024e442b260d99fd7771c9886ed67e33">  142</a></span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a024e442b260d99fd7771c9886ed67e33">nVertex</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#ab2de2a54801a1ab29e657f27be4eabc1">  147</a></span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#ab2de2a54801a1ab29e657f27be4eabc1">nPropagator</a>() <span class="keyword">const</span>;  <span class="comment">//</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a227baeb6a86774f04a8af1f9571ce57b">  154</a></span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a227baeb6a86774f04a8af1f9571ce57b">length</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a21209f0610590fb48fd40941f6477900">  161</a></span>      <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a21209f0610590fb48fd40941f6477900">nBead</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#af22ab67e175cd5291b47ec67e7b40f4e">  166</a></span>      PolymerType::Enum <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#af22ab67e175cd5291b47ec67e7b40f4e">type</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#ac8b4c7f4121bffecdafe9b3f99e49992">  193</a></span>      <a class="code hl_class" href="classUtil_1_1Pair.html">Pair&lt;int&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#ac8b4c7f4121bffecdafe9b3f99e49992">propagatorId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a391573ece61509ad8d1046b864106b9a">  213</a></span>      <a class="code hl_class" href="classUtil_1_1Pair.html">Pair&lt;int&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a391573ece61509ad8d1046b864106b9a">path</a>(<span class="keywordtype">int</span> is, <span class="keywordtype">int</span> it) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>   <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#ae71eab291baf83ea15b3be8c2de8a363">  222</a></span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#ae71eab291baf83ea15b3be8c2de8a363">allocateBlocks</a>() = 0;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a6afdf888ed98dd7e1ff59984db3ccdd4">  229</a></span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a6afdf888ed98dd7e1ff59984db3ccdd4">readBlocks</a>(std::istream&amp; in) = 0;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#afa5f7bbc6bb12a0b4f0ec520315eb5e9">  251</a></span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#afa5f7bbc6bb12a0b4f0ec520315eb5e9">makePlan</a>();</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a2c8e7e89e4c86595639ece6a8b040590">  260</a></span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a2c8e7e89e4c86595639ece6a8b040590">makePaths</a>();</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>   <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>      <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt;Vertex&gt;</a> vertices_;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt; Pair&lt;int&gt;</a> &gt; propagatorIds_;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>      <a class="code hl_class" href="classUtil_1_1DArray.html">DArray&lt; DArray&lt; Pair&lt;int&gt;</a> &gt; &gt; paths_;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>      <span class="keywordtype">int</span> nBlock_;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>      <span class="keywordtype">int</span> nVertex_;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span></div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>      <span class="keywordtype">int</span> nPropagator_;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>      PolymerType::Enum type_;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>      <span class="keywordtype">void</span> isValid();</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>   };</div>
 </div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="comment">   * Number of vertices (ends and/or junctions)</span></div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span><span class="comment">   */</span></div>
-<div class="foldopen" id="foldopen00304" data-start="{" data-end="}">
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a5a69c4eb67fafa3e4d8a3e7157cdcf91">  304</a></span>   <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a5a69c4eb67fafa3e4d8a3e7157cdcf91">PolymerSpecies::nVertex</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> nVertex_; }</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>   <span class="comment">// Inline functions</span></div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="comment">   * Number of blocks in this polymer.</span></div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> WT&gt; <span class="keyword">inline</span> </div>
+<div class="foldopen" id="foldopen00300" data-start="{" data-end="}">
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a733b057c92ddb2670199d19d585afc96">  300</a></span>   <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a733b057c92ddb2670199d19d585afc96">PolymerSpecies&lt;WT&gt;::nBlock</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> nBlock_; }</div>
 </div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span><span class="comment">   * Number of propagators in this polymer (2*nBlock).</span></div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="comment">   */</span></div>
-<div class="foldopen" id="foldopen00310" data-start="{" data-end="}">
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a840d1875e810fea65a9368c6caf76468">  310</a></span>   <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a840d1875e810fea65a9368c6caf76468">PolymerSpecies::nPropagator</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> nPropagator_; }</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="comment">   * Number of vertices (ends and junctions)</span></div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> WT&gt; <span class="keyword">inline</span> </div>
+<div class="foldopen" id="foldopen00307" data-start="{" data-end="}">
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a024e442b260d99fd7771c9886ed67e33">  307</a></span>   <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a024e442b260d99fd7771c9886ed67e33">PolymerSpecies&lt;WT&gt;::nVertex</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> nVertex_; }</div>
 </div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span><span class="comment">   * Get a specified Vertex by const reference.</span></div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>   <span class="keyword">inline</span></div>
-<div class="foldopen" id="foldopen00317" data-start="{" data-end="}">
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a01945dca17c487e068d3f941625c6845">  317</a></span>   <a class="code hl_class" href="classPscf_1_1Vertex.html">Vertex</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a01945dca17c487e068d3f941625c6845">PolymerSpecies::vertex</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> vertices_[id]; }</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span><span class="comment">   * Number of propagators in this polymer (2*nBlock).</span></div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> WT&gt; <span class="keyword">inline</span> </div>
+<div class="foldopen" id="foldopen00314" data-start="{" data-end="}">
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#ab2de2a54801a1ab29e657f27be4eabc1">  314</a></span>   <span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#ab2de2a54801a1ab29e657f27be4eabc1">PolymerSpecies&lt;WT&gt;::nPropagator</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> nPropagator_; }</div>
 </div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="comment">   * Get a propagator id, indexed in order of computation.</span></div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>   <span class="keyword">inline</span></div>
-<div class="foldopen" id="foldopen00324" data-start="{" data-end="}">
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#aed0f37c2e0c9ea9dfdff0e1c402da509">  324</a></span>   <a class="code hl_class" href="classUtil_1_1Pair.html">Pair&lt;int&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#aed0f37c2e0c9ea9dfdff0e1c402da509">PolymerSpecies::propagatorId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="keyword">   </span>{</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(<span class="keywordtype">id</span> &gt;= 0);</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(<span class="keywordtype">id</span> &lt; nPropagator_);</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>      <span class="keywordflow">return</span> propagatorIds_[id];</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>   }</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="comment">   * Get a specified Vertex by const reference.</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> WT&gt; <span class="keyword">inline</span></div>
+<div class="foldopen" id="foldopen00321" data-start="{" data-end="}">
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a6ba9dcfa94cae17619337b5a5bf76584">  321</a></span>   <a class="code hl_class" href="classPscf_1_1Vertex.html">Vertex</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a6ba9dcfa94cae17619337b5a5bf76584">PolymerSpecies&lt;WT&gt;::vertex</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> vertices_[id]; }</div>
 </div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="comment">   * Get a propagator id that leads from a source vertex towards a target.</span></div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>   <span class="keyword">inline</span></div>
-<div class="foldopen" id="foldopen00335" data-start="{" data-end="}">
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a44a255cb903e721ccde2c14c42c224fc">  335</a></span>   <a class="code hl_class" href="classUtil_1_1Pair.html">Pair&lt;int&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a44a255cb903e721ccde2c14c42c224fc">PolymerSpecies::path</a>(<span class="keywordtype">int</span> is, <span class="keywordtype">int</span> it)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="keyword">   </span>{</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(is &gt;= 0);</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(is &lt; nVertex_);</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(it &gt;= 0);</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(it &lt; nVertex_);</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>      <span class="keywordflow">return</span> paths_[is][it];</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>   }</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="comment">   * Get a propagator id, indexed in order of computation.</span></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> WT&gt; <span class="keyword">inline</span> </div>
+<div class="foldopen" id="foldopen00328" data-start="{" data-end="}">
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#ac8b4c7f4121bffecdafe9b3f99e49992">  328</a></span>   <a class="code hl_class" href="classUtil_1_1Pair.html">Pair&lt;int&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#ac8b4c7f4121bffecdafe9b3f99e49992">PolymerSpecies&lt;WT&gt;::propagatorId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span><span class="keyword">   </span>{</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(<span class="keywordtype">id</span> &gt;= 0);</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(<span class="keywordtype">id</span> &lt; nPropagator_);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>      <span class="keywordflow">return</span> propagatorIds_[id];</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>   }</div>
 </div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="comment">   * Get a propagator id that leads from a source vertex towards a target.</span></div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> WT&gt; <span class="keyword">inline</span> </div>
+<div class="foldopen" id="foldopen00339" data-start="{" data-end="}">
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#a391573ece61509ad8d1046b864106b9a">  339</a></span>   <a class="code hl_class" href="classUtil_1_1Pair.html">Pair&lt;int&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#a391573ece61509ad8d1046b864106b9a">PolymerSpecies&lt;WT&gt;::path</a>(<span class="keywordtype">int</span> is, <span class="keywordtype">int</span> it)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="keyword">   </span>{</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(is &gt;= 0);</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(is &lt; nVertex_);</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(it &gt;= 0);</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(it &lt; nVertex_);</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>      <span class="keywordflow">return</span> paths_[is][it];</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>   }</div>
 </div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span> </div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="comment">   * Get the polymer type enumeration value (Branched or Linear).</span></div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>   <span class="keyword">inline</span></div>
-<div class="foldopen" id="foldopen00348" data-start="{" data-end="}">
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#af7354f7a413656cf93d0ddb7e4f313d0">  348</a></span>   PolymerType::Enum <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#af7354f7a413656cf93d0ddb7e4f313d0">PolymerSpecies::type</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> type_; }</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="comment">   * Get the polymer type enumeration value (Branched or Linear).</span></div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> WT&gt; <span class="keyword">inline</span> </div>
+<div class="foldopen" id="foldopen00352" data-start="{" data-end="}">
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno"><a class="line" href="classPscf_1_1PolymerSpecies.html#af22ab67e175cd5291b47ec67e7b40f4e">  352</a></span>   PolymerType::Enum <a class="code hl_function" href="classPscf_1_1PolymerSpecies.html#af22ab67e175cd5291b47ec67e7b40f4e">PolymerSpecies&lt;WT&gt;::type</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> type_; }</div>
 </div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>}</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="preprocessor">#endif</span></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span> </div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>   <span class="comment">// Explicit instantiation declaratio</span></div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>   <span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1PolymerSpecies.html">PolymerSpecies&lt;double&gt;</a>;</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span> </div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>}</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassPscf_1_1Edge_html"><div class="ttname"><a href="classPscf_1_1Edge.html">Pscf::Edge</a></div><div class="ttdoc">Descriptor for a block within a block polymer.</div><div class="ttdef"><b>Definition</b> <a href="Edge_8h_source.html#l00058">Edge.h:59</a></div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a01945dca17c487e068d3f941625c6845"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a01945dca17c487e068d3f941625c6845">Pscf::PolymerSpecies::vertex</a></div><div class="ttdeci">const Vertex &amp; vertex(int id) const</div><div class="ttdoc">Get a specified Vertex by const reference.</div><div class="ttdef"><b>Definition</b> <a href="#l00317">PolymerSpecies.h:317</a></div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a02a723b1af20891f662d98a03e656d1e"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a02a723b1af20891f662d98a03e656d1e">Pscf::PolymerSpecies::readBlocks</a></div><div class="ttdeci">virtual void readBlocks(std::istream &amp;in)=0</div><div class="ttdoc">Read array of blocks from parameter file.</div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a09534c482ef5bc2bab30a2bb376b0785"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a09534c482ef5bc2bab30a2bb376b0785">Pscf::PolymerSpecies::edge</a></div><div class="ttdeci">virtual Edge const &amp; edge(int id) const =0</div><div class="ttdoc">Get a specified Edge (block descriptor) by const reference.</div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a216b773f72feb4d7e76b337548374eeb"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a216b773f72feb4d7e76b337548374eeb">Pscf::PolymerSpecies::PolymerSpecies</a></div><div class="ttdeci">PolymerSpecies()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8cpp_source.html#l00023">PolymerSpecies.cpp:23</a></div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a3df5670db61d570af3372884889b1933"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a3df5670db61d570af3372884889b1933">Pscf::PolymerSpecies::makePaths</a></div><div class="ttdeci">void makePaths()</div><div class="ttdoc">Create a matrix of vertex-to-vertex path signposts.</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8cpp_source.html#l00165">PolymerSpecies.cpp:165</a></div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a44a255cb903e721ccde2c14c42c224fc"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a44a255cb903e721ccde2c14c42c224fc">Pscf::PolymerSpecies::path</a></div><div class="ttdeci">Pair&lt; int &gt; const &amp; path(int is, int it) const</div><div class="ttdoc">Get an id for a propagator from one vertex towards a target.</div><div class="ttdef"><b>Definition</b> <a href="#l00335">PolymerSpecies.h:335</a></div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a4b401ab63cadf2b6fd7def1a71836e61"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a4b401ab63cadf2b6fd7def1a71836e61">Pscf::PolymerSpecies::allocateBlocks</a></div><div class="ttdeci">virtual void allocateBlocks()=0</div><div class="ttdoc">Allocate array of blocks.</div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a5a69c4eb67fafa3e4d8a3e7157cdcf91"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a5a69c4eb67fafa3e4d8a3e7157cdcf91">Pscf::PolymerSpecies::nVertex</a></div><div class="ttdeci">int nVertex() const</div><div class="ttdoc">Number of vertices (junctions and chain ends).</div><div class="ttdef"><b>Definition</b> <a href="#l00304">PolymerSpecies.h:304</a></div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a5d96c576b19d4de170c0bd18ab686fa1"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a5d96c576b19d4de170c0bd18ab686fa1">Pscf::PolymerSpecies::edge</a></div><div class="ttdeci">virtual Edge &amp; edge(int id)=0</div><div class="ttdoc">Get a specified Edge (block descriptor) by non-const reference.</div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a669997da55add219693c9fa6e8446259"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a669997da55add219693c9fa6e8446259">Pscf::PolymerSpecies::readParameters</a></div><div class="ttdeci">virtual void readParameters(std::istream &amp;in)</div><div class="ttdoc">Read parameters and initialize.</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8cpp_source.html#l00043">PolymerSpecies.cpp:43</a></div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a6f47be4fd854f06054fff89a3211f59f"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a6f47be4fd854f06054fff89a3211f59f">Pscf::PolymerSpecies::makePlan</a></div><div class="ttdeci">virtual void makePlan()</div><div class="ttdoc">Make a plan for order in which propagators should be computed.</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8cpp_source.html#l00114">PolymerSpecies.cpp:114</a></div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a840d1875e810fea65a9368c6caf76468"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a840d1875e810fea65a9368c6caf76468">Pscf::PolymerSpecies::nPropagator</a></div><div class="ttdeci">int nPropagator() const</div><div class="ttdoc">Number of propagators (2*nBlock).</div><div class="ttdef"><b>Definition</b> <a href="#l00310">PolymerSpecies.h:310</a></div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a89f1cfde1849a96e0db3b39d8a18888d"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a89f1cfde1849a96e0db3b39d8a18888d">Pscf::PolymerSpecies::~PolymerSpecies</a></div><div class="ttdeci">~PolymerSpecies()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8cpp_source.html#l00037">PolymerSpecies.cpp:37</a></div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a94aaf98a48d27a2ae1888624d4e1732b"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a94aaf98a48d27a2ae1888624d4e1732b">Pscf::PolymerSpecies::nBead</a></div><div class="ttdeci">int nBead() const</div><div class="ttdoc">Total number of beads in the polymer (bead model).</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8cpp_source.html#l00416">PolymerSpecies.cpp:416</a></div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a9de76c8bdb004ba7de73184aab67625f"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a9de76c8bdb004ba7de73184aab67625f">Pscf::PolymerSpecies::nBlock</a></div><div class="ttdeci">int nBlock() const</div><div class="ttdoc">Number of blocks.</div><div class="ttdef"><b>Definition</b> <a href="#l00298">PolymerSpecies.h:298</a></div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_ae94f574daa6ca92e594827be50678187"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#ae94f574daa6ca92e594827be50678187">Pscf::PolymerSpecies::length</a></div><div class="ttdeci">double length() const</div><div class="ttdoc">Sum of the lengths of all blocks in the polymer (thread model).</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8cpp_source.html#l00403">PolymerSpecies.cpp:403</a></div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_aed0f37c2e0c9ea9dfdff0e1c402da509"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#aed0f37c2e0c9ea9dfdff0e1c402da509">Pscf::PolymerSpecies::propagatorId</a></div><div class="ttdeci">Pair&lt; int &gt; const &amp; propagatorId(int id) const</div><div class="ttdoc">Get a propagator identifier, indexed by order of computation.</div><div class="ttdef"><b>Definition</b> <a href="#l00324">PolymerSpecies.h:324</a></div></div>
-<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_af7354f7a413656cf93d0ddb7e4f313d0"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#af7354f7a413656cf93d0ddb7e4f313d0">Pscf::PolymerSpecies::type</a></div><div class="ttdeci">PolymerType::Enum type() const</div><div class="ttdoc">Get Polymer type (Branched or Linear)</div><div class="ttdef"><b>Definition</b> <a href="#l00348">PolymerSpecies.h:348</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Species_html_af697d1f9ab74d40e20717a229fc2e5f3"><div class="ttname"><a href="classPscf_1_1Species.html#af697d1f9ab74d40e20717a229fc2e5f3">Pscf::Species::Species</a></div><div class="ttdeci">Species()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition</b> <a href="Species_8cpp_source.html#l00018">Species.cpp:18</a></div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html">Pscf::PolymerSpecies</a></div><div class="ttdoc">Descriptor for a linear or acyclic branched block polymer.</div><div class="ttdef"><b>Definition</b> <a href="#l00071">PolymerSpecies.h:72</a></div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a024e442b260d99fd7771c9886ed67e33"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a024e442b260d99fd7771c9886ed67e33">Pscf::PolymerSpecies::nVertex</a></div><div class="ttdeci">int nVertex() const</div><div class="ttdoc">Number of vertices (junctions and chain ends).</div><div class="ttdef"><b>Definition</b> <a href="#l00307">PolymerSpecies.h:307</a></div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a1445ac36357034a0d75f2afc797cce25"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a1445ac36357034a0d75f2afc797cce25">Pscf::PolymerSpecies::edge</a></div><div class="ttdeci">virtual Edge &amp; edge(int id)=0</div><div class="ttdoc">Get a specified Edge (block descriptor) by non-const reference.</div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a21209f0610590fb48fd40941f6477900"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a21209f0610590fb48fd40941f6477900">Pscf::PolymerSpecies::nBead</a></div><div class="ttdeci">int nBead() const</div><div class="ttdoc">Total number of beads in the polymer (bead model).</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8tpp_source.html#l00417">PolymerSpecies.tpp:417</a></div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a227baeb6a86774f04a8af1f9571ce57b"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a227baeb6a86774f04a8af1f9571ce57b">Pscf::PolymerSpecies::length</a></div><div class="ttdeci">double length() const</div><div class="ttdoc">Sum of the lengths of all blocks in the polymer (thread model).</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8tpp_source.html#l00403">PolymerSpecies.tpp:403</a></div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a25ba885b0a84cbccfce5fc4bdde6a793"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a25ba885b0a84cbccfce5fc4bdde6a793">Pscf::PolymerSpecies::edge</a></div><div class="ttdeci">virtual Edge const &amp; edge(int id) const =0</div><div class="ttdoc">Get a specified Edge (block descriptor) by const reference.</div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a2c8e7e89e4c86595639ece6a8b040590"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a2c8e7e89e4c86595639ece6a8b040590">Pscf::PolymerSpecies::makePaths</a></div><div class="ttdeci">void makePaths()</div><div class="ttdoc">Create a matrix of vertex-to-vertex path signposts.</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8tpp_source.html#l00163">PolymerSpecies.tpp:163</a></div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a391573ece61509ad8d1046b864106b9a"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a391573ece61509ad8d1046b864106b9a">Pscf::PolymerSpecies::path</a></div><div class="ttdeci">Pair&lt; int &gt; const &amp; path(int is, int it) const</div><div class="ttdoc">Get an id for a propagator from one vertex towards a target.</div><div class="ttdef"><b>Definition</b> <a href="#l00339">PolymerSpecies.h:339</a></div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a5e1a1a06ade9935bee63a2c38fb6599b"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a5e1a1a06ade9935bee63a2c38fb6599b">Pscf::PolymerSpecies::PolymerSpecies</a></div><div class="ttdeci">PolymerSpecies()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8tpp_source.html#l00024">PolymerSpecies.tpp:24</a></div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a5f9a5554f20607fd8059b08832615402"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a5f9a5554f20607fd8059b08832615402">Pscf::PolymerSpecies::readParameters</a></div><div class="ttdeci">virtual void readParameters(std::istream &amp;in)</div><div class="ttdoc">Read parameters and initialize.</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8tpp_source.html#l00039">PolymerSpecies.tpp:39</a></div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a6afdf888ed98dd7e1ff59984db3ccdd4"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a6afdf888ed98dd7e1ff59984db3ccdd4">Pscf::PolymerSpecies::readBlocks</a></div><div class="ttdeci">virtual void readBlocks(std::istream &amp;in)=0</div><div class="ttdoc">Read array of blocks from parameter file.</div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a6ba9dcfa94cae17619337b5a5bf76584"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a6ba9dcfa94cae17619337b5a5bf76584">Pscf::PolymerSpecies::vertex</a></div><div class="ttdeci">const Vertex &amp; vertex(int id) const</div><div class="ttdoc">Get a specified Vertex by const reference.</div><div class="ttdef"><b>Definition</b> <a href="#l00321">PolymerSpecies.h:321</a></div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_a733b057c92ddb2670199d19d585afc96"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#a733b057c92ddb2670199d19d585afc96">Pscf::PolymerSpecies::nBlock</a></div><div class="ttdeci">int nBlock() const</div><div class="ttdoc">Number of blocks.</div><div class="ttdef"><b>Definition</b> <a href="#l00300">PolymerSpecies.h:300</a></div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_ab2de2a54801a1ab29e657f27be4eabc1"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#ab2de2a54801a1ab29e657f27be4eabc1">Pscf::PolymerSpecies::nPropagator</a></div><div class="ttdeci">int nPropagator() const</div><div class="ttdoc">Number of propagators (2*nBlock).</div><div class="ttdef"><b>Definition</b> <a href="#l00314">PolymerSpecies.h:314</a></div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_abf1daed1a37271c0206cf30eef871e93"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#abf1daed1a37271c0206cf30eef871e93">Pscf::PolymerSpecies::~PolymerSpecies</a></div><div class="ttdeci">virtual ~PolymerSpecies()=default</div><div class="ttdoc">Destructor.</div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_ac8b4c7f4121bffecdafe9b3f99e49992"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#ac8b4c7f4121bffecdafe9b3f99e49992">Pscf::PolymerSpecies::propagatorId</a></div><div class="ttdeci">Pair&lt; int &gt; const &amp; propagatorId(int id) const</div><div class="ttdoc">Get a propagator identifier, indexed by order of computation.</div><div class="ttdef"><b>Definition</b> <a href="#l00328">PolymerSpecies.h:328</a></div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_ae71eab291baf83ea15b3be8c2de8a363"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#ae71eab291baf83ea15b3be8c2de8a363">Pscf::PolymerSpecies::allocateBlocks</a></div><div class="ttdeci">virtual void allocateBlocks()=0</div><div class="ttdoc">Allocate array of blocks.</div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_af22ab67e175cd5291b47ec67e7b40f4e"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#af22ab67e175cd5291b47ec67e7b40f4e">Pscf::PolymerSpecies::type</a></div><div class="ttdeci">PolymerType::Enum type() const</div><div class="ttdoc">Get Polymer type (Branched or Linear)</div><div class="ttdef"><b>Definition</b> <a href="#l00352">PolymerSpecies.h:352</a></div></div>
+<div class="ttc" id="aclassPscf_1_1PolymerSpecies_html_afa5f7bbc6bb12a0b4f0ec520315eb5e9"><div class="ttname"><a href="classPscf_1_1PolymerSpecies.html#afa5f7bbc6bb12a0b4f0ec520315eb5e9">Pscf::PolymerSpecies::makePlan</a></div><div class="ttdeci">virtual void makePlan()</div><div class="ttdoc">Make a plan for order in which propagators should be computed.</div><div class="ttdef"><b>Definition</b> <a href="PolymerSpecies_8tpp_source.html#l00111">PolymerSpecies.tpp:111</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Species_html_a76f5a9f466a53516f9213897522874a1"><div class="ttname"><a href="classPscf_1_1Species.html#a76f5a9f466a53516f9213897522874a1">Pscf::Species&lt; double &gt;::Species</a></div><div class="ttdeci">Species()</div></div>
 <div class="ttc" id="aclassPscf_1_1Vertex_html"><div class="ttname"><a href="classPscf_1_1Vertex.html">Pscf::Vertex</a></div><div class="ttdoc">A junction or chain end in a block polymer.</div><div class="ttdef"><b>Definition</b> <a href="Vertex_8h_source.html#l00030">Vertex.h:31</a></div></div>
 <div class="ttc" id="aclassUtil_1_1DArray_html"><div class="ttname"><a href="classUtil_1_1DArray.html">Util::DArray</a></div><div class="ttdoc">Dynamically allocatable contiguous array template.</div><div class="ttdef"><b>Definition</b> <a href="DArray_8h_source.html#l00031">DArray.h:32</a></div></div>
 <div class="ttc" id="aclassUtil_1_1Pair_html"><div class="ttname"><a href="classUtil_1_1Pair.html">Util::Pair</a></div><div class="ttdoc">An array of exactly 2 objects.</div><div class="ttdef"><b>Definition</b> <a href="Pair_8h_source.html#l00023">Pair.h:24</a></div></div>

@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -49,7 +49,7 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_3672192d8e7f6b6bab87e896e99ed11f.html">pscf</a></li><li class="navelem"><a href="dir_259e4198ed3c09eda8f0c3e2a41e5fa3.html">chem</a></li>  </ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_3672192d8e7f6b6bab87e896e99ed11f.html">pscf</a></li><li class="navelem"><a href="dir_4c3f87532c2353cab05d33ae1b2bd826.html">correlation</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -68,14 +68,13 @@ $(function() {
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="namespacePscf_1_1Debye.html">   12</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Debye.html">Debye</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Correlation.html">Correlation</a> {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">   * Intrablock correlation function (thread model)</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">   */</span></div>
 <div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="group__Pscf__Chem__Module.html#ga6ed490f195b2afcf04d1879b6ffc4514">   17</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="group__Pscf__Chem__Module.html#ga6ed490f195b2afcf04d1879b6ffc4514">dt</a>(<span class="keywordtype">double</span> ksq, <span class="keywordtype">double</span> length, <span class="keywordtype">double</span> kuhn)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="group__Pscf__Correlation__Module.html#ga17d719e6b12e1f1b6282174e0fb5582d">   17</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="group__Pscf__Correlation__Module.html#ga17d719e6b12e1f1b6282174e0fb5582d">dt</a>(<span class="keywordtype">double</span> ksq, <span class="keywordtype">double</span> length, <span class="keywordtype">double</span> kuhn)</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>   {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>      <span class="keywordtype">double</span> x = length*ksq*kuhn*kuhn/6.0;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      <span class="keywordtype">double</span> d;</div>
@@ -93,7 +92,7 @@ $(function() {
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">   * Intrablock correlation function (bead model)</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">   */</span></div>
 <div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="group__Pscf__Chem__Module.html#gabe772dd05f45d59d7f11a82a820d95f5">   33</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="group__Pscf__Chem__Module.html#gabe772dd05f45d59d7f11a82a820d95f5">db</a>(<span class="keywordtype">double</span> ksq, <span class="keywordtype">double</span> nBead, <span class="keywordtype">double</span> kuhn)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="group__Pscf__Correlation__Module.html#gaa74523c434d7d0b6bb7f614e73d3484f">   33</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="group__Pscf__Correlation__Module.html#gaa74523c434d7d0b6bb7f614e73d3484f">db</a>(<span class="keywordtype">double</span> ksq, <span class="keywordtype">double</span> nBead, <span class="keywordtype">double</span> kuhn)</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>   {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <span class="keywordtype">double</span> y = ksq*kuhn*kuhn/6.0;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <span class="keywordtype">double</span> x = nBead*y;</div>
@@ -115,7 +114,7 @@ $(function() {
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">   * End factor for one block (thread model)</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">   */</span></div>
 <div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="group__Pscf__Chem__Module.html#ga7340773117d06d425ea88f1f5f892371">   53</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="group__Pscf__Chem__Module.html#ga7340773117d06d425ea88f1f5f892371">et</a>(<span class="keywordtype">double</span> ksq, <span class="keywordtype">double</span> length, <span class="keywordtype">double</span> kuhn)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="group__Pscf__Correlation__Module.html#ga3e795e9aa237be1d574fa130b8c748a0">   53</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="group__Pscf__Correlation__Module.html#ga3e795e9aa237be1d574fa130b8c748a0">et</a>(<span class="keywordtype">double</span> ksq, <span class="keywordtype">double</span> length, <span class="keywordtype">double</span> kuhn)</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>   {</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keywordtype">double</span> x = ksq*length*kuhn*kuhn/6.0;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      <span class="keywordtype">double</span> e;</div>
@@ -133,7 +132,7 @@ $(function() {
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">   * End factor for one block (bead model)</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">   */</span></div>
 <div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="group__Pscf__Chem__Module.html#gaa540b365907d7a59d6dca7b5e4a55f23">   69</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="group__Pscf__Chem__Module.html#gaa540b365907d7a59d6dca7b5e4a55f23">eb</a>(<span class="keywordtype">double</span> ksq, <span class="keywordtype">double</span> nBead, <span class="keywordtype">double</span> kuhn)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="group__Pscf__Correlation__Module.html#ga677c1960634fdcd23c0a1a60f9394349">   69</a></span>   <span class="keywordtype">double</span> <a class="code hl_function" href="group__Pscf__Correlation__Module.html#ga677c1960634fdcd23c0a1a60f9394349">eb</a>(<span class="keywordtype">double</span> ksq, <span class="keywordtype">double</span> nBead, <span class="keywordtype">double</span> kuhn)</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>   {</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      <span class="keywordtype">double</span> y = ksq*kuhn*kuhn/6.0;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="keywordtype">double</span> x = nBead*y;</div>
@@ -149,14 +148,13 @@ $(function() {
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>   }</div>
 </div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>} <span class="comment">// namespace Debye</span></div>
-</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>} <span class="comment">// namespace Correlation</span></div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>} <span class="comment">// namespace Pscf</span></div>
-<div class="ttc" id="agroup__Pscf__Chem__Module_html_ga6ed490f195b2afcf04d1879b6ffc4514"><div class="ttname"><a href="group__Pscf__Chem__Module.html#ga6ed490f195b2afcf04d1879b6ffc4514">Pscf::Debye::dt</a></div><div class="ttdeci">double dt(double ksq, double length, double kuhn)</div><div class="ttdoc">Compute and return intrablock correlation function (thread model)</div><div class="ttdef"><b>Definition</b> <a href="#l00017">Debye.cpp:17</a></div></div>
-<div class="ttc" id="agroup__Pscf__Chem__Module_html_ga7340773117d06d425ea88f1f5f892371"><div class="ttname"><a href="group__Pscf__Chem__Module.html#ga7340773117d06d425ea88f1f5f892371">Pscf::Debye::et</a></div><div class="ttdeci">double et(double ksq, double length, double kuhn)</div><div class="ttdoc">Compute and return one-sided factor for one block (thread model).</div><div class="ttdef"><b>Definition</b> <a href="#l00053">Debye.cpp:53</a></div></div>
-<div class="ttc" id="agroup__Pscf__Chem__Module_html_gaa540b365907d7a59d6dca7b5e4a55f23"><div class="ttname"><a href="group__Pscf__Chem__Module.html#gaa540b365907d7a59d6dca7b5e4a55f23">Pscf::Debye::eb</a></div><div class="ttdeci">double eb(double ksq, double nBead, double kuhn)</div><div class="ttdoc">Compute and return one-sided factor for one block (thread model).</div><div class="ttdef"><b>Definition</b> <a href="#l00069">Debye.cpp:69</a></div></div>
-<div class="ttc" id="agroup__Pscf__Chem__Module_html_gabe772dd05f45d59d7f11a82a820d95f5"><div class="ttname"><a href="group__Pscf__Chem__Module.html#gabe772dd05f45d59d7f11a82a820d95f5">Pscf::Debye::db</a></div><div class="ttdeci">double db(double ksq, double nBead, double kuhn)</div><div class="ttdoc">Compute and return an intrablock correlation function (bead model)</div><div class="ttdef"><b>Definition</b> <a href="#l00033">Debye.cpp:33</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Debye_html"><div class="ttname"><a href="namespacePscf_1_1Debye.html">Pscf::Debye</a></div><div class="ttdoc">Functions used to compute intramolecular correlation functions.</div><div class="ttdef"><b>Definition</b> <a href="#l00012">Debye.cpp:12</a></div></div>
+<div class="ttc" id="agroup__Pscf__Correlation__Module_html_ga17d719e6b12e1f1b6282174e0fb5582d"><div class="ttname"><a href="group__Pscf__Correlation__Module.html#ga17d719e6b12e1f1b6282174e0fb5582d">Pscf::Correlation::dt</a></div><div class="ttdeci">double dt(double ksq, double length, double kuhn)</div><div class="ttdoc">Compute and return intrablock correlation function (thread model)</div><div class="ttdef"><b>Definition</b> <a href="#l00017">Debye.cpp:17</a></div></div>
+<div class="ttc" id="agroup__Pscf__Correlation__Module_html_ga3e795e9aa237be1d574fa130b8c748a0"><div class="ttname"><a href="group__Pscf__Correlation__Module.html#ga3e795e9aa237be1d574fa130b8c748a0">Pscf::Correlation::et</a></div><div class="ttdeci">double et(double ksq, double length, double kuhn)</div><div class="ttdoc">Compute and return one-sided factor for one block (thread model).</div><div class="ttdef"><b>Definition</b> <a href="#l00053">Debye.cpp:53</a></div></div>
+<div class="ttc" id="agroup__Pscf__Correlation__Module_html_ga677c1960634fdcd23c0a1a60f9394349"><div class="ttname"><a href="group__Pscf__Correlation__Module.html#ga677c1960634fdcd23c0a1a60f9394349">Pscf::Correlation::eb</a></div><div class="ttdeci">double eb(double ksq, double nBead, double kuhn)</div><div class="ttdoc">Compute and return one-sided factor for one block (bead model).</div><div class="ttdef"><b>Definition</b> <a href="#l00069">Debye.cpp:69</a></div></div>
+<div class="ttc" id="agroup__Pscf__Correlation__Module_html_gaa74523c434d7d0b6bb7f614e73d3484f"><div class="ttname"><a href="group__Pscf__Correlation__Module.html#gaa74523c434d7d0b6bb7f614e73d3484f">Pscf::Correlation::db</a></div><div class="ttdeci">double db(double ksq, double nBead, double kuhn)</div><div class="ttdoc">Compute and return an intrablock correlation function (bead model)</div><div class="ttdef"><b>Definition</b> <a href="#l00033">Debye.cpp:33</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Correlation_html"><div class="ttname"><a href="namespacePscf_1_1Correlation.html">Pscf::Correlation</a></div><div class="ttdoc">Intramolecular correlations in homogeneous systems.</div><div class="ttdef"><b>Definition</b> <a href="correlation_8mod_source.html#l00006">correlation.mod:6</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

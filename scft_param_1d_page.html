@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: Parameter File - pscf_1d</title>
+<title>PSCF: Parameter File - pscf_r1d</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -54,15 +54,15 @@ $(function() {
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">Parameter File - pscf_1d </div></div>
+  <div class="headertitle"><div class="title">Parameter File - pscf_r1d </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="el" href="scft_param_page.html">Parameter Files</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_param_pc_page.html">Parameter File - pscf_pc and pscf_pg</a> (Next) <br  />
+<div class="textblock"><p><a class="el" href="scft_param_page.html">Parameter Files</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_param_pc_page.html">Parameter File - pscf_rpc and pscf_rpg</a> (Next) <br  />
 </p>
-<p>The pscf_1d program allows the solution of the SCFT field equations for problems in which all fields depend only on a single coordinate in a planar planar (Cartesian), cylindrical or spherical geometry. This program may be used to treat a flat interface or thin film by using a planar geometry, or can treat curved interfaces and a cylindrical or spherical micelles by using a cylindrical or spherical coordinate by using a cylindrical or spherical geometry.</p>
+<p>The pscf_r1d program allows the solution of the SCFT field equations for problems in which all fields depend only on a single coordinate in a planar planar (Cartesian), cylindrical or spherical geometry. This program may be used to treat a flat interface or thin film by using a planar geometry, or can treat curved interfaces and a cylindrical or spherical micelles by using a cylindrical or spherical coordinate by using a cylindrical or spherical geometry.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_param_1d_example_sec"></a>
 Example</h1>
-<p>The text shown below is a complete parameter file for a simple 1D SCFT calculation performed using the pscf_1d program:</p>
+<p>The text shown below is a complete parameter file for a simple 1D SCFT calculation performed using the pscf_r1d program:</p>
 <div class="fragment"><div class="line">System{</div>
 <div class="line">  Mixture{</div>
 <div class="line">     nMonomer   2</div>
@@ -106,27 +106,26 @@ Example</h1>
 </div><!-- fragment --><p> This particular example gives parameters for a calculation of a binary mixture of a symmetric AB diblock copolymer with a homopolymer of type A in a one-dimensional planar geometry.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_param_1d_format_sec"></a>
 File format</h1>
-<p>The overall format for a pscf_1d parameter file is shown below in skeleton form: </p><div class="fragment"><div class="line">System{</div>
+<p>The overall format for a pscf_r1d parameter file is shown below in skeleton form: </p><div class="fragment"><div class="line">System{</div>
 <div class="line">  Mixture{ ...  }</div>
 <div class="line">  Interaction{ ...  }</div>
 <div class="line">  Domain{ ...  }</div>
 <div class="line">  Iterator#{ ... }</div>
 <div class="line">  Sweep#*{ ... }</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> The overall structure is similar to that of the example pscf_pc parameter file shown <a class="el" href="user_param_example_page.html">previously</a> as an example, with one important difference: The System block of a pscf_1d parameter file does not contain a polymerModel parameter because the pscf_1d program does not offer a choice of bead or thread models, and instead always uses a thread model. <br  />
-</p>
+</div><!-- fragment --><p> The overall structure is similar to that of the example pscf_rpc parameter file shown <a class="el" href="user_param_example_page.html">previously</a> as an example, with one important difference: The System block of a pscf_r1d parameter file does not contain a polymerModel parameter because the pscf_r1d program does not offer a choice of bead or thread models, and instead always uses a thread model.</p>
 <p>The purposes of each the the top-level sub-blocks of the System block are similar for different PSCF programs, and have been discussed previously. The same formats for the Mixture and Interaction blocks are used by all PSCF programs, and have also been discussed previously. We thus focus below on the contents of the remaining Domain, Iterator, and Sweep blocks.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_param_1d_domain_section"></a>
 Domain block</h1>
-<p>The domain block for pscf_1d describes the 1D spatial domain over which the SCFT equations should be solved, and the mesh used to discretize that domain. The parameter file syntax is described in detail here <a class="el" href="user_param_domain_1d_page.html">here</a>.</p>
+<p>The domain block for pscf_r1d describes the 1D spatial domain over which the SCFT equations should be solved, and the mesh used to discretize that domain. The parameter file syntax is described in detail here <a class="el" href="user_param_domain_1d_page.html">here</a>.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_param_1d_iterator_sec"></a>
 Iterators</h1>
-<p>The Iterator block provides data required by the iterator used to solve the nonlinear self-consistent field (SCF) equations. The pscf_pc program allows the user to choose from among three SCFT iteration algorithms, as has been discussed <a class="el" href="scft_iterator_page.html">here</a>.</p>
+<p>The Iterator block provides data required by the iterator used to solve the nonlinear self-consistent field (SCF) equations. The pscf_rpc program allows the user to choose from among three SCFT iteration algorithms, as has been discussed <a class="el" href="scft_iterator_page.html">here</a>.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_param_1d_sweep_sec"></a>
 Sweep</h1>
-<p>The default sweep for pscf_1d is a linear sweep algorithm that can be invoked using a block that starts either with the generic label Sweep or the specific label LinearSweep. The required parameter file format has been described <a class="el" href="scft_sweep_page.html#scft_sweep_linear_sec">here</a>.</p>
+<p>The default sweep for pscf_r1d is a linear sweep algorithm that can be invoked using a block that starts either with the generic label Sweep or the specific label LinearSweep. The required parameter file format has been described <a class="el" href="scft_sweep_page.html#scft_sweep_linear_sec">here</a>.</p>
 <p><br  />
- <a class="el" href="scft_param_page.html">Parameter Files</a> (Prev, Up) &#160; &#160; &#160; &#160; <a class="el" href="scft_param_pc_page.html">Parameter File - pscf_pc and pscf_pg</a> (Next) </p>
+ <a class="el" href="scft_param_page.html">Parameter Files</a> (Prev, Up) &#160; &#160; &#160; &#160; <a class="el" href="scft_param_pc_page.html">Parameter File - pscf_rpc and pscf_rpg</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

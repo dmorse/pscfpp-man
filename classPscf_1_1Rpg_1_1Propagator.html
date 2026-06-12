@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -55,14 +55,16 @@ $(function() {
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classPscf_1_1Rpg_1_1Propagator-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Pscf::Rpg::Propagator&lt; D &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Rpg__Module.html">Pscf::Rpg - Real Periodic Fields (GPU)</a> &raquo; <a class="el" href="group__Rpg__Solver__Module.html">Solvers</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>MDE solver for one-direction of one block.  
+<p>MDE solver for one direction of one block.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="rpg_2solvers_2Propagator_8h_source.html">Propagator.h</a>&gt;</code></p>
@@ -72,83 +74,60 @@ Inheritance diagram for Pscf::Rpg::Propagator&lt; D &gt;:</div>
  <div class="center">
   <img src="classPscf_1_1Rpg_1_1Propagator.png" usemap="#Pscf_3A_3ARpg_3A_3APropagator_3C_20D_20_3E_map" alt=""/>
   <map id="Pscf_3A_3ARpg_3A_3APropagator_3C_20D_20_3E_map" name="Pscf_3A_3ARpg_3A_3APropagator_3C_20D_20_3E_map">
-<area href="classPscf_1_1PropagatorTmpl.html" alt="Pscf::PropagatorTmpl&lt; Propagator&lt; D &gt; &gt;" shape="rect" coords="0,0,252,24"/>
+<area href="classPscf_1_1Rp_1_1Propagator.html" alt="Pscf::Rp::Propagator&lt; D, Types&lt; D &gt; &gt;" shape="rect" coords="0,56,292,80"/>
+<area href="classPscf_1_1PropagatorTmpl.html" title="Template for propagator classes." alt="Pscf::PropagatorTmpl&lt; QT &gt;" shape="rect" coords="0,0,292,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a79943bbffaca23879460aa5093fb9af4" id="r_a79943bbffaca23879460aa5093fb9af4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79943bbffaca23879460aa5093fb9af4">Base</a> = <a class="el" href="classPscf_1_1PropagatorTmpl.html">PropagatorTmpl</a>&lt; <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator</a>&lt;D&gt; &gt;</td></tr>
-<tr class="memdesc:a79943bbffaca23879460aa5093fb9af4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a79943bbffaca23879460aa5093fb9af4" title="Base class type (partial template specialization).">Base</a> class type (partial template specialization).  <br /></td></tr>
-<tr class="memitem:aeb459b9b75af8a7b3b57595caca29252" id="r_aeb459b9b75af8a7b3b57595caca29252"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb459b9b75af8a7b3b57595caca29252">FieldT</a> = <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt;D&gt;</td></tr>
-<tr class="memdesc:aeb459b9b75af8a7b3b57595caca29252"><td class="mdescLeft">&#160;</td><td class="mdescRight">Field type (function of position, defined on real space grid).  <br /></td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9e18eed577e8184c01526a3153b08fc2" id="r_a9e18eed577e8184c01526a3153b08fc2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e18eed577e8184c01526a3153b08fc2">Propagator</a> ()</td></tr>
 <tr class="memdesc:a9e18eed577e8184c01526a3153b08fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:aede967b25b0fc3404dafa179c0524ed2" id="r_aede967b25b0fc3404dafa179c0524ed2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aede967b25b0fc3404dafa179c0524ed2">~Propagator</a> ()</td></tr>
 <tr class="memdesc:aede967b25b0fc3404dafa179c0524ed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:abeca9fa96069d98958d05c0ae7f588dd" id="r_abeca9fa96069d98958d05c0ae7f588dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abeca9fa96069d98958d05c0ae7f588dd">setBlock</a> (<a class="el" href="classPscf_1_1Rpg_1_1Block.html">Block</a>&lt; D &gt; &amp;<a class="el" href="#a3221d8f68271185f36974be18ed61df7">block</a>)</td></tr>
-<tr class="memdesc:abeca9fa96069d98958d05c0ae7f588dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate this propagator with a block.  <br /></td></tr>
-<tr class="memitem:a5509e96c09ebb4fa32cffc3e14e5f31d" id="r_a5509e96c09ebb4fa32cffc3e14e5f31d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5509e96c09ebb4fa32cffc3e14e5f31d">allocate</a> (int <a class="el" href="#a3391f69fdee5d3928f4bd7635910862b">ns</a>, const <a class="el" href="classPscf_1_1Mesh.html">Mesh</a>&lt; D &gt; &amp;mesh)</td></tr>
-<tr class="memdesc:a5509e96c09ebb4fa32cffc3e14e5f31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate propagator arrays.  <br /></td></tr>
-<tr class="memitem:aeecb380cd2ec7889b67e4ea7e5f5d0b2" id="r_aeecb380cd2ec7889b67e4ea7e5f5d0b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeecb380cd2ec7889b67e4ea7e5f5d0b2">reallocate</a> (int <a class="el" href="#a3391f69fdee5d3928f4bd7635910862b">ns</a>)</td></tr>
-<tr class="memdesc:aeecb380cd2ec7889b67e4ea7e5f5d0b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reallocate memory used by this propagator.  <br /></td></tr>
-<tr class="memitem:a407051f669603abe0c719123024ef2d6" id="r_a407051f669603abe0c719123024ef2d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a407051f669603abe0c719123024ef2d6">solve</a> ()</td></tr>
-<tr class="memdesc:a407051f669603abe0c719123024ef2d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the modified diffusion equation (MDE) for this block.  <br /></td></tr>
-<tr class="memitem:aaf7cdeb16f7bafa7d965d25ffae7deee" id="r_aaf7cdeb16f7bafa7d965d25ffae7deee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf7cdeb16f7bafa7d965d25ffae7deee">solve</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;<a class="el" href="#a6fc854d23cb1d837fc8c33b2a4772243">head</a>)</td></tr>
-<tr class="memdesc:aaf7cdeb16f7bafa7d965d25ffae7deee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the MDE for a specified initial condition.  <br /></td></tr>
-<tr class="memitem:a4ccb6a073609cca8a907e76d25b2a92b" id="r_a4ccb6a073609cca8a907e76d25b2a92b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ccb6a073609cca8a907e76d25b2a92b">computeQ</a> ()</td></tr>
-<tr class="memdesc:a4ccb6a073609cca8a907e76d25b2a92b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute and return partition function for the molecule.  <br /></td></tr>
-<tr class="memitem:a9fdde1bd19edea509e902706798ceafd" id="r_a9fdde1bd19edea509e902706798ceafd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fdde1bd19edea509e902706798ceafd">q</a> (int i) const</td></tr>
-<tr class="memdesc:a9fdde1bd19edea509e902706798ceafd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return q-field at specified slice.  <br /></td></tr>
-<tr class="memitem:a6fc854d23cb1d837fc8c33b2a4772243" id="r_a6fc854d23cb1d837fc8c33b2a4772243"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fc854d23cb1d837fc8c33b2a4772243">head</a> ()</td></tr>
-<tr class="memdesc:a6fc854d23cb1d837fc8c33b2a4772243"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return q-field at initial (head) vertex.  <br /></td></tr>
-<tr class="memitem:a9070082c76f34a2ed94ac8d755f39dfd" id="r_a9070082c76f34a2ed94ac8d755f39dfd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9070082c76f34a2ed94ac8d755f39dfd">tail</a> () const</td></tr>
-<tr class="memdesc:a9070082c76f34a2ed94ac8d755f39dfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return q-field at terminal (tail) vertex.  <br /></td></tr>
-<tr class="memitem:a43a9fc98cc0d30bf2f58246755f68fb5" id="r_a43a9fc98cc0d30bf2f58246755f68fb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43a9fc98cc0d30bf2f58246755f68fb5">qAll</a> ()</td></tr>
+<tr class="memitem:ab49bd318fa6f2282378e42b7b4ea9db7" id="r_ab49bd318fa6f2282378e42b7b4ea9db7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab49bd318fa6f2282378e42b7b4ea9db7">allocate</a> (int <a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a254f0103d962f48c7ef932e738e15969">ns</a>, const <a class="el" href="classPscf_1_1Mesh.html">Mesh</a>&lt; D &gt; &amp;<a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a00355535fede6406c90f64af87a5c9ba">mesh</a>) override</td></tr>
+<tr class="memdesc:ab49bd318fa6f2282378e42b7b4ea9db7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory used by this propagator.  <br /></td></tr>
+<tr class="memitem:a5fa8a1ee1489396af1dcb35dc5826999" id="r_a5fa8a1ee1489396af1dcb35dc5826999"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fa8a1ee1489396af1dcb35dc5826999">reallocate</a> (int <a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a254f0103d962f48c7ef932e738e15969">ns</a>) override</td></tr>
+<tr class="memdesc:a5fa8a1ee1489396af1dcb35dc5826999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reallocate memory used by this propagator.  <br /></td></tr>
+<tr class="memitem:a43a9fc98cc0d30bf2f58246755f68fb5" id="r_a43a9fc98cc0d30bf2f58246755f68fb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; <a class="el" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43a9fc98cc0d30bf2f58246755f68fb5">qAll</a> ()</td></tr>
 <tr class="memdesc:a43a9fc98cc0d30bf2f58246755f68fb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the full array of q-fields as an unrolled 1D array.  <br /></td></tr>
-<tr class="memitem:a3221d8f68271185f36974be18ed61df7" id="r_a3221d8f68271185f36974be18ed61df7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1Block.html">Block</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3221d8f68271185f36974be18ed61df7">block</a> ()</td></tr>
-<tr class="memdesc:a3221d8f68271185f36974be18ed61df7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the associated <a class="el" href="classPscf_1_1Rpg_1_1Block.html" title="Block within a branched polymer.">Block</a> object by reference.  <br /></td></tr>
-<tr class="memitem:a94a4449183a2904e853efafdb80a4100" id="r_a94a4449183a2904e853efafdb80a4100"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1Block.html">Block</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94a4449183a2904e853efafdb80a4100">block</a> () const</td></tr>
-<tr class="memdesc:a94a4449183a2904e853efafdb80a4100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the associated <a class="el" href="classPscf_1_1Rpg_1_1Block.html" title="Block within a branched polymer.">Block</a> object by const reference.  <br /></td></tr>
-<tr class="memitem:a3391f69fdee5d3928f4bd7635910862b" id="r_a3391f69fdee5d3928f4bd7635910862b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3391f69fdee5d3928f4bd7635910862b">ns</a> () const</td></tr>
-<tr class="memdesc:a3391f69fdee5d3928f4bd7635910862b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of values of s (or slices), including head and tail.  <br /></td></tr>
-<tr class="memitem:ab0165bee32a22baf447eada3419e43eb" id="r_ab0165bee32a22baf447eada3419e43eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0165bee32a22baf447eada3419e43eb">isAllocated</a> () const</td></tr>
-<tr class="memdesc:ab0165bee32a22baf447eada3419e43eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has memory been allocated for this propagator?  <br /></td></tr>
-<tr class="memitem:aabdc0d701be6948761bdc5f89d9474ca" id="r_aabdc0d701be6948761bdc5f89d9474ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabdc0d701be6948761bdc5f89d9474ca">nSource</a> () const</td></tr>
-<tr class="memdesc:aabdc0d701be6948761bdc5f89d9474ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of source / prerequisite propagators.  <br /></td></tr>
-<tr class="memitem:a2341c08a1cf12774bfb718f2ddec2ddc" id="r_a2341c08a1cf12774bfb718f2ddec2ddc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2341c08a1cf12774bfb718f2ddec2ddc">source</a> (int id) const</td></tr>
-<tr class="memdesc:a2341c08a1cf12774bfb718f2ddec2ddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a source propagator.  <br /></td></tr>
-<tr class="memitem:a3f824c3c00b05d89a0efe707e93d09dc" id="r_a3f824c3c00b05d89a0efe707e93d09dc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f824c3c00b05d89a0efe707e93d09dc">partner</a> () const</td></tr>
-<tr class="memdesc:a3f824c3c00b05d89a0efe707e93d09dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get partner propagator.  <br /></td></tr>
-<tr class="memitem:a700ce09f6793caad4c9a5a4c48403b57" id="r_a700ce09f6793caad4c9a5a4c48403b57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a700ce09f6793caad4c9a5a4c48403b57">setIsSolved</a> (bool <a class="el" href="#a73935788b43eb3aaf01c75677e44aa57">isSolved</a>)</td></tr>
-<tr class="memdesc:a700ce09f6793caad4c9a5a4c48403b57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the isSolved flag to true or false.  <br /></td></tr>
-<tr class="memitem:a73935788b43eb3aaf01c75677e44aa57" id="r_a73935788b43eb3aaf01c75677e44aa57"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73935788b43eb3aaf01c75677e44aa57">isSolved</a> () const</td></tr>
-<tr class="memdesc:a73935788b43eb3aaf01c75677e44aa57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has the modified diffusion equation been solved?  <br /></td></tr>
-<tr class="memitem:adf7eae92318c12f18fe2233ad0d42241" id="r_adf7eae92318c12f18fe2233ad0d42241"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf7eae92318c12f18fe2233ad0d42241">hasPartner</a> () const</td></tr>
-<tr class="memdesc:adf7eae92318c12f18fe2233ad0d42241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this have a partner propagator?  <br /></td></tr>
-<tr class="memitem:a4cc5ce94cc34b29ae7d0ce09c5f49002" id="r_a4cc5ce94cc34b29ae7d0ce09c5f49002"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cc5ce94cc34b29ae7d0ce09c5f49002">isHeadEnd</a> () const</td></tr>
-<tr class="memdesc:a4cc5ce94cc34b29ae7d0ce09c5f49002"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the head vertex a chain end?  <br /></td></tr>
-<tr class="memitem:a7719b0df1e0d30730fab0d3244088c07" id="r_a7719b0df1e0d30730fab0d3244088c07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7719b0df1e0d30730fab0d3244088c07">isTailEnd</a> () const</td></tr>
-<tr class="memdesc:a7719b0df1e0d30730fab0d3244088c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the tail vertex a chain end?  <br /></td></tr>
-<tr class="inherit_header pub_methods_classPscf_1_1PropagatorTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1PropagatorTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1PropagatorTmpl.html">Pscf::PropagatorTmpl&lt; Propagator&lt; D &gt; &gt;</a></td></tr>
-<tr class="memitem:a81c3a23f98bd6df41a44f57810c1a96a inherit pub_methods_classPscf_1_1PropagatorTmpl" id="r_a81c3a23f98bd6df41a44f57810c1a96a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PropagatorTmpl.html#a81c3a23f98bd6df41a44f57810c1a96a">PropagatorTmpl</a> ()</td></tr>
-<tr class="memdesc:a81c3a23f98bd6df41a44f57810c1a96a inherit pub_methods_classPscf_1_1PropagatorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="inherit_header pub_methods_classPscf_1_1Rp_1_1Propagator"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1Rp_1_1Propagator')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1Rp_1_1Propagator.html">Pscf::Rp::Propagator&lt; D, Types&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:a19ae21458388261be913016d7c0728dd inherit pub_methods_classPscf_1_1Rp_1_1Propagator" id="r_a19ae21458388261be913016d7c0728dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a19ae21458388261be913016d7c0728dd">setBlock</a> (typename Types&lt; D &gt;::Block &amp;<a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a3a18690370cdba9960125ee64711d6fd">block</a>)</td></tr>
+<tr class="memdesc:a19ae21458388261be913016d7c0728dd inherit pub_methods_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate this propagator with a block.  <br /></td></tr>
+<tr class="memitem:a76dfc315228eb8321be1a6772ca5ac27 inherit pub_methods_classPscf_1_1Rp_1_1Propagator" id="r_a76dfc315228eb8321be1a6772ca5ac27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a76dfc315228eb8321be1a6772ca5ac27">solve</a> ()</td></tr>
+<tr class="memdesc:a76dfc315228eb8321be1a6772ca5ac27 inherit pub_methods_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the modified diffusion equation (MDE) for this block.  <br /></td></tr>
+<tr class="memitem:a1273a3389892e395fd40cd40b5fac59f inherit pub_methods_classPscf_1_1Rp_1_1Propagator" id="r_a1273a3389892e395fd40cd40b5fac59f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a1273a3389892e395fd40cd40b5fac59f">solve</a> (typename Types&lt; D &gt;::RField const &amp;<a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a3854701f8ef92d53d48e8b30e4cc4f3d">head</a>)</td></tr>
+<tr class="memdesc:a1273a3389892e395fd40cd40b5fac59f inherit pub_methods_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the MDE for a specified initial condition.  <br /></td></tr>
+<tr class="memitem:a1e42632cbe5284cbc5e2d213b4e65a2f inherit pub_methods_classPscf_1_1Rp_1_1Propagator" id="r_a1e42632cbe5284cbc5e2d213b4e65a2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a1e42632cbe5284cbc5e2d213b4e65a2f">computeQ</a> (double &amp;Q) const</td></tr>
+<tr class="memdesc:a1e42632cbe5284cbc5e2d213b4e65a2f inherit pub_methods_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute and return partition function for the polymer molecule.  <br /></td></tr>
+<tr class="memitem:ac83266b697b41249e0c75ff7927a4d86 inherit pub_methods_classPscf_1_1Rp_1_1Propagator" id="r_ac83266b697b41249e0c75ff7927a4d86"><td class="memItemLeft" align="right" valign="top">const Types&lt; D &gt;::RField &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#ac83266b697b41249e0c75ff7927a4d86">q</a> (int i) const</td></tr>
+<tr class="memdesc:ac83266b697b41249e0c75ff7927a4d86 inherit pub_methods_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return q-field at a specified step.  <br /></td></tr>
+<tr class="memitem:a3854701f8ef92d53d48e8b30e4cc4f3d inherit pub_methods_classPscf_1_1Rp_1_1Propagator" id="r_a3854701f8ef92d53d48e8b30e4cc4f3d"><td class="memItemLeft" align="right" valign="top">const Types&lt; D &gt;::RField &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a3854701f8ef92d53d48e8b30e4cc4f3d">head</a> () const</td></tr>
+<tr class="memdesc:a3854701f8ef92d53d48e8b30e4cc4f3d inherit pub_methods_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return q-field at the initial (head) vertex.  <br /></td></tr>
+<tr class="memitem:ab18e32e94ebd8efea6ead1bc8c828d13 inherit pub_methods_classPscf_1_1Rp_1_1Propagator" id="r_ab18e32e94ebd8efea6ead1bc8c828d13"><td class="memItemLeft" align="right" valign="top">const Types&lt; D &gt;::RField &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#ab18e32e94ebd8efea6ead1bc8c828d13">tail</a> () const</td></tr>
+<tr class="memdesc:ab18e32e94ebd8efea6ead1bc8c828d13 inherit pub_methods_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return q-field at the terminal (tail) vertex.  <br /></td></tr>
+<tr class="memitem:a3a18690370cdba9960125ee64711d6fd inherit pub_methods_classPscf_1_1Rp_1_1Propagator" id="r_a3a18690370cdba9960125ee64711d6fd"><td class="memItemLeft" align="right" valign="top">Types&lt; D &gt;::Block const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a3a18690370cdba9960125ee64711d6fd">block</a> () const</td></tr>
+<tr class="memdesc:a3a18690370cdba9960125ee64711d6fd inherit pub_methods_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the associated Block object by const reference.  <br /></td></tr>
+<tr class="memitem:a00355535fede6406c90f64af87a5c9ba inherit pub_methods_classPscf_1_1Rp_1_1Propagator" id="r_a00355535fede6406c90f64af87a5c9ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Mesh.html">Mesh</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a00355535fede6406c90f64af87a5c9ba">mesh</a> () const</td></tr>
+<tr class="memdesc:a00355535fede6406c90f64af87a5c9ba inherit pub_methods_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the associated <a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh</a> object by const reference.  <br /></td></tr>
+<tr class="memitem:a254f0103d962f48c7ef932e738e15969 inherit pub_methods_classPscf_1_1Rp_1_1Propagator" id="r_a254f0103d962f48c7ef932e738e15969"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a254f0103d962f48c7ef932e738e15969">ns</a> () const</td></tr>
+<tr class="memdesc:a254f0103d962f48c7ef932e738e15969 inherit pub_methods_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of values of s (or slices), including head and tail.  <br /></td></tr>
+<tr class="memitem:a24d98a17f7c6c8e27142fa811e93384c inherit pub_methods_classPscf_1_1Rp_1_1Propagator" id="r_a24d98a17f7c6c8e27142fa811e93384c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a24d98a17f7c6c8e27142fa811e93384c">isAllocated</a> () const</td></tr>
+<tr class="memdesc:a24d98a17f7c6c8e27142fa811e93384c inherit pub_methods_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has memory been allocated for this propagator?  <br /></td></tr>
+<tr class="inherit_header pub_methods_classPscf_1_1PropagatorTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1PropagatorTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1PropagatorTmpl.html">Pscf::PropagatorTmpl&lt; QT &gt;</a></td></tr>
 <tr class="memitem:a4029de32135e93d9dea6e16120cc8cff inherit pub_methods_classPscf_1_1PropagatorTmpl" id="r_a4029de32135e93d9dea6e16120cc8cff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PropagatorTmpl.html#a4029de32135e93d9dea6e16120cc8cff">setDirectionId</a> (int <a class="el" href="classPscf_1_1PropagatorTmpl.html#a7497a07d4dfa09313b28e60959fb75cb">directionId</a>)</td></tr>
 <tr class="memdesc:a4029de32135e93d9dea6e16120cc8cff inherit pub_methods_classPscf_1_1PropagatorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate this propagator with a direction index.  <br /></td></tr>
-<tr class="memitem:a6fe0799c5a146f80ab3536449918380a inherit pub_methods_classPscf_1_1PropagatorTmpl" id="r_a6fe0799c5a146f80ab3536449918380a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PropagatorTmpl.html#a6fe0799c5a146f80ab3536449918380a">setPartner</a> (const Propagator&lt; D &gt; &amp;<a class="el" href="classPscf_1_1PropagatorTmpl.html#a53056937b7db01aad15e08b89d0da017">partner</a>)</td></tr>
+<tr class="memitem:a6fe0799c5a146f80ab3536449918380a inherit pub_methods_classPscf_1_1PropagatorTmpl" id="r_a6fe0799c5a146f80ab3536449918380a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PropagatorTmpl.html#a6fe0799c5a146f80ab3536449918380a">setPartner</a> (const QT &amp;<a class="el" href="classPscf_1_1PropagatorTmpl.html#a53056937b7db01aad15e08b89d0da017">partner</a>)</td></tr>
 <tr class="memdesc:a6fe0799c5a146f80ab3536449918380a inherit pub_methods_classPscf_1_1PropagatorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the partner of this propagator.  <br /></td></tr>
-<tr class="memitem:af56cb36c92f79410287af15638b9d83b inherit pub_methods_classPscf_1_1PropagatorTmpl" id="r_af56cb36c92f79410287af15638b9d83b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PropagatorTmpl.html#af56cb36c92f79410287af15638b9d83b">addSource</a> (const Propagator&lt; D &gt; &amp;<a class="el" href="classPscf_1_1PropagatorTmpl.html#ab88d8c36887c36483d810262e7980b80">source</a>)</td></tr>
+<tr class="memitem:af56cb36c92f79410287af15638b9d83b inherit pub_methods_classPscf_1_1PropagatorTmpl" id="r_af56cb36c92f79410287af15638b9d83b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PropagatorTmpl.html#af56cb36c92f79410287af15638b9d83b">addSource</a> (const QT &amp;<a class="el" href="classPscf_1_1PropagatorTmpl.html#ab88d8c36887c36483d810262e7980b80">source</a>)</td></tr>
 <tr class="memdesc:af56cb36c92f79410287af15638b9d83b inherit pub_methods_classPscf_1_1PropagatorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a propagator to the list of sources for this one.  <br /></td></tr>
 <tr class="memitem:a35dbcd4c56f0abe5113c359b79bfcf01 inherit pub_methods_classPscf_1_1PropagatorTmpl" id="r_a35dbcd4c56f0abe5113c359b79bfcf01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PropagatorTmpl.html#a35dbcd4c56f0abe5113c359b79bfcf01">setIsSolved</a> (bool <a class="el" href="classPscf_1_1PropagatorTmpl.html#a788cfada26e29d01ec7f82ee18391666">isSolved</a>)</td></tr>
 <tr class="memdesc:a35dbcd4c56f0abe5113c359b79bfcf01 inherit pub_methods_classPscf_1_1PropagatorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the isSolved flag to true or false.  <br /></td></tr>
 <tr class="memitem:a4e0ffd08aebdea9122473717ff944452 inherit pub_methods_classPscf_1_1PropagatorTmpl" id="r_a4e0ffd08aebdea9122473717ff944452"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PropagatorTmpl.html#a4e0ffd08aebdea9122473717ff944452">setEndFlags</a> (bool <a class="el" href="classPscf_1_1PropagatorTmpl.html#a22996f5c0c35e11f47d043de0f7db51f">isHeadEnd</a>, bool <a class="el" href="classPscf_1_1PropagatorTmpl.html#a8092dcf0cbdf8460d5460a0f38fdcebb">isTailEnd</a>)</td></tr>
 <tr class="memdesc:a4e0ffd08aebdea9122473717ff944452 inherit pub_methods_classPscf_1_1PropagatorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set flags indicating whether vertices are chain ends.  <br /></td></tr>
-<tr class="memitem:ab88d8c36887c36483d810262e7980b80 inherit pub_methods_classPscf_1_1PropagatorTmpl" id="r_ab88d8c36887c36483d810262e7980b80"><td class="memItemLeft" align="right" valign="top">const Propagator&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PropagatorTmpl.html#ab88d8c36887c36483d810262e7980b80">source</a> (int id) const</td></tr>
+<tr class="memitem:ab88d8c36887c36483d810262e7980b80 inherit pub_methods_classPscf_1_1PropagatorTmpl" id="r_ab88d8c36887c36483d810262e7980b80"><td class="memItemLeft" align="right" valign="top">const QT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PropagatorTmpl.html#ab88d8c36887c36483d810262e7980b80">source</a> (int id) const</td></tr>
 <tr class="memdesc:ab88d8c36887c36483d810262e7980b80 inherit pub_methods_classPscf_1_1PropagatorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a source propagator.  <br /></td></tr>
-<tr class="memitem:a53056937b7db01aad15e08b89d0da017 inherit pub_methods_classPscf_1_1PropagatorTmpl" id="r_a53056937b7db01aad15e08b89d0da017"><td class="memItemLeft" align="right" valign="top">const Propagator&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PropagatorTmpl.html#a53056937b7db01aad15e08b89d0da017">partner</a> () const</td></tr>
+<tr class="memitem:a53056937b7db01aad15e08b89d0da017 inherit pub_methods_classPscf_1_1PropagatorTmpl" id="r_a53056937b7db01aad15e08b89d0da017"><td class="memItemLeft" align="right" valign="top">const QT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PropagatorTmpl.html#a53056937b7db01aad15e08b89d0da017">partner</a> () const</td></tr>
 <tr class="memdesc:a53056937b7db01aad15e08b89d0da017 inherit pub_methods_classPscf_1_1PropagatorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get partner propagator.  <br /></td></tr>
 <tr class="memitem:a7497a07d4dfa09313b28e60959fb75cb inherit pub_methods_classPscf_1_1PropagatorTmpl" id="r_a7497a07d4dfa09313b28e60959fb75cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PropagatorTmpl.html#a7497a07d4dfa09313b28e60959fb75cb">directionId</a> () const</td></tr>
 <tr class="memdesc:a7497a07d4dfa09313b28e60959fb75cb inherit pub_methods_classPscf_1_1PropagatorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get direction index for this propagator.  <br /></td></tr>
@@ -164,52 +143,89 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a788cfada26e29d01ec7f82ee18391666 inherit pub_methods_classPscf_1_1PropagatorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has the modified diffusion equation been solved?  <br /></td></tr>
 <tr class="memitem:ac143df687181df779dda950235a18589 inherit pub_methods_classPscf_1_1PropagatorTmpl" id="r_ac143df687181df779dda950235a18589"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PropagatorTmpl.html#ac143df687181df779dda950235a18589">isReady</a> () const</td></tr>
 <tr class="memdesc:ac143df687181df779dda950235a18589 inherit pub_methods_classPscf_1_1PropagatorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are all source propagators solved?  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-types" class="groupheader"><a id="pro-types" name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr class="memitem:a814c388f41e8d8b0dedab529133337cb" id="r_a814c388f41e8d8b0dedab529133337cb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a814c388f41e8d8b0dedab529133337cb">RpPropagatorT</a> = <a class="el" href="classPscf_1_1Rp_1_1Propagator.html">Rp::Propagator</a>&lt;D, <a class="el" href="classPscf_1_1Rpg_1_1Types.html">Types</a>&lt;D&gt; &gt;</td></tr>
+<tr class="memdesc:a814c388f41e8d8b0dedab529133337cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direct base class.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a72088a380997553ebfcdc859f45eb6e3" id="r_a72088a380997553ebfcdc859f45eb6e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72088a380997553ebfcdc859f45eb6e3">computeHead</a> ()</td></tr>
+<tr class="memdesc:a72088a380997553ebfcdc859f45eb6e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute initial q-field at the head vertex.  <br /></td></tr>
+<tr class="inherit_header pro_methods_classPscf_1_1Rp_1_1Propagator"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classPscf_1_1Rp_1_1Propagator')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classPscf_1_1Rp_1_1Propagator.html">Pscf::Rp::Propagator&lt; D, Types&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:a8f7dcfd992bf255f3491753df91bc64f inherit pro_methods_classPscf_1_1Rp_1_1Propagator" id="r_a8f7dcfd992bf255f3491753df91bc64f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a8f7dcfd992bf255f3491753df91bc64f">Propagator</a> ()</td></tr>
+<tr class="memdesc:a8f7dcfd992bf255f3491753df91bc64f inherit pro_methods_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:a77f24422728c60a1dcf216ed25ace331 inherit pro_methods_classPscf_1_1Rp_1_1Propagator" id="r_a77f24422728c60a1dcf216ed25ace331"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a77f24422728c60a1dcf216ed25ace331">~Propagator</a> ()</td></tr>
+<tr class="memdesc:a77f24422728c60a1dcf216ed25ace331 inherit pro_methods_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:a5364bfbbcd4ba6895c80558ebe735bf6 inherit pro_methods_classPscf_1_1Rp_1_1Propagator" id="r_a5364bfbbcd4ba6895c80558ebe735bf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a5364bfbbcd4ba6895c80558ebe735bf6">computeHead</a> ()</td></tr>
+<tr class="memdesc:a5364bfbbcd4ba6895c80558ebe735bf6 inherit pro_methods_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute initial q-field at the head vertex.  <br /></td></tr>
+<tr class="memitem:a7cfaef10e63405ee52df02cde0ee2bed inherit pro_methods_classPscf_1_1Rp_1_1Propagator" id="r_a7cfaef10e63405ee52df02cde0ee2bed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a7cfaef10e63405ee52df02cde0ee2bed">solveMde</a> ()</td></tr>
+<tr class="memdesc:a7cfaef10e63405ee52df02cde0ee2bed inherit pro_methods_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute solution of modified diffusion equation (MDE).  <br /></td></tr>
+<tr class="memitem:a03dd612a104920e703f803472eb4100a inherit pro_methods_classPscf_1_1Rp_1_1Propagator" id="r_a03dd612a104920e703f803472eb4100a"><td class="memItemLeft" align="right" valign="top">Types&lt; D &gt;::Block &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a03dd612a104920e703f803472eb4100a">block</a> ()</td></tr>
+<tr class="memdesc:a03dd612a104920e703f803472eb4100a inherit pro_methods_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the associated Block object by non-const reference.  <br /></td></tr>
+<tr class="inherit_header pro_methods_classPscf_1_1PropagatorTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classPscf_1_1PropagatorTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classPscf_1_1PropagatorTmpl.html">Pscf::PropagatorTmpl&lt; QT &gt;</a></td></tr>
+<tr class="memitem:a81c3a23f98bd6df41a44f57810c1a96a inherit pro_methods_classPscf_1_1PropagatorTmpl" id="r_a81c3a23f98bd6df41a44f57810c1a96a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PropagatorTmpl.html#a81c3a23f98bd6df41a44f57810c1a96a">PropagatorTmpl</a> ()</td></tr>
+<tr class="memdesc:a81c3a23f98bd6df41a44f57810c1a96a inherit pro_methods_classPscf_1_1PropagatorTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a6fe5968ac5078ec62a6fb03743a5b62f" id="r_a6fe5968ac5078ec62a6fb03743a5b62f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; typename <a class="el" href="classPscf_1_1Rpg_1_1Types.html">Types</a>&lt; D &gt;::RField &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fe5968ac5078ec62a6fb03743a5b62f">qFields_</a></td></tr>
+<tr class="memdesc:a6fe5968ac5078ec62a6fb03743a5b62f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classUtil_1_1Array.html" title="Array container class template.">Array</a> of propagator slices at different contour variable values.  <br /></td></tr>
+<tr class="memitem:a6a95dc65e0c7c20f66b5aa90d57acbec" id="r_a6a95dc65e0c7c20f66b5aa90d57acbec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a95dc65e0c7c20f66b5aa90d57acbec">ns_</a></td></tr>
+<tr class="memdesc:a6a95dc65e0c7c20f66b5aa90d57acbec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of slices, including head and tail slices.  <br /></td></tr>
+<tr class="memitem:ac6283b4a3a700123e920e1ab7ae2f7e7" id="r_ac6283b4a3a700123e920e1ab7ae2f7e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6283b4a3a700123e920e1ab7ae2f7e7">isAllocated_</a></td></tr>
+<tr class="memdesc:ac6283b4a3a700123e920e1ab7ae2f7e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this propagator allocated?  <br /></td></tr>
+<tr class="inherit_header pro_attribs_classPscf_1_1Rp_1_1Propagator"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classPscf_1_1Rp_1_1Propagator')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classPscf_1_1Rp_1_1Propagator.html">Pscf::Rp::Propagator&lt; D, Types&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:ae79e2fb5176d332da05de108d6625c8a inherit pro_attribs_classPscf_1_1Rp_1_1Propagator" id="r_ae79e2fb5176d332da05de108d6625c8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; typename Types&lt; D &gt;::RField &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#ae79e2fb5176d332da05de108d6625c8a">qFields_</a></td></tr>
+<tr class="memdesc:ae79e2fb5176d332da05de108d6625c8a inherit pro_attribs_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classUtil_1_1Array.html" title="Array container class template.">Array</a> of propagator slices at different contour variable values.  <br /></td></tr>
+<tr class="memitem:a78b39e038360e5e28bdac850f60270c8 inherit pro_attribs_classPscf_1_1Rp_1_1Propagator" id="r_a78b39e038360e5e28bdac850f60270c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a78b39e038360e5e28bdac850f60270c8">ns_</a></td></tr>
+<tr class="memdesc:a78b39e038360e5e28bdac850f60270c8 inherit pro_attribs_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of slices, including head and tail slices.  <br /></td></tr>
+<tr class="memitem:a9244c5cc160bfb2524929c6d391c3a8e inherit pro_attribs_classPscf_1_1Rp_1_1Propagator" id="r_a9244c5cc160bfb2524929c6d391c3a8e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a9244c5cc160bfb2524929c6d391c3a8e">isAllocated_</a></td></tr>
+<tr class="memdesc:a9244c5cc160bfb2524929c6d391c3a8e inherit pro_attribs_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this propagator allocated?  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classPscf_1_1Rp_1_1Propagator"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classPscf_1_1Rp_1_1Propagator')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="classPscf_1_1Rp_1_1Propagator.html">Pscf::Rp::Propagator&lt; D, Types&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:aabd2b0431252fe14d32ee559d15e0612 inherit pub_types_classPscf_1_1Rp_1_1Propagator" id="r_aabd2b0431252fe14d32ee559d15e0612"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Propagator.html#aabd2b0431252fe14d32ee559d15e0612">PropagatorTmplT</a></td></tr>
+<tr class="memdesc:aabd2b0431252fe14d32ee559d15e0612 inherit pub_types_classPscf_1_1Rp_1_1Propagator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direct (parent) base class.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
-class Pscf::Rpg::Propagator&lt; D &gt;</div><p>MDE solver for one-direction of one block. </p>
-<p>A fully initialized Propagator&lt;D&gt; has an association with a <a class="el" href="classPscf_1_1Rpg_1_1Block.html" title="Block within a branched polymer.">Block&lt;D&gt;</a> object that owns this propagator and its partner, and with a partner Propagator&lt;D&gt; that solves the MDE within the same block in the opposite direction. It also has an association with a <a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh&lt;D&gt;</a> that describes a spatial grid, and associations with zero or more source Propagator&lt;D&gt; objects that are used to compute an initial condition for this propagator at the head vertex.</p>
-<p>The associated <a class="el" href="classPscf_1_1Rpg_1_1Block.html" title="Block within a branched polymer.">Block&lt;D&gt;</a> stores information required to numerically solve the modified diffusion equation (MDE), including quantities that depend on the w-field associated with this block, the unit cell parameters and (in the thread model) the contour step size. These quantities are set and stored by the block because their values are the same for the two propagators owned by each block, but may be different for different blocks. The algorithm used by a <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html" title="MDE solver for one-direction of one block.">Propagator</a> to solve the the MDE repeatedly calls the step functions provided by the parent <a class="el" href="classPscf_1_1Rpg_1_1Block.html" title="Block within a branched polymer.">Block</a>. </p>
+class Pscf::Rpg::Propagator&lt; D &gt;</div><p>MDE solver for one direction of one block. </p>
+<p>Specializations of this template with D=1, 2, and 3 are derived from corresponding specializations of base class template <a class="el" href="classPscf_1_1Rp_1_1Propagator.html" title="MDE solver for one direction of one block.">Rp::Propagator</a>, and inherit most of their public interface from this base class. <br  />
+ Only a few functions that involve memory allocation on the GPU are defined or re-defined in this template</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classPscf_1_1Rp_1_1Propagator.html" title="MDE solver for one direction of one block.">Rp::Propagator</a> </dd>
+<dd>
+<a class="el" href="classPscf_1_1PropagatorTmpl.html" title="Template for propagator classes.">Pscf::PropagatorTmpl</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00057">57</a> of file <a class="el" href="rpg_2solvers_2Propagator_8h_source.html">rpg/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00035">35</a> of file <a class="el" href="rpg_2solvers_2Propagator_8h_source.html">rpg/solvers/Propagator.h</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
-<a id="a79943bbffaca23879460aa5093fb9af4" name="a79943bbffaca23879460aa5093fb9af4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79943bbffaca23879460aa5093fb9af4">&#9670;&#160;</a></span>Base</h2>
+<a id="a814c388f41e8d8b0dedab529133337cb" name="a814c388f41e8d8b0dedab529133337cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a814c388f41e8d8b0dedab529133337cb">&#9670;&#160;</a></span>RpPropagatorT</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a>&lt; D &gt;::Base = <a class="el" href="classPscf_1_1PropagatorTmpl.html">PropagatorTmpl</a>&lt; <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator</a>&lt;D&gt; &gt;</td>
+          <td class="memname">using <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a>&lt; D &gt;::RpPropagatorT = <a class="el" href="classPscf_1_1Rp_1_1Propagator.html">Rp::Propagator</a>&lt;D, <a class="el" href="classPscf_1_1Rpg_1_1Types.html">Types</a>&lt;D&gt; &gt;</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p><a class="el" href="#a79943bbffaca23879460aa5093fb9af4" title="Base class type (partial template specialization).">Base</a> class type (partial template specialization). </p>
+<p>Direct base class. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00067">67</a> of file <a class="el" href="rpg_2solvers_2Propagator_8h_source.html">rpg/solvers/Propagator.h</a>.</p>
-
-</div>
-</div>
-<a id="aeb459b9b75af8a7b3b57595caca29252" name="aeb459b9b75af8a7b3b57595caca29252"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb459b9b75af8a7b3b57595caca29252">&#9670;&#160;</a></span>FieldT</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a>&lt; D &gt;::FieldT = <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt;D&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Field type (function of position, defined on real space grid). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00073">73</a> of file <a class="el" href="rpg_2solvers_2Propagator_8h_source.html">rpg/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00089">89</a> of file <a class="el" href="rpg_2solvers_2Propagator_8h_source.html">rpg/solvers/Propagator.h</a>.</p>
 
 </div>
 </div>
@@ -233,7 +249,7 @@ template&lt;int D&gt; </div>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00026">26</a> of file <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html">rpg/solvers/Propagator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Propagator_8cu_source.html#l00028">28</a> of file <a class="el" href="Propagator_8cu_source.html">Propagator.cu</a>.</p>
 
 </div>
 </div>
@@ -256,13 +272,13 @@ template&lt;int D&gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00037">37</a> of file <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html">rpg/solvers/Propagator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Propagator_8cu_source.html#l00036">36</a> of file <a class="el" href="Propagator_8cu_source.html">Propagator.cu</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="abeca9fa96069d98958d05c0ae7f588dd" name="abeca9fa96069d98958d05c0ae7f588dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abeca9fa96069d98958d05c0ae7f588dd">&#9670;&#160;</a></span>setBlock()</h2>
+<a id="ab49bd318fa6f2282378e42b7b4ea9db7" name="ab49bd318fa6f2282378e42b7b4ea9db7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab49bd318fa6f2282378e42b7b4ea9db7">&#9670;&#160;</a></span>allocate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -271,42 +287,6 @@ template&lt;int D&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a>&lt; D &gt;::setBlock </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1Rpg_1_1Block.html">Block</a>&lt; D &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>block</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Associate this propagator with a block. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">block</td><td>associated <a class="el" href="classPscf_1_1Rpg_1_1Block.html" title="Block within a branched polymer.">Block</a> object. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00349">349</a> of file <a class="el" href="rpg_2solvers_2Propagator_8h_source.html">rpg/solvers/Propagator.h</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00314">block()</a>.</p>
-
-</div>
-</div>
-<a id="a5509e96c09ebb4fa32cffc3e14e5f31d" name="a5509e96c09ebb4fa32cffc3e14e5f31d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5509e96c09ebb4fa32cffc3e14e5f31d">&#9670;&#160;</a></span>allocate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a>&lt; D &gt;::allocate </td>
@@ -319,33 +299,43 @@ template&lt;int D&gt; </div>
           <td class="paramtype">const <a class="el" href="classPscf_1_1Mesh.html">Mesh</a>&lt; D &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Allocate propagator arrays. </p>
-<p>The parameter ns is the number of values of s at which q(r,s) is calculated, including end values at the terminating vertices. See docs for the function <a class="el" href="#a3391f69fdee5d3928f4bd7635910862b" title="Get the number of values of s (or slices), including head and tail.">ns()</a>, which returns this value.</p>
+<p>Allocate memory used by this propagator. </p>
+<p>The parameter ns is the number of values of s at which q(r,s) is calculated, including the end values at the terminating vertices. See docs for the function <a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a254f0103d962f48c7ef932e738e15969">ns()</a>, which returns this value.</p>
 <p>The address of the associated <a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh&lt;D&gt;</a> object is retained.</p>
 <p>An <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a> is thrown if the propagator is already allocated.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ns</td><td>number of points along chain contour </td></tr>
+    <tr><td class="paramname">ns</td><td>number of slices (including end points at vertices) </td></tr>
     <tr><td class="paramname">mesh</td><td>spatial discretization mesh </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00044">44</a> of file <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html">rpg/solvers/Propagator.tpp</a>.</p>
+<p>Reimplemented from <a class="el" href="classPscf_1_1Rp_1_1Propagator.html#af48d720f769db9f8d59ffc23832a9962">Pscf::Rp::Propagator&lt; D, Types&lt; D &gt; &gt;</a>.</p>
 
-<p class="reference">References <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00336">ns()</a>, and <a class="el" href="Mesh_8h_source.html#l00229">Pscf::Mesh&lt; D &gt;::size()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Propagator_8cu_source.html#l00053">53</a> of file <a class="el" href="Propagator_8cu_source.html">Propagator.cu</a>.</p>
+
+<p class="reference">References <a class="el" href="classPscf_1_1Rp_1_1Propagator.html#af48d720f769db9f8d59ffc23832a9962">Pscf::Rp::Propagator&lt; D, Types&lt; D &gt; &gt;::allocate()</a>, <a class="el" href="rp_2solvers_2Propagator_8h_source.html#l00197">isAllocated_</a>, <a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a00355535fede6406c90f64af87a5c9ba">Pscf::Rp::Propagator&lt; D, Types&lt; D &gt; &gt;::mesh()</a>, <a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a254f0103d962f48c7ef932e738e15969">Pscf::Rp::Propagator&lt; D, Types&lt; D &gt; &gt;::ns()</a>, <a class="el" href="rp_2solvers_2Propagator_8h_source.html#l00191">qFields_</a>, and <a class="el" href="PropagatorTmpl_8h_source.html#l00346">Pscf::PropagatorTmpl&lt; QT &gt;::setIsSolved()</a>.</p>
 
 </div>
 </div>
-<a id="aeecb380cd2ec7889b67e4ea7e5f5d0b2" name="aeecb380cd2ec7889b67e4ea7e5f5d0b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeecb380cd2ec7889b67e4ea7e5f5d0b2">&#9670;&#160;</a></span>reallocate()</h2>
+<a id="a5fa8a1ee1489396af1dcb35dc5826999" name="a5fa8a1ee1489396af1dcb35dc5826999"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fa8a1ee1489396af1dcb35dc5826999">&#9670;&#160;</a></span>reallocate()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a>&lt; D &gt;::reallocate </td>
@@ -354,215 +344,28 @@ template&lt;int D&gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Reallocate memory used by this propagator. </p>
 <p>This function is used when the value of ns is changed, which can occur during some parameter sweeps. See docs for allocate and ns.</p>
-<p>An Exceptions is thrown if the propagator has not been previously allocated.</p>
+<p>An <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a> is thrown if the propagator has not been previously allocated, or if it is allocated but the value of ns is unchanged.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ns</td><td>number of slices (including end points at vertices) </td></tr>
+    <tr><td class="paramname">ns</td><td>number of slices (including end points) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00065">65</a> of file <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html">rpg/solvers/Propagator.tpp</a>.</p>
+<p>Reimplemented from <a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a720e6a33fba288c60ef2709b92ccbec8">Pscf::Rp::Propagator&lt; D, Types&lt; D &gt; &gt;</a>.</p>
 
-<p class="reference">References <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00336">ns()</a>, <a class="el" href="#a700ce09f6793caad4c9a5a4c48403b57">setIsSolved()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Propagator_8cu_source.html#l00077">77</a> of file <a class="el" href="Propagator_8cu_source.html">Propagator.cu</a>.</p>
 
-</div>
-</div>
-<a id="a407051f669603abe0c719123024ef2d6" name="a407051f669603abe0c719123024ef2d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a407051f669603abe0c719123024ef2d6">&#9670;&#160;</a></span>solve() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a>&lt; D &gt;::solve </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Solve the modified diffusion equation (MDE) for this block. </p>
-<p>This function computes an initial q-field at the head of this propagator, and then solves the modified diffusion equation for the block to propagate from the head to the tail. Algorithms for the thread or bead model may be used, depending the value of <a class="el" href="namespacePscf_1_1PolymerModel.html#a532c0509e827a49e4d7e2a8c7c130cbb" title="Get the global polymer model type enumeration value.">PolymerModel::model()</a>. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00123">123</a> of file <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html">rpg/solvers/Propagator.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00314">block()</a>, <a class="el" href="VecOp_8cpp_source.html#l00023">Pscf::Prdc::Cpu::VecOp::eqV()</a>, <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00341">isAllocated()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00075">Pscf::PolymerModel::isBead()</a>, <a class="el" href="#a4cc5ce94cc34b29ae7d0ce09c5f49002">isHeadEnd()</a>, <a class="el" href="#a7719b0df1e0d30730fab0d3244088c07">isTailEnd()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, <a class="el" href="#a700ce09f6793caad4c9a5a4c48403b57">setIsSolved()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
-
-</div>
-</div>
-<a id="aaf7cdeb16f7bafa7d965d25ffae7deee" name="aaf7cdeb16f7bafa7d965d25ffae7deee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf7cdeb16f7bafa7d965d25ffae7deee">&#9670;&#160;</a></span>solve() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a>&lt; D &gt;::solve </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>head</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Solve the MDE for a specified initial condition. </p>
-<p>This function solves the modified diffusion equation for this block with a specified initial condition, which is given by the function parameter "head".</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">head</td><td>initial condition of q-field at head of block </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00174">174</a> of file <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html">rpg/solvers/Propagator.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00314">block()</a>, <a class="el" href="VecOp_8cpp_source.html#l00023">Pscf::Prdc::Cpu::VecOp::eqV()</a>, <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00269">head()</a>, <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00341">isAllocated()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00075">Pscf::PolymerModel::isBead()</a>, <a class="el" href="#a4cc5ce94cc34b29ae7d0ce09c5f49002">isHeadEnd()</a>, <a class="el" href="#a7719b0df1e0d30730fab0d3244088c07">isTailEnd()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, <a class="el" href="#a700ce09f6793caad4c9a5a4c48403b57">setIsSolved()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
-
-</div>
-</div>
-<a id="a4ccb6a073609cca8a907e76d25b2a92b" name="a4ccb6a073609cca8a907e76d25b2a92b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ccb6a073609cca8a907e76d25b2a92b">&#9670;&#160;</a></span>computeQ()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a>&lt; D &gt;::computeQ </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Compute and return partition function for the molecule. </p>
-<p>This function computes the partition function Q for the molecule as a spatial average of the pointwise product of the initial/head slice for this propagator and final/tail slice of its partner. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00223">223</a> of file <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html">rpg/solvers/Propagator.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="#adf7eae92318c12f18fe2233ad0d42241">hasPartner()</a>, <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00269">head()</a>, <a class="el" href="Reduce_8cpp_source.html#l00094">Pscf::Prdc::Cpu::Reduce::innerProduct()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00075">Pscf::PolymerModel::isBead()</a>, <a class="el" href="#a4cc5ce94cc34b29ae7d0ce09c5f49002">isHeadEnd()</a>, <a class="el" href="#a73935788b43eb3aaf01c75677e44aa57">isSolved()</a>, <a class="el" href="#a7719b0df1e0d30730fab0d3244088c07">isTailEnd()</a>, <a class="el" href="#a3f824c3c00b05d89a0efe707e93d09dc">partner()</a>, <a class="el" href="Reduce_8cpp_source.html#l00080">Pscf::Prdc::Cpu::Reduce::sum()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
-
-</div>
-</div>
-<a id="a9fdde1bd19edea509e902706798ceafd" name="a9fdde1bd19edea509e902706798ceafd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fdde1bd19edea509e902706798ceafd">&#9670;&#160;</a></span>q()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a>&lt; D &gt;::q </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return q-field at specified slice. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">i</td><td>step index </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00292">292</a> of file <a class="el" href="rpg_2solvers_2Propagator_8h_source.html">rpg/solvers/Propagator.h</a>.</p>
-
-<p class="reference">References <a class="el" href="#a73935788b43eb3aaf01c75677e44aa57">isSolved()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00610">Pscf::Rpg::Block&lt; D &gt;::computeConcentrationBead()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00574">Pscf::Rpg::Block&lt; D &gt;::computeConcentrationThread()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00758">Pscf::Rpg::Block&lt; D &gt;::computeStressBead()</a>, and <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00640">Pscf::Rpg::Block&lt; D &gt;::computeStressThread()</a>.</p>
-
-</div>
-</div>
-<a id="a6fc854d23cb1d837fc8c33b2a4772243" name="a6fc854d23cb1d837fc8c33b2a4772243"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fc854d23cb1d837fc8c33b2a4772243">&#9670;&#160;</a></span>head()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a>&lt; D &gt;::head </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return q-field at initial (head) vertex. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00269">269</a> of file <a class="el" href="rpg_2solvers_2Propagator_8h_source.html">rpg/solvers/Propagator.h</a>.</p>
-
-<p class="reference">References <a class="el" href="#a73935788b43eb3aaf01c75677e44aa57">isSolved()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00223">computeQ()</a>, and <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00174">solve()</a>.</p>
-
-</div>
-</div>
-<a id="a9070082c76f34a2ed94ac8d755f39dfd" name="a9070082c76f34a2ed94ac8d755f39dfd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9070082c76f34a2ed94ac8d755f39dfd">&#9670;&#160;</a></span>tail()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a>&lt; D &gt;::tail </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return q-field at terminal (tail) vertex. </p>
-<p>This function throws an <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a> if invoked while the bead model is in use (i.e., if <a class="el" href="namespacePscf_1_1PolymerModel.html#a808c2831a6584875c7ec72c9d415e88e" title="Is the thread model in use ?">PolymerModel::isThread</a>(() == false) and the tail for this propagator is a chain end (i.e., if <a class="el" href="#a7719b0df1e0d30730fab0d3244088c07" title="Is the tail vertex a chain end?">isTailEnd()</a> == true) In this case, tail slice is not needed, and so is not computed. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00280">280</a> of file <a class="el" href="rpg_2solvers_2Propagator_8h_source.html">rpg/solvers/Propagator.h</a>.</p>
-
-<p class="reference">References <a class="el" href="#a73935788b43eb3aaf01c75677e44aa57">isSolved()</a>, <a class="el" href="#a7719b0df1e0d30730fab0d3244088c07">isTailEnd()</a>, <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a00355535fede6406c90f64af87a5c9ba">Pscf::Rp::Propagator&lt; D, Types&lt; D &gt; &gt;::mesh()</a>, <a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a254f0103d962f48c7ef932e738e15969">Pscf::Rp::Propagator&lt; D, Types&lt; D &gt; &gt;::ns()</a>, <a class="el" href="rp_2solvers_2Propagator_8h_source.html#l00191">qFields_</a>, <a class="el" href="classPscf_1_1Rp_1_1Propagator.html#a720e6a33fba288c60ef2709b92ccbec8">Pscf::Rp::Propagator&lt; D, Types&lt; D &gt; &gt;::reallocate()</a>, and <a class="el" href="PropagatorTmpl_8h_source.html#l00346">Pscf::PropagatorTmpl&lt; QT &gt;::setIsSolved()</a>.</p>
 
 </div>
 </div>
@@ -578,7 +381,7 @@ template&lt;int D&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a>&lt; D &gt;::qAll </td>
+          <td class="memname"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; <a class="el" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> &gt; const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a>&lt; D &gt;::qAll </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -593,16 +396,16 @@ template&lt;int D&gt; </div>
 
 <p>Return the full array of q-fields as an unrolled 1D array. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00303">303</a> of file <a class="el" href="rpg_2solvers_2Propagator_8h_source.html">rpg/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00129">129</a> of file <a class="el" href="rpg_2solvers_2Propagator_8h_source.html">rpg/solvers/Propagator.h</a>.</p>
 
-<p class="reference">References <a class="el" href="#a73935788b43eb3aaf01c75677e44aa57">isSolved()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="PropagatorTmpl_8h_source.html#l00281">Pscf::PropagatorTmpl&lt; QT &gt;::isSolved()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00758">Pscf::Rpg::Block&lt; D &gt;::computeStressBead()</a>, and <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00640">Pscf::Rpg::Block&lt; D &gt;::computeStressThread()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00775">Pscf::Rpg::Block&lt; D &gt;::computeStressBead()</a>, and <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00656">Pscf::Rpg::Block&lt; D &gt;::computeStressThread()</a>.</p>
 
 </div>
 </div>
-<a id="a3221d8f68271185f36974be18ed61df7" name="a3221d8f68271185f36974be18ed61df7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3221d8f68271185f36974be18ed61df7">&#9670;&#160;</a></span>block() <span class="overload">[1/2]</span></h2>
+<a id="a72088a380997553ebfcdc859f45eb6e3" name="a72088a380997553ebfcdc859f45eb6e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72088a380997553ebfcdc859f45eb6e3">&#9670;&#160;</a></span>computeHead()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -613,7 +416,7 @@ template&lt;int D&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1Block.html">Block</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a>&lt; D &gt;::block </td>
+          <td class="memname">void <a class="el" href="classPscf_1_1Rp_1_1Propagator.html">Pscf::Rp::Propagator</a>&lt; D, <a class="el" href="classPscf_1_1Rpg_1_1Types.html">Types</a>&lt; D &gt; &gt;::computeHead </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -621,21 +424,19 @@ template&lt;int D&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the associated <a class="el" href="classPscf_1_1Rpg_1_1Block.html" title="Block within a branched polymer.">Block</a> object by reference. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00314">314</a> of file <a class="el" href="rpg_2solvers_2Propagator_8h_source.html">rpg/solvers/Propagator.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00349">setBlock()</a>, <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00123">solve()</a>, and <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00174">solve()</a>.</p>
+<p>Compute initial q-field at the head vertex. </p>
+<p>In either the thread or bead model, the head slice of each propagator is the product of tail slices for incoming propagators from other bonds that terminate at the head vertex, or 1 for a chain end. </p>
 
 </div>
 </div>
-<a id="a94a4449183a2904e853efafdb80a4100" name="a94a4449183a2904e853efafdb80a4100"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94a4449183a2904e853efafdb80a4100">&#9670;&#160;</a></span>block() <span class="overload">[2/2]</span></h2>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a6fe5968ac5078ec62a6fb03743a5b62f" name="a6fe5968ac5078ec62a6fb03743a5b62f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fe5968ac5078ec62a6fb03743a5b62f">&#9670;&#160;</a></span>qFields_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -646,27 +447,26 @@ template&lt;int D&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1Block.html">Block</a>&lt; D &gt; const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a>&lt; D &gt;::block </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
+          <td class="memname"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt;typename <a class="el" href="classPscf_1_1Rpg_1_1Types.html">Types</a>&lt; D &gt;::RField&gt; <a class="el" href="classPscf_1_1Rp_1_1Propagator.html">Pscf::Rp::Propagator</a>&lt; D, <a class="el" href="classPscf_1_1Rpg_1_1Types.html">Types</a>&lt; D &gt; &gt;::qFields_</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the associated <a class="el" href="classPscf_1_1Rpg_1_1Block.html" title="Block within a branched polymer.">Block</a> object by const reference. </p>
+<p><a class="el" href="classUtil_1_1Array.html" title="Array container class template.">Array</a> of propagator slices at different contour variable values. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00325">325</a> of file <a class="el" href="rpg_2solvers_2Propagator_8h_source.html">rpg/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rp_2solvers_2Propagator_8h_source.html#l00191">191</a> of file <a class="el" href="rp_2solvers_2Propagator_8h_source.html">rp/solvers/Propagator.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Propagator_8cu_source.html#l00053">allocate()</a>, and <a class="el" href="Propagator_8cu_source.html#l00077">reallocate()</a>.</p>
 
 </div>
 </div>
-<a id="a3391f69fdee5d3928f4bd7635910862b" name="a3391f69fdee5d3928f4bd7635910862b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3391f69fdee5d3928f4bd7635910862b">&#9670;&#160;</a></span>ns()</h2>
+<a id="a6a95dc65e0c7c20f66b5aa90d57acbec" name="a6a95dc65e0c7c20f66b5aa90d57acbec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a95dc65e0c7c20f66b5aa90d57acbec">&#9670;&#160;</a></span>ns_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -677,30 +477,24 @@ template&lt;int D&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a>&lt; D &gt;::ns </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
+          <td class="memname">int <a class="el" href="classPscf_1_1Rp_1_1Propagator.html">Pscf::Rp::Propagator</a>&lt; D, <a class="el" href="classPscf_1_1Rpg_1_1Types.html">Types</a>&lt; D &gt; &gt;::ns_</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the number of values of s (or slices), including head and tail. </p>
-<p>The value of ns is the number of values of s at which q(r,s) is calculated, including the ned values at the terminating vertices (the head and tail). In the bead model, this is two more than the number of beads in the block. In the thread model, this is one more than the number length/ds of contour length steps. </p>
+<p>Number of slices, including head and tail slices. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00336">336</a> of file <a class="el" href="rpg_2solvers_2Propagator_8h_source.html">rpg/solvers/Propagator.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00044">allocate()</a>, and <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00065">reallocate()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rp_2solvers_2Propagator_8h_source.html#l00194">194</a> of file <a class="el" href="rp_2solvers_2Propagator_8h_source.html">rp/solvers/Propagator.h</a>.</p>
 
 </div>
 </div>
-<a id="ab0165bee32a22baf447eada3419e43eb" name="ab0165bee32a22baf447eada3419e43eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0165bee32a22baf447eada3419e43eb">&#9670;&#160;</a></span>isAllocated()</h2>
+<a id="ac6283b4a3a700123e920e1ab7ae2f7e7" name="ac6283b4a3a700123e920e1ab7ae2f7e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6283b4a3a700123e920e1ab7ae2f7e7">&#9670;&#160;</a></span>isAllocated_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -711,219 +505,28 @@ template&lt;int D&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a>&lt; D &gt;::isAllocated </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
+          <td class="memname">bool <a class="el" href="classPscf_1_1Rp_1_1Propagator.html">Pscf::Rp::Propagator</a>&lt; D, <a class="el" href="classPscf_1_1Rpg_1_1Types.html">Types</a>&lt; D &gt; &gt;::isAllocated_</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Has memory been allocated for this propagator? </p>
+<p>Is this propagator allocated? </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00341">341</a> of file <a class="el" href="rpg_2solvers_2Propagator_8h_source.html">rpg/solvers/Propagator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rp_2solvers_2Propagator_8h_source.html#l00197">197</a> of file <a class="el" href="rp_2solvers_2Propagator_8h_source.html">rp/solvers/Propagator.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00123">solve()</a>, and <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00174">solve()</a>.</p>
-
-</div>
-</div>
-<a id="aabdc0d701be6948761bdc5f89d9474ca" name="aabdc0d701be6948761bdc5f89d9474ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabdc0d701be6948761bdc5f89d9474ca">&#9670;&#160;</a></span>nSource()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="classPscf_1_1PropagatorTmpl.html">Pscf::PropagatorTmpl</a>&lt; <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator</a>&lt; D &gt; &gt;::nSource </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Number of source / prerequisite propagators. </p>
-
-</div>
-</div>
-<a id="a2341c08a1cf12774bfb718f2ddec2ddc" name="a2341c08a1cf12774bfb718f2ddec2ddc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2341c08a1cf12774bfb718f2ddec2ddc">&#9670;&#160;</a></span>source()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1PropagatorTmpl.html">Pscf::PropagatorTmpl</a>&lt; <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator</a>&lt; D &gt; &gt;::source </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get a source propagator. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>index of source propagator, &lt; nSource </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a3f824c3c00b05d89a0efe707e93d09dc" name="a3f824c3c00b05d89a0efe707e93d09dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f824c3c00b05d89a0efe707e93d09dc">&#9670;&#160;</a></span>partner()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1PropagatorTmpl.html">Pscf::PropagatorTmpl</a>&lt; <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator</a>&lt; D &gt; &gt;::partner </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get partner propagator. </p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00223">computeQ()</a>.</p>
-
-</div>
-</div>
-<a id="a700ce09f6793caad4c9a5a4c48403b57" name="a700ce09f6793caad4c9a5a4c48403b57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a700ce09f6793caad4c9a5a4c48403b57">&#9670;&#160;</a></span>setIsSolved()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1PropagatorTmpl.html">Pscf::PropagatorTmpl</a>&lt; <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator</a>&lt; D &gt; &gt;::setIsSolved </td>
-          <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isSolved</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the isSolved flag to true or false. </p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00065">reallocate()</a>, <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00123">solve()</a>, and <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00174">solve()</a>.</p>
-
-</div>
-</div>
-<a id="a73935788b43eb3aaf01c75677e44aa57" name="a73935788b43eb3aaf01c75677e44aa57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73935788b43eb3aaf01c75677e44aa57">&#9670;&#160;</a></span>isSolved()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1PropagatorTmpl.html">Pscf::PropagatorTmpl</a>&lt; <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator</a>&lt; D &gt; &gt;::isSolved </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Has the modified diffusion equation been solved? </p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00223">computeQ()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00758">Pscf::Rpg::Block&lt; D &gt;::computeStressBead()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00640">Pscf::Rpg::Block&lt; D &gt;::computeStressThread()</a>, <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00269">head()</a>, <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00292">q()</a>, <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00303">qAll()</a>, and <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00280">tail()</a>.</p>
-
-</div>
-</div>
-<a id="adf7eae92318c12f18fe2233ad0d42241" name="adf7eae92318c12f18fe2233ad0d42241"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf7eae92318c12f18fe2233ad0d42241">&#9670;&#160;</a></span>hasPartner()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1PropagatorTmpl.html">Pscf::PropagatorTmpl</a>&lt; <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator</a>&lt; D &gt; &gt;::hasPartner </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Does this have a partner propagator? </p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00223">computeQ()</a>.</p>
-
-</div>
-</div>
-<a id="a4cc5ce94cc34b29ae7d0ce09c5f49002" name="a4cc5ce94cc34b29ae7d0ce09c5f49002"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cc5ce94cc34b29ae7d0ce09c5f49002">&#9670;&#160;</a></span>isHeadEnd()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1PropagatorTmpl.html">Pscf::PropagatorTmpl</a>&lt; <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator</a>&lt; D &gt; &gt;::isHeadEnd </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Is the head vertex a chain end? </p>
-<p>Precondition: <a class="el" href="namespacePscf_1_1PolymerModel.html#af5c7a9c517a218fe8198b2a48c45a1ab" title="Is the bead model in use ?">PolymerModel::isBead()</a> </p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00223">computeQ()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00758">Pscf::Rpg::Block&lt; D &gt;::computeStressBead()</a>, <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00123">solve()</a>, and <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00174">solve()</a>.</p>
-
-</div>
-</div>
-<a id="a7719b0df1e0d30730fab0d3244088c07" name="a7719b0df1e0d30730fab0d3244088c07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7719b0df1e0d30730fab0d3244088c07">&#9670;&#160;</a></span>isTailEnd()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1PropagatorTmpl.html">Pscf::PropagatorTmpl</a>&lt; <a class="el" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator</a>&lt; D &gt; &gt;::isTailEnd </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Is the tail vertex a chain end? </p>
-<p>Precondition: <a class="el" href="namespacePscf_1_1PolymerModel.html#af5c7a9c517a218fe8198b2a48c45a1ab" title="Is the bead model in use ?">PolymerModel::isBead()</a> </p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00223">computeQ()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00758">Pscf::Rpg::Block&lt; D &gt;::computeStressBead()</a>, <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00123">solve()</a>, <a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html#l00174">solve()</a>, and <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00280">tail()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Propagator_8cu_source.html#l00053">allocate()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="rpg_2solvers_2Block_8h_source.html">rpg/solvers/Block.h</a></li>
 <li><a class="el" href="rpg_2solvers_2Propagator_8h_source.html">rpg/solvers/Propagator.h</a></li>
-<li><a class="el" href="rpg_2solvers_2Propagator_8tpp_source.html">rpg/solvers/Propagator.tpp</a></li>
+<li><a class="el" href="Propagator_8cu_source.html">Propagator.cu</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

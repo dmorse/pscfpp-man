@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -64,6 +64,8 @@ $(function() {
 Classes</h2></td></tr>
 <tr class="memitem:Util_3A_3ABit" id="r_Util_3A_3ABit"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Bit.html">Util::Bit</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a specific bit location within an unsigned int.  <a href="classUtil_1_1Bit.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Util_3A_3ACountedReference" id="r_Util_3A_3ACountedReference"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1CountedReference.html">Util::CountedReference</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to a shared resource.  <a href="classUtil_1_1CountedReference.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Util_3A_3AException" id="r_Util_3A_3AException"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Exception.html">Util::Exception</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A user-defined exception.  <a href="classUtil_1_1Exception.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Util_3A_3AFileMaster" id="r_Util_3A_3AFileMaster"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1FileMaster.html">Util::FileMaster</a></td></tr>
@@ -78,6 +80,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract template for a notifier (or subject) in the <a class="el" href="classUtil_1_1Observer.html" title="Abstract class template for observer in the observer design pattern.">Observer</a> design pattern.  <a href="classUtil_1_1Notifier.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Util_3A_3AObserver_3C_20Event_20_3E" id="r_Util_3A_3AObserver_3C_20Event_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Observer.html">Util::Observer&lt; Event &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract class template for observer in the observer design pattern.  <a href="classUtil_1_1Observer.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Util_3A_3AReferenceCounter" id="r_Util_3A_3AReferenceCounter"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ReferenceCounter.html">Util::ReferenceCounter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference counter.  <a href="classUtil_1_1ReferenceCounter.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Util_3A_3ASetable_3C_20T_20_3E" id="r_Util_3A_3ASetable_3C_20T_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Setable.html">Util::Setable&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template for a value that can be set or declared null (i.e., unknown).  <a href="classUtil_1_1Setable.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Util_3A_3ATimer" id="r_Util_3A_3ATimer"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Timer.html">Util::Timer</a></td></tr>
@@ -129,7 +133,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ioUtil_8cpp_source.html#l00052">52</a> of file <a class="el" href="ioUtil_8cpp_source.html">ioUtil.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="r1d_2sweep_2Sweep_8cpp_source.html#l00169">Pscf::R1d::Sweep::getSolution()</a>, <a class="el" href="MixturePrdc_8tpp_source.html#l00495">Pscf::Prdc::MixturePrdc&lt; D, PT, ST, TT &gt;::writeQAll()</a>, and <a class="el" href="r1d_2System_8cpp_source.html#l00762">Pscf::R1d::System::writeQAll()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="r1d_2sweep_2Sweep_8cpp_source.html#l00169">Pscf::R1d::Sweep::getSolution()</a>, <a class="el" href="r1d_2system_2System_8cpp_source.html#l00765">Pscf::R1d::System::writeQAll()</a>, and <a class="el" href="rp_2solvers_2Mixture_8tpp_source.html#l00497">Pscf::Rp::Mixture&lt; D, T &gt;::writeQAll()</a>.</p>
 
 </div>
 </div>
@@ -201,8 +205,6 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="Log_8cpp_source.html#l00059">Util::Log::file()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2fts_2trajectory_2RGridTrajectoryReader_8tpp_source.html#l00082">Pscf::Rpc::RGridTrajectoryReader&lt; D &gt;::readFrame()</a>, and <a class="el" href="rpg_2fts_2trajectory_2RGridTrajectoryReader_8tpp_source.html#l00081">Pscf::Rpg::RGridTrajectoryReader&lt; D &gt;::readFrame()</a>.</p>
-
 </div>
 </div>
 <a id="gae9fc3c33d8ea0780790a683554afa949" name="gae9fc3c33d8ea0780790a683554afa949"></a>
@@ -271,8 +273,6 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="ioUtil_8cpp_source.html#l00079">79</a> of file <a class="el" href="ioUtil_8cpp_source.html">ioUtil.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ioUtil_8cpp_source.html#l00018">rStrip()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpc_2fts_2trajectory_2RGridTrajectoryReader_8tpp_source.html#l00082">Pscf::Rpc::RGridTrajectoryReader&lt; D &gt;::readFrame()</a>, and <a class="el" href="rpg_2fts_2trajectory_2RGridTrajectoryReader_8tpp_source.html#l00081">Pscf::Rpg::RGridTrajectoryReader&lt; D &gt;::readFrame()</a>.</p>
 
 </div>
 </div>

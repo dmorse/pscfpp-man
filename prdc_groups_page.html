@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -59,7 +59,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p><a class="el" href="prdc_unitcell_page.html">Crystal Unit Cells</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="prdc_fourier_page.html">Periodic Functions and Fourier Series</a> (Next) <br  />
 </p>
-<p>The pscf_pc and pscf_pg programs can input and output field files in a format that constrains the fields to be symmetric under all symmetry operations of a specified crystallographic space group. Both of these programs can also perform SCFT calculations that search for a solution of a specified space group symmetry. Each possible crystallographic space group is identified in PSCF by a unique identifer string.</p>
+<p>The pscf_rpc and pscf_rpg programs can input and output field files in a format that constrains the fields to be symmetric under all symmetry operations of a specified crystallographic space group. Both of these programs can also perform SCFT calculations that search for a solution of a specified space group symmetry. Each possible crystallographic space group is identified in PSCF by a unique identifer string.</p>
 <h1 class="doxsection"><a class="anchor" id="prdc_groups_identifier_sec"></a>
 Space group identifier strings</h1>
 <p>The space group identifiers used in PSCF are ASCII strings with no white space that are constructed as mangled forms of the Hermann Mauguin space group names that are used in the international tables of crystallography. Each PSCF space group identifier is also the name of a file that contain a description of the space group. The use of identifiers that are ascii strings with no white space allows the PSCF space group identifiers is convenient because it allows them to read from the parameter file as single words with standard stream IO operations, and also allows the same strings to be used as file names. The international symbols cannot be used for these purposes because they contain typset elements such as subscripts and overbars that cannot be represented using an ascii character set.</p>

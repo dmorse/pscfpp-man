@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -57,10 +57,10 @@ $(function() {
   <div class="headertitle"><div class="title">Partial Saddle-Point Field Theoretic Simulation (PS-FTS) </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="el" href="scft_page.html">Self-Consistent Field Theory</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="developer_page.html">Developer Information</a> (Next) <br  />
+<div class="textblock"><p><a class="el" href="scft_page.html">Self-Consistent Field Theory</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="analysis_page.html">Data Analysis Tools</a> (Next) <br  />
 </p>
-<p>The pscf_pc and pscf_pg programs can both be used to perform stochastic field theoretic simulation (FTS) calculations using a partial saddle-point (PS) approximation. Both programs can use either Brownian dynamics (BD) or Monte Carlo (MC) sampling algorithms. The resulting type of partial saddle-point field theoretic simulation (PS-FTS) yields a statistical ensemble for fluctuating monomer chemical potential fields ("w fields") in which the fields are real-valued functions of position (as in SCFT), and in which each field configuration is assigned a real-valued statistical weight. The resulting theory yields field configurations that tend to fluctuate around an SCFT solution when applied to systems of very long, strongly overlapping polymers, corresponding to large values of the invariant degrees of polymerization \( \overline{N} \). PS-FTS yields predictions for intensive thermodynamic properties that approach those of SCFT in the limit of infinitely long chains ( \( \overline{N} \rightarrow \infty \)), and that accurately describe some of the most important effects of composition fluctuations that are neglected by SCFT.</p>
-<p>Instructions for performing PS-FTS calculations given in this manual section apply equally well to pscf_pc or pscf_pg, since these two programs offer identical capabilities and interfaces for such calculations.</p>
+<p>The pscf_rpc and pscf_rpg programs can both be used to perform stochastic field theoretic simulation (FTS) calculations using a partial saddle-point (PS) approximation. Both programs can use either Brownian dynamics (BD) or Monte Carlo (MC) sampling algorithms. The resulting type of partial saddle-point field theoretic simulation (PS-FTS) yields a statistical ensemble for fluctuating monomer chemical potential fields ("w fields") in which the fields are real-valued functions of position (as in SCFT), and in which each field configuration is assigned a real-valued statistical weight. The resulting theory yields field configurations that tend to fluctuate around an SCFT solution when applied to systems of very long, strongly overlapping polymers, corresponding to large values of the invariant degrees of polymerization \( \overline{N} \). PS-FTS yields predictions for intensive thermodynamic properties that approach those of SCFT in the limit of infinitely long chains ( \( \overline{N} \rightarrow \infty \)), and that accurately describe some of the most important effects of composition fluctuations that are neglected by SCFT.</p>
+<p>Instructions for performing PS-FTS calculations given in this manual section apply equally well to pscf_rpc or pscf_rpg, since these two programs offer identical capabilities and interfaces for such calculations.</p>
 <h2>Contents:</h2>
 <ol>
 <li>
@@ -68,7 +68,25 @@ $(function() {
 <li>
 <a class="el" href="psfts_psa_page.html">Partial Saddle-Point Approximation</a>  </li>
 <li>
-<a class="el" href="psfts_algorithm_page.html">Algorithms</a>  </li>
+<a class="el" href="psfts_thermoint_page.html">Thermodynamic Integration</a>  </li>
+<li>
+<a class="el" href="psfts_algorithm_page.html">Algorithms</a>  <ul>
+<li>
+<a class="el" href="psfts_algo_overview_page.html">Overview</a>  </li>
+<li>
+<a class="el" href="psfts_algo_brownian_page.html">Brownian Dynamics</a>  </li>
+<li>
+<a class="el" href="psfts_algo_montecarlo_page.html">Monte Carlo</a>  </li>
+<li>
+<a class="el" href="psfts_algo_compressor_page.html">Compressor</a>  </li>
+<li>
+<a class="el" href="psfts_algo_analyzer_page.html">Analyzer</a>  </li>
+<li>
+<a class="el" href="psfts_algo_ramp_page.html">Ramp</a>  </li>
+<li>
+<a class="el" href="psfts_algo_perturb_page.html">Perturbation</a>  </li>
+</ul>
+</li>
 <li>
 <a class="el" href="psfts_param_page.html">Parameter File</a>  </li>
 <li>
@@ -81,7 +99,7 @@ $(function() {
 <a class="el" href="psfts_perturb_page.html">Perturbations</a>  </li>
 </ol>
 <p><br  />
- <a class="el" href="scft_page.html">Self-Consistent Field Theory</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="index.html">Main Page</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="developer_page.html">Developer Information</a> (Next) </p>
+ <a class="el" href="scft_page.html">Self-Consistent Field Theory</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="index.html">Main Page</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="analysis_page.html">Data Analysis Tools</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

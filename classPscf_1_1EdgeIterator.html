@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: Pscf::EdgeIterator Class Reference</title>
+<title>PSCF: Pscf::EdgeIterator&lt; WT &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -57,7 +57,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classPscf_1_1EdgeIterator-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Pscf::EdgeIterator Class Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Base__Module.html">Pscf Common</a> &raquo; <a class="el" href="group__Pscf__Chem__Module.html">Chemical Structure</a></div></div></div>
+  <div class="headertitle"><div class="title">Pscf::EdgeIterator&lt; WT &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Base__Module.html">Pscf - Base Module</a> &raquo; <a class="el" href="group__Pscf__Chem__Module.html">Chemical Structure</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -68,47 +68,50 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a73eea50484658284fbbe6b705f1f2095" id="r_a73eea50484658284fbbe6b705f1f2095"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73eea50484658284fbbe6b705f1f2095">EdgeIterator</a> (<a class="el" href="classPscf_1_1PolymerSpecies.html">PolymerSpecies</a> const &amp;polymer)</td></tr>
-<tr class="memdesc:a73eea50484658284fbbe6b705f1f2095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="memitem:a3eb3433f3551280604ec186ca05b8d33" id="r_a3eb3433f3551280604ec186ca05b8d33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3eb3433f3551280604ec186ca05b8d33">~EdgeIterator</a> ()</td></tr>
-<tr class="memdesc:a3eb3433f3551280604ec186ca05b8d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:ab646f7334ebefef5347d2b9ac195806c" id="r_ab646f7334ebefef5347d2b9ac195806c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab646f7334ebefef5347d2b9ac195806c">begin</a> (int sourceId, int targetId)</td></tr>
-<tr class="memdesc:ab646f7334ebefef5347d2b9ac195806c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize iterator.  <br /></td></tr>
-<tr class="memitem:aec50df186cf71936d9656bb04a6b9612" id="r_aec50df186cf71936d9656bb04a6b9612"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1EdgeIterator.html">EdgeIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec50df186cf71936d9656bb04a6b9612">operator++</a> ()</td></tr>
-<tr class="memdesc:aec50df186cf71936d9656bb04a6b9612"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment operator - move to next vertex.  <br /></td></tr>
-<tr class="memitem:a3e8ca7354c1e740090e13f4d45c44bd1" id="r_a3e8ca7354c1e740090e13f4d45c44bd1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e8ca7354c1e740090e13f4d45c44bd1">currentEdgeId</a> () const</td></tr>
-<tr class="memdesc:a3e8ca7354c1e740090e13f4d45c44bd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get index of the current edge.  <br /></td></tr>
-<tr class="memitem:a8d7cde8d30a6b20944dc1b1f6964c7e4" id="r_a8d7cde8d30a6b20944dc1b1f6964c7e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d7cde8d30a6b20944dc1b1f6964c7e4">currentDirectionId</a> () const</td></tr>
-<tr class="memdesc:a8d7cde8d30a6b20944dc1b1f6964c7e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get direction index for the path within the current edge.  <br /></td></tr>
-<tr class="memitem:a255ee286e3a799b8899b13c6b1f7f61b" id="r_a255ee286e3a799b8899b13c6b1f7f61b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a255ee286e3a799b8899b13c6b1f7f61b">currentVertexId</a> () const</td></tr>
-<tr class="memdesc:a255ee286e3a799b8899b13c6b1f7f61b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get index of the current vertex.  <br /></td></tr>
-<tr class="memitem:aef9889ad180be254e30cf6c707837278" id="r_aef9889ad180be254e30cf6c707837278"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef9889ad180be254e30cf6c707837278">isEnd</a> () const</td></tr>
-<tr class="memdesc:aef9889ad180be254e30cf6c707837278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true iff currentId == targetId.  <br /></td></tr>
-<tr class="memitem:a928aa1a87a533d7ef833e62bd004a707" id="r_a928aa1a87a533d7ef833e62bd004a707"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a928aa1a87a533d7ef833e62bd004a707">notEnd</a> () const</td></tr>
-<tr class="memdesc:a928aa1a87a533d7ef833e62bd004a707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true iff currentId != targetId.  <br /></td></tr>
+<tr class="memitem:a92c697c23c0629f18fac27a55c536917" id="r_a92c697c23c0629f18fac27a55c536917"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92c697c23c0629f18fac27a55c536917">EdgeIterator</a> (<a class="el" href="classPscf_1_1PolymerSpecies.html">PolymerSpecies</a>&lt; WT &gt; const &amp;polymer)</td></tr>
+<tr class="memdesc:a92c697c23c0629f18fac27a55c536917"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:aa863f696265c4c409a98759a153a7906" id="r_aa863f696265c4c409a98759a153a7906"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa863f696265c4c409a98759a153a7906">~EdgeIterator</a> ()</td></tr>
+<tr class="memdesc:aa863f696265c4c409a98759a153a7906"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:a5752eab9acbd01762fb3760f251ec021" id="r_a5752eab9acbd01762fb3760f251ec021"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5752eab9acbd01762fb3760f251ec021">begin</a> (int sourceId, int targetId)</td></tr>
+<tr class="memdesc:a5752eab9acbd01762fb3760f251ec021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize iterator.  <br /></td></tr>
+<tr class="memitem:a1b1af589c5f843d4192a8079ac3c49e3" id="r_a1b1af589c5f843d4192a8079ac3c49e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1EdgeIterator.html">EdgeIterator</a>&lt; WT &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b1af589c5f843d4192a8079ac3c49e3">operator++</a> ()</td></tr>
+<tr class="memdesc:a1b1af589c5f843d4192a8079ac3c49e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment operator - move to next vertex.  <br /></td></tr>
+<tr class="memitem:a064eb27e075bdb90f1bba672768aca68" id="r_a064eb27e075bdb90f1bba672768aca68"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a064eb27e075bdb90f1bba672768aca68">currentEdgeId</a> () const</td></tr>
+<tr class="memdesc:a064eb27e075bdb90f1bba672768aca68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get index of the current edge.  <br /></td></tr>
+<tr class="memitem:a1c7e90920079ed6f1de367382136fee4" id="r_a1c7e90920079ed6f1de367382136fee4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c7e90920079ed6f1de367382136fee4">currentDirectionId</a> () const</td></tr>
+<tr class="memdesc:a1c7e90920079ed6f1de367382136fee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get direction index for the path within the current edge.  <br /></td></tr>
+<tr class="memitem:a182771a9874e69533df0cc0cc4c91db8" id="r_a182771a9874e69533df0cc0cc4c91db8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a182771a9874e69533df0cc0cc4c91db8">currentVertexId</a> () const</td></tr>
+<tr class="memdesc:a182771a9874e69533df0cc0cc4c91db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get index of the current vertex.  <br /></td></tr>
+<tr class="memitem:a2f643d6a09c73c1427db6fe12f031bd7" id="r_a2f643d6a09c73c1427db6fe12f031bd7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f643d6a09c73c1427db6fe12f031bd7">isEnd</a> () const</td></tr>
+<tr class="memdesc:a2f643d6a09c73c1427db6fe12f031bd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true iff currentId == targetId.  <br /></td></tr>
+<tr class="memitem:abaccc187e8a29c97258107d67f86b290" id="r_abaccc187e8a29c97258107d67f86b290"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaccc187e8a29c97258107d67f86b290">notEnd</a> () const</td></tr>
+<tr class="memdesc:abaccc187e8a29c97258107d67f86b290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true iff currentId != targetId.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within a block polymer.">Edge</a> iterator for graph associated with a polymer. </p>
-<p>Usage: Suppose that object p is an instance of a subclass of <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">PolymerSpecies</a>. The following snippet illustrates how to iterate from edge (or block) iSource to edge iTarget of the associated polymer: </p><div class="fragment"><div class="line"><a class="code hl_function" href="#a73eea50484658284fbbe6b705f1f2095">EdgeIterator</a> = iter(p);</div>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename WT&gt;<br />
+class Pscf::EdgeIterator&lt; WT &gt;</div><p><a class="el" href="classPscf_1_1Edge.html" title="Descriptor for a block within a block polymer.">Edge</a> iterator for graph associated with a polymer. </p>
+<p>Usage: Suppose that object p is an instance of a subclass of <a class="el" href="classPscf_1_1PolymerSpecies.html">PolymerSpecies&lt;WT&gt;</a>. The following snippet illustrates how to iterate from edge (or block) iSource to edge iTarget of the associated polymer: </p><div class="fragment"><div class="line"><a class="code hl_function" href="#a92c697c23c0629f18fac27a55c536917">EdgeIterator</a> = iter(p);</div>
 <div class="line"><span class="keywordtype">int</span> iEdge;</div>
 <div class="line"><span class="keywordflow">for</span> (iter.begin(iSource, iTarget); iter.notEnd(); ++iter) {</div>
 <div class="line">   iEdge = iter.currentEdgeId();</div>
 <div class="line">   <span class="comment">// do something with edge iEdge</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassPscf_1_1EdgeIterator_html_a73eea50484658284fbbe6b705f1f2095"><div class="ttname"><a href="#a73eea50484658284fbbe6b705f1f2095">Pscf::EdgeIterator::EdgeIterator</a></div><div class="ttdeci">EdgeIterator(PolymerSpecies const &amp;polymer)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="EdgeIterator_8cpp_source.html#l00018">EdgeIterator.cpp:18</a></div></div>
+<div class="ttc" id="aclassPscf_1_1EdgeIterator_html_a92c697c23c0629f18fac27a55c536917"><div class="ttname"><a href="#a92c697c23c0629f18fac27a55c536917">Pscf::EdgeIterator::EdgeIterator</a></div><div class="ttdeci">EdgeIterator(PolymerSpecies&lt; WT &gt; const &amp;polymer)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="EdgeIterator_8tpp_source.html#l00019">EdgeIterator.tpp:19</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="EdgeIterator_8h_source.html#l00038">38</a> of file <a class="el" href="EdgeIterator_8h_source.html">EdgeIterator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EdgeIterator_8h_source.html#l00036">36</a> of file <a class="el" href="EdgeIterator_8h_source.html">EdgeIterator.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a73eea50484658284fbbe6b705f1f2095" name="a73eea50484658284fbbe6b705f1f2095"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73eea50484658284fbbe6b705f1f2095">&#9670;&#160;</a></span>EdgeIterator()</h2>
+<a id="a92c697c23c0629f18fac27a55c536917" name="a92c697c23c0629f18fac27a55c536917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92c697c23c0629f18fac27a55c536917">&#9670;&#160;</a></span>EdgeIterator()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename WT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Pscf::EdgeIterator::EdgeIterator </td>
+          <td class="memname"><a class="el" href="classPscf_1_1EdgeIterator.html">Pscf::EdgeIterator</a>&lt; WT &gt;::EdgeIterator </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1PolymerSpecies.html">PolymerSpecies</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>polymer</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1PolymerSpecies.html">PolymerSpecies</a>&lt; WT &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>polymer</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -122,20 +125,22 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="EdgeIterator_8cpp_source.html#l00018">18</a> of file <a class="el" href="EdgeIterator_8cpp_source.html">EdgeIterator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EdgeIterator_8tpp_source.html#l00019">19</a> of file <a class="el" href="EdgeIterator_8tpp_source.html">EdgeIterator.tpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EdgeIterator_8cpp_source.html#l00097">operator++()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EdgeIterator_8tpp_source.html#l00101">operator++()</a>.</p>
 
 </div>
 </div>
-<a id="a3eb3433f3551280604ec186ca05b8d33" name="a3eb3433f3551280604ec186ca05b8d33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3eb3433f3551280604ec186ca05b8d33">&#9670;&#160;</a></span>~EdgeIterator()</h2>
+<a id="aa863f696265c4c409a98759a153a7906" name="aa863f696265c4c409a98759a153a7906"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa863f696265c4c409a98759a153a7906">&#9670;&#160;</a></span>~EdgeIterator()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename WT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Pscf::EdgeIterator::~EdgeIterator </td>
+          <td class="memname"><a class="el" href="classPscf_1_1EdgeIterator.html">Pscf::EdgeIterator</a>&lt; WT &gt;::~<a class="el" href="classPscf_1_1EdgeIterator.html">EdgeIterator</a> </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -145,19 +150,21 @@ Public Member Functions</h2></td></tr>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="EdgeIterator_8cpp_source.html#l00027">27</a> of file <a class="el" href="EdgeIterator_8cpp_source.html">EdgeIterator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EdgeIterator_8tpp_source.html#l00029">29</a> of file <a class="el" href="EdgeIterator_8tpp_source.html">EdgeIterator.tpp</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="ab646f7334ebefef5347d2b9ac195806c" name="ab646f7334ebefef5347d2b9ac195806c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab646f7334ebefef5347d2b9ac195806c">&#9670;&#160;</a></span>begin()</h2>
+<a id="a5752eab9acbd01762fb3760f251ec021" name="a5752eab9acbd01762fb3760f251ec021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5752eab9acbd01762fb3760f251ec021">&#9670;&#160;</a></span>begin()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename WT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void Pscf::EdgeIterator::begin </td>
+          <td class="memname">void <a class="el" href="classPscf_1_1EdgeIterator.html">Pscf::EdgeIterator</a>&lt; WT &gt;::begin </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sourceId</em></span>, </td>
         </tr>
@@ -178,22 +185,22 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="EdgeIterator_8cpp_source.html#l00033">33</a> of file <a class="el" href="EdgeIterator_8cpp_source.html">EdgeIterator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EdgeIterator_8tpp_source.html#l00036">36</a> of file <a class="el" href="EdgeIterator_8tpp_source.html">EdgeIterator.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2fts_2compressor_2IntraCorrelation_8tpp_source.html#l00060">Pscf::Rpc::IntraCorrelation&lt; D &gt;::computeIntraCorrelations()</a>, and <a class="el" href="rpg_2fts_2compressor_2IntraCorrelation_8tpp_source.html#l00055">Pscf::Rpg::IntraCorrelation&lt; D &gt;::computeIntraCorrelations()</a>.</p>
-
 </div>
 </div>
-<a id="aec50df186cf71936d9656bb04a6b9612" name="aec50df186cf71936d9656bb04a6b9612"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec50df186cf71936d9656bb04a6b9612">&#9670;&#160;</a></span>operator++()</h2>
+<a id="a1b1af589c5f843d4192a8079ac3c49e3" name="a1b1af589c5f843d4192a8079ac3c49e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b1af589c5f843d4192a8079ac3c49e3">&#9670;&#160;</a></span>operator++()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename WT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1EdgeIterator.html">EdgeIterator</a> &amp; Pscf::EdgeIterator::operator++ </td>
+          <td class="memname"><a class="el" href="classPscf_1_1EdgeIterator.html">EdgeIterator</a>&lt; WT &gt; &amp; <a class="el" href="classPscf_1_1EdgeIterator.html">Pscf::EdgeIterator</a>&lt; WT &gt;::operator++ </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -203,20 +210,22 @@ Public Member Functions</h2></td></tr>
 
 <p>Increment operator - move to next vertex. </p>
 
-<p class="definition">Definition at line <a class="el" href="EdgeIterator_8cpp_source.html#l00097">97</a> of file <a class="el" href="EdgeIterator_8cpp_source.html">EdgeIterator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EdgeIterator_8tpp_source.html#l00101">101</a> of file <a class="el" href="EdgeIterator_8tpp_source.html">EdgeIterator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="EdgeIterator_8cpp_source.html#l00018">EdgeIterator()</a>, <a class="el" href="EdgeIterator_8cpp_source.html#l00148">notEnd()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="Edge_8h_source.html#l00296">Pscf::Edge::vertexId()</a>.</p>
+<p class="reference">References <a class="el" href="EdgeIterator_8tpp_source.html#l00019">EdgeIterator()</a>, <a class="el" href="EdgeIterator_8tpp_source.html#l00157">notEnd()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="Edge_8h_source.html#l00296">Pscf::Edge::vertexId()</a>.</p>
 
 </div>
 </div>
-<a id="a3e8ca7354c1e740090e13f4d45c44bd1" name="a3e8ca7354c1e740090e13f4d45c44bd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e8ca7354c1e740090e13f4d45c44bd1">&#9670;&#160;</a></span>currentEdgeId()</h2>
+<a id="a064eb27e075bdb90f1bba672768aca68" name="a064eb27e075bdb90f1bba672768aca68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a064eb27e075bdb90f1bba672768aca68">&#9670;&#160;</a></span>currentEdgeId()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename WT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int Pscf::EdgeIterator::currentEdgeId </td>
+          <td class="memname">int <a class="el" href="classPscf_1_1EdgeIterator.html">Pscf::EdgeIterator</a>&lt; WT &gt;::currentEdgeId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -226,20 +235,20 @@ Public Member Functions</h2></td></tr>
 
 <p>Get index of the current edge. </p>
 
-<p class="definition">Definition at line <a class="el" href="EdgeIterator_8cpp_source.html#l00122">122</a> of file <a class="el" href="EdgeIterator_8cpp_source.html">EdgeIterator.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpc_2fts_2compressor_2IntraCorrelation_8tpp_source.html#l00060">Pscf::Rpc::IntraCorrelation&lt; D &gt;::computeIntraCorrelations()</a>, and <a class="el" href="rpg_2fts_2compressor_2IntraCorrelation_8tpp_source.html#l00055">Pscf::Rpg::IntraCorrelation&lt; D &gt;::computeIntraCorrelations()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EdgeIterator_8tpp_source.html#l00127">127</a> of file <a class="el" href="EdgeIterator_8tpp_source.html">EdgeIterator.tpp</a>.</p>
 
 </div>
 </div>
-<a id="a8d7cde8d30a6b20944dc1b1f6964c7e4" name="a8d7cde8d30a6b20944dc1b1f6964c7e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d7cde8d30a6b20944dc1b1f6964c7e4">&#9670;&#160;</a></span>currentDirectionId()</h2>
+<a id="a1c7e90920079ed6f1de367382136fee4" name="a1c7e90920079ed6f1de367382136fee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c7e90920079ed6f1de367382136fee4">&#9670;&#160;</a></span>currentDirectionId()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename WT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int Pscf::EdgeIterator::currentDirectionId </td>
+          <td class="memname">int <a class="el" href="classPscf_1_1EdgeIterator.html">Pscf::EdgeIterator</a>&lt; WT &gt;::currentDirectionId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -249,18 +258,20 @@ Public Member Functions</h2></td></tr>
 
 <p>Get direction index for the path within the current edge. </p>
 
-<p class="definition">Definition at line <a class="el" href="EdgeIterator_8cpp_source.html#l00128">128</a> of file <a class="el" href="EdgeIterator_8cpp_source.html">EdgeIterator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EdgeIterator_8tpp_source.html#l00134">134</a> of file <a class="el" href="EdgeIterator_8tpp_source.html">EdgeIterator.tpp</a>.</p>
 
 </div>
 </div>
-<a id="a255ee286e3a799b8899b13c6b1f7f61b" name="a255ee286e3a799b8899b13c6b1f7f61b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a255ee286e3a799b8899b13c6b1f7f61b">&#9670;&#160;</a></span>currentVertexId()</h2>
+<a id="a182771a9874e69533df0cc0cc4c91db8" name="a182771a9874e69533df0cc0cc4c91db8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a182771a9874e69533df0cc0cc4c91db8">&#9670;&#160;</a></span>currentVertexId()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename WT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int Pscf::EdgeIterator::currentVertexId </td>
+          <td class="memname">int <a class="el" href="classPscf_1_1EdgeIterator.html">Pscf::EdgeIterator</a>&lt; WT &gt;::currentVertexId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -272,18 +283,20 @@ Public Member Functions</h2></td></tr>
 <p>When the current edge is not the target edge, the current vertex is the vertex of the current edge that is closer to the closest vertex of the target edge.</p>
 <p>When the current edge is also the target edge, the current vertex is the vertex of the target edge that is farther from the initial source edge. </p>
 
-<p class="definition">Definition at line <a class="el" href="EdgeIterator_8cpp_source.html#l00134">134</a> of file <a class="el" href="EdgeIterator_8cpp_source.html">EdgeIterator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EdgeIterator_8tpp_source.html#l00141">141</a> of file <a class="el" href="EdgeIterator_8tpp_source.html">EdgeIterator.tpp</a>.</p>
 
 </div>
 </div>
-<a id="aef9889ad180be254e30cf6c707837278" name="aef9889ad180be254e30cf6c707837278"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef9889ad180be254e30cf6c707837278">&#9670;&#160;</a></span>isEnd()</h2>
+<a id="a2f643d6a09c73c1427db6fe12f031bd7" name="a2f643d6a09c73c1427db6fe12f031bd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f643d6a09c73c1427db6fe12f031bd7">&#9670;&#160;</a></span>isEnd()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename WT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool Pscf::EdgeIterator::isEnd </td>
+          <td class="memname">bool <a class="el" href="classPscf_1_1EdgeIterator.html">Pscf::EdgeIterator</a>&lt; WT &gt;::isEnd </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -293,18 +306,20 @@ Public Member Functions</h2></td></tr>
 
 <p>Return true iff currentId == targetId. </p>
 
-<p class="definition">Definition at line <a class="el" href="EdgeIterator_8cpp_source.html#l00140">140</a> of file <a class="el" href="EdgeIterator_8cpp_source.html">EdgeIterator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EdgeIterator_8tpp_source.html#l00148">148</a> of file <a class="el" href="EdgeIterator_8tpp_source.html">EdgeIterator.tpp</a>.</p>
 
 </div>
 </div>
-<a id="a928aa1a87a533d7ef833e62bd004a707" name="a928aa1a87a533d7ef833e62bd004a707"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a928aa1a87a533d7ef833e62bd004a707">&#9670;&#160;</a></span>notEnd()</h2>
+<a id="abaccc187e8a29c97258107d67f86b290" name="abaccc187e8a29c97258107d67f86b290"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaccc187e8a29c97258107d67f86b290">&#9670;&#160;</a></span>notEnd()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename WT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool Pscf::EdgeIterator::notEnd </td>
+          <td class="memname">bool <a class="el" href="classPscf_1_1EdgeIterator.html">Pscf::EdgeIterator</a>&lt; WT &gt;::notEnd </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -314,15 +329,15 @@ Public Member Functions</h2></td></tr>
 
 <p>Return true iff currentId != targetId. </p>
 
-<p class="definition">Definition at line <a class="el" href="EdgeIterator_8cpp_source.html#l00148">148</a> of file <a class="el" href="EdgeIterator_8cpp_source.html">EdgeIterator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EdgeIterator_8tpp_source.html#l00157">157</a> of file <a class="el" href="EdgeIterator_8tpp_source.html">EdgeIterator.tpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2fts_2compressor_2IntraCorrelation_8tpp_source.html#l00060">Pscf::Rpc::IntraCorrelation&lt; D &gt;::computeIntraCorrelations()</a>, <a class="el" href="rpg_2fts_2compressor_2IntraCorrelation_8tpp_source.html#l00055">Pscf::Rpg::IntraCorrelation&lt; D &gt;::computeIntraCorrelations()</a>, and <a class="el" href="EdgeIterator_8cpp_source.html#l00097">operator++()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EdgeIterator_8tpp_source.html#l00101">operator++()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="EdgeIterator_8h_source.html">EdgeIterator.h</a></li>
-<li><a class="el" href="EdgeIterator_8cpp_source.html">EdgeIterator.cpp</a></li>
+<li><a class="el" href="EdgeIterator_8tpp_source.html">EdgeIterator.tpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: Command for pscf_pc: WRITE_STARS</title>
+<title>PSCF: Command for pscf_rpc: WRITE_STARS</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -49,17 +49,17 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a href="index.html">PSCF - Polymer Self-Consistent Field</a></li><li class="navelem"><a href="scft_page.html">Self-Consistent Field Theory</a></li><li class="navelem"><a href="scft_command_page.html">Command Files</a></li><li class="navelem"><a href="scft_command_pc_page.html">Commands - pscf_pc and pscf_pg</a></li>  </ul>
+<li class="navelem"><a href="index.html">PSCF - Polymer Self-Consistent Field</a></li><li class="navelem"><a href="scft_page.html">Self-Consistent Field Theory</a></li><li class="navelem"><a href="scft_command_page.html">Command Files</a></li><li class="navelem"><a href="scft_command_pc_page.html">Commands - pscf_rpc and pscf_rpg</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">Command for pscf_pc: WRITE_STARS </div></div>
+  <div class="headertitle"><div class="title">Command for pscf_rpc: WRITE_STARS </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="el" href="scft_command_pc_page.html">Commands - pscf_pc and pscf_pg</a> (Up/Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_thermo_page.html">Thermodynamic Properties</a> (Next) <br  />
+<div class="textblock"><p><a class="el" href="scft_command_pc_page.html">Commands - pscf_rpc and pscf_rpg</a> (Up/Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_thermo_page.html">Thermodynamic Properties</a> (Next) <br  />
 </p>
-<p>THE WRITE_GROUP command accepted by pscf_pc and pscf_pg programs writes a file containing a list of all the symmetry operations of the current space group. A discussion of symmetry operations and their representation is given as an <a class="el" href="prdc_symmetry_page.html">appendix</a>. A shorter overview is given here in a form sufficient to allow a user to understand the format of the file created by the WRITE_GROUP operation. The format used by the WRITE_GROUP command is the same as that used in the group files that are distributed with pscf, which are located in subdirectories of the data/groups directory.</p>
+<p>THE WRITE_GROUP command accepted by pscf_rpc and pscf_rpg programs writes a file containing a list of all the symmetry operations of the current space group. A discussion of symmetry operations and their representation is given as an <a class="el" href="prdc_symmetry_page.html">appendix</a>. A shorter overview is given here in a form sufficient to allow a user to understand the format of the file created by the WRITE_GROUP operation. The format used by the WRITE_GROUP command is the same as that used in the group files that are distributed with pscf, which are located in subdirectories of the data/groups directory.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_command_pc_group_operations_sec"></a>
 Symmetry Operations</h1>
 <p>A space group is defined by a set of crystallogrphic symmetry operations. Every space group symmetry operation \( A \) is a function that maps very position vector \( {\bf r} \) in a \( D \) dimensional space onto a transformed position   </p><p class="formulaDsp">
@@ -68,7 +68,7 @@ Symmetry Operations</h1>
 </p>
 <p> in which \( R \) is a linear operator that performs a point group operation such as a rotation, reflection, or inversion on the vector to its right, and \( {\bf t} \) is a translation vector. Symmetry operations for which \( {\bf t} = 0 \) are referred to as <em> symmorphic </em> operations, while those for which \( {\bf t} \neq 0 \) are <em> non-symmorphic </em>. Operations involving glide planes and screw axes are non-symmorphic. The translation vectors for non-symmorphic operations generally always the position by a rational fraction of a unit cell (e.g., 1/4 or 1/2) along one or more Bravais lattice basis vectors.</p>
 <p>Positions and symmetry operations are most conveniently expressed using a Bravais lattice basis vectors, which we refer to as a Bravais basis. Let   </p><p class="formulaDsp">
-\[    {\bf a}_{0}, \ldots, {\bf a}_{D-1} 
+\[    {\bf a}_{0}, \ldots, {\bf a}_{D-1}
 \]
 </p>
 <p> denote a list of the basis vectors used by PSCF to define the crystal Bravais lattice. Any position may be expanded in a Bravais basis as a superposition   </p><p class="formulaDsp">
@@ -77,12 +77,12 @@ Symmetry Operations</h1>
 </p>
 <p> in which \((r_{0}, \ldots, r_{D-1} \) are dimensionless components, which we refer to as reduced coordinates.</p>
 <p>Symmetry operations are also conveniently represented using a Bravais basis. Using such a basis, we may represent any point group operation \( R \) as a matrix with integer elements, and a translation \( {\bf t} \) as a vector with components given by rational numbers (i.e., fractions such as 1/2, 1/4, 2/3, etc.) If a symmetry operation \( A \) transforms a vector \( {\bf r} \) onto a transformed vector given by    </p><p class="formulaDsp">
-\[    {\bf r}&#39; = A({\bf r}) 
+\[    {\bf r}&#39; = A({\bf r})
     = \sum_{i=0}^{D-1} r_{i}&#39; {\bf a}_{i} \quad.
 \]
 </p>
 <p> then the components of \( {\bf r}&#39; \) can be expressed as a sum    </p><p class="formulaDsp">
-\[    r_{i}&#39; = 
+\[    r_{i}&#39; =
     \sum_{j=0}^{D-1} R_{ij} r_{j} + t_{i}
 \]
 </p>
@@ -97,8 +97,7 @@ File Format</h1>
 <p>The first two lines of each group file give the dimension of space and the number of symmetry operations in the group. The dimension of space is denoted by a label "dim". The number of symmetry operations in the group is denoted by a label "size". These two lines are followed by a list of all symmetry operations, each of which is output int the format shown above, with one empty line between successive symmetry operations. The order in which symmetry operations are listed has no significance - a group is a set of operations, defined without regard to order.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_command_pc_group_example_sec"></a>
 Example</h1>
-<p>An example is shown below of the file created by the WRITE_GROUP command for a system with space group \( Ia\overline{3}d \). The resulting file is identical to that distributed with the PSCF package as the file pscfpp/data/groups/3/I_a_-3_d . <br  />
-</p>
+<p>An example is shown below of the file created by the WRITE_GROUP command for a system with space group \( Ia\overline{3}d \). The resulting file is identical to that distributed with the PSCF package as the file pscfpp/data/groups/3/I_a_-3_d .</p>
 <div class="fragment"><div class="line">dim  3</div>
 <div class="line">size 96</div>
 <div class="line"> </div>
@@ -582,7 +581,7 @@ Example</h1>
 <div class="line">  0  1  0</div>
 <div class="line">  1/4  1/4  1/4</div>
 </div><!-- fragment --><p><br  />
- <a class="el" href="scft_command_pc_page.html">Commands - pscf_pc and pscf_pg</a> (Up/Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_thermo_page.html">Thermodynamic Properties</a> (Next) </p>
+ <a class="el" href="scft_command_pc_page.html">Commands - pscf_rpc and pscf_rpg</a> (Up/Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_thermo_page.html">Thermodynamic Properties</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

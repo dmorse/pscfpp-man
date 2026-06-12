@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -71,7 +71,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a26051708c1b99e2c7e55999cb5c0ba55" id="r_a26051708c1b99e2c7e55999cb5c0ba55"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26051708c1b99e2c7e55999cb5c0ba55">GArray</a> ()</td></tr>
 <tr class="memdesc:a26051708c1b99e2c7e55999cb5c0ba55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:a270bb1f05be52fb1929132bfcdd59531" id="r_a270bb1f05be52fb1929132bfcdd59531"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a270bb1f05be52fb1929132bfcdd59531">GArray</a> (<a class="el" href="classUtil_1_1GArray.html">GArray</a>&lt; Data &gt; const &amp;other)</td></tr>
-<tr class="memdesc:a270bb1f05be52fb1929132bfcdd59531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor, copy pointers.  <br /></td></tr>
+<tr class="memdesc:a270bb1f05be52fb1929132bfcdd59531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
 <tr class="memitem:ac6890c7631b469da0b683cd5385d9e78" id="r_ac6890c7631b469da0b683cd5385d9e78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1GArray.html">GArray</a>&lt; Data &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6890c7631b469da0b683cd5385d9e78">operator=</a> (<a class="el" href="classUtil_1_1GArray.html">GArray</a>&lt; Data &gt; const &amp;other)</td></tr>
 <tr class="memdesc:ac6890c7631b469da0b683cd5385d9e78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment, element by element.  <br /></td></tr>
 <tr class="memitem:a20d7b40e69ed5d4771d735b469c9528c" id="r_a20d7b40e69ed5d4771d735b469c9528c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20d7b40e69ed5d4771d735b469c9528c">~GArray</a> ()</td></tr>
@@ -130,9 +130,9 @@ template&lt;typename Data&gt; </div>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00191">191</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00188">188</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="GArray_8h_source.html#l00203">GArray()</a>, and <a class="el" href="GArray_8h_source.html#l00239">operator=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="GArray_8h_source.html#l00200">GArray()</a>, and <a class="el" href="GArray_8h_source.html#l00236">operator=()</a>.</p>
 
 </div>
 </div>
@@ -153,18 +153,18 @@ template&lt;typename Data&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Copy constructor, copy pointers. </p>
-<p>Allocates new C-array and copies pointers to Data objects.</p>
+<p>Copy constructor. </p>
+<p>Performs a deep copy.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">other</td><td>the <a class="el" href="classUtil_1_1GArray.html" title="An automatically growable array, analogous to a std::vector.">GArray</a> to be copied. </td></tr>
+    <tr><td class="paramname">other</td><td>the <a class="el" href="classUtil_1_1GArray.html" title="An automatically growable array, analogous to a std::vector.">GArray</a> to be copied </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00203">203</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00200">200</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Memory_8h_source.html#l00132">Util::Memory::allocate()</a>, <a class="el" href="GArray_8h_source.html#l00191">GArray()</a>, and <a class="el" href="GArray_8h_source.html#l00462">isAllocated()</a>.</p>
+<p class="reference">References <a class="el" href="Memory_8h_source.html#l00136">Util::Memory::allocate()</a>, <a class="el" href="GArray_8h_source.html#l00188">GArray()</a>, and <a class="el" href="GArray_8h_source.html#l00457">isAllocated()</a>.</p>
 
 </div>
 </div>
@@ -194,11 +194,10 @@ template&lt;typename Data&gt; </div>
 </div><div class="memdoc">
 
 <p>Destructor. </p>
-<p>Deletes array of pointers, if allocated previously. Does not delete the associated Data objects. </p>
 
-<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00226">226</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00223">223</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Memory_8h_source.html#l00152">Util::Memory::deallocate()</a>, and <a class="el" href="GArray_8h_source.html#l00462">isAllocated()</a>.</p>
+<p class="reference">References <a class="el" href="Memory_8h_source.html#l00157">Util::Memory::deallocate()</a>, and <a class="el" href="GArray_8h_source.html#l00457">isAllocated()</a>.</p>
 
 </div>
 </div>
@@ -223,14 +222,14 @@ template&lt;typename Data&gt; </div>
 <p>Assignment, element by element. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">other</td><td>the rhs <a class="el" href="classUtil_1_1GArray.html" title="An automatically growable array, analogous to a std::vector.">GArray</a> </td></tr>
+    <tr><td class="paramname">other</td><td>the RHS <a class="el" href="classUtil_1_1GArray.html" title="An automatically growable array, analogous to a std::vector.">GArray</a> </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00239">239</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00236">236</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="GArray_8h_source.html#l00306">append()</a>, <a class="el" href="GArray_8h_source.html#l00299">clear()</a>, and <a class="el" href="GArray_8h_source.html#l00191">GArray()</a>.</p>
+<p class="reference">References <a class="el" href="GArray_8h_source.html#l00303">append()</a>, <a class="el" href="GArray_8h_source.html#l00296">clear()</a>, and <a class="el" href="GArray_8h_source.html#l00188">GArray()</a>.</p>
 
 </div>
 </div>
@@ -252,19 +251,19 @@ template&lt;typename Data&gt; </div>
 </div><div class="memdoc">
 
 <p>Reserve memory for specified number of elements. </p>
-<p>Resizes and copies array if requested capacity is less than the current capacity. Does nothing if requested capacity is greater than current capacity.</p>
+<p>Resizes and copies array if requested capacity is greater than the current capacity. Does nothing if requested capacity is less than current capacity.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">capacity</td><td>number of elements for which to reserve space. </td></tr>
+    <tr><td class="paramname">capacity</td><td>number of elements for which to reserve space </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00255">255</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00252">252</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Memory_8h_source.html#l00132">Util::Memory::allocate()</a>, <a class="el" href="GArray_8h_source.html#l00448">capacity()</a>, <a class="el" href="Memory_8h_source.html#l00152">Util::Memory::deallocate()</a>, <a class="el" href="GArray_8h_source.html#l00462">isAllocated()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="Memory_8h_source.html#l00136">Util::Memory::allocate()</a>, <a class="el" href="GArray_8h_source.html#l00443">capacity()</a>, <a class="el" href="Memory_8h_source.html#l00157">Util::Memory::deallocate()</a>, <a class="el" href="GArray_8h_source.html#l00457">isAllocated()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Polynomial_8h_source.html#l00453">Util::Polynomial&lt; T &gt;::operator*=()</a>, <a class="el" href="Polynomial_8h_source.html#l00313">Util::Polynomial&lt; T &gt;::operator=()</a>, <a class="el" href="Polynomial_8h_source.html#l00282">Util::Polynomial&lt; T &gt;::Polynomial()</a>, <a class="el" href="Polynomial_8h_source.html#l00263">Util::Polynomial&lt; T &gt;::Polynomial()</a>, <a class="el" href="Polynomial_8h_source.html#l00297">Util::Polynomial&lt; T &gt;::Polynomial()</a>, <a class="el" href="Polynomial_8h_source.html#l00271">Util::Polynomial&lt; T &gt;::Polynomial()</a>, and <a class="el" href="GArray_8h_source.html#l00380">serialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Polynomial_8h_source.html#l00453">Util::Polynomial&lt; T &gt;::operator*=()</a>, <a class="el" href="Polynomial_8h_source.html#l00313">Util::Polynomial&lt; T &gt;::operator=()</a>, <a class="el" href="Polynomial_8h_source.html#l00282">Util::Polynomial&lt; T &gt;::Polynomial()</a>, <a class="el" href="Polynomial_8h_source.html#l00263">Util::Polynomial&lt; T &gt;::Polynomial()</a>, <a class="el" href="Polynomial_8h_source.html#l00297">Util::Polynomial&lt; T &gt;::Polynomial()</a>, <a class="el" href="Polynomial_8h_source.html#l00271">Util::Polynomial&lt; T &gt;::Polynomial()</a>, and <a class="el" href="GArray_8h_source.html#l00375">serialize()</a>.</p>
 
 </div>
 </div>
@@ -288,9 +287,9 @@ template&lt;typename Data&gt; </div>
 <p>Deallocate (delete) underlying array of pointers. </p>
 <p>Sets capacity and size to zero. </p>
 
-<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00286">286</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00283">283</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Memory_8h_source.html#l00152">Util::Memory::deallocate()</a>, and <a class="el" href="GArray_8h_source.html#l00462">isAllocated()</a>.</p>
+<p class="reference">References <a class="el" href="Memory_8h_source.html#l00157">Util::Memory::deallocate()</a>, and <a class="el" href="GArray_8h_source.html#l00457">isAllocated()</a>.</p>
 
 </div>
 </div>
@@ -314,9 +313,9 @@ template&lt;typename Data&gt; </div>
 <p>Reset to empty state. </p>
 <p>Sets size to zero, but leaves capacity unchanged. Does not call destructor for deleted elements. </p>
 
-<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00299">299</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00296">296</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="GArray_8h_source.html#l00239">operator=()</a>, and <a class="el" href="Polynomial_8h_source.html#l00334">Util::Polynomial&lt; T &gt;::setToZero()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Sort_8cpp_source.html#l00029">Pscf::Sort::findBunches()</a>, <a class="el" href="GArray_8h_source.html#l00236">operator=()</a>, <a class="el" href="Polynomial_8h_source.html#l00334">Util::Polynomial&lt; T &gt;::setToZero()</a>, and <a class="el" href="sortWaves_8cpp_source.html#l00027">Pscf::Prdc::sortWaves()</a>.</p>
 
 </div>
 </div>
@@ -326,7 +325,7 @@ template&lt;typename Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <div class="memtemplate">
 template&lt;class Archive&gt; </div>
       <table class="memname">
@@ -352,9 +351,9 @@ template&lt;class Archive&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00380">380</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00375">375</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="GArray_8h_source.html#l00448">capacity()</a>, <a class="el" href="GArray_8h_source.html#l00255">reserve()</a>, and <a class="el" href="GArray_8h_source.html#l00455">size()</a>.</p>
+<p class="reference">References <a class="el" href="GArray_8h_source.html#l00443">capacity()</a>, <a class="el" href="GArray_8h_source.html#l00252">reserve()</a>, and <a class="el" href="GArray_8h_source.html#l00450">size()</a>.</p>
 
 </div>
 </div>
@@ -364,7 +363,7 @@ template&lt;class Archive&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -391,7 +390,7 @@ template&lt;class Data&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00405">405</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00400">400</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
 
 <p class="reference">References <a class="el" href="ArrayIterator_8h_source.html#l00056">Util::ArrayIterator&lt; Data &gt;::setCurrent()</a>, and <a class="el" href="ArrayIterator_8h_source.html#l00064">Util::ArrayIterator&lt; Data &gt;::setEnd()</a>.</p>
 
@@ -403,7 +402,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -430,7 +429,7 @@ template&lt;class Data&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00416">416</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00411">411</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
 
 <p class="reference">References <a class="el" href="ConstArrayIterator_8h_source.html#l00057">Util::ConstArrayIterator&lt; Data &gt;::setCurrent()</a>, and <a class="el" href="ConstArrayIterator_8h_source.html#l00065">Util::ConstArrayIterator&lt; Data &gt;::setEnd()</a>.</p>
 
@@ -462,11 +461,11 @@ template&lt;typename Data&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00306">306</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00303">303</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Memory_8h_source.html#l00132">Util::Memory::allocate()</a>, and <a class="el" href="Memory_8h_source.html#l00152">Util::Memory::deallocate()</a>.</p>
+<p class="reference">References <a class="el" href="Memory_8h_source.html#l00136">Util::Memory::allocate()</a>, <a class="el" href="Memory_8h_source.html#l00157">Util::Memory::deallocate()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MixAndMatchEnvTmpl_8tpp_source.html#l00136">Pscf::MixAndMatchEnvTmpl&lt; Env, FG &gt;::getParameterTypes()</a>, <a class="el" href="FilmFieldGenExtBase_8tpp_source.html#l00207">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::getParameterTypes()</a>, <a class="el" href="Polynomial_8h_source.html#l00453">Util::Polynomial&lt; T &gt;::operator*=()</a>, <a class="el" href="Polynomial_8h_source.html#l00349">Util::Polynomial&lt; T &gt;::operator+=()</a>, <a class="el" href="Polynomial_8h_source.html#l00386">Util::Polynomial&lt; T &gt;::operator-=()</a>, <a class="el" href="GArray_8h_source.html#l00239">operator=()</a>, <a class="el" href="Polynomial_8h_source.html#l00313">Util::Polynomial&lt; T &gt;::operator=()</a>, <a class="el" href="Polynomial_8h_source.html#l00282">Util::Polynomial&lt; T &gt;::Polynomial()</a>, <a class="el" href="Polynomial_8h_source.html#l00297">Util::Polynomial&lt; T &gt;::Polynomial()</a>, and <a class="el" href="Polynomial_8h_source.html#l00271">Util::Polynomial&lt; T &gt;::Polynomial()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Sort_8cpp_source.html#l00029">Pscf::Sort::findBunches()</a>, <a class="el" href="MixAndMatchEnvTmpl_8tpp_source.html#l00136">Pscf::MixAndMatchEnvTmpl&lt; Env, FG &gt;::getParameterTypes()</a>, <a class="el" href="FilmFieldGenExtBase_8tpp_source.html#l00207">Pscf::Prdc::FilmFieldGenExtBase&lt; D &gt;::getParameterTypes()</a>, <a class="el" href="Polynomial_8h_source.html#l00453">Util::Polynomial&lt; T &gt;::operator*=()</a>, <a class="el" href="Polynomial_8h_source.html#l00349">Util::Polynomial&lt; T &gt;::operator+=()</a>, <a class="el" href="Polynomial_8h_source.html#l00386">Util::Polynomial&lt; T &gt;::operator-=()</a>, <a class="el" href="GArray_8h_source.html#l00236">operator=()</a>, <a class="el" href="Polynomial_8h_source.html#l00313">Util::Polynomial&lt; T &gt;::operator=()</a>, <a class="el" href="Polynomial_8h_source.html#l00282">Util::Polynomial&lt; T &gt;::Polynomial()</a>, <a class="el" href="Polynomial_8h_source.html#l00297">Util::Polynomial&lt; T &gt;::Polynomial()</a>, and <a class="el" href="Polynomial_8h_source.html#l00271">Util::Polynomial&lt; T &gt;::Polynomial()</a>.</p>
 
 </div>
 </div>
@@ -497,9 +496,9 @@ template&lt;typename Data&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00339">339</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00336">336</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Memory_8h_source.html#l00132">Util::Memory::allocate()</a>, <a class="el" href="Memory_8h_source.html#l00152">Util::Memory::deallocate()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="Memory_8h_source.html#l00136">Util::Memory::allocate()</a>, <a class="el" href="Memory_8h_source.html#l00157">Util::Memory::deallocate()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -509,7 +508,7 @@ template&lt;typename Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -537,7 +536,7 @@ template&lt;class Data&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>reference to element i </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00426">426</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00421">421</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
 
 </div>
 </div>
@@ -547,7 +546,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -575,7 +574,7 @@ template&lt;class Data&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>const reference to element i </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00437">437</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00432">432</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
 
 </div>
 </div>
@@ -585,7 +584,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -606,9 +605,9 @@ template&lt;class Data&gt; </div>
 
 <p>Return physical capacity of array. </p>
 
-<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00448">448</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00443">443</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="GArray_8h_source.html#l00255">reserve()</a>, and <a class="el" href="GArray_8h_source.html#l00380">serialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="GArray_8h_source.html#l00252">reserve()</a>, and <a class="el" href="GArray_8h_source.html#l00375">serialize()</a>.</p>
 
 </div>
 </div>
@@ -618,7 +617,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -639,9 +638,9 @@ template&lt;class Data&gt; </div>
 
 <p>Return logical size of this array (i.e., current number of elements). </p>
 
-<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00455">455</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00450">450</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SweepTmpl_8tpp_source.html#l00181">Pscf::SweepTmpl&lt; State &gt;::addParameterTypes()</a>, <a class="el" href="Polynomial_8h_source.html#l00342">Util::Polynomial&lt; T &gt;::degree()</a>, <a class="el" href="MixAndMatchEnvTmpl_8tpp_source.html#l00136">Pscf::MixAndMatchEnvTmpl&lt; Env, FG &gt;::getParameterTypes()</a>, <a class="el" href="PropagatorTmpl_8h_source.html#l00235">Pscf::PropagatorTmpl&lt; QT &gt;::nSource()</a>, <a class="el" href="Polynomial_8h_source.html#l00453">Util::Polynomial&lt; T &gt;::operator*=()</a>, <a class="el" href="GArray_8h_source.html#l00380">serialize()</a>, and <a class="el" href="Vertex_8h_source.html#l00110">Pscf::Vertex::size()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SweepTmpl_8tpp_source.html#l00181">Pscf::SweepTmpl&lt; State &gt;::addParameterTypes()</a>, <a class="el" href="Polynomial_8h_source.html#l00342">Util::Polynomial&lt; T &gt;::degree()</a>, <a class="el" href="MixAndMatchEnvTmpl_8tpp_source.html#l00136">Pscf::MixAndMatchEnvTmpl&lt; Env, FG &gt;::getParameterTypes()</a>, <a class="el" href="PropagatorTmpl_8h_source.html#l00245">Pscf::PropagatorTmpl&lt; QT &gt;::nSource()</a>, <a class="el" href="Polynomial_8h_source.html#l00453">Util::Polynomial&lt; T &gt;::operator*=()</a>, <a class="el" href="GArray_8h_source.html#l00375">serialize()</a>, and <a class="el" href="Vertex_8h_source.html#l00110">Pscf::Vertex::size()</a>.</p>
 
 </div>
 </div>
@@ -651,7 +650,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -672,9 +671,9 @@ template&lt;class Data&gt; </div>
 
 <p>Is this array allocated? </p>
 
-<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00462">462</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GArray_8h_source.html#l00457">457</a> of file <a class="el" href="GArray_8h_source.html">GArray.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="GArray_8h_source.html#l00286">deallocate()</a>, <a class="el" href="GArray_8h_source.html#l00203">GArray()</a>, <a class="el" href="GArray_8h_source.html#l00255">reserve()</a>, and <a class="el" href="GArray_8h_source.html#l00226">~GArray()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="GArray_8h_source.html#l00283">deallocate()</a>, <a class="el" href="GArray_8h_source.html#l00200">GArray()</a>, <a class="el" href="GArray_8h_source.html#l00252">reserve()</a>, and <a class="el" href="GArray_8h_source.html#l00223">~GArray()</a>.</p>
 
 </div>
 </div>

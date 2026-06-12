@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -59,9 +59,10 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p><a class="el" href="psfts_page.html">Partial Saddle-Point Field Theoretic Simulation (PS-FTS)</a> (Prev/Up) &#160; &#160; &#160; &#160; <a class="el" href="psfts_psa_page.html">Partial Saddle-Point Approximation</a> (Next) <br  />
 </p>
-<p>The PS-FTS simulation method used in PSCF is derived by applying a partial saddle-point approximation to an exact fully-fluctuating field theory formulation for an incompressible polymer fluid. The fully fluctuating field theory is discussed on this page, while the partial saddle-point approximation is considered on the next page. Throughout this discussion, as elsewhere, we use units for energy in which \( k_{B} T = 1 \).</p>
+<p>The PS-FTS simulation method used in PSCF is derived by applying a partial saddle-point approximation to an exact fully-fluctuating field theory formulation for an incompressible polymer fluid. The fully fluctuating field theory is discussed on this page, while the partial saddle-point approximation is considered on the <a class="el" href="psfts_psa_page.html">next</a>. Throughout this discussion, as elsewhere, we use units for energy in which \( k_{B} T = 1 \).</p>
+<p>The mathematical discussion given on this page and the next uses integer indexes that start from a minimum value of 1, rather than adopting the 0-based indexing used in the source code and some other parts of the manual.</p>
 <h1 class="doxsection"><a class="anchor" id="psfts_theory_model_sec"></a>
-Incompressible Particle-Based Model</h1>
+Incompressible particle-based model</h1>
 <p>We consider a mixture of polymers and solvents constructed from \( M \) different types of monomer. The variable \( M \) used in this discussion is equivalent to the parameter nMonomer that appears in a PSCF parameter file. Let \( c_{i}({\bf r}) \) denote the concentration of monomers of type \( i \) at point \( {\bf r} \) within the mixture in a specific mechanical microstate of the underlying particle based model.</p>
 <p>The implementation of PS-FTS in PSCF is designed for an incompressible model in which the monomer concentrations are assumed to always satisfy an incompressibility constraint,   </p><p class="formulaDsp">
 \[   \sum_{i=1}^{M} c_{i}({\bf r}) = c_{0} \quad,
@@ -79,12 +80,11 @@ Incompressible Particle-Based Model</h1>
 </p>
 <p> in which \( U_{\rm id} \) is the intramolecular potential energy of a gas of non-interacting molecules, while     </p><p class="formulaDsp">
 \[   U_{\rm int}
-    =  \frac{v}{2}\sum_{i,j=1}^{M} 
+    =  \frac{v}{2}\sum_{i,j=1}^{M}
    \int d{\bf r} \; \chi_{ij} c_{i}({\bf r}) c_{j}({\bf r})
 \]
 </p>
-<p> is a non-bonded pair interaction energy with local interactions. Here, \( \chi_{ij} \) denotes an element of a symmetric \( M \times M \) matrix of dimensionless Flory-Huggins interaction parameters. <br  />
-</p>
+<p> is a non-bonded pair interaction energy with local interactions. Here, \( \chi_{ij} \) denotes an element of a symmetric \( M \times M \) matrix of dimensionless Flory-Huggins interaction parameters.</p>
 <p>The partition function \( Z \) for such an incompressible fluid can be expressed to within an irrelevant multiplicative constant as a configurational integral        </p><p class="formulaDsp">
 \[   Z =
        \int {\cal D}{\bf r} \;
@@ -96,7 +96,7 @@ Incompressible Particle-Based Model</h1>
 </p>
 <p> in which \( \int {\cal D}{\bf r} \) denotes an integral over all monomer positions, and in which the \( \delta \)-functional imposes the incompressibility constraint.</p>
 <h1 class="doxsection"><a class="anchor" id="psfts_theory_ideal_sec"></a>
-Ideal-Gas Reference System</h1>
+Ideal-gas reference system</h1>
 <p>All of the theoretical methods implemented in PSCF relate the free energy of an interacting polymer fluids to that of a hypothetical reference system of non-interacting molecules that are subjected to a set of external fields. In this ideal gas reference system, each monomer of type \( i \) is subjected to a potential field \( w_{i}({\bf r}) \), for each \( i = 1, \ldots, M \). The potential energy for this system is given by a sum   </p><p class="formulaDsp">
 \[    U = U_{\rm id} + U_{\rm c}
 \]
@@ -127,14 +127,14 @@ Ideal-Gas Reference System</h1>
 </p>
 <p> for any \( i = 1, \ldots, M \).</p>
 <h1 class="doxsection"><a class="anchor" id="psfts_theory_AB_sec"></a>
-Field Theory: Standard AB Systems ( \( M=2 \))</h1>
+Field theory: Standard AB systems ( \( M=2 \))</h1>
 <p>We focus first on the commonly studied case of systems with two monomer types, \( M = 2\). For simplicity, we consider a model in which the chi matrix has vanishing diagonal components, \( \chi_{11} = \chi_{22} = 0 \), and we use the symbol \( \chi \) to denote the value of either off-diagonal element,   </p><p class="formulaDsp">
 \[     \chi = \chi_{12} = \chi_{21} \quad.
 \]
 </p>
 <p> We hereafter refer to such systems (with two monomer types and vanishing interaction matrix elements) as standard AB systems. The interaction potential energy of such a system is given by      </p><p class="formulaDsp">
 \[   U_{\rm int}
-   =  v 
+   =  v
    \int d{\bf r} \; \chi c_{1}({\bf r}) c_{2}({\bf r})
    \quad.
 \]
@@ -282,7 +282,7 @@ Field Theory: Standard AB Systems ( \( M=2 \))</h1>
 </p>
 <p> A saddle-point of the Hamiltonian is defined to be a field configuration in which functional derivatives with respect to both fields vanish for all \( {\bf r} \). It is straightforward to show that the resulting saddle point equations are equivalent to the self-consistent field equations used in SCFT for such an AB system, and that the value of the Hamiltonian at such a saddle point is equal to the SCFT free energy. Saddle-point field configurations thus correspond to SCFT solutions.</p>
 <h1 class="doxsection"><a class="anchor" id="psfts_theory_general_sec"></a>
-Field Theory: General Case ( \( M \geq 2 \))</h1>
+Field theory: General case ( \( M \geq 2 \))</h1>
 <p>The software implementation of PS-FTS in PSCF is based on a "symmetric" formulation of the field theory for incompressible models that is designed to allow generalization to systems with \( M &gt; 2 \). This formulation is presented in the following reference:</p>
 <p><a class="anchor" id="psfts_theory_MYC_article"></a>"Polymer Field Theory for Multimonomer Incompressible Systems:
 Symmetric Formation and ABC Systems", D. Morse, D. Yong, K. Chen, <em> Macromolecules </em> <b> 58 </b>, 816-825 (2025). <a href="https://pubs.acs.org/doi/10.1021/acs.macromol.4c02636">https://pubs.acs.org/doi/10.1021/acs.macromol.4c02636</a></p>
@@ -348,7 +348,7 @@ Symmetric Formation and ABC Systems", D. Morse, D. Yong, K. Chen, <em> Macromole
    \frac{v \lambda_{\alpha} }{2M} C_{\alpha}^{2} ({\bf r})
    + S_{\alpha} C_{\alpha}({\bf r})
    \right \}
-   + U_{\rm int}^{(0)} 
+   + U_{\rm int}^{(0)}
 \]
 </p>
 <p> where we have defined    </p><p class="formulaDsp">
@@ -357,7 +357,7 @@ Symmetric Formation and ABC Systems", D. Morse, D. Yong, K. Chen, <em> Macromole
 \]
 </p>
 <p> for all \( \alpha = 1, \ldots, M \),   </p><p class="formulaDsp">
-\[    U_{\rm int}^{(0)} = VS_{M}/2v 
+\[    U_{\rm int}^{(0)} = VS_{M}/2v
 \]
 </p>
 <p> and \( V \) is total system volume.</p>
@@ -410,9 +410,9 @@ Symmetric Formation and ABC Systems", D. Morse, D. Yong, K. Chen, <em> Macromole
 <p> in which \( \int {\cal D}\omega \) denotes an integral over all \( M \) real fields \( \omega_{1}, \ldots, \omega_{M} \) (including the Lagrange multiplier field \( \omega_{M} \) ), and       </p><p class="formulaDsp">
 \[   H_{\rm f}  =
    \int \! d{\bf r} \; \left \{
-   - \sum_{\alpha=1}^{M-1}
+     \sum_{\alpha=1}^{M-1}
      \frac{M \omega_{\alpha}^{2} }{ 2 v |\lambda_{\alpha}|}
-   - i \omega_{M}c_{0} \right \}  + U_{\rm int}^{(0)} \quad
+     - i \omega_{M}c_{0} \right \}  + U_{\rm int}^{(0)} \quad
 \]
 </p>
        <p class="formulaDsp">
@@ -466,10 +466,10 @@ Symmetric Formation and ABC Systems", D. Morse, D. Yong, K. Chen, <em> Macromole
 \]
 </p>
 <p> is the partition function of a hypothetical gas of non-interacting molecules in which monomers of type \( i \) are subjected to a field \( w_{i}({\bf r}) \) . The result is a straightforward generalization of that obtained for standard AB systems, after generalizing the definitions of both \( H_{\rm f} \) and \( H_{\rm c} \).</p>
-<p><em> Comment (for users that read the source code) </em>: Many of the data structures and algorithms that are required to implement this symmetric formulation of polymer field theory, but that are not needed for SCFT, are provided by the Simulator class template defined in either the <a class="el" href="namespacePscf_1_1Rpc.html" title="Real periodic fields, SCFT and PS-FTS (CPU).">Pscf::Rpc</a> and <a class="el" href="namespacePscf_1_1Rpg.html" title="SCFT and PS-FTS with real periodic fields (GPU)">Pscf::Rpg</a> namespaces. These two closely analogous class templates each takes the dimension D of space as a template parameter, and only differ in that <a class="el" href="classPscf_1_1Rpc_1_1Simulator.html" title="Field theoretic simulator (base class).">Pscf::Rpc::Simulator</a> is designed for a CPU, while <a class="el" href="classPscf_1_1Rpg_1_1Simulator.html" title="Field theoretic simulator (base class).">Pscf::Rpg::Simulator</a> is designed to use a GPU. In either namespace, the Simulator class template provides code to construct and diagonalize the projected chi matrix, and to compute the field theoretic Hamiltonian \( H \) and its functional derivatives. Instances of the Simulator template are used as base classes for <a class="el" href="rpc_BdSimulator_page.html">BdSimulator</a> and <a class="el" href="rpc_McSimulator_page.html">McSimulator</a> classes that provide more specialized algorithms and data structures that are needed for Brownian dynamics (BD) or Monte Carlo (MC) samplying algorithms, respectively.</p>
+<p><em> Comment (for users that read the source code) </em>: Many of the data structures and algorithms that are required to implement this symmetric formulation of polymer field theory, but that are not needed for SCFT, are provided by the Simulator class template defined in either the <a class="el" href="namespacePscf_1_1Rpc.html" title="Real periodic fields, SCFT and PS-FTS (CPU).">Pscf::Rpc</a> and <a class="el" href="namespacePscf_1_1Rpg.html" title="SCFT and PS-FTS with real periodic fields (GPU)">Pscf::Rpg</a> namespaces. These two closely analogous class templates each takes the dimension D of space as a template parameter, and only differ in that <a class="el" href="classPscf_1_1Rpc_1_1Simulator.html" title="Field theoretic simulator (base class).">Pscf::Rpc::Simulator</a> is designed for a CPU, while <a class="el" href="classPscf_1_1Rpg_1_1Simulator.html" title="Field theoretic simulator (base class).">Pscf::Rpg::Simulator</a> is designed to use a GPU. In either namespace, the Simulator class template provides code to construct and diagonalize the projected chi matrix, and to compute the field theoretic Hamiltonian \( H \) and its functional derivatives. Instances of the Simulator template are used as base classes for <a class="el" href="rp_BdSimulator_page.html">BdSimulator</a> and <a class="el" href="rp_McSimulator_page.html">McSimulator</a> classes that provide more specialized algorithms and data structures that are needed for Brownian dynamics (BD) or Monte Carlo (MC) samplying algorithms, respectively.</p>
 <p><a class="anchor" id="psfts_theory_general_AB_sub"></a><b> Standard AB Systems (Revisited): </b></p>
 <p>For any system with \( M = 2 \), the fact that \( {\bf v}_{M} = {\bf v}_{2} = {\bf e} \), and that distinct eigenvectors of \( \tilde{\boldsymbol \chi} \) must be orthogonal, immediately implies that \( {\bf v}_{1} = [1 -1]^{T} \). For a standard AB system with \( \chi_{11} = \chi_{22} = 0 \), it is straightforward to use knowledge of eigenvector \( {\bf v}_{1} \) to show that    </p><p class="formulaDsp">
-\[    \lambda_1 = -\chi \quad\quad 
+\[    \lambda_1 = -\chi \quad\quad
     S_{1} = 0  \quad,
 \]
 </p>

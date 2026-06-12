@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: Field File - R-Grid (Periodic)</title>
+<title>PSCF: R-Grid Field Data Format (Periodic)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -49,34 +49,34 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a href="index.html">PSCF - Polymer Self-Consistent Field</a></li><li class="navelem"><a href="user_page.html">User Introduction</a></li><li class="navelem"><a href="user_field_page.html">Field Files</a></li><li class="navelem"><a href="user_field_periodic_page.html">Field File - Periodic Fields (pscf_pc and pscf_pg)</a></li>  </ul>
+<li class="navelem"><a href="index.html">PSCF - Polymer Self-Consistent Field</a></li><li class="navelem"><a href="user_page.html">User Introduction</a></li><li class="navelem"><a href="user_field_page.html">Field Files</a></li><li class="navelem"><a href="user_field_periodic_page.html">Field File - Periodic Fields (pscf_rpc and pscf_rpg)</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">Field File - R-Grid (Periodic) </div></div>
+  <div class="headertitle"><div class="title">R-Grid Field Data Format (Periodic) </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="el" href="user_field_basis_page.html">Field File - Symmetrized Basis (Periodic)</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_field_kgrid_page.html">Field File - K-Grid (Periodic)</a> (Next) <br  />
+<div class="textblock"><p><a class="el" href="user_field_basis_page.html">Symmetrized Basis Field Data Format (Periodic)</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_field_kgrid_page.html">K-Grid Field Data Format (Periodic)</a> (Next) <br  />
 </p>
-<p>The r-grid file format is used by the pscf_pc and pscf_pg programs to describe fields in a spatially periodic microstructure. This format outputs the values of set of fields on the nodes of a regular mesh that covers one unit cell of a periodic structure. This mesh is the same one as that used by the pseudo-spectral algorithm for solving the modified diffusion equation.</p>
+<p>The r-grid file format is used by the pscf_rpc and pscf_rpg programs to describe fields in a spatially periodic microstructure. This format outputs the values of set of fields on the nodes of a regular mesh that covers one unit cell of a periodic structure. This mesh is the same one as that used by the pseudo-spectral algorithm for solving the modified diffusion equation.</p>
 <h1 class="doxsection"><a class="anchor" id="user_field_rgrid_hex_sec"></a>
 Example: 2D Hex Phase</h1>
 <p>Here is example of a converged omega field for a hex phase of a diblock copolymer melt:</p>
 <div class="fragment"><div class="line"> format  1  0</div>
-<div class="line">dim                 </div>
+<div class="line">dim</div>
 <div class="line">                   2</div>
-<div class="line">crystal_system      </div>
+<div class="line">crystal_system</div>
 <div class="line">           hexagonal</div>
-<div class="line">N_cell_param        </div>
+<div class="line">N_cell_param</div>
 <div class="line">                   1</div>
-<div class="line">cell_param          </div>
+<div class="line">cell_param</div>
 <div class="line">    1.7703537313E+00</div>
-<div class="line">group_name          </div>
+<div class="line">group_name</div>
 <div class="line">             P_6_m_m</div>
-<div class="line">N_monomer           </div>
+<div class="line">N_monomer</div>
 <div class="line">                   2</div>
-<div class="line">mesh              </div>
+<div class="line">mesh</div>
 <div class="line">                  24                  24</div>
 <div class="line">       0.340581085      19.518839883</div>
 <div class="line">       0.570887775      19.658020087</div>
@@ -104,18 +104,18 @@ File Format</h1>
     \frac{n_{i}}{N_{i}}\textbf{a}_{i}
 \]
 </p>
-<p> where \(D\) is the dimensionality of the crystal (denoted by "dim" in the header file), \(\textbf{a}_{i}\)is a Bravais lattice vector, \(N_{i}\) is the number of grid points along direction \(i\), and \(n_{i}\) is an integer index in the range \(0 \leq n_{i} &lt; N_{i}\). <br  />
- The number of rows in the data section is equal to the total number of grid points. Each row in this section contains values of all field components at a single grid point. The number of columns is equal to the number of monomer types, so that data in column \(\alpha\), with columns numbered as \( \alpha = 0, 1, \ldots \), contains the values of the field associated with monomer type index \(\alpha\).</p>
-<p>Grid points are listed in order using the first index \(n_{0}\) as the most rapidly varying (innermost) loop index. This order, which is the opposite of the order in which elements of an array are stored in in C/C++, is used to maintain backwards compatbility with order used in the file format defined in the older fortran version of PSCF. This is implemented for a three-dimensional crystal as a loop that can be given as pseudo-code of the form: </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (n2 = 0; n2 &lt; N2; ++n2) {</div>
+<p> where \(D\) is the dimensionality of the crystal (denoted by "dim" in the header file), \(\textbf{a}_{i}\)is a Bravais lattice vector, \(N_{i}\) is the number of grid points along direction \(i\), and \(n_{i}\) is an integer index in the range \(0 \leq n_{i} &lt; N_{i}\). The number of rows in the data section is equal to the total number of grid points. Each row in this section contains values of all field components at a single grid point. The number of columns is equal to the number of monomer types, so that data in column \(\alpha\), with columns numbered as \( \alpha = 0, 1, \ldots \), contains the values of the field associated with monomer type index \(\alpha\).</p>
+<p>Grid points are listed in order using the first index \(n_{0}\) as the most rapidly varying (innermost) loop index. The order in which grid points are listed for a three-dimensional crystal can be expressed in pseudo-code as a nested loop of the form: </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (n2 = 0; n2 &lt; N2; ++n2) {</div>
 <div class="line">   <span class="keywordflow">for</span> (n1 = 0; n1 &lt; N1; ++n1) {</div>
 <div class="line">      <span class="keywordflow">for</span> (n0 = 0; n0 &lt; N0; ++n0) {</div>
 <div class="line">         [Read or write data at grid point r(n0, n1, n2)]</div>
 <div class="line">      }</div>
 <div class="line">   }</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> in which capitalized symbols (N0, N1, N2) denote the number of grid points in each direction and lower case-variables (n0, n1, n2) denote indices for a particular grid point.</p>
+</div><!-- fragment --><p> in which capitalized symbols (N0, N1, N2) denote the number of grid points in each direction and lower case-variables (n0, n1, n2) denote indices for a particular grid point. Note that the innermost loop iterates over index values for the first index, n0, while the outerm the outermost loop iterates over values for the last index, n2.</p>
+<p>Note that this convention for the order in which grid points are listed in an r-grid file is completely different from order in which elements of a multi-dimensional array are stored in memory by C/C++ programs. For multi-dimensional C arrays, the most rapidly varying (or innermost) index is always the last index, rather than the first. The convention described above was chosen, however, to maintain backwards compatbility with the r-grid file format that was defined for the older Fortran version of PSCF. The ordering of grid points in the r-grid format reflects the order in which elements of multidimensional arrays are stored in memory by Fortran programs, which is different from the order used by C/C++ programs.</p>
 <p><br  />
- <a class="el" href="user_field_basis_page.html">Field File - Symmetrized Basis (Periodic)</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_field_page.html">Field Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_field_kgrid_page.html">Field File - K-Grid (Periodic)</a> (Next) </p>
+ <a class="el" href="user_field_basis_page.html">Symmetrized Basis Field Data Format (Periodic)</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_field_page.html">Field Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_field_kgrid_page.html">K-Grid Field Data Format (Periodic)</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

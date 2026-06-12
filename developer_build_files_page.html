@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -59,7 +59,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p><a class="el" href="developer_build_make_page.html">Make and Makefiles</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="developer_build_config_page.html">Configuration (config.mk) Files</a> (Next) <br  />
 </p>
-<p>This file briefly discusses the contents and purpose of different types of makefiles and makefile fragments that are used in the PSCF build system. All files with a file name suffix .mk are makefile fragments that are included into makefiles via the make <a class="el" href="developer_build_make_page.html#developer_build_make_include_sec">include directive</a>.</p>
+<p>This file briefly discusses the contents and purpose of different types of makefiles and makefile fragments that are used in the PSCF build system. Any file with a file name suffix .mk is a makefile fragment that is designed to be included into makefiles via the make <a class="el" href="developer_build_make_page.html#developer_build_make_include_sec">include directive</a>.</p>
 <h1 class="doxsection"><a class="anchor" id="developer_build_files_dirs_sec"></a>
 File locations</h1>
 <p>After the configure script is run, but before any source files are compiled, the following types of makefiles and makefile fragments exist in different levels of the src directory tree:</p>
@@ -68,14 +68,14 @@ File locations</h1>
 <li>Each namespace-level subdirectory of the src directory tree contains a makefile and files named sources.mk and patterns.mk</li>
 <li>Every subdirectory of the src directory tree that contains compilable source files contains a makefile and a file named sources.mk</li>
 </ul>
-<p>In addition, PSCF root directory contains a makefile at this point.</p>
-<p>Before the configure script is run, there are not any makefiles or makefile fragments in the bld directory. After the configure script is run, the following types of files will exist in the bld directory tree:</p>
+<p>In addition, the PSCF root directory will contain a makefile.</p>
+<p>After the configure script is run, the following types of build system files will also exist in the bld directory tree:</p>
 <ul>
 <li>The root of the bld directory tree will contains a makefile and a file named config.mk</li>
 <li>Each namespace-level subdirectory of the bld directory will contains a makefile</li>
 </ul>
 <p>The configure script installs the config.mk files in both the src and bld directory, and installs all of the makefiles in the bld directory. The configure script also installs a bash script named "setopts" in the bld directory, by copying the corresponding script in the src directory.</p>
-<p>Compilation leads to creation of additional intermediate object, dependency and library files in either the src directory (for in-source compilation) or the bld directory (for out-of-source) compilation, as discussed <a class="el" href="developer_build_process_page.html">previously</a>. Each dependency files is a short makefile fragments that can be included into makefiles.</p>
+<p>Compilation leads to creation of additional intermediate object, dependency and library files in either the src directory (for in-source compilation) or the bld directory (for out-of-source) compilation, as discussed <a class="el" href="developer_build_process_page.html">previously</a>. Each dependency file is a short makefile fragments that can be included into makefiles.</p>
 <h1 class="doxsection"><a class="anchor" id="developer_build_files_types_sec"></a>
 Makefile fragment file types</h1>
 <p>The names and contents of different types of makefile fragments used in the build system are summarized in the table below:</p>

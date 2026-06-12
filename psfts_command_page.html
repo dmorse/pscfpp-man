@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -59,10 +59,10 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p><a class="el" href="psfts_param_page.html">Parameter File</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="psfts_analysis_page.html">Field Trajectory Files</a> (Next) <br  />
 </p>
-<p>The input files required to run a field theoretic simulation (FTS) are closely analogous to those required an SCFT calculation for a periodic system. The pscf_pc or pscf_pg program must be invoked with command line parameters that specify the names of a parameter file and a command file. The main difference in the command file is simply that a SIMULATE command is used to run a stochastic simulation, rather than the ITERATE or SWEEP command used to run an SCFT calculation or an SCFT parameter sweep.</p>
+<p>The input files required to run a field theoretic simulation (FTS) are closely analogous to those required an SCFT calculation for a periodic system. The pscf_rpc or pscf_rpg program must be invoked with command line parameters that specify the names of a parameter file and a command file. The main difference in the command file is simply that a SIMULATE command is used to run a stochastic simulation, rather than the ITERATE or SWEEP command used to run an SCFT calculation or an SCFT parameter sweep.</p>
 <h1 class="doxsection"><a class="anchor" id="psfts_command_example_sec"></a>
-FTS Example</h1>
-<p>For example, suppose that we want to use pscf_pg to run a GPU-accelerated BD simulation of 30,000 BD steps in a 3D domain, using a parameter file named param and a command file named command. To do so, we might invoke the pscf_pg executable as </p><div class="fragment"><div class="line">pscf_pg -e -d 3 -p param -c command &gt; log</div>
+FTS example</h1>
+<p>For example, suppose that we want to use pscf_rpg to run a GPU-accelerated BD simulation of 30,000 BD steps in a 3D domain, using a parameter file named param and a command file named command. To do so, we might invoke the pscf_rpg executable as </p><div class="fragment"><div class="line">pscf_rpg -e -d 3 -p param -c command &gt; log</div>
 </div><!-- fragment --><p> We assume that the parameter file "param" contains a BdSimulator block that specifies appropriate choices of algorithms and parameters for a BD step algorithm, a compressor algorithm, and any desired analyzers.</p>
 <p>Before begininng a FTS, we must read in an initial field configuration from a field file. Field files used to initialize a FTS must be input and output in the r-grid file format, which gives values for the w fields on the nodes of a grid, and does not impose any space group symmetry. This is done using the READ_W_GRID command, as shown in the following example.</p>
 <p>Unlike field files for SCFT, field files used for FTS generally do not contain a line in the field file header that declare a space group. This is because the randomly fluctuating fields characteristic of a FTS are generally not exactly invariant under any nontrivial space group symmetry operations.</p>
@@ -76,8 +76,8 @@ FTS Example</h1>
 <p>The most important new command in this example is the SIMULATE command. This command runs a simulation of a specified number of BD or MC steps, and takes the number of steps as a parameter. In this example, the SIMULATE command thus runs a simulation of 30000 steps. The type of simulation that is performed (i.e., BD vs. MC) and the choice of algorithms and parameter values used in that simulation are all specified in the parameter file, which is always read and processed before the command file. A FTS simulation must thus be initialized by a parameter file that contains either a BdSimulation block for a BD simulation, or an McSimulation block for an MC simulation.</p>
 <h1 class="doxsection"><a class="anchor" id="psfts_command_commands_sec"></a>
 Commands for FTS</h1>
-<p>The commands that can be used for SCFT calculations performed with pscf_pc have already been listed here <a class="el" href="scft_command_pc_page.html">here</a>. Most of these commands can also be used in a command file for pscf_pg. Specifically, commands for reading and writing field files such as READ_W_RGRID and WRITE_W_RGRID can be used in either context, as can the timer commands and many of the utility commands for manipulating field files.</p>
-<p>The following table lists a set of commands that are accepted by either pscf_pc or and pscf_pg that are only meaningful in the context of an FTS simulation, and that were thus not listed among the commands that can be used for SCFT calculations.</p>
+<p>The commands that can be used for SCFT calculations performed with pscf_rpc have already been listed here <a class="el" href="scft_command_pc_page.html">here</a>. Most of these commands can also be used in a command file for pscf_rpg. Specifically, commands for reading and writing field files such as READ_W_RGRID and WRITE_W_RGRID can be used in either context, as can the timer commands and many of the utility commands for manipulating field files.</p>
+<p>The following table lists a set of commands that are accepted by either pscf_rpc or and pscf_rpg that are only meaningful in the context of an FTS simulation, and that were thus not listed among the commands that can be used for SCFT calculations.</p>
 <table class="doxtable">
 <tr>
 <td><b>command </b> </td><td><b>parameter(s)</b> </td><td><b>action </b> </td></tr>

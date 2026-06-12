@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -51,49 +51,35 @@ $(function() {
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#groups">Topics</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#groups">Topics</a>  </div>
   <div class="headertitle"><div class="title">Field Theoretic Simulation (FTS) <div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Rpg__Module.html">Pscf::Rpg - Real Periodic Fields (GPU)</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Classes for partial saddle-point field theoretic simulations (PS-FTS).  
+<p>Partial saddle-point field theoretic simulations (PS-FTS).  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-groups" class="groupheader"><a id="groups" name="groups"></a>
 Topics</h2></td></tr>
 <tr class="memitem:Rpg_5FFts_5FAnalyzer_5FModule" id="r_Rpg_5FFts_5FAnalyzer_5FModule"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Rpg__Fts__Analyzer__Module.html">Analyzers</a></td></tr>
-<tr class="memdesc:group__Rpg__Fts__Analyzer__Module"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classes that implement statistical analysis operations for field theoretic simulations in a partial saddle-point approximation. <br /></td></tr>
+<tr class="memdesc:group__Rpg__Fts__Analyzer__Module"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data analysis and I/O for field theoretic simulations. <br /></td></tr>
 <tr class="memitem:Rpg_5FFts_5FBrownian_5FModule" id="r_Rpg_5FFts_5FBrownian_5FModule"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Rpg__Fts__Brownian__Module.html">Brownian Dynamics</a></td></tr>
-<tr class="memdesc:group__Rpg__Fts__Brownian__Module"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classes that implement Brownian dynamics (BD) algorithms for field theoretic simulations in a partial saddle-point approximation (PS-FTS). <br /></td></tr>
+<tr class="memdesc:group__Rpg__Fts__Brownian__Module"><td class="mdescLeft">&#160;</td><td class="mdescRight">Brownian dynamics (BD) algorithms for field theoretic simulations. <br /></td></tr>
 <tr class="memitem:Rpg_5FFts_5FCompressor_5FModule" id="r_Rpg_5FFts_5FCompressor_5FModule"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Rpg__Fts__Compressor__Module.html">Compressors</a></td></tr>
-<tr class="memdesc:group__Rpg__Fts__Compressor__Module"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compressors are iterators that adjust the Langrange multiplier field so to satisfy the incompressibility constraint. <br /></td></tr>
+<tr class="memdesc:group__Rpg__Fts__Compressor__Module"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterators to impose incompressibility in PS-FTS. <br /></td></tr>
 <tr class="memitem:Rpg_5FFts_5FMonteCarlo_5FModule" id="r_Rpg_5FFts_5FMonteCarlo_5FModule"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Rpg__Fts__MonteCarlo__Module.html">Monte Carlo</a></td></tr>
-<tr class="memdesc:group__Rpg__Fts__MonteCarlo__Module"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classes that implement Monte Carlo (MC) algorithms for field theoretic MC simulations in a partial saddle-point approximation (PS-FTS). <br /></td></tr>
+<tr class="memdesc:group__Rpg__Fts__MonteCarlo__Module"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monte Carlo (MC) algorithms for field theoretic simulations. <br /></td></tr>
 <tr class="memitem:Rpg_5FFts_5FPerturbation_5FModule" id="r_Rpg_5FFts_5FPerturbation_5FModule"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Rpg__Fts__Perturbation__Module.html">Perturbations</a></td></tr>
-<tr class="memdesc:group__Rpg__Fts__Perturbation__Module"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classes that implement additive perturbations to the standard field-theoretic Hamiltonian. <br /></td></tr>
+<tr class="memdesc:group__Rpg__Fts__Perturbation__Module"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perturbations of the standard field-theoretic Hamiltonian. <br /></td></tr>
 <tr class="memitem:Rpg_5FFts_5FRamp_5FModule" id="r_Rpg_5FFts_5FRamp_5FModule"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Rpg__Fts__Ramp__Module.html">Parameter Ramps</a></td></tr>
-<tr class="memdesc:group__Rpg__Fts__Ramp__Module"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classes that apply continuous changes to model parameters during a simulation. <br /></td></tr>
+<tr class="memdesc:group__Rpg__Fts__Ramp__Module"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continuous changes to parameters during a simulation. <br /></td></tr>
+<tr class="memitem:Rpg_5FFts_5FSimulator_5FModule" id="r_Rpg_5FFts_5FSimulator_5FModule"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Rpg__Fts__Simulator__Module.html">Simulator</a></td></tr>
+<tr class="memdesc:group__Rpg__Fts__Simulator__Module"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Rpg_1_1Simulator.html" title="Field theoretic simulator (base class).">Simulator</a> base class and associated <a class="el" href="structPscf_1_1Rpg_1_1SimState.html" title="SimState stores the state used by an FTS simulation.">SimState</a> and <a class="el" href="classPscf_1_1Rpg_1_1SimulatorFactory.html" title="Factory for subclasses of Simulator.">SimulatorFactory</a> classes. <br /></td></tr>
 <tr class="memitem:Rpg_5FFts_5FTrajectory_5FModule" id="r_Rpg_5FFts_5FTrajectory_5FModule"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Rpg__Fts__Trajectory__Module.html">Trajectory Readers</a></td></tr>
-<tr class="memdesc:group__Rpg__Fts__Trajectory__Module"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classes that read trajectory files for post-simulation analysis in different file formats. <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:Pscf_3A_3ARpg_3A_3AVecOpFts" id="r_Pscf_3A_3ARpg_3A_3AVecOpFts"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePscf_1_1Rpg_1_1VecOpFts.html">Pscf::Rpg::VecOpFts</a></td></tr>
-<tr class="memdesc:namespacePscf_1_1Rpg_1_1VecOpFts"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element-wise vector operations performed on the GPU for FTS classes. <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:Pscf_3A_3ARpg_3A_3ASimState_3C_20D_20_3E" id="r_Pscf_3A_3ARpg_3A_3ASimState_3C_20D_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPscf_1_1Rpg_1_1SimState.html">Pscf::Rpg::SimState&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structPscf_1_1Rpg_1_1SimState.html" title="SimState stores the state used by an fts simulation.">SimState</a> stores the state used by an fts simulation.  <a href="structPscf_1_1Rpg_1_1SimState.html#details">More...</a><br /></td></tr>
-<tr class="memitem:Pscf_3A_3ARpg_3A_3ASimulator_3C_20D_20_3E" id="r_Pscf_3A_3ARpg_3A_3ASimulator_3C_20D_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpg_1_1Simulator.html">Pscf::Rpg::Simulator&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Field theoretic simulator (base class).  <a href="classPscf_1_1Rpg_1_1Simulator.html#details">More...</a><br /></td></tr>
-<tr class="memitem:Pscf_3A_3ARpg_3A_3ASimulatorFactory_3C_20D_20_3E" id="r_Pscf_3A_3ARpg_3A_3ASimulatorFactory_3C_20D_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rpg_1_1SimulatorFactory.html">Pscf::Rpg::SimulatorFactory&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory for subclasses of <a class="el" href="classPscf_1_1Rpg_1_1Simulator.html" title="Field theoretic simulator (base class).">Simulator</a>.  <a href="classPscf_1_1Rpg_1_1SimulatorFactory.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:group__Rpg__Fts__Trajectory__Module"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trajectory file readers. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<p>Classes for partial saddle-point field theoretic simulations (PS-FTS). </p>
+<p>Partial saddle-point field theoretic simulations (PS-FTS). </p>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

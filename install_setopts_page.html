@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -59,51 +59,47 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p><a class="el" href="install_inout_page.html">Out-of-Source and In-Source Builds</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="install_targets_page.html">Makefile targets</a> (Next) <br  />
 </p>
-<p>The PSCF build system provides a set of scripts named "setopts" that allow the users to set some optional compile-time features of the package to be enabled or disabled when it is compiled, and to set some parameters that are passed to the compiler.</p>
+<p>Users of PSCF may modify several settings before compiling the package to control whether particular features are enabled or disabled when the package is later compiled, and to set some parameters that are passed to the compiler. A set of bash scripts named "setopts" is provided to simplify the process of modifying these compile-time options.</p>
 <h1 class="doxsection"><a class="anchor" id="install_setopts_setopts"></a>
 The "setopts" scripts</h1>
-<p>The PSCF src/ and bld/ directories are used as build directories for in-source and out-of source compilation, respectively. After the configure script has been run, each of these two standard build directories will contain an exectuable shell script named "setopts". A setopts script can be used to modify configuration files that control what features are enabled when code is compiled. <br  />
-</p>
-<p>The setopts script in each build directory may be invoked from within that directory (i.e., from the src/ or bld/ directory) in order to modify which features will be enabled and disabled in code that is subsequently compiled in that build directory.</p>
-<p>The PSCF root directory (usually named pscfpp/) also contains an analogous setopts script. That "global" setopts script can be invoked to apply identical changes in compile-time features to the configuration files in both the src/ and bld/ directories.</p>
-<p>The setopts scripts function by editing configuration files that are used by the makefile system to define what actions should be taken during compilation. These configuration files, all of which are named config.mk, are installed by the configure script. A setopts script must thus be invoked after running the configure script, but before compiling.</p>
+<p>The PSCF src and bld directories are used as build directories for in-source and out-of source compilation, respectively. After the configure script has been run, each of these two standard build directories will contain an exectuable shell script named "setopts". The setopts script in each build directory (i.e., in src or bld) may be invoked from within that directory to modify which features will be enabled or disabled in code that is subsequently compiled in that build directory.</p>
+<p>Each setopts script changes settings by editing build configuration files that are used by the makefile system to define what actions should be taken during compilation. These configuration files are files named config.mk that are installed by the configure script in the bld and src directories. To change which features are enabled when PSCF is compiled, the setopts script must thus be invoked after running the configure script, but before compiling.</p>
+<p>The PSCF root directory also contains an analogous setopts script, which we refer to as the "global" setopts script. The global setopts script can be invoked to apply identical changes in compile-time features to the configuration files in both the src and bld directories.</p>
 <h2 class="doxsection"><a class="anchor" id="install_setopts_debug_sub"></a>
 Enabling or disabling debugging</h2>
-<p>The "debugging" feature of PSCF can be enabled to add additional run-time sanity checks (such as run-time checking of array index bounds) at a slight cost in performance. The "debugging" feature is enabled or disabled by invoking setopts script before compiling the package with the "-d" option, using an option parameter "1" to enable debugging or "0" to disable it. The debugging feature is disabled by default. To enable debugging checks in the code built in either the src/ or bld/ directory one would enter </p><div class="fragment"><div class="line">./setopts -d1</div>
-</div><!-- fragment --><p> from the PSCF root directory. To instead disable debugging before compiling, one would enter </p><div class="fragment"><div class="line">./setopts -d0</div>
-</div><!-- fragment --><p> The same commands can also be invoked from bld/ or src/ directory to enable or disable debugging only in a single build directory.</p>
+<p>The "debugging" feature of PSCF can be enabled to add additional run-time sanity checks, at a slight cost in performance. One important additional type of check enabled by this feature is run-time checking of array index bounds in the code used to access elements of the collection of array containers used throughout PSCF. The debugging feature is disabled by default, for efficiency, but we recommend that developers enable it at times during debugging and testing of new code.</p>
+<p>The "debugging" feature is enabled or disabled by invoking a setopts script with the "-d" option before compiling the package. Invoking the "-d" with an optiona parameter "1" enables debugging, while an option parameter "0" disables debuggin. One could thus enter </p><div class="fragment"><div class="line">./setopts -d1</div>
+</div><!-- fragment --><p> to enable the debugging feature, or </p><div class="fragment"><div class="line">./setopts -d0</div>
+</div><!-- fragment --><p> to disable debugging. Entering setopts with the -d option from the PSCF root directory enables or disables debugging checks for both in-source and out-of-source compilation, while entering the same commands from the src or bld directory enables or disables this feature only for in-source or out-of-source compilation, respectively.</p>
 <h2 class="doxsection"><a class="anchor" id="install_setopts_cuda_sub"></a>
 Enabling or disabling CUDA compilation</h2>
-<p>The CUDA feature enables conditional compilation of CUDA code on machines that have an appropriate nVidia GPU and CUDA development kit. Compilation of CUDA code is disabled by default. Compilation of CUDA code can be enabled or disabled by invoking a setopts script with the "-c" option, with an option parameter "1" to enable CUDA compilation or "0" to disable CUDA compilation.</p>
-<p>To enable compilation of CUDA source files in any code compiled in either the bld/ or src/ directory, one would enter </p><div class="fragment"><div class="line">./setopts -c1</div>
-</div><!-- fragment --><p> from the PSCF root directory. To disable CUDA compilation, one would instead enter </p><div class="fragment"><div class="line">./setopts -c0</div>
-</div><!-- fragment --><p> The same commands can be invoked from a specific build directory (i.e., from within the source or src/ or bld/ directory) to enable or disable compilation of CUDA code only in that build directory (i.e,. only in code that is compiled out-of-source or in-source). <br  />
-</p>
+<p>The CUDA feature enables conditional compilation of CUDA code on machines that have an appropriate nVidia GPU and a CUDA development kit. Compilation of CUDA code is disabled by default. Compilation of CUDA code can be enabled or disabled by invoking a setopts script with the "-c" option, with an option parameter "1" to enable CUDA compilation or "0" to disable CUDA compilation. One could thus enter </p><div class="fragment"><div class="line">./setopts -c1</div>
+</div><!-- fragment --><p> to enable CUDA compilation, or </p><div class="fragment"><div class="line">./setopts -c0</div>
+</div><!-- fragment --><p> to disable it. Executing the setopts script with the -c option from the PSCF root directory enables or disables CUDA compilation for both in-source and out-of-source compilation, while entering the same commands from within the src or bld directory enables or disables CUDA compilation only for in-source or out-of-source compilation, respectively.</p>
 <h2 class="doxsection"><a class="anchor" id="install_setopts_arch_sub"></a>
 Setting a target GPU architecture</h2>
 <p>Before attempting to compile CUDA code, one should use a setopts script to set the compiler to generate code optimized for the specific type of NVIDIA GPU that is installed on the computer on which the program will be run. This is done by issuing a command of the form </p><div class="fragment"><div class="line">./setopts -a [architecture id]</div>
-</div><!-- fragment --><p> in which [architecture id] represents a string identifier for a particular GPU architecture. <br  />
-</p>
-<p>The architecture id that is passed to the -a option is a string of the form "sm_MN" in which M and N represent the major (M) and minor (N) version numbers for the CUDA "compute capability" of the relevant GPU. This command sets the value of the makefile variable NVARCH, which is defined in the file src/config.mk or bld/config.mk. The value of this variable is passed to the NVIDIA nvcc CUDA compiler as the parameter of the "-arch" compiler option. By default, NVARCH is set to "sm_35", corresponding to compute capability 3.5, which is the appropriate level for a K40 GPU.</p>
+</div><!-- fragment --><p> in which [architecture id] represents a string identifier for a particular GPU architecture.</p>
+<p>The architecture id that is passed to the -a option is a string of the form "sm_MN" in which M and N represent the major (M) and minor (N) version numbers for the CUDA "compute capability" of the relevant GPU. This command sets the value of the makefile variable NVARCH, which is defined in the file src/config.mk or bld/config.mk. The value of this variable is passed to the NVIDIA nvcc CUDA compiler as the parameter of the "-arch" compiler option. By default, NVARCH is set to "sm_70", corresponding to compute capability 7.0, which is the appropriate level for a V100 GPU.</p>
 <h2 class="doxsection"><a class="anchor" id="install_setopts_query_sub"></a>
 The "query" (-q) option</h2>
-<p>The -q command line option of the setopts script may be used to query what optional features are currently set to be enabled or disabled during compilation. To see an example, change directory (cd) to the PSCF bld/ directory and then enter </p><div class="fragment"><div class="line">./setopts -q</div>
-</div><!-- fragment --><p> This should result, for example, in the output </p><div class="fragment"><div class="line">-d  OFF - debugging</div>
+<p>The -q command line option of the setopts script may be used to query what optional features are currently set to be enabled or disabled during compilation. To see an example, change directory (cd) to the PSCF bld directory and then enter </p><div class="fragment"><div class="line">./setopts -q</div>
+</div><!-- fragment --><p> If debugging and CUDA compilation were both disabled (the default configuration), this would result in the output </p><div class="fragment"><div class="line">-d  OFF - debugging</div>
 <div class="line">-c  OFF - CUDA compilation</div>
-</div><!-- fragment --><p> if debugging and CUDA compilation are both disabled (the default configuration), or </p><div class="fragment"><div class="line">-d  OFF - debugging</div>
+</div><!-- fragment --><p> If debugging were disabled but CUDA compilation had been enabled, the output might instead look something like this: </p><div class="fragment"><div class="line">-d  OFF - debugging</div>
 <div class="line">-c  ON  - CUDA compilation</div>
-</div><!-- fragment --><p> if debugging is disabled but CUDA compilation has been enabled.</p>
-<p>Entering "./setopts -q" from the PSCF root directory instead yields a report that shows which optional features are enabled in both the bld/ and src/ directory.</p>
+<div class="line">sm_70   - CUDA architecture <span class="keywordtype">id</span></div>
+</div><!-- fragment --><p> The value of the CUDA architecture id (the string set by the -a option) is printed only if CUDA compilation is enabled.</p>
+<p>Entering "./setopts -q" from either the bld or scr directory yields a report that shows which optional features are enabled or disabled by settings in the config.mk file in the same directory. Entering "./setopts -q" from the PSCF root directory instead yields a report that shows current settings for both the bld and src directories.</p>
 <h2 class="doxsection"><a class="anchor" id="install_setopts_help_sub"></a>
 The "help" (-h) option</h2>
 <p>Invoking the setopts script with the -h ("help") option, by entering </p><div class="fragment"><div class="line">./setopts -h</div>
 </div><!-- fragment --><p> produces a list of all command line options accepted by the script.</p>
 <h1 class="doxsection"><a class="anchor" id="install_setopts_build_directories_section"></a>
 Build configuration files</h1>
-<p>The configuration of the build system is actually defined by the contents of a set of files named "config.mk" in the src/ and bld/ directories. These files, which we refer to as build configuration files, are makefile fragments that are included by other makefiles during the build process. The setopts scripts work by editing the build configuration files. <br  />
- Users may also edit these files directly if they are comfortable doing so. The configuration files contain comments that explain the meaning and usage of all of the variables defined there.</p>
-<p>The directories src/ and bld/ contain analogous directory structures, and similar sets of build configuration files. In what follows, we will refer to src/ and bld/ generically as build directories. Both of these directories contains a set of five subdirectories named util/, pscf/, r1d/, pscpc/, and rpg/ that each contain C++ source files from a single C++ namespace. We refer to these top-level subdirectories of bld/ and src/ as "namespace-level" subdirectories.</p>
-<p>After the configure script has been run, each build directory will contain 6 build configuration files files named "config.mk", with one in the root of the build directory (i.e., in src/ and bld/) and one in each of the 5 namespace-level subdirectories of that directory. The config.mk file in the root directory of each build directory tree is the main build configuration file for code built in that directory. This file controls the choice of compiler and general options that are applied to all code built there. The config.mk files in the namespace level directories each specify more specialized options that are only relevant for code in specific subdirectories or C++ namespaces.</p>
+<p>All mutable attributes of the PSCF build system are defined by the contents of a pair of files named "config.mk" that are installed in the src and bld directories by the configure script. We refer to these two "config.mk" files as build configuration files. The build configuraiton files are makefile fragments that contain definitions of makefile variables, and that are included by other makefiles during the build process. The file bld/config.mk defines the configuration used for out-of-source compilation, while src/config.mk defines the configuration for in-source compilation. <br  />
+</p>
+<p>The setopts scripts use standard unix utilities (such as the "sed" stream editor) to make required modifications of these build configuration files. Users may instead use a text editor to modify the config.mk files directly, rather than by using the setopts scripts, if they are comfortable doing so. The configuration files contain extensive comments that explain the meaning and usage of all of the makefile variables defined in those files.</p>
 <p><br  />
  <a class="el" href="install_inout_page.html">Out-of-Source and In-Source Builds</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="install_page.html">Installation</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="install_targets_page.html">Makefile targets</a> (Next) </p>
 </div></div><!-- contents -->

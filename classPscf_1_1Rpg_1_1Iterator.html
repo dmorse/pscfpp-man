@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -56,14 +56,12 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classPscf_1_1Rpg_1_1Iterator-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Pscf::Rpg::Iterator&lt; D &gt; Class Template Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span><div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Rpg__Module.html">Pscf::Rpg - Real Periodic Fields (GPU)</a> &raquo; <a class="el" href="group__Rpg__Scft__Module.html">Self-Consistent Field Theory (SCFT)</a> &raquo; <a class="el" href="group__Rpg__Scft__Iterator__Module.html">Iterators</a></div></div></div>
+  <div class="headertitle"><div class="title">Pscf::Rpg::Iterator&lt; D &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Rpg__Module.html">Pscf::Rpg - Real Periodic Fields (GPU)</a> &raquo; <a class="el" href="group__Rpg__Scft__Module.html">Self-Consistent Field Theory (SCFT)</a> &raquo; <a class="el" href="group__Rpg__Scft__Iterator__Module.html">Iterators</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Base class for iterative solvers for SCF equations.  
+<p>Base class for iterative solvers for SCF equations in <a class="el" href="namespacePscf_1_1Rpg.html" title="SCFT and PS-FTS with real periodic fields (GPU)">Rpg</a>.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">Iterator.h</a>&gt;</code></p>
@@ -73,10 +71,11 @@ Inheritance diagram for Pscf::Rpg::Iterator&lt; D &gt;:</div>
  <div class="center">
   <img src="classPscf_1_1Rpg_1_1Iterator.png" usemap="#Pscf_3A_3ARpg_3A_3AIterator_3C_20D_20_3E_map" alt=""/>
   <map id="Pscf_3A_3ARpg_3A_3AIterator_3C_20D_20_3E_map" name="Pscf_3A_3ARpg_3A_3AIterator_3C_20D_20_3E_map">
-<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="77,112,221,136"/>
-<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="77,56,221,80"/>
-<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="0,0,144,24"/>
-<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="154,0,298,24"/>
+<area href="classPscf_1_1Rp_1_1Iterator.html" alt="Pscf::Rp::Iterator&lt; D, System&lt; D &gt; &gt;" shape="rect" coords="114,168,333,192"/>
+<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="114,112,333,136"/>
+<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="114,56,333,80"/>
+<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="0,0,219,24"/>
+<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="229,0,448,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -84,28 +83,29 @@ Inheritance diagram for Pscf::Rpg::Iterator&lt; D &gt;:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a30f4489aebb0ea1a56da6925d03eecfb" id="r_a30f4489aebb0ea1a56da6925d03eecfb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30f4489aebb0ea1a56da6925d03eecfb">Iterator</a> ()</td></tr>
 <tr class="memdesc:a30f4489aebb0ea1a56da6925d03eecfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
-<tr class="memitem:a182319e966de1170702710a6e09c821f" id="r_a182319e966de1170702710a6e09c821f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a182319e966de1170702710a6e09c821f">Iterator</a> (<a class="el" href="classPscf_1_1Rpg_1_1System.html">System</a>&lt; D &gt; &amp;<a class="el" href="#a00b726e71871fbcacc66de17fd1e10ad">system</a>)</td></tr>
+<tr class="memitem:a182319e966de1170702710a6e09c821f" id="r_a182319e966de1170702710a6e09c821f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a182319e966de1170702710a6e09c821f">Iterator</a> (<a class="el" href="classPscf_1_1Rpg_1_1System.html">System</a>&lt; D &gt; &amp;<a class="el" href="classPscf_1_1Rp_1_1Iterator.html#a25c2a394fbebd771a120fa66107f38dc">system</a>)</td></tr>
 <tr class="memdesc:a182319e966de1170702710a6e09c821f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="memitem:aab6716f5bdecb49e9cdd754359408ab6" id="r_aab6716f5bdecb49e9cdd754359408ab6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab6716f5bdecb49e9cdd754359408ab6">~Iterator</a> ()</td></tr>
-<tr class="memdesc:aab6716f5bdecb49e9cdd754359408ab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:a32ba9e5907450ea46de0d8bca71895a6" id="r_a32ba9e5907450ea46de0d8bca71895a6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32ba9e5907450ea46de0d8bca71895a6">solve</a> (bool isContinuation)=0</td></tr>
-<tr class="memdesc:a32ba9e5907450ea46de0d8bca71895a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate to solution.  <br /></td></tr>
-<tr class="memitem:ae11e8e99d74bc71c17feec81535af33d" id="r_ae11e8e99d74bc71c17feec81535af33d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae11e8e99d74bc71c17feec81535af33d">outputTimers</a> (std::ostream &amp;out) const =0</td></tr>
-<tr class="memdesc:ae11e8e99d74bc71c17feec81535af33d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classUtil_1_1Log.html" title="A static class that holds a log output stream.">Log</a> output timing results.  <br /></td></tr>
-<tr class="memitem:a3be508ee0da0ed7ee3de44867282edcf" id="r_a3be508ee0da0ed7ee3de44867282edcf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3be508ee0da0ed7ee3de44867282edcf">clearTimers</a> ()=0</td></tr>
-<tr class="memdesc:a3be508ee0da0ed7ee3de44867282edcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear timers.  <br /></td></tr>
-<tr class="memitem:a87334a525ec69e515119c7e9ce4d3542" id="r_a87334a525ec69e515119c7e9ce4d3542"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87334a525ec69e515119c7e9ce4d3542">isSymmetric</a> () const</td></tr>
-<tr class="memdesc:a87334a525ec69e515119c7e9ce4d3542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this iterator use a symmetry-adapted Fourier basis?  <br /></td></tr>
-<tr class="memitem:a631a5766636fb0700a0b09a03e9c3d42" id="r_a631a5766636fb0700a0b09a03e9c3d42"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a631a5766636fb0700a0b09a03e9c3d42">isFlexible</a> () const</td></tr>
-<tr class="memdesc:a631a5766636fb0700a0b09a03e9c3d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the unit cell flexible (true) or rigid (false).  <br /></td></tr>
-<tr class="memitem:aa4209c4164ac8ffa384445b7cb9d6c45" id="r_aa4209c4164ac8ffa384445b7cb9d6c45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1FSArray.html">FSArray</a>&lt; bool, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4209c4164ac8ffa384445b7cb9d6c45">flexibleParams</a> () const</td></tr>
-<tr class="memdesc:aa4209c4164ac8ffa384445b7cb9d6c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the array indicating which lattice parameters are flexible.  <br /></td></tr>
-<tr class="memitem:a64fc87ea2c7bf6c0791c479e6fb33b50" id="r_a64fc87ea2c7bf6c0791c479e6fb33b50"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64fc87ea2c7bf6c0791c479e6fb33b50">nFlexibleParams</a> () const</td></tr>
-<tr class="memdesc:a64fc87ea2c7bf6c0791c479e6fb33b50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of flexible lattice parameters.  <br /></td></tr>
-<tr class="memitem:a1ba072eac2f6e20141ea2fc2838367f3" id="r_a1ba072eac2f6e20141ea2fc2838367f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ba072eac2f6e20141ea2fc2838367f3">setFlexibleParams</a> (<a class="el" href="classUtil_1_1FSArray.html">FSArray</a>&lt; bool, 6 &gt; const &amp;flexParams)</td></tr>
-<tr class="memdesc:a1ba072eac2f6e20141ea2fc2838367f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the array indicating which lattice parameters are flexible.  <br /></td></tr>
-<tr class="memitem:a8c4eef8e522272ea37b52790e5b83a48" id="r_a8c4eef8e522272ea37b52790e5b83a48"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c4eef8e522272ea37b52790e5b83a48">stress</a> (int paramId) const</td></tr>
-<tr class="memdesc:a8c4eef8e522272ea37b52790e5b83a48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the stress used by this <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a>, for one lattice parameter.  <br /></td></tr>
+<tr class="memitem:aeb6dd9970396df3d25c286446c0c1166" id="r_aeb6dd9970396df3d25c286446c0c1166"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb6dd9970396df3d25c286446c0c1166">~Iterator</a> ()=default</td></tr>
+<tr class="memdesc:aeb6dd9970396df3d25c286446c0c1166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="inherit_header pub_methods_classPscf_1_1Rp_1_1Iterator"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1Rp_1_1Iterator')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1Rp_1_1Iterator.html">Pscf::Rp::Iterator&lt; D, System&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:a5bfa2b074a3b93208eeba4d0093a7057 inherit pub_methods_classPscf_1_1Rp_1_1Iterator" id="r_a5bfa2b074a3b93208eeba4d0093a7057"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Iterator.html#a5bfa2b074a3b93208eeba4d0093a7057">solve</a> (bool isContinuation)=0</td></tr>
+<tr class="memdesc:a5bfa2b074a3b93208eeba4d0093a7057 inherit pub_methods_classPscf_1_1Rp_1_1Iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate to solution.  <br /></td></tr>
+<tr class="memitem:ade996bc0d519f4655309409044583a53 inherit pub_methods_classPscf_1_1Rp_1_1Iterator" id="r_ade996bc0d519f4655309409044583a53"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Iterator.html#ade996bc0d519f4655309409044583a53">outputTimers</a> (std::ostream &amp;out) const=0</td></tr>
+<tr class="memdesc:ade996bc0d519f4655309409044583a53 inherit pub_methods_classPscf_1_1Rp_1_1Iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classUtil_1_1Log.html" title="A static class that holds a log output stream.">Log</a> output timing results.  <br /></td></tr>
+<tr class="memitem:af3c9d0bbced72e74f553f076a1071094 inherit pub_methods_classPscf_1_1Rp_1_1Iterator" id="r_af3c9d0bbced72e74f553f076a1071094"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Iterator.html#af3c9d0bbced72e74f553f076a1071094">clearTimers</a> ()=0</td></tr>
+<tr class="memdesc:af3c9d0bbced72e74f553f076a1071094 inherit pub_methods_classPscf_1_1Rp_1_1Iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear timers.  <br /></td></tr>
+<tr class="memitem:a0a74a0153c50e3ebbcbf7184e9461ea3 inherit pub_methods_classPscf_1_1Rp_1_1Iterator" id="r_a0a74a0153c50e3ebbcbf7184e9461ea3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Iterator.html#a0a74a0153c50e3ebbcbf7184e9461ea3">isSymmetric</a> () const</td></tr>
+<tr class="memdesc:a0a74a0153c50e3ebbcbf7184e9461ea3 inherit pub_methods_classPscf_1_1Rp_1_1Iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this iterator use a symmetry-adapted Fourier basis?  <br /></td></tr>
+<tr class="memitem:ae8ae6696e1be2695c67960e17e82f168 inherit pub_methods_classPscf_1_1Rp_1_1Iterator" id="r_ae8ae6696e1be2695c67960e17e82f168"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Iterator.html#ae8ae6696e1be2695c67960e17e82f168">isFlexible</a> () const</td></tr>
+<tr class="memdesc:ae8ae6696e1be2695c67960e17e82f168 inherit pub_methods_classPscf_1_1Rp_1_1Iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true iff unit cell has any flexible lattice parameters.  <br /></td></tr>
+<tr class="memitem:a7b851a7300551d0642256612f8d73199 inherit pub_methods_classPscf_1_1Rp_1_1Iterator" id="r_a7b851a7300551d0642256612f8d73199"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1FSArray.html">FSArray</a>&lt; bool, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Iterator.html#a7b851a7300551d0642256612f8d73199">flexibleParams</a> () const</td></tr>
+<tr class="memdesc:a7b851a7300551d0642256612f8d73199 inherit pub_methods_classPscf_1_1Rp_1_1Iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the array indicating which lattice parameters are flexible.  <br /></td></tr>
+<tr class="memitem:a64fc87ea2c7bf6c0791c479e6fb33b50 inherit pub_methods_classPscf_1_1Rp_1_1Iterator" id="r_a64fc87ea2c7bf6c0791c479e6fb33b50"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Iterator.html#a64fc87ea2c7bf6c0791c479e6fb33b50">nFlexibleParams</a> () const</td></tr>
+<tr class="memdesc:a64fc87ea2c7bf6c0791c479e6fb33b50 inherit pub_methods_classPscf_1_1Rp_1_1Iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of flexible lattice parameters.  <br /></td></tr>
+<tr class="memitem:a1ba072eac2f6e20141ea2fc2838367f3 inherit pub_methods_classPscf_1_1Rp_1_1Iterator" id="r_a1ba072eac2f6e20141ea2fc2838367f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Iterator.html#a1ba072eac2f6e20141ea2fc2838367f3">setFlexibleParams</a> (<a class="el" href="classUtil_1_1FSArray.html">FSArray</a>&lt; bool, 6 &gt; const &amp;flexParams)</td></tr>
+<tr class="memdesc:a1ba072eac2f6e20141ea2fc2838367f3 inherit pub_methods_classPscf_1_1Rp_1_1Iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the array indicating which lattice parameters are flexible.  <br /></td></tr>
+<tr class="memitem:a8c4eef8e522272ea37b52790e5b83a48 inherit pub_methods_classPscf_1_1Rp_1_1Iterator" id="r_a8c4eef8e522272ea37b52790e5b83a48"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Iterator.html#a8c4eef8e522272ea37b52790e5b83a48">stress</a> (int paramId) const</td></tr>
+<tr class="memdesc:a8c4eef8e522272ea37b52790e5b83a48 inherit pub_methods_classPscf_1_1Rp_1_1Iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the stress used by this <a class="el" href="classPscf_1_1Rp_1_1Iterator.html" title="Base class template for iterative solvers for SCF equations.">Iterator</a>, for one lattice parameter.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classUtil_1_1ParamComposite"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classUtil_1_1ParamComposite')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComposite.html">Util::ParamComposite</a></td></tr>
 <tr class="memitem:a873eea7d2dbc19cde816d1bef602496c inherit pub_methods_classUtil_1_1ParamComposite" id="r_a873eea7d2dbc19cde816d1bef602496c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a873eea7d2dbc19cde816d1bef602496c">ParamComposite</a> ()</td></tr>
 <tr class="memdesc:a873eea7d2dbc19cde816d1bef602496c inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
@@ -280,12 +280,29 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af2787f522a78daada06b2241ce368128 inherit pub_methods_classUtil_1_1MpiFileIo" id="r_af2787f522a78daada06b2241ce368128"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1MpiFileIo.html#af2787f522a78daada06b2241ce368128">isIoProcessor</a> () const</td></tr>
 <tr class="memdesc:af2787f522a78daada06b2241ce368128 inherit pub_methods_classUtil_1_1MpiFileIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can this processor do file I/O ?  <br /></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a00b726e71871fbcacc66de17fd1e10ad" id="r_a00b726e71871fbcacc66de17fd1e10ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1System.html">System</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00b726e71871fbcacc66de17fd1e10ad">system</a> ()</td></tr>
-<tr class="memdesc:a00b726e71871fbcacc66de17fd1e10ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reference to parent system.  <br /></td></tr>
-<tr class="memitem:a76b4f1e7521ea93cd2a8744443a1d43b" id="r_a76b4f1e7521ea93cd2a8744443a1d43b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1System.html">System</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76b4f1e7521ea93cd2a8744443a1d43b">system</a> () const</td></tr>
-<tr class="memdesc:a76b4f1e7521ea93cd2a8744443a1d43b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return const reference to parent system.  <br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classUtil_1_1Serializable"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classUtil_1_1Serializable')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="classUtil_1_1Serializable.html">Util::Serializable</a></td></tr>
+<tr class="memitem:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable" id="r_aca43a1eea5ec5f13189a57892a7a6d04"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileOArchive.html">BinaryFileOArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#aca43a1eea5ec5f13189a57892a7a6d04">OArchive</a></td></tr>
+<tr class="memdesc:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of output archive used by save method.  <br /></td></tr>
+<tr class="memitem:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable" id="r_ac6bcbf9bac926cada5a398804410e891"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileIArchive.html">BinaryFileIArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">IArchive</a></td></tr>
+<tr class="memdesc:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of input archive used by load method.  <br /></td></tr>
+<tr class="inherit_header pub_static_methods_classUtil_1_1ParamComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classUtil_1_1ParamComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Static Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComponent.html">Util::ParamComponent</a></td></tr>
+<tr class="memitem:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_a5350c0432130f7feba8392f5b3a75cb4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a5350c0432130f7feba8392f5b3a75cb4">initStatic</a> ()</td></tr>
+<tr class="memdesc:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize static echo member to false.  <br /></td></tr>
+<tr class="memitem:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_add72ad7add98e0b90979ee2638c7468d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#add72ad7add98e0b90979ee2638c7468d">setEcho</a> (bool <a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a>=true)</td></tr>
+<tr class="memdesc:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable echoing for all subclasses of <a class="el" href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file.">ParamComponent</a>.  <br /></td></tr>
+<tr class="memitem:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_ac5808de278115409092e94f9c72362c2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a> ()</td></tr>
+<tr class="memdesc:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get echo parameter.  <br /></td></tr>
+<tr class="inherit_header pro_methods_classPscf_1_1Rp_1_1Iterator"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classPscf_1_1Rp_1_1Iterator')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classPscf_1_1Rp_1_1Iterator.html">Pscf::Rp::Iterator&lt; D, System&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:a30f4489aebb0ea1a56da6925d03eecfb inherit pro_methods_classPscf_1_1Rp_1_1Iterator" id="r_a30f4489aebb0ea1a56da6925d03eecfb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Iterator.html#a30f4489aebb0ea1a56da6925d03eecfb">Iterator</a> ()</td></tr>
+<tr class="memdesc:a30f4489aebb0ea1a56da6925d03eecfb inherit pro_methods_classPscf_1_1Rp_1_1Iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
+<tr class="memitem:aab6716f5bdecb49e9cdd754359408ab6 inherit pro_methods_classPscf_1_1Rp_1_1Iterator" id="r_aab6716f5bdecb49e9cdd754359408ab6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Iterator.html#aab6716f5bdecb49e9cdd754359408ab6">~Iterator</a> ()</td></tr>
+<tr class="memdesc:aab6716f5bdecb49e9cdd754359408ab6 inherit pro_methods_classPscf_1_1Rp_1_1Iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:a3f456025cb482a53c810affc043ddc45 inherit pro_methods_classPscf_1_1Rp_1_1Iterator" id="r_a3f456025cb482a53c810affc043ddc45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Iterator.html#a3f456025cb482a53c810affc043ddc45">setSystem</a> (<a class="el" href="classPscf_1_1Rp_1_1System.html">System</a>&lt; D &gt; &amp;<a class="el" href="classPscf_1_1Rp_1_1Iterator.html#a25c2a394fbebd771a120fa66107f38dc">system</a>)</td></tr>
+<tr class="memdesc:a3f456025cb482a53c810affc043ddc45 inherit pro_methods_classPscf_1_1Rp_1_1Iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set parent system.  <br /></td></tr>
+<tr class="memitem:a25c2a394fbebd771a120fa66107f38dc inherit pro_methods_classPscf_1_1Rp_1_1Iterator" id="r_a25c2a394fbebd771a120fa66107f38dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rp_1_1System.html">System</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Iterator.html#a25c2a394fbebd771a120fa66107f38dc">system</a> () const</td></tr>
+<tr class="memdesc:a25c2a394fbebd771a120fa66107f38dc inherit pro_methods_classPscf_1_1Rp_1_1Iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parent system by const reference.  <br /></td></tr>
 <tr class="memitem:a30752567fd7b8b93e5c8476bbe8592c5" id="r_a30752567fd7b8b93e5c8476bbe8592c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">setClassName</a> (const char *<a class="el" href="classUtil_1_1ParamComposite.html#a93e3a9fd3bd01dcc3c606a7bf3112c0e">className</a>)</td></tr>
 <tr class="memdesc:a30752567fd7b8b93e5c8476bbe8592c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set class name string.  <br /></td></tr>
 <tr class="memitem:a30bf69df610c5d1bfa2d2b852425b206" id="r_a30bf69df610c5d1bfa2d2b852425b206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a30bf69df610c5d1bfa2d2b852425b206">setIsRequired</a> (bool <a class="el" href="classUtil_1_1ParamComposite.html#aff9ce840ca72f2c6cf3e24335a7a580c">isRequired</a>)</td></tr>
@@ -322,36 +339,19 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a6f859f325ca7d36747d28c9677fe0bfc inherit pro_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:ae979e22ecef3a94c0e826224b3761df9 inherit pro_methods_classUtil_1_1ParamComponent" id="r_ae979e22ecef3a94c0e826224b3761df9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ae979e22ecef3a94c0e826224b3761df9">ParamComponent</a> (const <a class="el" href="classUtil_1_1ParamComponent.html">ParamComponent</a> &amp;other)</td></tr>
 <tr class="memdesc:ae979e22ecef3a94c0e826224b3761df9 inherit pro_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:ac6922aec3e0c7bf39b8096fa23145c1c" id="r_ac6922aec3e0c7bf39b8096fa23145c1c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6922aec3e0c7bf39b8096fa23145c1c">isSymmetric_</a></td></tr>
-<tr class="memdesc:ac6922aec3e0c7bf39b8096fa23145c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this iterator use a symmetry-adapted basis?  <br /></td></tr>
-<tr class="memitem:a879d82c09d74269e70db5967ddafe3c1" id="r_a879d82c09d74269e70db5967ddafe3c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a879d82c09d74269e70db5967ddafe3c1">isFlexible_</a></td></tr>
-<tr class="memdesc:a879d82c09d74269e70db5967ddafe3c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the unit cell flexible during iteration?  <br /></td></tr>
-<tr class="memitem:aab85733ea4e919516304223fa2b505d5" id="r_aab85733ea4e919516304223fa2b505d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1FSArray.html">FSArray</a>&lt; bool, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab85733ea4e919516304223fa2b505d5">flexibleParams_</a></td></tr>
-<tr class="memdesc:aab85733ea4e919516304223fa2b505d5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classUtil_1_1Array.html" title="Array container class template.">Array</a> of indices of the lattice parameters that are flexible.  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classUtil_1_1Serializable"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classUtil_1_1Serializable')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="classUtil_1_1Serializable.html">Util::Serializable</a></td></tr>
-<tr class="memitem:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable" id="r_aca43a1eea5ec5f13189a57892a7a6d04"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileOArchive.html">BinaryFileOArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#aca43a1eea5ec5f13189a57892a7a6d04">OArchive</a></td></tr>
-<tr class="memdesc:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of output archive used by save method.  <br /></td></tr>
-<tr class="memitem:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable" id="r_ac6bcbf9bac926cada5a398804410e891"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileIArchive.html">BinaryFileIArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">IArchive</a></td></tr>
-<tr class="memdesc:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of input archive used by load method.  <br /></td></tr>
-<tr class="inherit_header pub_static_methods_classUtil_1_1ParamComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classUtil_1_1ParamComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Static Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComponent.html">Util::ParamComponent</a></td></tr>
-<tr class="memitem:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_a5350c0432130f7feba8392f5b3a75cb4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a5350c0432130f7feba8392f5b3a75cb4">initStatic</a> ()</td></tr>
-<tr class="memdesc:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize static echo member to false.  <br /></td></tr>
-<tr class="memitem:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_add72ad7add98e0b90979ee2638c7468d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#add72ad7add98e0b90979ee2638c7468d">setEcho</a> (bool <a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a>=true)</td></tr>
-<tr class="memdesc:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable echoing for all subclasses of <a class="el" href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file.">ParamComponent</a>.  <br /></td></tr>
-<tr class="memitem:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_ac5808de278115409092e94f9c72362c2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a> ()</td></tr>
-<tr class="memdesc:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get echo parameter.  <br /></td></tr>
+<tr class="inherit_header pro_attribs_classPscf_1_1Rp_1_1Iterator"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classPscf_1_1Rp_1_1Iterator')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classPscf_1_1Rp_1_1Iterator.html">Pscf::Rp::Iterator&lt; D, System&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:a4d58136e56f6c450a2840f7928e51535 inherit pro_attribs_classPscf_1_1Rp_1_1Iterator" id="r_a4d58136e56f6c450a2840f7928e51535"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Iterator.html#a4d58136e56f6c450a2840f7928e51535">isSymmetric_</a></td></tr>
+<tr class="memdesc:a4d58136e56f6c450a2840f7928e51535 inherit pro_attribs_classPscf_1_1Rp_1_1Iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this iterator use a symmetry-adapted basis?  <br /></td></tr>
+<tr class="memitem:adc20a668a209d00122ce823eaff8e653 inherit pro_attribs_classPscf_1_1Rp_1_1Iterator" id="r_adc20a668a209d00122ce823eaff8e653"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Iterator.html#adc20a668a209d00122ce823eaff8e653">isFlexible_</a></td></tr>
+<tr class="memdesc:adc20a668a209d00122ce823eaff8e653 inherit pro_attribs_classPscf_1_1Rp_1_1Iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are any lattice parameters flexible during iteration?  <br /></td></tr>
+<tr class="memitem:afd94d3b2d518efd2a88562dcc26dcc8c inherit pro_attribs_classPscf_1_1Rp_1_1Iterator" id="r_afd94d3b2d518efd2a88562dcc26dcc8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1FSArray.html">FSArray</a>&lt; bool, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Iterator.html#afd94d3b2d518efd2a88562dcc26dcc8c">flexibleParams_</a></td></tr>
+<tr class="memdesc:afd94d3b2d518efd2a88562dcc26dcc8c inherit pro_attribs_classPscf_1_1Rp_1_1Iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classUtil_1_1Array.html" title="Array container class template.">Array</a> of indices of the lattice parameters that are flexible.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
-class Pscf::Rpg::Iterator&lt; D &gt;</div><p>Base class for iterative solvers for SCF equations. </p>
+class Pscf::Rpg::Iterator&lt; D &gt;</div><p>Base class for iterative solvers for SCF equations in <a class="el" href="namespacePscf_1_1Rpg.html" title="SCFT and PS-FTS with real periodic fields (GPU)">Rpg</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00028">28</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00026">26</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a30f4489aebb0ea1a56da6925d03eecfb" name="a30f4489aebb0ea1a56da6925d03eecfb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30f4489aebb0ea1a56da6925d03eecfb">&#9670;&#160;</a></span>Iterator() <span class="overload">[1/2]</span></h2>
@@ -372,9 +372,11 @@ template&lt;int D&gt; </div>
 
 <p>Default constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00030">30</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Iterator_8cu_source.html#l00024">24</a> of file <a class="el" href="Iterator_8cu_source.html">Iterator.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00118">isFlexible_</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00113">isSymmetric_</a>, and <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>.</p>
+<p class="reference">References <a class="el" href="Iterator_8cu_source.html#l00024">Iterator()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Iterator_8cu_source.html#l00024">Iterator()</a>, and <a class="el" href="Iterator_8cu_source.html#l00032">Iterator()</a>.</p>
 
 </div>
 </div>
@@ -403,486 +405,44 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00040">40</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Iterator_8cu_source.html#l00032">32</a> of file <a class="el" href="Iterator_8cu_source.html">Iterator.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00118">isFlexible_</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00113">isSymmetric_</a>, <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>, and <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00146">system()</a>.</p>
+<p class="reference">References <a class="el" href="Iterator_8cu_source.html#l00024">Iterator()</a>, and <a class="el" href="rp_2scft_2iterator_2Iterator_8h_source.html#l00167">Pscf::Rp::Iterator&lt; D, System&lt; D &gt; &gt;::system()</a>.</p>
 
 </div>
 </div>
-<a id="aab6716f5bdecb49e9cdd754359408ab6" name="aab6716f5bdecb49e9cdd754359408ab6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab6716f5bdecb49e9cdd754359408ab6">&#9670;&#160;</a></span>~Iterator()</h2>
+<a id="aeb6dd9970396df3d25c286446c0c1166" name="aeb6dd9970396df3d25c286446c0c1166"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb6dd9970396df3d25c286446c0c1166">&#9670;&#160;</a></span>~Iterator()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Iterator::~Iterator </td>
+          <td class="memname">virtual <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html">Pscf::Rpg::Iterator</a>&lt; D &gt;::~<a class="el" href="classPscf_1_1Rpg_1_1Iterator.html">Iterator</a> </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Destructor. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00050">50</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a>.</p>
-
-</div>
-</div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a32ba9e5907450ea46de0d8bca71895a6" name="a32ba9e5907450ea46de0d8bca71895a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32ba9e5907450ea46de0d8bca71895a6">&#9670;&#160;</a></span>solve()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html">Pscf::Rpg::Iterator</a>&lt; D &gt;::solve </td>
-          <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isContinuation</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Iterate to solution. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">isContinuation</td><td>true iff continuation within a sweep </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>error code: 0 for success, 1 for failure. </dd></dl>
-
-</div>
-</div>
-<a id="ae11e8e99d74bc71c17feec81535af33d" name="ae11e8e99d74bc71c17feec81535af33d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae11e8e99d74bc71c17feec81535af33d">&#9670;&#160;</a></span>outputTimers()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html">Pscf::Rpg::Iterator</a>&lt; D &gt;::outputTimers </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classUtil_1_1Log.html" title="A static class that holds a log output stream.">Log</a> output timing results. </p>
-
-</div>
-</div>
-<a id="a3be508ee0da0ed7ee3de44867282edcf" name="a3be508ee0da0ed7ee3de44867282edcf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3be508ee0da0ed7ee3de44867282edcf">&#9670;&#160;</a></span>clearTimers()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html">Pscf::Rpg::Iterator</a>&lt; D &gt;::clearTimers </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Clear timers. </p>
-
-</div>
-</div>
-<a id="a87334a525ec69e515119c7e9ce4d3542" name="a87334a525ec69e515119c7e9ce4d3542"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87334a525ec69e515119c7e9ce4d3542">&#9670;&#160;</a></span>isSymmetric()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Iterator::isSymmetric </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Does this iterator use a symmetry-adapted Fourier basis? </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00057">57</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00113">isSymmetric_</a>.</p>
-
-</div>
-</div>
-<a id="a631a5766636fb0700a0b09a03e9c3d42" name="a631a5766636fb0700a0b09a03e9c3d42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a631a5766636fb0700a0b09a03e9c3d42">&#9670;&#160;</a></span>isFlexible()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Iterator::isFlexible </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Is the unit cell flexible (true) or rigid (false). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00064">64</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00118">isFlexible_</a>.</p>
-
-</div>
-</div>
-<a id="aa4209c4164ac8ffa384445b7cb9d6c45" name="aa4209c4164ac8ffa384445b7cb9d6c45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4209c4164ac8ffa384445b7cb9d6c45">&#9670;&#160;</a></span>flexibleParams()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classUtil_1_1FSArray.html">FSArray</a>&lt; bool, 6 &gt; Iterator::flexibleParams </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the array indicating which lattice parameters are flexible. </p>
-<p>This array should be nParameters long, where the i-th entry is a boolean indicating whether parameter i is flexible. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00071">71</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00123">flexibleParams_</a>.</p>
-
-</div>
-</div>
-<a id="a64fc87ea2c7bf6c0791c479e6fb33b50" name="a64fc87ea2c7bf6c0791c479e6fb33b50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64fc87ea2c7bf6c0791c479e6fb33b50">&#9670;&#160;</a></span>nFlexibleParams()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">int Iterator::nFlexibleParams </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the number of flexible lattice parameters. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00078">78</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00123">flexibleParams_</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00146">system()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00093">setFlexibleParams()</a>.</p>
-
-</div>
-</div>
-<a id="a1ba072eac2f6e20141ea2fc2838367f3" name="a1ba072eac2f6e20141ea2fc2838367f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ba072eac2f6e20141ea2fc2838367f3">&#9670;&#160;</a></span>setFlexibleParams()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void Iterator::setFlexibleParams </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classUtil_1_1FSArray.html">FSArray</a>&lt; bool, 6 &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>flexParams</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the array indicating which lattice parameters are flexible. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">flexParams</td><td>input boolean array </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00093">93</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00123">flexibleParams_</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00118">isFlexible_</a>, and <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00078">nFlexibleParams()</a>.</p>
-
-</div>
-</div>
-<a id="a8c4eef8e522272ea37b52790e5b83a48" name="a8c4eef8e522272ea37b52790e5b83a48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c4eef8e522272ea37b52790e5b83a48">&#9670;&#160;</a></span>stress()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double Iterator::stress </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>paramId</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return the stress used by this <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a>, for one lattice parameter. </p>
-<p>Will throw an error if paramId corresponds to a lattice parameter that is not flexible (according to the flexibleParams array).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">paramId</td><td>index of lattice parameter </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00107">107</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00123">flexibleParams_</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00146">system()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-</div>
-</div>
-<a id="a00b726e71871fbcacc66de17fd1e10ad" name="a00b726e71871fbcacc66de17fd1e10ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00b726e71871fbcacc66de17fd1e10ad">&#9670;&#160;</a></span>system() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1System.html">System</a>&lt; D &gt; &amp; Iterator::system </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return reference to parent system. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00146">146</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00040">Iterator()</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00078">nFlexibleParams()</a>, and <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00107">stress()</a>.</p>
-
-</div>
-</div>
-<a id="a76b4f1e7521ea93cd2a8744443a1d43b" name="a76b4f1e7521ea93cd2a8744443a1d43b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76b4f1e7521ea93cd2a8744443a1d43b">&#9670;&#160;</a></span>system() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1System.html">System</a>&lt; D &gt; const  &amp; Iterator::system </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return const reference to parent system. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00151">151</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
-
-</div>
-</div>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="ac6922aec3e0c7bf39b8096fa23145c1c" name="ac6922aec3e0c7bf39b8096fa23145c1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6922aec3e0c7bf39b8096fa23145c1c">&#9670;&#160;</a></span>isSymmetric_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html">Pscf::Rpg::Iterator</a>&lt; D &gt;::isSymmetric_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Does this iterator use a symmetry-adapted basis? </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00113">113</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00057">isSymmetric()</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00030">Iterator()</a>, and <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00040">Iterator()</a>.</p>
-
-</div>
-</div>
-<a id="a879d82c09d74269e70db5967ddafe3c1" name="a879d82c09d74269e70db5967ddafe3c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a879d82c09d74269e70db5967ddafe3c1">&#9670;&#160;</a></span>isFlexible_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html">Pscf::Rpg::Iterator</a>&lt; D &gt;::isFlexible_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Is the unit cell flexible during iteration? </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00118">118</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00064">isFlexible()</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00030">Iterator()</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00040">Iterator()</a>, and <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00093">setFlexibleParams()</a>.</p>
-
-</div>
-</div>
-<a id="aab85733ea4e919516304223fa2b505d5" name="aab85733ea4e919516304223fa2b505d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab85733ea4e919516304223fa2b505d5">&#9670;&#160;</a></span>flexibleParams_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classUtil_1_1FSArray.html">FSArray</a>&lt;bool, 6&gt; <a class="el" href="classPscf_1_1Rpg_1_1Iterator.html">Pscf::Rpg::Iterator</a>&lt; D &gt;::flexibleParams_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classUtil_1_1Array.html" title="Array container class template.">Array</a> of indices of the lattice parameters that are flexible. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html#l00123">123</a> of file <a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00071">flexibleParams()</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00078">nFlexibleParams()</a>, <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00093">setFlexibleParams()</a>, and <a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html#l00107">stress()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="rpg_2scft_2iterator_2Iterator_8h_source.html">rpg/scft/iterator/Iterator.h</a></li>
-<li><a class="el" href="rpg_2scft_2iterator_2Iterator_8tpp_source.html">rpg/scft/iterator/Iterator.tpp</a></li>
+<li><a class="el" href="Iterator_8cu_source.html">Iterator.cu</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

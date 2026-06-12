@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -64,7 +64,16 @@ $(function() {
 <p>Class for storing data about an individual ramp parameter.  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="rpc_2fts_2ramp_2RampParameter_8h_source.html">RampParameter.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_2fts_2ramp_2RampParameter_8h_source.html">RampParameter.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Pscf::Rpc::RampParameter&lt; D &gt;:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classPscf_1_1Rpc_1_1RampParameter.png" usemap="#Pscf_3A_3ARpc_3A_3ARampParameter_3C_20D_20_3E_map" alt=""/>
+  <map id="Pscf_3A_3ARpc_3A_3ARampParameter_3C_20D_20_3E_map" name="Pscf_3A_3ARpc_3A_3ARampParameter_3C_20D_20_3E_map">
+<area href="classPscf_1_1Rp_1_1RampParameter.html" alt="Pscf::Rp::RampParameter&lt; D, Types&lt; D &gt; &gt;" shape="rect" coords="0,0,262,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -72,62 +81,47 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0efbe0b87de48e210885f9cac0cc0089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
 <tr class="memitem:aea3973ee07985467f4ae303670ee0934" id="r_aea3973ee07985467f4ae303670ee0934"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea3973ee07985467f4ae303670ee0934">RampParameter</a> (<a class="el" href="classPscf_1_1Rpc_1_1Simulator.html">Simulator</a>&lt; D &gt; &amp;simulator)</td></tr>
 <tr class="memdesc:aea3973ee07985467f4ae303670ee0934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that stores a pointer to parent <a class="el" href="classPscf_1_1Rpc_1_1Simulator.html" title="Field theoretic simulator (base class).">Simulator</a>.  <br /></td></tr>
-<tr class="memitem:aea2eb7a6a3af7210a052121586c5e2f9" id="r_aea2eb7a6a3af7210a052121586c5e2f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea2eb7a6a3af7210a052121586c5e2f9">setSimulator</a> (<a class="el" href="classPscf_1_1Rpc_1_1Simulator.html">Simulator</a>&lt; D &gt; &amp;simulator)</td></tr>
-<tr class="memdesc:aea2eb7a6a3af7210a052121586c5e2f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the simulator and system associated with this object.  <br /></td></tr>
-<tr class="memitem:a0f51f952a0174d33d0782ba961f31d40" id="r_a0f51f952a0174d33d0782ba961f31d40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f51f952a0174d33d0782ba961f31d40">getInitial</a> ()</td></tr>
-<tr class="memdesc:a0f51f952a0174d33d0782ba961f31d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get and store initial value this parameters.  <br /></td></tr>
-<tr class="memitem:a561de62c34114571be874d46ae3d0751" id="r_a561de62c34114571be874d46ae3d0751"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a561de62c34114571be874d46ae3d0751">update</a> (double newVal)</td></tr>
-<tr class="memdesc:a561de62c34114571be874d46ae3d0751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the corresponding parameter value in the <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a>.  <br /></td></tr>
-<tr class="memitem:a2dc1eaf1215c3d89faa15a37ec0b6084" id="r_a2dc1eaf1215c3d89faa15a37ec0b6084"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dc1eaf1215c3d89faa15a37ec0b6084">type</a> () const</td></tr>
-<tr class="memdesc:a2dc1eaf1215c3d89faa15a37ec0b6084"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string representation of the parameter type.  <br /></td></tr>
-<tr class="memitem:ab9445cbcbaed106dcf818f3da1b4a364" id="r_ab9445cbcbaed106dcf818f3da1b4a364"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9445cbcbaed106dcf818f3da1b4a364">writeParamType</a> (std::ostream &amp;out) const</td></tr>
-<tr class="memdesc:ab9445cbcbaed106dcf818f3da1b4a364"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the parameter type to an output stream.  <br /></td></tr>
-<tr class="memitem:a13105bd2917404325fb716ca470e164f" id="r_a13105bd2917404325fb716ca470e164f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13105bd2917404325fb716ca470e164f">id</a> (int i) const</td></tr>
-<tr class="memdesc:a13105bd2917404325fb716ca470e164f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get id for a sub-object or element to which this is applied.  <br /></td></tr>
-<tr class="memitem:af0a9a07e43eea3407fb3a368e945233b" id="r_af0a9a07e43eea3407fb3a368e945233b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0a9a07e43eea3407fb3a368e945233b">nId</a> () const</td></tr>
-<tr class="memdesc:af0a9a07e43eea3407fb3a368e945233b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of indices associated with this type of parameter.  <br /></td></tr>
-<tr class="memitem:a3d8604d0e788775259cc9f689a9f55c2" id="r_a3d8604d0e788775259cc9f689a9f55c2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d8604d0e788775259cc9f689a9f55c2">current</a> ()</td></tr>
-<tr class="memdesc:a3d8604d0e788775259cc9f689a9f55c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current system parameter value.  <br /></td></tr>
-<tr class="memitem:a9585d016ca78cd7d6fba5a1c31fabb87" id="r_a9585d016ca78cd7d6fba5a1c31fabb87"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9585d016ca78cd7d6fba5a1c31fabb87">initial</a> () const</td></tr>
-<tr class="memdesc:a9585d016ca78cd7d6fba5a1c31fabb87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the initial system parameter value.  <br /></td></tr>
-<tr class="memitem:a454d250e9557d32d715c866d562369e9" id="r_a454d250e9557d32d715c866d562369e9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a454d250e9557d32d715c866d562369e9">change</a> () const</td></tr>
-<tr class="memdesc:a454d250e9557d32d715c866d562369e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total change planned for this parameter during ramp.  <br /></td></tr>
-<tr class="memitem:a24d14d903e3ecf7a2fab49fd08e3d8fd" id="r_a24d14d903e3ecf7a2fab49fd08e3d8fd"><td class="memTemplParams" colspan="2">template&lt;class Archive&gt; </td></tr>
-<tr class="memitem:a24d14d903e3ecf7a2fab49fd08e3d8fd template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24d14d903e3ecf7a2fab49fd08e3d8fd">serialize</a> (Archive ar, const unsigned int version)</td></tr>
-<tr class="memdesc:a24d14d903e3ecf7a2fab49fd08e3d8fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to or from an archive.  <br /></td></tr>
+<tr class="inherit_header pub_methods_classPscf_1_1Rp_1_1RampParameter"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1Rp_1_1RampParameter')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1Rp_1_1RampParameter.html">Pscf::Rp::RampParameter&lt; D, Types&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:ac34aaad3c3375ff66b36e377e4d083f7 inherit pub_methods_classPscf_1_1Rp_1_1RampParameter" id="r_ac34aaad3c3375ff66b36e377e4d083f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1RampParameter.html#ac34aaad3c3375ff66b36e377e4d083f7">setSimulator</a> (typename Types&lt; D &gt;::Simulator &amp;simulator)</td></tr>
+<tr class="memdesc:ac34aaad3c3375ff66b36e377e4d083f7 inherit pub_methods_classPscf_1_1Rp_1_1RampParameter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the simulator and system associated with this object.  <br /></td></tr>
+<tr class="memitem:aa3956b546ed7e9fc423103152b15613e inherit pub_methods_classPscf_1_1Rp_1_1RampParameter" id="r_aa3956b546ed7e9fc423103152b15613e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1RampParameter.html#aa3956b546ed7e9fc423103152b15613e">getInitial</a> ()</td></tr>
+<tr class="memdesc:aa3956b546ed7e9fc423103152b15613e inherit pub_methods_classPscf_1_1Rp_1_1RampParameter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get and store initial value this parameters.  <br /></td></tr>
+<tr class="memitem:afbc882f9aa6bc9eb96cee58c044f252c inherit pub_methods_classPscf_1_1Rp_1_1RampParameter" id="r_afbc882f9aa6bc9eb96cee58c044f252c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1RampParameter.html#afbc882f9aa6bc9eb96cee58c044f252c">update</a> (double newVal)</td></tr>
+<tr class="memdesc:afbc882f9aa6bc9eb96cee58c044f252c inherit pub_methods_classPscf_1_1Rp_1_1RampParameter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the corresponding parameter value in the <a class="el" href="classPscf_1_1Rp_1_1System.html" title="Base class template for classes that represent a complete system.">System</a>.  <br /></td></tr>
+<tr class="memitem:a19e6869cbaa725e170fe6466fd431085 inherit pub_methods_classPscf_1_1Rp_1_1RampParameter" id="r_a19e6869cbaa725e170fe6466fd431085"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1RampParameter.html#a19e6869cbaa725e170fe6466fd431085">type</a> () const</td></tr>
+<tr class="memdesc:a19e6869cbaa725e170fe6466fd431085 inherit pub_methods_classPscf_1_1Rp_1_1RampParameter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string representation of the parameter type.  <br /></td></tr>
+<tr class="memitem:a6ad17adde40e18655968c35ed8b0b946 inherit pub_methods_classPscf_1_1Rp_1_1RampParameter" id="r_a6ad17adde40e18655968c35ed8b0b946"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1RampParameter.html#a6ad17adde40e18655968c35ed8b0b946">writeParamType</a> (std::ostream &amp;out) const</td></tr>
+<tr class="memdesc:a6ad17adde40e18655968c35ed8b0b946 inherit pub_methods_classPscf_1_1Rp_1_1RampParameter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the parameter type to an output stream.  <br /></td></tr>
+<tr class="memitem:a237c6de504a90e30f01d2b8010aaf0a7 inherit pub_methods_classPscf_1_1Rp_1_1RampParameter" id="r_a237c6de504a90e30f01d2b8010aaf0a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1RampParameter.html#a237c6de504a90e30f01d2b8010aaf0a7">id</a> (int i) const</td></tr>
+<tr class="memdesc:a237c6de504a90e30f01d2b8010aaf0a7 inherit pub_methods_classPscf_1_1Rp_1_1RampParameter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get id for a sub-object or element to which this is applied.  <br /></td></tr>
+<tr class="memitem:a0e1ba24fec380b17409ee7cdcba415d6 inherit pub_methods_classPscf_1_1Rp_1_1RampParameter" id="r_a0e1ba24fec380b17409ee7cdcba415d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1RampParameter.html#a0e1ba24fec380b17409ee7cdcba415d6">nId</a> () const</td></tr>
+<tr class="memdesc:a0e1ba24fec380b17409ee7cdcba415d6 inherit pub_methods_classPscf_1_1Rp_1_1RampParameter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of indices associated with this type of parameter.  <br /></td></tr>
+<tr class="memitem:a1b24c380216741c74dce675e36f8a139 inherit pub_methods_classPscf_1_1Rp_1_1RampParameter" id="r_a1b24c380216741c74dce675e36f8a139"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1RampParameter.html#a1b24c380216741c74dce675e36f8a139">current</a> ()</td></tr>
+<tr class="memdesc:a1b24c380216741c74dce675e36f8a139 inherit pub_methods_classPscf_1_1Rp_1_1RampParameter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current system parameter value.  <br /></td></tr>
+<tr class="memitem:afb154d8b0cb312944a9abcb43761ced0 inherit pub_methods_classPscf_1_1Rp_1_1RampParameter" id="r_afb154d8b0cb312944a9abcb43761ced0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1RampParameter.html#afb154d8b0cb312944a9abcb43761ced0">initial</a> () const</td></tr>
+<tr class="memdesc:afb154d8b0cb312944a9abcb43761ced0 inherit pub_methods_classPscf_1_1Rp_1_1RampParameter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the initial system parameter value.  <br /></td></tr>
+<tr class="memitem:ae0baaaf8eb63727d4b5bfba2867f07ad inherit pub_methods_classPscf_1_1Rp_1_1RampParameter" id="r_ae0baaaf8eb63727d4b5bfba2867f07ad"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1RampParameter.html#ae0baaaf8eb63727d4b5bfba2867f07ad">change</a> () const</td></tr>
+<tr class="memdesc:ae0baaaf8eb63727d4b5bfba2867f07ad inherit pub_methods_classPscf_1_1Rp_1_1RampParameter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total change planned for this parameter during ramp.  <br /></td></tr>
+<tr class="memitem:a3dd92130ffdcb9b2e10afcaceb9f87ee inherit pub_methods_classPscf_1_1Rp_1_1RampParameter" id="r_a3dd92130ffdcb9b2e10afcaceb9f87ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1RampParameter.html#a3dd92130ffdcb9b2e10afcaceb9f87ee">serialize</a> (Archive ar, const unsigned int version)</td></tr>
+<tr class="memdesc:a3dd92130ffdcb9b2e10afcaceb9f87ee inherit pub_methods_classPscf_1_1Rp_1_1RampParameter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to or from an archive.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classPscf_1_1Rp_1_1RampParameter"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classPscf_1_1Rp_1_1RampParameter')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classPscf_1_1Rp_1_1RampParameter.html">Pscf::Rp::RampParameter&lt; D, Types&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:a0656cd97422e1875edbea501edc72796 inherit pro_methods_classPscf_1_1Rp_1_1RampParameter" id="r_a0656cd97422e1875edbea501edc72796"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1RampParameter.html#a0656cd97422e1875edbea501edc72796">RampParameter</a> ()</td></tr>
+<tr class="memdesc:a0656cd97422e1875edbea501edc72796 inherit pro_methods_classPscf_1_1Rp_1_1RampParameter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
+<tr class="memitem:a528bcf4c511db4c6bf6ffbb575160c58 inherit pro_methods_classPscf_1_1Rp_1_1RampParameter" id="r_a528bcf4c511db4c6bf6ffbb575160c58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1RampParameter.html#a528bcf4c511db4c6bf6ffbb575160c58">~RampParameter</a> ()=default</td></tr>
+<tr class="memdesc:a528bcf4c511db4c6bf6ffbb575160c58 inherit pro_methods_classPscf_1_1Rp_1_1RampParameter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
 class Pscf::Rpc::RampParameter&lt; D &gt;</div><p>Class for storing data about an individual ramp parameter. </p>
-<dl class="section see"><dt>See also</dt><dd><ul>
-<li>
-<a class="el" href="classPscf_1_1Rpc_1_1LinearRamp.html" title="Linear ramp - parameters vary linearly with step index.">LinearRamp</a>  </li>
-<li>
-<a class="el" href="rpc_LinearRamp_page.html">Manual Page</a>  </li>
-</ul>
-</dd></dl>
-<p>This class stores the information required to ramp a single parameter value of any of several types. The type of parameter is indicated in the public interface and parameter file format by a string identifier with any of several allowed values. Most types of parameter are also identified by one or two associated index values, denoted here by id(0) and id(1), that specify the index or indices for a subobject or array element with which the parameter is associated applied. Allowed string representations and meanings of parameter types are given below, along with the meaning of any associated index value or pair of values. To indicate the meaning of index values, we use mId to denote a monomer type index, pId to denote a polymer species index, bId to denote the index of a block within a polymer, sId to denote a solvent species index, and lId to denote a lattice parameter index. The lambda_pert and vMonomer parameter types do not take an index. </p><div class="fragment"><div class="line">| Type        | Meaning                            | <a class="code hl_function" href="#a13105bd2917404325fb716ca470e164f">id</a>(0) | <a class="code hl_function" href="#a13105bd2917404325fb716ca470e164f">id</a>(1)</div>
-<div class="line">| ----------- | ---------------------------------- | ----- | -----</div>
-<div class="line">| kuhn        | monomer segment length             | mId   |</div>
-<div class="line">| chi         | Flory-Huggins parameter            | mId   | mId</div>
-<div class="line">| block       | block length                       | pId   | bId</div>
-<div class="line">| solvent     | solvent size                       | sId   |</div>
-<div class="line">| phi_polymer | polymer volume fraction            | pId   |</div>
-<div class="line">| mu_polymer  | polymer chemical potential         | pId   |</div>
-<div class="line">| phi_solvent | solvent volume fraction            | sId   |</div>
-<div class="line">| mu_solvent  | solvent chemical potential         | sId   |</div>
-<div class="line">| cell_param  | lattice parameter                  | lId   |</div>
-<div class="line">| v_monomer   | monomer reference volume           |  -    |</div>
-<div class="line">| lambda_pert | perturbation parameter             |  -    |</div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1RampParameter_html_a13105bd2917404325fb716ca470e164f"><div class="ttname"><a href="#a13105bd2917404325fb716ca470e164f">Pscf::Rpc::RampParameter::id</a></div><div class="ttdeci">int id(int i) const</div><div class="ttdoc">Get id for a sub-object or element to which this is applied.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2fts_2ramp_2RampParameter_8h_source.html#l00160">rpc/fts/ramp/RampParameter.h:160</a></div></div>
-</div><!-- fragment --><p> The two indices for a Flory-Huggins chi parameter refer to indices in the chi matrix maintained by <a class="el" href="classPscf_1_1Interaction.html" title="Flory-Huggins excess free energy model.">Interaction</a>. Changes to element chi(i, j) automatically also update chi(j, i) for i !\ j, thus maintaining the symmetry of the matrix.</p>
-<p>Each <a class="el" href="classPscf_1_1Rpc_1_1RampParameter.html" title="Class for storing data about an individual ramp parameter.">RampParameter</a> also has a "change" value that gives the intended difference between the final and initial value of the parameter over the course of a ramp, corresponding to a change ramp parameter s over the range [0,1]. The initial value of each parameter is obtained from a query of the state of the parent system at the beginning of a ramp, and thus does not need to be supplied as part of the text format for a <a class="el" href="classPscf_1_1Rpc_1_1RampParameter.html" title="Class for storing data about an individual ramp parameter.">RampParameter</a>.</p>
-<p>A RampParameter&lt;D&gt; object is initialized by reading the parameter type, index or indices (if any) and change value from a parameter file as a a single line. An overloaded &gt;&gt; operator is defined that allows a RampParameter&lt;D&gt; object named "parameter" to be read from an istream named "in" using the syntax "in &gt;&gt; parameter".</p>
-<p>The text format for a parameter of a type that requires a single index id(0) is:</p>
-<p>type id(0) change</p>
-<p>where type indicates a type string, id(0) is an integer index value, and change is the a floating point value for the change in parameter value. The corresponding format for a parameter that requires two indices (e.g., block or chi) is instead: "type id(0) id(1) change". </p>
+<p>Specializations of this template with D=1, 2, and 3 are derived from specializations of the base class template <a class="el" href="classPscf_1_1Rp_1_1RampParameter.html" title="Class for storing data about an individual linear ramp parameter.">Rp::RampParameter</a>, and inherit their public interface and almost all of their source code from this base class. See the documentation of this base class template for details.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classPscf_1_1Rp_1_1RampParameter.html">Rp::RampParameter</a> </dd>
+<dd>
+<a class="el" href="rp_LinearRamp_page.html">Manual Page</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2ramp_2RampParameter_8h_source.html#l00091">91</a> of file <a class="el" href="rpc_2fts_2ramp_2RampParameter_8h_source.html">rpc/fts/ramp/RampParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_2fts_2ramp_2RampParameter_8h_source.html#l00036">36</a> of file <a class="el" href="_2fts_2ramp_2RampParameter_8h_source.html">/fts/ramp/RampParameter.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0efbe0b87de48e210885f9cac0cc0089" name="a0efbe0b87de48e210885f9cac0cc0089"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0efbe0b87de48e210885f9cac0cc0089">&#9670;&#160;</a></span>RampParameter() <span class="overload">[1/2]</span></h2>
@@ -148,11 +142,11 @@ template&lt;int D&gt; </div>
 
 <p>Default constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html#l00038">38</a> of file <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html">rpc/fts/ramp/RampParameter.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RampParameter_8cpp_source.html#l00026">26</a> of file <a class="el" href="RampParameter_8cpp_source.html">RampParameter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html#l00038">RampParameter()</a>.</p>
+<p class="reference">References <a class="el" href="RampParameter_8cpp_source.html#l00026">RampParameter()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html#l00038">RampParameter()</a>, and <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html#l00052">RampParameter()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RampParameter_8cpp_source.html#l00026">RampParameter()</a>, and <a class="el" href="RampParameter_8cpp_source.html#l00032">RampParameter()</a>.</p>
 
 </div>
 </div>
@@ -181,367 +175,15 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html#l00052">52</a> of file <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html">rpc/fts/ramp/RampParameter.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RampParameter_8cpp_source.html#l00032">32</a> of file <a class="el" href="RampParameter_8cpp_source.html">RampParameter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html#l00038">RampParameter()</a>.</p>
-
-</div>
-</div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="aea2eb7a6a3af7210a052121586c5e2f9" name="aea2eb7a6a3af7210a052121586c5e2f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea2eb7a6a3af7210a052121586c5e2f9">&#9670;&#160;</a></span>setSimulator()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpc_1_1RampParameter.html">Pscf::Rpc::RampParameter</a>&lt; D &gt;::setSimulator </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1Rpc_1_1Simulator.html">Simulator</a>&lt; D &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>simulator</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the simulator and system associated with this object. </p>
-<p>Invoke this function on objects created with the default constructor to create an association with a parent simulator and system.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">simulator</td><td>parent simulator </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html#l00067">67</a> of file <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html">rpc/fts/ramp/RampParameter.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpc_2fts_2simulator_2Simulator_8h_source.html#l00831">Pscf::Rpc::Simulator&lt; D &gt;::system()</a>.</p>
-
-</div>
-</div>
-<a id="a0f51f952a0174d33d0782ba961f31d40" name="a0f51f952a0174d33d0782ba961f31d40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f51f952a0174d33d0782ba961f31d40">&#9670;&#160;</a></span>getInitial()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpc_1_1RampParameter.html">Pscf::Rpc::RampParameter</a>&lt; D &gt;::getInitial </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get and store initial value this parameters. </p>
-<p>This function is called before a ramp begins, and simply gets current values of this parameter. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html#l00140">140</a> of file <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html">rpc/fts/ramp/RampParameter.tpp</a>.</p>
-
-</div>
-</div>
-<a id="a561de62c34114571be874d46ae3d0751" name="a561de62c34114571be874d46ae3d0751"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a561de62c34114571be874d46ae3d0751">&#9670;&#160;</a></span>update()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpc_1_1RampParameter.html">Pscf::Rpc::RampParameter</a>&lt; D &gt;::update </td>
-          <td>(</td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>newVal</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Update the corresponding parameter value in the <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">newVal</td><td>new value for this parameter (input) </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html#l00147">147</a> of file <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html">rpc/fts/ramp/RampParameter.tpp</a>.</p>
-
-</div>
-</div>
-<a id="a2dc1eaf1215c3d89faa15a37ec0b6084" name="a2dc1eaf1215c3d89faa15a37ec0b6084"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2dc1eaf1215c3d89faa15a37ec0b6084">&#9670;&#160;</a></span>type()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string <a class="el" href="classPscf_1_1Rpc_1_1RampParameter.html">Pscf::Rpc::RampParameter</a>&lt; D &gt;::type </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return a string representation of the parameter type. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html#l00154">154</a> of file <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html">rpc/fts/ramp/RampParameter.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="PolymerModel_8cpp_source.html#l00069">Pscf::PolymerModel::isThread()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html#l00133">writeParamType()</a>.</p>
-
-</div>
-</div>
-<a id="ab9445cbcbaed106dcf818f3da1b4a364" name="ab9445cbcbaed106dcf818f3da1b4a364"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9445cbcbaed106dcf818f3da1b4a364">&#9670;&#160;</a></span>writeParamType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpc_1_1RampParameter.html">Pscf::Rpc::RampParameter</a>&lt; D &gt;::writeParamType </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Write the parameter type to an output stream. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">out</td><td>output file stream </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html#l00133">133</a> of file <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html">rpc/fts/ramp/RampParameter.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html#l00154">type()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html#l00303">Pscf::Rpc::operator&lt;&lt;()</a>.</p>
-
-</div>
-</div>
-<a id="a13105bd2917404325fb716ca470e164f" name="a13105bd2917404325fb716ca470e164f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13105bd2917404325fb716ca470e164f">&#9670;&#160;</a></span>id()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="classPscf_1_1Rpc_1_1RampParameter.html">Pscf::Rpc::RampParameter</a>&lt; D &gt;::id </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get id for a sub-object or element to which this is applied. </p>
-<p>This function returns a value from the id_ array. Elements of array store indices associating with a parameter value, which may, for example, identify a molecule type index, one or more monomer type indices or a unit cell parameter index.</p>
-<p>Different types of parameters require either 1 or 2 such identifiers. The number of required identifiers is returned by the function <a class="el" href="#af0a9a07e43eea3407fb3a368e945233b" title="Number of indices associated with this type of parameter.">nId()</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">i</td><td>array index to access </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2ramp_2RampParameter_8h_source.html#l00160">160</a> of file <a class="el" href="rpc_2fts_2ramp_2RampParameter_8h_source.html">rpc/fts/ramp/RampParameter.h</a>.</p>
-
-<p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html#l00303">Pscf::Rpc::operator&lt;&lt;()</a>.</p>
-
-</div>
-</div>
-<a id="af0a9a07e43eea3407fb3a368e945233b" name="af0a9a07e43eea3407fb3a368e945233b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0a9a07e43eea3407fb3a368e945233b">&#9670;&#160;</a></span>nId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="classPscf_1_1Rpc_1_1RampParameter.html">Pscf::Rpc::RampParameter</a>&lt; D &gt;::nId </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Number of indices associated with this type of parameter. </p>
-<p>See documentation of id(int). </p>
-
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2ramp_2RampParameter_8h_source.html#l00171">171</a> of file <a class="el" href="rpc_2fts_2ramp_2RampParameter_8h_source.html">rpc/fts/ramp/RampParameter.h</a>.</p>
-
-</div>
-</div>
-<a id="a3d8604d0e788775259cc9f689a9f55c2" name="a3d8604d0e788775259cc9f689a9f55c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d8604d0e788775259cc9f689a9f55c2">&#9670;&#160;</a></span>current()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="classPscf_1_1Rpc_1_1RampParameter.html">Pscf::Rpc::RampParameter</a>&lt; D &gt;::current </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the current system parameter value. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2ramp_2RampParameter_8h_source.html#l00177">177</a> of file <a class="el" href="rpc_2fts_2ramp_2RampParameter_8h_source.html">rpc/fts/ramp/RampParameter.h</a>.</p>
-
-</div>
-</div>
-<a id="a9585d016ca78cd7d6fba5a1c31fabb87" name="a9585d016ca78cd7d6fba5a1c31fabb87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9585d016ca78cd7d6fba5a1c31fabb87">&#9670;&#160;</a></span>initial()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="classPscf_1_1Rpc_1_1RampParameter.html">Pscf::Rpc::RampParameter</a>&lt; D &gt;::initial </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the initial system parameter value. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2ramp_2RampParameter_8h_source.html#l00183">183</a> of file <a class="el" href="rpc_2fts_2ramp_2RampParameter_8h_source.html">rpc/fts/ramp/RampParameter.h</a>.</p>
-
-</div>
-</div>
-<a id="a454d250e9557d32d715c866d562369e9" name="a454d250e9557d32d715c866d562369e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a454d250e9557d32d715c866d562369e9">&#9670;&#160;</a></span>change()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="classPscf_1_1Rpc_1_1RampParameter.html">Pscf::Rpc::RampParameter</a>&lt; D &gt;::change </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the total change planned for this parameter during ramp. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2ramp_2RampParameter_8h_source.html#l00189">189</a> of file <a class="el" href="rpc_2fts_2ramp_2RampParameter_8h_source.html">rpc/fts/ramp/RampParameter.h</a>.</p>
-
-</div>
-</div>
-<a id="a24d14d903e3ecf7a2fab49fd08e3d8fd" name="a24d14d903e3ecf7a2fab49fd08e3d8fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24d14d903e3ecf7a2fab49fd08e3d8fd">&#9670;&#160;</a></span>serialize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<div class="memtemplate">
-template&lt;class Archive&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpc_1_1RampParameter.html">Pscf::Rpc::RampParameter</a>&lt; D &gt;::serialize </td>
-          <td>(</td>
-          <td class="paramtype">Archive</td>          <td class="paramname"><span class="paramname"><em>ar</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const unsigned int</td>          <td class="paramname"><span class="paramname"><em>version</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Serialize to or from an archive. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ar</td><td>Archive object </td></tr>
-    <tr><td class="paramname">version</td><td>archive format version index </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html#l00261">261</a> of file <a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html">rpc/fts/ramp/RampParameter.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="serialize_8h_source.html#l00059">Util::serializeEnum()</a>.</p>
+<p class="reference">References <a class="el" href="RampParameter_8cpp_source.html#l00026">RampParameter()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="rpc_2fts_2ramp_2RampParameter_8h_source.html">rpc/fts/ramp/RampParameter.h</a></li>
-<li><a class="el" href="rpc_2fts_2ramp_2RampParameter_8tpp_source.html">rpc/fts/ramp/RampParameter.tpp</a></li>
+<li><a class="el" href="_2fts_2ramp_2RampParameter_8h_source.html">/fts/ramp/RampParameter.h</a></li>
+<li><a class="el" href="RampParameter_8cpp_source.html">RampParameter.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

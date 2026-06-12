@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -57,14 +57,14 @@ $(function() {
   <div class="headertitle"><div class="title">resources.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef PSCF_GPU_RESOURCES_H</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define PSCF_GPU_RESOURCES_H</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef PSCF_CUDA_RESOURCES_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define PSCF_CUDA_RESOURCES_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;types.h&quot;</span>         <span class="comment">// typedefs used in cuda code</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;VecOp.h&quot;</span>         <span class="comment">// Vector operation kernels and wrappers</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Reduce.h&quot;</span>        <span class="comment">// Functions using parallel reduction algorithms</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;pscf/cuda/DeviceArray.h&gt;</span> <span class="comment">// Array container stored on device</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;pscf/cuda/HostDArray.h&gt;</span>  <span class="comment">// Array container stored on host</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;pscf/cuda/VecOp.h&gt;</span>        <span class="comment">// Vector operations </span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;pscf/cuda/Reduce.h&gt;</span>       <span class="comment">// Parallel reduction algorithms</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;pscf/cuda/cudaTypes.h&gt;</span>    <span class="comment">// typedefs for real and complex </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;pscf/cuda/DeviceArray.h&gt;</span>  <span class="comment">// Array container stored on device</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;pscf/cuda/HostDArray.h&gt;</span>   <span class="comment">// Array container stored on host</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;pscf/cuda/ThreadArray.h&gt;</span>  <span class="comment">// Manager of GPU execution configuration</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;pscf/cuda/ThreadMesh.h&gt;</span>   <span class="comment">// Manager of GPU execution configuration</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>

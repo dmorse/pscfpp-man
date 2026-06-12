@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -57,7 +57,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classPscf_1_1Prdc_1_1Cuda_1_1RField-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Pscf::Prdc::Cuda::RField&lt; D &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Prdc__Module.html">Pscf::Prdc - Periodic Systems</a> &raquo; <a class="el" href="group__Prdc__Cuda__Module.html">Fields and FFT (CUDA)</a></div></div></div>
+  <div class="headertitle"><div class="title">Pscf::Prdc::Cuda::RField&lt; D &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Prdc__Module.html">Pscf::Prdc - Periodic Systems</a> &raquo; <a class="el" href="group__Prdc__Cuda__Module.html">Fields (CUDA)</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -79,80 +79,74 @@ Inheritance diagram for Pscf::Prdc::Cuda::RField&lt; D &gt;:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a467cc23e15bf684a8d13bf68631fc0da" id="r_a467cc23e15bf684a8d13bf68631fc0da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a467cc23e15bf684a8d13bf68631fc0da">RField</a> ()</td></tr>
 <tr class="memdesc:a467cc23e15bf684a8d13bf68631fc0da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
-<tr class="memitem:a9ecfa153db9c68c94c78a53fec06ae21" id="r_a9ecfa153db9c68c94c78a53fec06ae21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ecfa153db9c68c94c78a53fec06ae21">RField</a> (<a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html#ae5d7e3e138eb2ad39905876465918fa1">meshDimensions</a>)</td></tr>
+<tr class="memitem:a9ecfa153db9c68c94c78a53fec06ae21" id="r_a9ecfa153db9c68c94c78a53fec06ae21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ecfa153db9c68c94c78a53fec06ae21">RField</a> (<a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;<a class="el" href="#ae5d7e3e138eb2ad39905876465918fa1">meshDimensions</a>)</td></tr>
 <tr class="memdesc:a9ecfa153db9c68c94c78a53fec06ae21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocating constructor.  <br /></td></tr>
-<tr class="memitem:ae3dd03939ae62ac3dbdffbe1bd65ceff" id="r_ae3dd03939ae62ac3dbdffbe1bd65ceff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3dd03939ae62ac3dbdffbe1bd65ceff">RField</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;other)</td></tr>
+<tr class="memitem:ae3dd03939ae62ac3dbdffbe1bd65ceff" id="r_ae3dd03939ae62ac3dbdffbe1bd65ceff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3dd03939ae62ac3dbdffbe1bd65ceff">RField</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">RField</a>&lt; D &gt; const &amp;other)</td></tr>
 <tr class="memdesc:ae3dd03939ae62ac3dbdffbe1bd65ceff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
-<tr class="memitem:a4a0164fa0e7aa46190c95ac1059c4ebd" id="r_a4a0164fa0e7aa46190c95ac1059c4ebd"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a0164fa0e7aa46190c95ac1059c4ebd">~RField</a> ()</td></tr>
-<tr class="memdesc:a4a0164fa0e7aa46190c95ac1059c4ebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:ab28c8803889409c6ca5d8ef6aa9dfea7" id="r_ab28c8803889409c6ca5d8ef6aa9dfea7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab28c8803889409c6ca5d8ef6aa9dfea7">allocate</a> (<a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html#ae5d7e3e138eb2ad39905876465918fa1">meshDimensions</a>)</td></tr>
+<tr class="memitem:aecef42598780b90e20d0dd4cf70d01d3" id="r_aecef42598780b90e20d0dd4cf70d01d3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecef42598780b90e20d0dd4cf70d01d3">~RField</a> ()</td></tr>
+<tr class="memdesc:aecef42598780b90e20d0dd4cf70d01d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:ab28c8803889409c6ca5d8ef6aa9dfea7" id="r_ab28c8803889409c6ca5d8ef6aa9dfea7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab28c8803889409c6ca5d8ef6aa9dfea7">allocate</a> (<a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;<a class="el" href="#ae5d7e3e138eb2ad39905876465918fa1">meshDimensions</a>)</td></tr>
 <tr class="memdesc:ab28c8803889409c6ca5d8ef6aa9dfea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate the underlying C array for data on a regular mesh.  <br /></td></tr>
-<tr class="memitem:a7ae97c8d4678cabc112822ac99348e12" id="r_a7ae97c8d4678cabc112822ac99348e12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ae97c8d4678cabc112822ac99348e12">associate</a> (<a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; &amp;arr, int beginId, <a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html#ae5d7e3e138eb2ad39905876465918fa1">meshDimensions</a>)</td></tr>
+<tr class="memitem:a7ae97c8d4678cabc112822ac99348e12" id="r_a7ae97c8d4678cabc112822ac99348e12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ae97c8d4678cabc112822ac99348e12">associate</a> (<a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; <a class="el" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> &gt; &amp;arr, int beginId, <a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;<a class="el" href="#ae5d7e3e138eb2ad39905876465918fa1">meshDimensions</a>)</td></tr>
 <tr class="memdesc:a7ae97c8d4678cabc112822ac99348e12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate this object with a slice of another <a class="el" href="classPscf_1_1DeviceArray.html" title="Dynamic array on the GPU device with aligned data.">DeviceArray</a>.  <br /></td></tr>
-<tr class="memitem:ab9f7b704003dcd5f3b28db7add1f16e1" id="r_ab9f7b704003dcd5f3b28db7add1f16e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9f7b704003dcd5f3b28db7add1f16e1">operator=</a> (const <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp;other)</td></tr>
+<tr class="memitem:ab9f7b704003dcd5f3b28db7add1f16e1" id="r_ab9f7b704003dcd5f3b28db7add1f16e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">RField</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9f7b704003dcd5f3b28db7add1f16e1">operator=</a> (const <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">RField</a>&lt; D &gt; &amp;other)</td></tr>
 <tr class="memdesc:ab9f7b704003dcd5f3b28db7add1f16e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator, assignment from another RField&lt;D&gt;.  <br /></td></tr>
-<tr class="memitem:a025b61dff9839dd746bbd6a0eb7b316a" id="r_a025b61dff9839dd746bbd6a0eb7b316a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a025b61dff9839dd746bbd6a0eb7b316a">operator=</a> (const <a class="el" href="classPscf_1_1HostDArray.html">HostDArray</a>&lt; cudaReal &gt; &amp;other)</td></tr>
-<tr class="memdesc:a025b61dff9839dd746bbd6a0eb7b316a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator, assignment from a <a class="el" href="classPscf_1_1HostDArray.html" title="Template for dynamic array stored in host CPU memory.">HostDArray&lt;cudaReal&gt;</a>.  <br /></td></tr>
-<tr class="memitem:a4013129de17f87f32d85f5997cfe4a3c" id="r_a4013129de17f87f32d85f5997cfe4a3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4013129de17f87f32d85f5997cfe4a3c">meshDimensions</a> () const</td></tr>
-<tr class="memdesc:a4013129de17f87f32d85f5997cfe4a3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return mesh dimensions by constant reference.  <br /></td></tr>
+<tr class="memitem:a025b61dff9839dd746bbd6a0eb7b316a" id="r_a025b61dff9839dd746bbd6a0eb7b316a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">RField</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a025b61dff9839dd746bbd6a0eb7b316a">operator=</a> (const <a class="el" href="classPscf_1_1HostDArray.html">HostDArray</a>&lt; <a class="el" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> &gt; &amp;other)</td></tr>
+<tr class="memdesc:a025b61dff9839dd746bbd6a0eb7b316a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator, assignment from a <a class="el" href="classPscf_1_1HostDArray.html">HostDArray&lt;cudaReal&gt;</a>.  <br /></td></tr>
+<tr class="memitem:ae5d7e3e138eb2ad39905876465918fa1" id="r_ae5d7e3e138eb2ad39905876465918fa1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5d7e3e138eb2ad39905876465918fa1">meshDimensions</a> () const</td></tr>
+<tr class="memdesc:ae5d7e3e138eb2ad39905876465918fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return mesh dimensions by constant reference.  <br /></td></tr>
 <tr class="memitem:a7b1159b33f095da3944b137a5460b6cc" id="r_a7b1159b33f095da3944b137a5460b6cc"><td class="memTemplParams" colspan="2">template&lt;class Archive&gt; </td></tr>
 <tr class="memitem:a7b1159b33f095da3944b137a5460b6cc template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b1159b33f095da3944b137a5460b6cc">serialize</a> (Archive &amp;ar, const unsigned int version)</td></tr>
 <tr class="memdesc:a7b1159b33f095da3944b137a5460b6cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize a Field to/from an Archive.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classPscf_1_1DeviceArray"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1DeviceArray')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray&lt; cudaReal &gt;</a></td></tr>
 <tr class="memitem:a0fe2b80b4127647db71da668fe9a8a45 inherit pub_methods_classPscf_1_1DeviceArray" id="r_a0fe2b80b4127647db71da668fe9a8a45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#a0fe2b80b4127647db71da668fe9a8a45">DeviceArray</a> ()</td></tr>
 <tr class="memdesc:a0fe2b80b4127647db71da668fe9a8a45 inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
-<tr class="memitem:a5c91ae0c62b2ade92bd49511e01485ba inherit pub_methods_classPscf_1_1DeviceArray" id="r_a5c91ae0c62b2ade92bd49511e01485ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#a5c91ae0c62b2ade92bd49511e01485ba">DeviceArray</a> (int <a class="el" href="classPscf_1_1DeviceArray.html#aac902e929dc8df89b772d712aa7b7bca">capacity</a>)</td></tr>
-<tr class="memdesc:a5c91ae0c62b2ade92bd49511e01485ba inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocating constructor.  <br /></td></tr>
-<tr class="memitem:abf86bd2853bc441be66c4af4a998481d inherit pub_methods_classPscf_1_1DeviceArray" id="r_abf86bd2853bc441be66c4af4a998481d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#abf86bd2853bc441be66c4af4a998481d">DeviceArray</a> (<a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; const &amp;other)</td></tr>
-<tr class="memdesc:abf86bd2853bc441be66c4af4a998481d inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
 <tr class="memitem:a7cafb36150398610cdd82d1575d86c1c inherit pub_methods_classPscf_1_1DeviceArray" id="r_a7cafb36150398610cdd82d1575d86c1c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#a7cafb36150398610cdd82d1575d86c1c">~DeviceArray</a> ()</td></tr>
 <tr class="memdesc:a7cafb36150398610cdd82d1575d86c1c inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 <tr class="memitem:acf0e7eef50f54159e0d1bbf7c355f3c2 inherit pub_methods_classPscf_1_1DeviceArray" id="r_acf0e7eef50f54159e0d1bbf7c355f3c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#acf0e7eef50f54159e0d1bbf7c355f3c2">allocate</a> (int <a class="el" href="classPscf_1_1DeviceArray.html#aac902e929dc8df89b772d712aa7b7bca">capacity</a>)</td></tr>
 <tr class="memdesc:acf0e7eef50f54159e0d1bbf7c355f3c2 inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate the underlying C array on the device.  <br /></td></tr>
-<tr class="memitem:aa45d5bf2de4ee19cedb64487935c4812 inherit pub_methods_classPscf_1_1DeviceArray" id="r_aa45d5bf2de4ee19cedb64487935c4812"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#aa45d5bf2de4ee19cedb64487935c4812">associate</a> (<a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; &amp;arr, int beginId, int <a class="el" href="classPscf_1_1DeviceArray.html#aac902e929dc8df89b772d712aa7b7bca">capacity</a>)</td></tr>
-<tr class="memdesc:aa45d5bf2de4ee19cedb64487935c4812 inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate this object with a slice of a different <a class="el" href="classPscf_1_1DeviceArray.html" title="Dynamic array on the GPU device with aligned data.">DeviceArray</a>.  <br /></td></tr>
 <tr class="memitem:a380440982065fb63a97fd1d6e7e2b06f inherit pub_methods_classPscf_1_1DeviceArray" id="r_a380440982065fb63a97fd1d6e7e2b06f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#a380440982065fb63a97fd1d6e7e2b06f">deallocate</a> ()</td></tr>
 <tr class="memdesc:a380440982065fb63a97fd1d6e7e2b06f inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dellocate the underlying C array.  <br /></td></tr>
+<tr class="memitem:aa45d5bf2de4ee19cedb64487935c4812 inherit pub_methods_classPscf_1_1DeviceArray" id="r_aa45d5bf2de4ee19cedb64487935c4812"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#aa45d5bf2de4ee19cedb64487935c4812">associate</a> (<a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; <a class="el" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> &gt; &amp;arr, int beginId, int <a class="el" href="classPscf_1_1DeviceArray.html#aac902e929dc8df89b772d712aa7b7bca">capacity</a>)</td></tr>
+<tr class="memdesc:aa45d5bf2de4ee19cedb64487935c4812 inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate this object with a slice of a different <a class="el" href="classPscf_1_1DeviceArray.html" title="Dynamic array on the GPU device with aligned data.">DeviceArray</a>.  <br /></td></tr>
 <tr class="memitem:a758be5bdfa20dc26a3a3d44f9ec2a308 inherit pub_methods_classPscf_1_1DeviceArray" id="r_a758be5bdfa20dc26a3a3d44f9ec2a308"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#a758be5bdfa20dc26a3a3d44f9ec2a308">dissociate</a> ()</td></tr>
-<tr class="memdesc:a758be5bdfa20dc26a3a3d44f9ec2a308 inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dissociate this object from the associated array.  <br /></td></tr>
-<tr class="memitem:a96f5a45526916c27ac2d31e7764ec51b inherit pub_methods_classPscf_1_1DeviceArray" id="r_a96f5a45526916c27ac2d31e7764ec51b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#a96f5a45526916c27ac2d31e7764ec51b">operator=</a> (const <a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; &amp;other)</td></tr>
+<tr class="memdesc:a758be5bdfa20dc26a3a3d44f9ec2a308 inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dissociate this object from an externally owned memory block.  <br /></td></tr>
+<tr class="memitem:a2b66b93a2b23fe9926852b5e1089a245 inherit pub_methods_classPscf_1_1DeviceArray" id="r_a2b66b93a2b23fe9926852b5e1089a245"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#a2b66b93a2b23fe9926852b5e1089a245">addReference</a> (<a class="el" href="classUtil_1_1CountedReference.html">CountedReference</a> &amp;reference)</td></tr>
+<tr class="memdesc:a2b66b93a2b23fe9926852b5e1089a245 inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate a reference with reference counter for this container.  <br /></td></tr>
+<tr class="memitem:a96f5a45526916c27ac2d31e7764ec51b inherit pub_methods_classPscf_1_1DeviceArray" id="r_a96f5a45526916c27ac2d31e7764ec51b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; <a class="el" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#a96f5a45526916c27ac2d31e7764ec51b">operator=</a> (const <a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; <a class="el" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> &gt; &amp;other)</td></tr>
 <tr class="memdesc:a96f5a45526916c27ac2d31e7764ec51b inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator, assign from another DeviceArray&lt;Data&gt; array.  <br /></td></tr>
-<tr class="memitem:ac040fe35165d81562046bfc9d51db415 inherit pub_methods_classPscf_1_1DeviceArray" id="r_ac040fe35165d81562046bfc9d51db415"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#ac040fe35165d81562046bfc9d51db415">operator=</a> (const <a class="el" href="classPscf_1_1HostDArray.html">HostDArray</a>&lt; cudaReal &gt; &amp;other)</td></tr>
-<tr class="memdesc:ac040fe35165d81562046bfc9d51db415 inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator, assignment from <a class="el" href="classPscf_1_1HostDArray.html" title="Template for dynamic array stored in host CPU memory.">HostDArray&lt;Data&gt;</a> host array.  <br /></td></tr>
 <tr class="memitem:aac902e929dc8df89b772d712aa7b7bca inherit pub_methods_classPscf_1_1DeviceArray" id="r_aac902e929dc8df89b772d712aa7b7bca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#aac902e929dc8df89b772d712aa7b7bca">capacity</a> () const</td></tr>
-<tr class="memdesc:aac902e929dc8df89b772d712aa7b7bca inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return allocated capacity.  <br /></td></tr>
+<tr class="memdesc:aac902e929dc8df89b772d712aa7b7bca inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return array capacity.  <br /></td></tr>
 <tr class="memitem:a9756f28aae439b2bfbd05793b1e19c95 inherit pub_methods_classPscf_1_1DeviceArray" id="r_a9756f28aae439b2bfbd05793b1e19c95"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#a9756f28aae439b2bfbd05793b1e19c95">isAllocated</a> () const</td></tr>
-<tr class="memdesc:a9756f28aae439b2bfbd05793b1e19c95 inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the array has been allocated, false otherwise.  <br /></td></tr>
+<tr class="memdesc:a9756f28aae439b2bfbd05793b1e19c95 inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the array has allocated data, false otherwise.  <br /></td></tr>
 <tr class="memitem:a1a8ae81934bd38ac9568482d16478014 inherit pub_methods_classPscf_1_1DeviceArray" id="r_a1a8ae81934bd38ac9568482d16478014"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#a1a8ae81934bd38ac9568482d16478014">isOwner</a> () const</td></tr>
-<tr class="memdesc:a1a8ae81934bd38ac9568482d16478014 inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this object own the underlying data?  <br /></td></tr>
-<tr class="memitem:aedc681c6110fffabf4d72160619d0d45 inherit pub_methods_classPscf_1_1DeviceArray" id="r_aedc681c6110fffabf4d72160619d0d45"><td class="memItemLeft" align="right" valign="top">cudaReal *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#aedc681c6110fffabf4d72160619d0d45">cArray</a> ()</td></tr>
+<tr class="memdesc:a1a8ae81934bd38ac9568482d16478014 inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this container own an allocated memory block?  <br /></td></tr>
+<tr class="memitem:a0c12b6a1a757354462ebc82f70bc4a1f inherit pub_methods_classPscf_1_1DeviceArray" id="r_a0c12b6a1a757354462ebc82f70bc4a1f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#a0c12b6a1a757354462ebc82f70bc4a1f">isAssociated</a> () const</td></tr>
+<tr class="memdesc:a0c12b6a1a757354462ebc82f70bc4a1f inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this container associated with a memory block it does not own?  <br /></td></tr>
+<tr class="memitem:aedc681c6110fffabf4d72160619d0d45 inherit pub_methods_classPscf_1_1DeviceArray" id="r_aedc681c6110fffabf4d72160619d0d45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#aedc681c6110fffabf4d72160619d0d45">cArray</a> ()</td></tr>
 <tr class="memdesc:aedc681c6110fffabf4d72160619d0d45 inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pointer to underlying C array.  <br /></td></tr>
-<tr class="memitem:ad7b15857176ec46517f4dbf774c7f50c inherit pub_methods_classPscf_1_1DeviceArray" id="r_ad7b15857176ec46517f4dbf774c7f50c"><td class="memItemLeft" align="right" valign="top">cudaReal const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#ad7b15857176ec46517f4dbf774c7f50c">cArray</a> () const</td></tr>
-<tr class="memdesc:ad7b15857176ec46517f4dbf774c7f50c inherit pub_methods_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return const pointer to underlying C array.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classPscf_1_1DeviceArray"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classPscf_1_1DeviceArray')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray&lt; cudaReal &gt;</a></td></tr>
-<tr class="memitem:a178bbd0c20769260b52cfa3562426520 inherit pub_types_classPscf_1_1DeviceArray" id="r_a178bbd0c20769260b52cfa3562426520"><td class="memItemLeft" align="right" valign="top">typedef cudaReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#a178bbd0c20769260b52cfa3562426520">ElementType</a></td></tr>
-<tr class="memdesc:a178bbd0c20769260b52cfa3562426520 inherit pub_types_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data type of each element.  <br /></td></tr>
+<tr class="memitem:af985b1a12e8d2dd67e64fec1ba9983cc inherit pub_types_classPscf_1_1DeviceArray" id="r_af985b1a12e8d2dd67e64fec1ba9983cc"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#af985b1a12e8d2dd67e64fec1ba9983cc">ValueType</a></td></tr>
+<tr class="memdesc:af985b1a12e8d2dd67e64fec1ba9983cc inherit pub_types_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data type of each element.  <br /></td></tr>
 <tr class="inherit_header pro_attribs_classPscf_1_1DeviceArray"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classPscf_1_1DeviceArray')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classPscf_1_1DeviceArray.html">Pscf::DeviceArray&lt; cudaReal &gt;</a></td></tr>
-<tr class="memitem:ab736ffcf52ee02fe44b6089a8714fddb inherit pro_attribs_classPscf_1_1DeviceArray" id="r_ab736ffcf52ee02fe44b6089a8714fddb"><td class="memItemLeft" align="right" valign="top">cudaReal *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#ab736ffcf52ee02fe44b6089a8714fddb">dataPtr_</a></td></tr>
+<tr class="memitem:ab736ffcf52ee02fe44b6089a8714fddb inherit pro_attribs_classPscf_1_1DeviceArray" id="r_ab736ffcf52ee02fe44b6089a8714fddb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#ab736ffcf52ee02fe44b6089a8714fddb">dataPtr_</a></td></tr>
 <tr class="memdesc:ab736ffcf52ee02fe44b6089a8714fddb inherit pro_attribs_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to a C array of Data elements on the GPU device.  <br /></td></tr>
 <tr class="memitem:a5fe289337264d6f71fb55dc2e7eaedb8 inherit pro_attribs_classPscf_1_1DeviceArray" id="r_a5fe289337264d6f71fb55dc2e7eaedb8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#a5fe289337264d6f71fb55dc2e7eaedb8">capacity_</a></td></tr>
 <tr class="memdesc:a5fe289337264d6f71fb55dc2e7eaedb8 inherit pro_attribs_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocated size (capacity) of the array.  <br /></td></tr>
-<tr class="memitem:a326bbe648866e31f1255daa15a9e73b1 inherit pro_attribs_classPscf_1_1DeviceArray" id="r_a326bbe648866e31f1255daa15a9e73b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#a326bbe648866e31f1255daa15a9e73b1">ownerPtr_</a></td></tr>
-<tr class="memdesc:a326bbe648866e31f1255daa15a9e73b1 inherit pro_attribs_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to array that owns this data, if isOwner_ == false.  <br /></td></tr>
-<tr class="memitem:a8dca95225b2f1908cbb5903636a86081 inherit pro_attribs_classPscf_1_1DeviceArray" id="r_a8dca95225b2f1908cbb5903636a86081"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#a8dca95225b2f1908cbb5903636a86081">ownerCapacity_</a></td></tr>
-<tr class="memdesc:a8dca95225b2f1908cbb5903636a86081 inherit pro_attribs_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Capacity of parent array, if isOwner_ == false.  <br /></td></tr>
-<tr class="memitem:a9674921ca7679135b1ea3e3d171d48f7 inherit pro_attribs_classPscf_1_1DeviceArray" id="r_a9674921ca7679135b1ea3e3d171d48f7"><td class="memItemLeft" align="right" valign="top">cudaReal const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#a9674921ca7679135b1ea3e3d171d48f7">ownerDataPtr_</a></td></tr>
-<tr class="memdesc:a9674921ca7679135b1ea3e3d171d48f7 inherit pro_attribs_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Const pointer to parent array, if isOwner_ == false.  <br /></td></tr>
+<tr class="memitem:a3dec8eead5c66b919d4e8736fb04f2a0 inherit pro_attribs_classPscf_1_1DeviceArray" id="r_a3dec8eead5c66b919d4e8736fb04f2a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1ReferenceCounter.html">ReferenceCounter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#a3dec8eead5c66b919d4e8736fb04f2a0">refCounter_</a></td></tr>
+<tr class="memdesc:a3dec8eead5c66b919d4e8736fb04f2a0 inherit pro_attribs_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter for any arrays that use data owned by this.  <br /></td></tr>
+<tr class="memitem:a888854c120fb36dd71ae85a6f90fa050 inherit pro_attribs_classPscf_1_1DeviceArray" id="r_a888854c120fb36dd71ae85a6f90fa050"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1CountedReference.html">CountedReference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1DeviceArray.html#a888854c120fb36dd71ae85a6f90fa050">ref_</a></td></tr>
+<tr class="memdesc:a888854c120fb36dd71ae85a6f90fa050 inherit pro_attribs_classPscf_1_1DeviceArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to another array that owns memory used by this one.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
 class Pscf::Prdc::Cuda::RField&lt; D &gt;</div><p>Field of real values on a regular mesh, allocated on a GPU device. </p>
-<p>Type cudaReal is float or double, depending on preprocessor macro. </p>
+<p>Type <a class="el" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9" title="Real number type used in CPU code that uses FFTW.">cudaReal</a> is float or double, depending on preprocessor macro. </p>
 
-<p class="definition">Definition at line <a class="el" href="cuda_2RField_8h_source.html#l00031">31</a> of file <a class="el" href="cuda_2RField_8h_source.html">cuda/RField.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2RField_8h_source.html#l00032">32</a> of file <a class="el" href="cuda_2RField_8h_source.html">cuda/RField.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a467cc23e15bf684a8d13bf68631fc0da" name="a467cc23e15bf684a8d13bf68631fc0da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a467cc23e15bf684a8d13bf68631fc0da">&#9670;&#160;</a></span>RField() <span class="overload">[1/3]</span></h2>
@@ -163,7 +157,7 @@ class Pscf::Prdc::Cuda::RField&lt; D &gt;</div><p>Field of real values on a regu
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::RField </td>
+          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::RField </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -173,9 +167,11 @@ template&lt;int D&gt; </div>
 
 <p>Default constructor. </p>
 
-<p class="reference">References <a class="el" href="#a4013129de17f87f32d85f5997cfe4a3c">meshDimensions()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2RField_8tpp_source.html#l00024">24</a> of file <a class="el" href="cuda_2RField_8tpp_source.html">cuda/RField.tpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="cuda_2RField_8tpp_source.html#l00099">operator=()</a>, <a class="el" href="#ab9f7b704003dcd5f3b28db7add1f16e1">operator=()</a>, <a class="el" href="cuda_2RField_8tpp_source.html#l00032">RField()</a>, and <a class="el" href="#ae3dd03939ae62ac3dbdffbe1bd65ceff">RField()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00346">Pscf::DeviceArray&lt; cudaReal &gt;::DeviceArray()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="cuda_2RField_8tpp_source.html#l00099">operator=()</a>, <a class="el" href="cuda_2RField_8tpp_source.html#l00087">operator=()</a>, and <a class="el" href="cuda_2RField_8tpp_source.html#l00040">RField()</a>.</p>
 
 </div>
 </div>
@@ -188,7 +184,7 @@ template&lt;int D&gt; </div>
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::RField </td>
+          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::RField </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>meshDimensions</em></span></td><td>)</td>
           <td></td>
@@ -207,7 +203,7 @@ template&lt;int D&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="cuda_2RField_8tpp_source.html#l00032">32</a> of file <a class="el" href="cuda_2RField_8tpp_source.html">cuda/RField.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="cpu_2RField_8tpp_source.html#l00094">Pscf::Prdc::Cpu::RField&lt; D &gt;::allocate()</a>, <a class="el" href="classPscf_1_1DeviceArray.html#a0fe2b80b4127647db71da668fe9a8a45">Pscf::DeviceArray&lt; cudaReal &gt;::DeviceArray()</a>, <a class="el" href="#a4013129de17f87f32d85f5997cfe4a3c">meshDimensions()</a>, and <a class="el" href="#a467cc23e15bf684a8d13bf68631fc0da">RField()</a>.</p>
+<p class="reference">References <a class="el" href="cuda_2RField_8tpp_source.html#l00056">allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00346">Pscf::DeviceArray&lt; cudaReal &gt;::DeviceArray()</a>, and <a class="el" href="cuda_2RField_8h_source.html#l00150">meshDimensions()</a>.</p>
 
 </div>
 </div>
@@ -220,9 +216,9 @@ template&lt;int D&gt; </div>
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::RField </td>
+          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::RField </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">RField</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -237,12 +233,14 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="reference">References <a class="el" href="#a467cc23e15bf684a8d13bf68631fc0da">RField()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2RField_8tpp_source.html#l00040">40</a> of file <a class="el" href="cuda_2RField_8tpp_source.html">cuda/RField.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00346">Pscf::DeviceArray&lt; cudaReal &gt;::DeviceArray()</a>, and <a class="el" href="cuda_2RField_8tpp_source.html#l00024">RField()</a>.</p>
 
 </div>
 </div>
-<a id="a4a0164fa0e7aa46190c95ac1059c4ebd" name="a4a0164fa0e7aa46190c95ac1059c4ebd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a0164fa0e7aa46190c95ac1059c4ebd">&#9670;&#160;</a></span>~RField()</h2>
+<a id="aecef42598780b90e20d0dd4cf70d01d3" name="aecef42598780b90e20d0dd4cf70d01d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecef42598780b90e20d0dd4cf70d01d3">&#9670;&#160;</a></span>~RField()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -253,7 +251,7 @@ template&lt;int D&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::~<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a> </td>
+          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::~<a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">RField</a> </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -269,6 +267,8 @@ template&lt;int D&gt; </div>
 <p>Destructor. </p>
 <p>Deletes underlying C array, if allocated previously. </p>
 
+<p class="definition">Definition at line <a class="el" href="cuda_2RField_8tpp_source.html#l00049">49</a> of file <a class="el" href="cuda_2RField_8tpp_source.html">cuda/RField.tpp</a>.</p>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -281,7 +281,7 @@ template&lt;int D&gt; </div>
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::allocate </td>
+          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::allocate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>meshDimensions</em></span></td><td>)</td>
           <td></td>
@@ -303,9 +303,11 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="reference">References <a class="el" href="cuda_2RField_8tpp_source.html#l00071">associate()</a>, <a class="el" href="classPscf_1_1DeviceArray.html#a0fe2b80b4127647db71da668fe9a8a45">Pscf::DeviceArray&lt; cudaReal &gt;::DeviceArray()</a>, and <a class="el" href="#a4013129de17f87f32d85f5997cfe4a3c">meshDimensions()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2RField_8tpp_source.html#l00056">56</a> of file <a class="el" href="cuda_2RField_8tpp_source.html">cuda/RField.tpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a7b1159b33f095da3944b137a5460b6cc">serialize()</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00424">Pscf::DeviceArray&lt; Data &gt;::allocate()</a>, <a class="el" href="cuda_2RField_8h_source.html#l00150">meshDimensions()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="rpg_2environment_2FilmFieldGenMask_8tpp_source.html#l00276">Pscf::Rpg::FilmFieldGenMask&lt; D &gt;::compute()</a>, <a class="el" href="cuda_2RField_8tpp_source.html#l00032">RField()</a>, <a class="el" href="cuda_2RField_8h_source.html#l00158">serialize()</a>, and <a class="el" href="rpg_2environment_2FilmFieldGenMask_8tpp_source.html#l00176">Pscf::Rpg::FilmFieldGenMask&lt; D &gt;::stress()</a>.</p>
 
 </div>
 </div>
@@ -318,9 +320,9 @@ template&lt;int D&gt; </div>
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::associate </td>
+          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::associate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; cudaReal &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>arr</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1DeviceArray.html">DeviceArray</a>&lt; <a class="el" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>arr</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -353,9 +355,9 @@ template&lt;int D&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="cuda_2RField_8tpp_source.html#l00071">71</a> of file <a class="el" href="cuda_2RField_8tpp_source.html">cuda/RField.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00285">Pscf::DeviceArray&lt; Data &gt;::associate()</a>, <a class="el" href="classPscf_1_1DeviceArray.html#a0fe2b80b4127647db71da668fe9a8a45">Pscf::DeviceArray&lt; cudaReal &gt;::DeviceArray()</a>, <a class="el" href="#a4013129de17f87f32d85f5997cfe4a3c">meshDimensions()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00459">Pscf::DeviceArray&lt; Data &gt;::associate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00346">Pscf::DeviceArray&lt; cudaReal &gt;::DeviceArray()</a>, <a class="el" href="cuda_2RField_8h_source.html#l00150">meshDimensions()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#ab28c8803889409c6ca5d8ef6aa9dfea7">allocate()</a>, and <a class="el" href="#a7b1159b33f095da3944b137a5460b6cc">serialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00469">Pscf::Rpg::Block&lt; D &gt;::stepThread()</a>.</p>
 
 </div>
 </div>
@@ -368,9 +370,9 @@ template&lt;int D&gt; </div>
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::operator= </td>
+          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">RField</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">RField</a>&lt; D &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -386,7 +388,9 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="reference">References <a class="el" href="#a467cc23e15bf684a8d13bf68631fc0da">RField()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2RField_8tpp_source.html#l00087">87</a> of file <a class="el" href="cuda_2RField_8tpp_source.html">cuda/RField.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="DeviceArray_8h_source.html#l00528">Pscf::DeviceArray&lt; Data &gt;::operator=()</a>, and <a class="el" href="cuda_2RField_8tpp_source.html#l00024">RField()</a>.</p>
 
 </div>
 </div>
@@ -399,50 +403,60 @@ template&lt;int D&gt; </div>
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::operator= </td>
+          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">RField</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPscf_1_1HostDArray.html">HostDArray</a>&lt; cudaReal &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classPscf_1_1HostDArray.html">HostDArray</a>&lt; <a class="el" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Assignment operator, assignment from a <a class="el" href="classPscf_1_1HostDArray.html" title="Template for dynamic array stored in host CPU memory.">HostDArray&lt;cudaReal&gt;</a>. </p>
+<p>Assignment operator, assignment from a <a class="el" href="classPscf_1_1HostDArray.html">HostDArray&lt;cudaReal&gt;</a>. </p>
 <p>Performs a deep copy, by copying all elements of the RHS RField&lt;D&gt; from host memory to device memory.</p>
-<p>The RHS <a class="el" href="classPscf_1_1HostDArray.html" title="Template for dynamic array stored in host CPU memory.">HostDArray&lt;cudaReal&gt;</a> and LHS RField&lt;D&gt; must both be allocated with equal capacity values on entry.</p>
+<p>The RHS <a class="el" href="classPscf_1_1HostDArray.html">HostDArray&lt;cudaReal&gt;</a> and LHS RField&lt;D&gt; must both be allocated with equal capacity values on entry.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">other</td><td>the RHS <a class="el" href="classPscf_1_1HostDArray.html" title="Template for dynamic array stored in host CPU memory.">HostDArray&lt;cudaReal&gt;</a> </td></tr>
+    <tr><td class="paramname">other</td><td>the RHS <a class="el" href="classPscf_1_1HostDArray.html">HostDArray&lt;cudaReal&gt;</a> </td></tr>
   </table>
   </dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="cuda_2RField_8tpp_source.html#l00099">99</a> of file <a class="el" href="cuda_2RField_8tpp_source.html">cuda/RField.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00179">Pscf::DeviceArray&lt; cudaReal &gt;::capacity_</a>, <a class="el" href="classPscf_1_1DeviceArray.html#a9756f28aae439b2bfbd05793b1e19c95">Pscf::DeviceArray&lt; cudaReal &gt;::isAllocated()</a>, <a class="el" href="DArray_8h_source.html#l00247">Util::DArray&lt; Data &gt;::isAllocated()</a>, <a class="el" href="DeviceArray_8h_source.html#l00350">Pscf::DeviceArray&lt; Data &gt;::operator=()</a>, <a class="el" href="#a467cc23e15bf684a8d13bf68631fc0da">RField()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="Array_8h_source.html#l00144">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00292">Pscf::DeviceArray&lt; cudaReal &gt;::capacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00315">Pscf::DeviceArray&lt; cudaReal &gt;::isAllocated()</a>, <a class="el" href="DArray_8h_source.html#l00151">Util::DArray&lt; Data &gt;::isAllocated()</a>, <a class="el" href="DeviceArray_8h_source.html#l00528">Pscf::DeviceArray&lt; Data &gt;::operator=()</a>, <a class="el" href="cuda_2RField_8tpp_source.html#l00024">RField()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
 </div>
 </div>
-<a id="a4013129de17f87f32d85f5997cfe4a3c" name="a4013129de17f87f32d85f5997cfe4a3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4013129de17f87f32d85f5997cfe4a3c">&#9670;&#160;</a></span>meshDimensions()</h2>
+<a id="ae5d7e3e138eb2ad39905876465918fa1" name="ae5d7e3e138eb2ad39905876465918fa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5d7e3e138eb2ad39905876465918fa1">&#9670;&#160;</a></span>meshDimensions()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const  &amp; <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::meshDimensions </td>
+          <td class="memname">const <a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::meshDimensions </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Return mesh dimensions by constant reference. </p>
 
-<p class="reference">Referenced by <a class="el" href="#ab28c8803889409c6ca5d8ef6aa9dfea7">allocate()</a>, <a class="el" href="cuda_2RField_8tpp_source.html#l00071">associate()</a>, <a class="el" href="#a467cc23e15bf684a8d13bf68631fc0da">RField()</a>, and <a class="el" href="cuda_2RField_8tpp_source.html#l00032">RField()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2RField_8h_source.html#l00150">150</a> of file <a class="el" href="cuda_2RField_8h_source.html">cuda/RField.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="cuda_2RField_8tpp_source.html#l00056">allocate()</a>, <a class="el" href="cuda_2RField_8tpp_source.html#l00071">associate()</a>, <a class="el" href="cuda_2FFT_8tpp_source.html#l00165">Pscf::Prdc::Cuda::FFT&lt; D &gt;::inverseTransformUnsafe()</a>, <a class="el" href="cuda_2RField_8tpp_source.html#l00032">RField()</a>, and <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00166">Pscf::Rpg::FieldIo&lt; D &gt;::writeFieldRGrid()</a>.</p>
 
 </div>
 </div>
@@ -457,7 +471,7 @@ template&lt;int D&gt; </div>
 template&lt;class Archive&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::serialize </td>
+          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Pscf::Prdc::Cuda::RField</a>&lt; D &gt;::serialize </td>
           <td>(</td>
           <td class="paramtype">Archive &amp;</td>          <td class="paramname"><span class="paramname"><em>ar</em></span>, </td>
         </tr>
@@ -478,7 +492,9 @@ template&lt;class Archive&gt; </div>
   </dd>
 </dl>
 
-<p class="reference">References <a class="el" href="#ab28c8803889409c6ca5d8ef6aa9dfea7">allocate()</a>, <a class="el" href="cuda_2RField_8tpp_source.html#l00071">associate()</a>, and <a class="el" href="classPscf_1_1DeviceArray.html#a0fe2b80b4127647db71da668fe9a8a45">Pscf::DeviceArray&lt; cudaReal &gt;::DeviceArray()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_2RField_8h_source.html#l00158">158</a> of file <a class="el" href="cuda_2RField_8h_source.html">cuda/RField.h</a>.</p>
+
+<p class="reference">References <a class="el" href="cuda_2RField_8tpp_source.html#l00056">allocate()</a>, <a class="el" href="DeviceArray_8h_source.html#l00308">Pscf::DeviceArray&lt; cudaReal &gt;::capacity()</a>, <a class="el" href="DeviceArray_8h_source.html#l00292">Pscf::DeviceArray&lt; cudaReal &gt;::capacity_</a>, <a class="el" href="DeviceArray_8h_source.html#l00315">Pscf::DeviceArray&lt; cudaReal &gt;::isAllocated()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
 </div>
 </div>

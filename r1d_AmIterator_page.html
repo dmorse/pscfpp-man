@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -68,17 +68,17 @@ Parameter file</h1>
 <div class="line">  errorType     relNorm</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> The format of this block is described more formally below: </p><div class="fragment"><div class="line"> AmIterator{</div>
-<div class="line">   epsilon         real </div>
+<div class="line">   epsilon         <a class="code hl_function" href="group__Pscf__Cpu__Complex__Module.html#gad51747f62253275b4feb54f570d0cad0">real</a> </div>
 <div class="line">   maxItr*         int (200 by <span class="keywordflow">default</span>)</div>
 <div class="line">   maxHist*        int (50 by <span class="keywordflow">default</span>)</div>
 <div class="line">   verbose*        int (0-2, 0 by <span class="keywordflow">default</span>)</div>
 <div class="line">   outputTime*     bool (<span class="keyword">false</span> by <span class="keywordflow">default</span>)</div>
 <div class="line">   errorType*      string (<span class="stringliteral">&quot;norm&quot;</span>, <span class="stringliteral">&quot;rms&quot;</span>, <span class="stringliteral">&quot;max&quot;</span>, or <span class="stringliteral">&quot;relNorm&quot;</span>.  <span class="stringliteral">&quot;relNorm&quot;</span> by <span class="keywordflow">default</span>)</div>
-<div class="line">   lambda*         <a class="code hl_function" href="group__Pscf__Math__Complex__Module.html#gadc3b10b3f2a06e8f2aee5527031c076b">real</a> (1.0 by <span class="keywordflow">default</span>)</div>
+<div class="line">   lambda*         <a class="code hl_function" href="group__Pscf__Cpu__Complex__Module.html#gad51747f62253275b4feb54f570d0cad0">real</a> (1.0 by <span class="keywordflow">default</span>)</div>
 <div class="line">   useLambdaRamp*  bool (<span class="keyword">true</span> by <span class="keywordflow">default</span>)</div>
-<div class="line">   r*              <a class="code hl_function" href="group__Pscf__Math__Complex__Module.html#gadc3b10b3f2a06e8f2aee5527031c076b">real</a> (0.9 by <span class="keywordflow">default</span>)</div>
+<div class="line">   r*              <a class="code hl_function" href="group__Pscf__Cpu__Complex__Module.html#gad51747f62253275b4feb54f570d0cad0">real</a> (0.9 by <span class="keywordflow">default</span>)</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__Pscf__Math__Complex__Module_html_gadc3b10b3f2a06e8f2aee5527031c076b"><div class="ttname"><a href="group__Pscf__Math__Complex__Module.html#gadc3b10b3f2a06e8f2aee5527031c076b">Pscf::real</a></div><div class="ttdeci">RT real(CT const &amp;a)</div><div class="ttdoc">Return the real part of a complex number.</div></div>
+<div class="ttc" id="agroup__Pscf__Cpu__Complex__Module_html_gad51747f62253275b4feb54f570d0cad0"><div class="ttname"><a href="group__Pscf__Cpu__Complex__Module.html#gad51747f62253275b4feb54f570d0cad0">Pscf::real</a></div><div class="ttdeci">double real(fftw_complex const &amp;a)</div><div class="ttdoc">Return the real part of an fftw_complex number.</div><div class="ttdef"><b>Definition</b> <a href="cpu_2complex_8h_source.html#l00038">cpu/complex.h:38</a></div></div>
 </div><!-- fragment --><p> Here, as elsewhere, labels followed by an asterisk (*) represent optional parameters. The meaning of various parameters are described below, and most are also discussed as part of a more general discussion of <a class="el" href="pscf_AmIteratorTmpl_page.html">Anderson-Mixing</a> algorithms: </p><table class="doxtable">
 <tr>
 <td><b> <a class="el" href="classUtil_1_1Label.html" title="A label string in a file format.">Label</a> </b> </td><td><b> Description </b> </td></tr>
@@ -113,7 +113,7 @@ Parameter file</h1>
 <h1 class="doxsection"><a class="anchor" id="r1d_AmIterator_residual_sec"></a>
 Residual definition</h1>
 <p>The algorithm is designed to reduce the values of the elements of a vector of residuals (i.e., errors) until they are zero to within some tolerance, as defined by one of the scalar norms discussed above. The definition of the vector of residuals used in this algorithm is analogous to that given in Eq. (10) of the article by Arora et al. [Arora, Morse, Bates and Dorfman, J. Chem. Phys. vol. 146 224902 (2017)]. The main difference is that here residual values are associated with values at grid points, rather than coefficients in the Fourier expansion used in the algorithm described in that reference. To describe the residuals expressions here, we use zero based indexing for monomer types, use \( N_{x} \) to denote the number of grid points (referred to in the parameter file and source code as nx), and use \( N_{m} \) to denote the number of monomer types (referred to elsewhere as nMonomer).</p>
-<p>The vector of residuals for a pscf_1d calculation has \( N_{x}N_{m} \) (or nx * nMonomer) scalar residuals. Let \( w_{ia} \) and \( \phi_{ai} \) denote the values of the chemical potential field \( w_{i} \) and volume fraction \( \phi_{i} \) for monomer type i at grid point \(a\), respectively, The corresponding residual component \( R_{ai}\) associated with grid point \( a \) and monomer type \( i \) is given, by analogy to Eq. (10) of Arora et al. (JCP 2017), as     </p><p class="formulaDsp">
+<p>The vector of residuals for a pscf_r1d calculation has \( N_{x}N_{m} \) (or nx * nMonomer) scalar residuals. Let \( w_{ia} \) and \( \phi_{ai} \) denote the values of the chemical potential field \( w_{i} \) and volume fraction \( \phi_{i} \) for monomer type i at grid point \(a\), respectively, The corresponding residual component \( R_{ai}\) associated with grid point \( a \) and monomer type \( i \) is given, by analogy to Eq. (10) of Arora et al. (JCP 2017), as     </p><p class="formulaDsp">
 \[  R_{ai} = \sum_{j=0}^{N_{m}-1} 
            \left ( \chi_{ij} \phi_{aj} - P_{ij}w_{aj} \right ) 
   \quad.

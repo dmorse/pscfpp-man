@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -59,13 +59,14 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p>An <a class="el" href="classPscf_1_1R1d_1_1BinaryRelaxIterator.html" title="Relaxation iterator for 1D SCFT of two-monomer (AB) systems.">BinaryRelaxIterator</a> solves is an iterator that uses the simple relaxation method presented by F. Drolet and G.H. Fredrickson to solve the SCFT equations of a 1D problem with only two monomer types, such as an AB block copolymer or A/B polymer blend. The iteration algorithm will halt if applied to a system with more than two types of monomer.</p>
 <h1 class="doxsection"><a class="anchor" id="r1d_BinaryRelaxIterator_parameter_sec"></a>
-Parameter File</h1>
+Parameter file</h1>
 <p>The parameter file format for an <a class="el" href="classPscf_1_1R1d_1_1BinaryRelaxIterator.html" title="Relaxation iterator for 1D SCFT of two-monomer (AB) systems.">BinaryRelaxIterator</a> parameter file block is: </p><div class="fragment"><div class="line">BinaryRelaxIterator{</div>
-<div class="line">   epsilon           real</div>
+<div class="line">   epsilon           <a class="code hl_function" href="group__Pscf__Cpu__Complex__Module.html#gad51747f62253275b4feb54f570d0cad0">real</a></div>
 <div class="line">   maxItr            <span class="keywordtype">int</span></div>
-<div class="line">   lambdaPlus        real</div>
-<div class="line">   lambdaMinus       real</div>
+<div class="line">   lambdaPlus        <a class="code hl_function" href="group__Pscf__Cpu__Complex__Module.html#gad51747f62253275b4feb54f570d0cad0">real</a></div>
+<div class="line">   lambdaMinus       <a class="code hl_function" href="group__Pscf__Cpu__Complex__Module.html#gad51747f62253275b4feb54f570d0cad0">real</a></div>
 <div class="line">}</div>
+<div class="ttc" id="agroup__Pscf__Cpu__Complex__Module_html_gad51747f62253275b4feb54f570d0cad0"><div class="ttname"><a href="group__Pscf__Cpu__Complex__Module.html#gad51747f62253275b4feb54f570d0cad0">Pscf::real</a></div><div class="ttdeci">double real(fftw_complex const &amp;a)</div><div class="ttdoc">Return the real part of an fftw_complex number.</div><div class="ttdef"><b>Definition</b> <a href="cpu_2complex_8h_source.html#l00038">cpu/complex.h:38</a></div></div>
 </div><!-- fragment --><p>Parameters are described below: </p><table class="doxtable">
 <tr>
 <td><b> <a class="el" href="classUtil_1_1Label.html" title="A label string in a file format.">Label</a> </b> </td><td><b> Description </b> </td></tr>

@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -57,21 +57,20 @@ $(function() {
   <div class="headertitle"><div class="title">Partial Saddle-Point Approximation </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="el" href="psfts_theory_page.html">Fully Fluctuating Field Theory - Incompressible Systems</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="psfts_algorithm_page.html">Algorithms</a> (Next) <br  />
+<div class="textblock"><p><a class="el" href="psfts_theory_page.html">Fully Fluctuating Field Theory - Incompressible Systems</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="psfts_thermoint_page.html">Thermodynamic Integration</a> (Next) <br  />
 </p>
 <p>In a field theoretic treatment of an incompressible system, the partial-saddle approximation (PSA) is an approximation for the treatment of the pressure like field that acts to constrain the total density. When it is applicable, the approximation yields a theory with real statistical weights for all allowed field configurations.</p>
 <h1 class="doxsection"><a class="anchor" id="psfts_psa_ab_sec"></a>
-AB Systems ( \( M = 2 \))</h1>
-<p>We first consider the PSA for an incompressible standard AB system with \( \chi &gt; 0 \). In the fully fluctuating theory for such a system, the partition function can be expressed as an functional integral over a real exchange field \( W_{-} \) and an imaginary pressure-like field \( W_{-}({\bf r}) = i\omega_{+} \). <br  />
-</p>
+Standard AB systems ( \( M = 2 \))</h1>
+<p>We first consider the PSA for an incompressible standard AB system with \( \chi &gt; 0 \). In the fully fluctuating theory for such a system, the partition function can be expressed as an functional integral over a real exchange field \( W_{-} \) and an imaginary pressure-like field \( W_{-}({\bf r}) = i\omega_{+} \).</p>
 <p>In the PSA for such a system, \( Z \) is approximated by functional integral with respect to \( W_{-} \) in which the Hamiltonian \( H \) is evaluated in a configuration in which \( W_{+} \) is chosen so as to give a vanishing partial functional derivative of \( H \) with respect to \( W_{+}({\bf r}) \). This yields an approximate for the partition function as an integal   </p><p class="formulaDsp">
 \[   Z = \frac{1}{N} \int DW_{-} \; e^{-H[ W_{-}, W_{+}^{*}]}
 \]
 </p>
 <p> in which \( \int D W_{-} \) denotes a functional integral over the exchange field \( W_{-} \), while \( W_{+}^{*} \) denotes a configuration of \( W_{+}({\bf r}) \) that is chosen to satisfy the so-called partial-saddle point condition      </p><p class="formulaDsp">
-\[    0 = \left .  \frac{ \delta H } { \delta W_{+}({\bf r}) } 
+\[    0 = \left .  \frac{ \delta H } { \delta W_{+}({\bf r}) }
     \right |_{W_{-}}
-    =  \frac{1}{v} 
+    =  \frac{1}{v}
    \left [ \phi_{1}{\bf r}) + \phi_{2}({\bf r}) - 1\right ]
 \]
 </p>
@@ -84,9 +83,35 @@ AB Systems ( \( M = 2 \))</h1>
 \[   w_{2}({\bf r}) =  W^{*}_{+}({\bf r}) - W_{-}({\bf r})  \quad.
 \]
 </p>
-<p> Partial saddle-point field configurations are also characterized by real values for \( \ln Z_{\rm id}[w] \) and the Hamiltonian \( H \).</p>
+<p> Partial saddle-point field configurations are also characterized by real values for \( \ln Z_{\rm id}[w] \) and the overall Hamiltonian \( H \).</p>
+<p>The partial saddle-point Hamiltonian for such a standard AB system can be expressed as a sum   </p><p class="formulaDsp">
+\[  H = H_{\rm f} + H_{\rm id} \quad,
+\]
+</p>
+<p> in which        </p><p class="formulaDsp">
+\[  H_{\rm f}  =
+  \frac{1}{v}
+  \int \! d{\bf r} \; \left \{
+  \frac{ W_{-}^{2} }{ \chi }
+  - W_{+}^{*} + \frac{\chi}{4} \right \}  
+  \quad,
+\]
+</p>
+<p> and           </p><p class="formulaDsp">
+\[  \begin{align}
+  H_{\rm id}[w] 
+    &amp; = -\ln Z_{\rm id}[w]  \\
+    &amp; = \frac{V}{v}\sum_{a} \frac{\overline{\phi}_{a}}{N_{a}}
+    \left [ 
+    \ln \left ( \frac{\overline{\phi}_{a}}{Q_{a}} \right ) - 1 
+    \right ]
+  \quad.
+  \end{align}
+\]
+</p>
+<p> Here, \( a \) is an index for a molecular species, while \( \overline{\phi}_{a} \), \( N_{\alpha} \), \( Q_{\alpha} \) are the volume fraction, number of monomers (i.e., ratio of molecular volume to monomer volume), and normalized partition function for molecular species \( a \), respectively.</p>
 <h1 class="doxsection"><a class="anchor" id="psfts_psa_general_sec"></a>
-General Case ( \( M \geq 2 \))</h1>
+General case ( \( M \geq 2 \))</h1>
 <p>The current version of PSCF allows PS-FTS simulations of some systems with M &gt; 2, subject to a constraint on allowed values of the \( \chi \) parameters: The implementation of the PSA in the current version of PSCF is applicable if and only if the nontrivial eigenvalues of the projected \( \chi \) matrix, \( \lambda_{1}, \ldots , \lambda_{M-1} \), are all negative. When applied a standard AB system, this is equivalent to a requirement that \( \chi &gt; 0 \). In general, when this condition is satisfied, then \( \sigma_{i} = 1 \), and thus   </p><p class="formulaDsp">
 \[   W_{\alpha}({\bf r}) = \omega_{\alpha}({\bf r}) + S_{\alpha}
 \]
@@ -101,9 +126,9 @@ General Case ( \( M \geq 2 \))</h1>
 \]
 </p>
 <p> in which \( \int DW_{-} \) denotes a functional integral over the \( M - 1 \) real exchange fields \( W_{-} = [W_1, \ldots, W_{M-1}] \), and in which \( W_{+}^{*} \) denotes a real-valued configuration of \( W_{+}({\bf r}) \) that is chosen to satisfy a partial saddle-point condition requiring that      </p><p class="formulaDsp">
-\[    0 = \left . 
+\[    0 = \left .
     \frac{ \delta H }
-         { \delta W_{+}({\bf r}) } 
+         { \delta W_{+}({\bf r}) }
     \right |_{W_{-}}
 \]
 </p>
@@ -113,12 +138,74 @@ General Case ( \( M \geq 2 \))</h1>
 \]
 </p>
 <p> In the case considered here, for which \( \lambda_{1}, \ldots, \lambda_{M-1} \) are all negative, the partial saddle-point approximation yields real values for all average monomer fields \( \phi_{1}({\bf r}), \ldots \phi_{M}({\bf r}) \) and for the Hamiltonian \( H \) in all allowed field configurations.</p>
+<p>The partial saddle-point Hamiltonian is given in this more general case is again given by a sum   </p><p class="formulaDsp">
+\[   H = H_{\rm f} + H_{\rm id}
+\]
+</p>
+<p> in which \( H_{\rm id} = - \ln Z_{\rm id} \) and        </p><p class="formulaDsp">
+\[   H_{\rm f}  =
+   \frac{1}{v}
+   \int \! d{\bf r} \; \left \{
+   \sum_{\alpha=1}^{M-1}
+   \frac{M (W_{\alpha} - S_{\alpha})^2 }{ 2 |\lambda_{\alpha}|}
+   - W_{+}^{*} + \frac{S_{M}}{2} \right \} \quad,
+\]
+</p>
+<p> where \( \alpha \) is an index for eigenvectors of the projected \( \chi \) matrix, and \( S_{\alpha} \equiv v_{\alpha i}\chi_{ij}e_{j}/M^{2} \) for \( \alpha = 1, \ldots, M \), and \( S_{M} = e_{i}\chi_{ij}e_{j}/M^{2} \).</p>
 <p><a class="anchor" id="psfts_psa_status"></a><b> Status of Algorithms for \( M &gt; 2 \): </b></p>
-<p>The BD and MC algorithms currently provided PSCF can perform simulations of systems with \( M \geq 2 \) if and only if the projected chi matrix has no positive eigenvalues. This statement applies both to the actual BD and MC algorithms used to generate random changes in exchange fields and to the <a class="el" href="psfts_algorithm_page.html#psfts_algorithm_compressor_sec">compressor</a> algorithms used to identify partial saddle points. For ABC systems, this requirement imposes several constraints on the allowed ranges of values of the chi parameters, as discussed in the article by <a href="https://pubs.acs.org/doi/10.1021/acs.macromol.4c02636">Morse, Yong and Chen </a>.</p>
-<p>Some of the data analysis algorithms provided in the current version of PSCF were, however, designed specifically for systems with \( M = 2 \) and are only usable with such systems. The "analyzer" class that implements each such restricted algorithm checks whether \( M = 2 \), and will print an error message and then halt execution before entering the main simulation loop if a user attempts to apply it to a system with \( M &gt; 2 \). Currently, it is thus possible to perform PS-FTS calculations on some ABC systems, but some data analysis algorithms cannot be used for this purpose.</p>
+<p>The BD and MC algorithms currently provided PSCF can perform simulations of systems with \( M \geq 2 \) if and only if the projected chi matrix has no positive eigenvalues. This statement applies both to the actual BD and MC algorithms used to generate random changes in exchange fields and to the <a class="el" href="psfts_algo_compressor_page.html">compressor</a> algorithms used to identify partial saddle points. For ABC systems ( \( M = 3 \)), this requirement imposes several constraints on the allowed ranges of values of the chi parameters, as discussed in the article by <a href="https://pubs.acs.org/doi/10.1021/acs.macromol.4c02636">Morse, Yong and Chen </a>.</p>
+<p>Some of the data analysis algorithms provided in the current version of PSCF were, however, designed specifically for systems with \( M = 2 \) and are only usable with such systems. Each "analyzer" class that implements such a restricted algorithm checks whether \( M = 2 \), and will print an error message and then halt execution if the class is used with a system with \( M &gt; 2 \). Currently, it is thus possible to perform PS-FTS calculations on some ABC systems, but some data analysis algorithms cannot be used for this purpose.</p>
 <p>Morse, Yong and Chen have proposed a further generalization of the PSA so as to treat cases in which one or more of the \( M - 1 \) nontrival eigenvalues of the projected \( \chi \) matrix are positive. Specificially, they proposed treating the auxiliary fields associated with such eigenvalues in a PSA, in addition to the use of the PSA for the pressure-like field \( W_{M} \). This generalized version of the PSA is not implemented in the current version of PSCF, in which the PSA is currently only applied to \( W_{M} \).</p>
+<h1 class="doxsection"><a class="anchor" id="psfts_psa_pressure_sec"></a>
+Indeterminancy of pressure in canonical ensemble</h1>
+<p>In canonical ensemble, in which each molecular species occupies a specified volume fraction, the configuration of the pressure-like field required to satisfy the partial saddle-point (or incompressibility) condition is unique only to within an arbitrary spatially homogeneous constant: In canonical ensemble, if \( W_{+}^{*}({\bf r})\) is a configuration of the pressure-like field that satisfies the partial saddle-point condition for some specified configuration of the other fields, than any other field    </p><p class="formulaDsp">
+\[     W_{+}^{*}({\bf r}) \rightarrow
+     W_{+}^{*}({\bf r}) + C 
+\]
+</p>
+<p> that differs from \( W_{+}^{*}({\bf r}) \) by any spatially homogeneous constant \( C \) can be shown to also satisfy this condition. The resulting indeterminancy also appears in the SCFT equations for a closed, incompressible system, as noted <a class="el" href="scft_thermo_page.html#scft_thermo_pressure_sec">previously</a>.</p>
+<p>Different solutions of the partial saddle-point problem that differ by a spatially homogeneous constant correspond to the equivalent physical state that differ only in the value of an irrelevant macroscopic pressure. Such states can be shown yield equal value for the total Hamiltonian \( H \). Such pairs of physically equivalent field configurations do, however, generally yield different values for the components \( H_{\rm id} \) and \( H_{\rm f} \) defined above.</p>
+<h1 class="doxsection"><a class="anchor" id="psfts_psa_altH_sec"></a>
+Alternate definitions of Hamiltonian components</h1>
+<p>To avoid any arbitrariness in the definitions of the ideal and field contributions to \( H \) that could result from non-uniqueness of the pressure field, some classes that compute or analyze these contributions use alternate definitions that do not suffer from this ambiguity. These alternative definitions of the ideal and interaction contributions to \( H \) are denoted here by \( \tilde{H}_{\rm id} \) and \( \tilde{H}_{\rm f} \), and are defined as          </p><p class="formulaDsp">
+\[   \begin{align}
+   \tilde{H}_{\rm id} 
+               &amp; = H_{\rm id} 
+               - \frac{1}{v}\int W_{+}^{*}({\bf r}) \\
+   \tilde{H}_{\rm f}
+               &amp; = H_{\rm f} 
+               + \frac{1}{v}\int W_{+}^{*}({\bf r}) 
+   \end{align} \quad.
+\]
+</p>
+<p> or, more explicitly,                 </p><p class="formulaDsp">
+\[   \begin{align}
+   \tilde{H}_{\rm id} &amp; = 
+    \frac{V}{v}\sum_{a} 
+    \frac{\overline{\phi}_{a}}{N_{a}}
+    \left [ 
+    \ln \left ( \frac{\overline{\phi}_{a}}{Q_{a}} \right ) - 1 
+    \right ]
+    -  \frac{1}{v}\int W_{+}^{*}({\bf r})  \\
+   \tilde{H}_{\rm f}  &amp; =
+   \frac{1}{v}
+   \int \! d{\bf r} \; \left \{
+   \sum_{\alpha=1}^{M-1}
+   \frac{M (W_{\alpha} - S_{\alpha})^2 }{ 2 |\lambda_{\alpha}|}
+   + \frac{S_{M}}{2} \right \} \quad.
+   \end{align}
+\]
+</p>
+<p> Note that these modified definitions simply move the term proportional to the integral of \( W_{+}^{*}({\bf r}) \) from \( H_{\rm f} \) to \( H_{\rm id} \). This simple modification leaves the sum of these two components unchanged, giving     </p><p class="formulaDsp">
+\[    H = H_{\rm id} + H_{\rm f} 
+      = \tilde{H}_{\rm id} + \tilde{H}_{\rm f}
+    \quad.
+\]
+</p>
+<p> The term proportional to the spatial integral of \( W^{*}({\bf r}) \) in the definition of \( \tilde{H}_{\rm id} \) can be shown to cancel the dependence of the sum of single-molecule free energies on the average pressure, making \( \tilde{H}_{\rm id} \) invariant under any spatially homogeneous shift of \( W^{*}_{+}({\bf r}) \). Note that the resulting definition of \( \tilde{H}_{\rm f} \) has no explicit dependence on \( W_{+}^{*} \), and so is also invariant under any such homogeneous shift in this field. Both \( \tilde{H}_{\rm id} \) and \( \tilde{H}_{\rm int} \) are thus invariant under homogeneous changes in \( W_{+}({\bf r}) \), and so have unique values for each possible configuration of the fluctuating field components \( W_{1}, \ldots, W_{M-1} \). This observation also implies that the total Hamiltonian \( H \) of an incompressible system is invariant under any such homogeneous change in pressure.</p>
+<p><em> For users who read the source code </em>: The quantities \( \tilde{H}_{\rm id} \) and \( \tilde{H}_{\rm f} \) defined above are computed and accessed using member functions of the <a class="el" href="classPscf_1_1Rp_1_1Simulator.html" title="Base class for field theoretic PS-FTS simulator.">Pscf::Rp::Simulator</a> class template, and are analyzed by the <a class="el" href="classPscf_1_1Rp_1_1HamiltonianAnalyzer.html" title="Compute averages and output block averages of Hamiltonian components.">Pscf::Rp::HamiltonianAnalyzer</a> class template.</p>
 <p><br  />
- <a class="el" href="psfts_theory_page.html">Fully Fluctuating Field Theory - Incompressible Systems</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="psfts_page.html">Partial Saddle-Point Field Theoretic Simulation (PS-FTS)</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="psfts_algorithm_page.html">Algorithms</a> (Next) </p>
+ <a class="el" href="psfts_theory_page.html">Fully Fluctuating Field Theory - Incompressible Systems</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="psfts_page.html">Partial Saddle-Point Field Theoretic Simulation (PS-FTS)</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="psfts_thermoint_page.html">Thermodynamic Integration</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

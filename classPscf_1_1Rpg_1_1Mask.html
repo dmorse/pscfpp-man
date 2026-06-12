@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -55,9 +55,6 @@ $(function() {
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classPscf_1_1Rpg_1_1Mask-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Pscf::Rpg::Mask&lt; D &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Rpg__Module.html">Pscf::Rpg - Real Periodic Fields (GPU)</a> &raquo; <a class="el" href="group__Rpg__Field__Module.html">Fields</a></div></div></div>
 </div><!--header-->
@@ -66,857 +63,81 @@ $(function() {
 <p>A field to which the total monomer concentration is constrained.  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="rpg_2field_2Mask_8h_source.html">Mask.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_2field_2Mask_8h_source.html">Mask.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Pscf::Rpg::Mask&lt; D &gt;:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classPscf_1_1Rpg_1_1Mask.png" usemap="#Pscf_3A_3ARpg_3A_3AMask_3C_20D_20_3E_map" alt=""/>
   <map id="Pscf_3A_3ARpg_3A_3AMask_3C_20D_20_3E_map" name="Pscf_3A_3ARpg_3A_3AMask_3C_20D_20_3E_map">
-<area href="classPscf_1_1Prdc_1_1MaskTmpl.html" alt="Pscf::Prdc::MaskTmpl&lt; D, Cuda::RField&lt; D &gt;, FieldIo&lt; D &gt; &gt;" shape="rect" coords="0,0,359,24"/>
+<area href="classPscf_1_1Rp_1_1Mask.html" alt="Pscf::Rp::Mask&lt; D, RField&lt; D &gt;, FieldIo&lt; D &gt; &gt;" shape="rect" coords="0,0,285,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a622b4b8db0e1df2feb52ba525ec4ae8b" id="r_a622b4b8db0e1df2feb52ba525ec4ae8b"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a622b4b8db0e1df2feb52ba525ec4ae8b">Base</a></td></tr>
-<tr class="memdesc:a622b4b8db0e1df2feb52ba525ec4ae8b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a622b4b8db0e1df2feb52ba525ec4ae8b" title="Base class typedef.">Base</a> class typedef.  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:ad0f03b01e9248c0cdaa506c43b6ee8c4" id="r_ad0f03b01e9248c0cdaa506c43b6ee8c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0f03b01e9248c0cdaa506c43b6ee8c4">setFieldIo</a> (<a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; const &amp;<a class="el" href="#afc59e5730d44f230fdc2038d2104dfad">fieldIo</a>)</td></tr>
-<tr class="memdesc:ad0f03b01e9248c0cdaa506c43b6ee8c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create association with <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">FieldIo</a> (store pointer).  <br /></td></tr>
-<tr class="memitem:a33ddf9277e60142c33f09fd600260948" id="r_a33ddf9277e60142c33f09fd600260948"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33ddf9277e60142c33f09fd600260948">allocateBasis</a> (int <a class="el" href="#a5f47f453a87b8d83572dbbf92983fe65">nBasis</a>)</td></tr>
-<tr class="memdesc:a33ddf9277e60142c33f09fd600260948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory for the field in basis format.  <br /></td></tr>
-<tr class="memitem:af368c6be57a7b5c2192871296a55d192" id="r_af368c6be57a7b5c2192871296a55d192"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af368c6be57a7b5c2192871296a55d192">allocateRGrid</a> (<a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;dimensions)</td></tr>
-<tr class="memdesc:af368c6be57a7b5c2192871296a55d192"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory for the field in rgrid format.  <br /></td></tr>
-<tr class="memitem:a39af9d4fc1f4a54e802f6239fb3559cf" id="r_a39af9d4fc1f4a54e802f6239fb3559cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39af9d4fc1f4a54e802f6239fb3559cf">setBasis</a> (<a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; const &amp;field)</td></tr>
-<tr class="memdesc:a39af9d4fc1f4a54e802f6239fb3559cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set field component values, in symmetrized Fourier format.  <br /></td></tr>
-<tr class="memitem:a48275cc66fa3182a8801eecf269ffe00" id="r_a48275cc66fa3182a8801eecf269ffe00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48275cc66fa3182a8801eecf269ffe00">setRGrid</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt; const &amp;field, bool <a class="el" href="#af0af1ebffddfd59ffd85683448537009">isSymmetric</a>=false)</td></tr>
-<tr class="memdesc:a48275cc66fa3182a8801eecf269ffe00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set field values in real-space (r-grid) format.  <br /></td></tr>
-<tr class="memitem:acf9d410c194107d50fa1238f5b45ec8f" id="r_acf9d410c194107d50fa1238f5b45ec8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf9d410c194107d50fa1238f5b45ec8f">readBasis</a> (std::istream &amp;in)</td></tr>
-<tr class="memdesc:acf9d410c194107d50fa1238f5b45ec8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read field from input stream in symmetrized basis format.  <br /></td></tr>
-<tr class="memitem:a279f37c3372da8964075631bb3ed3f9a" id="r_a279f37c3372da8964075631bb3ed3f9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a279f37c3372da8964075631bb3ed3f9a">readBasis</a> (std::string filename)</td></tr>
-<tr class="memdesc:a279f37c3372da8964075631bb3ed3f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read field from a named file, in symmetrized basis format.  <br /></td></tr>
-<tr class="memitem:af568bb1a487595aa75b3934116a2d9fb" id="r_af568bb1a487595aa75b3934116a2d9fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af568bb1a487595aa75b3934116a2d9fb">readRGrid</a> (std::istream &amp;in, bool <a class="el" href="#af0af1ebffddfd59ffd85683448537009">isSymmetric</a>=false)</td></tr>
-<tr class="memdesc:af568bb1a487595aa75b3934116a2d9fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads field from an input stream in real-space (r-grid) format.  <br /></td></tr>
-<tr class="memitem:ac9ada5927487da8822a58874b90345f4" id="r_ac9ada5927487da8822a58874b90345f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9ada5927487da8822a58874b90345f4">readRGrid</a> (std::string filename, bool <a class="el" href="#af0af1ebffddfd59ffd85683448537009">isSymmetric</a>=false)</td></tr>
-<tr class="memdesc:ac9ada5927487da8822a58874b90345f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads field from a named file, in real-space (r-grid) format.  <br /></td></tr>
-<tr class="memitem:a3fcd71d3f15402df5941c08939df28f5" id="r_a3fcd71d3f15402df5941c08939df28f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fcd71d3f15402df5941c08939df28f5">writeBasis</a> (std::ostream &amp;out) const</td></tr>
-<tr class="memdesc:a3fcd71d3f15402df5941c08939df28f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write fields to an input stream in symmetrized basis format.  <br /></td></tr>
-<tr class="memitem:a91b927973c90f6d7d238609e863e360f" id="r_a91b927973c90f6d7d238609e863e360f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91b927973c90f6d7d238609e863e360f">writeBasis</a> (std::string filename) const</td></tr>
-<tr class="memdesc:a91b927973c90f6d7d238609e863e360f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write fields to a named file, in symmetrized basis format.  <br /></td></tr>
-<tr class="memitem:a841095169a4fe7e34200cd06d317f077" id="r_a841095169a4fe7e34200cd06d317f077"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a841095169a4fe7e34200cd06d317f077">writeRGrid</a> (std::ostream &amp;out) const</td></tr>
-<tr class="memdesc:a841095169a4fe7e34200cd06d317f077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes fields to an input stream in real-space (r-grid) format.  <br /></td></tr>
-<tr class="memitem:a24516f4d36b482b1e05fa8f47aad2612" id="r_a24516f4d36b482b1e05fa8f47aad2612"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24516f4d36b482b1e05fa8f47aad2612">writeRGrid</a> (std::string filename) const</td></tr>
-<tr class="memdesc:a24516f4d36b482b1e05fa8f47aad2612"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes fields to a named file in real-space (r-grid) format.  <br /></td></tr>
-<tr class="memitem:a57275e1a053c772e374f72174376d6d6" id="r_a57275e1a053c772e374f72174376d6d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57275e1a053c772e374f72174376d6d6">basis</a> () const</td></tr>
-<tr class="memdesc:a57275e1a053c772e374f72174376d6d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the field in basis format.  <br /></td></tr>
-<tr class="memitem:a6d471bacca0a8151bbf60057ee37149f" id="r_a6d471bacca0a8151bbf60057ee37149f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d471bacca0a8151bbf60057ee37149f">rgrid</a> () const</td></tr>
-<tr class="memdesc:a6d471bacca0a8151bbf60057ee37149f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the field in r-grid format.  <br /></td></tr>
-<tr class="memitem:a3edce7afe888b18ef8ec51bb0b7b7ba9" id="r_a3edce7afe888b18ef8ec51bb0b7b7ba9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3edce7afe888b18ef8ec51bb0b7b7ba9">phiTot</a> () const</td></tr>
-<tr class="memdesc:a3edce7afe888b18ef8ec51bb0b7b7ba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the volume fraction of unit cell occupied by material.  <br /></td></tr>
-<tr class="memitem:a73c9503bccf6abc0897edb69554ec6de" id="r_a73c9503bccf6abc0897edb69554ec6de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73c9503bccf6abc0897edb69554ec6de">isAllocatedBasis</a> () const</td></tr>
-<tr class="memdesc:a73c9503bccf6abc0897edb69554ec6de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has memory been allocated in basis format?  <br /></td></tr>
-<tr class="memitem:a94bb665c49d63d6894bfc322a5ef8458" id="r_a94bb665c49d63d6894bfc322a5ef8458"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94bb665c49d63d6894bfc322a5ef8458">isAllocatedRGrid</a> () const</td></tr>
-<tr class="memdesc:a94bb665c49d63d6894bfc322a5ef8458"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has memory been allocated in rgrid format?  <br /></td></tr>
-<tr class="memitem:ad52fd3ccdc97f8b4c30bbe6fe1a12f28" id="r_ad52fd3ccdc97f8b4c30bbe6fe1a12f28"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad52fd3ccdc97f8b4c30bbe6fe1a12f28">hasData</a> () const</td></tr>
-<tr class="memdesc:ad52fd3ccdc97f8b4c30bbe6fe1a12f28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has field data been set in either format?  <br /></td></tr>
-<tr class="memitem:af0af1ebffddfd59ffd85683448537009" id="r_af0af1ebffddfd59ffd85683448537009"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0af1ebffddfd59ffd85683448537009">isSymmetric</a> () const</td></tr>
-<tr class="memdesc:af0af1ebffddfd59ffd85683448537009"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are field symmetric under all elements of the space group?  <br /></td></tr>
-<tr class="inherit_header pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1Prdc_1_1MaskTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl&lt; D, Cuda::RField&lt; D &gt;, FieldIo&lt; D &gt; &gt;</a></td></tr>
-<tr class="memitem:ada9840488b502b10432ba1830d4c19eb inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_ada9840488b502b10432ba1830d4c19eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#ada9840488b502b10432ba1830d4c19eb">MaskTmpl</a> ()</td></tr>
-<tr class="memdesc:ada9840488b502b10432ba1830d4c19eb inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="memitem:a8ae94ca5f62f482c5e1ac387c42139dc inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_a8ae94ca5f62f482c5e1ac387c42139dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a8ae94ca5f62f482c5e1ac387c42139dc">~MaskTmpl</a> ()</td></tr>
-<tr class="memdesc:a8ae94ca5f62f482c5e1ac387c42139dc inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:a1e9cafdb508be079c524e3c1c32bf9e2 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_a1e9cafdb508be079c524e3c1c32bf9e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a1e9cafdb508be079c524e3c1c32bf9e2">setFieldIo</a> (FieldIo&lt; D &gt; const &amp;<a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a840fa0d1ab8ee931447b9131d91c6377">fieldIo</a>)</td></tr>
-<tr class="memdesc:a1e9cafdb508be079c524e3c1c32bf9e2 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create association with FieldIo (store pointer).  <br /></td></tr>
-<tr class="memitem:a68708436a6513299632bdc5fd360ac15 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_a68708436a6513299632bdc5fd360ac15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a68708436a6513299632bdc5fd360ac15">setReadUnitCell</a> (<a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html">UnitCell</a>&lt; D &gt; &amp;cell)</td></tr>
-<tr class="memdesc:a68708436a6513299632bdc5fd360ac15 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set unit cell used when reading a mask field file.  <br /></td></tr>
-<tr class="memitem:aedbe3a6bfd0f845aa256df27f8eea325 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_aedbe3a6bfd0f845aa256df27f8eea325"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#aedbe3a6bfd0f845aa256df27f8eea325">setWriteUnitCell</a> (<a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;cell)</td></tr>
-<tr class="memdesc:aedbe3a6bfd0f845aa256df27f8eea325 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set unit cell used when writing a mask field file.  <br /></td></tr>
-<tr class="memitem:a05356044ba9f686431609dad100d0f45 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_a05356044ba9f686431609dad100d0f45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a05356044ba9f686431609dad100d0f45">allocateBasis</a> (int <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a1803208cb1c4a149aacdab0cabdd854f">nBasis</a>)</td></tr>
-<tr class="memdesc:a05356044ba9f686431609dad100d0f45 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory for the field in basis format.  <br /></td></tr>
-<tr class="memitem:ac82996cc108c0b09e7c144fb69ada3f2 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_ac82996cc108c0b09e7c144fb69ada3f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#ac82996cc108c0b09e7c144fb69ada3f2">allocateRGrid</a> (<a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;dimensions)</td></tr>
-<tr class="memdesc:ac82996cc108c0b09e7c144fb69ada3f2 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory for the field in rgrid format.  <br /></td></tr>
-<tr class="memitem:a982edd8136d6831da5582b6a9d3613ce inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_a982edd8136d6831da5582b6a9d3613ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a982edd8136d6831da5582b6a9d3613ce">setBasis</a> (<a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; const &amp;field)</td></tr>
-<tr class="memdesc:a982edd8136d6831da5582b6a9d3613ce inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set field component values, in symmetrized Fourier format.  <br /></td></tr>
-<tr class="memitem:a953bf300c59c4f0ead6bc3fb26b52166 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_a953bf300c59c4f0ead6bc3fb26b52166"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a953bf300c59c4f0ead6bc3fb26b52166">setRGrid</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">Cuda::RField</a>&lt; D &gt; const &amp;field, bool <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a05364973921b0b9919b9334274c9eb0d">isSymmetric</a>=false)</td></tr>
-<tr class="memdesc:a953bf300c59c4f0ead6bc3fb26b52166 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set field values in real-space (r-grid) format.  <br /></td></tr>
-<tr class="memitem:ac2a981d033d7570833c4669394bbf734 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_ac2a981d033d7570833c4669394bbf734"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#ac2a981d033d7570833c4669394bbf734">readBasis</a> (std::istream &amp;in)</td></tr>
-<tr class="memdesc:ac2a981d033d7570833c4669394bbf734 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read field from input stream in symmetrized basis format.  <br /></td></tr>
-<tr class="memitem:a9b0dd17885a26f75bebdbeb073021a64 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_a9b0dd17885a26f75bebdbeb073021a64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a9b0dd17885a26f75bebdbeb073021a64">readRGrid</a> (std::istream &amp;in, bool <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a05364973921b0b9919b9334274c9eb0d">isSymmetric</a>=false)</td></tr>
-<tr class="memdesc:a9b0dd17885a26f75bebdbeb073021a64 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads field from an input stream in real-space (r-grid) format.  <br /></td></tr>
-<tr class="memitem:a2f1f1a51f25f9d59c81f4eec031847c6 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_a2f1f1a51f25f9d59c81f4eec031847c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a2f1f1a51f25f9d59c81f4eec031847c6">writeBasis</a> (std::ostream &amp;out) const</td></tr>
-<tr class="memdesc:a2f1f1a51f25f9d59c81f4eec031847c6 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write fields to an input stream in symmetrized basis format.  <br /></td></tr>
-<tr class="memitem:ac658f5cce46f5463368f3e02727f54bb inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_ac658f5cce46f5463368f3e02727f54bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#ac658f5cce46f5463368f3e02727f54bb">writeRGrid</a> (std::ostream &amp;out) const</td></tr>
-<tr class="memdesc:ac658f5cce46f5463368f3e02727f54bb inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes fields to an input stream in real-space (r-grid) format.  <br /></td></tr>
-<tr class="memitem:a1f080afdf7a1a7ec3aaada6045398b35 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_a1f080afdf7a1a7ec3aaada6045398b35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a1f080afdf7a1a7ec3aaada6045398b35">basis</a> () const</td></tr>
-<tr class="memdesc:a1f080afdf7a1a7ec3aaada6045398b35 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the field in basis format.  <br /></td></tr>
-<tr class="memitem:a9a82a2330a1b92872a47d62efa98ed13 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_a9a82a2330a1b92872a47d62efa98ed13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">Cuda::RField</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a9a82a2330a1b92872a47d62efa98ed13">rgrid</a> () const</td></tr>
-<tr class="memdesc:a9a82a2330a1b92872a47d62efa98ed13 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the field in r-grid format.  <br /></td></tr>
-<tr class="memitem:a79d944e504d46c03bb9b0c005091ced8 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_a79d944e504d46c03bb9b0c005091ced8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a79d944e504d46c03bb9b0c005091ced8">phiTot</a> () const</td></tr>
-<tr class="memdesc:a79d944e504d46c03bb9b0c005091ced8 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the volume fraction of unit cell occupied by material.  <br /></td></tr>
-<tr class="memitem:ad4dddf5e7078efb5ebc20adf12f7f761 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_ad4dddf5e7078efb5ebc20adf12f7f761"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1Signal.html">Signal</a>&lt; void &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#ad4dddf5e7078efb5ebc20adf12f7f761">signal</a> ()</td></tr>
-<tr class="memdesc:ad4dddf5e7078efb5ebc20adf12f7f761 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a signal that notifies observers of field modification.  <br /></td></tr>
-<tr class="memitem:a9f212bb149a139dc5a8a98eabc954d61 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_a9f212bb149a139dc5a8a98eabc954d61"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a9f212bb149a139dc5a8a98eabc954d61">isAllocatedBasis</a> () const</td></tr>
-<tr class="memdesc:a9f212bb149a139dc5a8a98eabc954d61 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has memory been allocated in basis format?  <br /></td></tr>
-<tr class="memitem:ad29855014213cc29ddb43d656f71096a inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_ad29855014213cc29ddb43d656f71096a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#ad29855014213cc29ddb43d656f71096a">isAllocatedRGrid</a> () const</td></tr>
-<tr class="memdesc:ad29855014213cc29ddb43d656f71096a inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has memory been allocated in rgrid format?  <br /></td></tr>
-<tr class="memitem:a8a95bbb297fe29d674fb7544b5153874 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_a8a95bbb297fe29d674fb7544b5153874"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a8a95bbb297fe29d674fb7544b5153874">hasData</a> () const</td></tr>
-<tr class="memdesc:a8a95bbb297fe29d674fb7544b5153874 inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has field data been set in either format?  <br /></td></tr>
-<tr class="memitem:a05364973921b0b9919b9334274c9eb0d inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_a05364973921b0b9919b9334274c9eb0d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a05364973921b0b9919b9334274c9eb0d">isSymmetric</a> () const</td></tr>
-<tr class="memdesc:a05364973921b0b9919b9334274c9eb0d inherit pub_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are field symmetric under all elements of the space group?  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a3feee77e198708d8871d1009bbd7074a" id="r_a3feee77e198708d8871d1009bbd7074a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3feee77e198708d8871d1009bbd7074a">rGridAverage</a> () const override</td></tr>
-<tr class="memdesc:a3feee77e198708d8871d1009bbd7074a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the average value of the rgrid_ member.  <br /></td></tr>
-<tr class="memitem:ac7bf4aee2e023e194b178e6c898349e1" id="r_ac7bf4aee2e023e194b178e6c898349e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7bf4aee2e023e194b178e6c898349e1">meshDimensions</a> () const</td></tr>
-<tr class="memdesc:ac7bf4aee2e023e194b178e6c898349e1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh</a> dimensions in each direction, set by allocation.  <br /></td></tr>
-<tr class="memitem:a845ce4764a550c8e1168f0cead8f2296" id="r_a845ce4764a550c8e1168f0cead8f2296"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a845ce4764a550c8e1168f0cead8f2296">meshSize</a> () const</td></tr>
-<tr class="memdesc:a845ce4764a550c8e1168f0cead8f2296"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh</a> size (number of grid points), set by allocation.  <br /></td></tr>
-<tr class="memitem:a5f47f453a87b8d83572dbbf92983fe65" id="r_a5f47f453a87b8d83572dbbf92983fe65"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f47f453a87b8d83572dbbf92983fe65">nBasis</a> () const</td></tr>
-<tr class="memdesc:a5f47f453a87b8d83572dbbf92983fe65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of basis functions, set by allocation.  <br /></td></tr>
-<tr class="memitem:afc59e5730d44f230fdc2038d2104dfad" id="r_afc59e5730d44f230fdc2038d2104dfad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc59e5730d44f230fdc2038d2104dfad">fieldIo</a> () const</td></tr>
-<tr class="memdesc:afc59e5730d44f230fdc2038d2104dfad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associated <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">FieldIo</a> object (const reference).  <br /></td></tr>
-<tr class="inherit_header pro_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classPscf_1_1Prdc_1_1MaskTmpl')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl&lt; D, Cuda::RField&lt; D &gt;, FieldIo&lt; D &gt; &gt;</a></td></tr>
-<tr class="memitem:aeb56c0431b5e9e2c6f03f9438576328f inherit pro_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_aeb56c0431b5e9e2c6f03f9438576328f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#aeb56c0431b5e9e2c6f03f9438576328f">meshDimensions</a> () const</td></tr>
-<tr class="memdesc:aeb56c0431b5e9e2c6f03f9438576328f inherit pro_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh</a> dimensions in each direction, set by allocation.  <br /></td></tr>
-<tr class="memitem:ae4a199e5bc0a89a3700c8b3c5aa3fd31 inherit pro_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_ae4a199e5bc0a89a3700c8b3c5aa3fd31"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#ae4a199e5bc0a89a3700c8b3c5aa3fd31">meshSize</a> () const</td></tr>
-<tr class="memdesc:ae4a199e5bc0a89a3700c8b3c5aa3fd31 inherit pro_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh</a> size (number of grid points), set by allocation.  <br /></td></tr>
-<tr class="memitem:a1803208cb1c4a149aacdab0cabdd854f inherit pro_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_a1803208cb1c4a149aacdab0cabdd854f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a1803208cb1c4a149aacdab0cabdd854f">nBasis</a> () const</td></tr>
-<tr class="memdesc:a1803208cb1c4a149aacdab0cabdd854f inherit pro_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of basis functions, set by allocation.  <br /></td></tr>
-<tr class="memitem:a840fa0d1ab8ee931447b9131d91c6377 inherit pro_methods_classPscf_1_1Prdc_1_1MaskTmpl" id="r_a840fa0d1ab8ee931447b9131d91c6377"><td class="memItemLeft" align="right" valign="top">FieldIo&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a840fa0d1ab8ee931447b9131d91c6377">fieldIo</a> () const</td></tr>
-<tr class="memdesc:a840fa0d1ab8ee931447b9131d91c6377 inherit pro_methods_classPscf_1_1Prdc_1_1MaskTmpl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associated FieldIo object (const reference).  <br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_classPscf_1_1Rp_1_1Mask"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1Rp_1_1Mask')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1Rp_1_1Mask.html">Pscf::Rp::Mask&lt; D, RField&lt; D &gt;, FieldIo&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:abf846dacb0ce2a317536a9d123423b5b inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_abf846dacb0ce2a317536a9d123423b5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#abf846dacb0ce2a317536a9d123423b5b">setFieldIo</a> (<a class="el" href="classPscf_1_1Rp_1_1FieldIo.html">FieldIo</a>&lt; D &gt; const &amp;<a class="el" href="classPscf_1_1Rp_1_1Mask.html#ae33e248b41e650bba236ed990b2d296e">fieldIo</a>)</td></tr>
+<tr class="memdesc:abf846dacb0ce2a317536a9d123423b5b inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create association with <a class="el" href="classPscf_1_1Rp_1_1FieldIo.html" title="File input/output, format conversions and other utilities for fields.">FieldIo</a> (store pointer).  <br /></td></tr>
+<tr class="memitem:a26e26e62738d86a997683d8975391666 inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_a26e26e62738d86a997683d8975391666"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#a26e26e62738d86a997683d8975391666">setReadUnitCell</a> (<a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html">UnitCell</a>&lt; D &gt; &amp;cell)</td></tr>
+<tr class="memdesc:a26e26e62738d86a997683d8975391666 inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set unit cell used when reading a mask field file.  <br /></td></tr>
+<tr class="memitem:a1274fe40477a303b6a38471037563bdc inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_a1274fe40477a303b6a38471037563bdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#a1274fe40477a303b6a38471037563bdc">setWriteUnitCell</a> (<a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;cell)</td></tr>
+<tr class="memdesc:a1274fe40477a303b6a38471037563bdc inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set unit cell used when writing a mask field file.  <br /></td></tr>
+<tr class="memitem:a0d6649a1a07ffcb03abc9b5297460629 inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_a0d6649a1a07ffcb03abc9b5297460629"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#a0d6649a1a07ffcb03abc9b5297460629">allocateBasis</a> (int <a class="el" href="classPscf_1_1Rp_1_1Mask.html#aaaaca29c8da96b9bd1a1429ce85b588b">nBasis</a>)</td></tr>
+<tr class="memdesc:a0d6649a1a07ffcb03abc9b5297460629 inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory for the field in basis format.  <br /></td></tr>
+<tr class="memitem:ae2845641f439b0e0521a3984b46a9581 inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_ae2845641f439b0e0521a3984b46a9581"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#ae2845641f439b0e0521a3984b46a9581">allocateRGrid</a> (<a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;dimensions)</td></tr>
+<tr class="memdesc:ae2845641f439b0e0521a3984b46a9581 inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory for the field in rgrid format.  <br /></td></tr>
+<tr class="memitem:aa3c7da4cce0e52695b92b81a170e883a inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_aa3c7da4cce0e52695b92b81a170e883a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#aa3c7da4cce0e52695b92b81a170e883a">setBasis</a> (<a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; const &amp;field)</td></tr>
+<tr class="memdesc:aa3c7da4cce0e52695b92b81a170e883a inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set field component values, in symmetrized Fourier format.  <br /></td></tr>
+<tr class="memitem:a6568c670d2aff93e60a73427f89eae44 inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_a6568c670d2aff93e60a73427f89eae44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#a6568c670d2aff93e60a73427f89eae44">setRGrid</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;field, bool <a class="el" href="classPscf_1_1Rp_1_1Mask.html#a232346f37db5e56df36680523f32f844">isSymmetric</a>=false)</td></tr>
+<tr class="memdesc:a6568c670d2aff93e60a73427f89eae44 inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set field values in real-space (r-grid) format.  <br /></td></tr>
+<tr class="memitem:a4f7cafb2c07221723cf5516acd0214e5 inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_a4f7cafb2c07221723cf5516acd0214e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#a4f7cafb2c07221723cf5516acd0214e5">readBasis</a> (std::istream &amp;in)</td></tr>
+<tr class="memdesc:a4f7cafb2c07221723cf5516acd0214e5 inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read field from input stream in symmetrized basis format.  <br /></td></tr>
+<tr class="memitem:a4b3eac0b5d01c776c5d8946ad13adbc9 inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_a4b3eac0b5d01c776c5d8946ad13adbc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#a4b3eac0b5d01c776c5d8946ad13adbc9">readRGrid</a> (std::istream &amp;in, bool <a class="el" href="classPscf_1_1Rp_1_1Mask.html#a232346f37db5e56df36680523f32f844">isSymmetric</a>=false)</td></tr>
+<tr class="memdesc:a4b3eac0b5d01c776c5d8946ad13adbc9 inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads field from an input stream in real-space (r-grid) format.  <br /></td></tr>
+<tr class="memitem:acca24cd27d79bd89a95b4734a5d1e614 inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_acca24cd27d79bd89a95b4734a5d1e614"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#acca24cd27d79bd89a95b4734a5d1e614">writeBasis</a> (std::ostream &amp;out) const</td></tr>
+<tr class="memdesc:acca24cd27d79bd89a95b4734a5d1e614 inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write fields to an input stream in symmetrized basis format.  <br /></td></tr>
+<tr class="memitem:a8e0056a5cf195577bc0c5d55c902581d inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_a8e0056a5cf195577bc0c5d55c902581d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#a8e0056a5cf195577bc0c5d55c902581d">writeRGrid</a> (std::ostream &amp;out) const</td></tr>
+<tr class="memdesc:a8e0056a5cf195577bc0c5d55c902581d inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes fields to an input stream in real-space (r-grid) format.  <br /></td></tr>
+<tr class="memitem:ac9c9171a405d2765ce13b3448aa8086b inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_ac9c9171a405d2765ce13b3448aa8086b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#ac9c9171a405d2765ce13b3448aa8086b">basis</a> () const</td></tr>
+<tr class="memdesc:ac9c9171a405d2765ce13b3448aa8086b inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the field in basis format.  <br /></td></tr>
+<tr class="memitem:acf78218bc76e71a191ed42bbf4a6e031 inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_acf78218bc76e71a191ed42bbf4a6e031"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#acf78218bc76e71a191ed42bbf4a6e031">rgrid</a> () const</td></tr>
+<tr class="memdesc:acf78218bc76e71a191ed42bbf4a6e031 inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the field in r-grid format.  <br /></td></tr>
+<tr class="memitem:a439e5d5115405eff5181785a45873637 inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_a439e5d5115405eff5181785a45873637"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#a439e5d5115405eff5181785a45873637">phiTot</a> () const</td></tr>
+<tr class="memdesc:a439e5d5115405eff5181785a45873637 inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the volume fraction of unit cell occupied by material.  <br /></td></tr>
+<tr class="memitem:a6036a7ba82bd078846be7ccb9eadb500 inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_a6036a7ba82bd078846be7ccb9eadb500"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1Signal.html">Signal</a>&lt; void &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#a6036a7ba82bd078846be7ccb9eadb500">signal</a> ()</td></tr>
+<tr class="memdesc:a6036a7ba82bd078846be7ccb9eadb500 inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a signal that notifies observers of field modification.  <br /></td></tr>
+<tr class="memitem:aa71e2e13e95285e8fd6e08ea9af2f462 inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_aa71e2e13e95285e8fd6e08ea9af2f462"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#aa71e2e13e95285e8fd6e08ea9af2f462">isAllocatedBasis</a> () const</td></tr>
+<tr class="memdesc:aa71e2e13e95285e8fd6e08ea9af2f462 inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has memory been allocated in basis format?  <br /></td></tr>
+<tr class="memitem:a7e3b733352fd43ce38f34864fc7e9a83 inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_a7e3b733352fd43ce38f34864fc7e9a83"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#a7e3b733352fd43ce38f34864fc7e9a83">isAllocatedRGrid</a> () const</td></tr>
+<tr class="memdesc:a7e3b733352fd43ce38f34864fc7e9a83 inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has memory been allocated in rgrid format?  <br /></td></tr>
+<tr class="memitem:a07841431160d0c495eb4b76614fa1991 inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_a07841431160d0c495eb4b76614fa1991"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#a07841431160d0c495eb4b76614fa1991">hasData</a> () const</td></tr>
+<tr class="memdesc:a07841431160d0c495eb4b76614fa1991 inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has field data been set in either format?  <br /></td></tr>
+<tr class="memitem:a232346f37db5e56df36680523f32f844 inherit pub_methods_classPscf_1_1Rp_1_1Mask" id="r_a232346f37db5e56df36680523f32f844"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#a232346f37db5e56df36680523f32f844">isSymmetric</a> () const</td></tr>
+<tr class="memdesc:a232346f37db5e56df36680523f32f844 inherit pub_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are field symmetric under all elements of the space group?  <br /></td></tr>
+<tr class="inherit_header pro_methods_classPscf_1_1Rp_1_1Mask"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classPscf_1_1Rp_1_1Mask')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classPscf_1_1Rp_1_1Mask.html">Pscf::Rp::Mask&lt; D, RField&lt; D &gt;, FieldIo&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:ace659747377d399b57fd3339804dfd38 inherit pro_methods_classPscf_1_1Rp_1_1Mask" id="r_ace659747377d399b57fd3339804dfd38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#ace659747377d399b57fd3339804dfd38">Mask</a> ()</td></tr>
+<tr class="memdesc:ace659747377d399b57fd3339804dfd38 inherit pro_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:a1eb0f13901cd1706eb66ddc3e073e3db inherit pro_methods_classPscf_1_1Rp_1_1Mask" id="r_a1eb0f13901cd1706eb66ddc3e073e3db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#a1eb0f13901cd1706eb66ddc3e073e3db">~Mask</a> ()</td></tr>
+<tr class="memdesc:a1eb0f13901cd1706eb66ddc3e073e3db inherit pro_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:ab16e58974d5c9b3525add2637dfc2b05 inherit pro_methods_classPscf_1_1Rp_1_1Mask" id="r_ab16e58974d5c9b3525add2637dfc2b05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#ab16e58974d5c9b3525add2637dfc2b05">meshDimensions</a> () const</td></tr>
+<tr class="memdesc:ab16e58974d5c9b3525add2637dfc2b05 inherit pro_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh</a> dimensions in each direction, set by allocation.  <br /></td></tr>
+<tr class="memitem:afe37682a8b0331e1c715078c062bbbbb inherit pro_methods_classPscf_1_1Rp_1_1Mask" id="r_afe37682a8b0331e1c715078c062bbbbb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#afe37682a8b0331e1c715078c062bbbbb">meshSize</a> () const</td></tr>
+<tr class="memdesc:afe37682a8b0331e1c715078c062bbbbb inherit pro_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh</a> size (number of grid points), set by allocation.  <br /></td></tr>
+<tr class="memitem:aaaaca29c8da96b9bd1a1429ce85b588b inherit pro_methods_classPscf_1_1Rp_1_1Mask" id="r_aaaaca29c8da96b9bd1a1429ce85b588b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#aaaaca29c8da96b9bd1a1429ce85b588b">nBasis</a> () const</td></tr>
+<tr class="memdesc:aaaaca29c8da96b9bd1a1429ce85b588b inherit pro_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of basis functions, set by allocation.  <br /></td></tr>
+<tr class="memitem:ae33e248b41e650bba236ed990b2d296e inherit pro_methods_classPscf_1_1Rp_1_1Mask" id="r_ae33e248b41e650bba236ed990b2d296e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rp_1_1FieldIo.html">FieldIo</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Mask.html#ae33e248b41e650bba236ed990b2d296e">fieldIo</a> () const</td></tr>
+<tr class="memdesc:ae33e248b41e650bba236ed990b2d296e inherit pro_methods_classPscf_1_1Rp_1_1Mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associated <a class="el" href="classPscf_1_1Rp_1_1FieldIo.html" title="File input/output, format conversions and other utilities for fields.">FieldIo</a> object (const reference).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
 class Pscf::Rpg::Mask&lt; D &gt;</div><p>A field to which the total monomer concentration is constrained. </p>
-<p>Please refer to the documentation of the <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html" title="Container for a field to which the total density is constrained.">Prdc::MaskTmpl</a> base class template for more complete API documentation for this class template. The public interface of <a class="el" href="classPscf_1_1Rpg_1_1Mask.html" title="A field to which the total monomer concentration is constrained.">Rpg::Mask</a> is identical to that of the base class template <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html" title="Container for a field to which the total density is constrained.">Prdc::MaskTmpl</a>. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2field_2Mask_8h_source.html#l00032">32</a> of file <a class="el" href="rpg_2field_2Mask_8h_source.html">rpg/field/Mask.h</a>.</p>
-</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
-<a id="a622b4b8db0e1df2feb52ba525ec4ae8b" name="a622b4b8db0e1df2feb52ba525ec4ae8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a622b4b8db0e1df2feb52ba525ec4ae8b">&#9670;&#160;</a></span>Base</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt;D&gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt;D&gt; &gt; <a class="el" href="classPscf_1_1Rpg_1_1Mask.html">Pscf::Rpg::Mask</a>&lt; D &gt;::Base</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="#a622b4b8db0e1df2feb52ba525ec4ae8b" title="Base class typedef.">Base</a> class typedef. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2field_2Mask_8h_source.html#l00039">39</a> of file <a class="el" href="rpg_2field_2Mask_8h_source.html">rpg/field/Mask.h</a>.</p>
-
-</div>
-</div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a3feee77e198708d8871d1009bbd7074a" name="a3feee77e198708d8871d1009bbd7074a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3feee77e198708d8871d1009bbd7074a">&#9670;&#160;</a></span>rGridAverage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="classPscf_1_1Rpg_1_1Mask.html">Pscf::Rpg::Mask</a>&lt; D &gt;::rGridAverage </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Calculate the average value of the rgrid_ member. </p>
-
-<p>Implements <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html#a408296f20cd951e7b4ce78eab78d5201">Pscf::Prdc::MaskTmpl&lt; D, Cuda::RField&lt; D &gt;, FieldIo&lt; D &gt; &gt;</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2field_2Mask_8tpp_source.html#l00026">26</a> of file <a class="el" href="rpg_2field_2Mask_8tpp_source.html">rpg/field/Mask.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="MaskTmpl_8tpp_source.html#l00028">Pscf::Prdc::MaskTmpl&lt; D, Cuda::RField&lt; D &gt;, FieldIo&lt; D &gt; &gt;::MaskTmpl()</a>, <a class="el" href="#a6d471bacca0a8151bbf60057ee37149f">rgrid()</a>, and <a class="el" href="Reduce_8cpp_source.html#l00080">Pscf::Prdc::Cpu::Reduce::sum()</a>.</p>
-
-</div>
-</div>
-<a id="ad0f03b01e9248c0cdaa506c43b6ee8c4" name="ad0f03b01e9248c0cdaa506c43b6ee8c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0f03b01e9248c0cdaa506c43b6ee8c4">&#9670;&#160;</a></span>setFieldIo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::setFieldIo </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>fieldIo</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create association with <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">FieldIo</a> (store pointer). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">fieldIo</td><td>associated <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">FieldIo</a> object </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a33ddf9277e60142c33f09fd600260948" name="a33ddf9277e60142c33f09fd600260948"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33ddf9277e60142c33f09fd600260948">&#9670;&#160;</a></span>allocateBasis()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::allocateBasis </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nBasis</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Allocate memory for the field in basis format. </p>
-<p>An <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a> will be thrown if this is called more than once.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">nBasis</td><td>number of basis functions </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="af368c6be57a7b5c2192871296a55d192" name="af368c6be57a7b5c2192871296a55d192"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af368c6be57a7b5c2192871296a55d192">&#9670;&#160;</a></span>allocateRGrid()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::allocateRGrid </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>dimensions</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Allocate memory for the field in rgrid format. </p>
-<p>An <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a> will be thrown if this is called more than once.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dimensions</td><td>dimensions of spatial mesh </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a39af9d4fc1f4a54e802f6239fb3559cf" name="a39af9d4fc1f4a54e802f6239fb3559cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39af9d4fc1f4a54e802f6239fb3559cf">&#9670;&#160;</a></span>setBasis()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::setBasis </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>field</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set field component values, in symmetrized Fourier format. </p>
-<p>This function also computes and stores the corresponding r-grid representation. On return, hasData and isSymmetric are both true.</p>
-<p>The associated basis must be initialized on entry. As needed, r-grid and/or basis fields may be allocated within this function.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">field</td><td>components of field in basis format </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a48275cc66fa3182a8801eecf269ffe00" name="a48275cc66fa3182a8801eecf269ffe00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48275cc66fa3182a8801eecf269ffe00">&#9670;&#160;</a></span>setRGrid()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::setRGrid </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>field</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isSymmetric</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set field values in real-space (r-grid) format. </p>
-<p>If the isSymmetric parameter is true, this function assumes that the field are known to be symmetric and so computes and stores the corresponding basis components. If isSymmetric is false, it only sets the values in the r-grid format.</p>
-<p>On return, hasData is true and the persistent isSymmetric flag defined by the class is set to the value of the isSymmetric input parameter.</p>
-<p>As needed, r-grid and/or basis fields may be allocated within this function. If the isSymmetric parameter is true, then a basis must be initialized prior to entry.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">field</td><td>new field in r-grid format </td></tr>
-    <tr><td class="paramname">isSymmetric</td><td>is this field symmetric under the space group? </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="acf9d410c194107d50fa1238f5b45ec8f" name="acf9d410c194107d50fa1238f5b45ec8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf9d410c194107d50fa1238f5b45ec8f">&#9670;&#160;</a></span>readBasis() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::readBasis </td>
-          <td>(</td>
-          <td class="paramtype">std::istream &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Read field from input stream in symmetrized basis format. </p>
-<p>This function also computes and stores the corresponding r-grid representation. On return, hasData and isSymmetric are both true.</p>
-<p>This object must already be allocated and associated with a a <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">FieldIo</a> object to run this function.</p>
-<p>As needed, r-grid and/or basis fields may be allocated within this functions, if not allocated on entry. An associated basis will be initialized if it is not initialized on entry.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">in</td><td>input stream from which to read field </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a279f37c3372da8964075631bb3ed3f9a" name="a279f37c3372da8964075631bb3ed3f9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a279f37c3372da8964075631bb3ed3f9a">&#9670;&#160;</a></span>readBasis() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::readBasis </td>
-          <td>(</td>
-          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Read field from a named file, in symmetrized basis format. </p>
-<p>This function also computes and stores the corresponding r-grid representation. On return, hasData and isSymmetric are both true.</p>
-<p>As needed, r-grid and/or basis fields may be allocated within this functions, if not allocated on entry. An associated basis will be initialized if it is not initialized on entry.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">filename</td><td>file from which to read field </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="af568bb1a487595aa75b3934116a2d9fb" name="af568bb1a487595aa75b3934116a2d9fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af568bb1a487595aa75b3934116a2d9fb">&#9670;&#160;</a></span>readRGrid() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::readRGrid </td>
-          <td>(</td>
-          <td class="paramtype">std::istream &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isSymmetric</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Reads field from an input stream in real-space (r-grid) format. </p>
-<p>If the isSymmetric parameter is true, this function assumes that the field is known to be symmetric and so computes and stores the corresponding basis format. If isSymmetric is false, it only sets the values in the r-grid format.</p>
-<p>On return, hasData is true and the persistent isSymmetric flag defined by the class is set to the value of the isSymmetric input parameter.</p>
-<p>As needed, r-grid and/or basis fields may be allocated within this functions, if not allocated on entry. An associated basis will be initialized if it is not initialized on entry.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">in</td><td>input stream from which to read field </td></tr>
-    <tr><td class="paramname">isSymmetric</td><td>is this field symmetric under the space group? </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ac9ada5927487da8822a58874b90345f4" name="ac9ada5927487da8822a58874b90345f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9ada5927487da8822a58874b90345f4">&#9670;&#160;</a></span>readRGrid() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::readRGrid </td>
-          <td>(</td>
-          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isSymmetric</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Reads field from a named file, in real-space (r-grid) format. </p>
-<p>If the isSymmetric parameter is true, this function assumes that the field is known to be symmetric and so computes and stores the corresponding basis format. If isSymmetric is false, it only sets the values in the r-grid format.</p>
-<p>On return, hasData is true and the persistent isSymmetric flag defined by the class is set to the value of the isSymmetric input parameter.</p>
-<p>As needed, r-grid and/or basis fields may be allocated within this functions, if not allocated on entry. An associated basis will be initialized if it is not initialized on entry.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">filename</td><td>file from which to read field </td></tr>
-    <tr><td class="paramname">isSymmetric</td><td>is this field symmetric under the space group? </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a3fcd71d3f15402df5941c08939df28f5" name="a3fcd71d3f15402df5941c08939df28f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fcd71d3f15402df5941c08939df28f5">&#9670;&#160;</a></span>writeBasis() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::writeBasis </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Write fields to an input stream in symmetrized basis format. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">out</td><td>output stream to which to write fields </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a91b927973c90f6d7d238609e863e360f" name="a91b927973c90f6d7d238609e863e360f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91b927973c90f6d7d238609e863e360f">&#9670;&#160;</a></span>writeBasis() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::writeBasis </td>
-          <td>(</td>
-          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Write fields to a named file, in symmetrized basis format. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">filename</td><td>name of file to which to write fields </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a841095169a4fe7e34200cd06d317f077" name="a841095169a4fe7e34200cd06d317f077"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a841095169a4fe7e34200cd06d317f077">&#9670;&#160;</a></span>writeRGrid() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::writeRGrid </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Writes fields to an input stream in real-space (r-grid) format. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">out</td><td>output stream to which to write fields </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a24516f4d36b482b1e05fa8f47aad2612" name="a24516f4d36b482b1e05fa8f47aad2612"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24516f4d36b482b1e05fa8f47aad2612">&#9670;&#160;</a></span>writeRGrid() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::writeRGrid </td>
-          <td>(</td>
-          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Writes fields to a named file in real-space (r-grid) format. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">filename</td><td>name of file to which to write fields </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a57275e1a053c772e374f72174376d6d6" name="a57275e1a053c772e374f72174376d6d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57275e1a053c772e374f72174376d6d6">&#9670;&#160;</a></span>basis()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; double &gt; const &amp; <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::basis </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the field in basis format. </p>
-
-</div>
-</div>
-<a id="a6d471bacca0a8151bbf60057ee37149f" name="a6d471bacca0a8151bbf60057ee37149f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d471bacca0a8151bbf60057ee37149f">&#9670;&#160;</a></span>rgrid()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt; const &amp; <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::rgrid </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the field in r-grid format. </p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2field_2Mask_8tpp_source.html#l00026">rGridAverage()</a>.</p>
-
-</div>
-</div>
-<a id="a3edce7afe888b18ef8ec51bb0b7b7ba9" name="a3edce7afe888b18ef8ec51bb0b7b7ba9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3edce7afe888b18ef8ec51bb0b7b7ba9">&#9670;&#160;</a></span>phiTot()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::phiTot </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return the volume fraction of unit cell occupied by material. </p>
-<p>This value is equivalent to the spatial average of the mask, which is the q=0 coefficient of the discrete Fourier transform.</p>
-<p>If hasData == true and isSymmetric == false (i.e., data only exists in rgrid format), then this object must be associated with a <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">FieldIo</a> object in order to call <a class="el" href="#a3edce7afe888b18ef8ec51bb0b7b7ba9" title="Return the volume fraction of unit cell occupied by material.">phiTot()</a>. In other cases, the <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">FieldIo</a> association is not necessary. </p>
-
-</div>
-</div>
-<a id="a73c9503bccf6abc0897edb69554ec6de" name="a73c9503bccf6abc0897edb69554ec6de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73c9503bccf6abc0897edb69554ec6de">&#9670;&#160;</a></span>isAllocatedBasis()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::isAllocatedBasis </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Has memory been allocated in basis format? </p>
-
-</div>
-</div>
-<a id="a94bb665c49d63d6894bfc322a5ef8458" name="a94bb665c49d63d6894bfc322a5ef8458"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94bb665c49d63d6894bfc322a5ef8458">&#9670;&#160;</a></span>isAllocatedRGrid()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::isAllocatedRGrid </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Has memory been allocated in rgrid format? </p>
-
-</div>
-</div>
-<a id="ad52fd3ccdc97f8b4c30bbe6fe1a12f28" name="ad52fd3ccdc97f8b4c30bbe6fe1a12f28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad52fd3ccdc97f8b4c30bbe6fe1a12f28">&#9670;&#160;</a></span>hasData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::hasData </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Has field data been set in either format? </p>
-<p>This flag is set true in setBasis and setRGrid. </p>
-
-</div>
-</div>
-<a id="af0af1ebffddfd59ffd85683448537009" name="af0af1ebffddfd59ffd85683448537009"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0af1ebffddfd59ffd85683448537009">&#9670;&#160;</a></span>isSymmetric()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::isSymmetric </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Are field symmetric under all elements of the space group? </p>
-<p>A valid basis format exists if and only if isSymmetric is true. This flat is set true if the field were input in basis format by the function setBasis, or if they were set in grid format by the function setRGrid but isSymmetric was set true. </p>
-
-</div>
-</div>
-<a id="ac7bf4aee2e023e194b178e6c898349e1" name="ac7bf4aee2e023e194b178e6c898349e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7bf4aee2e023e194b178e6c898349e1">&#9670;&#160;</a></span>meshDimensions()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp; <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::meshDimensions </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh</a> dimensions in each direction, set by allocation. </p>
-
-<p class="definition">Definition at line <a class="el" href="MaskTmpl_8h_source.html#l00370">370</a> of file <a class="el" href="MaskTmpl_8h_source.html">MaskTmpl.h</a>.</p>
-
-</div>
-</div>
-<a id="a845ce4764a550c8e1168f0cead8f2296" name="a845ce4764a550c8e1168f0cead8f2296"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a845ce4764a550c8e1168f0cead8f2296">&#9670;&#160;</a></span>meshSize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::meshSize </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh</a> size (number of grid points), set by allocation. </p>
-
-<p class="definition">Definition at line <a class="el" href="MaskTmpl_8h_source.html#l00376">376</a> of file <a class="el" href="MaskTmpl_8h_source.html">MaskTmpl.h</a>.</p>
-
-</div>
-</div>
-<a id="a5f47f453a87b8d83572dbbf92983fe65" name="a5f47f453a87b8d83572dbbf92983fe65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f47f453a87b8d83572dbbf92983fe65">&#9670;&#160;</a></span>nBasis()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::nBasis </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Number of basis functions, set by allocation. </p>
-
-<p class="definition">Definition at line <a class="el" href="MaskTmpl_8h_source.html#l00382">382</a> of file <a class="el" href="MaskTmpl_8h_source.html">MaskTmpl.h</a>.</p>
-
-</div>
-</div>
-<a id="afc59e5730d44f230fdc2038d2104dfad" name="afc59e5730d44f230fdc2038d2104dfad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc59e5730d44f230fdc2038d2104dfad">&#9670;&#160;</a></span>fieldIo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; const &amp; <a class="el" href="classPscf_1_1Prdc_1_1MaskTmpl.html">Pscf::Prdc::MaskTmpl</a>&lt; D, <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">Prdc::Cuda::RField</a>&lt; D &gt;, <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html">FieldIo</a>&lt; D &gt; &gt;::fieldIo </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Associated <a class="el" href="classPscf_1_1Rpg_1_1FieldIo.html" title="File input/output operations and format conversions for fields.">FieldIo</a> object (const reference). </p>
-
-<p class="definition">Definition at line <a class="el" href="MaskTmpl_8h_source.html#l00388">388</a> of file <a class="el" href="MaskTmpl_8h_source.html">MaskTmpl.h</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="rpg_2field_2Mask_8h_source.html">rpg/field/Mask.h</a></li>
-<li><a class="el" href="rpg_2field_2Mask_8tpp_source.html">rpg/field/Mask.tpp</a></li>
+<p>Specializations of this template with D=1, 2, and 3 are derived from corresponding specializations of base class template <a class="el" href="classPscf_1_1Rp_1_1Mask.html" title="A field that specifies an inhomogeneous total monomer concentration.">Rp::Mask</a>, and inherit their public interface and all of their source code from this base class.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classPscf_1_1Rp_1_1Mask.html" title="A field that specifies an inhomogeneous total monomer concentration.">Rp::Mask</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_2field_2Mask_8h_source.html#l00034">34</a> of file <a class="el" href="_2field_2Mask_8h_source.html">/field/Mask.h</a>.</p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="_2field_2Mask_8h_source.html">/field/Mask.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

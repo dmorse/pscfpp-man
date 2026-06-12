@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -57,7 +57,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Classes that describe crystallographic information.  
+<p>Unit cells, symmetries and symmetry-adapted basis.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -66,20 +66,20 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symmetry-adapted Fourier basis for pseudo-spectral SCFT.  <a href="classPscf_1_1Prdc_1_1Basis.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Pscf_3A_3APrdc_3A_3ABFieldComparison" id="r_Pscf_3A_3APrdc_3A_3ABFieldComparison"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1BFieldComparison.html">Pscf::Prdc::BFieldComparison</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator for fields in symmetry-adapted basis format.  <a href="classPscf_1_1Prdc_1_1BFieldComparison.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Pscf_3A_3APrdc_3A_3ABWave_3C_20D_20_3E" id="r_Pscf_3A_3APrdc_3A_3ABWave_3C_20D_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPscf_1_1Prdc_1_1BWave.html">Pscf::Prdc::BWave&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wave struct designed for use within <a class="el" href="classPscf_1_1Prdc_1_1Basis.html" title="Symmetry-adapted Fourier basis for pseudo-spectral SCFT.">Basis</a> construction.  <a href="structPscf_1_1Prdc_1_1BWave.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Pscf_3A_3APrdc_3A_3ABWaveNormComp_3C_20D_20_3E" id="r_Pscf_3A_3APrdc_3A_3ABWaveNormComp_3C_20D_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPscf_1_1Prdc_1_1BWaveNormComp.html">Pscf::Prdc::BWaveNormComp&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator for <a class="el" href="structPscf_1_1Prdc_1_1BWave.html" title="Wave struct designed for use within Basis construction.">BWave</a> objects, based on BWave::sqNorm.  <a href="structPscf_1_1Prdc_1_1BWaveNormComp.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Pscf_3A_3APrdc_3A_3ABWaveStdComp_3C_20D_20_3E" id="r_Pscf_3A_3APrdc_3A_3ABWaveStdComp_3C_20D_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPscf_1_1Prdc_1_1BWaveStdComp.html">Pscf::Prdc::BWaveStdComp&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator for <a class="el" href="structPscf_1_1Prdc_1_1BWave.html" title="Wave struct designed for use within Basis construction.">BWave</a> objects, based on BWave::indicesStd.  <a href="structPscf_1_1Prdc_1_1BWaveStdComp.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Pscf_3A_3APrdc_3A_3ABWaveMinComp_3C_20D_20_3E" id="r_Pscf_3A_3APrdc_3A_3ABWaveMinComp_3C_20D_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPscf_1_1Prdc_1_1BWaveMinComp.html">Pscf::Prdc::BWaveMinComp&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator for <a class="el" href="structPscf_1_1Prdc_1_1BWave.html" title="Wave struct designed for use within Basis construction.">BWave</a> objects, based on BWave::indicesMin.  <a href="structPscf_1_1Prdc_1_1BWaveMinComp.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Pscf_3A_3APrdc_3A_3ASpaceGroup_3C_20D_20_3E" id="r_Pscf_3A_3APrdc_3A_3ASpaceGroup_3C_20D_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SpaceGroup.html">Pscf::Prdc::SpaceGroup&lt; D &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crystallographic space group.  <a href="classPscf_1_1Prdc_1_1SpaceGroup.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Pscf_3A_3APrdc_3A_3ASpaceSymmetry_3C_20D_20_3E" id="r_Pscf_3A_3APrdc_3A_3ASpaceSymmetry_3C_20D_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SpaceSymmetry.html">Pscf::Prdc::SpaceSymmetry&lt; D &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classPscf_1_1Prdc_1_1SpaceSymmetry.html" title="A SpaceSymmetry represents a crystallographic space group symmetry.">SpaceSymmetry</a> represents a crystallographic space group symmetry.  <a href="classPscf_1_1Prdc_1_1SpaceSymmetry.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Pscf_3A_3APrdc_3A_3ASymmetryGroup_3C_20Symmetry_20_3E" id="r_Pscf_3A_3APrdc_3A_3ASymmetryGroup_3C_20Symmetry_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1SymmetryGroup.html">Pscf::Prdc::SymmetryGroup&lt; Symmetry &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class template for a group of elements.  <a href="classPscf_1_1Prdc_1_1SymmetryGroup.html#details">More...</a><br /></td></tr>
-<tr class="memitem:Pscf_3A_3APrdc_3A_3ATWave_3C_20D_20_3E" id="r_Pscf_3A_3APrdc_3A_3ATWave_3C_20D_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPscf_1_1Prdc_1_1TWave.html">Pscf::Prdc::TWave&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple wave struct for use within <a class="el" href="classPscf_1_1Prdc_1_1Basis.html" title="Symmetry-adapted Fourier basis for pseudo-spectral SCFT.">Basis</a> construction.  <a href="structPscf_1_1Prdc_1_1TWave.html#details">More...</a><br /></td></tr>
-<tr class="memitem:Pscf_3A_3APrdc_3A_3ATWaveNormComp_3C_20D_20_3E" id="r_Pscf_3A_3APrdc_3A_3ATWaveNormComp_3C_20D_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPscf_1_1Prdc_1_1TWaveNormComp.html">Pscf::Prdc::TWaveNormComp&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator for <a class="el" href="structPscf_1_1Prdc_1_1TWave.html" title="Simple wave struct for use within Basis construction.">TWave</a> objects, based on TWave::sqNorm.  <a href="structPscf_1_1Prdc_1_1TWaveNormComp.html#details">More...</a><br /></td></tr>
-<tr class="memitem:Pscf_3A_3APrdc_3A_3ATWaveDftComp_3C_20D_20_3E" id="r_Pscf_3A_3APrdc_3A_3ATWaveDftComp_3C_20D_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPscf_1_1Prdc_1_1TWaveDftComp.html">Pscf::Prdc::TWaveDftComp&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator for <a class="el" href="structPscf_1_1Prdc_1_1TWave.html" title="Simple wave struct for use within Basis construction.">TWave</a> objects, based on TWave::indicesDft.  <a href="structPscf_1_1Prdc_1_1TWaveDftComp.html#details">More...</a><br /></td></tr>
-<tr class="memitem:Pscf_3A_3APrdc_3A_3ATWaveBzComp_3C_20D_20_3E" id="r_Pscf_3A_3APrdc_3A_3ATWaveBzComp_3C_20D_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPscf_1_1Prdc_1_1TWaveBzComp.html">Pscf::Prdc::TWaveBzComp&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator for <a class="el" href="structPscf_1_1Prdc_1_1TWave.html" title="Simple wave struct for use within Basis construction.">TWave</a> objects, based on TWave::indicesBz.  <a href="structPscf_1_1Prdc_1_1TWaveBzComp.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Pscf_3A_3APrdc_3A_3AUnitCell_3C_20D_20_3E" id="r_Pscf_3A_3APrdc_3A_3AUnitCell_3C_20D_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html">Pscf::Prdc::UnitCell&lt; D &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base template for <a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html" title="Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.">UnitCell&lt;D&gt;</a> classes, D=1, 2 or 3.  <a href="classPscf_1_1Prdc_1_1UnitCell.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Pscf_3A_3APrdc_3A_3AUnitCell_3C_201_20_3E" id="r_Pscf_3A_3APrdc_3A_3AUnitCell_3C_201_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1UnitCell_3_011_01_4.html">Pscf::Prdc::UnitCell&lt; 1 &gt;</a></td></tr>
@@ -116,6 +116,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga860b9ee37e35ad684404aad2f4f64aa8" id="r_ga860b9ee37e35ad684404aad2f4f64aa8"><td class="memTemplParams" colspan="2">template&lt;int D&gt; </td></tr>
 <tr class="memitem:ga860b9ee37e35ad684404aad2f4f64aa8 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga860b9ee37e35ad684404aad2f4f64aa8">Pscf::Prdc::shiftToMinimum</a> (<a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;v, <a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;d, <a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;cell)</td></tr>
 <tr class="memdesc:ga860b9ee37e35ad684404aad2f4f64aa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns minimum magnitude image of DFT wavevector.  <br /></td></tr>
+<tr class="memitem:ga05c283bab3bea111791ccb7c92725246" id="r_ga05c283bab3bea111791ccb7c92725246"><td class="memTemplParams" colspan="2">template&lt;int D&gt; </td></tr>
+<tr class="memitem:ga05c283bab3bea111791ccb7c92725246 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga05c283bab3bea111791ccb7c92725246">Pscf::Prdc::sortWaves</a> (<a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;cell, <a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;meshDimensions, std::vector&lt; <a class="el" href="structPscf_1_1Sort_1_1Item.html">Sort::Item</a>&lt; double &gt; &gt; &amp;items, <a class="el" href="classUtil_1_1GArray.html">GArray</a>&lt; <a class="el" href="classUtil_1_1Pair.html">Sort::Bunch</a> &gt; &amp;bunches, double epsilon, bool isRealField)</td></tr>
+<tr class="memdesc:ga05c283bab3bea111791ccb7c92725246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorted waves and identify bunches of equal magnitude.  <br /></td></tr>
 <tr class="memitem:ga0835d71add832f65ef9ed1b525065e2e" id="r_ga0835d71add832f65ef9ed1b525065e2e"><td class="memTemplParams" colspan="2">template&lt;int D&gt; </td></tr>
 <tr class="memitem:ga0835d71add832f65ef9ed1b525065e2e template"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0835d71add832f65ef9ed1b525065e2e">Pscf::Prdc::operator&lt;&lt;</a> (std::ostream &amp;out, <a class="el" href="classPscf_1_1Prdc_1_1SpaceGroup.html">SpaceGroup</a>&lt; D &gt; const &amp;g)</td></tr>
 <tr class="memdesc:ga0835d71add832f65ef9ed1b525065e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output stream inserter operator for a <a class="el" href="classPscf_1_1Prdc_1_1SpaceGroup.html" title="Crystallographic space group.">SpaceGroup&lt;D&gt;</a>.  <br /></td></tr>
@@ -182,7 +185,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:gacca18ff95f7c952e77b33c1286620c11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write common part of field header (fortran PSCF format).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<p>Classes that describe crystallographic information. </p>
+<p>Unit cells, symmetries and symmetry-adapted basis. </p>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="gacf5628b7e4e184ae8f0357e960e65295" name="gacf5628b7e4e184ae8f0357e960e65295"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gacf5628b7e4e184ae8f0357e960e65295">&#9670;&#160;</a></span>makeGroupFileName()</h2>
@@ -253,7 +256,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00209">Pscf::Rpc::FilmFieldGenMask&lt; D &gt;::compute()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenMask_8tpp_source.html#l00276">Pscf::Rpg::FilmFieldGenMask&lt; D &gt;::compute()</a>, <a class="el" href="#gadb7f5c94045505acb1e6ca26dda93ab9">convertReducedParamIdToFull()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00174">Pscf::Rpc::FilmFieldGenMask&lt; D &gt;::modifyStress()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenMask_8tpp_source.html#l00241">Pscf::Rpg::FilmFieldGenMask&lt; D &gt;::modifyStress()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenExt_8tpp_source.html#l00059">Pscf::Rpc::FilmFieldGenExt&lt; D &gt;::stress()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00062">Pscf::Rpc::FilmFieldGenMask&lt; D &gt;::stress()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8tpp_source.html#l00195">Pscf::Rpg::FilmFieldGenExt&lt; D &gt;::stress()</a>, and <a class="el" href="rpg_2environment_2FilmFieldGenMask_8tpp_source.html#l00176">Pscf::Rpg::FilmFieldGenMask&lt; D &gt;::stress()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00213">Pscf::Rpc::FilmFieldGenMask&lt; D &gt;::compute()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenMask_8tpp_source.html#l00276">Pscf::Rpg::FilmFieldGenMask&lt; D &gt;::compute()</a>, <a class="el" href="#gadb7f5c94045505acb1e6ca26dda93ab9">convertReducedParamIdToFull()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00178">Pscf::Rpc::FilmFieldGenMask&lt; D &gt;::modifyStress()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenMask_8tpp_source.html#l00241">Pscf::Rpg::FilmFieldGenMask&lt; D &gt;::modifyStress()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenExt_8tpp_source.html#l00062">Pscf::Rpc::FilmFieldGenExt&lt; D &gt;::stress()</a>, <a class="el" href="rpc_2environment_2FilmFieldGenMask_8tpp_source.html#l00066">Pscf::Rpc::FilmFieldGenMask&lt; D &gt;::stress()</a>, <a class="el" href="rpg_2environment_2FilmFieldGenExt_8tpp_source.html#l00195">Pscf::Rpg::FilmFieldGenExt&lt; D &gt;::stress()</a>, and <a class="el" href="rpg_2environment_2FilmFieldGenMask_8tpp_source.html#l00176">Pscf::Rpg::FilmFieldGenMask&lt; D &gt;::stress()</a>.</p>
 
 </div>
 </div>
@@ -326,7 +329,7 @@ template&lt;int D&gt; </div>
 <p>Some types of conversion of unit cells with high symmetry lattice types that would result in lower-symmetry lattice type have been prohibited if the appropriate conversion of lattice parameters has not yet been worked out. For example, for now, users may not create a triclinic unit cell by replicating a rhombohedral lattice using a replicas vector with unequal values for different elements. An <a class="el" href="classUtil_1_1Exception.html" title="A user-defined exception.">Exception</a> is thrown and an appropriate error message is written to standard output if a user attempts any such prohibited type of replication.</p>
 <p>This base template is declared but not defined. Explicit specializations are defined for D=1, 2, and 3. <br  />
 </p>
-<p>Explicit specializations of this function template are called within the replicateUnitCell function template defined in file src/prdc/fields/fieldIoUtil.tpp. This function takes an array of fields as an input and writes a replicated version of those fields to an r-grid field file. The header of the resulting file contains a description of the unit cell obtained here. That field replication function is used to implement the REPLICATE_UNIT_CELL command of the pscf_pc and pscf_pg programs.</p>
+<p>Explicit specializations of this function template are called within the replicateUnitCell function template defined in file src/prdc/fields/fieldIoUtil.tpp. This function takes an array of fields as an input and writes a replicated version of those fields to an r-grid field file. The header of the resulting file contains a description of the unit cell obtained here. That field replication function is used to implement the REPLICATE_UNIT_CELL command of the pscf_rpc and pscf_rpg programs.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">replicas</td><td>number of replicas in each direction (in) </td></tr>
@@ -376,9 +379,9 @@ template&lt;&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="replicateUnitCell_8cpp_source.html#l00023">23</a> of file <a class="el" href="replicateUnitCell_8cpp_source.html">replicateUnitCell.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="FSArray_8h_source.html#l00258">Util::FSArray&lt; Data, Capacity &gt;::append()</a>, <a class="el" href="UnitCellBase_8h_source.html#l00307">Pscf::Prdc::UnitCellBase&lt; D &gt;::nParameter()</a>, <a class="el" href="UnitCellBase_8tpp_source.html#l00058">Pscf::Prdc::UnitCellBase&lt; D &gt;::parameters()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="FSArray_8h_source.html#l00258">Util::FSArray&lt; Data, Capacity &gt;::append()</a>, <a class="el" href="UnitCellBase_8h_source.html#l00313">Pscf::Prdc::UnitCellBase&lt; D &gt;::nParameter()</a>, <a class="el" href="UnitCellBase_8tpp_source.html#l00051">Pscf::Prdc::UnitCellBase&lt; D &gt;::parameters()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="FieldIoTmpl_8tpp_source.html#l00960">Pscf::Prdc::FieldIoTmpl&lt; D, RFT, KFT, FFT &gt;::replicateUnitCell()</a>, <a class="el" href="FieldIoTmpl_8tpp_source.html#l00944">Pscf::Prdc::FieldIoTmpl&lt; D, RFT, KFT, FFT &gt;::replicateUnitCell()</a>, <a class="el" href="rpc_2field_2FieldIo_8tpp_source.html#l00284">Pscf::Rpc::FieldIo&lt; D &gt;::replicateUnitCell()</a>, and <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00364">Pscf::Rpg::FieldIo&lt; D &gt;::replicateUnitCell()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rFieldIo_8tpp_source.html#l00899">replicateUnitCell()</a>, <a class="el" href="rp_2field_2FieldIo_8tpp_source.html#l00955">Pscf::Rp::FieldIo&lt; D, RFT, KFT, FFT &gt;::replicateUnitCell()</a>, <a class="el" href="rpc_2field_2FieldIo_8tpp_source.html#l00276">Pscf::Rpc::FieldIo&lt; D &gt;::replicateUnitCell()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00363">Pscf::Rpg::FieldIo&lt; D &gt;::replicateUnitCell()</a>, and <a class="el" href="rp_2field_2FieldIo_8tpp_source.html#l00785">Pscf::Rp::FieldIo&lt; D &gt;::scaleFieldsBasis()</a>.</p>
 
 </div>
 </div>
@@ -420,7 +423,7 @@ template&lt;&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="replicateUnitCell_8cpp_source.html#l00052">52</a> of file <a class="el" href="replicateUnitCell_8cpp_source.html">replicateUnitCell.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="FSArray_8h_source.html#l00258">Util::FSArray&lt; Data, Capacity &gt;::append()</a>, <a class="el" href="UnitCellBase_8h_source.html#l00307">Pscf::Prdc::UnitCellBase&lt; D &gt;::nParameter()</a>, <a class="el" href="UnitCellBase_8tpp_source.html#l00058">Pscf::Prdc::UnitCellBase&lt; D &gt;::parameters()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="FSArray_8h_source.html#l00258">Util::FSArray&lt; Data, Capacity &gt;::append()</a>, <a class="el" href="UnitCellBase_8h_source.html#l00313">Pscf::Prdc::UnitCellBase&lt; D &gt;::nParameter()</a>, <a class="el" href="UnitCellBase_8tpp_source.html#l00051">Pscf::Prdc::UnitCellBase&lt; D &gt;::parameters()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
 </div>
 </div>
@@ -462,7 +465,7 @@ template&lt;&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="replicateUnitCell_8cpp_source.html#l00133">133</a> of file <a class="el" href="replicateUnitCell_8cpp_source.html">replicateUnitCell.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="FSArray_8h_source.html#l00258">Util::FSArray&lt; Data, Capacity &gt;::append()</a>, <a class="el" href="UnitCellBase_8h_source.html#l00307">Pscf::Prdc::UnitCellBase&lt; D &gt;::nParameter()</a>, <a class="el" href="UnitCellBase_8tpp_source.html#l00058">Pscf::Prdc::UnitCellBase&lt; D &gt;::parameters()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="FSArray_8h_source.html#l00258">Util::FSArray&lt; Data, Capacity &gt;::append()</a>, <a class="el" href="UnitCellBase_8h_source.html#l00313">Pscf::Prdc::UnitCellBase&lt; D &gt;::nParameter()</a>, <a class="el" href="UnitCellBase_8tpp_source.html#l00051">Pscf::Prdc::UnitCellBase&lt; D &gt;::parameters()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
 </div>
 </div>
@@ -502,6 +505,71 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>integer indices of minimum image of v </dd></dl>
+
+</div>
+</div>
+<a id="ga05c283bab3bea111791ccb7c92725246" name="ga05c283bab3bea111791ccb7c92725246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga05c283bab3bea111791ccb7c92725246">&#9670;&#160;</a></span>sortWaves()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int D&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pscf::Prdc::sortWaves </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1Prdc_1_1UnitCell.html">UnitCell</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>cell</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>meshDimensions</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structPscf_1_1Sort_1_1Item.html">Sort::Item</a>&lt; double &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>items</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classUtil_1_1GArray.html">GArray</a>&lt; <a class="el" href="classUtil_1_1Pair.html">Sort::Bunch</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>bunches</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>epsilon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isRealField</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sorted waves and identify bunches of equal magnitude. </p>
+<p>Generate sorted waves and identify "bunches" of equal magnitude.</p>
+<p>This function generates all wavevectors in the k-grid mesh associated with an r-grid mesh of specified dimensions, sorts them in order of increasing vector norm and identifies all "bunches" of wavevectors of equal norm. The function can generate wavevectors associated with the k-grid mesh used for either complex or real-valued fields, depending on the value of the bool parameter isRealField.</p>
+<p>Upon return:</p>
+<p>Element i of array "items" is a <a class="el" href="structPscf_1_1Sort_1_1Item.html" title="Struct with value and index, to keep track of permutation.">Sort::Item&lt;double&gt;</a> object for which items[i].value is the squared norm of an associated wavevector and items[i].id is the rank of that wavevector within the k-grid mesh, while these items are now sorted in order of increasing wavevector norm.</p>
+<p>Element i of array "bunches" is a Sort::Bunch objects for which elements of the items array with indices between bunches[i][0] and (bunches[i][1] - 1) have equal norms. Every bunch has one or more associated wavevectors, and every wavevector belongs to a unique bunch.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cell</td><td>crystallographic unit cell (in) </td></tr>
+    <tr><td class="paramname">meshDimensions</td><td>dimensions of real space mesh (in) </td></tr>
+    <tr><td class="paramname">items</td><td>sorted array of items associated with wavevectors (out) </td></tr>
+    <tr><td class="paramname">bunches</td><td>slices of items with equal squared wavenumbers (out) </td></tr>
+    <tr><td class="paramname">epsilon</td><td>tolerance used to test for equality (in) </td></tr>
+    <tr><td class="paramname">isRealField</td><td>Use k-grid for DFT of a real field? (in) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="sortWaves_8cpp_source.html#l00027">27</a> of file <a class="el" href="sortWaves_8cpp_source.html">sortWaves.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="MeshIterator_8h_source.html#l00141">Pscf::MeshIterator&lt; D &gt;::atEnd()</a>, <a class="el" href="MeshIterator_8tpp_source.html#l00061">Pscf::MeshIterator&lt; D &gt;::begin()</a>, <a class="el" href="GArray_8h_source.html#l00296">Util::GArray&lt; Data &gt;::clear()</a>, <a class="el" href="cpu_2FFT_8tpp_source.html#l00264">Pscf::Prdc::Cpu::FFT&lt; D &gt;::computeKMesh()</a>, <a class="el" href="Sort_8cpp_source.html#l00029">Pscf::Sort::findBunches()</a>, <a class="el" href="UnitCellBase_8tpp_source.html#l00064">Pscf::Prdc::UnitCellBase&lt; D &gt;::ksq()</a>, <a class="el" href="MeshIterator_8h_source.html#l00122">Pscf::MeshIterator&lt; D &gt;::position()</a>, <a class="el" href="MeshIterator_8h_source.html#l00136">Pscf::MeshIterator&lt; D &gt;::rank()</a>, and <a class="el" href="Sort_8cpp_source.html#l00022">Pscf::Sort::sort()</a>.</p>
 
 </div>
 </div>
@@ -573,7 +641,7 @@ template&lt;int D&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="SpaceGroup_8h_source.html#l00131">131</a> of file <a class="el" href="SpaceGroup_8h_source.html">SpaceGroup.h</a>.</p>
 
-<p class="reference">References <a class="el" href="SymmetryGroup_8tpp_source.html#l00090">Pscf::Prdc::SymmetryGroup&lt; Symmetry &gt;::add()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00152">Pscf::Prdc::SymmetryGroup&lt; Symmetry &gt;::clear()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="SymmetryGroup_8tpp_source.html#l00083">Pscf::Prdc::SymmetryGroup&lt; Symmetry &gt;::add()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00145">Pscf::Prdc::SymmetryGroup&lt; Symmetry &gt;::clear()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -609,7 +677,7 @@ template&lt;int D&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="SpaceGroup_8tpp_source.html#l00162">162</a> of file <a class="el" href="SpaceGroup_8tpp_source.html">SpaceGroup.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Log_8cpp_source.html#l00059">Util::Log::file()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00110">Pscf::Prdc::SymmetryGroup&lt; Symmetry &gt;::makeCompleteGroup()</a>, <a class="el" href="groupFile_8cpp_source.html#l00026">makeGroupFileName()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="Log_8cpp_source.html#l00059">Util::Log::file()</a>, <a class="el" href="SymmetryGroup_8tpp_source.html#l00103">Pscf::Prdc::SymmetryGroup&lt; Symmetry &gt;::makeCompleteGroup()</a>, <a class="el" href="groupFile_8cpp_source.html#l00026">makeGroupFileName()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
 </div>
 </div>
@@ -1221,7 +1289,7 @@ template&lt;int D&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="unitCellHeader_8h_source.html#l00051">51</a> of file <a class="el" href="unitCellHeader_8h_source.html">unitCellHeader.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fieldIoUtil_8tpp_source.html#l00144">readFieldHeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fieldHeader_8tpp_source.html#l00032">readFieldHeader()</a>.</p>
 
 </div>
 </div>
@@ -1257,7 +1325,7 @@ template&lt;int D&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="unitCellHeader_8h_source.html#l00081">81</a> of file <a class="el" href="unitCellHeader_8h_source.html">unitCellHeader.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fieldIoUtil_8tpp_source.html#l00187">writeFieldHeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fieldHeader_8tpp_source.html#l00075">writeFieldHeader()</a>.</p>
 
 </div>
 </div>
@@ -1316,11 +1384,11 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fieldIoUtil_8tpp_source.html#l00144">144</a> of file <a class="el" href="fieldIoUtil_8tpp_source.html">fieldIoUtil.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fieldHeader_8tpp_source.html#l00032">32</a> of file <a class="el" href="fieldHeader_8tpp_source.html">fieldHeader.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="unitCellHeader_8h_source.html#l00051">readUnitCellHeader()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="FieldIoTmpl_8tpp_source.html#l01165">Pscf::Prdc::FieldIoTmpl&lt; D, RFT, KFT, FFT &gt;::checkAllocateBasis()</a>, <a class="el" href="FieldIoTmpl_8tpp_source.html#l00895">Pscf::Prdc::FieldIoTmpl&lt; D, RFT, KFT, FFT &gt;::estimateWBasis()</a>, <a class="el" href="FieldIoTmpl_8tpp_source.html#l01018">Pscf::Prdc::FieldIoTmpl&lt; D, RFT, KFT, FFT &gt;::readFieldHeader()</a>, <a class="el" href="rpc_2field_2FieldIo_8tpp_source.html#l00076">Pscf::Rpc::FieldIo&lt; D &gt;::readFieldRGrid()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00098">Pscf::Rpg::FieldIo&lt; D &gt;::readFieldRGrid()</a>, <a class="el" href="FieldIoTmpl_8tpp_source.html#l00119">Pscf::Prdc::FieldIoTmpl&lt; D, RFT, KFT, FFT &gt;::readFieldsBasis()</a>, <a class="el" href="rpc_2field_2FieldIo_8tpp_source.html#l00157">Pscf::Rpc::FieldIo&lt; D &gt;::readFieldsKGrid()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00200">Pscf::Rpg::FieldIo&lt; D &gt;::readFieldsKGrid()</a>, <a class="el" href="rpc_2field_2FieldIo_8tpp_source.html#l00037">Pscf::Rpc::FieldIo&lt; D &gt;::readFieldsRGrid()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00045">Pscf::Rpg::FieldIo&lt; D &gt;::readFieldsRGrid()</a>, and <a class="el" href="DomainTmpl_8tpp_source.html#l00128">Pscf::Prdc::DomainTmpl&lt; D, FFT, WLT, FIT &gt;::readRGridFieldHeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rp_2field_2FieldIo_8tpp_source.html#l01160">Pscf::Rp::FieldIo&lt; D, RFT, KFT, FFT &gt;::checkAllocateBasis()</a>, <a class="el" href="rp_2field_2FieldIo_8tpp_source.html#l00890">Pscf::Rp::FieldIo&lt; D, RFT, KFT, FFT &gt;::estimateWBasis()</a>, <a class="el" href="cpc_2field_2FieldIo_8tpp_source.html#l00071">Pscf::Cpc::FieldIo&lt; D &gt;::readField()</a>, <a class="el" href="cp_2field_2Domain_8tpp_source.html#l00117">Pscf::Cp::Domain&lt; D, FFT, WLT, FIT &gt;::readFieldHeader()</a>, <a class="el" href="cp_2field_2FieldIo_8tpp_source.html#l00250">Pscf::Cp::FieldIo&lt; D, CFT, FFT &gt;::readFieldHeader()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00097">Pscf::Rpg::FieldIo&lt; D &gt;::readFieldRGrid()</a>, <a class="el" href="cpc_2field_2FieldIo_8tpp_source.html#l00036">Pscf::Cpc::FieldIo&lt; D &gt;::readFields()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00199">Pscf::Rpg::FieldIo&lt; D &gt;::readFieldsKGrid()</a>, <a class="el" href="cpc_2field_2FieldIo_8tpp_source.html#l00093">Pscf::Cpc::FieldIo&lt; D &gt;::readFieldsRGrid()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00044">Pscf::Rpg::FieldIo&lt; D &gt;::readFieldsRGrid()</a>, and <a class="el" href="rp_2field_2Domain_8tpp_source.html#l00130">Pscf::Rp::Domain&lt; D, FFT, WLT, FIT &gt;::readRGridFieldHeader()</a>.</p>
 
 </div>
 </div>
@@ -1380,11 +1448,11 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fieldIoUtil_8tpp_source.html#l00187">187</a> of file <a class="el" href="fieldIoUtil_8tpp_source.html">fieldIoUtil.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fieldHeader_8tpp_source.html#l00075">75</a> of file <a class="el" href="fieldHeader_8tpp_source.html">fieldHeader.tpp</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, and <a class="el" href="unitCellHeader_8h_source.html#l00081">writeUnitCellHeader()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="FieldIoTmpl_8tpp_source.html#l01104">Pscf::Prdc::FieldIoTmpl&lt; D, RFT, KFT, FFT &gt;::writeFieldHeader()</a>, <a class="el" href="rpc_2field_2FieldIo_8tpp_source.html#l00132">Pscf::Rpc::FieldIo&lt; D &gt;::writeFieldRGrid()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00167">Pscf::Rpg::FieldIo&lt; D &gt;::writeFieldRGrid()</a>, <a class="el" href="FieldIoTmpl_8tpp_source.html#l00190">Pscf::Prdc::FieldIoTmpl&lt; D, RFT, KFT, FFT &gt;::writeFieldsBasis()</a>, <a class="el" href="rpc_2field_2FieldIo_8tpp_source.html#l00181">Pscf::Rpc::FieldIo&lt; D &gt;::writeFieldsKGrid()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00229">Pscf::Rpg::FieldIo&lt; D &gt;::writeFieldsKGrid()</a>, <a class="el" href="rpc_2field_2FieldIo_8tpp_source.html#l00101">Pscf::Rpc::FieldIo&lt; D &gt;::writeFieldsRGrid()</a>, and <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00130">Pscf::Rpg::FieldIo&lt; D &gt;::writeFieldsRGrid()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rFieldIo_8tpp_source.html#l00899">replicateUnitCell()</a>, <a class="el" href="cpc_2field_2FieldIo_8tpp_source.html#l00147">Pscf::Cpc::FieldIo&lt; D &gt;::writeField()</a>, <a class="el" href="cp_2field_2FieldIo_8tpp_source.html#l00296">Pscf::Cp::FieldIo&lt; D, CFT, FFT &gt;::writeFieldHeader()</a>, <a class="el" href="rp_2field_2FieldIo_8tpp_source.html#l01099">Pscf::Rp::FieldIo&lt; D, RFT, KFT, FFT &gt;::writeFieldHeader()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00166">Pscf::Rpg::FieldIo&lt; D &gt;::writeFieldRGrid()</a>, <a class="el" href="cpc_2field_2FieldIo_8tpp_source.html#l00114">Pscf::Cpc::FieldIo&lt; D &gt;::writeFields()</a>, <a class="el" href="rp_2field_2FieldIo_8tpp_source.html#l00185">Pscf::Rp::FieldIo&lt; D, RFT, KFT, FFT &gt;::writeFieldsBasis()</a>, <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00228">Pscf::Rpg::FieldIo&lt; D &gt;::writeFieldsKGrid()</a>, and <a class="el" href="rpg_2field_2FieldIo_8tpp_source.html#l00129">Pscf::Rpg::FieldIo&lt; D &gt;::writeFieldsRGrid()</a>.</p>
 
 </div>
 </div>

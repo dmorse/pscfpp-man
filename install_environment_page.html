@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -59,25 +59,47 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p><a class="el" href="install_overview_page.html">Installation Overview</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="install_configure_page.html">Configure Script</a> (Next) <br  />
 </p>
-<p>To compile PSCF in a unix environment, before compiling any code, the user should modify the following unix environment variables:</p>
+<p>Before attempting to compile PSCF in a unix environment, users need to add a few directories within the PSCF directory tree to the systems PATH and PYTHONPATH environment variables. PATH and PYTHONPATH are variables that are maintained by the operating system whose values are colon (":") separated lists of paths to directories that are searched for different types of file.</p>
+<p>The PATH variable contains a list of directories that the unix command interpreter, also known as the "shell", will search for executable files with names that correspond to command names. This list is used to search for executable files that can used executed commands that may be entered either from an interactive terminal session or from a file containing a sequence of commands, also known as a shell script. For example, a minimal value for the PATH variable that contains several following standard locations for executable files that can be executed by users who do not have administrator ("superuser") privileges might look like this </p><div class="fragment"><div class="line">/usr/local/bin:/usr/bin:/bin</div>
+</div><!-- fragment --><p> The default contents of the PATH variable is usually longer than this example, and is slightly different for different unix operating systems, and for different linux distributions.</p>
+<p>The PYTHONPATH variable contains an analogous colon-separated list of directories that a Python interpreter will search for python module files.</p>
+<p>Both the PATH and PYTHONPATH lists are both searched from left to right, and the first match is accepted, so the order in which directories are listed is significant.</p>
+<h1 class="doxsection"><a class="anchor" id="install_environment_changes_sec"></a>
+Required changes</h1>
+<p>Before attempting to compile PSCF, users must make the following changes to these two environment variables:</p>
 <ul>
-<li>Add the PSCF bin/ directory to the unix PATH shell environment variable (the shell command search path)</li>
-<li>Add the PSCF lib/python/ directory to the PYTHONPATH environment variable (the python module search path)</li>
+<li>The PSCF bin/ directory must be added to the unix PATH shell environment variable (the command search path)</li>
+<li>The PSCF lib/python/ directory must be added to the PYTHONPATH environment variable (the python module search path)</li>
 </ul>
 <p>Rationale:</p>
 <ul>
-<li>By default, all executables files created by the PSCF build system are installed in the pscfpp/bin directory. The path to this directory must thus be added to the user's PATH variable in order to allow the unix shell to find these executable files when they are invoked by name from the command line.</li>
-<li>The PSCF lib/python directory contains several python modules that are used by the PSCF build to process information about dependencies among C++ files. The path to this directory must be added to the PYTHONPATH variable in order to allow a python interpreter to find these python modules.</li>
+<li>By default, all executable files created by the PSCF build system are installed in the pscfpp/bin directory. The path to this directory must thus be added to the user's PATH variable in order to allow the unix shell to find and execute these files when one of them is invoked by entering the base file name (such as pscf_r1d or pscf_rpc) as a command.</li>
+<li>The PSCF lib/python directory contains several python modules that are used by the PSCF build system to process information about dependencies among C++ files during compilation. The path to this directory must be added to the PYTHONPATH variable in order to allow a python interpreter to find these python modules during the PSCF build process.</li>
 </ul>
-<p>The required changes to the user's shell environment should be made in a manner that guarantees that these changes are automatically put in place when a user logs in. To accomplish this, commands that modify the PATH and PYTHON variables should be added to a configuration file in the users home directory that is read and executed whenever the user launches a login shell (e.g., to the .profile or .bash_profile file on systems that use a bash shell or the .zprofile file on systems that use a zsh unix shell, as discussed in more detail below).</p>
-<p>An example of the required commands is shown below: </p><div class="fragment"><div class="line">PSCFPP_DIR=${HOME}/<a class="code hl_namespace" href="namespacepscfpp.html">pscfpp</a></div>
-<div class="line"><span class="keyword">export</span> PATH=${PATH}:/${PSCFPP_DIR}/bin</div>
-<div class="line"><span class="keyword">export</span> PYTHONPATH=${PYTHONPATH}:/${PSCFPP_DIR}/lib/python</div>
+<p>Modification of the PYTHONPATH to include the PSCF lib/python directory also allows a python interpreter to find to a set of python <a class="el" href="analysis_python_page.html">data analysis tools</a> that are provided within the PSCF repository.</p>
+<h1 class="doxsection"><a class="anchor" id="install_environment_display_sec"></a>
+Displaying environment variables</h1>
+<p>Users can use the "echo" command to display the current contents of any environment variable, e.g., by typing </p><div class="fragment"><div class="line">echo $PATH</div>
+</div><!-- fragment --><p> to display the current PATH, or </p><div class="fragment"><div class="line">echo $PYTHONPATH</div>
+</div><!-- fragment --><p> to display the PYTHONPATH. The dollar sign immediately before each shell variable name is used to indicate that the value of a shell variable should replace its name. We recomend that users use the "echo" command to inspect both of these variables before making any changes to them, and then again after making changes to confirm correctness.</p>
+<h1 class="doxsection"><a class="anchor" id="install_environment_config_sec"></a>
+Modifying environment variables</h1>
+<p>An example of a sequence of unix shell commands required to modify the PATH and PYTHONPATH is shown below: </p><div class="fragment"><div class="line">PSCFPP_DIR=${HOME}/<a class="code hl_namespace" href="namespacepscfpp.html">pscfpp</a></div>
+<div class="line"><span class="keyword">export</span> PATH=${PATH}:${PSCFPP_DIR}/bin</div>
+<div class="line"><span class="keyword">export</span> PYTHONPATH=${PYTHONPATH}:${PSCFPP_DIR}/lib/python</div>
 <div class="ttc" id="anamespacepscfpp_html"><div class="ttname"><a href="namespacepscfpp.html">pscfpp</a></div><div class="ttdoc">Python package of all python modules provided with PSCF.</div><div class="ttdef"><b>Definition</b> <a href="____init_____8py_source.html#l00001">__init__.py:1</a></div></div>
-</div><!-- fragment --><p> The value of the shell variable PSCFPP_DIR that appears in this example should be set to the absolute path to the pscfpp root directory (i.e., the root of the directory tree created by cloning the pscfpp git repository). In the above example, it is assumed that this is a subdirectory named pscfpp within the users home directory, where ${HOME} is an environment variable that expands to the path to the users home directory.</p>
-<p>The name of the file to which these commands should be added depends on which unix shell is being used. Different unix shells are used by default in different linux and Mac OS X operatings systems.</p>
-<p>The bash shell is the default shell on most linux systems. The bash shell reads files named .profile and/or .bash_profile in the users home directory, if either exists, when the user opens a login shell by logging in to the system. Users who are using a bash shell should put these commands in one of these files.</p>
-<p>Recent versions of the Mac OS operating system instead use zsh (also known as the Z shell) by default within the Mac Terminal app. We recommend that mac users who are using zsh from within the Terminal app place these commands in a file named .zprofile. The Terminal app treats every terminal window as new login shell, and executes the .zprofile file every time you open a new terminal window.</p>
+</div><!-- fragment --><p> In actual code, the value assigned to the shell variable PSCFPP_DIR should be replaced by the actual absolute path to the user's PSCF root directory, i.e., the root of the directory tree created by cloning the pscfpp git repository. In this example, it has been assumed that the PSCF root directory is a subdirectory named pscfpp within the users home directory. Here, ${HOME} is the value of built in environment variable that contains the absolute path to the user's home directory, and ${HOME}/pscfpp expands to the path to the pscfpp subdirectory of that home directory. The expression PATH=${PATH}:$(PSCFPP_DIR}/bin appends a colon (":") followed by the path to the PSCF bin directory to the end of the previous value of the PATH string variable.</p>
+<p>Typing the above sequence of commands into a terminal would change the PATH and PYTHONPATH, but the change would only last for the lifetime of the terminal window - changes that are entered interactively disappear when a terminal is closed and are not re-applied when a new terminal window is opened. For convenience, all required changes to shell environment variables should instead be made in a manner that allows these changes to be automatically applied whenever a user logs in to a terminal environment, as discussed below.</p>
+<h1 class="doxsection"><a class="anchor" id="install_environment_file_sec"></a>
+Modifying a shell configuration file</h1>
+<p>To make changes to PATH and PYTHONPATH variables permanent, some variant of the above sequence of commands must be added to a hidden configuration file in the user's home directory. The relevant configuration file must be one that contains commands that are executed whenever a user launches a login shell. The name of this configuration file depends, however, on which of several avaiable unix shell programs is being used to interpret commands. Different variants of unix use different unix shells (i.e., command interpreters) by default.</p>
+<p>Most linux distributions use the "bash" shell by default. When a user opens a login shell by logging on to a computer system, the bash shell reads and executes the commands given in a hidden file in the user's home directory named .profile or .bash_profile. Users who are using a bash shell should put the commands to modify the PATH and PYTHONPATH variables in whichever of these files already exists.</p>
+<p>Recent versions of the Mac OS X operating system instead use zsh (also known as the Z shell) by default within the Mac Terminal app. Mac users who are using zsh from within the Terminal app should place these commands in a file named .zprofile. The Terminal app treats every terminal window as a new, completely independent login shell, and executes the .zprofile file every time a new terminal window is opened.</p>
+<p>Mac users who prefer bash or some other shell over the default zsh may change the choice of unix shell that is used to interpret commands in new windows. The procedure to change this default shell is described <a href="https://support.apple.com/guide/terminal/change-the-default-shell-trml113/mac">here </a>. If the Terminal app has been configured to use the bash shell, users should place commands that modify environments variables in the .profile or .bash_profile file in the user's home directory, as for a linux system that uses the bash shell.</p>
+<h1 class="doxsection"><a class="anchor" id="install_environment_hidden_sec"></a>
+Listing hidden configuration files</h1>
+<p>The shell configuration files are always so-called "hidden" files, which have names, such as ".profile" or ".zprofile", that start with a period ("."). By default, the unix "ls" command, which is used to list files in a directory, does not list files whose names begin with a period. To list all the files in a directory, including such hidden files, one must enter </p><div class="fragment"><div class="line">ls -a</div>
+</div><!-- fragment --><p> using the -a ("all") command line option.</p>
 <p><br  />
  <a class="el" href="install_overview_page.html">Installation Overview</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="install_page.html">Installation</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="install_configure_page.html">Configure Script</a> (Next) </p>
 </div></div><!-- contents -->

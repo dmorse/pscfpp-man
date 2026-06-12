@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -55,9 +55,9 @@ $(function() {
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classPscf_1_1PropagatorTmpl-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Pscf::PropagatorTmpl&lt; QT &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Base__Module.html">Pscf Common</a> &raquo; <a class="el" href="group__Pscf__Solver__Module.html">Solver Templates</a></div></div></div>
+  <div class="headertitle"><div class="title">Pscf::PropagatorTmpl&lt; QT &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Base__Module.html">Pscf - Base Module</a> &raquo; <a class="el" href="group__Pscf__Solver__Module.html">Solver Templates</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -65,11 +65,20 @@ $(function() {
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Pscf::PropagatorTmpl&lt; QT &gt;:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classPscf_1_1PropagatorTmpl.png" usemap="#Pscf_3A_3APropagatorTmpl_3C_20QT_20_3E_map" alt=""/>
+  <map id="Pscf_3A_3APropagatorTmpl_3C_20QT_20_3E_map" name="Pscf_3A_3APropagatorTmpl_3C_20QT_20_3E_map">
+<area href="classPscf_1_1Rp_1_1Propagator.html" alt="Pscf::Rp::Propagator&lt; D, Types&lt; D &gt; &gt;" shape="rect" coords="123,56,359,80"/>
+<area href="classPscf_1_1Rpc_1_1Propagator.html" title="MDE solver for one direction of one block." alt="Pscf::Rpc::Propagator&lt; D &gt;" shape="rect" coords="0,112,236,136"/>
+<area href="classPscf_1_1Rpg_1_1Propagator.html" title="MDE solver for one direction of one block." alt="Pscf::Rpg::Propagator&lt; D &gt;" shape="rect" coords="246,112,482,136"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a81c3a23f98bd6df41a44f57810c1a96a" id="r_a81c3a23f98bd6df41a44f57810c1a96a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81c3a23f98bd6df41a44f57810c1a96a">PropagatorTmpl</a> ()</td></tr>
-<tr class="memdesc:a81c3a23f98bd6df41a44f57810c1a96a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Mutators</div></td></tr>
 <tr class="memitem:a4029de32135e93d9dea6e16120cc8cff" id="r_a4029de32135e93d9dea6e16120cc8cff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4029de32135e93d9dea6e16120cc8cff">setDirectionId</a> (int <a class="el" href="#a7497a07d4dfa09313b28e60959fb75cb">directionId</a>)</td></tr>
 <tr class="memdesc:a4029de32135e93d9dea6e16120cc8cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate this propagator with a direction index.  <br /></td></tr>
@@ -100,6 +109,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a788cfada26e29d01ec7f82ee18391666"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has the modified diffusion equation been solved?  <br /></td></tr>
 <tr class="memitem:ac143df687181df779dda950235a18589" id="r_ac143df687181df779dda950235a18589"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac143df687181df779dda950235a18589">isReady</a> () const</td></tr>
 <tr class="memdesc:ac143df687181df779dda950235a18589"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are all source propagators solved?  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a81c3a23f98bd6df41a44f57810c1a96a" id="r_a81c3a23f98bd6df41a44f57810c1a96a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81c3a23f98bd6df41a44f57810c1a96a">PropagatorTmpl</a> ()</td></tr>
+<tr class="memdesc:a81c3a23f98bd6df41a44f57810c1a96a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class QT&gt;<br />
@@ -108,14 +122,14 @@ class Pscf::PropagatorTmpl&lt; QT &gt;</div><p>Template for propagator classes. 
 <div class="line">{</div>
 <div class="line"> ...</div>
 <div class="line">}; </div>
-<div class="ttc" id="aclassPscf_1_1PropagatorTmpl_html_a81c3a23f98bd6df41a44f57810c1a96a"><div class="ttname"><a href="#a81c3a23f98bd6df41a44f57810c1a96a">Pscf::PropagatorTmpl::PropagatorTmpl</a></div><div class="ttdeci">PropagatorTmpl()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="PropagatorTmpl_8h_source.html#l00280">PropagatorTmpl.h:280</a></div></div>
+<div class="ttc" id="aclassPscf_1_1PropagatorTmpl_html_a81c3a23f98bd6df41a44f57810c1a96a"><div class="ttname"><a href="#a81c3a23f98bd6df41a44f57810c1a96a">Pscf::PropagatorTmpl::PropagatorTmpl</a></div><div class="ttdeci">PropagatorTmpl()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="PropagatorTmpl_8h_source.html#l00290">PropagatorTmpl.h:290</a></div></div>
 </div><!-- fragment --><p> This usage is an example of the so-called "curiously recurring 
 template pattern" (CRQT). It is used here to allow the template <a class="el" href="classPscf_1_1PropagatorTmpl.html">PropagatorTmpl&lt;Propagator&gt;</a> to have member variables that store pointers to other instances of the derived class Propagator (or QT).</p>
-<p>The concrete Propagator class is used in templates <a class="el" href="classPscf_1_1BlockTmpl.html" title="Class template for a block solver in a block copolymer.">BlockTmpl</a>, <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Template for an MDE solver and descriptor for a block polymer.">PolymerTmpl</a> and <a class="el" href="classPscf_1_1MixtureTmpl.html" title="Solvers for a mixture of polymer and solvent species.">MixtureTmpl</a>. The usage in those templates require that the Propagator class define an alias named FieldT for the field type. Propagator must also provide member functions named solve() and computeQ(), neither of which takes any arguments.</p>
-<p>The type FieldT must be an aliases for the type of containers used to store a single chemical potential or concentration field, or a slice of a propagator.</p>
+<p>The concrete Propagator class is used in templates <a class="el" href="classPscf_1_1BlockTmpl.html" title="Class template for a block solver in a block copolymer.">BlockTmpl</a>, <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Descriptor and MDE solver for a block polymer.">PolymerTmpl</a> and <a class="el" href="classPscf_1_1MixtureTmpl.html" title="Solvers for a mixture of polymer and solvent species.">MixtureTmpl</a>. The usage in those templates require that the Propagator class define an alias named FieldT for the field type. Propagator must also provide member functions "void solve()" and "void computeQ(WT &amp;)", where WT is the name of the real or complex number data type of the value of the partition function. This data type is generally the same as the type of the value of a single w-field at a grid point.</p>
+<p>The type FieldT must be an alias for the type of container used to store a single chemical potential or concentration field, or a single slice of a propagator.</p>
 <p>The function void solve() must solve the modified diffusion equation for this propapagator, using information that is accessible to the concrete propagator class. Upon return, the solution must be stored in an internal data structures that is read-accessible through the public class interface, and the function <a class="el" href="#a788cfada26e29d01ec7f82ee18391666" title="Has the modified diffusion equation been solved?">isSolved()</a> must return true.</p>
-<p>The function computeQ() must compute and return the molecular partition function Q using information available to this propagator.</p>
-<p>A simple example of the required interface is shown below: </p><div class="fragment"><div class="line"><span class="keyword">class </span>Propagator : <span class="keyword">public</span> <a class="code hl_function" href="#a81c3a23f98bd6df41a44f57810c1a96a">PropagatorTmpl</a>&lt;Propagator&gt; </div>
+<p>The function void computeQ(WT &amp; ) must compute the partition function Q, which is a value of type WT, and set its single parameter equal to Q.</p>
+<p>A simple example of such an interface for an implementation with real fields is shown below: </p><div class="fragment"><div class="line"><span class="keyword">class </span>Propagator : <span class="keyword">public</span> <a class="code hl_function" href="#a81c3a23f98bd6df41a44f57810c1a96a">PropagatorTmpl</a>&lt;Propagator&gt; </div>
 <div class="line">{</div>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line"> </div>
@@ -126,13 +140,13 @@ template pattern" (CRQT). It is used here to allow the template <a class="el" hr
 <div class="line">    <span class="keywordtype">void</span> solve();</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Compute and return the molecular partition function Q.</span></div>
-<div class="line">    <span class="keywordtype">double</span> computeQ();</div>
+<div class="line">    <span class="keywordtype">void</span> computeQ(<span class="keywordtype">double</span>&amp; Q);</div>
 <div class="line"> </div>
 <div class="line">};</div>
 <div class="ttc" id="aclassUtil_1_1DArray_html"><div class="ttname"><a href="classUtil_1_1DArray.html">Util::DArray</a></div><div class="ttdoc">Dynamically allocatable contiguous array template.</div><div class="ttdef"><b>Definition</b> <a href="DArray_8h_source.html#l00031">DArray.h:32</a></div></div>
-</div><!-- fragment --><p>In the above example, the field container typenames FieldT is an alias for DArrray&lt;double&gt;, i.e., for a dynamically allocated arrays of double precision floating point numbers. Other implementations may use more specialized types. </p>
+</div><!-- fragment --><p> In this above example, the field container typename FieldT is an alias for DArrray&lt;double&gt;, which is a dynamically allocated array of double double precision floating point numbers. Other implementations may use a more specialized container type for field values. </p>
 
-<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00089">89</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00093">93</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a81c3a23f98bd6df41a44f57810c1a96a" name="a81c3a23f98bd6df41a44f57810c1a96a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a81c3a23f98bd6df41a44f57810c1a96a">&#9670;&#160;</a></span>PropagatorTmpl()</h2>
@@ -141,6 +155,9 @@ template pattern" (CRQT). It is used here to allow the template <a class="el" hr
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class QT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classPscf_1_1PropagatorTmpl.html">Pscf::PropagatorTmpl</a>&lt; QT &gt;::PropagatorTmpl </td>
@@ -149,11 +166,16 @@ template&lt;class QT&gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00280">280</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00290">290</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
 
 </div>
 </div>
@@ -183,9 +205,9 @@ template&lt;class QT&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00291">291</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00301">301</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="PropagatorTmpl_8h_source.html#l00228">directionId()</a>.</p>
+<p class="reference">References <a class="el" href="PropagatorTmpl_8h_source.html#l00238">directionId()</a>.</p>
 
 </div>
 </div>
@@ -215,9 +237,9 @@ template&lt;class QT&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00298">298</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00308">308</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="PropagatorTmpl_8h_source.html#l00343">partner()</a>.</p>
+<p class="reference">References <a class="el" href="PropagatorTmpl_8h_source.html#l00353">partner()</a>.</p>
 
 </div>
 </div>
@@ -247,9 +269,9 @@ template&lt;class QT&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00305">305</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00315">315</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="PropagatorTmpl_8h_source.html#l00243">source()</a>.</p>
+<p class="reference">References <a class="el" href="PropagatorTmpl_8h_source.html#l00253">source()</a>.</p>
 
 </div>
 </div>
@@ -272,9 +294,11 @@ template&lt;class QT&gt; </div>
 
 <p>Set the isSolved flag to true or false. </p>
 
-<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00336">336</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00346">346</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="PropagatorTmpl_8h_source.html#l00271">isSolved()</a>.</p>
+<p class="reference">References <a class="el" href="PropagatorTmpl_8h_source.html#l00281">isSolved()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Propagator_8cpp_source.html#l00041">Pscf::Rpc::Propagator&lt; D &gt;::allocate()</a>, <a class="el" href="Propagator_8cu_source.html#l00053">Pscf::Rpg::Propagator&lt; D &gt;::allocate()</a>, <a class="el" href="rpc_2solvers_2Propagator_8cpp_source.html#l00059">Pscf::Rpc::Propagator&lt; D &gt;::reallocate()</a>, and <a class="el" href="Propagator_8cu_source.html#l00077">Pscf::Rpg::Propagator&lt; D &gt;::reallocate()</a>.</p>
 
 </div>
 </div>
@@ -302,15 +326,15 @@ template&lt;class QT&gt; </div>
 <p>Set flags indicating whether vertices are chain ends. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">isHeadEnd</td><td>Does this propagator own the head vertex bead? </td></tr>
-    <tr><td class="paramname">isTailEnd</td><td>Does this propagator own the tail vertex bead? </td></tr>
+    <tr><td class="paramname">isHeadEnd</td><td>Is the head vertex a chain end? </td></tr>
+    <tr><td class="paramname">isTailEnd</td><td>Is the tail vertex a chain end? </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00312">312</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00322">322</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="PropagatorTmpl_8h_source.html#l00257">isHeadEnd()</a>, and <a class="el" href="PropagatorTmpl_8h_source.html#l00264">isTailEnd()</a>.</p>
+<p class="reference">References <a class="el" href="PropagatorTmpl_8h_source.html#l00267">isHeadEnd()</a>, and <a class="el" href="PropagatorTmpl_8h_source.html#l00274">isTailEnd()</a>.</p>
 
 </div>
 </div>
@@ -347,9 +371,9 @@ template&lt;class QT&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00243">243</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00253">253</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PropagatorTmpl_8h_source.html#l00305">addSource()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PropagatorTmpl_8h_source.html#l00315">addSource()</a>.</p>
 
 </div>
 </div>
@@ -372,11 +396,11 @@ template&lt;class QT&gt; </div>
 
 <p>Get partner propagator. </p>
 
-<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00343">343</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00353">353</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
 
 <p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PropagatorTmpl_8h_source.html#l00298">setPartner()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PropagatorTmpl_8h_source.html#l00308">setPartner()</a>.</p>
 
 </div>
 </div>
@@ -407,9 +431,9 @@ template&lt;class QT&gt; </div>
 
 <p>Get direction index for this propagator. </p>
 
-<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00228">228</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00238">238</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PropagatorTmpl_8h_source.html#l00291">setDirectionId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PropagatorTmpl_8h_source.html#l00301">setDirectionId()</a>.</p>
 
 </div>
 </div>
@@ -440,9 +464,9 @@ template&lt;class QT&gt; </div>
 
 <p>Number of source / prerequisite propagators. </p>
 
-<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00235">235</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00245">245</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="GArray_8h_source.html#l00455">Util::GArray&lt; Data &gt;::size()</a>.</p>
+<p class="reference">References <a class="el" href="GArray_8h_source.html#l00450">Util::GArray&lt; Data &gt;::size()</a>.</p>
 
 </div>
 </div>
@@ -473,7 +497,7 @@ template&lt;class QT&gt; </div>
 
 <p>Does this have a partner propagator? </p>
 
-<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00250">250</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00260">260</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
 
 </div>
 </div>
@@ -505,9 +529,9 @@ template&lt;class QT&gt; </div>
 <p>Is the head vertex a chain end? </p>
 <p>Precondition: <a class="el" href="namespacePscf_1_1PolymerModel.html#af5c7a9c517a218fe8198b2a48c45a1ab" title="Is the bead model in use ?">PolymerModel::isBead()</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00257">257</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00267">267</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PropagatorTmpl_8h_source.html#l00312">setEndFlags()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00623">Pscf::Rpc::Block&lt; D &gt;::computeStressBead()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00775">Pscf::Rpg::Block&lt; D &gt;::computeStressBead()</a>, and <a class="el" href="PropagatorTmpl_8h_source.html#l00322">setEndFlags()</a>.</p>
 
 </div>
 </div>
@@ -539,9 +563,9 @@ template&lt;class QT&gt; </div>
 <p>Is the tail vertex a chain end? </p>
 <p>Precondition: <a class="el" href="namespacePscf_1_1PolymerModel.html#af5c7a9c517a218fe8198b2a48c45a1ab" title="Is the bead model in use ?">PolymerModel::isBead()</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00264">264</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00274">274</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PropagatorTmpl_8h_source.html#l00312">setEndFlags()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00623">Pscf::Rpc::Block&lt; D &gt;::computeStressBead()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00775">Pscf::Rpg::Block&lt; D &gt;::computeStressBead()</a>, and <a class="el" href="PropagatorTmpl_8h_source.html#l00322">setEndFlags()</a>.</p>
 
 </div>
 </div>
@@ -572,9 +596,9 @@ template&lt;class QT&gt; </div>
 
 <p>Has the modified diffusion equation been solved? </p>
 
-<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00271">271</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00281">281</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PropagatorTmpl_8h_source.html#l00322">isReady()</a>, and <a class="el" href="PropagatorTmpl_8h_source.html#l00336">setIsSolved()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00623">Pscf::Rpc::Block&lt; D &gt;::computeStressBead()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00775">Pscf::Rpg::Block&lt; D &gt;::computeStressBead()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00656">Pscf::Rpg::Block&lt; D &gt;::computeStressThread()</a>, <a class="el" href="PropagatorTmpl_8h_source.html#l00332">isReady()</a>, <a class="el" href="rpg_2solvers_2Propagator_8h_source.html#l00129">Pscf::Rpg::Propagator&lt; D &gt;::qAll()</a>, and <a class="el" href="PropagatorTmpl_8h_source.html#l00346">setIsSolved()</a>.</p>
 
 </div>
 </div>
@@ -597,9 +621,9 @@ template&lt;class QT&gt; </div>
 
 <p>Are all source propagators solved? </p>
 
-<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00322">322</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropagatorTmpl_8h_source.html#l00332">332</a> of file <a class="el" href="PropagatorTmpl_8h_source.html">PropagatorTmpl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="PropagatorTmpl_8h_source.html#l00271">isSolved()</a>.</p>
+<p class="reference">References <a class="el" href="PropagatorTmpl_8h_source.html#l00281">isSolved()</a>.</p>
 
 </div>
 </div>

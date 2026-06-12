@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -49,7 +49,7 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_486c6ef9f31d38c99d7503b9bbc9a83c.html">prdc</a></li><li class="navelem"><a href="dir_9c93c0b8d4a8805c77730a7eb3f696b5.html">cuda</a></li>  </ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_3672192d8e7f6b6bab87e896e99ed11f.html">pscf</a></li><li class="navelem"><a href="dir_f33fe4466b4225947c2fb73beefb9b08.html">cuda</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -57,54 +57,82 @@ $(function() {
   <div class="headertitle"><div class="title">cuda/Reduce.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef PRDC_CUDA_REDUCE_H</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define PRDC_CUDA_REDUCE_H</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef PSCF_CUDA_REDUCE_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define PSCF_CUDA_REDUCE_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">* PSCF - Polymer Self-Consistent Field </span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">* PSCF - Polymer Self-Consistent Field</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">* Copyright 2015 - 2025, The Regents of the University of Minnesota</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">* Distributed under the terms of the GNU General Public License.</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;types.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;pscf/cuda/cudaTypes.h&gt;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;pscf/cuda/DeviceArray.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Prdc</a> {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc_1_1Cuda.html">Cuda</a> {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc_1_1Cuda_1_1Reduce.html">Reduce</a> {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>cudaReal <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a1d531e19f7cc5674cefa424e397f0972">sum</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>cudaReal <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a897393112248e2fa5562fc9086e21c46">max</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>cudaReal <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a5021e123d5a367b15ea36af51c4e0122">maxAbs</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>cudaReal <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#aa86d4e549e25a7a8a731069cf9e119a3">min</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;complex&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>   <span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Reduce.html">Reduce</a> {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <span class="comment">// Summation</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <a class="code hl_typedef" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> <a class="code hl_function" href="group__Pscf__Cpu__Reduce__Module.html#gac6a3dd2c7d06d3c52dd3180cb3ff7ae4">sum</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <a class="code hl_typedef" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> <a class="code hl_function" href="group__Pscf__Cpu__Reduce__Module.html#gac6a3dd2c7d06d3c52dd3180cb3ff7ae4">sum</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in, <span class="keywordtype">int</span> begin, <span class="keywordtype">int</span> end);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      std::complex&lt;cudaReal&gt; <a class="code hl_function" href="group__Pscf__Cpu__Reduce__Module.html#gac6a3dd2c7d06d3c52dd3180cb3ff7ae4">sum</a>(DeviceArray&lt;cudaComplex&gt; <span class="keyword">const</span> &amp; in);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>cudaReal <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a13a7dd0601d65d655308ce9ff6dc0dfc">minAbs</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>cudaReal <a class="code hl_function" href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a888ffcc13055f72938cd4144ed6cd29b">innerProduct</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; a, </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                      DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; b);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>} <span class="comment">// Reduce</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>} <span class="comment">// Cuda</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>} <span class="comment">// Prdc</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>} <span class="comment">// Pscf</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1Reduce_html_a13a7dd0601d65d655308ce9ff6dc0dfc"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a13a7dd0601d65d655308ce9ff6dc0dfc">Pscf::Prdc::Cpu::Reduce::minAbs</a></div><div class="ttdeci">double minAbs(Array&lt; double &gt; const &amp;in)</div><div class="ttdoc">Get minimum absolute magnitude of array elements .</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00064">Reduce.cpp:64</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1Reduce_html_a1d531e19f7cc5674cefa424e397f0972"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a1d531e19f7cc5674cefa424e397f0972">Pscf::Prdc::Cpu::Reduce::sum</a></div><div class="ttdeci">double sum(Array&lt; double &gt; const &amp;in)</div><div class="ttdoc">Compute sum of array elements .</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00080">Reduce.cpp:80</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1Reduce_html_a5021e123d5a367b15ea36af51c4e0122"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a5021e123d5a367b15ea36af51c4e0122">Pscf::Prdc::Cpu::Reduce::maxAbs</a></div><div class="ttdeci">double maxAbs(Array&lt; double &gt; const &amp;in)</div><div class="ttdoc">Get maximum absolute magnitude of array elements .</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00034">Reduce.cpp:34</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1Reduce_html_a888ffcc13055f72938cd4144ed6cd29b"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a888ffcc13055f72938cd4144ed6cd29b">Pscf::Prdc::Cpu::Reduce::innerProduct</a></div><div class="ttdeci">double innerProduct(Array&lt; double &gt; const &amp;a, Array&lt; double &gt; const &amp;b)</div><div class="ttdoc">Compute inner product of two real arrays .</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00094">Reduce.cpp:94</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1Reduce_html_a897393112248e2fa5562fc9086e21c46"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#a897393112248e2fa5562fc9086e21c46">Pscf::Prdc::Cpu::Reduce::max</a></div><div class="ttdeci">double max(Array&lt; double &gt; const &amp;in)</div><div class="ttdoc">Get maximum of array elements .</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00020">Reduce.cpp:20</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cpu_1_1Reduce_html_aa86d4e549e25a7a8a731069cf9e119a3"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cpu_1_1Reduce.html#aa86d4e549e25a7a8a731069cf9e119a3">Pscf::Prdc::Cpu::Reduce::min</a></div><div class="ttdeci">double min(Array&lt; double &gt; const &amp;in)</div><div class="ttdoc">Get minimum of array elements .</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00050">Reduce.cpp:50</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_1_1Reduce_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda_1_1Reduce.html">Pscf::Prdc::Cuda::Reduce</a></div><div class="ttdoc">Functions that perform parallel reductions on the GPU.</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cu_source.html#l00017">Reduce.cu:17</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a></div><div class="ttdoc">Fields, FFTs, and utilities for periodic boundary conditions (CUDA)</div><div class="ttdef"><b>Definition</b> <a href="CField_8cu_source.html#l00012">CField.cu:12</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_html"><div class="ttname"><a href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div><div class="ttdoc">Periodic fields and crystallography.</div><div class="ttdef"><b>Definition</b> <a href="CField_8cpp_source.html#l00011">CField.cpp:11</a></div></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      std::complex&lt;cudaReal&gt; <a class="code hl_function" href="group__Pscf__Cpu__Reduce__Module.html#gac6a3dd2c7d06d3c52dd3180cb3ff7ae4">sum</a>(DeviceArray&lt;cudaComplex&gt; <span class="keyword">const</span> &amp; in,</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                                 <span class="keywordtype">int</span> begin, <span class="keywordtype">int</span> end);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      <span class="comment">// Sum of squares and array products</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      <a class="code hl_typedef" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> <a class="code hl_function" href="group__Pscf__Cpu__Reduce__Module.html#ga9b86bcc21fdf13a044433861eca5cf33">sumSq</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      std::complex&lt;cudaReal&gt; <a class="code hl_function" href="group__Pscf__Cpu__Reduce__Module.html#ga9b86bcc21fdf13a044433861eca5cf33">sumSq</a>(DeviceArray&lt;cudaComplex&gt; <span class="keyword">const</span> &amp; in);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>      <a class="code hl_typedef" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> <a class="code hl_function" href="group__Pscf__Cuda__Reduce__Module.html#ga124ade57285a44d985d235384e07e747">sumSqAbs</a>(DeviceArray&lt;cudaComplex&gt; <span class="keyword">const</span> &amp; in);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      <a class="code hl_typedef" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> <a class="code hl_function" href="group__Pscf__Cpu__Reduce__Module.html#ga713a70853cb7b15b8dcd80be9db618e7">innerProduct</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; a,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                            DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; b);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>      <span class="comment">// Maxima - real array inputs</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>      <a class="code hl_typedef" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> <a class="code hl_function" href="group__Pscf__Cpu__Reduce__Module.html#gae21c41e549c06db43b10ee505a6e181b">max</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      <a class="code hl_typedef" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> <a class="code hl_function" href="group__Pscf__Cpu__Reduce__Module.html#gae21c41e549c06db43b10ee505a6e181b">max</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in, <span class="keywordtype">int</span> begin, <span class="keywordtype">int</span> end);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>      <a class="code hl_typedef" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> <a class="code hl_function" href="group__Pscf__Cpu__Reduce__Module.html#ga75ee5d4c7b466dfe13865e6d64e6bb40">maxAbs</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>      <span class="comment">// Minima - real array inputs</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>      <a class="code hl_typedef" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> <a class="code hl_function" href="group__Pscf__Cpu__Reduce__Module.html#ga41ecb9f1c223fbebd3daf81a98cc4b0a">min</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>      <a class="code hl_typedef" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> <a class="code hl_function" href="group__Pscf__Cpu__Reduce__Module.html#ga41ecb9f1c223fbebd3daf81a98cc4b0a">min</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in, <span class="keywordtype">int</span> begin, <span class="keywordtype">int</span> end);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>      <a class="code hl_typedef" href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">cudaReal</a> <a class="code hl_function" href="group__Pscf__Cpu__Reduce__Module.html#ga3728404d96118e9defdc68c92a2ec5a0">minAbs</a>(DeviceArray&lt;cudaReal&gt; <span class="keyword">const</span> &amp; in);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>      <span class="comment">// Memory management</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="group__Pscf__Cuda__Reduce__Module.html#gabacd600d9501e3b036a96d6b8a1df68e">freeWorkSpace</a>();</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>   } <span class="comment">// namespace Reduce</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>} <span class="comment">// namespace Pscf</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__Pscf__Cpu__Reduce__Module_html_ga3728404d96118e9defdc68c92a2ec5a0"><div class="ttname"><a href="group__Pscf__Cpu__Reduce__Module.html#ga3728404d96118e9defdc68c92a2ec5a0">Pscf::Reduce::minAbs</a></div><div class="ttdeci">double minAbs(Array&lt; double &gt; const &amp;in)</div><div class="ttdoc">Get minimum absolute magnitude of array elements .</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00229">Reduce.cpp:229</a></div></div>
+<div class="ttc" id="agroup__Pscf__Cpu__Reduce__Module_html_ga41ecb9f1c223fbebd3daf81a98cc4b0a"><div class="ttname"><a href="group__Pscf__Cpu__Reduce__Module.html#ga41ecb9f1c223fbebd3daf81a98cc4b0a">Pscf::Reduce::min</a></div><div class="ttdeci">double min(Array&lt; double &gt; const &amp;in)</div><div class="ttdoc">Get minimum of array elements .</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00198">Reduce.cpp:198</a></div></div>
+<div class="ttc" id="agroup__Pscf__Cpu__Reduce__Module_html_ga713a70853cb7b15b8dcd80be9db618e7"><div class="ttname"><a href="group__Pscf__Cpu__Reduce__Module.html#ga713a70853cb7b15b8dcd80be9db618e7">Pscf::Reduce::innerProduct</a></div><div class="ttdeci">double innerProduct(Array&lt; double &gt; const &amp;a, Array&lt; double &gt; const &amp;b)</div><div class="ttdoc">Compute Euclidean inner product of two real arrays .</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00117">Reduce.cpp:117</a></div></div>
+<div class="ttc" id="agroup__Pscf__Cpu__Reduce__Module_html_ga75ee5d4c7b466dfe13865e6d64e6bb40"><div class="ttname"><a href="group__Pscf__Cpu__Reduce__Module.html#ga75ee5d4c7b466dfe13865e6d64e6bb40">Pscf::Reduce::maxAbs</a></div><div class="ttdeci">double maxAbs(Array&lt; double &gt; const &amp;in)</div><div class="ttdoc">Get maximum absolute magnitude of array elements .</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00182">Reduce.cpp:182</a></div></div>
+<div class="ttc" id="agroup__Pscf__Cpu__Reduce__Module_html_ga9b86bcc21fdf13a044433861eca5cf33"><div class="ttname"><a href="group__Pscf__Cpu__Reduce__Module.html#ga9b86bcc21fdf13a044433861eca5cf33">Pscf::Reduce::sumSq</a></div><div class="ttdeci">double sumSq(Array&lt; double &gt; const &amp;in)</div><div class="ttdoc">Compute sum of of squares of array elements (real).</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00082">Reduce.cpp:82</a></div></div>
+<div class="ttc" id="agroup__Pscf__Cpu__Reduce__Module_html_gac6a3dd2c7d06d3c52dd3180cb3ff7ae4"><div class="ttname"><a href="group__Pscf__Cpu__Reduce__Module.html#gac6a3dd2c7d06d3c52dd3180cb3ff7ae4">Pscf::Reduce::sum</a></div><div class="ttdeci">double sum(Array&lt; double &gt; const &amp;in)</div><div class="ttdoc">Compute sum of array elements (real).</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00020">Reduce.cpp:20</a></div></div>
+<div class="ttc" id="agroup__Pscf__Cpu__Reduce__Module_html_gae21c41e549c06db43b10ee505a6e181b"><div class="ttname"><a href="group__Pscf__Cpu__Reduce__Module.html#gae21c41e549c06db43b10ee505a6e181b">Pscf::Reduce::max</a></div><div class="ttdeci">double max(Array&lt; double &gt; const &amp;in)</div><div class="ttdoc">Get maximum of array elements (real).</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00151">Reduce.cpp:151</a></div></div>
+<div class="ttc" id="agroup__Pscf__Cuda__Reduce__Module_html_ga124ade57285a44d985d235384e07e747"><div class="ttname"><a href="group__Pscf__Cuda__Reduce__Module.html#ga124ade57285a44d985d235384e07e747">Pscf::Reduce::sumSqAbs</a></div><div class="ttdeci">cudaReal sumSqAbs(DeviceArray&lt; cudaComplex &gt; const &amp;in)</div><div class="ttdoc">Return sum of squared magnitudes of elements of a complex array.</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cu_source.html#l00328">Reduce.cu:328</a></div></div>
+<div class="ttc" id="agroup__Pscf__Cuda__Reduce__Module_html_gabacd600d9501e3b036a96d6b8a1df68e"><div class="ttname"><a href="group__Pscf__Cuda__Reduce__Module.html#gabacd600d9501e3b036a96d6b8a1df68e">Pscf::Reduce::freeWorkSpace</a></div><div class="ttdeci">void freeWorkSpace()</div><div class="ttdoc">Free any private work space currently allocated for reductions.</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cu_source.html#l00203">Reduce.cu:203</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Reduce_html"><div class="ttname"><a href="namespacePscf_1_1Reduce.html">Pscf::Reduce</a></div><div class="ttdoc">Reduction operations performed on a CPU or GPU.</div><div class="ttdef"><b>Definition</b> <a href="Reduce_8cpp_source.html#l00013">Reduce.cpp:13</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
+<div class="ttc" id="anamespacePscf_html_acc8c106b53c7fd7a159e9fe8f3cf0ec9"><div class="ttname"><a href="namespacePscf.html#acc8c106b53c7fd7a159e9fe8f3cf0ec9">Pscf::cudaReal</a></div><div class="ttdeci">cufftDoubleReal cudaReal</div><div class="ttdoc">Real number type used in CPU code that uses FFTW.</div><div class="ttdef"><b>Definition</b> <a href="cudaTypes_8h_source.html#l00035">cudaTypes.h:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

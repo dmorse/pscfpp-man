@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -91,7 +91,7 @@ Crystal symmetry operations</h1>
 \]
 </p>
 <p> Multiplication of symmetry operations is not commutative: Generally, \( AB \neq BA \).</p>
-<p><a class="anchor" id="prdc_symmetry_multiplication_thrm"></a><b> Theorem C.1 (Multiplication rule for crystal symmetry operations) </b>: If \( A \), \( B \) are two symmetry operations    </p><p class="formulaDsp">
+<p><a class="anchor" id="prdc_symmetry_multiplication_thrm"></a><b> Theorem S.1 (Multiplication rule for crystal symmetry operations) </b>: If \( A \), \( B \) are two symmetry operations    </p><p class="formulaDsp">
 \[   A = (R_{A}, {\bf t}_{A}) \quad
    B = (R_{B}, {\bf t}_{B}) \quad
 \]
@@ -125,7 +125,7 @@ Crystal symmetry operations</h1>
 \]
 </p>
 <p> The identity element is equal its own inverse, since \( EE = E \).</p>
-<p><b> Theorem C.2 (Inversion rule for crystal symmetry operations)</b> : If \(A\) is a crystal symmetry operation   </p><p class="formulaDsp">
+<p><b> Theorem S.2 (Inversion rule for crystal symmetry operations)</b> : If \(A\) is a crystal symmetry operation   </p><p class="formulaDsp">
 \[   A = (R, {\bf t})
 \]
 </p>
@@ -189,13 +189,13 @@ Reciprocal Basis (Wavevectors)</h2>
 <p> where \( G_{0}, \ldots, G_{D-1} \) are the integer components of \( {\bf G} \) in a reciprocal basis and \( r_{0}, \ldots, r_{D-1} \) are components of \( {\bf r} \) in a Bravais basis (reduced coordinates).</p>
 <h2 class="doxsection"><a class="anchor" id="prdc_symmetry_adjoint_matrix_sub"></a>
 Adjoint Operators</h2>
-<p><b> Theorem C.3 (Matrix representation of an adjoint operator) </b>: Suppose \( R \) is a linear operator such as a point group operation in the inner-product space of D-dimensional real vectors, and that \( R^{\dagger} \) is the adjoint of \( R \). The matrix representation of \( R^{\dagger} \) defined using a reciprocal basis is given by the transpose of the matrix representation of \( R \) defined using a Bravais basis.</p>
+<p><b> Theorem S.3 (Matrix representation of an adjoint operator) </b>: Suppose \( R \) is a linear operator such as a point group operation in the inner-product space of D-dimensional real vectors, and that \( R^{\dagger} \) is the adjoint of \( R \). The matrix representation of \( R^{\dagger} \) defined using a reciprocal basis is given by the transpose of the matrix representation of \( R \) defined using a Bravais basis.</p>
 <p><em> Proof </em>: Suppose that \( {\bf G} \) is a reciprocal lattice vector, \( R \) is a linear operator such as a point group operation, and   </p><p class="formulaDsp">
 \[  {\bf G}&#39; = R^{\dagger}{\bf G} \quad.
 \]
 </p>
 <p> To define \( R^{\dagger}{\bf G} \), we consider the dot product     </p><p class="formulaDsp">
-\[   {\bf G}&#39;\cdot{\bf r} = 
+\[   {\bf G}&#39;\cdot{\bf r} =
    (R^{\dagger} {\bf G}) \cdot {\bf r} =
    {\bf G}\cdot (R{\bf r}) \quad,
 \]
@@ -234,8 +234,8 @@ Transformation of fields</h1>
 </p>
 <p> for every crystal symmetry operation \( A \in S \).</p>
 <p>The following two simple theorems apply to such symmetric functions:</p>
-<p><a class="anchor" id="prdc_symmetry_symmfunc_mult_thrm"></a><b> Theorem C.4 (Symmetry is preserved by scalar multiplication)</b>: If \( f({\bf r}) \) is a field that is symmetric under a space group \( S \), and \( c \) is complex constant, then \( cf({\bf r}) \) is also symmetric under \( S \).</p>
-<p><a class="anchor" id="prdc_symmetry_symmfunc_conj_thrm"></a><b> Theorem C.5 (Symmetry is preserved by complex conjugation)</b>: If \( f({\bf r}) \) is a complex field that is symmetric under a space group \( S \), its complex conjugate \( f^{*}({\bf r}) \) is also invariant under \( S \). This also implies that the real and imaginary parts of a symmetric complex-valued function are also symmetric under \( S \).</p>
+<p><a class="anchor" id="prdc_symmetry_symmfunc_mult_thrm"></a><b> Theorem S.4 (Symmetry is preserved by scalar multiplication)</b>: If \( f({\bf r}) \) is a field that is symmetric under a space group \( S \), and \( c \) is complex constant, then \( cf({\bf r}) \) is also symmetric under \( S \).</p>
+<p><a class="anchor" id="prdc_symmetry_symmfunc_conj_thrm"></a><b> Theorem S.5 (Symmetry is preserved by complex conjugation)</b>: If \( f({\bf r}) \) is a complex field that is symmetric under a space group \( S \), its complex conjugate \( f^{*}({\bf r}) \) is also invariant under \( S \). This also implies that the real and imaginary parts of a symmetric complex-valued function are also symmetric under \( S \).</p>
 <p><em>Proofs</em> : Suppose \( A = (R, {\bf t}) \) be a symmetry operation in \( S \). If \( f(R{\bf r} + {\bf t}) = f({\bf r})\) for all \( {\bf r} \), then \( c f(R{\bf r} + {\bf t}) = c f({\bf r}) \) and \( f^{*}(R{\bf r} + {\bf t}) = f^{*}({\bf r}) \), proving both of the above theorems.</p>
 <h1 class="doxsection"><a class="anchor" id="prdc_symmetry_wave_sec"></a>
 Transformation of plane waves</h1>
@@ -250,7 +250,7 @@ Transformation of plane waves</h1>
 \]
 </p>
 <p> in which \( {\bf G} \) denotes the associated wavevector and \( c \) is the prefactor.</p>
-<p><b> Theorem C.6 (Transformation of plane waves) </b>: If \( f = ({\bf G}, c) \) is a wave and \( A=(R,{\bf t}) \) is a space group symmetry operation, then \( fA \) is a wave   </p><p class="formulaDsp">
+<p><b> Theorem S.6 (Transformation of plane waves) </b>: If \( f = ({\bf G}, c) \) is a wave and \( A=(R,{\bf t}) \) is a space group symmetry operation, then \( fA \) is a wave   </p><p class="formulaDsp">
 \[   fA = ({\bf G}&#39;, c&#39;)
 \]
 </p>
@@ -284,7 +284,7 @@ Transformation of plane waves</h1>
 </p>
 <p> It is straightforward to show that, for two wavevectors \( {\bf G} \) and \( {\bf G}&#39; \) and a symmetry operation \( A \), the equations \( {\bf G}&#39; = {\bf G}A \) and \( {\bf G} = {\bf G}&#39;A^{-1} \) are equivalent. Two wavevectors that are related in this way can said to be related by symmetry operation \( A \) or \( A^{-1} \).</p>
 <p>Observe that the notation defined above, in which the operator appears to the right of the wavevector on which it acts, allows us to treat application of symmetry operators to wavevectors as an associative operation. That is, if \( A = (R_{A}, {\bf t}_{A} )\) and \( B=(R_{B}, {\bf t}_{B} ) \) are crystal symmetry operations and \( {\bf G} \) is a wavevector, then     </p><p class="formulaDsp">
-\[   ({\bf G}A)B = R_{B}^{\dagger}(R_{A}^{\dagger}{\bf G}) = 
+\[   ({\bf G}A)B = R_{B}^{\dagger}(R_{A}^{\dagger}{\bf G}) =
    (R_{A}R_{B})^{\dagger}{\bf G}
    = {\bf G}(AB) \quad,
 \]

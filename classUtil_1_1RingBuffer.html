@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -101,7 +101,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a29198899f39be24981f39930a1282b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize a <a class="el" href="classUtil_1_1RingBuffer.html" title="Class for storing history of previous values in an array.">RingBuffer</a> to/from an Archive.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;class Data&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename Data&gt;<br />
 class Util::RingBuffer&lt; Data &gt;</div><p>Class for storing history of previous values in an array. </p>
 <p>Data is stored in a circular buffer, in which, once the array is full, the newest data value overwrites the oldest. </p>
 
@@ -113,7 +113,7 @@ class Util::RingBuffer&lt; Data &gt;</div><p>Class for storing history of previo
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classUtil_1_1RingBuffer.html">Util::RingBuffer</a>&lt; Data &gt;::RingBuffer </td>
@@ -138,7 +138,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classUtil_1_1RingBuffer.html">Util::RingBuffer</a>&lt; Data &gt;::RingBuffer </td>
@@ -169,7 +169,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -192,7 +192,7 @@ template&lt;class Data&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="RingBuffer_8h_source.html#l00248">248</a> of file <a class="el" href="RingBuffer_8h_source.html">RingBuffer.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Memory_8h_source.html#l00152">Util::Memory::deallocate()</a>, and <a class="el" href="RingBuffer_8h_source.html#l00248">~RingBuffer()</a>.</p>
+<p class="reference">References <a class="el" href="Memory_8h_source.html#l00157">Util::Memory::deallocate()</a>, and <a class="el" href="RingBuffer_8h_source.html#l00248">~RingBuffer()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="RingBuffer_8h_source.html#l00248">~RingBuffer()</a>.</p>
 
@@ -205,7 +205,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classUtil_1_1RingBuffer.html">RingBuffer</a>&lt; Data &gt; &amp; <a class="el" href="classUtil_1_1RingBuffer.html">Util::RingBuffer</a>&lt; Data &gt;::operator= </td>
@@ -226,7 +226,7 @@ template&lt;class Data&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="RingBuffer_8h_source.html#l00211">211</a> of file <a class="el" href="RingBuffer_8h_source.html">RingBuffer.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Memory_8h_source.html#l00132">Util::Memory::allocate()</a>, <a class="el" href="RingBuffer_8h_source.html#l00341">isAllocated()</a>, <a class="el" href="RingBuffer_8h_source.html#l00169">RingBuffer()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="Memory_8h_source.html#l00136">Util::Memory::allocate()</a>, <a class="el" href="RingBuffer_8h_source.html#l00341">isAllocated()</a>, <a class="el" href="RingBuffer_8h_source.html#l00169">RingBuffer()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
 </div>
 </div>
@@ -236,7 +236,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classUtil_1_1RingBuffer.html">Util::RingBuffer</a>&lt; Data &gt;::allocate </td>
@@ -259,7 +259,7 @@ template&lt;class Data&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="RingBuffer_8h_source.html#l00257">257</a> of file <a class="el" href="RingBuffer_8h_source.html">RingBuffer.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Memory_8h_source.html#l00132">Util::Memory::allocate()</a>, <a class="el" href="RingBuffer_8h_source.html#l00257">allocate()</a>, <a class="el" href="RingBuffer_8h_source.html#l00333">capacity()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="Memory_8h_source.html#l00136">Util::Memory::allocate()</a>, <a class="el" href="RingBuffer_8h_source.html#l00257">allocate()</a>, <a class="el" href="RingBuffer_8h_source.html#l00333">capacity()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="RingBuffer_8h_source.html#l00257">allocate()</a>, and <a class="el" href="RingBuffer_8h_source.html#l00393">serialize()</a>.</p>
 
@@ -271,7 +271,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -306,7 +306,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -348,7 +348,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -387,7 +387,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -422,7 +422,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -457,7 +457,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -492,7 +492,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -527,7 +527,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -566,7 +566,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -605,7 +605,7 @@ template&lt;class Data&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data&gt; </div>
+template&lt;typename Data&gt; </div>
 <div class="memtemplate">
 template&lt;class Archive&gt; </div>
       <table class="memname">

@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -64,7 +64,7 @@ $(function() {
 <ul>
 <li><b>Low level subdirectories of src</b> : These are makefiles that are located within subdirectories of one of the namespace-level directory trees within the src directory. The "all" target of each such makefile creates a set of object target files by compiling all of the source files that are located in the tree rooted at the directory containing the makefile (i.e., in that directory and any enclosed subdirectories).</li>
 <li><b>Namespace-level (not program-level) subdirectories of src or bld</b>: The "all" target of makefiles in the util, pscf, and prdc namespace-level directories of either src or bld each creates a static library file, in addition to creating a set of object files by compiling all the source files in that namespace-level directory tree.</li>
-<li><b>Program-level subdirectories of src or bld (not program level)</b>: The "all" target of makefiles in the r1d, rpc, and rpg program-level directories of either src or bld directory each creates a single executable file (pscf_1d, pscf_pc, or pscf_pg), in addition to making a static library and compiling all of the source files in the associated directory tree.</li>
+<li><b>Program-level subdirectories of src or bld (not program level)</b>: The "all" target of makefiles in the r1d, rpc, and rpg program-level directories of either src or bld directory each creates a single executable file (pscf_r1d, pscf_rpc, or pscf_rpg), in addition to making a static library and compiling all of the source files in the associated directory tree.</li>
 <li><b>src and bld directories</b> : The "all" target of a makefile located in the root of either the src or bld directory tree compiles the entire PSCF package to produce several executable files.</li>
 <li><b>PSCF root directory</b> : The "all" target of the master makefile in the PSCF root directory performs an out-of-source build of the entire package.</li>
 </ul>
@@ -80,12 +80,12 @@ include $(SRC_DIR)/rpc/sources.mk
 include $(SRC_DIR)/rpc/patterns.mk
 
 #--------------------------------------------------------------------
-# Main targets 
+# Main targets
 
-all: $(rpc_field_OBJS) 
+all: $(rpc_field_OBJS)
 
 clean:
-   rm -f $(rpc_field_OBJS) $(rpc_field_OBJS:.o=.d) 
+   rm -f $(rpc_field_OBJS) $(rpc_field_OBJS:.o=.d)
 
 #--------------------------------------------------------------------
 # Include dependency files
@@ -99,7 +99,7 @@ clean:
 <p>The directive "#include \$(SRC_DIR)/rpc/sources.mk" includes the sources.mk file in the src/rpc/field directory. This file includes the definition of the variable src_field_OBJS that is used in the rest of this makefile. This variable is assigned a value in the file src/rpc/field/sources.mk, which is then included by src/rpc/sources.mk</p>
 <p>The directive "#include \$(SRC_DIR)/rpc/patterns.mk" includes the src/rpc/patterns.mk file that contains the relevant pattern rule for compiling *.cpp and *.cu files with the src/rpc directory tree.</p>
 <p><b> The "all" target: </b>:</p>
-<p>The makefile rule for the "all" target is given by the line </p><pre class="fragment">all: $(rpc_field_OBJS) 
+<p>The makefile rule for the "all" target is given by the line </p><pre class="fragment">all: $(rpc_field_OBJS)
 </pre><p> The variable value $(rpc_field_OBJS) expands to a list of absolute paths to all of the object file targets associated with source files in the subdirectory src/rpc/field that contains this makefile.</p>
 <p>By listing all of these object file targets as pre-requisites, the rule for the "all" target forces make to check on the status of all of these object files, and update any of them that do not exist or are out-of-date. A pattern rule for defining *.cpp sources files that is defined in the file src/rpc/patterns.mk is used to create or recreate each required object file pre-requisite, as needed.</p>
 <p><b> Including dependency files </b>:</p>
@@ -120,9 +120,9 @@ include $(SRC_DIR)/prdc/sources.mk
 include $(SRC_DIR)/prdc/patterns.mk
 
 #-----------------------------------------------------------------------
-# Main targets 
- 
-all: $(prdc_OBJS) $(prdc_LIB) 
+# Main targets
+
+all: $(prdc_OBJS) $(prdc_LIB)
 
 clean:
    rm -f $(prdc_OBJS) $(prdc_OBJS:.o=.d)
@@ -157,16 +157,16 @@ include $(SRC_DIR)/rpc/sources.mk
 include $(SRC_DIR)/rpc/patterns.mk
 
 #-----------------------------------------------------------------------
-# Paths to pscf_pc program files
+# Paths to pscf_rpc program files
 
-# Base path to *.o and *.d files for pscf_pc
-PSCF_PC=$(BLD_DIR)/rpc/pscf_pc
+# Base path to *.o and *.d files for pscf_rpc
+PSCF_PC=$(BLD_DIR)/rpc/pscf_rpc
 
-# Path to pscf_pc executable file
-PSCF_PC_EXE=$(BIN_DIR)/pscf_pc
+# Path to pscf_rpc executable file
+PSCF_PC_EXE=$(BIN_DIR)/pscf_rpc
 
 #-----------------------------------------------------------------------
-# Main targets 
+# Main targets
 
 all: $(rpc_OBJS) $(rpc_LIB) $(PSCF_PC_EXE)
 
@@ -178,15 +178,15 @@ clean:
    rm -f *.d */*.d */*/*.d
    cd tests; $(MAKE) clean
 
-# Rule for pscf_pc executable file
+# Rule for pscf_rpc executable file
 $(PSCF_PC_EXE): $(PSCF_PC).o $(PSCF_LIBS)
    $(CXX) $(LDFLAGS) -o $(PSCF_PC_EXE) $(PSCF_PC).o $(LIBS)
 
 # Short phony target for executable file (for convenience)
-pscf_pc:
+pscf_rpc:
    $(MAKE) $(PSCF_PC_EXE)
 
-.PHONY: all clean pscf_pc
+.PHONY: all clean pscf_rpc
 
 #-----------------------------------------------------------------------
 # Include dependency files
@@ -195,11 +195,11 @@ pscf_pc:
 -include $(pscf_OBJS:.o=.d)
 -include $(prdc_OBJS:.o=.d)
 -include $(rpc_OBJS:.o=.d)
--include $(PSCF_PC).d 
+-include $(PSCF_PC).d
 </pre><p>Note the following elements of this file that are not present in the makefiles in the util, pscf, and prdc namespace-level directories:</p>
 <ul>
-<li>Definition of a variable PSCF_PC = $(BLD_DIR)/rpc/pscf_pc that gives the shared part of the paths for the object and dependency file that are created by compiling the program source file <a class="el" href="pscf__pc_8cpp_source.html">src/rpc/pscf_pc.cpp</a>, without the .o and .d file name suffixes.</li>
-<li>Definition of a variable PSCF_PC_EXE = $(BIN_DIR)/pscf_pc that gives the absolute path to the resulting executable file.</li>
+<li>Definition of a variable PSCF_PC = $(BLD_DIR)/rpc/pscf_rpc that gives the shared part of the paths for the object and dependency file that are created by compiling the program source file <a class="el" href="pscf__rpc_8cpp_source.html">src/rpc/pscf_rpc.cpp</a>, without the .o and .d file name suffixes.</li>
+<li>Definition of a variable PSCF_PC_EXE = $(BIN_DIR)/pscf_rpc that gives the absolute path to the resulting executable file.</li>
 <li>A rule to build the executable file $(PSCF_PC_EXE) by linking the main program object file $(PSCF_PC).o to all relevant library files.</li>
 <li>The "all" target lists the main program executable $(PSCF_PC_EXE) as a prerequisite.</li>
 <li>Include directives to source.mk files and dependency files that are located in the util, pscf, and prdc namespace-level directories, as well as those located in the rpc directory that contains this makefile.</li>
@@ -208,8 +208,7 @@ pscf_pc:
 <p>Inclusion of sources.mk and dependency files from other namespace level directories is necessary in this case to allow the make command to check whether the libraries located in other directories are up to date before linking them to create an executable, and to build or rebuild any that are found to be out-of-date. The rules to build the static library in each relevant namespace-level directory is defined in the sources.mk file in that directory, which is then included by this makefile.</p>
 <p>Inclusion of source list and dependency files from other namespace-level directories is <b>not</b> necessary in the makefiles located in the util, pscf, and prdc directories because these makefiles do not define a rule that links static libraries from different namespace-level directories to create an executable.</p>
 <p>The type of rule used here to create an executable main program file is very similar to the pattern rule that is used create <a class="el" href="developer_build_pattern_page.html#developer_build_pattern_test_sub">executable files for unit tests</a> . The pattern rule for unit test executables in a particular namespace-level directory is defined in the corresponding <a class="el" href="developer_build_pattern_page.html">patterns.mk</a> file. The rules for main program executables and unit test executables both create an executable file by using a compiler to link an object file to a list of libraries represented by a variable $(LIBS) that is defined in the patterns.mk file.</p>
-<p>In this example, the object file $(PSCF_PC).o is created by compiling the main program file h$(SRC_DIR)/rpc/pscf_pc.cpp. This object file will be created before the executable file because the object file is list as a prerequisite of the executable. This main program object file is created as needed using a standard pattern rule for compiling source files, which also creates a corresponding dependency file $(PSCF_PC).d as a side effect. <br  />
-</p>
+<p>In this example, the object file $(PSCF_PC).o is created by compiling the main program file h$(SRC_DIR)/rpc/pscf_rpc.cpp. This object file will be created before the executable file because the object file is list as a prerequisite of the executable. This main program object file is created as needed using a standard pattern rule for compiling source files, which also creates a corresponding dependency file $(PSCF_PC).d as a side effect.</p>
 <p>The main program object file is not included in the list of files that are archived to create an associated static library. For example, in the rpc namespace-level directory, the file $(PSCF_PC).o is not included in the list $(rpc_OBJS) of object files that are collected into the library file $(BLD_DIR)/rpc/librpc.a .</p>
 <p>Explicit inclusion $(rpc_OBJS) and $(rpc_LIB) as prerequisites of the "all" target is redundant, but these are included to help document the sequence of actions triggered by the "all" target. Any required building or re-building of these object and library file targets would in any case be triggered by a request to build the executable target $(PSCF_PC_EXE), because the rule for $(PSCF_PC_EXE) lists $(rpc_LIB) as a pre-requisite, and the rule for $(prc_LIB) lists the files in the list $(prc_OBJS) as prerequisites. A more concise version of this rule could thus list the the executable file target as the only required prerequisite of "all".</p>
 <h1 class="doxsection"><a class="anchor" id="developer_build_makefile_upper_sec"></a>
@@ -227,7 +226,7 @@ ifdef PSCF_CUDA
 endif
 
 # Build all programs that uses exclusively CPU hardware
-all-cpu: 
+all-cpu:
    cd util; $(MAKE) all
    cd pscf; $(MAKE) all
    cd r1d; $(MAKE) all
@@ -239,9 +238,9 @@ all-cpu:
    .
 
 # ======================================================================
-</pre><p>Here $(MAKE) is the value of a standard variable that represents the name of the unix make command. The two target shown here both contain recipes that instruct the system to repeatedly descend into a namespace level directories. The "all-cpu" target is designed to build only the two programs that use standard CPU hardware, pscf_1d and pscf_pc. The "all" target is designed to also create the pscf_pg executable if compilation of CUDA code has been enabled by defining the PSCF_CUDA makefile variable.</p>
-<p>The phony "all-cpu" target simply invokes make all within 5 of the 6 namespace-level subdirectories, including the two program-level subdirectories r1d and rpc that build the CPU programs pscf_1d and pscf_pc, but excluding subdirectory rpg that contains CUDA C++ code for pscf_pg.</p>
-<p>The "all" target first invokes cpu-all and then conditionally invokes "make all" from within the rpg subdirectory if and only if the makefile variable PSCF_CUDA is defined. The variable PSCF_CUDA is undefined by default, and is defined if and only if the user has explicitly enabled compilation of CUDA code. The "all" target thus compiles code in the rpg directory and creates the pscf_pg executable only if CUDA compilation has been enabled. Compilation of CUDA code can be enabled either by using the setopts script, using the -c option with argument 1, or by manually uncommenting the definition of the variable PSCF_CUDA in the relevant config.mk configuration file.</p>
+</pre><p>Here $(MAKE) is the value of a standard variable that represents the name of the unix make command. The two target shown here both contain recipes that instruct the system to repeatedly descend into a namespace level directories. The "all-cpu" target is designed to build only the two programs that use standard CPU hardware, pscf_r1d and pscf_rpc. The "all" target is designed to also create the pscf_rpg executable if compilation of CUDA code has been enabled by defining the PSCF_CUDA makefile variable.</p>
+<p>The phony "all-cpu" target simply invokes make all within 5 of the 6 namespace-level subdirectories, including the two program-level subdirectories r1d and rpc that build the CPU programs pscf_r1d and pscf_rpc, but excluding subdirectory rpg that contains CUDA C++ code for pscf_rpg.</p>
+<p>The "all" target first invokes cpu-all and then conditionally invokes "make all" from within the rpg subdirectory if and only if the makefile variable PSCF_CUDA is defined. The variable PSCF_CUDA is undefined by default, and is defined if and only if the user has explicitly enabled compilation of CUDA code. The "all" target thus compiles code in the rpg directory and creates the pscf_rpg executable only if CUDA compilation has been enabled. Compilation of CUDA code can be enabled either by using the setopts script, using the -c option with argument 1, or by manually uncommenting the definition of the variable PSCF_CUDA in the relevant config.mk configuration file.</p>
 <p>The "all" target is the first target in the identical makefiles located in the src and bld directory, and is the default target. Invoking "make" with no target from either of these directories is thus equivalent to invoking "make all" from the same location.</p>
 <p>The remainder of this makefile defines a number of other targets that enable the user to compile only part of the package, to run unit tests, and to clean up after compilation. The purposes of these other targets are explained by comments in the makefile, and are also generally rather self-explanatory.</p>
 <h1 class="doxsection"><a class="anchor" id="developer_build_makefile_root_sec"></a>

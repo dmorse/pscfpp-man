@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -97,23 +97,22 @@ $(function() {
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#a2352b4a01d6dcb3eb778c22381825d8b">   35</a></span>   <a class="code hl_function" href="classPscf_1_1SweepTmpl.html#a2352b4a01d6dcb3eb778c22381825d8b">SweepTmpl&lt;State&gt;::~SweepTmpl</a>()</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>   {}</div>
 </div>
-<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#a2352b4a01d6dcb3eb778c22381825d8b">   37</a></span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">   * Read parameters.</span></div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#adc647826663fc40402cbbf73168b222d">   39</a></span><span class="comment">   * Read parameters.</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">   */</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> State&gt;</div>
 <div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#adc647826663fc40402cbbf73168b222d">   42</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1SweepTmpl.html#adc647826663fc40402cbbf73168b222d">SweepTmpl&lt;State&gt;::readParameters</a>(std::istream&amp; in)</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>   {</div>
 <div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#adc647826663fc40402cbbf73168b222d">   44</a></span>      <span class="comment">// Default values</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#ab0bfbf0d804e157d997b65edddf58a3b">   44</a></span>      <span class="comment">// Default values</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      <a class="code hl_variable" href="classPscf_1_1SweepTmpl.html#a3751653f74fa721d9a5b14c9fbc0e613">baseFileName_</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      <span class="comment">// Read parameters</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a21c4ae1412ec944d4189cb7c7b6a3171">read&lt;int&gt;</a>(in, <span class="stringliteral">&quot;ns&quot;</span>, <a class="code hl_variable" href="classPscf_1_1SweepTmpl.html#ad4af028fd5c12528298c897f3dc1c6c6">ns_</a>);</div>
-<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#ab0bfbf0d804e157d997b65edddf58a3b">   49</a></span>      <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">readOptional&lt;std::string&gt;</a>(in, <span class="stringliteral">&quot;baseFileName&quot;</span>, <a class="code hl_variable" href="classPscf_1_1SweepTmpl.html#a3751653f74fa721d9a5b14c9fbc0e613">baseFileName_</a>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">readOptional&lt;std::string&gt;</a>(in, <span class="stringliteral">&quot;baseFileName&quot;</span>, <a class="code hl_variable" href="classPscf_1_1SweepTmpl.html#a3751653f74fa721d9a5b14c9fbc0e613">baseFileName_</a>);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">readOptional&lt;int&gt;</a>(in, <span class="stringliteral">&quot;historyCapacity&quot;</span>, historyCapacity_);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <a class="code hl_function" href="classUtil_1_1ParamComposite.html#a5d9f133993e0aa0b18cd59938ccf8700">readOptional&lt;bool&gt;</a>(in, <span class="stringliteral">&quot;reuseState&quot;</span>, reuseState_);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
@@ -121,13 +120,14 @@ $(function() {
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(historyCapacity_ &gt; 0);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      states_.allocate(historyCapacity_);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      stateHistory_.allocate(historyCapacity_);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      sHistory_.allocate(historyCapacity_);</div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#aa9d5f196ffcb2f276d304617ab2827ef">   57</a></span>      sHistory_.allocate(historyCapacity_);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      c_.allocate(historyCapacity_);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>   }</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> State&gt;</div>
 <div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#aa9d5f196ffcb2f276d304617ab2827ef">   62</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1SweepTmpl.html#ab0bfbf0d804e157d997b65edddf58a3b">SweepTmpl&lt;State&gt;::sweep</a>()</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#ab0bfbf0d804e157d997b65edddf58a3b">   62</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1SweepTmpl.html#ab0bfbf0d804e157d997b65edddf58a3b">SweepTmpl&lt;State&gt;::sweep</a>()</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>   {</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      <span class="comment">// Compute and output ds</span></div>
@@ -143,13 +143,13 @@ $(function() {
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      <span class="comment">// Solve for initial state of sweep</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <span class="keywordtype">double</span> sNew = 0.0;</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;===========================================\n&quot;</span>;</div>
+<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#a06ad01e0b22042239e2c3906a92c0d9d">   78</a></span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;===========================================\n&quot;</span>;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;Attempt s = &quot;</span> &lt;&lt; sNew &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      <span class="keywordtype">int</span> error;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      <span class="keywordtype">bool</span> isContinuation = <span class="keyword">false</span>; <span class="comment">// False on first step</span></div>
-<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#a06ad01e0b22042239e2c3906a92c0d9d">   83</a></span>      error = <a class="code hl_function" href="classPscf_1_1SweepTmpl.html#abddfa9c19dad8cfbd5ff20691da6d440">solve</a>(isContinuation);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      error = <a class="code hl_function" href="classPscf_1_1SweepTmpl.html#abddfa9c19dad8cfbd5ff20691da6d440">solve</a>(isContinuation);</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      <span class="keywordflow">if</span> (error) {</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>         <a class="code hl_define" href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a>(<span class="stringliteral">&quot;Failure to converge initial state of sweep&quot;</span>);</div>
@@ -159,33 +159,34 @@ $(function() {
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      <span class="comment">// Loop over states on path</span></div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      <span class="keywordtype">bool</span> finished = <span class="keyword">false</span>;   <span class="comment">// Are we finished with the loop?</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      <span class="keywordflow">while</span> (!finished) {</div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="}">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#a727193df8b1c170a39f6e1d68ba6ce62">   93</a></span>      <span class="keywordflow">while</span> (!finished) {</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>         <span class="comment">// Loop over iteration attempts, with decreasing ds as needed</span></div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>         error = 1;</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>         <span class="keywordflow">while</span> (error) {</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#a2352b4a01d6dcb3eb778c22381825d8b">   98</a></span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="comment">// Set a new contour variable value sNew</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            sNew = s(0) + ds; </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            sNew = <a class="code hl_function" href="classPscf_1_1SweepTmpl.html#aed59e7b51803bf2025b4a569274b8a9c">s</a>(0) + ds; </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;===========================================\n&quot;</span>;</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;Attempt s = &quot;</span> &lt;&lt; sNew &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="comment">// Set non-adjustable system parameters to new values</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            setParameters(sNew);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <a class="code hl_function" href="classPscf_1_1SweepTmpl.html#abd616e591b4c17888f4f623d0cc06b72">setParameters</a>(sNew);</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="comment">// Guess new state variables by polynomial extrapolation.</span></div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="comment">// This function must both compute the extrapolation and</span></div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <span class="comment">// set initial guess values in the parent system.</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            extrapolate(sNew);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <a class="code hl_function" href="classPscf_1_1SweepTmpl.html#a204d5f1b29a41a92ed149168c8b76e94">extrapolate</a>(sNew);</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="comment">// Attempt iterative SCFT solution</span></div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            isContinuation = reuseState_;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            error = solve(isContinuation);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            error = <a class="code hl_function" href="classPscf_1_1SweepTmpl.html#abddfa9c19dad8cfbd5ff20691da6d440">solve</a>(isContinuation);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="comment">// Process success or failure</span></div>
-<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#a727193df8b1c170a39f6e1d68ba6ce62">  118</a></span>            <span class="keywordflow">if</span> (error) {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keywordflow">if</span> (error) {</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>               <a class="code hl_function" href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Log::file</a>() &lt;&lt; <span class="stringliteral">&quot;Backtrack and halve sweep step size:&quot;</span> </div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                           &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
@@ -258,15 +259,15 @@ $(function() {
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; paramTypes.<a class="code hl_function" href="classUtil_1_1GArray.html#a6d44bce57ca63ed069af80eaf9ac016f">size</a>(); i++) {</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>         <span class="comment">// Check if parameterTypes_ already has an element with this name</span></div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>         <span class="keywordflow">if</span> (<a class="code hl_variable" href="classPscf_1_1SweepTmpl.html#ae06cb0a4b31a154b8c92b129d56db811">parameterTypes_</a>.size() &gt; 0) {</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classPscf_1_1SweepTmpl.html#ae06cb0a4b31a154b8c92b129d56db811">parameterTypes_</a>.size(); j++) {</div>
+<div class="foldopen" id="foldopen00186" data-start="{" data-end="}">
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#a4f89c1b6dc890d1548eea4e1c9def426">  186</a></span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classPscf_1_1SweepTmpl.html#ae06cb0a4b31a154b8c92b129d56db811">parameterTypes_</a>.size(); j++) {</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>               <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(<a class="code hl_variable" href="classPscf_1_1SweepTmpl.html#ae06cb0a4b31a154b8c92b129d56db811">parameterTypes_</a>[j].name != paramTypes[i].name);</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            }</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>         }</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>         </div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>         <a class="code hl_variable" href="classPscf_1_1SweepTmpl.html#ae06cb0a4b31a154b8c92b129d56db811">parameterTypes_</a>.append(paramTypes[i]);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>         parameterTypes_.append(paramTypes[i]);</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>      }</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>   }</div>
-</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="comment">   * Initialize history variables (must be called by setup function).</span></div>
@@ -280,8 +281,7 @@ $(function() {
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(sHistory_.capacity() == historyCapacity_);</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(stateHistory_.capacity() == historyCapacity_);</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="foldopen" id="foldopen00206" data-start="{" data-end="}">
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#a4f89c1b6dc890d1548eea4e1c9def426">  206</a></span>      <span class="comment">// Check allocation of all states, allocate if necessary</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>      <span class="comment">// Check allocation of all states, allocate if necessary</span></div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; historyCapacity_; ++i) {</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>         <a class="code hl_function" href="classPscf_1_1SweepTmpl.html#a28f2f99d84d6ae3b738800e43b38b47c">checkAllocation</a>(states_[i]);</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>      }</div>
@@ -334,7 +334,8 @@ $(function() {
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>   {</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      <a class="code hl_define" href="global_8h.html#aaf3bc07accafc94019d126e4cffa81e7">UTIL_CHECK</a>(historySize_ &lt;= historyCapacity_);</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      <span class="keywordflow">if</span> (historySize_ == 1) {</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>         c_[0] = 1.0;</div>
+<div class="foldopen" id="foldopen00256" data-start="{" data-end="}">
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#a8e49bca07b1e2b8930a3b72cdf8de646">  256</a></span>         c_[0] = 1.0;</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>         <span class="keywordtype">double</span> num, den;</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>         <span class="keywordtype">int</span> i, j;</div>
@@ -343,8 +344,8 @@ $(function() {
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            den = 1.0;</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            <span class="keywordflow">for</span> (j = 0; j &lt; historySize_; ++j) {</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>               <span class="keywordflow">if</span> (j != i) {</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                  num *= (sNew - <a class="code hl_function" href="classPscf_1_1SweepTmpl.html#aed59e7b51803bf2025b4a569274b8a9c">s</a>(j));</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                  den *= (<a class="code hl_function" href="classPscf_1_1SweepTmpl.html#aed59e7b51803bf2025b4a569274b8a9c">s</a>(i) - <a class="code hl_function" href="classPscf_1_1SweepTmpl.html#aed59e7b51803bf2025b4a569274b8a9c">s</a>(j));</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                  num *= (sNew - s(j));</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                  den *= (s(i) - s(j));</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>               }</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>            }</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            c_[i] = num/den;</div>
@@ -354,8 +355,7 @@ $(function() {
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>      <span class="comment">// function c_[i](sNew) of sNew that is defined such that</span></div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>      <span class="comment">// c_[i](s(i)) = 1 and c_[i](s(j)) = 0 for any j != i.</span></div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>      <span class="comment">// Given a set of values y(i) previously obtained at contour</span></div>
-<div class="foldopen" id="foldopen00276" data-start="{" data-end="}">
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#a8e49bca07b1e2b8930a3b72cdf8de646">  276</a></span>      <span class="comment">// variable values s(i) for all 0 &lt;= i &lt; historySize_, a </span></div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>      <span class="comment">// variable values s(i) for all 0 &lt;= i &lt; historySize_, a </span></div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>      <span class="comment">// linear combination f(sNew) = \sum_i c_[i](sNew)*y(i) summed </span></div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>      <span class="comment">// over i = 0, ..., historySize_ - 1 gives a polynomial in</span></div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>      <span class="comment">// sNew that passes through all previous values, such that</span></div>
@@ -372,7 +372,8 @@ $(function() {
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#a47c747feb697f7f2f560b87098f03c0f">  287</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1SweepTmpl.html#a47c747feb697f7f2f560b87098f03c0f">SweepTmpl&lt;State&gt;::cleanup</a>()</div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>   {}</div>
 </div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="foldopen" id="foldopen00289" data-start="{" data-end="}">
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno"><a class="line" href="classPscf_1_1SweepTmpl.html#a47c747feb697f7f2f560b87098f03c0f">  289</a></span> </div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>} <span class="comment">// namespace Pscf</span></div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="preprocessor">#endif</span></div>
 </div>
@@ -382,27 +383,32 @@ $(function() {
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="ttc" id="aclassPscf_1_1ParameterModifier_html"><div class="ttname"><a href="classPscf_1_1ParameterModifier.html">Pscf::ParameterModifier</a></div><div class="ttdoc">Base class allowing subclasses to define sweepable parameters.</div><div class="ttdef"><b>Definition</b> <a href="ParameterModifier_8h_source.html#l00040">ParameterModifier.h:41</a></div></div>
 <div class="ttc" id="aclassPscf_1_1SweepTmpl_html_a06ad01e0b22042239e2c3906a92c0d9d"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#a06ad01e0b22042239e2c3906a92c0d9d">Pscf::SweepTmpl::addParameterTypes</a></div><div class="ttdeci">void addParameterTypes(GArray&lt; ParameterType &gt; paramTypes)</div><div class="ttdoc">Declare an array of specialized sweep parameter types.</div><div class="ttdef"><b>Definition</b> <a href="#l00181">SweepTmpl.tpp:181</a></div></div>
+<div class="ttc" id="aclassPscf_1_1SweepTmpl_html_a204d5f1b29a41a92ed149168c8b76e94"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#a204d5f1b29a41a92ed149168c8b76e94">Pscf::SweepTmpl&lt; DArray&lt; System::WField &gt; &gt;::extrapolate</a></div><div class="ttdeci">virtual void extrapolate(double sNew)=0</div></div>
 <div class="ttc" id="aclassPscf_1_1SweepTmpl_html_a2352b4a01d6dcb3eb778c22381825d8b"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#a2352b4a01d6dcb3eb778c22381825d8b">Pscf::SweepTmpl::~SweepTmpl</a></div><div class="ttdeci">~SweepTmpl()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00035">SweepTmpl.tpp:35</a></div></div>
-<div class="ttc" id="aclassPscf_1_1SweepTmpl_html_a28f2f99d84d6ae3b738800e43b38b47c"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#a28f2f99d84d6ae3b738800e43b38b47c">Pscf::SweepTmpl&lt; DArray&lt; System::WField &gt; &gt;::checkAllocation</a></div><div class="ttdeci">virtual void checkAllocation(DArray&lt; System::WField &gt; &amp;state)=0</div></div>
-<div class="ttc" id="aclassPscf_1_1SweepTmpl_html_a3751653f74fa721d9a5b14c9fbc0e613"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#a3751653f74fa721d9a5b14c9fbc0e613">Pscf::SweepTmpl::baseFileName_</a></div><div class="ttdeci">std::string baseFileName_</div><div class="ttdoc">Base name for output files.</div><div class="ttdef"><b>Definition</b> <a href="SweepTmpl_8h_source.html#l00091">SweepTmpl.h:91</a></div></div>
+<div class="ttc" id="aclassPscf_1_1SweepTmpl_html_a28f2f99d84d6ae3b738800e43b38b47c"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#a28f2f99d84d6ae3b738800e43b38b47c">Pscf::SweepTmpl::checkAllocation</a></div><div class="ttdeci">virtual void checkAllocation(State &amp;state)=0</div><div class="ttdoc">Check allocation of one state, allocate if necessary.</div></div>
+<div class="ttc" id="aclassPscf_1_1SweepTmpl_html_a3751653f74fa721d9a5b14c9fbc0e613"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#a3751653f74fa721d9a5b14c9fbc0e613">Pscf::SweepTmpl::baseFileName_</a></div><div class="ttdeci">std::string baseFileName_</div><div class="ttdoc">Base name for output files.</div><div class="ttdef"><b>Definition</b> <a href="SweepTmpl_8h_source.html#l00297">SweepTmpl.h:297</a></div></div>
 <div class="ttc" id="aclassPscf_1_1SweepTmpl_html_a47c747feb697f7f2f560b87098f03c0f"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#a47c747feb697f7f2f560b87098f03c0f">Pscf::SweepTmpl::cleanup</a></div><div class="ttdeci">virtual void cleanup()</div><div class="ttdoc">Clean up operation at the end of a sweep.</div><div class="ttdef"><b>Definition</b> <a href="#l00287">SweepTmpl.tpp:287</a></div></div>
 <div class="ttc" id="aclassPscf_1_1SweepTmpl_html_a4f89c1b6dc890d1548eea4e1c9def426"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#a4f89c1b6dc890d1548eea4e1c9def426">Pscf::SweepTmpl::initialize</a></div><div class="ttdeci">void initialize()</div><div class="ttdoc">Initialize variables that track history of solutions.</div><div class="ttdef"><b>Definition</b> <a href="#l00199">SweepTmpl.tpp:199</a></div></div>
-<div class="ttc" id="aclassPscf_1_1SweepTmpl_html_a6bc4a04128d08bb23ab564bbc2a040dd"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#a6bc4a04128d08bb23ab564bbc2a040dd">Pscf::SweepTmpl&lt; DArray&lt; System::WField &gt; &gt;::setup</a></div><div class="ttdeci">virtual void setup()=0</div></div>
+<div class="ttc" id="aclassPscf_1_1SweepTmpl_html_a6bc4a04128d08bb23ab564bbc2a040dd"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#a6bc4a04128d08bb23ab564bbc2a040dd">Pscf::SweepTmpl::setup</a></div><div class="ttdeci">virtual void setup()=0</div><div class="ttdoc">Setup operation at the beginning of a sweep.</div></div>
 <div class="ttc" id="aclassPscf_1_1SweepTmpl_html_a727193df8b1c170a39f6e1d68ba6ce62"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#a727193df8b1c170a39f6e1d68ba6ce62">Pscf::SweepTmpl::SweepTmpl</a></div><div class="ttdeci">SweepTmpl(int historyCapacity)</div><div class="ttdoc">Constructor (protected).</div><div class="ttdef"><b>Definition</b> <a href="#l00022">SweepTmpl.tpp:22</a></div></div>
 <div class="ttc" id="aclassPscf_1_1SweepTmpl_html_a8e49bca07b1e2b8930a3b72cdf8de646"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#a8e49bca07b1e2b8930a3b72cdf8de646">Pscf::SweepTmpl::setCoefficients</a></div><div class="ttdeci">void setCoefficients(double sNew)</div><div class="ttdoc">Compute coefficients of previous states for continuation.</div><div class="ttdef"><b>Definition</b> <a href="#l00252">SweepTmpl.tpp:252</a></div></div>
 <div class="ttc" id="aclassPscf_1_1SweepTmpl_html_aa9d5f196ffcb2f276d304617ab2827ef"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#aa9d5f196ffcb2f276d304617ab2827ef">Pscf::SweepTmpl::addParameterType</a></div><div class="ttdeci">void addParameterType(std::string name, int nId, ParameterModifier &amp;modifier)</div><div class="ttdoc">Declare a specialized parameter type.</div><div class="ttdef"><b>Definition</b> <a href="#l00150">SweepTmpl.tpp:150</a></div></div>
 <div class="ttc" id="aclassPscf_1_1SweepTmpl_html_ab0bfbf0d804e157d997b65edddf58a3b"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#ab0bfbf0d804e157d997b65edddf58a3b">Pscf::SweepTmpl::sweep</a></div><div class="ttdeci">virtual void sweep()</div><div class="ttdoc">Iterate to solution.</div><div class="ttdef"><b>Definition</b> <a href="#l00062">SweepTmpl.tpp:62</a></div></div>
+<div class="ttc" id="aclassPscf_1_1SweepTmpl_html_abd616e591b4c17888f4f623d0cc06b72"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#abd616e591b4c17888f4f623d0cc06b72">Pscf::SweepTmpl&lt; DArray&lt; System::WField &gt; &gt;::setParameters</a></div><div class="ttdeci">virtual void setParameters(double sNew)=0</div></div>
 <div class="ttc" id="aclassPscf_1_1SweepTmpl_html_abddfa9c19dad8cfbd5ff20691da6d440"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#abddfa9c19dad8cfbd5ff20691da6d440">Pscf::SweepTmpl&lt; DArray&lt; System::WField &gt; &gt;::solve</a></div><div class="ttdeci">virtual int solve(bool isContinuation)=0</div></div>
-<div class="ttc" id="aclassPscf_1_1SweepTmpl_html_ad4af028fd5c12528298c897f3dc1c6c6"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#ad4af028fd5c12528298c897f3dc1c6c6">Pscf::SweepTmpl::ns_</a></div><div class="ttdeci">int ns_</div><div class="ttdoc">Number of steps.</div><div class="ttdef"><b>Definition</b> <a href="SweepTmpl_8h_source.html#l00088">SweepTmpl.h:88</a></div></div>
+<div class="ttc" id="aclassPscf_1_1SweepTmpl_html_ad4af028fd5c12528298c897f3dc1c6c6"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#ad4af028fd5c12528298c897f3dc1c6c6">Pscf::SweepTmpl::ns_</a></div><div class="ttdeci">int ns_</div><div class="ttdoc">Number of steps.</div><div class="ttdef"><b>Definition</b> <a href="SweepTmpl_8h_source.html#l00294">SweepTmpl.h:294</a></div></div>
 <div class="ttc" id="aclassPscf_1_1SweepTmpl_html_adc647826663fc40402cbbf73168b222d"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#adc647826663fc40402cbbf73168b222d">Pscf::SweepTmpl::readParameters</a></div><div class="ttdeci">virtual void readParameters(std::istream &amp;in)</div><div class="ttdoc">Read ns and baseFileName parameters.</div><div class="ttdef"><b>Definition</b> <a href="#l00042">SweepTmpl.tpp:42</a></div></div>
-<div class="ttc" id="aclassPscf_1_1SweepTmpl_html_ae06cb0a4b31a154b8c92b129d56db811"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#ae06cb0a4b31a154b8c92b129d56db811">Pscf::SweepTmpl::parameterTypes_</a></div><div class="ttdeci">GArray&lt; ParameterType &gt; parameterTypes_</div><div class="ttdoc">Array of specialized parameter types.</div><div class="ttdef"><b>Definition</b> <a href="SweepTmpl_8h_source.html#l00105">SweepTmpl.h:105</a></div></div>
-<div class="ttc" id="aclassPscf_1_1SweepTmpl_html_aed59e7b51803bf2025b4a569274b8a9c"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#aed59e7b51803bf2025b4a569274b8a9c">Pscf::SweepTmpl::s</a></div><div class="ttdeci">double s(int i) const</div><div class="ttdoc">Get the value of s for a stored solution, with i = 0 most recent.</div><div class="ttdef"><b>Definition</b> <a href="SweepTmpl_8h_source.html#l00142">SweepTmpl.h:142</a></div></div>
+<div class="ttc" id="aclassPscf_1_1SweepTmpl_html_ae06cb0a4b31a154b8c92b129d56db811"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#ae06cb0a4b31a154b8c92b129d56db811">Pscf::SweepTmpl::parameterTypes_</a></div><div class="ttdeci">GArray&lt; ParameterType &gt; parameterTypes_</div><div class="ttdoc">Array of specialized parameter types.</div><div class="ttdef"><b>Definition</b> <a href="SweepTmpl_8h_source.html#l00311">SweepTmpl.h:311</a></div></div>
+<div class="ttc" id="aclassPscf_1_1SweepTmpl_html_aed59e7b51803bf2025b4a569274b8a9c"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#aed59e7b51803bf2025b4a569274b8a9c">Pscf::SweepTmpl&lt; DArray&lt; System::WField &gt; &gt;::s</a></div><div class="ttdeci">double s(int i) const</div><div class="ttdef"><b>Definition</b> <a href="SweepTmpl_8h_source.html#l00122">SweepTmpl.h:122</a></div></div>
 <div class="ttc" id="aclassPscf_1_1SweepTmpl_html_af36b40cbf32dde6b3dfa3eb0321c4e2a"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#af36b40cbf32dde6b3dfa3eb0321c4e2a">Pscf::SweepTmpl&lt; DArray&lt; System::WField &gt; &gt;::reset</a></div><div class="ttdeci">virtual void reset()=0</div></div>
-<div class="ttc" id="aclassPscf_1_1SweepTmpl_html_af76fb2e9fa7a94b06b98d5138ee19f65"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#af76fb2e9fa7a94b06b98d5138ee19f65">Pscf::SweepTmpl::historyCapacity</a></div><div class="ttdeci">int historyCapacity() const</div><div class="ttdoc">Get the maximum number of stored previous states.</div><div class="ttdef"><b>Definition</b> <a href="SweepTmpl_8h_source.html#l00188">SweepTmpl.h:188</a></div></div>
+<div class="ttc" id="aclassPscf_1_1SweepTmpl_html_af76fb2e9fa7a94b06b98d5138ee19f65"><div class="ttname"><a href="classPscf_1_1SweepTmpl.html#af76fb2e9fa7a94b06b98d5138ee19f65">Pscf::SweepTmpl::historyCapacity</a></div><div class="ttdeci">int historyCapacity() const</div><div class="ttdoc">Get the maximum number of stored previous states.</div><div class="ttdef"><b>Definition</b> <a href="SweepTmpl_8h_source.html#l00168">SweepTmpl.h:168</a></div></div>
 <div class="ttc" id="aclassUtil_1_1GArray_html"><div class="ttname"><a href="classUtil_1_1GArray.html">Util::GArray</a></div><div class="ttdoc">An automatically growable array, analogous to a std::vector.</div><div class="ttdef"><b>Definition</b> <a href="GArray_8h_source.html#l00033">GArray.h:34</a></div></div>
-<div class="ttc" id="aclassUtil_1_1GArray_html_a6d44bce57ca63ed069af80eaf9ac016f"><div class="ttname"><a href="classUtil_1_1GArray.html#a6d44bce57ca63ed069af80eaf9ac016f">Util::GArray::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">Return logical size of this array (i.e., current number of elements).</div><div class="ttdef"><b>Definition</b> <a href="GArray_8h_source.html#l00455">GArray.h:455</a></div></div>
+<div class="ttc" id="aclassUtil_1_1GArray_html_a6d44bce57ca63ed069af80eaf9ac016f"><div class="ttname"><a href="classUtil_1_1GArray.html#a6d44bce57ca63ed069af80eaf9ac016f">Util::GArray::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">Return logical size of this array (i.e., current number of elements).</div><div class="ttdef"><b>Definition</b> <a href="GArray_8h_source.html#l00450">GArray.h:450</a></div></div>
 <div class="ttc" id="aclassUtil_1_1Log_html_a7b86f7c53e482f8f4a1a8b756c162817"><div class="ttname"><a href="classUtil_1_1Log.html#a7b86f7c53e482f8f4a1a8b756c162817">Util::Log::file</a></div><div class="ttdeci">static std::ostream &amp; file()</div><div class="ttdoc">Get log ostream by reference.</div><div class="ttdef"><b>Definition</b> <a href="Log_8cpp_source.html#l00059">Log.cpp:59</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a21c4ae1412ec944d4189cb7c7b6a3171"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a21c4ae1412ec944d4189cb7c7b6a3171">Util::ParamComposite::read</a></div><div class="ttdeci">ScalarParam&lt; Type &gt; &amp; read(std::istream &amp;in, const char *label, Type &amp;value)</div><div class="ttdoc">Add and read a new required ScalarParam &lt; Type &gt; object.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8h_source.html#l01248">ParamComposite.h:1248</a></div></div>
 <div class="ttc" id="aclassUtil_1_1ParamComposite_html_a30752567fd7b8b93e5c8476bbe8592c5"><div class="ttname"><a href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">Util::ParamComposite::setClassName</a></div><div class="ttdeci">void setClassName(const char *className)</div><div class="ttdoc">Set class name string.</div><div class="ttdef"><b>Definition</b> <a href="ParamComposite_8cpp_source.html#l00379">ParamComposite.cpp:379</a></div></div>

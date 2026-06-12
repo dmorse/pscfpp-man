@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -131,10 +131,10 @@ $(function() {
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="comment">   * Constructor.</span></div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00170" data-start="{" data-end="}">
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="classUtil_1_1DSArray.html#ad64cd3de2cab760298f47b02053d996d">  170</a></span>   <a class="code hl_function" href="classUtil_1_1DSArray.html#ad64cd3de2cab760298f47b02053d996d">DSArray&lt;Data&gt;::DSArray</a>()</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    : <a class="code hl_variable" href="classUtil_1_1DSArray.html#a59fab10a4eea7d2e3565bf8d8c112894">data_</a>(0),</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    : <a class="code hl_variable" href="classUtil_1_1DSArray.html#a59fab10a4eea7d2e3565bf8d8c112894">data_</a>(nullptr),</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>      <a class="code hl_variable" href="classUtil_1_1DSArray.html#acecc67e62224b979dac5532f6e1e6505">size_</a>(0),</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>      <a class="code hl_variable" href="classUtil_1_1DSArray.html#ae965fbda8c2b0eaa0e71ce6fc0a9bd36">capacity_</a>(0)</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>   {}</div>
@@ -143,10 +143,10 @@ $(function() {
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment">   * Copy constructor.</span></div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00180" data-start="{" data-end="}">
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="classUtil_1_1DSArray.html#a1ba282a4f923180b67c462a7473ff54a">  180</a></span>   <a class="code hl_function" href="classUtil_1_1DSArray.html#ad64cd3de2cab760298f47b02053d996d">DSArray&lt;Data&gt;::DSArray</a>(<a class="code hl_function" href="classUtil_1_1DSArray.html#ad64cd3de2cab760298f47b02053d996d">DSArray&lt; Data &gt;</a> <span class="keyword">const</span> &amp; other)</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    : <a class="code hl_variable" href="classUtil_1_1DSArray.html#a59fab10a4eea7d2e3565bf8d8c112894">data_</a>(0),</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    : <a class="code hl_variable" href="classUtil_1_1DSArray.html#a59fab10a4eea7d2e3565bf8d8c112894">data_</a>(nullptr),</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>      <a class="code hl_variable" href="classUtil_1_1DSArray.html#acecc67e62224b979dac5532f6e1e6505">size_</a>(0),</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>      <a class="code hl_variable" href="classUtil_1_1DSArray.html#ae965fbda8c2b0eaa0e71ce6fc0a9bd36">capacity_</a>(0)</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>   {</div>
@@ -169,7 +169,7 @@ $(function() {
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="comment">   *</span></div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="comment">   * Capacity of LHS DSArray must be zero or == capacity of RHS DSArray.</span></div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00204" data-start="{" data-end="}">
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="classUtil_1_1DSArray.html#ac7e3fec435cbab9ca9485195598f31b3">  204</a></span>   <a class="code hl_function" href="classUtil_1_1DSArray.html#ad64cd3de2cab760298f47b02053d996d">DSArray&lt;Data&gt;</a>&amp; <a class="code hl_function" href="classUtil_1_1DSArray.html#ac7e3fec435cbab9ca9485195598f31b3">DSArray&lt;Data&gt;::operator=</a>(<a class="code hl_function" href="classUtil_1_1DSArray.html#ad64cd3de2cab760298f47b02053d996d">DSArray&lt;Data&gt;</a> <span class="keyword">const</span> &amp; other)</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>   {</div>
@@ -200,7 +200,7 @@ $(function() {
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="comment">   * Destructor.</span></div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00233" data-start="{" data-end="}">
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno"><a class="line" href="classUtil_1_1DSArray.html#a190de23863bbf1fbf3376f184aa1acc0">  233</a></span>   <a class="code hl_function" href="classUtil_1_1DSArray.html#a190de23863bbf1fbf3376f184aa1acc0">DSArray&lt;Data&gt;::~DSArray</a>()</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>   {</div>
@@ -216,7 +216,7 @@ $(function() {
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="comment">   * Allocates the underlying C array.</span></div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00247" data-start="{" data-end="}">
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno"><a class="line" href="classUtil_1_1DSArray.html#ad9e1548874eb6705e42b88d457da9d6b">  247</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classUtil_1_1DSArray.html#ad9e1548874eb6705e42b88d457da9d6b">DSArray&lt;Data&gt;::allocate</a>(<span class="keywordtype">int</span> <a class="code hl_function" href="classUtil_1_1DSArray.html#a9980acef0bd3349954a29eb53a9236ef">capacity</a>)</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>   {</div>
@@ -235,7 +235,7 @@ $(function() {
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="comment">   * Serialize a DSArray to/from an Archive.</span></div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Archive&gt;</div>
 <div class="foldopen" id="foldopen00265" data-start="{" data-end="}">
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="classUtil_1_1DSArray.html#a1af3f836d880814d23ebe3d098b6bb5f">  265</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classUtil_1_1DSArray.html#a1af3f836d880814d23ebe3d098b6bb5f">DSArray&lt;Data&gt;::serialize</a>(Archive&amp; ar, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> version)</div>
@@ -269,7 +269,7 @@ $(function() {
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>   }</div>
 </div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span></div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>   <span class="keyword">inline</span></div>
 <div class="foldopen" id="foldopen00302" data-start="{" data-end="}">
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno"><a class="line" href="classUtil_1_1DSArray.html#a20d31a303e4f8747d30955fc232ffce4">  302</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classUtil_1_1DSArray.html#a20d31a303e4f8747d30955fc232ffce4">DSArray&lt;Data&gt;::begin</a>(<a class="code hl_class" href="classUtil_1_1ArrayIterator.html">ArrayIterator&lt;Data&gt;</a> &amp;iterator)</div>
@@ -282,7 +282,7 @@ $(function() {
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="comment">   * Set a ConstArrayIterator to the beginning of this Array.</span></div>
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>   <span class="keyword">inline</span></div>
 <div class="foldopen" id="foldopen00313" data-start="{" data-end="}">
 <div class="line"><a id="l00313" name="l00313"></a><span class="lineno"><a class="line" href="classUtil_1_1DSArray.html#a680727f69ddf30eeaf4f441e5976b1c5">  313</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classUtil_1_1DSArray.html#a20d31a303e4f8747d30955fc232ffce4">DSArray&lt;Data&gt;::begin</a>(<a class="code hl_class" href="classUtil_1_1ConstArrayIterator.html">ConstArrayIterator&lt;Data&gt;</a> &amp;iterator)<span class="keyword"> const</span></div>
@@ -295,7 +295,7 @@ $(function() {
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="comment">   * Mimic C array subscripting.</span></div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00323" data-start="{" data-end="}">
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno"><a class="line" href="classUtil_1_1DSArray.html#a64d57aff171ea7fd76f1e1466481360c">  323</a></span>   <span class="keyword">inline</span> Data&amp; <a class="code hl_function" href="classUtil_1_1DSArray.html#a64d57aff171ea7fd76f1e1466481360c">DSArray&lt;Data&gt;::operator[] </a>(<span class="keywordtype">int</span> i)</div>
 <div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>   {</div>
@@ -308,7 +308,7 @@ $(function() {
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="comment">   * Mimic C array subscripting.</span></div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00334" data-start="{" data-end="}">
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno"><a class="line" href="classUtil_1_1DSArray.html#a170f191bad36f3eafa9b01becf62bee5">  334</a></span>   <span class="keyword">inline</span> Data <span class="keyword">const</span> &amp; <a class="code hl_function" href="classUtil_1_1DSArray.html#a64d57aff171ea7fd76f1e1466481360c">DSArray&lt;Data&gt;::operator[] </a>(<span class="keywordtype">int</span> i)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="keyword">   </span>{</div>
@@ -321,7 +321,7 @@ $(function() {
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="comment">   * Append data to the end of the array.</span></div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00345" data-start="{" data-end="}">
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno"><a class="line" href="classUtil_1_1DSArray.html#a65e910d5a303b027c104dc37141666f4">  345</a></span>   <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUtil_1_1DSArray.html#a65e910d5a303b027c104dc37141666f4">DSArray&lt;Data&gt;::append</a>(Data <span class="keyword">const</span> &amp; data)</div>
 <div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>   {</div>
@@ -343,7 +343,7 @@ $(function() {
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="comment">   * modifying any elements of the underlying physical array.</span></div>
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span><span class="comment">   * If the size increases, added elements are uninitialized.</span></div>
 <div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00365" data-start="{" data-end="}">
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno"><a class="line" href="classUtil_1_1DSArray.html#a64d41954aff28febedc96b210e0d959a">  365</a></span>   <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUtil_1_1DSArray.html#a64d41954aff28febedc96b210e0d959a">DSArray&lt;Data&gt;::resize</a>(<span class="keywordtype">int</span> <a class="code hl_function" href="classUtil_1_1DSArray.html#a7f33a3afebd64bce4d10de81563c8c1f">size</a>)</div>
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>   {  <a class="code hl_variable" href="classUtil_1_1DSArray.html#acecc67e62224b979dac5532f6e1e6505">size_</a> = <a class="code hl_function" href="classUtil_1_1DSArray.html#a7f33a3afebd64bce4d10de81563c8c1f">size</a>; }</div>
@@ -352,7 +352,7 @@ $(function() {
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="comment">   * Set logical size to zero.</span></div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00372" data-start="{" data-end="}">
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno"><a class="line" href="classUtil_1_1DSArray.html#a604a0b36a322430157c415ca16b5355c">  372</a></span>   <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUtil_1_1DSArray.html#a604a0b36a322430157c415ca16b5355c">DSArray&lt;Data&gt;::clear</a>()</div>
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>   {  <a class="code hl_variable" href="classUtil_1_1DSArray.html#acecc67e62224b979dac5532f6e1e6505">size_</a> = 0; }</div>
@@ -361,7 +361,7 @@ $(function() {
 <div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span><span class="comment">   * Return physical capacity of array.</span></div>
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00379" data-start="{" data-end="}">
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno"><a class="line" href="classUtil_1_1DSArray.html#a9980acef0bd3349954a29eb53a9236ef">  379</a></span>   <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classUtil_1_1DSArray.html#a9980acef0bd3349954a29eb53a9236ef">DSArray&lt;Data&gt;::capacity</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> <a class="code hl_variable" href="classUtil_1_1DSArray.html#ae965fbda8c2b0eaa0e71ce6fc0a9bd36">capacity_</a>; }</div>
@@ -370,7 +370,7 @@ $(function() {
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span><span class="comment">   * Return logical size of this array (i.e., number of elements).</span></div>
 <div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00386" data-start="{" data-end="}">
 <div class="line"><a id="l00386" name="l00386"></a><span class="lineno"><a class="line" href="classUtil_1_1DSArray.html#a7f33a3afebd64bce4d10de81563c8c1f">  386</a></span>   <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classUtil_1_1DSArray.html#a7f33a3afebd64bce4d10de81563c8c1f">DSArray&lt;Data&gt;::size</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> <a class="code hl_variable" href="classUtil_1_1DSArray.html#acecc67e62224b979dac5532f6e1e6505">size_</a>; }</div>
@@ -379,7 +379,7 @@ $(function() {
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span><span class="comment">   * Return true if the DSArray has been allocated, false otherwise.</span></div>
 <div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Data&gt;</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Data&gt;</div>
 <div class="foldopen" id="foldopen00393" data-start="{" data-end="}">
 <div class="line"><a id="l00393" name="l00393"></a><span class="lineno"><a class="line" href="classUtil_1_1DSArray.html#a1e589485650c8f6eb3dac75fd7778105">  393</a></span>   <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classUtil_1_1DSArray.html#a1e589485650c8f6eb3dac75fd7778105">DSArray&lt;Data&gt;::isAllocated</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span><span class="keyword">   </span>{  <span class="keywordflow">return</span> (<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classUtil_1_1DSArray.html#a59fab10a4eea7d2e3565bf8d8c112894">data_</a>; }</div>
@@ -409,8 +409,8 @@ $(function() {
 <div class="ttc" id="aclassUtil_1_1DSArray_html_ad64cd3de2cab760298f47b02053d996d"><div class="ttname"><a href="classUtil_1_1DSArray.html#ad64cd3de2cab760298f47b02053d996d">Util::DSArray::DSArray</a></div><div class="ttdeci">DSArray()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00170">DSArray.h:170</a></div></div>
 <div class="ttc" id="aclassUtil_1_1DSArray_html_ad9e1548874eb6705e42b88d457da9d6b"><div class="ttname"><a href="classUtil_1_1DSArray.html#ad9e1548874eb6705e42b88d457da9d6b">Util::DSArray::allocate</a></div><div class="ttdeci">void allocate(int capacity)</div><div class="ttdoc">Allocates the underlying C array.</div><div class="ttdef"><b>Definition</b> <a href="#l00247">DSArray.h:247</a></div></div>
 <div class="ttc" id="aclassUtil_1_1DSArray_html_ae965fbda8c2b0eaa0e71ce6fc0a9bd36"><div class="ttname"><a href="classUtil_1_1DSArray.html#ae965fbda8c2b0eaa0e71ce6fc0a9bd36">Util::DSArray::capacity_</a></div><div class="ttdeci">int capacity_</div><div class="ttdoc">Capacity (physical size) of underlying C array.</div><div class="ttdef"><b>Definition</b> <a href="#l00160">DSArray.h:160</a></div></div>
-<div class="ttc" id="aclassUtil_1_1Memory_html_a3ded7c631c8cbdb6968f03f8084485a2"><div class="ttname"><a href="classUtil_1_1Memory.html#a3ded7c631c8cbdb6968f03f8084485a2">Util::Memory::deallocate</a></div><div class="ttdeci">static void deallocate(Data *&amp;ptr, size_t size)</div><div class="ttdoc">Deallocate a C++ array.</div><div class="ttdef"><b>Definition</b> <a href="Memory_8h_source.html#l00152">Memory.h:152</a></div></div>
-<div class="ttc" id="aclassUtil_1_1Memory_html_af6003f193ae6c7a0fc049d7e443e0348"><div class="ttname"><a href="classUtil_1_1Memory.html#af6003f193ae6c7a0fc049d7e443e0348">Util::Memory::allocate</a></div><div class="ttdeci">static void allocate(Data *&amp;ptr, size_t size)</div><div class="ttdoc">Allocate a C++ array.</div><div class="ttdef"><b>Definition</b> <a href="Memory_8h_source.html#l00132">Memory.h:132</a></div></div>
+<div class="ttc" id="aclassUtil_1_1Memory_html_a3ded7c631c8cbdb6968f03f8084485a2"><div class="ttname"><a href="classUtil_1_1Memory.html#a3ded7c631c8cbdb6968f03f8084485a2">Util::Memory::deallocate</a></div><div class="ttdeci">static void deallocate(Data *&amp;ptr, size_t size)</div><div class="ttdoc">Deallocate a C++ array.</div><div class="ttdef"><b>Definition</b> <a href="Memory_8h_source.html#l00157">Memory.h:157</a></div></div>
+<div class="ttc" id="aclassUtil_1_1Memory_html_af6003f193ae6c7a0fc049d7e443e0348"><div class="ttname"><a href="classUtil_1_1Memory.html#af6003f193ae6c7a0fc049d7e443e0348">Util::Memory::allocate</a></div><div class="ttdeci">static void allocate(Data *&amp;ptr, size_t size)</div><div class="ttdoc">Allocate a C++ array.</div><div class="ttdef"><b>Definition</b> <a href="Memory_8h_source.html#l00136">Memory.h:136</a></div></div>
 <div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="global_8h.html">global.h</a></div><div class="ttdoc">File containing preprocessor macros for error handling.</div></div>
 <div class="ttc" id="aglobal_8h_html_ad2512f8bd062d41d66799cf900151487"><div class="ttname"><a href="global_8h.html#ad2512f8bd062d41d66799cf900151487">UTIL_THROW</a></div><div class="ttdeci">#define UTIL_THROW(msg)</div><div class="ttdoc">Macro for throwing an Exception, reporting function, file and line number.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00049">global.h:49</a></div></div>
 <div class="ttc" id="anamespaceUtil_html"><div class="ttname"><a href="namespaceUtil.html">Util</a></div><div class="ttdoc">Utility classes for scientific computation.</div><div class="ttdef"><b>Definition</b> <a href="accumulators_8mod_source.html#l00001">accumulators.mod:1</a></div></div>

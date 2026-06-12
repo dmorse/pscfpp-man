@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -69,13 +69,13 @@ $(function() {
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceUtil.html">Util</a></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>   <span class="keywordtype">int</span> Memory::nAllocate_ = 0;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>   <span class="keywordtype">long</span> <span class="keywordtype">int</span> Memory::nAllocate_ = 0;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>   <span class="keywordtype">int</span> Memory::nDeallocate_ = 0;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>   <span class="keywordtype">long</span> <span class="keywordtype">int</span> Memory::nDeallocate_ = 0;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>   <span class="keywordtype">int</span> Memory::total_ = 0;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>   <span class="keywordtype">long</span> <span class="keywordtype">int</span> Memory::total_ = 0;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>   <span class="keywordtype">int</span> Memory::max_ = 0;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>   <span class="keywordtype">long</span> <span class="keywordtype">int</span> Memory::max_ = 0;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>   <span class="comment">/*</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">   * Call this to ensure compilation of this file. </span></div>
@@ -89,7 +89,7 @@ $(function() {
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">   * Return number of calls to allocate.</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">   */</span></div>
 <div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classUtil_1_1Memory.html#a8aa7aec77dc5cf6fe9da9c41ddc1293f">   34</a></span>   <span class="keywordtype">int</span> <a class="code hl_function" href="classUtil_1_1Memory.html#a8aa7aec77dc5cf6fe9da9c41ddc1293f">Memory::nAllocate</a>()</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classUtil_1_1Memory.html#a3f5be3170fd4d6a8488879d6f3f2b366">   34</a></span>   <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classUtil_1_1Memory.html#a3f5be3170fd4d6a8488879d6f3f2b366">Memory::nAllocate</a>()</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>   {  <span class="keywordflow">return</span> nAllocate_; }</div>
 </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
@@ -97,7 +97,7 @@ $(function() {
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">   * Return number of calls to deallocate.</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">   */</span></div>
 <div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classUtil_1_1Memory.html#afbb82ff54c3b15e33e4c1ac7d7501dc9">   40</a></span>   <span class="keywordtype">int</span> <a class="code hl_function" href="classUtil_1_1Memory.html#afbb82ff54c3b15e33e4c1ac7d7501dc9">Memory::nDeallocate</a>()</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classUtil_1_1Memory.html#a330964e47e72848207e82157ffdf7f0b">   40</a></span>   <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classUtil_1_1Memory.html#a330964e47e72848207e82157ffdf7f0b">Memory::nDeallocate</a>()</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>   {  <span class="keywordflow">return</span> nDeallocate_; }</div>
 </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
@@ -105,7 +105,7 @@ $(function() {
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">   * Return total amount of memory allocated thus far.</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">   */</span></div>
 <div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classUtil_1_1Memory.html#adfde1ae02377c69ebb91f662600d87cd">   46</a></span>   <span class="keywordtype">int</span> <a class="code hl_function" href="classUtil_1_1Memory.html#adfde1ae02377c69ebb91f662600d87cd">Memory::total</a>()</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classUtil_1_1Memory.html#a71aed9329295bb1b387bffc421d62271">   46</a></span>   <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classUtil_1_1Memory.html#a71aed9329295bb1b387bffc421d62271">Memory::total</a>()</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>   {  <span class="keywordflow">return</span> total_; }</div>
 </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
@@ -113,26 +113,30 @@ $(function() {
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">   * Return maximum amount of allocated memory thus far.</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">   */</span></div>
 <div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classUtil_1_1Memory.html#a52d87603f7bf2c9b39f4598aa05c6b0f">   52</a></span>   <span class="keywordtype">int</span> <a class="code hl_function" href="classUtil_1_1Memory.html#a52d87603f7bf2c9b39f4598aa05c6b0f">Memory::max</a>()</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classUtil_1_1Memory.html#a6557c15983de9841f681440f6b9844f6">   52</a></span>   <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classUtil_1_1Memory.html#a6557c15983de9841f681440f6b9844f6">Memory::max</a>()</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>   {  <span class="keywordflow">return</span> max_; }</div>
 </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">   #ifdef UTIL_MPI</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>   <span class="keywordtype">int</span> <a class="code hl_function" href="classUtil_1_1Memory.html#a52d87603f7bf2c9b39f4598aa05c6b0f">Memory::max</a>(MPI::Intracomm&amp; communicator)</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>   { </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <span class="keywordtype">int</span> maxGlobal;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <span class="keywordtype">int</span> maxLocal = max_;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      communicator.Allreduce(&amp;maxLocal, &amp;maxGlobal, 1, MPI::INT, MPI::MAX);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      <span class="keywordflow">return</span> maxGlobal;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>   }</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">   #endif</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>} </div>
-<div class="ttc" id="aclassUtil_1_1Memory_html_a52d87603f7bf2c9b39f4598aa05c6b0f"><div class="ttname"><a href="classUtil_1_1Memory.html#a52d87603f7bf2c9b39f4598aa05c6b0f">Util::Memory::max</a></div><div class="ttdeci">static int max()</div><div class="ttdoc">Return the maximum amount of allocated heap memory thus far.</div><div class="ttdef"><b>Definition</b> <a href="#l00052">Memory.cpp:52</a></div></div>
-<div class="ttc" id="aclassUtil_1_1Memory_html_a8aa7aec77dc5cf6fe9da9c41ddc1293f"><div class="ttname"><a href="classUtil_1_1Memory.html#a8aa7aec77dc5cf6fe9da9c41ddc1293f">Util::Memory::nAllocate</a></div><div class="ttdeci">static int nAllocate()</div><div class="ttdoc">Return number of times allocate() was called.</div><div class="ttdef"><b>Definition</b> <a href="#l00034">Memory.cpp:34</a></div></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">   * Return maximum amount of memory allocated on any one processor.</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>   <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classUtil_1_1Memory.html#a6557c15983de9841f681440f6b9844f6">Memory::max</a>(MPI::Intracomm&amp; communicator)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>   { </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      <span class="keywordtype">long</span> <span class="keywordtype">int</span> maxGlobal;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <span class="keywordtype">long</span> <span class="keywordtype">int</span> maxLocal = max_;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      communicator.Allreduce(&amp;maxLocal, &amp;maxGlobal, 1, </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                   MPI::LONG_INT, MPI::MAX);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      <span class="keywordflow">return</span> maxGlobal;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>   }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">   #endif</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>} </div>
+<div class="ttc" id="aclassUtil_1_1Memory_html_a330964e47e72848207e82157ffdf7f0b"><div class="ttname"><a href="classUtil_1_1Memory.html#a330964e47e72848207e82157ffdf7f0b">Util::Memory::nDeallocate</a></div><div class="ttdeci">static long int nDeallocate()</div><div class="ttdoc">Return number of times deallocate() was called.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">Memory.cpp:40</a></div></div>
+<div class="ttc" id="aclassUtil_1_1Memory_html_a3f5be3170fd4d6a8488879d6f3f2b366"><div class="ttname"><a href="classUtil_1_1Memory.html#a3f5be3170fd4d6a8488879d6f3f2b366">Util::Memory::nAllocate</a></div><div class="ttdeci">static long int nAllocate()</div><div class="ttdoc">Return number of times allocate() was called.</div><div class="ttdef"><b>Definition</b> <a href="#l00034">Memory.cpp:34</a></div></div>
+<div class="ttc" id="aclassUtil_1_1Memory_html_a6557c15983de9841f681440f6b9844f6"><div class="ttname"><a href="classUtil_1_1Memory.html#a6557c15983de9841f681440f6b9844f6">Util::Memory::max</a></div><div class="ttdeci">static long int max()</div><div class="ttdoc">Return the maximum amount of allocated heap memory thus far.</div><div class="ttdef"><b>Definition</b> <a href="#l00052">Memory.cpp:52</a></div></div>
+<div class="ttc" id="aclassUtil_1_1Memory_html_a71aed9329295bb1b387bffc421d62271"><div class="ttname"><a href="classUtil_1_1Memory.html#a71aed9329295bb1b387bffc421d62271">Util::Memory::total</a></div><div class="ttdeci">static long int total()</div><div class="ttdoc">Return total amount of memory currently allocated.</div><div class="ttdef"><b>Definition</b> <a href="#l00046">Memory.cpp:46</a></div></div>
 <div class="ttc" id="aclassUtil_1_1Memory_html_acefa80470b03b3ccc2469aad3d38cd04"><div class="ttname"><a href="classUtil_1_1Memory.html#acefa80470b03b3ccc2469aad3d38cd04">Util::Memory::initStatic</a></div><div class="ttdeci">static void initStatic()</div><div class="ttdoc">Call this just to guarantee initialization of static memory.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">Memory.cpp:28</a></div></div>
-<div class="ttc" id="aclassUtil_1_1Memory_html_adfde1ae02377c69ebb91f662600d87cd"><div class="ttname"><a href="classUtil_1_1Memory.html#adfde1ae02377c69ebb91f662600d87cd">Util::Memory::total</a></div><div class="ttdeci">static int total()</div><div class="ttdoc">Return total amount of memory currently allocated.</div><div class="ttdef"><b>Definition</b> <a href="#l00046">Memory.cpp:46</a></div></div>
-<div class="ttc" id="aclassUtil_1_1Memory_html_afbb82ff54c3b15e33e4c1ac7d7501dc9"><div class="ttname"><a href="classUtil_1_1Memory.html#afbb82ff54c3b15e33e4c1ac7d7501dc9">Util::Memory::nDeallocate</a></div><div class="ttdeci">static int nDeallocate()</div><div class="ttdoc">Return number of times deallocate() was called.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">Memory.cpp:40</a></div></div>
 <div class="ttc" id="anamespaceUtil_html"><div class="ttname"><a href="namespaceUtil.html">Util</a></div><div class="ttdoc">Utility classes for scientific computation.</div><div class="ttdef"><b>Definition</b> <a href="accumulators_8mod_source.html#l00001">accumulators.mod:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

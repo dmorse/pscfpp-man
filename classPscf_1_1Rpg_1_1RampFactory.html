@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Factory for subclasses of <a class="el" href="classPscf_1_1Rpg_1_1Ramp.html" title="Class that varies parameters during a simulation (abstract).">Ramp</a>.  
+<p>Factory for subclasses of <a class="el" href="classPscf_1_1Rpg_1_1Ramp.html" title="Ramp that varies parameters linearly with index.">Ramp</a>.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="rpg_2fts_2ramp_2RampFactory_8h_source.html">RampFactory.h</a>&gt;</code></p>
@@ -80,7 +80,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a92f46c0f28a2a23de29890d44998a959" id="r_a92f46c0f28a2a23de29890d44998a959"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92f46c0f28a2a23de29890d44998a959">RampFactory</a> (<a class="el" href="classPscf_1_1Rpg_1_1Simulator.html">Simulator</a>&lt; D &gt; &amp;simulator)</td></tr>
 <tr class="memdesc:a92f46c0f28a2a23de29890d44998a959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:a210ae133d2f9e2aa85e5b1f9761402bf" id="r_a210ae133d2f9e2aa85e5b1f9761402bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1Ramp.html">Ramp</a>&lt; D &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a210ae133d2f9e2aa85e5b1f9761402bf">factory</a> (const std::string &amp;className) const</td></tr>
-<tr class="memdesc:a210ae133d2f9e2aa85e5b1f9761402bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to create any <a class="el" href="classPscf_1_1Rpg_1_1Ramp.html" title="Class that varies parameters during a simulation (abstract).">Ramp</a> supplied with PSCF.  <br /></td></tr>
+<tr class="memdesc:a210ae133d2f9e2aa85e5b1f9761402bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to create any <a class="el" href="classPscf_1_1Rpg_1_1Ramp.html" title="Ramp that varies parameters linearly with index.">Ramp</a> supplied with PSCF.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classUtil_1_1Factory"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classUtil_1_1Factory')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classUtil_1_1Factory.html">Util::Factory&lt; Ramp&lt; D &gt; &gt;</a></td></tr>
 <tr class="memitem:abed74f57b3e4aa935aa9c6ac00237bf4 inherit pub_methods_classUtil_1_1Factory" id="r_abed74f57b3e4aa935aa9c6ac00237bf4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Factory.html#abed74f57b3e4aa935aa9c6ac00237bf4">Factory</a> ()</td></tr>
 <tr class="memdesc:abed74f57b3e4aa935aa9c6ac00237bf4 inherit pub_methods_classUtil_1_1Factory"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
@@ -103,7 +103,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
-class Pscf::Rpg::RampFactory&lt; D &gt;</div><p>Factory for subclasses of <a class="el" href="classPscf_1_1Rpg_1_1Ramp.html" title="Class that varies parameters during a simulation (abstract).">Ramp</a>. </p>
+class Pscf::Rpg::RampFactory&lt; D &gt;</div><p>Factory for subclasses of <a class="el" href="classPscf_1_1Rpg_1_1Ramp.html" title="Ramp that varies parameters linearly with index.">Ramp</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="rpg_2fts_2ramp_2RampFactory_8h_source.html#l00028">28</a> of file <a class="el" href="rpg_2fts_2ramp_2RampFactory_8h_source.html">rpg/fts/ramp/RampFactory.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -132,7 +132,7 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2ramp_2RampFactory_8tpp_source.html#l00020">20</a> of file <a class="el" href="rpg_2fts_2ramp_2RampFactory_8tpp_source.html">rpg/fts/ramp/RampFactory.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RampFactory_8cu_source.html#l00023">23</a> of file <a class="el" href="RampFactory_8cu_source.html">RampFactory.cu</a>.</p>
 
 </div>
 </div>
@@ -162,10 +162,10 @@ template&lt;int D&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Method to create any <a class="el" href="classPscf_1_1Rpg_1_1Ramp.html" title="Class that varies parameters during a simulation (abstract).">Ramp</a> supplied with PSCF. </p>
+<p>Method to create any <a class="el" href="classPscf_1_1Rpg_1_1Ramp.html" title="Ramp that varies parameters linearly with index.">Ramp</a> supplied with PSCF. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">className</td><td>name of the <a class="el" href="classPscf_1_1Rpg_1_1Ramp.html" title="Class that varies parameters during a simulation (abstract).">Ramp</a> subclass </td></tr>
+    <tr><td class="paramname">className</td><td>name of the <a class="el" href="classPscf_1_1Rpg_1_1Ramp.html" title="Ramp that varies parameters linearly with index.">Ramp</a> subclass </td></tr>
   </table>
   </dd>
 </dl>
@@ -173,7 +173,7 @@ template&lt;int D&gt; </div>
 
 <p>Implements <a class="el" href="classUtil_1_1Factory.html#a71b3e1c2dac1635d161f668529860764">Util::Factory&lt; Ramp&lt; D &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2ramp_2RampFactory_8tpp_source.html#l00028">28</a> of file <a class="el" href="rpg_2fts_2ramp_2RampFactory_8tpp_source.html">rpg/fts/ramp/RampFactory.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RampFactory_8cu_source.html#l00031">31</a> of file <a class="el" href="RampFactory_8cu_source.html">RampFactory.cu</a>.</p>
 
 <p class="reference">References <a class="el" href="Factory_8h_source.html#l00425">Util::Factory&lt; Ramp&lt; D &gt; &gt;::trySubfactories()</a>.</p>
 
@@ -181,7 +181,7 @@ template&lt;int D&gt; </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="rpg_2fts_2ramp_2RampFactory_8h_source.html">rpg/fts/ramp/RampFactory.h</a></li>
-<li><a class="el" href="rpg_2fts_2ramp_2RampFactory_8tpp_source.html">rpg/fts/ramp/RampFactory.tpp</a></li>
+<li><a class="el" href="RampFactory_8cu_source.html">RampFactory.cu</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -58,27 +58,180 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">* PSCF - Polymer Self-Consistent Field </span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">* PSCF - Polymer Self-Consistent Field</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">* Copyright 2015 - 2025, The Regents of the University of Minnesota</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">* Distributed under the terms of the GNU General Public License.</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Propagator.tpp&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpg.html">Rpg</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>   <span class="keyword">using namespace </span>Util;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Propagator.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;Block.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;prdc/cuda/RField.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;pscf/cuda/VecOp.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;pscf/cuda/Reduce.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;pscf/mesh/Mesh.h&gt;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>   <span class="comment">// Explicit instantiation of relevant class instances</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>   <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator&lt;1&gt;</a>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>   <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator&lt;2&gt;</a>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>   <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator&lt;3&gt;</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;rp/solvers/Propagator.tpp&gt;</span>  <span class="comment">// base class template implementation</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpg.html">Rpg</a> {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1Propagator_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a></div><div class="ttdoc">MDE solver for one-direction of one block.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2solvers_2Propagator_8h_source.html#l00057">rpg/solvers/Propagator.h:58</a></div></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>   <span class="keyword">using namespace </span>Util;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>   <span class="comment">// Public member functions</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">   * Constructor.</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Propagator.html#a9e18eed577e8184c01526a3153b08fc2">   28</a></span>   <a class="code hl_function" href="classPscf_1_1Rpg_1_1Propagator.html#a9e18eed577e8184c01526a3153b08fc2">Propagator&lt;D&gt;::Propagator</a>()</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    : <a class="code hl_typedef" href="classPscf_1_1Rpg_1_1Propagator.html#a814c388f41e8d8b0dedab529133337cb">RpPropagatorT</a>()</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>   {}</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">   * Destructor.</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Propagator.html#aede967b25b0fc3404dafa179c0524ed2">   36</a></span>   <a class="code hl_function" href="classPscf_1_1Rpg_1_1Propagator.html#aede967b25b0fc3404dafa179c0524ed2">Propagator&lt;D&gt;::~Propagator</a>()</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>   {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      dissociateQFields();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      <span class="comment">/*</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">      * The above function dissociates elements of qFields_ from memory</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">      * owned by qFieldsAll_. Because this destructor body is called </span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">      * before the destructors for members, disassociation will occur</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">      * before either qFieldsAll_ or qFields_ is destroyed.  </span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">      */</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>   }</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">   * Allocate memory used by this propagator.</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Propagator.html#ab49bd318fa6f2282378e42b7b4ea9db7">   53</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Propagator.html#ab49bd318fa6f2282378e42b7b4ea9db7">Propagator&lt;D&gt;::allocate</a>(<span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a254f0103d962f48c7ef932e738e15969">ns</a>, <span class="keyword">const</span> <a class="code hl_class" href="classPscf_1_1Mesh.html">Mesh&lt;D&gt;</a>&amp; <a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a00355535fede6406c90f64af87a5c9ba">mesh</a>)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>   {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#af48d720f769db9f8d59ffc23832a9962">RpPropagatorT::allocate</a>(<a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a254f0103d962f48c7ef932e738e15969">ns</a>, <a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a00355535fede6406c90f64af87a5c9ba">mesh</a>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> meshSize = <a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a00355535fede6406c90f64af87a5c9ba">mesh</a>.size();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <a class="code hl_class" href="classPscf_1_1IntVec.html">IntVec&lt;D&gt;</a> <span class="keyword">const</span> &amp; meshDimensions = <a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a00355535fede6406c90f64af87a5c9ba">mesh</a>.dimensions();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      <span class="comment">// Allocate memory in qFieldsAll_ using value of ns</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      qFieldsAll_.allocate(<a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a254f0103d962f48c7ef932e738e15969">ns</a> * meshSize);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      <span class="comment">// Set up array of associated RField&lt;D&gt; arrays</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <a class="code hl_variable" href="classPscf_1_1Rpg_1_1Propagator.html#a6fe5968ac5078ec62a6fb03743a5b62f">qFields_</a>.allocate(<a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a254f0103d962f48c7ef932e738e15969">ns</a>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a254f0103d962f48c7ef932e738e15969">ns</a>; ++i) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>         <a class="code hl_variable" href="classPscf_1_1Rpg_1_1Propagator.html#a6fe5968ac5078ec62a6fb03743a5b62f">qFields_</a>[i].associate(qFieldsAll_, i*meshSize, meshDimensions);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <a class="code hl_variable" href="classPscf_1_1Rpg_1_1Propagator.html#ac6283b4a3a700123e920e1ab7ae2f7e7">isAllocated_</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <a class="code hl_function" href="classPscf_1_1PropagatorTmpl.html#a35dbcd4c56f0abe5113c359b79bfcf01">PropagatorTmplT::setIsSolved</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>   }</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">   * Reallocate memory used by this propagator using new ns value.</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1Propagator.html#a5fa8a1ee1489396af1dcb35dc5826999">   77</a></span>   <span class="keywordtype">void</span> <a class="code hl_function" href="classPscf_1_1Rpg_1_1Propagator.html#a5fa8a1ee1489396af1dcb35dc5826999">Propagator&lt;D&gt;::reallocate</a>(<span class="keywordtype">int</span> <a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a254f0103d962f48c7ef932e738e15969">ns</a>)</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>   {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      <a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a720e6a33fba288c60ef2709b92ccbec8">RpPropagatorT::reallocate</a>(<a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a254f0103d962f48c7ef932e738e15969">ns</a>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      <span class="comment">// Deallocate memory previously used by this propagator.</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      dissociateQFields();      <span class="comment">// dissociate, nulliify data pointers</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <a class="code hl_variable" href="classPscf_1_1Rpg_1_1Propagator.html#a6fe5968ac5078ec62a6fb03743a5b62f">qFields_</a>.deallocate();    <span class="comment">// destroy RField&lt;D&gt; objects for slices</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      qFieldsAll_.deallocate(); <span class="comment">// destroy contiguous data block</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      <span class="comment">// Store mesh properties</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      <a class="code hl_class" href="classPscf_1_1Mesh.html">Mesh&lt;D&gt;</a> <span class="keyword">const</span> &amp; <a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a00355535fede6406c90f64af87a5c9ba">mesh</a> = <a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a00355535fede6406c90f64af87a5c9ba">RpPropagatorT::mesh</a>();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> meshSize = <a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a00355535fede6406c90f64af87a5c9ba">mesh</a>.size();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      <a class="code hl_class" href="classPscf_1_1IntVec.html">IntVec&lt;D&gt;</a> <span class="keyword">const</span> &amp; meshDimensions = <a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a00355535fede6406c90f64af87a5c9ba">mesh</a>.dimensions();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      <span class="comment">// Allocate memory in qFieldsAll_ using new value of ns</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      qFieldsAll_.allocate(<a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a254f0103d962f48c7ef932e738e15969">ns</a> * meshSize);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      <span class="comment">// Recreate associations between qFields_ and qFieldsAll_</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      <a class="code hl_variable" href="classPscf_1_1Rpg_1_1Propagator.html#a6fe5968ac5078ec62a6fb03743a5b62f">qFields_</a>.allocate(<a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a254f0103d962f48c7ef932e738e15969">ns</a>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_function" href="classPscf_1_1Rp_1_1Propagator.html#a254f0103d962f48c7ef932e738e15969">ns</a>; ++i) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>         <a class="code hl_variable" href="classPscf_1_1Rpg_1_1Propagator.html#a6fe5968ac5078ec62a6fb03743a5b62f">qFields_</a>[i].associate(qFieldsAll_, i*meshSize, meshDimensions);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      <a class="code hl_function" href="classPscf_1_1PropagatorTmpl.html#a35dbcd4c56f0abe5113c359b79bfcf01">PropagatorTmplT::setIsSolved</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>   }</div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>   <span class="comment">// Private member function</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">   * Dissociate qFields_ from associated memory blocks in qFieldsAll_.</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">   *</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">   * These associations must be destroyed before qFieldsAll_ is</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">   * de-allocated or destroyed, because it is an error to deallocate</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">   * a DeviceArray&lt;T&gt; container that is still referred to by one or</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment">   * more other such containers. Associations are kept track of via</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">   * a private ReferenceCounter owned by qFieldsAll_ (which stores</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">   * the number of remaining references), and via a data pointer and</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">   * CountedReference object owned by each element of qFields_ that</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">   * has a pointer to the associated ReferenceCounter. For each</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">   * element of qFields_, invoking the dissociate() member function</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment">   * nullifies the array data pointer, sets the array capacity to</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment">   * zero, decrements the number of references in the associated</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment">   * ReferenceCounter owned by qFieldsAll_, and nullifies the pointer</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">   * to this ReferenceCounter.</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> D&gt;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>   <span class="keywordtype">void</span> Propagator&lt;D&gt;::dissociateQFields()</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>   {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      <span class="keywordflow">if</span> (qFields_.isAllocated()) {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>         <span class="keywordtype">int</span> ns = qFields_.capacity();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ns; ++i) {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <span class="keywordflow">if</span> (qFields_[i].isAssociated()) {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>               qFields_[i].dissociate();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>         }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>   }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>}</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>}</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment">// Explicit Instantiation definitions</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> { </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>   <span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rp.html">Rp</a> {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>      <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rp_1_1Propagator.html">Propagator&lt;1, Rpg::Types&lt;1&gt;</a> &gt;;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>      <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rp_1_1Propagator.html">Propagator&lt;2, Rpg::Types&lt;2&gt;</a> &gt;;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>      <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rp_1_1Propagator.html">Propagator&lt;3, Rpg::Types&lt;3&gt;</a> &gt;;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>   }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>   <span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpg.html">Rpg</a> {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>      <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator&lt;1&gt;</a>;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>      <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator&lt;2&gt;</a>;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classPscf_1_1Rpg_1_1Propagator.html">Propagator&lt;3&gt;</a>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>   }</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>}</div>
+<div class="ttc" id="aclassPscf_1_1IntVec_html"><div class="ttname"><a href="classPscf_1_1IntVec.html">Pscf::IntVec</a></div><div class="ttdoc">An IntVec&lt;D, T&gt; is a D-component vector of elements of integer type T.</div><div class="ttdef"><b>Definition</b> <a href="IntVec_8h_source.html#l00026">IntVec.h:27</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Mesh_html"><div class="ttname"><a href="classPscf_1_1Mesh.html">Pscf::Mesh</a></div><div class="ttdoc">Description of a regular grid of points in a periodic domain.</div><div class="ttdef"><b>Definition</b> <a href="Mesh_8h_source.html#l00060">Mesh.h:61</a></div></div>
+<div class="ttc" id="aclassPscf_1_1PropagatorTmpl_html_a35dbcd4c56f0abe5113c359b79bfcf01"><div class="ttname"><a href="classPscf_1_1PropagatorTmpl.html#a35dbcd4c56f0abe5113c359b79bfcf01">Pscf::PropagatorTmpl::setIsSolved</a></div><div class="ttdeci">void setIsSolved(bool isSolved)</div><div class="ttdoc">Set the isSolved flag to true or false.</div><div class="ttdef"><b>Definition</b> <a href="PropagatorTmpl_8h_source.html#l00346">PropagatorTmpl.h:346</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rp_1_1Propagator_html"><div class="ttname"><a href="classPscf_1_1Rp_1_1Propagator.html">Pscf::Rp::Propagator</a></div><div class="ttdoc">MDE solver for one direction of one block.</div><div class="ttdef"><b>Definition</b> <a href="rp_2solvers_2Propagator_8h_source.html#l00059">rp/solvers/Propagator.h:60</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rp_1_1Propagator_html_a00355535fede6406c90f64af87a5c9ba"><div class="ttname"><a href="classPscf_1_1Rp_1_1Propagator.html#a00355535fede6406c90f64af87a5c9ba">Pscf::Rp::Propagator&lt; D, Types&lt; D &gt; &gt;::mesh</a></div><div class="ttdeci">Mesh&lt; D &gt; const &amp; mesh() const</div></div>
+<div class="ttc" id="aclassPscf_1_1Rp_1_1Propagator_html_a254f0103d962f48c7ef932e738e15969"><div class="ttname"><a href="classPscf_1_1Rp_1_1Propagator.html#a254f0103d962f48c7ef932e738e15969">Pscf::Rp::Propagator&lt; D, Types&lt; D &gt; &gt;::ns</a></div><div class="ttdeci">int ns() const</div></div>
+<div class="ttc" id="aclassPscf_1_1Rp_1_1Propagator_html_a720e6a33fba288c60ef2709b92ccbec8"><div class="ttname"><a href="classPscf_1_1Rp_1_1Propagator.html#a720e6a33fba288c60ef2709b92ccbec8">Pscf::Rp::Propagator&lt; D, Types&lt; D &gt; &gt;::reallocate</a></div><div class="ttdeci">virtual void reallocate(int ns)</div></div>
+<div class="ttc" id="aclassPscf_1_1Rp_1_1Propagator_html_af48d720f769db9f8d59ffc23832a9962"><div class="ttname"><a href="classPscf_1_1Rp_1_1Propagator.html#af48d720f769db9f8d59ffc23832a9962">Pscf::Rp::Propagator&lt; D, Types&lt; D &gt; &gt;::allocate</a></div><div class="ttdeci">virtual void allocate(int ns, const Mesh&lt; D &gt; &amp;mesh)</div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Propagator_html"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Propagator.html">Pscf::Rpg::Propagator</a></div><div class="ttdoc">MDE solver for one direction of one block.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2solvers_2Propagator_8h_source.html#l00035">rpg/solvers/Propagator.h:36</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Propagator_html_a5fa8a1ee1489396af1dcb35dc5826999"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Propagator.html#a5fa8a1ee1489396af1dcb35dc5826999">Pscf::Rpg::Propagator::reallocate</a></div><div class="ttdeci">void reallocate(int ns) override</div><div class="ttdoc">Reallocate memory used by this propagator.</div><div class="ttdef"><b>Definition</b> <a href="#l00077">Propagator.cu:77</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Propagator_html_a6fe5968ac5078ec62a6fb03743a5b62f"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Propagator.html#a6fe5968ac5078ec62a6fb03743a5b62f">Pscf::Rpg::Propagator::qFields_</a></div><div class="ttdeci">DArray&lt; typename Types&lt; D &gt;::RField &gt; qFields_</div><div class="ttdoc">Array of propagator slices at different contour variable values.</div><div class="ttdef"><b>Definition</b> <a href="rp_2solvers_2Propagator_8h_source.html#l00191">rp/solvers/Propagator.h:191</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Propagator_html_a814c388f41e8d8b0dedab529133337cb"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Propagator.html#a814c388f41e8d8b0dedab529133337cb">Pscf::Rpg::Propagator::RpPropagatorT</a></div><div class="ttdeci">Rp::Propagator&lt; D, Types&lt; D &gt; &gt; RpPropagatorT</div><div class="ttdoc">Direct base class.</div><div class="ttdef"><b>Definition</b> <a href="rpg_2solvers_2Propagator_8h_source.html#l00089">rpg/solvers/Propagator.h:89</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Propagator_html_a9e18eed577e8184c01526a3153b08fc2"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Propagator.html#a9e18eed577e8184c01526a3153b08fc2">Pscf::Rpg::Propagator::Propagator</a></div><div class="ttdeci">Propagator()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">Propagator.cu:28</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Propagator_html_ab49bd318fa6f2282378e42b7b4ea9db7"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Propagator.html#ab49bd318fa6f2282378e42b7b4ea9db7">Pscf::Rpg::Propagator::allocate</a></div><div class="ttdeci">void allocate(int ns, const Mesh&lt; D &gt; &amp;mesh) override</div><div class="ttdoc">Allocate memory used by this propagator.</div><div class="ttdef"><b>Definition</b> <a href="#l00053">Propagator.cu:53</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Propagator_html_ac6283b4a3a700123e920e1ab7ae2f7e7"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Propagator.html#ac6283b4a3a700123e920e1ab7ae2f7e7">Pscf::Rpg::Propagator::isAllocated_</a></div><div class="ttdeci">bool isAllocated_</div><div class="ttdoc">Is this propagator allocated?</div><div class="ttdef"><b>Definition</b> <a href="rp_2solvers_2Propagator_8h_source.html#l00197">rp/solvers/Propagator.h:197</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Rpg_1_1Propagator_html_aede967b25b0fc3404dafa179c0524ed2"><div class="ttname"><a href="classPscf_1_1Rpg_1_1Propagator.html#aede967b25b0fc3404dafa179c0524ed2">Pscf::Rpg::Propagator::~Propagator</a></div><div class="ttdeci">~Propagator()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">Propagator.cu:36</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Rp_html"><div class="ttname"><a href="namespacePscf_1_1Rp.html">Pscf::Rp</a></div><div class="ttdoc">Class templates for real-valued periodic fields.</div><div class="ttdef"><b>Definition</b> <a href="rp_2field_2CFields_8h_source.html#l00022">rp/field/CFields.h:22</a></div></div>
 <div class="ttc" id="anamespacePscf_1_1Rpg_html"><div class="ttname"><a href="namespacePscf_1_1Rpg.html">Pscf::Rpg</a></div><div class="ttdoc">SCFT and PS-FTS with real periodic fields (GPU)</div><div class="ttdef"><b>Definition</b> <a href="rpg_2environment_2environment_8mod_source.html#l00003">rpg/environment/environment.mod:3</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

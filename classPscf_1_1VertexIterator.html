@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: Pscf::VertexIterator Class Reference</title>
+<title>PSCF: Pscf::VertexIterator&lt; WT &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -57,7 +57,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classPscf_1_1VertexIterator-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Pscf::VertexIterator Class Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Base__Module.html">Pscf Common</a> &raquo; <a class="el" href="group__Pscf__Chem__Module.html">Chemical Structure</a></div></div></div>
+  <div class="headertitle"><div class="title">Pscf::VertexIterator&lt; WT &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Base__Module.html">Pscf - Base Module</a> &raquo; <a class="el" href="group__Pscf__Chem__Module.html">Chemical Structure</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -68,43 +68,46 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afa44f9d7419736b7c79bb82d13755acc" id="r_afa44f9d7419736b7c79bb82d13755acc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa44f9d7419736b7c79bb82d13755acc">VertexIterator</a> (<a class="el" href="classPscf_1_1PolymerSpecies.html">PolymerSpecies</a> const &amp;polymer)</td></tr>
-<tr class="memdesc:afa44f9d7419736b7c79bb82d13755acc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="memitem:a9beb82341eafd42b745fbfcff0311793" id="r_a9beb82341eafd42b745fbfcff0311793"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9beb82341eafd42b745fbfcff0311793">~VertexIterator</a> ()</td></tr>
-<tr class="memdesc:a9beb82341eafd42b745fbfcff0311793"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:af5de742f25ae5f45886bc4efc9958a3b" id="r_af5de742f25ae5f45886bc4efc9958a3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5de742f25ae5f45886bc4efc9958a3b">begin</a> (int sourceId, int targetId)</td></tr>
-<tr class="memdesc:af5de742f25ae5f45886bc4efc9958a3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize iterator.  <br /></td></tr>
-<tr class="memitem:a58c67026a8a33306b3e678010e4fe60e" id="r_a58c67026a8a33306b3e678010e4fe60e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1VertexIterator.html">VertexIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58c67026a8a33306b3e678010e4fe60e">operator++</a> ()</td></tr>
-<tr class="memdesc:a58c67026a8a33306b3e678010e4fe60e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment operator - move to next vertex.  <br /></td></tr>
-<tr class="memitem:ab4f4a718b54c36f477c4a158e441668b" id="r_ab4f4a718b54c36f477c4a158e441668b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4f4a718b54c36f477c4a158e441668b">currentId</a> () const</td></tr>
-<tr class="memdesc:ab4f4a718b54c36f477c4a158e441668b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get index of the current vertex.  <br /></td></tr>
-<tr class="memitem:ad3b7114106e2f549c27b7542e95eb0b8" id="r_ad3b7114106e2f549c27b7542e95eb0b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3b7114106e2f549c27b7542e95eb0b8">isEnd</a> () const</td></tr>
-<tr class="memdesc:ad3b7114106e2f549c27b7542e95eb0b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true iff currentId == targetId.  <br /></td></tr>
-<tr class="memitem:a154d23115b798cf4db6fc232ee53a083" id="r_a154d23115b798cf4db6fc232ee53a083"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a154d23115b798cf4db6fc232ee53a083">notEnd</a> () const</td></tr>
-<tr class="memdesc:a154d23115b798cf4db6fc232ee53a083"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true iff currentId != targetId.  <br /></td></tr>
+<tr class="memitem:ab1e45a1069803742c62e3717fc85c111" id="r_ab1e45a1069803742c62e3717fc85c111"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1e45a1069803742c62e3717fc85c111">VertexIterator</a> (<a class="el" href="classPscf_1_1PolymerSpecies.html">PolymerSpecies</a>&lt; WT &gt; const &amp;polymer)</td></tr>
+<tr class="memdesc:ab1e45a1069803742c62e3717fc85c111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:ac1936f86c8d50f3077f858f6a6861859" id="r_ac1936f86c8d50f3077f858f6a6861859"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1936f86c8d50f3077f858f6a6861859">~VertexIterator</a> ()</td></tr>
+<tr class="memdesc:ac1936f86c8d50f3077f858f6a6861859"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:ad1c944f2daf0ccbf6318da7c7c937749" id="r_ad1c944f2daf0ccbf6318da7c7c937749"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1c944f2daf0ccbf6318da7c7c937749">begin</a> (int sourceId, int targetId)</td></tr>
+<tr class="memdesc:ad1c944f2daf0ccbf6318da7c7c937749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize iterator.  <br /></td></tr>
+<tr class="memitem:a530999e1c5fb3a0927be3adc9d2e3b97" id="r_a530999e1c5fb3a0927be3adc9d2e3b97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1VertexIterator.html">VertexIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a530999e1c5fb3a0927be3adc9d2e3b97">operator++</a> ()</td></tr>
+<tr class="memdesc:a530999e1c5fb3a0927be3adc9d2e3b97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment operator - move to next vertex.  <br /></td></tr>
+<tr class="memitem:a3df504020e031faf97d03fc2a9a07083" id="r_a3df504020e031faf97d03fc2a9a07083"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3df504020e031faf97d03fc2a9a07083">currentId</a> () const</td></tr>
+<tr class="memdesc:a3df504020e031faf97d03fc2a9a07083"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get index of the current vertex.  <br /></td></tr>
+<tr class="memitem:a79b9160e6f5c4f80ab32d598bcd0a765" id="r_a79b9160e6f5c4f80ab32d598bcd0a765"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79b9160e6f5c4f80ab32d598bcd0a765">isEnd</a> () const</td></tr>
+<tr class="memdesc:a79b9160e6f5c4f80ab32d598bcd0a765"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true iff currentId == targetId.  <br /></td></tr>
+<tr class="memitem:a3a54aaeebe8ab7d19f9e712bf31a6fc9" id="r_a3a54aaeebe8ab7d19f9e712bf31a6fc9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a54aaeebe8ab7d19f9e712bf31a6fc9">notEnd</a> () const</td></tr>
+<tr class="memdesc:a3a54aaeebe8ab7d19f9e712bf31a6fc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true iff currentId != targetId.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classPscf_1_1Vertex.html" title="A junction or chain end in a block polymer.">Vertex</a> iterator for graph associated with a polymer. </p>
-<p>Usage: Suppose that object p is an instance of a subclass of <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">PolymerSpecies</a>. The following snippet illustrates how to iterate from vertex iSource to vertex iTarget of the associated polymer: </p><div class="fragment"><div class="line"><a class="code hl_function" href="#afa44f9d7419736b7c79bb82d13755acc">VertexIterator</a> = iter(p);</div>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename WT&gt;<br />
+class Pscf::VertexIterator&lt; WT &gt;</div><p><a class="el" href="classPscf_1_1Vertex.html" title="A junction or chain end in a block polymer.">Vertex</a> iterator for graph associated with a polymer. </p>
+<p>Usage: Suppose that object p is an instance of a subclass of <a class="el" href="classPscf_1_1PolymerSpecies.html">PolymerSpecies&lt;WT&gt;</a>. The following snippet illustrates how to iterate from vertex iSource to vertex iTarget of the associated polymer: </p><div class="fragment"><div class="line"><a class="code hl_function" href="#ab1e45a1069803742c62e3717fc85c111">VertexIterator</a> = iter(p);</div>
 <div class="line"><span class="keywordtype">int</span> iVertex;</div>
 <div class="line"><span class="keywordflow">for</span> (iter.begin(iSource, iTarget); iter.notEnd(); ++iter) {</div>
 <div class="line">   iVertex = iter.currentId();</div>
 <div class="line">   <span class="comment">// do something with vertex number iVertex</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassPscf_1_1VertexIterator_html_afa44f9d7419736b7c79bb82d13755acc"><div class="ttname"><a href="#afa44f9d7419736b7c79bb82d13755acc">Pscf::VertexIterator::VertexIterator</a></div><div class="ttdeci">VertexIterator(PolymerSpecies const &amp;polymer)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="VertexIterator_8cpp_source.html#l00017">VertexIterator.cpp:17</a></div></div>
+<div class="ttc" id="aclassPscf_1_1VertexIterator_html_ab1e45a1069803742c62e3717fc85c111"><div class="ttname"><a href="#ab1e45a1069803742c62e3717fc85c111">Pscf::VertexIterator::VertexIterator</a></div><div class="ttdeci">VertexIterator(PolymerSpecies&lt; WT &gt; const &amp;polymer)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="VertexIterator_8tpp_source.html#l00018">VertexIterator.tpp:18</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="VertexIterator_8h_source.html#l00037">37</a> of file <a class="el" href="VertexIterator_8h_source.html">VertexIterator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="VertexIterator_8h_source.html#l00035">35</a> of file <a class="el" href="VertexIterator_8h_source.html">VertexIterator.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="afa44f9d7419736b7c79bb82d13755acc" name="afa44f9d7419736b7c79bb82d13755acc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa44f9d7419736b7c79bb82d13755acc">&#9670;&#160;</a></span>VertexIterator()</h2>
+<a id="ab1e45a1069803742c62e3717fc85c111" name="ab1e45a1069803742c62e3717fc85c111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1e45a1069803742c62e3717fc85c111">&#9670;&#160;</a></span>VertexIterator()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename WT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Pscf::VertexIterator::VertexIterator </td>
+          <td class="memname"><a class="el" href="classPscf_1_1VertexIterator.html">Pscf::VertexIterator</a>&lt; WT &gt;::VertexIterator </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1PolymerSpecies.html">PolymerSpecies</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>polymer</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classPscf_1_1PolymerSpecies.html">PolymerSpecies</a>&lt; WT &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>polymer</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -118,20 +121,22 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="VertexIterator_8cpp_source.html#l00017">17</a> of file <a class="el" href="VertexIterator_8cpp_source.html">VertexIterator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="VertexIterator_8tpp_source.html#l00018">18</a> of file <a class="el" href="VertexIterator_8tpp_source.html">VertexIterator.tpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="VertexIterator_8cpp_source.html#l00041">operator++()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="VertexIterator_8tpp_source.html#l00045">operator++()</a>.</p>
 
 </div>
 </div>
-<a id="a9beb82341eafd42b745fbfcff0311793" name="a9beb82341eafd42b745fbfcff0311793"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9beb82341eafd42b745fbfcff0311793">&#9670;&#160;</a></span>~VertexIterator()</h2>
+<a id="ac1936f86c8d50f3077f858f6a6861859" name="ac1936f86c8d50f3077f858f6a6861859"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1936f86c8d50f3077f858f6a6861859">&#9670;&#160;</a></span>~VertexIterator()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename WT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Pscf::VertexIterator::~VertexIterator </td>
+          <td class="memname"><a class="el" href="classPscf_1_1VertexIterator.html">Pscf::VertexIterator</a>&lt; WT &gt;::~<a class="el" href="classPscf_1_1VertexIterator.html">VertexIterator</a> </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -141,19 +146,21 @@ Public Member Functions</h2></td></tr>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="VertexIterator_8cpp_source.html#l00026">26</a> of file <a class="el" href="VertexIterator_8cpp_source.html">VertexIterator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="VertexIterator_8tpp_source.html#l00028">28</a> of file <a class="el" href="VertexIterator_8tpp_source.html">VertexIterator.tpp</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="af5de742f25ae5f45886bc4efc9958a3b" name="af5de742f25ae5f45886bc4efc9958a3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5de742f25ae5f45886bc4efc9958a3b">&#9670;&#160;</a></span>begin()</h2>
+<a id="ad1c944f2daf0ccbf6318da7c7c937749" name="ad1c944f2daf0ccbf6318da7c7c937749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1c944f2daf0ccbf6318da7c7c937749">&#9670;&#160;</a></span>begin()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename WT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void Pscf::VertexIterator::begin </td>
+          <td class="memname">void <a class="el" href="classPscf_1_1VertexIterator.html">Pscf::VertexIterator</a>&lt; WT &gt;::begin </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sourceId</em></span>, </td>
         </tr>
@@ -167,18 +174,20 @@ Public Member Functions</h2></td></tr>
 
 <p>Initialize iterator. </p>
 
-<p class="definition">Definition at line <a class="el" href="VertexIterator_8cpp_source.html#l00032">32</a> of file <a class="el" href="VertexIterator_8cpp_source.html">VertexIterator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="VertexIterator_8tpp_source.html#l00035">35</a> of file <a class="el" href="VertexIterator_8tpp_source.html">VertexIterator.tpp</a>.</p>
 
 </div>
 </div>
-<a id="a58c67026a8a33306b3e678010e4fe60e" name="a58c67026a8a33306b3e678010e4fe60e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58c67026a8a33306b3e678010e4fe60e">&#9670;&#160;</a></span>operator++()</h2>
+<a id="a530999e1c5fb3a0927be3adc9d2e3b97" name="a530999e1c5fb3a0927be3adc9d2e3b97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a530999e1c5fb3a0927be3adc9d2e3b97">&#9670;&#160;</a></span>operator++()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename WT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1VertexIterator.html">VertexIterator</a> &amp; Pscf::VertexIterator::operator++ </td>
+          <td class="memname"><a class="el" href="classPscf_1_1VertexIterator.html">VertexIterator</a>&lt; WT &gt; &amp; <a class="el" href="classPscf_1_1VertexIterator.html">Pscf::VertexIterator</a>&lt; WT &gt;::operator++ </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -188,20 +197,22 @@ Public Member Functions</h2></td></tr>
 
 <p>Increment operator - move to next vertex. </p>
 
-<p class="definition">Definition at line <a class="el" href="VertexIterator_8cpp_source.html#l00041">41</a> of file <a class="el" href="VertexIterator_8cpp_source.html">VertexIterator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="VertexIterator_8tpp_source.html#l00045">45</a> of file <a class="el" href="VertexIterator_8tpp_source.html">VertexIterator.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="VertexIterator_8cpp_source.html#l00077">notEnd()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, <a class="el" href="Edge_8h_source.html#l00296">Pscf::Edge::vertexId()</a>, and <a class="el" href="VertexIterator_8cpp_source.html#l00017">VertexIterator()</a>.</p>
+<p class="reference">References <a class="el" href="VertexIterator_8tpp_source.html#l00084">notEnd()</a>, <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>, <a class="el" href="Edge_8h_source.html#l00296">Pscf::Edge::vertexId()</a>, and <a class="el" href="VertexIterator_8tpp_source.html#l00018">VertexIterator()</a>.</p>
 
 </div>
 </div>
-<a id="ab4f4a718b54c36f477c4a158e441668b" name="ab4f4a718b54c36f477c4a158e441668b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4f4a718b54c36f477c4a158e441668b">&#9670;&#160;</a></span>currentId()</h2>
+<a id="a3df504020e031faf97d03fc2a9a07083" name="a3df504020e031faf97d03fc2a9a07083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3df504020e031faf97d03fc2a9a07083">&#9670;&#160;</a></span>currentId()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename WT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int Pscf::VertexIterator::currentId </td>
+          <td class="memname">int <a class="el" href="classPscf_1_1VertexIterator.html">Pscf::VertexIterator</a>&lt; WT &gt;::currentId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -211,18 +222,20 @@ Public Member Functions</h2></td></tr>
 
 <p>Get index of the current vertex. </p>
 
-<p class="definition">Definition at line <a class="el" href="VertexIterator_8cpp_source.html#l00063">63</a> of file <a class="el" href="VertexIterator_8cpp_source.html">VertexIterator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="VertexIterator_8tpp_source.html#l00068">68</a> of file <a class="el" href="VertexIterator_8tpp_source.html">VertexIterator.tpp</a>.</p>
 
 </div>
 </div>
-<a id="ad3b7114106e2f549c27b7542e95eb0b8" name="ad3b7114106e2f549c27b7542e95eb0b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3b7114106e2f549c27b7542e95eb0b8">&#9670;&#160;</a></span>isEnd()</h2>
+<a id="a79b9160e6f5c4f80ab32d598bcd0a765" name="a79b9160e6f5c4f80ab32d598bcd0a765"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79b9160e6f5c4f80ab32d598bcd0a765">&#9670;&#160;</a></span>isEnd()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename WT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool Pscf::VertexIterator::isEnd </td>
+          <td class="memname">bool <a class="el" href="classPscf_1_1VertexIterator.html">Pscf::VertexIterator</a>&lt; WT &gt;::isEnd </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -232,18 +245,20 @@ Public Member Functions</h2></td></tr>
 
 <p>Return true iff currentId == targetId. </p>
 
-<p class="definition">Definition at line <a class="el" href="VertexIterator_8cpp_source.html#l00069">69</a> of file <a class="el" href="VertexIterator_8cpp_source.html">VertexIterator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="VertexIterator_8tpp_source.html#l00075">75</a> of file <a class="el" href="VertexIterator_8tpp_source.html">VertexIterator.tpp</a>.</p>
 
 </div>
 </div>
-<a id="a154d23115b798cf4db6fc232ee53a083" name="a154d23115b798cf4db6fc232ee53a083"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a154d23115b798cf4db6fc232ee53a083">&#9670;&#160;</a></span>notEnd()</h2>
+<a id="a3a54aaeebe8ab7d19f9e712bf31a6fc9" name="a3a54aaeebe8ab7d19f9e712bf31a6fc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a54aaeebe8ab7d19f9e712bf31a6fc9">&#9670;&#160;</a></span>notEnd()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename WT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool Pscf::VertexIterator::notEnd </td>
+          <td class="memname">bool <a class="el" href="classPscf_1_1VertexIterator.html">Pscf::VertexIterator</a>&lt; WT &gt;::notEnd </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -253,15 +268,15 @@ Public Member Functions</h2></td></tr>
 
 <p>Return true iff currentId != targetId. </p>
 
-<p class="definition">Definition at line <a class="el" href="VertexIterator_8cpp_source.html#l00077">77</a> of file <a class="el" href="VertexIterator_8cpp_source.html">VertexIterator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="VertexIterator_8tpp_source.html#l00084">84</a> of file <a class="el" href="VertexIterator_8tpp_source.html">VertexIterator.tpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="VertexIterator_8cpp_source.html#l00041">operator++()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="VertexIterator_8tpp_source.html#l00045">operator++()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="VertexIterator_8h_source.html">VertexIterator.h</a></li>
-<li><a class="el" href="VertexIterator_8cpp_source.html">VertexIterator.cpp</a></li>
+<li><a class="el" href="VertexIterator_8tpp_source.html">VertexIterator.tpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

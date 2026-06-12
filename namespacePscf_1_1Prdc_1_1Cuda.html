@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -55,23 +55,14 @@ $(function() {
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle"><div class="title">Pscf::Prdc::Cuda Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Fields, FFTs, and utilities for periodic boundary conditions (CUDA)  
+<p>Fields, FFTs, and utilities for periodic boundary conditions (CUDA).  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:Reduce" id="r_Reduce"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePscf_1_1Prdc_1_1Cuda_1_1Reduce.html">Reduce</a></td></tr>
-<tr class="memdesc:namespacePscf_1_1Prdc_1_1Cuda_1_1Reduce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions that perform parallel reductions on the GPU. <br /></td></tr>
-<tr class="memitem:VecOp" id="r_VecOp"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp.html">VecOp</a></td></tr>
-<tr class="memdesc:namespacePscf_1_1Prdc_1_1Cuda_1_1VecOp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions that perform element-wise vector operations on the GPU. <br /></td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:CField" id="r_CField"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1CField.html">CField</a></td></tr>
@@ -82,6 +73,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fourier transform wrapper for real or complex data.  <a href="classPscf_1_1Prdc_1_1Cuda_1_1FFT.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FFTBatched" id="r_FFTBatched"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1FFTBatched.html">FFTBatched</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Batched Fourier transform wrapper for real data.  <a href="classPscf_1_1Prdc_1_1Cuda_1_1FFTBatched.html#details">More...</a><br /></td></tr>
+<tr class="memitem:HostDArrayComplex" id="r_HostDArrayComplex"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1HostDArrayComplex.html">HostDArrayComplex</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1HostDArray.html" title="Template for dynamic array stored in host CPU memory.">HostDArray</a> containing <a class="el" href="namespacePscf.html#acc2b150e4210c77ffd1eca5cfd701baf" title="Complex number type used in CPU code that uses FFTW.">cudaComplex</a> elements.  <a href="classPscf_1_1Prdc_1_1Cuda_1_1HostDArrayComplex.html#details">More...</a><br /></td></tr>
 <tr class="memitem:RField" id="r_RField"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html">RField</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Field of real values on a regular mesh, allocated on a GPU device.  <a href="classPscf_1_1Prdc_1_1Cuda_1_1RField.html#details">More...</a><br /></td></tr>
 <tr class="memitem:RFieldComparison" id="r_RFieldComparison"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldComparison.html">RFieldComparison</a></td></tr>
@@ -91,55 +84,11 @@ Classes</h2></td></tr>
 <tr class="memitem:RFieldDftComparison" id="r_RFieldDftComparison"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldDftComparison.html">RFieldDftComparison</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator for <a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldDft.html" title="Discrete Fourier Transform (DFT) of a real field, allocated on a GPU.">RFieldDft</a> (k-grid) arrays, allocated on device.  <a href="classPscf_1_1Prdc_1_1Cuda_1_1RFieldDftComparison.html#details">More...</a><br /></td></tr>
 <tr class="memitem:WaveList" id="r_WaveList"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Prdc_1_1Cuda_1_1WaveList.html">WaveList</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to calculate and store properties of wavevectors.  <a href="classPscf_1_1Prdc_1_1Cuda_1_1WaveList.html#details">More...</a><br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a69b69300f09c8559093b63af0a215540" id="r_a69b69300f09c8559093b63af0a215540"><td class="memItemLeft" align="right" valign="top">typedef cufftDoubleComplex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69b69300f09c8559093b63af0a215540">Complex</a></td></tr>
-<tr class="memdesc:a69b69300f09c8559093b63af0a215540"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespacePscf_1_1Prdc_1_1Cpu.html#a5529bd45ec0d18587d9dc8af3e4311ad" title="Complex number type used in CPU code that uses FFTW.">Complex</a> number type used in CPU code that uses FFTW.  <br /></td></tr>
-<tr class="memitem:ad06bae87a7bb358936a3c2610fc4b129" id="r_ad06bae87a7bb358936a3c2610fc4b129"><td class="memItemLeft" align="right" valign="top">typedef cufftDoubleReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad06bae87a7bb358936a3c2610fc4b129">Real</a></td></tr>
-<tr class="memdesc:ad06bae87a7bb358936a3c2610fc4b129"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespacePscf_1_1Prdc_1_1Cpu.html#a34b8fe34ac005923d3ff229396d613ab" title="Real number type used in CPU code that uses FFTW.">Real</a> number type used in CPU code that uses FFTW.  <br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to compute and store properties associated with wavevectors.  <a href="classPscf_1_1Prdc_1_1Cuda_1_1WaveList.html#details">More...</a><br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Fields, FFTs, and utilities for periodic boundary conditions (CUDA) </p>
-</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
-<a id="a69b69300f09c8559093b63af0a215540" name="a69b69300f09c8559093b63af0a215540"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69b69300f09c8559093b63af0a215540">&#9670;&#160;</a></span>Complex</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef cufftDoubleComplex <a class="el" href="namespacePscf_1_1Prdc_1_1Cpu.html#a5529bd45ec0d18587d9dc8af3e4311ad">Pscf::Prdc::Cuda::Complex</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="namespacePscf_1_1Prdc_1_1Cpu.html#a5529bd45ec0d18587d9dc8af3e4311ad" title="Complex number type used in CPU code that uses FFTW.">Complex</a> number type used in CPU code that uses FFTW. </p>
-
-<p class="definition">Definition at line <a class="el" href="cuda_2types_8h_source.html#l00023">23</a> of file <a class="el" href="cuda_2types_8h_source.html">cuda/types.h</a>.</p>
-
-</div>
-</div>
-<a id="ad06bae87a7bb358936a3c2610fc4b129" name="ad06bae87a7bb358936a3c2610fc4b129"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad06bae87a7bb358936a3c2610fc4b129">&#9670;&#160;</a></span>Real</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef cufftDoubleReal <a class="el" href="namespacePscf_1_1Prdc_1_1Cpu.html#a34b8fe34ac005923d3ff229396d613ab">Pscf::Prdc::Cuda::Real</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="namespacePscf_1_1Prdc_1_1Cpu.html#a34b8fe34ac005923d3ff229396d613ab" title="Real number type used in CPU code that uses FFTW.">Real</a> number type used in CPU code that uses FFTW. </p>
-
-<p class="definition">Definition at line <a class="el" href="cuda_2types_8h_source.html#l00036">36</a> of file <a class="el" href="cuda_2types_8h_source.html">cuda/types.h</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+<div class="textblock"><p>Fields, FFTs, and utilities for periodic boundary conditions (CUDA). </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated on <span class="timestamp"></span> for PSCF by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0

@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -61,21 +61,22 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Manager for a set of <a class="el" href="classPscf_1_1Rpg_1_1McMove.html" title="McMove is an abstract base class for Monte Carlo moves.">McMove</a> objects.  
+<p><a class="el" href="classUtil_1_1Manager.html" title="Template container for pointers to objects with a common base class.">Manager</a> for a set of <a class="el" href="classPscf_1_1Rpg_1_1McMove.html" title="McMove is an abstract base class for Monte Carlo moves.">McMove</a> objects.  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8h_source.html">McMoveManager.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_2fts_2montecarlo_2McMoveManager_8h_source.html">McMoveManager.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Pscf::Rpg::McMoveManager&lt; D &gt;:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classPscf_1_1Rpg_1_1McMoveManager.png" usemap="#Pscf_3A_3ARpg_3A_3AMcMoveManager_3C_20D_20_3E_map" alt=""/>
   <map id="Pscf_3A_3ARpg_3A_3AMcMoveManager_3C_20D_20_3E_map" name="Pscf_3A_3ARpg_3A_3AMcMoveManager_3C_20D_20_3E_map">
-<area href="classUtil_1_1Manager.html" alt="Util::Manager&lt; McMove&lt; D &gt; &gt;" shape="rect" coords="107,168,312,192"/>
-<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="107,112,312,136"/>
-<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="107,56,312,80"/>
-<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="0,0,205,24"/>
-<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="215,0,420,24"/>
+<area href="classPscf_1_1Rp_1_1McMoveManager.html" alt="Pscf::Rp::McMoveManager&lt; D, Types&lt; D &gt; &gt;" shape="rect" coords="142,224,416,248"/>
+<area href="classUtil_1_1Manager.html" title="Template container for pointers to objects with a common base class." alt="Util::Manager&lt; Data &gt;" shape="rect" coords="142,168,416,192"/>
+<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="142,112,416,136"/>
+<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="142,56,416,80"/>
+<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="0,0,274,24"/>
+<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="284,0,558,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -83,35 +84,36 @@ Inheritance diagram for Pscf::Rpg::McMoveManager&lt; D &gt;:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab1be138ef89336c69054933d29202805" id="r_ab1be138ef89336c69054933d29202805"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1be138ef89336c69054933d29202805">McMoveManager</a> (<a class="el" href="classPscf_1_1Rpg_1_1McSimulator.html">McSimulator</a>&lt; D &gt; &amp;simulator, <a class="el" href="classPscf_1_1Rpg_1_1System.html">System</a>&lt; D &gt; &amp;system)</td></tr>
 <tr class="memdesc:ab1be138ef89336c69054933d29202805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="memitem:ab4e49af969e6fd7ade3ab2f184a10037" id="r_ab4e49af969e6fd7ade3ab2f184a10037"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4e49af969e6fd7ade3ab2f184a10037">~McMoveManager</a> ()</td></tr>
-<tr class="memdesc:ab4e49af969e6fd7ade3ab2f184a10037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:a792b5f9569e305a86c900261893d286c" id="r_a792b5f9569e305a86c900261893d286c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a792b5f9569e305a86c900261893d286c">readParameters</a> (std::istream &amp;in)</td></tr>
-<tr class="memdesc:a792b5f9569e305a86c900261893d286c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read instructions for creating <a class="el" href="classPscf_1_1Rpg_1_1McMove.html" title="McMove is an abstract base class for Monte Carlo moves.">McMove</a> objects.  <br /></td></tr>
-<tr class="memitem:a229997129403e512562841851ba1a3a5" id="r_a229997129403e512562841851ba1a3a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a229997129403e512562841851ba1a3a5">setup</a> ()</td></tr>
-<tr class="memdesc:a229997129403e512562841851ba1a3a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize at beginning of system run.  <br /></td></tr>
-<tr class="memitem:a8501794a2c53dd1fe62322d469d1e6dd" id="r_a8501794a2c53dd1fe62322d469d1e6dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1McMove.html">McMove</a>&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8501794a2c53dd1fe62322d469d1e6dd">chooseMove</a> ()</td></tr>
-<tr class="memdesc:a8501794a2c53dd1fe62322d469d1e6dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose an <a class="el" href="classPscf_1_1Rpg_1_1McMove.html" title="McMove is an abstract base class for Monte Carlo moves.">McMove</a> at random, using specified probabilities.  <br /></td></tr>
-<tr class="memitem:a20e355a1d1a9f419de3b839cb4357f80" id="r_a20e355a1d1a9f419de3b839cb4357f80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20e355a1d1a9f419de3b839cb4357f80">output</a> () const</td></tr>
-<tr class="memdesc:a20e355a1d1a9f419de3b839cb4357f80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output statistics for all moves.  <br /></td></tr>
-<tr class="memitem:a7b927f3eb56e5cc62d628b0180bd38ba" id="r_a7b927f3eb56e5cc62d628b0180bd38ba"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b927f3eb56e5cc62d628b0180bd38ba">probability</a> (int i) const</td></tr>
-<tr class="memdesc:a7b927f3eb56e5cc62d628b0180bd38ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return probability of move i.  <br /></td></tr>
-<tr class="memitem:a5e27288cfc626da565de2d7a110d2286" id="r_a5e27288cfc626da565de2d7a110d2286"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e27288cfc626da565de2d7a110d2286">outputTimers</a> (std::ostream &amp;out) const</td></tr>
-<tr class="memdesc:a5e27288cfc626da565de2d7a110d2286"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classUtil_1_1Log.html" title="A static class that holds a log output stream.">Log</a> output timing results.  <br /></td></tr>
-<tr class="memitem:a7cc227ab32e0aea165c71634c6765b86" id="r_a7cc227ab32e0aea165c71634c6765b86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cc227ab32e0aea165c71634c6765b86">clearTimers</a> ()</td></tr>
-<tr class="memdesc:a7cc227ab32e0aea165c71634c6765b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear timers.  <br /></td></tr>
-<tr class="memitem:aef075d7cf890cfff0c657ab92b06df4e" id="r_aef075d7cf890cfff0c657ab92b06df4e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef075d7cf890cfff0c657ab92b06df4e">needsCc</a> ()</td></tr>
-<tr class="memdesc:aef075d7cf890cfff0c657ab92b06df4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decide whether any move needs to store cc fields.  <br /></td></tr>
-<tr class="memitem:a8ccf35c1ae82dd301199c7bd41ed6259" id="r_a8ccf35c1ae82dd301199c7bd41ed6259"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ccf35c1ae82dd301199c7bd41ed6259">needsDc</a> ()</td></tr>
-<tr class="memdesc:a8ccf35c1ae82dd301199c7bd41ed6259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decide whether any move needs to store dc fields.  <br /></td></tr>
-<tr class="inherit_header pub_methods_classUtil_1_1Manager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classUtil_1_1Manager')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classUtil_1_1Manager.html">Util::Manager&lt; McMove&lt; D &gt; &gt;</a></td></tr>
+<tr class="inherit_header pub_methods_classPscf_1_1Rp_1_1McMoveManager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1Rp_1_1McMoveManager')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1Rp_1_1McMoveManager.html">Pscf::Rp::McMoveManager&lt; D, Types&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:a7e735687caef63f18e63dc08b9f42c9e inherit pub_methods_classPscf_1_1Rp_1_1McMoveManager" id="r_a7e735687caef63f18e63dc08b9f42c9e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1McMoveManager.html#a7e735687caef63f18e63dc08b9f42c9e">readParameters</a> (std::istream &amp;in)</td></tr>
+<tr class="memdesc:a7e735687caef63f18e63dc08b9f42c9e inherit pub_methods_classPscf_1_1Rp_1_1McMoveManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read instructions for creating <a class="el" href="classPscf_1_1Rp_1_1McMove.html" title="McMove is an abstract base class for Monte Carlo moves.">McMove</a> objects.  <br /></td></tr>
+<tr class="memitem:abb7c7adba6a5a1e72b127d10d20d0bbd inherit pub_methods_classPscf_1_1Rp_1_1McMoveManager" id="r_abb7c7adba6a5a1e72b127d10d20d0bbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1McMoveManager.html#abb7c7adba6a5a1e72b127d10d20d0bbd">setup</a> ()</td></tr>
+<tr class="memdesc:abb7c7adba6a5a1e72b127d10d20d0bbd inherit pub_methods_classPscf_1_1Rp_1_1McMoveManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize at beginning of system run.  <br /></td></tr>
+<tr class="memitem:afee185ed08bcf6531e62d56fe9bc8b02 inherit pub_methods_classPscf_1_1Rp_1_1McMoveManager" id="r_afee185ed08bcf6531e62d56fe9bc8b02"><td class="memItemLeft" align="right" valign="top">Types&lt; D &gt;::McMove &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1McMoveManager.html#afee185ed08bcf6531e62d56fe9bc8b02">chooseMove</a> ()</td></tr>
+<tr class="memdesc:afee185ed08bcf6531e62d56fe9bc8b02 inherit pub_methods_classPscf_1_1Rp_1_1McMoveManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose an <a class="el" href="classPscf_1_1Rp_1_1McMove.html" title="McMove is an abstract base class for Monte Carlo moves.">McMove</a> at random, using specified probabilities.  <br /></td></tr>
+<tr class="memitem:a476fff58b44e5e07f85285a4ef9fdcef inherit pub_methods_classPscf_1_1Rp_1_1McMoveManager" id="r_a476fff58b44e5e07f85285a4ef9fdcef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1McMoveManager.html#a476fff58b44e5e07f85285a4ef9fdcef">output</a> () const</td></tr>
+<tr class="memdesc:a476fff58b44e5e07f85285a4ef9fdcef inherit pub_methods_classPscf_1_1Rp_1_1McMoveManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output statistics for all moves.  <br /></td></tr>
+<tr class="memitem:a6c8925ee8104275177466af757fc614d inherit pub_methods_classPscf_1_1Rp_1_1McMoveManager" id="r_a6c8925ee8104275177466af757fc614d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1McMoveManager.html#a6c8925ee8104275177466af757fc614d">probability</a> (int i) const</td></tr>
+<tr class="memdesc:a6c8925ee8104275177466af757fc614d inherit pub_methods_classPscf_1_1Rp_1_1McMoveManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return probability of move i.  <br /></td></tr>
+<tr class="memitem:a3ed12c098ae0c2ecde23a5f83d53c122 inherit pub_methods_classPscf_1_1Rp_1_1McMoveManager" id="r_a3ed12c098ae0c2ecde23a5f83d53c122"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1McMoveManager.html#a3ed12c098ae0c2ecde23a5f83d53c122">outputTimers</a> (std::ostream &amp;out) const</td></tr>
+<tr class="memdesc:a3ed12c098ae0c2ecde23a5f83d53c122 inherit pub_methods_classPscf_1_1Rp_1_1McMoveManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write timing results to an output stream.  <br /></td></tr>
+<tr class="memitem:aa100af14c5ec81cff53c9cbc8aeeeb5b inherit pub_methods_classPscf_1_1Rp_1_1McMoveManager" id="r_aa100af14c5ec81cff53c9cbc8aeeeb5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1McMoveManager.html#aa100af14c5ec81cff53c9cbc8aeeeb5b">clearTimers</a> ()</td></tr>
+<tr class="memdesc:aa100af14c5ec81cff53c9cbc8aeeeb5b inherit pub_methods_classPscf_1_1Rp_1_1McMoveManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear timers.  <br /></td></tr>
+<tr class="memitem:a5a6c03eb25d1855ac5f90e82caa33419 inherit pub_methods_classPscf_1_1Rp_1_1McMoveManager" id="r_a5a6c03eb25d1855ac5f90e82caa33419"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1McMoveManager.html#a5a6c03eb25d1855ac5f90e82caa33419">needsCc</a> ()</td></tr>
+<tr class="memdesc:a5a6c03eb25d1855ac5f90e82caa33419 inherit pub_methods_classPscf_1_1Rp_1_1McMoveManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decide whether any move needs to store cc fields.  <br /></td></tr>
+<tr class="memitem:ac9a4affb028a4e073b38b053b161795f inherit pub_methods_classPscf_1_1Rp_1_1McMoveManager" id="r_ac9a4affb028a4e073b38b053b161795f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1McMoveManager.html#ac9a4affb028a4e073b38b053b161795f">needsDc</a> ()</td></tr>
+<tr class="memdesc:ac9a4affb028a4e073b38b053b161795f inherit pub_methods_classPscf_1_1Rp_1_1McMoveManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decide whether any move needs to store dc fields.  <br /></td></tr>
+<tr class="inherit_header pub_methods_classUtil_1_1Manager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classUtil_1_1Manager')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classUtil_1_1Manager.html">Util::Manager&lt; Data &gt;</a></td></tr>
 <tr class="memitem:af247bb22b6c9c624ee7acf19186d7f3a inherit pub_methods_classUtil_1_1Manager" id="r_af247bb22b6c9c624ee7acf19186d7f3a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#af247bb22b6c9c624ee7acf19186d7f3a">Manager</a> (bool uniqueNames=false)</td></tr>
 <tr class="memdesc:af247bb22b6c9c624ee7acf19186d7f3a inherit pub_methods_classUtil_1_1Manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:a3cea09e1ebc29426b743cac062ceeb51 inherit pub_methods_classUtil_1_1Manager" id="r_a3cea09e1ebc29426b743cac062ceeb51"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#a3cea09e1ebc29426b743cac062ceeb51">~Manager</a> ()</td></tr>
 <tr class="memdesc:a3cea09e1ebc29426b743cac062ceeb51 inherit pub_methods_classUtil_1_1Manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:aa4b5ed1282aad551951fa086ec125aab inherit pub_methods_classUtil_1_1Manager" id="r_aa4b5ed1282aad551951fa086ec125aab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#aa4b5ed1282aad551951fa086ec125aab">addSubfactory</a> (<a class="el" href="classUtil_1_1Factory.html">Factory</a>&lt; McMove&lt; D &gt; &gt; &amp;subfactory)</td></tr>
+<tr class="memitem:aa4b5ed1282aad551951fa086ec125aab inherit pub_methods_classUtil_1_1Manager" id="r_aa4b5ed1282aad551951fa086ec125aab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#aa4b5ed1282aad551951fa086ec125aab">addSubfactory</a> (<a class="el" href="classUtil_1_1Factory.html">Factory</a>&lt; Data &gt; &amp;subfactory)</td></tr>
 <tr class="memdesc:aa4b5ed1282aad551951fa086ec125aab inherit pub_methods_classUtil_1_1Manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a SubFactory for this <a class="el" href="classUtil_1_1Manager.html" title="Template container for pointers to objects with a common base class.">Manager</a>.  <br /></td></tr>
-<tr class="memitem:a102f5b21e2f7788ade3e4743758f9827 inherit pub_methods_classUtil_1_1Manager" id="r_a102f5b21e2f7788ade3e4743758f9827"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#a102f5b21e2f7788ade3e4743758f9827">setFactory</a> (<a class="el" href="classUtil_1_1Factory.html">Factory</a>&lt; McMove&lt; D &gt; &gt; &amp;<a class="el" href="classUtil_1_1Manager.html#a12f3d8f6c5747ac6e267cf3bf4dea4cf">factory</a>)</td></tr>
+<tr class="memitem:a102f5b21e2f7788ade3e4743758f9827 inherit pub_methods_classUtil_1_1Manager" id="r_a102f5b21e2f7788ade3e4743758f9827"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#a102f5b21e2f7788ade3e4743758f9827">setFactory</a> (<a class="el" href="classUtil_1_1Factory.html">Factory</a>&lt; Data &gt; &amp;<a class="el" href="classUtil_1_1Manager.html#a12f3d8f6c5747ac6e267cf3bf4dea4cf">factory</a>)</td></tr>
 <tr class="memdesc:a102f5b21e2f7788ade3e4743758f9827 inherit pub_methods_classUtil_1_1Manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate a <a class="el" href="classUtil_1_1Factory.html" title="Factory template.">Factory</a> with this <a class="el" href="classUtil_1_1Manager.html" title="Template container for pointers to objects with a common base class.">Manager</a>.  <br /></td></tr>
+<tr class="memitem:a068e403529f63b0d333b53c5a7ff41d8 inherit pub_methods_classUtil_1_1Manager" id="r_a068e403529f63b0d333b53c5a7ff41d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#a068e403529f63b0d333b53c5a7ff41d8">setFactory</a> (<a class="el" href="classUtil_1_1Factory.html">Factory</a>&lt; Data &gt; *factoryPtr)</td></tr>
+<tr class="memdesc:a068e403529f63b0d333b53c5a7ff41d8 inherit pub_methods_classUtil_1_1Manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associated a <a class="el" href="classUtil_1_1Factory.html" title="Factory template.">Factory</a> with this <a class="el" href="classUtil_1_1Manager.html" title="Template container for pointers to objects with a common base class.">Manager</a> (pass by pointer).  <br /></td></tr>
 <tr class="memitem:a115f9d62a9e538f20660683eb0eb3a10 inherit pub_methods_classUtil_1_1Manager" id="r_a115f9d62a9e538f20660683eb0eb3a10"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#a115f9d62a9e538f20660683eb0eb3a10">readParam</a> (std::istream &amp;in)</td></tr>
 <tr class="memdesc:a115f9d62a9e538f20660683eb0eb3a10 inherit pub_methods_classUtil_1_1Manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and create a set of objects.  <br /></td></tr>
 <tr class="memitem:a901abf6562a55d743ee848a959e32b43 inherit pub_methods_classUtil_1_1Manager" id="r_a901abf6562a55d743ee848a959e32b43"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#a901abf6562a55d743ee848a959e32b43">readParamOptional</a> (std::istream &amp;in)</td></tr>
@@ -120,19 +122,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5c6bbf9162def94ca3cbffb11d29596c inherit pub_methods_classUtil_1_1Manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a set of objects to an output archive.  <br /></td></tr>
 <tr class="memitem:a676a1b986d066d8cd6a303f369d7403f inherit pub_methods_classUtil_1_1Manager" id="r_a676a1b986d066d8cd6a303f369d7403f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#a676a1b986d066d8cd6a303f369d7403f">save</a> (<a class="el" href="classUtil_1_1Serializable.html#aca43a1eea5ec5f13189a57892a7a6d04">Serializable::OArchive</a> &amp;ar)</td></tr>
 <tr class="memdesc:a676a1b986d066d8cd6a303f369d7403f inherit pub_methods_classUtil_1_1Manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a set of objects to an output archive.  <br /></td></tr>
-<tr class="memitem:ab9674d8bcbbb96c13424624f6c0c09c6 inherit pub_methods_classUtil_1_1Manager" id="r_ab9674d8bcbbb96c13424624f6c0c09c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#ab9674d8bcbbb96c13424624f6c0c09c6">append</a> (McMove&lt; D &gt; &amp;data, const std::string &amp;name)</td></tr>
+<tr class="memitem:ab9674d8bcbbb96c13424624f6c0c09c6 inherit pub_methods_classUtil_1_1Manager" id="r_ab9674d8bcbbb96c13424624f6c0c09c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#ab9674d8bcbbb96c13424624f6c0c09c6">append</a> (Data &amp;data, const std::string &amp;name)</td></tr>
 <tr class="memdesc:ab9674d8bcbbb96c13424624f6c0c09c6 inherit pub_methods_classUtil_1_1Manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a Data object to the end of the sequence.  <br /></td></tr>
 <tr class="memitem:ab25a6a0fb7d40c87496501d0ce3dea4b inherit pub_methods_classUtil_1_1Manager" id="r_ab25a6a0fb7d40c87496501d0ce3dea4b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#ab25a6a0fb7d40c87496501d0ce3dea4b">size</a> () const</td></tr>
 <tr class="memdesc:ab25a6a0fb7d40c87496501d0ce3dea4b inherit pub_methods_classUtil_1_1Manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get logical size.  <br /></td></tr>
 <tr class="memitem:ae06e7f058969fe77615e19ee21aae45a inherit pub_methods_classUtil_1_1Manager" id="r_ae06e7f058969fe77615e19ee21aae45a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#ae06e7f058969fe77615e19ee21aae45a">className</a> (int i) const</td></tr>
 <tr class="memdesc:ae06e7f058969fe77615e19ee21aae45a inherit pub_methods_classUtil_1_1Manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the subclass name for object number i.  <br /></td></tr>
-<tr class="memitem:a12f3d8f6c5747ac6e267cf3bf4dea4cf inherit pub_methods_classUtil_1_1Manager" id="r_a12f3d8f6c5747ac6e267cf3bf4dea4cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1Factory.html">Factory</a>&lt; McMove&lt; D &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#a12f3d8f6c5747ac6e267cf3bf4dea4cf">factory</a> ()</td></tr>
+<tr class="memitem:a12f3d8f6c5747ac6e267cf3bf4dea4cf inherit pub_methods_classUtil_1_1Manager" id="r_a12f3d8f6c5747ac6e267cf3bf4dea4cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1Factory.html">Factory</a>&lt; Data &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#a12f3d8f6c5747ac6e267cf3bf4dea4cf">factory</a> ()</td></tr>
 <tr class="memdesc:a12f3d8f6c5747ac6e267cf3bf4dea4cf inherit pub_methods_classUtil_1_1Manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reference to the factory.  <br /></td></tr>
 <tr class="memitem:a501a97ce22f9af86e20982f5b05468ee inherit pub_methods_classUtil_1_1Manager" id="r_a501a97ce22f9af86e20982f5b05468ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#a501a97ce22f9af86e20982f5b05468ee">hasFactory</a> () const</td></tr>
 <tr class="memdesc:a501a97ce22f9af86e20982f5b05468ee inherit pub_methods_classUtil_1_1Manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if this <a class="el" href="classUtil_1_1Manager.html" title="Template container for pointers to objects with a common base class.">Manager</a> has a <a class="el" href="classUtil_1_1Factory.html" title="Factory template.">Factory</a>, false otherwise.  <br /></td></tr>
-<tr class="memitem:aa24d3c436006dc0a3ac81a1d9dc1e2ec inherit pub_methods_classUtil_1_1Manager" id="r_aa24d3c436006dc0a3ac81a1d9dc1e2ec"><td class="memItemLeft" align="right" valign="top">McMove&lt; D &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#aa24d3c436006dc0a3ac81a1d9dc1e2ec">operator[]</a> (int i) const</td></tr>
+<tr class="memitem:aa24d3c436006dc0a3ac81a1d9dc1e2ec inherit pub_methods_classUtil_1_1Manager" id="r_aa24d3c436006dc0a3ac81a1d9dc1e2ec"><td class="memItemLeft" align="right" valign="top">Data &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#aa24d3c436006dc0a3ac81a1d9dc1e2ec">operator[]</a> (int i) const</td></tr>
 <tr class="memdesc:aa24d3c436006dc0a3ac81a1d9dc1e2ec inherit pub_methods_classUtil_1_1Manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mimic C array subscripting.  <br /></td></tr>
-<tr class="memitem:a21b2dfaa9ef292a1964f0f15da20e4eb inherit pub_methods_classUtil_1_1Manager" id="r_a21b2dfaa9ef292a1964f0f15da20e4eb"><td class="memItemLeft" align="right" valign="top">McMove&lt; D &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#a21b2dfaa9ef292a1964f0f15da20e4eb">findFirst</a> (std::string const &amp;<a class="el" href="classUtil_1_1Manager.html#ae06e7f058969fe77615e19ee21aae45a">className</a>)</td></tr>
+<tr class="memitem:a21b2dfaa9ef292a1964f0f15da20e4eb inherit pub_methods_classUtil_1_1Manager" id="r_a21b2dfaa9ef292a1964f0f15da20e4eb"><td class="memItemLeft" align="right" valign="top">Data *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#a21b2dfaa9ef292a1964f0f15da20e4eb">findFirst</a> (std::string const &amp;<a class="el" href="classUtil_1_1Manager.html#ae06e7f058969fe77615e19ee21aae45a">className</a>)</td></tr>
 <tr class="memdesc:a21b2dfaa9ef292a1964f0f15da20e4eb inherit pub_methods_classUtil_1_1Manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pointer to first object with specified class name.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classUtil_1_1ParamComposite"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classUtil_1_1ParamComposite')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComposite.html">Util::ParamComposite</a></td></tr>
 <tr class="memitem:a873eea7d2dbc19cde816d1bef602496c inherit pub_methods_classUtil_1_1ParamComposite" id="r_a873eea7d2dbc19cde816d1bef602496c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a873eea7d2dbc19cde816d1bef602496c">ParamComposite</a> ()</td></tr>
@@ -312,7 +314,12 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable echoing for all subclasses of <a class="el" href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file.">ParamComponent</a>.  <br /></td></tr>
 <tr class="memitem:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_ac5808de278115409092e94f9c72362c2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a> ()</td></tr>
 <tr class="memdesc:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get echo parameter.  <br /></td></tr>
-<tr class="inherit_header pro_methods_classUtil_1_1Manager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classUtil_1_1Manager')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classUtil_1_1Manager.html">Util::Manager&lt; McMove&lt; D &gt; &gt;</a></td></tr>
+<tr class="inherit_header pro_methods_classPscf_1_1Rp_1_1McMoveManager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classPscf_1_1Rp_1_1McMoveManager')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classPscf_1_1Rp_1_1McMoveManager.html">Pscf::Rp::McMoveManager&lt; D, Types&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:a953ee96a1acc159488defaa30f9811c0 inherit pro_methods_classPscf_1_1Rp_1_1McMoveManager" id="r_a953ee96a1acc159488defaa30f9811c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1McMoveManager.html#a953ee96a1acc159488defaa30f9811c0">McMoveManager</a> (typename Types&lt; D &gt;::McSimulator &amp;simulator, typename Types&lt; D &gt;::System &amp;system)</td></tr>
+<tr class="memdesc:a953ee96a1acc159488defaa30f9811c0 inherit pro_methods_classPscf_1_1Rp_1_1McMoveManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:a803fd0c3ebe534cd86ac7f1c4264aa5a inherit pro_methods_classPscf_1_1Rp_1_1McMoveManager" id="r_a803fd0c3ebe534cd86ac7f1c4264aa5a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1McMoveManager.html#a803fd0c3ebe534cd86ac7f1c4264aa5a">~McMoveManager</a> ()=default</td></tr>
+<tr class="memdesc:a803fd0c3ebe534cd86ac7f1c4264aa5a inherit pro_methods_classPscf_1_1Rp_1_1McMoveManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="inherit_header pro_methods_classUtil_1_1Manager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classUtil_1_1Manager')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classUtil_1_1Manager.html">Util::Manager&lt; Data &gt;</a></td></tr>
 <tr class="memitem:a7ea36d5a4b0c75f6572e020eadc11a00 inherit pro_methods_classUtil_1_1Manager" id="r_a7ea36d5a4b0c75f6572e020eadc11a00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#a7ea36d5a4b0c75f6572e020eadc11a00">beginReadManager</a> (std::istream &amp;in)</td></tr>
 <tr class="memdesc:a7ea36d5a4b0c75f6572e020eadc11a00 inherit pro_methods_classUtil_1_1Manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read (or attempt to read) opening line: "ManagerName{".  <br /></td></tr>
 <tr class="memitem:ac52e96076d3059229e6828838a946083 inherit pro_methods_classUtil_1_1Manager" id="r_ac52e96076d3059229e6828838a946083"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#ac52e96076d3059229e6828838a946083">endReadManager</a> ()</td></tr>
@@ -355,15 +362,15 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:a6f859f325ca7d36747d28c9677fe0bfc inherit pro_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:ae979e22ecef3a94c0e826224b3761df9 inherit pro_methods_classUtil_1_1ParamComponent" id="r_ae979e22ecef3a94c0e826224b3761df9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ae979e22ecef3a94c0e826224b3761df9">ParamComponent</a> (const <a class="el" href="classUtil_1_1ParamComponent.html">ParamComponent</a> &amp;other)</td></tr>
 <tr class="memdesc:ae979e22ecef3a94c0e826224b3761df9 inherit pro_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
-<tr class="inherit_header pro_attribs_classUtil_1_1Manager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classUtil_1_1Manager')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classUtil_1_1Manager.html">Util::Manager&lt; McMove&lt; D &gt; &gt;</a></td></tr>
-<tr class="memitem:a01081756b34092fe5d327c90d2617601 inherit pro_attribs_classUtil_1_1Manager" id="r_a01081756b34092fe5d327c90d2617601"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1Factory.html">Factory</a>&lt; McMove&lt; D &gt; &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#a01081756b34092fe5d327c90d2617601">factoryPtr_</a></td></tr>
+<tr class="inherit_header pro_attribs_classUtil_1_1Manager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classUtil_1_1Manager')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classUtil_1_1Manager.html">Util::Manager&lt; Data &gt;</a></td></tr>
+<tr class="memitem:a01081756b34092fe5d327c90d2617601 inherit pro_attribs_classUtil_1_1Manager" id="r_a01081756b34092fe5d327c90d2617601"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1Factory.html">Factory</a>&lt; Data &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Manager.html#a01081756b34092fe5d327c90d2617601">factoryPtr_</a></td></tr>
 <tr class="memdesc:a01081756b34092fe5d327c90d2617601 inherit pro_attribs_classUtil_1_1Manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to an associated <a class="el" href="classUtil_1_1Factory.html" title="Factory template.">Factory&lt;Data&gt;</a> object.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
-class Pscf::Rpg::McMoveManager&lt; D &gt;</div><p>Manager for a set of <a class="el" href="classPscf_1_1Rpg_1_1McMove.html" title="McMove is an abstract base class for Monte Carlo moves.">McMove</a> objects. </p>
+class Pscf::Rpg::McMoveManager&lt; D &gt;</div><p><a class="el" href="classUtil_1_1Manager.html" title="Template container for pointers to objects with a common base class.">Manager</a> for a set of <a class="el" href="classPscf_1_1Rpg_1_1McMove.html" title="McMove is an abstract base class for Monte Carlo moves.">McMove</a> objects. </p>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8h_source.html#l00031">31</a> of file <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8h_source.html">rpg/fts/montecarlo/McMoveManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_2fts_2montecarlo_2McMoveManager_8h_source.html#l00030">30</a> of file <a class="el" href="_2fts_2montecarlo_2McMoveManager_8h_source.html">/fts/montecarlo/McMoveManager.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab1be138ef89336c69054933d29202805" name="ab1be138ef89336c69054933d29202805"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab1be138ef89336c69054933d29202805">&#9670;&#160;</a></span>McMoveManager()</h2>
@@ -389,309 +396,23 @@ template&lt;int D&gt; </div>
 <p>Constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">simulator</td><td>parent <a class="el" href="classPscf_1_1Rpg_1_1McSimulator.html" title="Monte-Carlo simulation coordinator.">McSimulator</a> </td></tr>
+    <tr><td class="paramname">simulator</td><td>parent <a class="el" href="classPscf_1_1Rpg_1_1McSimulator.html" title="Monte Carlo simulator for PS-FTS.">McSimulator</a> </td></tr>
     <tr><td class="paramname">system</td><td>parent <a class="el" href="classPscf_1_1Rpg_1_1System.html" title="Main class, representing a complete physical system.">System</a> </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html#l00026">26</a> of file <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html">rpg/fts/montecarlo/McMoveManager.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="McMoveManager_8cu_source.html#l00021">21</a> of file <a class="el" href="McMoveManager_8cu_source.html">McMoveManager.cu</a>.</p>
 
-<p class="reference">References <a class="el" href="Manager_8h_source.html#l00232">Util::Manager&lt; McMove&lt; D &gt; &gt;::Manager()</a>, and <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>.</p>
+<p class="reference">References <a class="el" href="McMoveManager_8cu_source.html#l00021">McMoveManager()</a>.</p>
 
-</div>
-</div>
-<a id="ab4e49af969e6fd7ade3ab2f184a10037" name="ab4e49af969e6fd7ade3ab2f184a10037"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4e49af969e6fd7ade3ab2f184a10037">&#9670;&#160;</a></span>~McMoveManager()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1McMoveManager.html">Pscf::Rpg::McMoveManager</a>&lt; D &gt;::~<a class="el" href="classPscf_1_1Rpg_1_1McMoveManager.html">McMoveManager</a> </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Destructor. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html#l00038">38</a> of file <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html">rpg/fts/montecarlo/McMoveManager.tpp</a>.</p>
-
-</div>
-</div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a792b5f9569e305a86c900261893d286c" name="a792b5f9569e305a86c900261893d286c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a792b5f9569e305a86c900261893d286c">&#9670;&#160;</a></span>readParameters()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1McMoveManager.html">Pscf::Rpg::McMoveManager</a>&lt; D &gt;::readParameters </td>
-          <td>(</td>
-          <td class="paramtype">std::istream &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Read instructions for creating <a class="el" href="classPscf_1_1Rpg_1_1McMove.html" title="McMove is an abstract base class for Monte Carlo moves.">McMove</a> objects. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">in</td><td>input parameter stream </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="classUtil_1_1Manager.html#a5b2ac54cc08ef23b910cef70be60d6d3">Util::Manager&lt; McMove&lt; D &gt; &gt;</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html#l00052">52</a> of file <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html">rpg/fts/montecarlo/McMoveManager.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="Manager_8h_source.html#l00232">Util::Manager&lt; McMove&lt; D &gt; &gt;::Manager()</a>, <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html#l00052">readParameters()</a>, and <a class="el" href="Manager_8h_source.html#l00494">Util::Manager&lt; McMove&lt; D &gt; &gt;::size()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html#l00052">readParameters()</a>.</p>
-
-</div>
-</div>
-<a id="a229997129403e512562841851ba1a3a5" name="a229997129403e512562841851ba1a3a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a229997129403e512562841851ba1a3a5">&#9670;&#160;</a></span>setup()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1McMoveManager.html">Pscf::Rpg::McMoveManager</a>&lt; D &gt;::setup </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initialize at beginning of system run. </p>
-<p>This method calls the initialize method for every <a class="el" href="classPscf_1_1Rpg_1_1McMove.html" title="McMove is an abstract base class for Monte Carlo moves.">McMove</a>. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html#l00077">77</a> of file <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html">rpg/fts/montecarlo/McMoveManager.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="Manager_8h_source.html#l00494">Util::Manager&lt; McMove&lt; D &gt; &gt;::size()</a>.</p>
-
-</div>
-</div>
-<a id="a8501794a2c53dd1fe62322d469d1e6dd" name="a8501794a2c53dd1fe62322d469d1e6dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8501794a2c53dd1fe62322d469d1e6dd">&#9670;&#160;</a></span>chooseMove()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1McMove.html">McMove</a>&lt; D &gt; &amp; <a class="el" href="classPscf_1_1Rpg_1_1McMoveManager.html">Pscf::Rpg::McMoveManager</a>&lt; D &gt;::chooseMove </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Choose an <a class="el" href="classPscf_1_1Rpg_1_1McMove.html" title="McMove is an abstract base class for Monte Carlo moves.">McMove</a> at random, using specified probabilities. </p>
-<dl class="section return"><dt>Returns</dt><dd>chosen <a class="el" href="classPscf_1_1Rpg_1_1McMove.html" title="McMove is an abstract base class for Monte Carlo moves.">McMove</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html#l00088">88</a> of file <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html">rpg/fts/montecarlo/McMoveManager.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="Manager_8h_source.html#l00494">Util::Manager&lt; McMove&lt; D &gt; &gt;::size()</a>.</p>
-
-</div>
-</div>
-<a id="a20e355a1d1a9f419de3b839cb4357f80" name="a20e355a1d1a9f419de3b839cb4357f80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20e355a1d1a9f419de3b839cb4357f80">&#9670;&#160;</a></span>output()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1McMoveManager.html">Pscf::Rpg::McMoveManager</a>&lt; D &gt;::output </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Output statistics for all moves. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html#l00099">99</a> of file <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html">rpg/fts/montecarlo/McMoveManager.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="Manager_8h_source.html#l00494">Util::Manager&lt; McMove&lt; D &gt; &gt;::size()</a>.</p>
-
-</div>
-</div>
-<a id="a7b927f3eb56e5cc62d628b0180bd38ba" name="a7b927f3eb56e5cc62d628b0180bd38ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b927f3eb56e5cc62d628b0180bd38ba">&#9670;&#160;</a></span>probability()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="classPscf_1_1Rpg_1_1McMoveManager.html">Pscf::Rpg::McMoveManager</a>&lt; D &gt;::probability </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return probability of move i. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">i</td><td>index for <a class="el" href="classPscf_1_1Rpg_1_1McMove.html" title="McMove is an abstract base class for Monte Carlo moves.">McMove</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>probability of <a class="el" href="classPscf_1_1Rpg_1_1McMove.html" title="McMove is an abstract base class for Monte Carlo moves.">McMove</a> number i </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8h_source.html#l00148">148</a> of file <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8h_source.html">rpg/fts/montecarlo/McMoveManager.h</a>.</p>
-
-<p class="reference">References <a class="el" href="Manager_8h_source.html#l00494">Util::Manager&lt; McMove&lt; D &gt; &gt;::size()</a>.</p>
-
-</div>
-</div>
-<a id="a5e27288cfc626da565de2d7a110d2286" name="a5e27288cfc626da565de2d7a110d2286"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e27288cfc626da565de2d7a110d2286">&#9670;&#160;</a></span>outputTimers()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1McMoveManager.html">Pscf::Rpg::McMoveManager</a>&lt; D &gt;::outputTimers </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classUtil_1_1Log.html" title="A static class that holds a log output stream.">Log</a> output timing results. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html#l00110">110</a> of file <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html">rpg/fts/montecarlo/McMoveManager.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="Manager_8h_source.html#l00494">Util::Manager&lt; McMove&lt; D &gt; &gt;::size()</a>.</p>
-
-</div>
-</div>
-<a id="a7cc227ab32e0aea165c71634c6765b86" name="a7cc227ab32e0aea165c71634c6765b86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7cc227ab32e0aea165c71634c6765b86">&#9670;&#160;</a></span>clearTimers()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1McMoveManager.html">Pscf::Rpg::McMoveManager</a>&lt; D &gt;::clearTimers </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Clear timers. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html#l00121">121</a> of file <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html">rpg/fts/montecarlo/McMoveManager.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="Manager_8h_source.html#l00494">Util::Manager&lt; McMove&lt; D &gt; &gt;::size()</a>.</p>
-
-</div>
-</div>
-<a id="aef075d7cf890cfff0c657ab92b06df4e" name="aef075d7cf890cfff0c657ab92b06df4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef075d7cf890cfff0c657ab92b06df4e">&#9670;&#160;</a></span>needsCc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Rpg_1_1McMoveManager.html">Pscf::Rpg::McMoveManager</a>&lt; D &gt;::needsCc </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Decide whether any move needs to store cc fields. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html#l00132">132</a> of file <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html">rpg/fts/montecarlo/McMoveManager.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html#l00132">needsCc()</a>, and <a class="el" href="Manager_8h_source.html#l00494">Util::Manager&lt; McMove&lt; D &gt; &gt;::size()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html#l00132">needsCc()</a>.</p>
-
-</div>
-</div>
-<a id="a8ccf35c1ae82dd301199c7bd41ed6259" name="a8ccf35c1ae82dd301199c7bd41ed6259"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ccf35c1ae82dd301199c7bd41ed6259">&#9670;&#160;</a></span>needsDc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Rpg_1_1McMoveManager.html">Pscf::Rpg::McMoveManager</a>&lt; D &gt;::needsDc </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Decide whether any move needs to store dc fields. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html#l00146">146</a> of file <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html">rpg/fts/montecarlo/McMoveManager.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html#l00146">needsDc()</a>, and <a class="el" href="Manager_8h_source.html#l00494">Util::Manager&lt; McMove&lt; D &gt; &gt;::size()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html#l00146">needsDc()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="McMoveManager_8cu_source.html#l00021">McMoveManager()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8h_source.html">rpg/fts/montecarlo/McMoveManager.h</a></li>
-<li><a class="el" href="rpg_2fts_2montecarlo_2McMoveManager_8tpp_source.html">rpg/fts/montecarlo/McMoveManager.tpp</a></li>
+<li><a class="el" href="_2fts_2montecarlo_2McMoveManager_8h_source.html">/fts/montecarlo/McMoveManager.h</a></li>
+<li><a class="el" href="McMoveManager_8cu_source.html">McMoveManager.cu</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

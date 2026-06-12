@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -59,7 +59,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p><a class="el" href="prdc_page.html">Periodic Systems</a> (Prev/Up) &#160; &#160; &#160; &#160; <a class="el" href="prdc_groups_page.html">Space Groups</a> (Next) <br  />
 </p>
-<p>The input files for pscf_pc and pscf_pg programs use a shared set of conventions to describe crystallographic unit cells (i.e,. Bravais lattices).</p>
+<p>The input files for pscf_rpc and pscf_rpg programs use a shared set of conventions to describe crystallographic unit cells (i.e,. Bravais lattices).</p>
 <h1 class="doxsection"><a class="anchor" id="prdc_unitcell_description_sec"></a>
 Unit cell descriptors</h1>
 <p>Three different types of information are required to completely describe a crystal lattice, as discussed below:</p>
@@ -67,10 +67,10 @@ Unit cell descriptors</h1>
 <p><em> Lattice system identifier </em>: The lattice system identifier is a string that names one of the allowed crystallographic lattice systems (e.g., cubic, orthorhombic, etc) for a crystal of the specified dimensionality. The set of allowed values of this string identifier is different for 1, 2, and 3 dimensional crystals, as discussed below.</p>
 <p><em> Lattice parameters </em>: Values of the lattice parameters specify the size and shape of the unit cell by specifying values for the lengths lengths of the Bravais lattice basis vectors (corresponding to the lengths of edges of the unit cell) and, when necessary, values of angles between such vectors.</p>
 <p>The number of parameters required to describe a unit cell is different for different lattice systems. For example, a 3D cubic lattice can be specified by giving a single parameter, which is the length of any of the three orthogonal basis vectors, whereas 6 parameters (3 lengths and three angles) are required to describe a 3D triclinic lattice. By convention, the required lattice parameters for each lattice system type are always listed in a specific order that is described below for each of the possible 1, 2 and 3 dimensional lattice systems.</p>
-<p>These three different types of information are provided to a pscf_pc or pscf_pg program in different ways:</p>
-<p><em> Spatial dimension </em>: The PSCF package requires the user to specify the spatial dimension D of a periodic structure that will be treated by the pscf_pc or pscf_pg program as an argument of the -d command line option for those programs.</p>
-<p><em> Lattice system identifier </em> : The string identifier for a lattice system is a required parameter in the parameter file format for all pscf_pc and pscf_pg programs. This identifier is given as the value of the parameter with the label "lattice" within the Domain block of the parameter file. The choice of lattice system that is specified in the parameter file cannot be changed during later stages of program execution. To perform calculations involving several different lattice systems, one must instead execute the relevant program or programs several times with different input parameter files.</p>
-<p><em> Lattice parameters </em>: Values for the lattice parameters (i.e., lengths of the edges of the unit cell and angles between them) do not appear in the parameter file, but are instead usually provided within an input field file that is read by the program. All of the field file formats used by pscf_pc and pscf_pg contain a file header that contains lattice system identifier and a list of values for lattice parameters. The lattice system identifier in the header of any field file read by the program must agree with that declared in the parameter file - the program will halt execution with an error message if they do not. Users can also explicitly set or modify lattice parameter values by executing the SET_LATTICE_PARAMETERS command, which takes the lattice parameter values as a list of command arguments.</p>
+<p>These three different types of information are provided to a pscf_rpc or pscf_rpg program in different ways:</p>
+<p><em> Spatial dimension </em>: The PSCF package requires the user to specify the spatial dimension D of a periodic structure that will be treated by the pscf_rpc or pscf_rpg program as an argument of the -d command line option for those programs.</p>
+<p><em> Lattice system identifier </em> : The string identifier for a lattice system is a required parameter in the parameter file format for all pscf_rpc and pscf_rpg programs. This identifier is given as the value of the parameter with the label "lattice" within the Domain block of the parameter file. The choice of lattice system that is specified in the parameter file cannot be changed during later stages of program execution. To perform calculations involving several different lattice systems, one must instead execute the relevant program or programs several times with different input parameter files.</p>
+<p><em> Lattice parameters </em>: Values for the lattice parameters (i.e., lengths of the edges of the unit cell and angles between them) do not appear in the parameter file, but are instead usually provided within an input field file that is read by the program. All of the field file formats used by pscf_rpc and pscf_rpg contain a file header that contains lattice system identifier and a list of values for lattice parameters. The lattice system identifier in the header of any field file read by the program must agree with that declared in the parameter file - the program will halt execution with an error message if they do not. Users can also explicitly set or modify lattice parameter values by executing the SET_LATTICE_PARAMETERS command, which takes the lattice parameter values as a list of command arguments.</p>
 <p>Allowed values of the lattice system identifier and conventions for the meaning and conventional order of required unit cell parameters for each lattice system type are described below for 1, 2 and 3 dimensional systems.</p>
 <h1 class="doxsection"><a class="anchor" id="prdc_unitcell_1D_sec"></a>
 1D systems</h1>

@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -49,7 +49,7 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_453b4fc61b2e3e4301abd7788cff66f4.html">rpg</a></li><li class="navelem"><a href="dir_00f0281596ab814915fa865e8a4ab74a.html">field</a></li>  </ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_486c6ef9f31d38c99d7503b9bbc9a83c.html">prdc</a></li><li class="navelem"><a href="dir_9c93c0b8d4a8805c77730a7eb3f696b5.html">cuda</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -67,54 +67,57 @@ $(function() {
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;HostDArrayComplex.h&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf.html">Pscf</a> {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Rpg.html">Rpg</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>   <span class="keyword">using namespace </span>Util;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">   * Default constructor.</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">   */</span></div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1HostDArrayComplex.html#a602965638b62476a18b8bbace8a7a38c">   18</a></span>   <a class="code hl_function" href="classPscf_1_1Rpg_1_1HostDArrayComplex.html#a602965638b62476a18b8bbace8a7a38c">HostDArrayComplex::HostDArrayComplex</a>() </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    : <a class="code hl_function" href="classPscf_1_1HostDArray.html#a09883bdb14c13447662bcef75ae66956">HostDArray</a>&lt;<a class="code hl_typedef" href="classPscf_1_1Rpg_1_1HostDArrayComplex.html#a6b6afcbd1f4f9a92130b28f32b987992">Complex</a>&gt;()</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>   {}</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc.html">Prdc</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePscf_1_1Prdc_1_1Cuda.html">Cuda</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>   <span class="keyword">using namespace </span>Util;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">   * Default constructor.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">   */</span></div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classPscf_1_1Prdc_1_1Cuda_1_1HostDArrayComplex.html#aa7d0f6d53b380d587df72da3b13f9e6f">   19</a></span>   <a class="code hl_function" href="classPscf_1_1Prdc_1_1Cuda_1_1HostDArrayComplex.html#aa7d0f6d53b380d587df72da3b13f9e6f">HostDArrayComplex::HostDArrayComplex</a>() </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    : <a class="code hl_function" href="classPscf_1_1HostDArray.html#a09883bdb14c13447662bcef75ae66956">HostDArray</a>&lt;<a class="code hl_typedef" href="namespacePscf.html#acc2b150e4210c77ffd1eca5cfd701baf">cudaComplex</a>&gt;()</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>   {}</div>
 </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">   * Allocating constructor.</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">   */</span></div>
-<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1HostDArrayComplex.html#acf34b224fadaa3bf7e09cdc44becdb7d">   25</a></span>   <a class="code hl_function" href="classPscf_1_1Rpg_1_1HostDArrayComplex.html#a602965638b62476a18b8bbace8a7a38c">HostDArrayComplex::HostDArrayComplex</a>(<span class="keywordtype">int</span> <a class="code hl_function" href="classUtil_1_1Array.html#a66a4be07c83c3b49eae3536a3afd9fb0">capacity</a>)</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    : <a class="code hl_function" href="classPscf_1_1HostDArray.html#a09883bdb14c13447662bcef75ae66956">HostDArray</a>&lt;<a class="code hl_typedef" href="classPscf_1_1Rpg_1_1HostDArrayComplex.html#a6b6afcbd1f4f9a92130b28f32b987992">Complex</a>&gt;(<a class="code hl_function" href="classUtil_1_1Array.html#a66a4be07c83c3b49eae3536a3afd9fb0">capacity</a>)</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>   {}</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">   * Allocating constructor.</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">   */</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classPscf_1_1Prdc_1_1Cuda_1_1HostDArrayComplex.html#af74850ecc9c43cf5d0b8dfe6af07380e">   26</a></span>   <a class="code hl_function" href="classPscf_1_1Prdc_1_1Cuda_1_1HostDArrayComplex.html#aa7d0f6d53b380d587df72da3b13f9e6f">HostDArrayComplex::HostDArrayComplex</a>(<span class="keywordtype">int</span> <a class="code hl_function" href="classUtil_1_1Array.html#a66a4be07c83c3b49eae3536a3afd9fb0">capacity</a>)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    : <a class="code hl_function" href="classPscf_1_1HostDArray.html#a09883bdb14c13447662bcef75ae66956">HostDArray</a>&lt;<a class="code hl_typedef" href="namespacePscf.html#acc2b150e4210c77ffd1eca5cfd701baf">cudaComplex</a>&gt;(<a class="code hl_function" href="classUtil_1_1Array.html#a66a4be07c83c3b49eae3536a3afd9fb0">capacity</a>)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>   {}</div>
 </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">   * Copy constructor.</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">   */</span></div>
-<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1HostDArrayComplex.html#af6a65a705dae5b3a157f5be775ad88b3">   32</a></span>   <a class="code hl_function" href="classPscf_1_1Rpg_1_1HostDArrayComplex.html#a602965638b62476a18b8bbace8a7a38c">HostDArrayComplex::HostDArrayComplex</a>(<a class="code hl_function" href="classPscf_1_1Rpg_1_1HostDArrayComplex.html#a602965638b62476a18b8bbace8a7a38c">HostDArrayComplex</a> <span class="keyword">const</span>&amp; other)</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    : <a class="code hl_function" href="classPscf_1_1HostDArray.html#a09883bdb14c13447662bcef75ae66956">HostDArray</a>&lt;<a class="code hl_typedef" href="classPscf_1_1Rpg_1_1HostDArrayComplex.html#a6b6afcbd1f4f9a92130b28f32b987992">Complex</a>&gt;(other)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>   {}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">   * Copy constructor.</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">   */</span></div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classPscf_1_1Prdc_1_1Cuda_1_1HostDArrayComplex.html#a57b545fbeaa0e6411080c6a2c62098ac">   33</a></span>   <a class="code hl_function" href="classPscf_1_1Prdc_1_1Cuda_1_1HostDArrayComplex.html#aa7d0f6d53b380d587df72da3b13f9e6f">HostDArrayComplex::HostDArrayComplex</a>(<a class="code hl_function" href="classPscf_1_1Prdc_1_1Cuda_1_1HostDArrayComplex.html#aa7d0f6d53b380d587df72da3b13f9e6f">HostDArrayComplex</a> <span class="keyword">const</span>&amp; other)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    : <a class="code hl_function" href="classPscf_1_1HostDArray.html#a09883bdb14c13447662bcef75ae66956">HostDArray</a>&lt;<a class="code hl_typedef" href="namespacePscf.html#acc2b150e4210c77ffd1eca5cfd701baf">cudaComplex</a>&gt;(other)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>   {}</div>
 </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>   <span class="comment">/*</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">   * Destructor.</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">   */</span></div>
-<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classPscf_1_1Rpg_1_1HostDArrayComplex.html#a17232ba113db0a36c3f64c177284682d">   39</a></span>   <a class="code hl_function" href="classPscf_1_1Rpg_1_1HostDArrayComplex.html#a17232ba113db0a36c3f64c177284682d">HostDArrayComplex::~HostDArrayComplex</a>()</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>   {}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">   * Destructor.</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">   */</span></div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classPscf_1_1Prdc_1_1Cuda_1_1HostDArrayComplex.html#abec4f5e1d203cf229ba2ada4b7324ec5">   40</a></span>   <a class="code hl_function" href="classPscf_1_1Prdc_1_1Cuda_1_1HostDArrayComplex.html#abec4f5e1d203cf229ba2ada4b7324ec5">HostDArrayComplex::~HostDArrayComplex</a>()</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>   {}</div>
 </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>} <span class="comment">// namespace Rpg</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>} <span class="comment">// namespace Pscf</span></div>
-<div class="ttc" id="aclassPscf_1_1HostDArray_html_a09883bdb14c13447662bcef75ae66956"><div class="ttname"><a href="classPscf_1_1HostDArray.html#a09883bdb14c13447662bcef75ae66956">Pscf::HostDArray&lt; Prdc::Cuda::cudaComplex &gt;::HostDArray</a></div><div class="ttdeci">HostDArray()</div><div class="ttdef"><b>Definition</b> <a href="HostDArray_8h_source.html#l00055">HostDArray.h:123</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1HostDArrayComplex_html_a17232ba113db0a36c3f64c177284682d"><div class="ttname"><a href="classPscf_1_1Rpg_1_1HostDArrayComplex.html#a17232ba113db0a36c3f64c177284682d">Pscf::Rpg::HostDArrayComplex::~HostDArrayComplex</a></div><div class="ttdeci">~HostDArrayComplex()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00039">HostDArrayComplex.cu:39</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1HostDArrayComplex_html_a602965638b62476a18b8bbace8a7a38c"><div class="ttname"><a href="classPscf_1_1Rpg_1_1HostDArrayComplex.html#a602965638b62476a18b8bbace8a7a38c">Pscf::Rpg::HostDArrayComplex::HostDArrayComplex</a></div><div class="ttdeci">HostDArrayComplex()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00018">HostDArrayComplex.cu:18</a></div></div>
-<div class="ttc" id="aclassPscf_1_1Rpg_1_1HostDArrayComplex_html_a6b6afcbd1f4f9a92130b28f32b987992"><div class="ttname"><a href="classPscf_1_1Rpg_1_1HostDArrayComplex.html#a6b6afcbd1f4f9a92130b28f32b987992">Pscf::Rpg::HostDArrayComplex::Complex</a></div><div class="ttdeci">Prdc::Cuda::cudaComplex Complex</div><div class="ttdoc">Complex number type.</div><div class="ttdef"><b>Definition</b> <a href="HostDArrayComplex_8h_source.html#l00039">HostDArrayComplex.h:39</a></div></div>
-<div class="ttc" id="aclassUtil_1_1Array_html_a66a4be07c83c3b49eae3536a3afd9fb0"><div class="ttname"><a href="classUtil_1_1Array.html#a66a4be07c83c3b49eae3536a3afd9fb0">Util::Array&lt; Prdc::Cuda::cudaComplex &gt;::capacity</a></div><div class="ttdeci">int capacity() const</div><div class="ttdef"><b>Definition</b> <a href="Array_8h_source.html#l00054">Array.h:159</a></div></div>
-<div class="ttc" id="anamespacePscf_1_1Rpg_html"><div class="ttname"><a href="namespacePscf_1_1Rpg.html">Pscf::Rpg</a></div><div class="ttdoc">SCFT and PS-FTS with real periodic fields (GPU)</div><div class="ttdef"><b>Definition</b> <a href="rpg_2environment_2environment_8mod_source.html#l00003">rpg/environment/environment.mod:3</a></div></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>} <span class="comment">// namespace Cuda</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>} <span class="comment">// namespace Prdc</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>} <span class="comment">// namespace Pscf</span></div>
+<div class="ttc" id="aclassPscf_1_1HostDArray_html_a09883bdb14c13447662bcef75ae66956"><div class="ttname"><a href="classPscf_1_1HostDArray.html#a09883bdb14c13447662bcef75ae66956">Pscf::HostDArray&lt; cudaComplex &gt;::HostDArray</a></div><div class="ttdeci">HostDArray()</div></div>
+<div class="ttc" id="aclassPscf_1_1Prdc_1_1Cuda_1_1HostDArrayComplex_html_aa7d0f6d53b380d587df72da3b13f9e6f"><div class="ttname"><a href="classPscf_1_1Prdc_1_1Cuda_1_1HostDArrayComplex.html#aa7d0f6d53b380d587df72da3b13f9e6f">Pscf::Prdc::Cuda::HostDArrayComplex::HostDArrayComplex</a></div><div class="ttdeci">HostDArrayComplex()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">HostDArrayComplex.cu:19</a></div></div>
+<div class="ttc" id="aclassPscf_1_1Prdc_1_1Cuda_1_1HostDArrayComplex_html_abec4f5e1d203cf229ba2ada4b7324ec5"><div class="ttname"><a href="classPscf_1_1Prdc_1_1Cuda_1_1HostDArrayComplex.html#abec4f5e1d203cf229ba2ada4b7324ec5">Pscf::Prdc::Cuda::HostDArrayComplex::~HostDArrayComplex</a></div><div class="ttdeci">~HostDArrayComplex()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">HostDArrayComplex.cu:40</a></div></div>
+<div class="ttc" id="aclassUtil_1_1Array_html_a66a4be07c83c3b49eae3536a3afd9fb0"><div class="ttname"><a href="classUtil_1_1Array.html#a66a4be07c83c3b49eae3536a3afd9fb0">Util::Array::capacity</a></div><div class="ttdeci">int capacity() const</div><div class="ttdoc">Return allocated size.</div><div class="ttdef"><b>Definition</b> <a href="Array_8h_source.html#l00144">Array.h:144</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_1_1Cuda_html"><div class="ttname"><a href="namespacePscf_1_1Prdc_1_1Cuda.html">Pscf::Prdc::Cuda</a></div><div class="ttdoc">Fields, FFTs, and utilities for periodic boundary conditions (CUDA).</div><div class="ttdef"><b>Definition</b> <a href="CField_8cu_source.html#l00012">CField.cu:12</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_html"><div class="ttname"><a href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div><div class="ttdoc">Periodic fields and crystallography.</div><div class="ttdef"><b>Definition</b> <a href="complex_8cpp_source.html#l00011">complex.cpp:11</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
+<div class="ttc" id="anamespacePscf_html_acc2b150e4210c77ffd1eca5cfd701baf"><div class="ttname"><a href="namespacePscf.html#acc2b150e4210c77ffd1eca5cfd701baf">Pscf::cudaComplex</a></div><div class="ttdeci">cufftDoubleComplex cudaComplex</div><div class="ttdoc">Complex number type used in CPU code that uses FFTW.</div><div class="ttdef"><b>Definition</b> <a href="cudaTypes_8h_source.html#l00022">cudaTypes.h:22</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

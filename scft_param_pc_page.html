@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: Parameter File - pscf_pc and pscf_pg</title>
+<title>PSCF: Parameter File - pscf_rpc and pscf_rpg</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -54,15 +54,15 @@ $(function() {
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">Parameter File - pscf_pc and pscf_pg </div></div>
+  <div class="headertitle"><div class="title">Parameter File - pscf_rpc and pscf_rpg </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="el" href="scft_param_1d_page.html">Parameter File - pscf_1d</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_field_page.html">Field Files</a> (Next) <br  />
+<div class="textblock"><p><a class="el" href="scft_param_1d_page.html">Parameter File - pscf_r1d</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="user_field_page.html">Field Files</a> (Next) <br  />
 </p>
-<p>The pscf_pc and pscf_pg programs for periodic systems use nearly identical parameter file formats, and so are discussed together here. The description given here only discusses parameter file elements that are relevant to SCFT calculations. A complete description of the parameter file format for either of these programs, including optional elements that not relevant to SCFT, is given <a class="el" href="rpc_System_page.html">here</a>.</p>
+<p>The pscf_rpc and pscf_rpg programs for periodic systems use nearly identical parameter file formats, and so are discussed together here. The description given here only discusses parameter file elements that are relevant to SCFT calculations. A complete description of the parameter file format for either of these programs, including optional elements that not relevant to SCFT, is given <a class="el" href="rp_System_page.html">here</a>.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_param_pc_example_sec"></a>
 Example</h1>
-<p>The example show below is a typical parameter file for using either pscf_pc or pscf_pg to perform a single SCFT calculation for a 3D structure of a diblock copolymer melt using a known space group.</p>
+<p>The example show below is a typical parameter file for using either pscf_rpc or pscf_rpg to perform a single SCFT calculation for a 3D structure of a diblock copolymer melt using a known space group.</p>
 <div class="fragment"><div class="line">System{</div>
 <div class="line">  polymerModel thread</div>
 <div class="line">  Mixture{</div>
@@ -101,7 +101,7 @@ Example</h1>
 </div><!-- fragment --><p> This parameter file is designed to initialize a single SCFT calculation for a BCC phase of a single-component diblock copolymer melt, using a flexible unit cell. The <a class="el" href="classPscf_1_1Rpc_1_1Domain.html" title="Spatial domain for a periodic structure with real fields, on a CPU.">Domain</a> block of this file contains an optional groupName parameter that gives the identifier for the space group of a BCC phase. A parameter file for SCFT calculation of a mixture could contain more than one "Polymer" blocks and/or one or more "Solvent" blocks. A parameter file that is used to initialize a SCFT parameter sweep would also contain an additional "Sweep" block.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_param_pc_system_sec"></a>
 File format</h1>
-<p>The elements of a parameter file used by pscf_pc or pscf_pg to perform a SCFT or an SCFT parameter sweep are shown in skeleton from below: </p><div class="fragment"><div class="line">System{</div>
+<p>The elements of a parameter file used by pscf_rpc or pscf_rpg to perform a SCFT or an SCFT parameter sweep are shown in skeleton from below: </p><div class="fragment"><div class="line">System{</div>
 <div class="line">  polymerModel*  string  (<span class="stringliteral">&quot;thread&quot;</span> or <span class="stringliteral">&quot;bead&quot;</span>, <span class="stringliteral">&quot;thread&quot;</span> by <span class="keywordflow">default</span>)</div>
 <div class="line">  Mixture{ ...  }</div>
 <div class="line">  Interaction{ ...  }</div>
@@ -110,37 +110,34 @@ File format</h1>
 <div class="line">  Iterator#*{ ... }</div>
 <div class="line">  <a class="code hl_class" href="classPscf_1_1Rpc_1_1Sweep.html">Sweep</a>#*{ ... }</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassPscf_1_1Rpc_1_1Sweep_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Sweep.html">Pscf::Rpc::Sweep</a></div><div class="ttdoc">Solve a sequence of SCFT problems along a line in parameter space.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00026">rpc/scft/sweep/Sweep.h:27</a></div></div>
-</div><!-- fragment --><p> The above skeleton only includes blocks that are relevant to SCFT calculations. It does not include an optional "Simulation" block that is only used for a PS-FTS calculation. A complete description of all allowed elements of the main <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> block is given <a class="el" href="rpc_System_page.html">here</a>.</p>
-<p><a class="el" href="classUtil_1_1Parameter.html" title="A single variable in a parameter file.">Parameter</a> file formats of the <a class="el" href="classPscf_1_1Rpc_1_1Mixture.html" title="Solver and descriptor for a mixture of polymers and solvents.">Mixture</a> and <a class="el" href="classPscf_1_1Interaction.html" title="Flory-Huggins excess free energy model.">Interaction</a> blocks are the same (or nearly so) for all PSCF programs, and have been discussed previously. The other elements of this file format are discussed below:</p>
+<div class="ttc" id="aclassPscf_1_1Rpc_1_1Sweep_html"><div class="ttname"><a href="classPscf_1_1Rpc_1_1Sweep.html">Pscf::Rpc::Sweep</a></div><div class="ttdoc">Solve a sequence of SCFT problems along a line in parameter space.</div><div class="ttdef"><b>Definition</b> <a href="rpc_2scft_2sweep_2Sweep_8h_source.html#l00035">rpc/scft/sweep/Sweep.h:36</a></div></div>
+</div><!-- fragment --><p> The above skeleton only includes blocks that are relevant to SCFT calculations. It does not include an optional "Simulation" block that is only used for a PS-FTS calculation. A complete description of all allowed elements of the main <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="A complete physical system.">System</a> block is given <a class="el" href="rp_System_page.html">here</a>.</p>
+<p><a class="el" href="classUtil_1_1Parameter.html" title="A single variable in a parameter file.">Parameter</a> file formats of the <a class="el" href="classPscf_1_1Rpc_1_1Mixture.html" title="Solver and descriptor for a mixture of polymers and solvents.">Mixture</a> and <a class="el" href="classPscf_1_1Interaction.html" title="Interaction model for complex Langevin FTS.">Interaction</a> blocks are the same (or nearly so) for all PSCF programs, and have been discussed previously. The other elements of this file format are discussed below:</p>
 <h1 class="doxsection"><a class="anchor" id="scft_param_pc_model_sec"></a>
 PolymerModel parameter</h1>
-<p>The optional polymerModel is a string parameter with allowed values of "thread" and "bead". These values specify global use of either the continuous thread ("thread") or discrete bead ("bead") model, respectively <br  />
- The polymerModel parameter is the first entry in the <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="Main class, representing a complete physical system.">System</a> block for a pscf_pc or pscf_pg parameter file, which must appear before the <a class="el" href="classPscf_1_1Rpc_1_1Mixture.html" title="Solver and descriptor for a mixture of polymers and solvents.">Mixture</a> block. If the polymerModel parameter is omitted, the thread model is used by default.</p>
-<p>This parameter may not be used in the parameter file for pscf_1d because this program only allows use of the thread model.</p>
+<p>The optional polymerModel is a string parameter with allowed values of "thread" and "bead". These values specify global use of either the continuous thread ("thread") or discrete bead ("bead") model, respectively The polymerModel parameter is the first entry in the <a class="el" href="classPscf_1_1Rpc_1_1System.html" title="A complete physical system.">System</a> block for a pscf_rpc or pscf_rpg parameter file, which must appear before the <a class="el" href="classPscf_1_1Rpc_1_1Mixture.html" title="Solver and descriptor for a mixture of polymers and solvents.">Mixture</a> block. If the polymerModel parameter is omitted, the thread model is used by default.</p>
+<p>This parameter may not be used in the parameter file for pscf_r1d because this program only allows use of the thread model.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_param_pc_domain_sec"></a>
 Domain block</h1>
 <p>The <a class="el" href="classPscf_1_1Rpc_1_1Domain.html" title="Spatial domain for a periodic structure with real fields, on a CPU.">Domain</a> block contains information required to describe the unit cell of a periodic structure, the regular mesh that is used to discretize fields within each unit cell, and (optionally) an identifier for the space group of an SCFT solution. The format of this block has been discussed in detail on a <a class="el" href="user_param_domain_pc_page.html">previous page</a>.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_param_pc_environment_sec"></a>
 Environment</h1>
-<p>The <a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a> block is an optional selectable block that can be used to define a mask and/or external potential fields in order to define an inhomogeneous externally imposed environment, as discussed in detail <a class="el" href="scft_environment_page.html">here</a>. An environment can be used to describe a confined environment such as that experienced by a <a class="el" href="scft_thin_films_page.html">thin film</a>. <br  />
-</p>
+<p>The <a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a> block is an optional selectable block that can be used to define a mask and/or external potential fields in order to define an inhomogeneous externally imposed environment, as discussed in detail <a class="el" href="scft_environment_page.html">here</a>. An environment can be used to describe a confined environment such as that experienced by a <a class="el" href="scft_thin_films_page.html">thin film</a>.</p>
 <p>An <a class="el" href="classPscf_1_1Prdc_1_1Environment.html" title="Base class mask and external field generator for variable-cell SCFT.">Environment</a> block is not needed for standard SCFT calculations involving bulk periodic phases, and so does not appear in the above example.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_param_pc_iterator_sec"></a>
 Iterator</h1>
-<p>The pscf_pc and pscf_pg programs each provide two SCFT iterator algorithms named <a class="el" href="rpc_AmIteratorBasis_page.html">AmIteratorBasis</a> and <a class="el" href="rpc_AmIteratorGrid_page.html">AmIteratorGrid</a>, as discussed on a <a class="el" href="scft_iterator_page.html#scft_iterator_periodic_sec">previous page</a>.</p>
-<p><a class="el" href="classPscf_1_1Rpc_1_1AmIteratorBasis.html" title="Anderson Mixing iterator with imposed space-group symmetry.">AmIteratorBasis</a> is the default iterator algorithm for both pscf_pc and pscf_pg. The above example uses the generic "Iterator" block label to invoke this algorithm, which is an Anderson mixing algorithm that preserves the space-group symmetry specified in the <a class="el" href="classPscf_1_1Rpc_1_1Domain.html" title="Spatial domain for a periodic structure with real fields, on a CPU.">Domain</a> block.</p>
-<p>The <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> block of the parameter file is formally optional in the parameter file format for pscf_pc and pscf_pg. Either program can thus successfully finish reading the parameter file if this block is absent. A valid <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> block must be present, however, to actually perform a SCFT calculation. The <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> block is treated as optional element of pscf_pc and pscf_pg parameter files because both of these programs can also perform PS-FTS calculations, as well as SCFT, and an <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> is not needed for such simulations.</p>
+<p>The pscf_rpc and pscf_rpg programs each provide two SCFT iterator algorithms named <a class="el" href="rp_AmIteratorBasis_page.html">AmIteratorBasis</a> and <a class="el" href="rp_AmIteratorGrid_page.html">AmIteratorGrid</a>, as discussed on a <a class="el" href="scft_iterator_page.html#scft_iterator_periodic_sec">previous page</a>.</p>
+<p><a class="el" href="classPscf_1_1Rpc_1_1AmIteratorBasis.html" title="Anderson mixing iterator with imposed space-group symmetry).">AmIteratorBasis</a> is the default iterator algorithm for both pscf_rpc and pscf_rpg. The above example uses the generic "Iterator" block label to invoke this algorithm, which is an Anderson mixing algorithm that preserves the space-group symmetry specified in the <a class="el" href="classPscf_1_1Rpc_1_1Domain.html" title="Spatial domain for a periodic structure with real fields, on a CPU.">Domain</a> block.</p>
+<p>The <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations in Rpc.">Iterator</a> block of the parameter file is formally optional in the parameter file format for pscf_rpc and pscf_rpg. Either program can thus successfully finish reading the parameter file if this block is absent. A valid <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations in Rpc.">Iterator</a> block must be present, however, to actually perform a SCFT calculation. The <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations in Rpc.">Iterator</a> block is treated as optional element of pscf_rpc and pscf_rpg parameter files because both of these programs can also perform PS-FTS calculations, as well as SCFT, and an <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations in Rpc.">Iterator</a> is not needed for such simulations.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_param_pc_sweep_sec"></a>
 Sweep</h1>
-<p>The <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space.">Sweep</a> block is optional block that is used to program a SCFT parameter sweep. It has been programmed as a selectable block, but there is currently only one available sweep algorithm for either pscf_pc or pscf_pg, which is a general linear sweep algorithm that is implemented by a class named <a class="el" href="classPscf_1_1Rpc_1_1LinearSweep.html" title="Sweep in which parameters vary linearly with sweep variable s.">LinearSweep</a>. Because this is also the default sweep algorithm, it may be enabled by including a <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space.">Sweep</a> block that starts with either with the generic label "Sweep" or the specific label "LinearSweep". The format of the required parameter file block has been described on a <a class="el" href="scft_sweep_page.html#scft_sweep_linear_sec">previous page</a>. A <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space.">Sweep</a> block is allowed only if an <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations.">Iterator</a> block is present. <br  />
-</p>
+<p>The <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space.">Sweep</a> block is optional block that is used to program a SCFT parameter sweep. It has been programmed as a selectable block, but there is currently only one available sweep algorithm for either pscf_rpc or pscf_rpg, which is a general linear sweep algorithm that is implemented by a class named <a class="el" href="classPscf_1_1Rpc_1_1LinearSweep.html" title="Sweep in which parameters vary linearly with sweep variable s.">LinearSweep</a>. Because this is also the default sweep algorithm, it may be enabled by including a <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space.">Sweep</a> block that starts with either with the generic label "Sweep" or the specific label "LinearSweep". The format of the required parameter file block has been described on a <a class="el" href="scft_sweep_page.html#scft_sweep_linear_sec">previous page</a>. A <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space.">Sweep</a> block is allowed only if an <a class="el" href="classPscf_1_1Rpc_1_1Iterator.html" title="Base class for iterative solvers for SCF equations in Rpc.">Iterator</a> block is present.</p>
 <p>The above example does not contains a <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space.">Sweep</a> block.</p>
 <h1 class="doxsection"><a class="anchor" id="scft_param_pc_seealso_sec"></a>
 See Also:</h1>
 <ul>
 <li>
-<a class="el" href="rpc_System_page.html">(Rpc|Rpg)::System</a>  </li>
+<a class="el" href="rp_System_page.html">(Rpc|Rpg)::System</a>  </li>
 <li>
 <a class="el" href="user_param_mixture_page.html">Mixture</a>  </li>
 <li>
@@ -152,9 +149,9 @@ See Also:</h1>
 <li>
 <a class="el" href="scft_iterator_page.html">Iterator</a>  <ul>
 <li>
-<a class="el" href="rpc_AmIteratorBasis_page.html">AmIteratorBasis</a>  </li>
+<a class="el" href="rp_AmIteratorBasis_page.html">AmIteratorBasis</a>  </li>
 <li>
-<a class="el" href="rpc_AmIteratorGrid_page.html">AmIteratorGrid</a>  </li>
+<a class="el" href="rp_AmIteratorGrid_page.html">AmIteratorGrid</a>  </li>
 </ul>
 </li>
 <li>
@@ -165,7 +162,7 @@ See Also:</h1>
 </li>
 </ul>
 <p><br  />
- <a class="el" href="scft_param_1d_page.html">Parameter File - pscf_1d</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_param_page.html">Parameter Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_field_page.html">Field Files</a> (Next) </p>
+ <a class="el" href="scft_param_1d_page.html">Parameter File - pscf_r1d</a> (Prev) &#160; &#160; &#160; &#160; <a class="el" href="scft_param_page.html">Parameter Files</a> (Up) &#160; &#160; &#160; &#160; <a class="el" href="user_field_page.html">Field Files</a> (Next) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

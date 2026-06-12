@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -55,7 +55,6 @@ $(function() {
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classPscf_1_1Rpg_1_1Solvent-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Pscf::Rpg::Solvent&lt; D &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Rpg__Module.html">Pscf::Rpg - Real Periodic Fields (GPU)</a> &raquo; <a class="el" href="group__Rpg__Solver__Module.html">Solvers</a></div></div></div>
 </div><!--header-->
@@ -71,59 +70,69 @@ Inheritance diagram for Pscf::Rpg::Solvent&lt; D &gt;:</div>
  <div class="center">
   <img src="classPscf_1_1Rpg_1_1Solvent.png" usemap="#Pscf_3A_3ARpg_3A_3ASolvent_3C_20D_20_3E_map" alt=""/>
   <map id="Pscf_3A_3ARpg_3A_3ASolvent_3C_20D_20_3E_map" name="Pscf_3A_3ARpg_3A_3ASolvent_3C_20D_20_3E_map">
-<area href="classPscf_1_1SolventSpecies.html" title="Descriptor for a solvent species." alt="Pscf::SolventSpecies" shape="rect" coords="78,224,224,248"/>
-<area href="classPscf_1_1Species.html" title="Base class for a molecular species (polymer or solvent)." alt="Pscf::Species" shape="rect" coords="78,168,224,192"/>
-<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="78,112,224,136"/>
-<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="78,56,224,80"/>
-<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="0,0,146,24"/>
-<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="156,0,302,24"/>
+<area href="classPscf_1_1Rp_1_1Solvent.html" alt="Pscf::Rp::Solvent&lt; D, Rpg::Types&lt; D &gt; &gt;" shape="rect" coords="126,280,369,304"/>
+<area href="classPscf_1_1SolventSpecies.html" alt="Pscf::SolventSpecies&lt; double &gt;" shape="rect" coords="126,224,369,248"/>
+<area href="classPscf_1_1Species.html" alt="Pscf::Species&lt; double &gt;" shape="rect" coords="126,168,369,192"/>
+<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="126,112,369,136"/>
+<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="126,56,369,80"/>
+<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="0,0,243,24"/>
+<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="253,0,496,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a0d33922922a7540baa2ca21902c77b01" id="r_a0d33922922a7540baa2ca21902c77b01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d33922922a7540baa2ca21902c77b01">Solvent</a> ()</td></tr>
-<tr class="memdesc:a0d33922922a7540baa2ca21902c77b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="memitem:ad48fdc4efb7e453c1a7a66f55bcb4107" id="r_ad48fdc4efb7e453c1a7a66f55bcb4107"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad48fdc4efb7e453c1a7a66f55bcb4107">~Solvent</a> ()</td></tr>
-<tr class="memdesc:ad48fdc4efb7e453c1a7a66f55bcb4107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:aea1d4763268c13cf90c3217173d3f854" id="r_aea1d4763268c13cf90c3217173d3f854"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea1d4763268c13cf90c3217173d3f854">associate</a> (<a class="el" href="classPscf_1_1Mesh.html">Mesh</a>&lt; D &gt; const &amp;mesh)</td></tr>
-<tr class="memdesc:aea1d4763268c13cf90c3217173d3f854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate this object with a mesh.  <br /></td></tr>
-<tr class="memitem:ab6a515303f6036d041bc8e9a7e7a4295" id="r_ab6a515303f6036d041bc8e9a7e7a4295"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6a515303f6036d041bc8e9a7e7a4295">allocate</a> ()</td></tr>
-<tr class="memdesc:ab6a515303f6036d041bc8e9a7e7a4295"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate internal data containers.  <br /></td></tr>
-<tr class="memitem:a461b9020fa73904c977f5f61fb75e713" id="r_a461b9020fa73904c977f5f61fb75e713"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a461b9020fa73904c977f5f61fb75e713">compute</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;wField, double phiTot=1.0)</td></tr>
-<tr class="memdesc:a461b9020fa73904c977f5f61fb75e713"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute monomer concentration field, q and phi and/or mu.  <br /></td></tr>
-<tr class="memitem:a332c314847875f94a78564c78eabdb51" id="r_a332c314847875f94a78564c78eabdb51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a332c314847875f94a78564c78eabdb51">cField</a> () const</td></tr>
-<tr class="memdesc:a332c314847875f94a78564c78eabdb51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the monomer concentration field for this solvent.  <br /></td></tr>
-<tr class="inherit_header pub_methods_classPscf_1_1SolventSpecies"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1SolventSpecies')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1SolventSpecies.html">Pscf::SolventSpecies</a></td></tr>
-<tr class="memitem:a0f13148b7d67caa9395e803ddd404dcb inherit pub_methods_classPscf_1_1SolventSpecies" id="r_a0f13148b7d67caa9395e803ddd404dcb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventSpecies.html#a0f13148b7d67caa9395e803ddd404dcb">SolventSpecies</a> ()</td></tr>
-<tr class="memdesc:a0f13148b7d67caa9395e803ddd404dcb inherit pub_methods_classPscf_1_1SolventSpecies"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="memitem:a7dca1c3c62d2a8b464eb482871dab0a6 inherit pub_methods_classPscf_1_1SolventSpecies" id="r_a7dca1c3c62d2a8b464eb482871dab0a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventSpecies.html#a7dca1c3c62d2a8b464eb482871dab0a6">~SolventSpecies</a> ()</td></tr>
-<tr class="memdesc:a7dca1c3c62d2a8b464eb482871dab0a6 inherit pub_methods_classPscf_1_1SolventSpecies"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="memitem:a8d35c19778a67f91e11652ee6cc1f0f9 inherit pub_methods_classPscf_1_1SolventSpecies" id="r_a8d35c19778a67f91e11652ee6cc1f0f9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventSpecies.html#a8d35c19778a67f91e11652ee6cc1f0f9">readParameters</a> (std::istream &amp;in)</td></tr>
-<tr class="memdesc:a8d35c19778a67f91e11652ee6cc1f0f9 inherit pub_methods_classPscf_1_1SolventSpecies"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameters and initialize.  <br /></td></tr>
-<tr class="memitem:a6190b8b657d6ad00f78069cfa7fd9609 inherit pub_methods_classPscf_1_1SolventSpecies" id="r_a6190b8b657d6ad00f78069cfa7fd9609"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventSpecies.html#a6190b8b657d6ad00f78069cfa7fd9609">setMonomerId</a> (int <a class="el" href="classPscf_1_1SolventSpecies.html#a918f4d13e5b4b748f758d384a536d4b2">monomerId</a>)</td></tr>
-<tr class="memdesc:a6190b8b657d6ad00f78069cfa7fd9609 inherit pub_methods_classPscf_1_1SolventSpecies"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the monomer id for this solvent.  <br /></td></tr>
-<tr class="memitem:a7ca8901fbf162af306b036a31ffeb1a2 inherit pub_methods_classPscf_1_1SolventSpecies" id="r_a7ca8901fbf162af306b036a31ffeb1a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventSpecies.html#a7ca8901fbf162af306b036a31ffeb1a2">setSize</a> (double <a class="el" href="classPscf_1_1SolventSpecies.html#aff4406300ec515e7a798ea561ced2e25">size</a>)</td></tr>
-<tr class="memdesc:a7ca8901fbf162af306b036a31ffeb1a2 inherit pub_methods_classPscf_1_1SolventSpecies"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the molecular volume of this solvent species.  <br /></td></tr>
-<tr class="memitem:a918f4d13e5b4b748f758d384a536d4b2 inherit pub_methods_classPscf_1_1SolventSpecies" id="r_a918f4d13e5b4b748f758d384a536d4b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventSpecies.html#a918f4d13e5b4b748f758d384a536d4b2">monomerId</a> () const</td></tr>
-<tr class="memdesc:a918f4d13e5b4b748f758d384a536d4b2 inherit pub_methods_classPscf_1_1SolventSpecies"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the monomer type id.  <br /></td></tr>
-<tr class="memitem:aff4406300ec515e7a798ea561ced2e25 inherit pub_methods_classPscf_1_1SolventSpecies" id="r_aff4406300ec515e7a798ea561ced2e25"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventSpecies.html#aff4406300ec515e7a798ea561ced2e25">size</a> () const</td></tr>
-<tr class="memdesc:aff4406300ec515e7a798ea561ced2e25 inherit pub_methods_classPscf_1_1SolventSpecies"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size (number of monomers) in this solvent.  <br /></td></tr>
-<tr class="inherit_header pub_methods_classPscf_1_1Species"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1Species')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1Species.html">Pscf::Species</a></td></tr>
-<tr class="memitem:af697d1f9ab74d40e20717a229fc2e5f3 inherit pub_methods_classPscf_1_1Species" id="r_af697d1f9ab74d40e20717a229fc2e5f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#af697d1f9ab74d40e20717a229fc2e5f3">Species</a> ()</td></tr>
-<tr class="memdesc:af697d1f9ab74d40e20717a229fc2e5f3 inherit pub_methods_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
-<tr class="memitem:a1956df7c7b319005c9f8b6cc274a7dc7 inherit pub_methods_classPscf_1_1Species" id="r_a1956df7c7b319005c9f8b6cc274a7dc7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#a1956df7c7b319005c9f8b6cc274a7dc7">phi</a> () const</td></tr>
-<tr class="memdesc:a1956df7c7b319005c9f8b6cc274a7dc7 inherit pub_methods_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the overall volume fraction for this species.  <br /></td></tr>
-<tr class="memitem:acaa3a7b3452b1100290920467bf99a57 inherit pub_methods_classPscf_1_1Species" id="r_acaa3a7b3452b1100290920467bf99a57"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#acaa3a7b3452b1100290920467bf99a57">mu</a> () const</td></tr>
-<tr class="memdesc:acaa3a7b3452b1100290920467bf99a57 inherit pub_methods_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the chemical potential for this species (units kT=1).  <br /></td></tr>
-<tr class="memitem:afb8506f32d739b0183c4e09612958663 inherit pub_methods_classPscf_1_1Species" id="r_afb8506f32d739b0183c4e09612958663"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#afb8506f32d739b0183c4e09612958663">q</a> () const</td></tr>
-<tr class="memdesc:afb8506f32d739b0183c4e09612958663 inherit pub_methods_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the molecular partition function for this species.  <br /></td></tr>
-<tr class="memitem:ade886c269cb418b071b3e6da63652989 inherit pub_methods_classPscf_1_1Species" id="r_ade886c269cb418b071b3e6da63652989"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Species.html#aff5905c62129641e3d6f6a719bf9ec29">Ensemble</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#ade886c269cb418b071b3e6da63652989">ensemble</a> () const</td></tr>
-<tr class="memdesc:ade886c269cb418b071b3e6da63652989 inherit pub_methods_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the statistical ensemble for this species (open or closed).  <br /></td></tr>
-<tr class="memitem:a57766fb96389d109617d196b91626b27 inherit pub_methods_classPscf_1_1Species" id="r_a57766fb96389d109617d196b91626b27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#a57766fb96389d109617d196b91626b27">setPhi</a> (double <a class="el" href="classPscf_1_1Species.html#a1956df7c7b319005c9f8b6cc274a7dc7">phi</a>)</td></tr>
-<tr class="memdesc:a57766fb96389d109617d196b91626b27 inherit pub_methods_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value of phi (volume fraction), if ensemble is closed.  <br /></td></tr>
-<tr class="memitem:ae452342f5c1b39ff49cb2925631ffd4d inherit pub_methods_classPscf_1_1Species" id="r_ae452342f5c1b39ff49cb2925631ffd4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#ae452342f5c1b39ff49cb2925631ffd4d">setMu</a> (double <a class="el" href="classPscf_1_1Species.html#acaa3a7b3452b1100290920467bf99a57">mu</a>)</td></tr>
-<tr class="memdesc:ae452342f5c1b39ff49cb2925631ffd4d inherit pub_methods_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value of mu (chemical potential), if ensemble is closed.  <br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classPscf_1_1Rp_1_1Solvent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classPscf_1_1Rp_1_1Solvent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="classPscf_1_1Rp_1_1Solvent.html">Pscf::Rp::Solvent&lt; D, Rpg::Types&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:a450dc7e8187ff43c8dd9085a13db789c inherit pub_types_classPscf_1_1Rp_1_1Solvent" id="r_a450dc7e8187ff43c8dd9085a13db789c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Solvent.html#a450dc7e8187ff43c8dd9085a13db789c">SolventSpeciesT</a></td></tr>
+<tr class="memdesc:a450dc7e8187ff43c8dd9085a13db789c inherit pub_types_classPscf_1_1Rp_1_1Solvent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for direct (parent) base class.  <br /></td></tr>
+<tr class="memitem:a952e4cade7886aff4e61901474828a30 inherit pub_types_classPscf_1_1Rp_1_1Solvent" id="r_a952e4cade7886aff4e61901474828a30"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Solvent.html#a952e4cade7886aff4e61901474828a30">SpeciesT</a></td></tr>
+<tr class="memdesc:a952e4cade7886aff4e61901474828a30 inherit pub_types_classPscf_1_1Rp_1_1Solvent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for indirect (grandparent) base class.  <br /></td></tr>
+<tr class="inherit_header pub_types_classUtil_1_1Serializable"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classUtil_1_1Serializable')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="classUtil_1_1Serializable.html">Util::Serializable</a></td></tr>
+<tr class="memitem:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable" id="r_aca43a1eea5ec5f13189a57892a7a6d04"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileOArchive.html">BinaryFileOArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#aca43a1eea5ec5f13189a57892a7a6d04">OArchive</a></td></tr>
+<tr class="memdesc:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of output archive used by save method.  <br /></td></tr>
+<tr class="memitem:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable" id="r_ac6bcbf9bac926cada5a398804410e891"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileIArchive.html">BinaryFileIArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">IArchive</a></td></tr>
+<tr class="memdesc:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of input archive used by load method.  <br /></td></tr>
+<tr class="inherit_header pub_methods_classPscf_1_1Rp_1_1Solvent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1Rp_1_1Solvent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1Rp_1_1Solvent.html">Pscf::Rp::Solvent&lt; D, Rpg::Types&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:aecf21a2916bb174f2046b88410925563 inherit pub_methods_classPscf_1_1Rp_1_1Solvent" id="r_aecf21a2916bb174f2046b88410925563"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Solvent.html#aecf21a2916bb174f2046b88410925563">associate</a> (<a class="el" href="classPscf_1_1Mesh.html">Mesh</a>&lt; D &gt; const &amp;mesh)</td></tr>
+<tr class="memdesc:aecf21a2916bb174f2046b88410925563 inherit pub_methods_classPscf_1_1Rp_1_1Solvent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an association with a <a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh</a>.  <br /></td></tr>
+<tr class="memitem:aeeed68a8377d498af5527fbe50853847 inherit pub_methods_classPscf_1_1Rp_1_1Solvent" id="r_aeeed68a8377d498af5527fbe50853847"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Solvent.html#aeeed68a8377d498af5527fbe50853847">allocate</a> ()</td></tr>
+<tr class="memdesc:aeeed68a8377d498af5527fbe50853847 inherit pub_methods_classPscf_1_1Rp_1_1Solvent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory for a concentration field.  <br /></td></tr>
+<tr class="memitem:a8556821cd1fe7fb3f713703152ae8b50 inherit pub_methods_classPscf_1_1Rp_1_1Solvent" id="r_a8556821cd1fe7fb3f713703152ae8b50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Solvent.html#a8556821cd1fe7fb3f713703152ae8b50">compute</a> (typename <a class="el" href="classPscf_1_1Rpg_1_1Types.html">Rpg::Types</a>&lt; D &gt;::RField const &amp;wField, double phiTot=1.0)</td></tr>
+<tr class="memdesc:a8556821cd1fe7fb3f713703152ae8b50 inherit pub_methods_classPscf_1_1Rp_1_1Solvent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute concentration field, q, and phi or mu.  <br /></td></tr>
+<tr class="memitem:a8e6f83b18fce8518797fe21ba08b654e inherit pub_methods_classPscf_1_1Rp_1_1Solvent" id="r_a8e6f83b18fce8518797fe21ba08b654e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Rpg_1_1Types.html">Rpg::Types</a>&lt; D &gt;::RField const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Solvent.html#a8e6f83b18fce8518797fe21ba08b654e">cField</a> () const</td></tr>
+<tr class="memdesc:a8e6f83b18fce8518797fe21ba08b654e inherit pub_methods_classPscf_1_1Rp_1_1Solvent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the monomer concentration field for this solvent.  <br /></td></tr>
+<tr class="inherit_header pub_methods_classPscf_1_1SolventSpecies"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1SolventSpecies')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1SolventSpecies.html">Pscf::SolventSpecies&lt; double &gt;</a></td></tr>
+<tr class="memitem:a0f8b8b8653d2dcc4b640760c41412da5 inherit pub_methods_classPscf_1_1SolventSpecies" id="r_a0f8b8b8653d2dcc4b640760c41412da5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventSpecies.html#a0f8b8b8653d2dcc4b640760c41412da5">SolventSpecies</a> ()</td></tr>
+<tr class="memdesc:a0f8b8b8653d2dcc4b640760c41412da5 inherit pub_methods_classPscf_1_1SolventSpecies"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:abb8dec36a12845a76c1a81e68ed7bcaf inherit pub_methods_classPscf_1_1SolventSpecies" id="r_abb8dec36a12845a76c1a81e68ed7bcaf"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventSpecies.html#abb8dec36a12845a76c1a81e68ed7bcaf">~SolventSpecies</a> ()=default</td></tr>
+<tr class="memdesc:abb8dec36a12845a76c1a81e68ed7bcaf inherit pub_methods_classPscf_1_1SolventSpecies"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:af1779a52ce848d14a125ed20a7b83b33 inherit pub_methods_classPscf_1_1SolventSpecies" id="r_af1779a52ce848d14a125ed20a7b83b33"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventSpecies.html#af1779a52ce848d14a125ed20a7b83b33">readParameters</a> (std::istream &amp;in)</td></tr>
+<tr class="memdesc:af1779a52ce848d14a125ed20a7b83b33 inherit pub_methods_classPscf_1_1SolventSpecies"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameters and initialize.  <br /></td></tr>
+<tr class="memitem:aa38cd44e35bcd6c027c53e5fa14ea7c7 inherit pub_methods_classPscf_1_1SolventSpecies" id="r_aa38cd44e35bcd6c027c53e5fa14ea7c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventSpecies.html#aa38cd44e35bcd6c027c53e5fa14ea7c7">setMonomerId</a> (int <a class="el" href="classPscf_1_1SolventSpecies.html#a9dee4d5783e224035f7bc30a6642b13f">monomerId</a>)</td></tr>
+<tr class="memdesc:aa38cd44e35bcd6c027c53e5fa14ea7c7 inherit pub_methods_classPscf_1_1SolventSpecies"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the monomer id for this solvent.  <br /></td></tr>
+<tr class="memitem:af7d48e2ebfce54685deac5c69073d9ed inherit pub_methods_classPscf_1_1SolventSpecies" id="r_af7d48e2ebfce54685deac5c69073d9ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventSpecies.html#af7d48e2ebfce54685deac5c69073d9ed">setSize</a> (double <a class="el" href="classPscf_1_1SolventSpecies.html#a39d3c6a5f77e5303523fd789fc619310">size</a>)</td></tr>
+<tr class="memdesc:af7d48e2ebfce54685deac5c69073d9ed inherit pub_methods_classPscf_1_1SolventSpecies"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the molecular volume of this solvent species.  <br /></td></tr>
+<tr class="memitem:a9dee4d5783e224035f7bc30a6642b13f inherit pub_methods_classPscf_1_1SolventSpecies" id="r_a9dee4d5783e224035f7bc30a6642b13f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventSpecies.html#a9dee4d5783e224035f7bc30a6642b13f">monomerId</a> () const</td></tr>
+<tr class="memdesc:a9dee4d5783e224035f7bc30a6642b13f inherit pub_methods_classPscf_1_1SolventSpecies"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the monomer type id.  <br /></td></tr>
+<tr class="memitem:a39d3c6a5f77e5303523fd789fc619310 inherit pub_methods_classPscf_1_1SolventSpecies" id="r_a39d3c6a5f77e5303523fd789fc619310"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1SolventSpecies.html#a39d3c6a5f77e5303523fd789fc619310">size</a> () const</td></tr>
+<tr class="memdesc:a39d3c6a5f77e5303523fd789fc619310 inherit pub_methods_classPscf_1_1SolventSpecies"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size (number of monomers) in this solvent.  <br /></td></tr>
+<tr class="inherit_header pub_methods_classPscf_1_1Species"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1Species')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1Species.html">Pscf::Species&lt; double &gt;</a></td></tr>
+<tr class="memitem:a76f5a9f466a53516f9213897522874a1 inherit pub_methods_classPscf_1_1Species" id="r_a76f5a9f466a53516f9213897522874a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#a76f5a9f466a53516f9213897522874a1">Species</a> ()</td></tr>
+<tr class="memdesc:a76f5a9f466a53516f9213897522874a1 inherit pub_methods_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:a24138683ad7132af2da8f5a24ab1f469 inherit pub_methods_classPscf_1_1Species" id="r_a24138683ad7132af2da8f5a24ab1f469"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#a24138683ad7132af2da8f5a24ab1f469">~Species</a> ()=default</td></tr>
+<tr class="memdesc:a24138683ad7132af2da8f5a24ab1f469 inherit pub_methods_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:af5b975e9cde24c5319a271ffa4b02bed inherit pub_methods_classPscf_1_1Species" id="r_af5b975e9cde24c5319a271ffa4b02bed"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#af5b975e9cde24c5319a271ffa4b02bed">phi</a> () const</td></tr>
+<tr class="memdesc:af5b975e9cde24c5319a271ffa4b02bed inherit pub_methods_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the overall volume fraction for this species.  <br /></td></tr>
+<tr class="memitem:a97c2aee4db99f6a144cbcee5607cee49 inherit pub_methods_classPscf_1_1Species" id="r_a97c2aee4db99f6a144cbcee5607cee49"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#a97c2aee4db99f6a144cbcee5607cee49">mu</a> () const</td></tr>
+<tr class="memdesc:a97c2aee4db99f6a144cbcee5607cee49 inherit pub_methods_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the chemical potential for this species (units kT=1).  <br /></td></tr>
+<tr class="memitem:a2dacbf316d1bb4327de64e7966870d01 inherit pub_methods_classPscf_1_1Species" id="r_a2dacbf316d1bb4327de64e7966870d01"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#a2dacbf316d1bb4327de64e7966870d01">q</a> () const</td></tr>
+<tr class="memdesc:a2dacbf316d1bb4327de64e7966870d01 inherit pub_methods_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the molecular partition function for this species.  <br /></td></tr>
+<tr class="memitem:a6846ed365cd75eb34b0d3cb52d22046e inherit pub_methods_classPscf_1_1Species" id="r_a6846ed365cd75eb34b0d3cb52d22046e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Pscf__Chem__Module.html#ga354a065ea1151c94d4222867f85dd7f5">Ensemble</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#a6846ed365cd75eb34b0d3cb52d22046e">ensemble</a> () const</td></tr>
+<tr class="memdesc:a6846ed365cd75eb34b0d3cb52d22046e inherit pub_methods_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the statistical ensemble for this species (open or closed).  <br /></td></tr>
+<tr class="memitem:afbed3097b4a72a6015dd9b5b13ac990a inherit pub_methods_classPscf_1_1Species" id="r_afbed3097b4a72a6015dd9b5b13ac990a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#afbed3097b4a72a6015dd9b5b13ac990a">setPhi</a> (double <a class="el" href="classPscf_1_1Species.html#af5b975e9cde24c5319a271ffa4b02bed">phi</a>)</td></tr>
+<tr class="memdesc:afbed3097b4a72a6015dd9b5b13ac990a inherit pub_methods_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value of phi (volume fraction), if ensemble is closed.  <br /></td></tr>
+<tr class="memitem:a3b68ed37c755f32153d9afb94c774b0b inherit pub_methods_classPscf_1_1Species" id="r_a3b68ed37c755f32153d9afb94c774b0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#a3b68ed37c755f32153d9afb94c774b0b">setMu</a> (double <a class="el" href="classPscf_1_1Species.html#a97c2aee4db99f6a144cbcee5607cee49">mu</a>)</td></tr>
+<tr class="memdesc:a3b68ed37c755f32153d9afb94c774b0b inherit pub_methods_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value of mu (chemical potential), if ensemble is closed.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classUtil_1_1ParamComposite"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classUtil_1_1ParamComposite')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComposite.html">Util::ParamComposite</a></td></tr>
 <tr class="memitem:a873eea7d2dbc19cde816d1bef602496c inherit pub_methods_classUtil_1_1ParamComposite" id="r_a873eea7d2dbc19cde816d1bef602496c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a873eea7d2dbc19cde816d1bef602496c">ParamComposite</a> ()</td></tr>
 <tr class="memdesc:a873eea7d2dbc19cde816d1bef602496c inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
@@ -295,17 +304,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a01b0ce2abff83abd2bff03d7ef757bdb inherit pub_methods_classUtil_1_1MpiFileIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
 <tr class="memitem:af2787f522a78daada06b2241ce368128 inherit pub_methods_classUtil_1_1MpiFileIo" id="r_af2787f522a78daada06b2241ce368128"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1MpiFileIo.html#af2787f522a78daada06b2241ce368128">isIoProcessor</a> () const</td></tr>
 <tr class="memdesc:af2787f522a78daada06b2241ce368128 inherit pub_methods_classUtil_1_1MpiFileIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can this processor do file I/O ?  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classPscf_1_1Species"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classPscf_1_1Species')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="classPscf_1_1Species.html">Pscf::Species</a></td></tr>
-<tr class="memitem:aff5905c62129641e3d6f6a719bf9ec29 inherit pub_types_classPscf_1_1Species" id="r_aff5905c62129641e3d6f6a719bf9ec29"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#aff5905c62129641e3d6f6a719bf9ec29">Ensemble</a> </td></tr>
-<tr class="memdesc:aff5905c62129641e3d6f6a719bf9ec29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Statistical ensemble for number of molecules.  <a href="classPscf_1_1Species.html#aff5905c62129641e3d6f6a719bf9ec29">More...</a><br /></td></tr>
-<tr class="inherit_header pub_types_classUtil_1_1Serializable"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classUtil_1_1Serializable')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="classUtil_1_1Serializable.html">Util::Serializable</a></td></tr>
-<tr class="memitem:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable" id="r_aca43a1eea5ec5f13189a57892a7a6d04"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileOArchive.html">BinaryFileOArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#aca43a1eea5ec5f13189a57892a7a6d04">OArchive</a></td></tr>
-<tr class="memdesc:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of output archive used by save method.  <br /></td></tr>
-<tr class="memitem:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable" id="r_ac6bcbf9bac926cada5a398804410e891"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileIArchive.html">BinaryFileIArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#ac6bcbf9bac926cada5a398804410e891">IArchive</a></td></tr>
-<tr class="memdesc:ac6bcbf9bac926cada5a398804410e891 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of input archive used by load method.  <br /></td></tr>
 <tr class="inherit_header pub_static_methods_classUtil_1_1ParamComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classUtil_1_1ParamComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Static Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComponent.html">Util::ParamComponent</a></td></tr>
 <tr class="memitem:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_a5350c0432130f7feba8392f5b3a75cb4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a5350c0432130f7feba8392f5b3a75cb4">initStatic</a> ()</td></tr>
 <tr class="memdesc:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize static echo member to false.  <br /></td></tr>
@@ -313,9 +311,14 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable echoing for all subclasses of <a class="el" href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file.">ParamComponent</a>.  <br /></td></tr>
 <tr class="memitem:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_ac5808de278115409092e94f9c72362c2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a> ()</td></tr>
 <tr class="memdesc:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get echo parameter.  <br /></td></tr>
-<tr class="inherit_header pro_methods_classPscf_1_1Species"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classPscf_1_1Species')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classPscf_1_1Species.html">Pscf::Species</a></td></tr>
-<tr class="memitem:a5a2496c97ef452469f485eacdba6384a inherit pro_methods_classPscf_1_1Species" id="r_a5a2496c97ef452469f485eacdba6384a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#a5a2496c97ef452469f485eacdba6384a">setQ</a> (double <a class="el" href="classPscf_1_1Species.html#afb8506f32d739b0183c4e09612958663">q</a>)</td></tr>
-<tr class="memdesc:a5a2496c97ef452469f485eacdba6384a inherit pro_methods_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set q and compute phi or mu (depending on the ensemble).  <br /></td></tr>
+<tr class="inherit_header pro_methods_classPscf_1_1Rp_1_1Solvent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classPscf_1_1Rp_1_1Solvent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classPscf_1_1Rp_1_1Solvent.html">Pscf::Rp::Solvent&lt; D, Rpg::Types&lt; D &gt; &gt;</a></td></tr>
+<tr class="memitem:addb8942c843fe866024086f1c8688fd5 inherit pro_methods_classPscf_1_1Rp_1_1Solvent" id="r_addb8942c843fe866024086f1c8688fd5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Solvent.html#addb8942c843fe866024086f1c8688fd5">Solvent</a> ()</td></tr>
+<tr class="memdesc:addb8942c843fe866024086f1c8688fd5 inherit pro_methods_classPscf_1_1Rp_1_1Solvent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:ad3246893b05198ffd81623457e3cef3e inherit pro_methods_classPscf_1_1Rp_1_1Solvent" id="r_ad3246893b05198ffd81623457e3cef3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Rp_1_1Solvent.html#ad3246893b05198ffd81623457e3cef3e">~Solvent</a> ()</td></tr>
+<tr class="memdesc:ad3246893b05198ffd81623457e3cef3e inherit pro_methods_classPscf_1_1Rp_1_1Solvent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="inherit_header pro_methods_classPscf_1_1Species"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classPscf_1_1Species')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classPscf_1_1Species.html">Pscf::Species&lt; double &gt;</a></td></tr>
+<tr class="memitem:aae50ad652b4367a14715ff72acb6a5c3 inherit pro_methods_classPscf_1_1Species" id="r_aae50ad652b4367a14715ff72acb6a5c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1Species.html#aae50ad652b4367a14715ff72acb6a5c3">setQ</a> (double <a class="el" href="classPscf_1_1Species.html#a2dacbf316d1bb4327de64e7966870d01">q</a>)</td></tr>
+<tr class="memdesc:aae50ad652b4367a14715ff72acb6a5c3 inherit pro_methods_classPscf_1_1Species"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set q and compute phi or mu (depending on the ensemble).  <br /></td></tr>
 <tr class="memitem:a30752567fd7b8b93e5c8476bbe8592c5" id="r_a30752567fd7b8b93e5c8476bbe8592c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">setClassName</a> (const char *<a class="el" href="classUtil_1_1ParamComposite.html#a93e3a9fd3bd01dcc3c606a7bf3112c0e">className</a>)</td></tr>
 <tr class="memdesc:a30752567fd7b8b93e5c8476bbe8592c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set class name string.  <br /></td></tr>
 <tr class="memitem:a30bf69df610c5d1bfa2d2b852425b206" id="r_a30bf69df610c5d1bfa2d2b852425b206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a30bf69df610c5d1bfa2d2b852425b206">setIsRequired</a> (bool <a class="el" href="classUtil_1_1ParamComposite.html#aff9ce840ca72f2c6cf3e24335a7a580c">isRequired</a>)</td></tr>
@@ -356,206 +359,12 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
 class Pscf::Rpg::Solvent&lt; D &gt;</div><p>Solver and descriptor for a solvent species. </p>
-<p><a class="el" href="user_param_mixture_page.html#user_param_solvent_sec">Manual Page</a> </p>
+<p>Specializations of this template with D=1, 2, and 3 are derived from corresponding specializations of the base class template <a class="el" href="classPscf_1_1Rp_1_1Solvent.html" title="Solver and descriptor for a solvent species.">Rp::Solvent</a>, and inherit their public interface and their entire implementation from this base class.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classPscf_1_1Rp_1_1Solvent.html" title="Solver and descriptor for a solvent species.">Rp::Solvent</a> <a class="el" href="user_param_mixture_page.html#user_param_solvent_sec">Manual Page</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Solvent_8h_source.html#l00033">33</a> of file <a class="el" href="rpg_2solvers_2Solvent_8h_source.html">rpg/solvers/Solvent.h</a>.</p>
-</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0d33922922a7540baa2ca21902c77b01" name="a0d33922922a7540baa2ca21902c77b01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d33922922a7540baa2ca21902c77b01">&#9670;&#160;</a></span>Solvent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1Solvent.html">Pscf::Rpg::Solvent</a>&lt; D &gt;::Solvent </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructor. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Solvent_8tpp_source.html#l00022">22</a> of file <a class="el" href="rpg_2solvers_2Solvent_8tpp_source.html">rpg/solvers/Solvent.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>.</p>
-
-</div>
-</div>
-<a id="ad48fdc4efb7e453c1a7a66f55bcb4107" name="ad48fdc4efb7e453c1a7a66f55bcb4107"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad48fdc4efb7e453c1a7a66f55bcb4107">&#9670;&#160;</a></span>~Solvent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Rpg_1_1Solvent.html">Pscf::Rpg::Solvent</a>&lt; D &gt;::~<a class="el" href="classPscf_1_1Rpg_1_1Solvent.html">Solvent</a> </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Destructor. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Solvent_8tpp_source.html#l00030">30</a> of file <a class="el" href="rpg_2solvers_2Solvent_8tpp_source.html">rpg/solvers/Solvent.tpp</a>.</p>
-
-</div>
-</div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="aea1d4763268c13cf90c3217173d3f854" name="aea1d4763268c13cf90c3217173d3f854"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea1d4763268c13cf90c3217173d3f854">&#9670;&#160;</a></span>associate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1Solvent.html">Pscf::Rpg::Solvent</a>&lt; D &gt;::associate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1Mesh.html">Mesh</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Associate this object with a mesh. </p>
-<p>Must be called before <a class="el" href="#ab6a515303f6036d041bc8e9a7e7a4295" title="Allocate internal data containers.">allocate()</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mesh</td><td><a class="el" href="classPscf_1_1Mesh.html" title="Description of a regular grid of points in a periodic domain.">Mesh&lt;D&gt;</a> object - spatial discretization mesh </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Solvent_8h_source.html#l00101">101</a> of file <a class="el" href="rpg_2solvers_2Solvent_8h_source.html">rpg/solvers/Solvent.h</a>.</p>
-
-<p class="reference">References <a class="el" href="Mesh_8h_source.html#l00229">Pscf::Mesh&lt; D &gt;::size()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-</div>
-</div>
-<a id="ab6a515303f6036d041bc8e9a7e7a4295" name="ab6a515303f6036d041bc8e9a7e7a4295"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6a515303f6036d041bc8e9a7e7a4295">&#9670;&#160;</a></span>allocate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1Solvent.html">Pscf::Rpg::Solvent</a>&lt; D &gt;::allocate </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Allocate internal data containers. </p>
-<p><a class="el" href="#aea1d4763268c13cf90c3217173d3f854" title="Associate this object with a mesh.">associate()</a> must have been called first. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Solvent_8h_source.html#l00111">111</a> of file <a class="el" href="rpg_2solvers_2Solvent_8h_source.html">rpg/solvers/Solvent.h</a>.</p>
-
-<p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-</div>
-</div>
-<a id="a461b9020fa73904c977f5f61fb75e713" name="a461b9020fa73904c977f5f61fb75e713"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a461b9020fa73904c977f5f61fb75e713">&#9670;&#160;</a></span>compute()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Rpg_1_1Solvent.html">Pscf::Rpg::Solvent</a>&lt; D &gt;::compute </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>wField</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>phiTot</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Compute monomer concentration field, q and phi and/or mu. </p>
-<p>Computes monomer concentration field cField, partition function q, and either the solvent volume fraction phi or solvent chemical potential mu, depending on ensemble. The function takes the chemical potential field wField for the relevant monomer type as its only input argument.</p>
-<p>The optional parameter phiTot is only relevant to problems such as thin films in which the material is excluded from part of the unit cell by imposing an inhomogeneous constraint on the sum of monomer concentrations (i.e., a "mask").</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">wField</td><td>monomer chemical potential field of relevant type. </td></tr>
-    <tr><td class="paramname">phiTot</td><td>volume fraction of unit cell occupied by material </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Solvent_8tpp_source.html#l00037">37</a> of file <a class="el" href="rpg_2solvers_2Solvent_8tpp_source.html">rpg/solvers/Solvent.tpp</a>.</p>
-
-<p class="reference">References <a class="el" href="VecOpMisc_8cu_source.html#l00393">Pscf::Prdc::Cuda::VecOp::expVc()</a>, <a class="el" href="VecOp_8cpp_source.html#l00267">Pscf::Prdc::Cpu::VecOp::mulEqS()</a>, <a class="el" href="Species_8h_source.html#l00149">Pscf::Species::phi()</a>, <a class="el" href="Species_8cpp_source.html#l00063">Pscf::Species::setQ()</a>, <a class="el" href="SolventSpecies_8h_source.html#l00113">Pscf::SolventSpecies::size()</a>, and <a class="el" href="Reduce_8cpp_source.html#l00080">Pscf::Prdc::Cpu::Reduce::sum()</a>.</p>
-
-</div>
-</div>
-<a id="a332c314847875f94a78564c78eabdb51" name="a332c314847875f94a78564c78eabdb51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a332c314847875f94a78564c78eabdb51">&#9670;&#160;</a></span>cField()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const  &amp; <a class="el" href="classPscf_1_1Rpg_1_1Solvent.html">Pscf::Rpg::Solvent</a>&lt; D &gt;::cField </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the monomer concentration field for this solvent. </p>
-
-<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Solvent_8h_source.html#l00121">121</a> of file <a class="el" href="rpg_2solvers_2Solvent_8h_source.html">rpg/solvers/Solvent.h</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="rpg_2solvers_2Mixture_8h_source.html">rpg/solvers/Mixture.h</a></li>
+<p class="definition">Definition at line <a class="el" href="rpg_2solvers_2Solvent_8h_source.html#l00031">31</a> of file <a class="el" href="rpg_2solvers_2Solvent_8h_source.html">rpg/solvers/Solvent.h</a>.</p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="rpg_2solvers_2Solvent_8h_source.html">rpg/solvers/Solvent.h</a></li>
-<li><a class="el" href="rpg_2solvers_2Solvent_8tpp_source.html">rpg/solvers/Solvent.tpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

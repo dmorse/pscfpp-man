@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -86,7 +86,7 @@ $(function() {
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>         u[0] = v[0];</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      <a class="code hl_define" href="global_8h.html#aeb3d01af710489fd0112efe3054345b4">UTIL_ASSERT</a>(<a class="code hl_function" href="group__Pscf__Math__Complex__Module.html#ga8fa76e79d3cb3087f2c5bec28c088f4c">abs</a>(u[0]) &lt;= d[0]/2);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      <a class="code hl_define" href="global_8h.html#aeb3d01af710489fd0112efe3054345b4">UTIL_ASSERT</a>(<a class="code hl_function" href="group__Pscf__Cpu__Complex__Module.html#gafb752cd41c16f89edad1a1847f7ef882">abs</a>(u[0]) &lt;= d[0]/2);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <span class="keywordflow">return</span> u;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>   }</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
@@ -165,8 +165,8 @@ $(function() {
 <div class="ttc" id="aclassPscf_1_1Prdc_1_1UnitCell_html"><div class="ttname"><a href="classPscf_1_1Prdc_1_1UnitCell.html">Pscf::Prdc::UnitCell</a></div><div class="ttdoc">Base template for UnitCell&lt;D&gt; classes, D=1, 2 or 3.</div><div class="ttdef"><b>Definition</b> <a href="UnitCell_8h_source.html#l00055">UnitCell.h:56</a></div></div>
 <div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="global_8h.html">global.h</a></div><div class="ttdoc">File containing preprocessor macros for error handling.</div></div>
 <div class="ttc" id="aglobal_8h_html_aeb3d01af710489fd0112efe3054345b4"><div class="ttname"><a href="global_8h.html#aeb3d01af710489fd0112efe3054345b4">UTIL_ASSERT</a></div><div class="ttdeci">#define UTIL_ASSERT(condition)</div><div class="ttdoc">Assertion macro suitable for debugging serial or parallel code.</div><div class="ttdef"><b>Definition</b> <a href="global_8h_source.html#l00075">global.h:75</a></div></div>
-<div class="ttc" id="agroup__Pscf__Math__Complex__Module_html_ga8fa76e79d3cb3087f2c5bec28c088f4c"><div class="ttname"><a href="group__Pscf__Math__Complex__Module.html#ga8fa76e79d3cb3087f2c5bec28c088f4c">Pscf::abs</a></div><div class="ttdeci">RT abs(CT const &amp;a)</div><div class="ttdoc">Return absolute magnitude of a complex number.</div></div>
-<div class="ttc" id="anamespacePscf_1_1Prdc_html"><div class="ttname"><a href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div><div class="ttdoc">Periodic fields and crystallography.</div><div class="ttdef"><b>Definition</b> <a href="CField_8cpp_source.html#l00011">CField.cpp:11</a></div></div>
+<div class="ttc" id="agroup__Pscf__Cpu__Complex__Module_html_gafb752cd41c16f89edad1a1847f7ef882"><div class="ttname"><a href="group__Pscf__Cpu__Complex__Module.html#gafb752cd41c16f89edad1a1847f7ef882">Pscf::abs</a></div><div class="ttdeci">double abs(fftw_complex const &amp;a)</div><div class="ttdoc">Return absolute magnitude of an fftw_complex number.</div><div class="ttdef"><b>Definition</b> <a href="cpu_2complex_8h_source.html#l00062">cpu/complex.h:62</a></div></div>
+<div class="ttc" id="anamespacePscf_1_1Prdc_html"><div class="ttname"><a href="namespacePscf_1_1Prdc.html">Pscf::Prdc</a></div><div class="ttdoc">Periodic fields and crystallography.</div><div class="ttdef"><b>Definition</b> <a href="complex_8cpp_source.html#l00011">complex.cpp:11</a></div></div>
 <div class="ttc" id="anamespacePscf_html"><div class="ttname"><a href="namespacePscf.html">Pscf</a></div><div class="ttdoc">PSCF package top-level namespace.</div><div class="ttdef"><b>Definition</b> <a href="param__domain_8dox_source.html#l00001">param_domain.dox:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

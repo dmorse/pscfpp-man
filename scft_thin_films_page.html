@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -74,16 +74,16 @@ $(function() {
 Functional form of the imposed fields</h1>
 <p>The thin film is modeled as a polymer melt confined between two parallel walls with a fixed distance between them. The mask that is used to enforce this confinement prohibits the polymers from occupying the space inside of these walls. Additionally, chemical interactions between the walls and the monomer species are modeled using external fields that are imposed at the polymer/wall interface.</p>
 <p>The mask field \( m({\bf r}) \) that we use to impose a thin film geometry is defined to have a sigmoidal shape that rapidly rises from zero to one at the polymer/wall interfaces, with the walls located on opposite sides of the unit cell and the polymer located in the middle. Formally, we write the mask as    </p><p class="formulaDsp">
-\[   m(z) = 1 - 0.5*\left( 1+ {\rm tanh} 
+\[   m(z) = 1 - 0.5*\left( 1+ {\rm tanh}
    \left( 4*\frac{.5(T-L)+|z-\frac{L}{2}|}{t} \right) \right)
 \]
 </p>
 <p> Here, we have written the mask density as a function of <em>z</em>, which we define as the position along the direction normal to the walls. <em>L</em> is the length of the unit cell in this direction, and <em>T</em> is the total thickness of the wall in this direction (i.e., the "excluded" thickness where \( m({\bf r}) &lt; 0.5 \)). <em>t</em> defines the rate at which \( m(z) \) decays from 1 to 0 when passing from the film region into the wall. If <em>t</em> is small, the calculation will require high spatial resolution to converge, which can be computationally prohibitive, but a large value of <em>t</em> may not be an accurate representation of a rigid film boundary. A common compromise in literature is to choose \( 0.15R_g \le t \le 0.5R_g \), where \( R_g \) is the radius of gyration of the polymer (for a one-component system).</p>
 <p>The chemical potential fields are defined by a Flory&ndash;Huggins-like <em>&chi;</em> interaction parameter between each monomer species and the walls, where the wall volume fraction is defined as \( 1-m({\bf r}) \). We define a "top" and a "bottom" wall which can have different interaction parameters, where the "bottom" wall is that which contains the unit-cell origin. Formally, this is written as        </p><p class="formulaDsp">
 \[   h_{\alpha}(z) = \left\{
-   \begin{array}{ll} \chi_{\alpha,{\rm bot}} (1-m({\bf r})) &amp; 
+   \begin{array}{ll} \chi_{\alpha,{\rm bot}} (1-m({\bf r})) &amp;
    {\rm for} \: z &lt; L/2 \\
-   \chi_{\alpha,{\rm top}} (1-m({\bf r})) &amp; 
+   \chi_{\alpha,{\rm top}} (1-m({\bf r})) &amp;
    {\rm for} \: z \ge L/2 \end{array}
    \right.
 \]
@@ -91,8 +91,7 @@ Functional form of the imposed fields</h1>
 <p> where \( \chi_{\alpha,{\rm bot}} \) and \( \chi_{\alpha,{\rm top}} \) are the interaction parameters between species \(\alpha\) and the bottom wall and top wall, respectively.</p>
 <h2 class="doxsection"><a class="anchor" id="scft_films_unitcell_sec"></a>
 Constraint on the unit-cell shape</h2>
-<p>Although it is not strictly necessary, we impose an additional constraint on the unit cells used for thin film calculations in order to simplify the construction and interpretation of the mask: one lattice basis vector must be oriented normal to the walls, and all other lattice basis vectors must be parallel to the walls. It does not matter which basis vector is normal to the walls, as long as all basis vectors satisfy this requirement. For example, if one were to use a hexagonal unit cell in 3D, the walls must be parallel to the <b>a</b> and <b>b</b> lattice vectors, because this is the only orientation of the walls for which the third lattice vector is normal to the walls. <br  />
-</p>
+<p>Although it is not strictly necessary, we impose an additional constraint on the unit cells used for thin film calculations in order to simplify the construction and interpretation of the mask: one lattice basis vector must be oriented normal to the walls, and all other lattice basis vectors must be parallel to the walls. It does not matter which basis vector is normal to the walls, as long as all basis vectors satisfy this requirement. For example, if one were to use a hexagonal unit cell in 3D, the walls must be parallel to the <b>a</b> and <b>b</b> lattice vectors, because this is the only orientation of the walls for which the third lattice vector is normal to the walls.</p>
 <p>The space group used to describe the system must accurately describe the symmetry of the mask and the external fields within a unit cell that satisfies the constraints described here. Determining the proper space group can be difficult in some cases, so an entire section is dedicated to this topic <a class="el" href="#scft_films_space_groups_sec">below.</a></p>
 <p>By default, the length of the lattice vector that is normal to the walls is not allowed to vary, so the film thickness will be held constant throughout the calculation. The lattice parameters that define the size of the unit cell in the plane of the film are allowed to vary just as they would in a bulk SCFT calculation, if the user chooses a flexible unit cell. PSCF will automatically hold the film thickness parameter constant, so the user does not have to set it to rigid manually.</p>
 <p>PSCF does, however, provide a feature that allows the film thickness to be optimized within a single SCFT calculation. This feature is an implementation of the "dynamic mask method" developed by Magruder and Dorfman (2025). The method is explained in more detail <a class="el" href="#scft_films_dynamic_sec">below.</a></p>
@@ -130,7 +129,7 @@ Parameter file input</h1>
 <div class="line">      isFlexible   1</div>
 <div class="line">   }</div>
 <div class="line">   LinearSweep{</div>
-<div class="line">      ns            20  </div>
+<div class="line">      ns            20</div>
 <div class="line">      baseFileName  out/</div>
 <div class="line">      reuseState    0</div>
 <div class="line">      nParameter    3</div>
@@ -138,7 +137,7 @@ Parameter file input</h1>
 <div class="line">                    cell_param  1   +1.0</div>
 <div class="line">                    chi_bottom  1  -10.0</div>
 <div class="line">                    chi_top     1  -10.0</div>
-<div class="line">      ]   </div>
+<div class="line">      ]</div>
 <div class="line">   }</div>
 <div class="line">}</div>
 </div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="scft_films_domain_sec"></a>

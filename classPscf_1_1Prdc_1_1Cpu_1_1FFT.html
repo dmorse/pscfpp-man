@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -58,7 +58,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classPscf_1_1Prdc_1_1Cpu_1_1FFT-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Pscf::Prdc::Cpu::FFT&lt; D &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Prdc__Module.html">Pscf::Prdc - Periodic Systems</a> &raquo; <a class="el" href="group__Prdc__Cpu__Module.html">Fields and FFT (CPU)</a></div></div></div>
+  <div class="headertitle"><div class="title">Pscf::Prdc::Cpu::FFT&lt; D &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Prdc__Module.html">Pscf::Prdc - Periodic Systems</a> &raquo; <a class="el" href="group__Prdc__Cpu__Module.html">Fields (CPU)</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -69,43 +69,43 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3138fa5af60c7f5c7e6f1052045974ec" id="r_a3138fa5af60c7f5c7e6f1052045974ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3138fa5af60c7f5c7e6f1052045974ec">FFT</a> ()</td></tr>
-<tr class="memdesc:a3138fa5af60c7f5c7e6f1052045974ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
-<tr class="memitem:af9372ab523a47f8c9386cfcd66b2fc27" id="r_af9372ab523a47f8c9386cfcd66b2fc27"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9372ab523a47f8c9386cfcd66b2fc27">~FFT</a> ()</td></tr>
-<tr class="memdesc:af9372ab523a47f8c9386cfcd66b2fc27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:ad812d47c291862522a2d7e0950fa82f8" id="r_ad812d47c291862522a2d7e0950fa82f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad812d47c291862522a2d7e0950fa82f8">setup</a> (<a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;<a class="el" href="#adbcb66fb872aae0f217cf805351f5e86">meshDimensions</a>)</td></tr>
-<tr class="memdesc:ad812d47c291862522a2d7e0950fa82f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup grid dimensions, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html" title="Fourier transform wrapper.">FFT</a> plans and work space.  <br /></td></tr>
-<tr class="memitem:a494c22039d285372e9b6a1fee59f578a" id="r_a494c22039d285372e9b6a1fee59f578a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a494c22039d285372e9b6a1fee59f578a">forwardTransform</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;in, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RFieldDft.html">RFieldDft</a>&lt; D &gt; &amp;out) const</td></tr>
-<tr class="memdesc:a494c22039d285372e9b6a1fee59f578a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute forward (real-to-complex) discrete Fourier transform (DFT).  <br /></td></tr>
-<tr class="memitem:a2d3ff5d9be5fe137ca245353a216560c" id="r_a2d3ff5d9be5fe137ca245353a216560c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d3ff5d9be5fe137ca245353a216560c">inverseTransformUnsafe</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RFieldDft.html">RFieldDft</a>&lt; D &gt; &amp;in, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp;out) const</td></tr>
-<tr class="memdesc:a2d3ff5d9be5fe137ca245353a216560c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute inverse (complex-to-real) DFT, overwriting the input.  <br /></td></tr>
-<tr class="memitem:afbb41cfcd14ccc02ef29402e72d22673" id="r_afbb41cfcd14ccc02ef29402e72d22673"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbb41cfcd14ccc02ef29402e72d22673">inverseTransformSafe</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RFieldDft.html">RFieldDft</a>&lt; D &gt; const &amp;in, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp;out) const</td></tr>
-<tr class="memdesc:afbb41cfcd14ccc02ef29402e72d22673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute inverse (complex-to-real) DFT without overwriting input.  <br /></td></tr>
-<tr class="memitem:a9ba6d74ca90e8610679b7f6a2709ea91" id="r_a9ba6d74ca90e8610679b7f6a2709ea91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ba6d74ca90e8610679b7f6a2709ea91">forwardTransform</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1CField.html">CField</a>&lt; D &gt; const &amp;in, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1CField.html">CField</a>&lt; D &gt; &amp;out) const</td></tr>
-<tr class="memdesc:a9ba6d74ca90e8610679b7f6a2709ea91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute forward (complex-to-complex) discrete Fourier transform.  <br /></td></tr>
-<tr class="memitem:aa3761c4f005d2017c418afb24167b2f0" id="r_aa3761c4f005d2017c418afb24167b2f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3761c4f005d2017c418afb24167b2f0">inverseTransform</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1CField.html">CField</a>&lt; D &gt; const &amp;in, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1CField.html">CField</a>&lt; D &gt; &amp;out) const</td></tr>
-<tr class="memdesc:aa3761c4f005d2017c418afb24167b2f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute complex-to-complex inverse Fourier transform.  <br /></td></tr>
-<tr class="memitem:adbcb66fb872aae0f217cf805351f5e86" id="r_adbcb66fb872aae0f217cf805351f5e86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbcb66fb872aae0f217cf805351f5e86">meshDimensions</a> () const</td></tr>
-<tr class="memdesc:adbcb66fb872aae0f217cf805351f5e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the dimensions of the grid for which this was setup.  <br /></td></tr>
-<tr class="memitem:aade1ec1a76821877dfa2c3f9d0de2873" id="r_aade1ec1a76821877dfa2c3f9d0de2873"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aade1ec1a76821877dfa2c3f9d0de2873">isSetup</a> () const</td></tr>
-<tr class="memdesc:aade1ec1a76821877dfa2c3f9d0de2873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has this <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html" title="Fourier transform wrapper.">FFT</a> object been setup?  <br /></td></tr>
+<tr class="memitem:a08cdc63b6b629a0a1386861886da8c98" id="r_a08cdc63b6b629a0a1386861886da8c98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08cdc63b6b629a0a1386861886da8c98">FFT</a> ()</td></tr>
+<tr class="memdesc:a08cdc63b6b629a0a1386861886da8c98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
+<tr class="memitem:ac9c3e68259d403b1b6d23eb7391bdac5" id="r_ac9c3e68259d403b1b6d23eb7391bdac5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9c3e68259d403b1b6d23eb7391bdac5">~FFT</a> ()</td></tr>
+<tr class="memdesc:ac9c3e68259d403b1b6d23eb7391bdac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:a97769928eadbbb2a1f7193b182a69758" id="r_a97769928eadbbb2a1f7193b182a69758"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97769928eadbbb2a1f7193b182a69758">setup</a> (<a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;<a class="el" href="#a48d7468b756e8f5c27ab5f1c9c78673f">meshDimensions</a>)</td></tr>
+<tr class="memdesc:a97769928eadbbb2a1f7193b182a69758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup grid dimensions, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html" title="Fourier transform wrapper.">FFT</a> plans and work space.  <br /></td></tr>
+<tr class="memitem:a5e628b2ec6142ee09bf4932c850dbbe2" id="r_a5e628b2ec6142ee09bf4932c850dbbe2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e628b2ec6142ee09bf4932c850dbbe2">forwardTransform</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;in, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RFieldDft.html">RFieldDft</a>&lt; D &gt; &amp;out) const</td></tr>
+<tr class="memdesc:a5e628b2ec6142ee09bf4932c850dbbe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute forward (real-to-complex) discrete Fourier transform (DFT).  <br /></td></tr>
+<tr class="memitem:aff5258a3c48d24f46b49bc5e3ddacde5" id="r_aff5258a3c48d24f46b49bc5e3ddacde5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff5258a3c48d24f46b49bc5e3ddacde5">inverseTransformUnsafe</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RFieldDft.html">RFieldDft</a>&lt; D &gt; &amp;in, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp;out) const</td></tr>
+<tr class="memdesc:aff5258a3c48d24f46b49bc5e3ddacde5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute inverse (complex-to-real) DFT, overwriting the input.  <br /></td></tr>
+<tr class="memitem:ab4bd7dcdc08e329cd016322c3b7caccf" id="r_ab4bd7dcdc08e329cd016322c3b7caccf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4bd7dcdc08e329cd016322c3b7caccf">inverseTransformSafe</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RFieldDft.html">RFieldDft</a>&lt; D &gt; const &amp;in, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; &amp;out) const</td></tr>
+<tr class="memdesc:ab4bd7dcdc08e329cd016322c3b7caccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute inverse (complex-to-real) DFT without overwriting input.  <br /></td></tr>
+<tr class="memitem:aec68e26bd4197dc4d90cfe7f06e31ffa" id="r_aec68e26bd4197dc4d90cfe7f06e31ffa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec68e26bd4197dc4d90cfe7f06e31ffa">forwardTransform</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1CField.html">CField</a>&lt; D &gt; const &amp;in, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1CField.html">CField</a>&lt; D &gt; &amp;out) const</td></tr>
+<tr class="memdesc:aec68e26bd4197dc4d90cfe7f06e31ffa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute forward (complex-to-complex) discrete Fourier transform.  <br /></td></tr>
+<tr class="memitem:aba6db592d92059c617c272dcfc6885ff" id="r_aba6db592d92059c617c272dcfc6885ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba6db592d92059c617c272dcfc6885ff">inverseTransform</a> (<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1CField.html">CField</a>&lt; D &gt; const &amp;in, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1CField.html">CField</a>&lt; D &gt; &amp;out) const</td></tr>
+<tr class="memdesc:aba6db592d92059c617c272dcfc6885ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute complex-to-complex inverse Fourier transform.  <br /></td></tr>
+<tr class="memitem:a48d7468b756e8f5c27ab5f1c9c78673f" id="r_a48d7468b756e8f5c27ab5f1c9c78673f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48d7468b756e8f5c27ab5f1c9c78673f">meshDimensions</a> () const</td></tr>
+<tr class="memdesc:a48d7468b756e8f5c27ab5f1c9c78673f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the dimensions of the grid for which this was setup.  <br /></td></tr>
+<tr class="memitem:a01ff2f4141c94322477b28600017a061" id="r_a01ff2f4141c94322477b28600017a061"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01ff2f4141c94322477b28600017a061">isSetup</a> () const</td></tr>
+<tr class="memdesc:a01ff2f4141c94322477b28600017a061"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has this <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html" title="Fourier transform wrapper.">FFT</a> object been setup?  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4e2b69bb68dc0475290774c8a9978f09" id="r_a4e2b69bb68dc0475290774c8a9978f09"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e2b69bb68dc0475290774c8a9978f09">computeKMesh</a> (<a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;rMeshDimensions, <a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; &amp;kMeshDimensions, int &amp;kSize)</td></tr>
-<tr class="memdesc:a4e2b69bb68dc0475290774c8a9978f09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute dimensions and size of k-space mesh for DFT of real data.  <br /></td></tr>
-<tr class="memitem:abf723e834473fb6fbe276cbc2f5663f6" id="r_abf723e834473fb6fbe276cbc2f5663f6"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf723e834473fb6fbe276cbc2f5663f6">hasImplicitInverse</a> (<a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;wavevector, <a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;<a class="el" href="#adbcb66fb872aae0f217cf805351f5e86">meshDimensions</a>)</td></tr>
-<tr class="memdesc:abf723e834473fb6fbe276cbc2f5663f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this wavevector have implicit inverse in DFT or real data?  <br /></td></tr>
+<tr class="memitem:a56f262676e8f79f60f07672396b8569a" id="r_a56f262676e8f79f60f07672396b8569a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56f262676e8f79f60f07672396b8569a">computeKMesh</a> (<a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;rMeshDimensions, <a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; &amp;kMeshDimensions, int &amp;kSize)</td></tr>
+<tr class="memdesc:a56f262676e8f79f60f07672396b8569a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute dimensions and size of k-space mesh for DFT of real data.  <br /></td></tr>
+<tr class="memitem:a3e7d3f1affd2dfc1db35217cb7e5eb9e" id="r_a3e7d3f1affd2dfc1db35217cb7e5eb9e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e7d3f1affd2dfc1db35217cb7e5eb9e">hasImplicitInverse</a> (<a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;wavevector, <a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;<a class="el" href="#a48d7468b756e8f5c27ab5f1c9c78673f">meshDimensions</a>)</td></tr>
+<tr class="memdesc:a3e7d3f1affd2dfc1db35217cb7e5eb9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this wavevector have implicit inverse in DFT or real data?  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int D&gt;<br />
 class Pscf::Prdc::Cpu::FFT&lt; D &gt;</div><p>Fourier transform wrapper. </p>
 <p>This class is a wrapper for plan creation and discrete Fourier transform (DFT) functions provided by the FFTW library, providing an interface to the field container classes <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField&lt;D&gt;</a>, <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html" title="Field of real double precision values on an FFT mesh.">RField&lt;Dft&gt;</a>, and <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1CField.html" title="Field of complex double precision values on an FFT mesh.">CField&lt;D&gt;</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8h_source.html#l00037">37</a> of file <a class="el" href="cpu_2FFT_8h_source.html">cpu/FFT.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8h_source.html#l00038">38</a> of file <a class="el" href="cpu_2FFT_8h_source.html">cpu/FFT.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a3138fa5af60c7f5c7e6f1052045974ec" name="a3138fa5af60c7f5c7e6f1052045974ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3138fa5af60c7f5c7e6f1052045974ec">&#9670;&#160;</a></span>FFT()</h2>
+<a id="a08cdc63b6b629a0a1386861886da8c98" name="a08cdc63b6b629a0a1386861886da8c98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08cdc63b6b629a0a1386861886da8c98">&#9670;&#160;</a></span>FFT()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -113,7 +113,7 @@ class Pscf::Prdc::Cpu::FFT&lt; D &gt;</div><p>Fourier transform wrapper. </p>
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cuda::FFT</a>&lt; D &gt;::FFT </td>
+          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cpu::FFT</a>&lt; D &gt;::FFT </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -123,12 +123,12 @@ template&lt;int D&gt; </div>
 
 <p>Default constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8tpp_source.html#l00057">57</a> of file <a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8tpp_source.html#l00059">59</a> of file <a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a>.</p>
 
 </div>
 </div>
-<a id="af9372ab523a47f8c9386cfcd66b2fc27" name="af9372ab523a47f8c9386cfcd66b2fc27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9372ab523a47f8c9386cfcd66b2fc27">&#9670;&#160;</a></span>~FFT()</h2>
+<a id="ac9c3e68259d403b1b6d23eb7391bdac5" name="ac9c3e68259d403b1b6d23eb7391bdac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9c3e68259d403b1b6d23eb7391bdac5">&#9670;&#160;</a></span>~FFT()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -139,7 +139,7 @@ template&lt;int D&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cuda::FFT</a>&lt; D &gt;::~<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">FFT</a> </td>
+          <td class="memname"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cpu::FFT</a>&lt; D &gt;::~<a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">FFT</a> </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -154,13 +154,13 @@ template&lt;int D&gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8tpp_source.html#l00072">72</a> of file <a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8tpp_source.html#l00074">74</a> of file <a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="ad812d47c291862522a2d7e0950fa82f8" name="ad812d47c291862522a2d7e0950fa82f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad812d47c291862522a2d7e0950fa82f8">&#9670;&#160;</a></span>setup()</h2>
+<a id="a97769928eadbbb2a1f7193b182a69758" name="a97769928eadbbb2a1f7193b182a69758"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97769928eadbbb2a1f7193b182a69758">&#9670;&#160;</a></span>setup()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,7 +168,7 @@ template&lt;int D&gt; </div>
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cuda::FFT</a>&lt; D &gt;::setup </td>
+          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cpu::FFT</a>&lt; D &gt;::setup </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>meshDimensions</em></span></td><td>)</td>
           <td></td>
@@ -184,14 +184,14 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8tpp_source.html#l00092">92</a> of file <a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8tpp_source.html#l00094">94</a> of file <a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="cpu_2CField_8tpp_source.html#l00090">Pscf::Prdc::Cpu::CField&lt; D &gt;::allocate()</a>, <a class="el" href="cpu_2RField_8tpp_source.html#l00094">Pscf::Prdc::Cpu::RField&lt; D &gt;::allocate()</a>, <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="cpu_2CField_8h_source.html#l00127">Pscf::Prdc::Cpu::CField&lt; D &gt;::meshDimensions()</a>, <a class="el" href="cpu_2FFT_8h_source.html#l00263">meshDimensions()</a>, <a class="el" href="cpu_2RField_8h_source.html#l00112">Pscf::Prdc::Cpu::RField&lt; D &gt;::meshDimensions()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="cpu_2CField_8tpp_source.html#l00091">Pscf::Prdc::Cpu::CField&lt; D &gt;::allocate()</a>, <a class="el" href="cpu_2RField_8tpp_source.html#l00095">Pscf::Prdc::Cpu::RField&lt; D &gt;::allocate()</a>, <a class="el" href="Array_8h_source.html#l00144">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="cpu_2CField_8h_source.html#l00119">Pscf::Prdc::Cpu::CField&lt; D &gt;::meshDimensions()</a>, <a class="el" href="cpu_2FFT_8h_source.html#l00264">meshDimensions()</a>, <a class="el" href="cpu_2RField_8h_source.html#l00111">Pscf::Prdc::Cpu::RField&lt; D &gt;::meshDimensions()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
-<a id="a494c22039d285372e9b6a1fee59f578a" name="a494c22039d285372e9b6a1fee59f578a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a494c22039d285372e9b6a1fee59f578a">&#9670;&#160;</a></span>forwardTransform() <span class="overload">[1/2]</span></h2>
+<a id="a5e628b2ec6142ee09bf4932c850dbbe2" name="a5e628b2ec6142ee09bf4932c850dbbe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e628b2ec6142ee09bf4932c850dbbe2">&#9670;&#160;</a></span>forwardTransform() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -199,7 +199,7 @@ template&lt;int D&gt; </div>
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cuda::FFT</a>&lt; D &gt;::forwardTransform </td>
+          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cpu::FFT</a>&lt; D &gt;::forwardTransform </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RField.html">RField</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
         </tr>
@@ -222,14 +222,14 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8tpp_source.html#l00151">151</a> of file <a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8tpp_source.html#l00153">153</a> of file <a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="cpu_2RField_8h_source.html#l00112">Pscf::Prdc::Cpu::RField&lt; D &gt;::meshDimensions()</a>, <a class="el" href="cpu_2RFieldDft_8h_source.html#l00164">Pscf::Prdc::Cpu::RFieldDft&lt; D &gt;::meshDimensions()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="Array_8h_source.html#l00144">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="cpu_2RField_8h_source.html#l00111">Pscf::Prdc::Cpu::RField&lt; D &gt;::meshDimensions()</a>, <a class="el" href="cpu_2RFieldDft_8h_source.html#l00130">Pscf::Prdc::Cpu::RFieldDft&lt; D &gt;::meshDimensions()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
-<a id="a2d3ff5d9be5fe137ca245353a216560c" name="a2d3ff5d9be5fe137ca245353a216560c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d3ff5d9be5fe137ca245353a216560c">&#9670;&#160;</a></span>inverseTransformUnsafe()</h2>
+<a id="aff5258a3c48d24f46b49bc5e3ddacde5" name="aff5258a3c48d24f46b49bc5e3ddacde5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff5258a3c48d24f46b49bc5e3ddacde5">&#9670;&#160;</a></span>inverseTransformUnsafe()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -237,7 +237,7 @@ template&lt;int D&gt; </div>
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cuda::FFT</a>&lt; D &gt;::inverseTransformUnsafe </td>
+          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cpu::FFT</a>&lt; D &gt;::inverseTransformUnsafe </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RFieldDft.html">RFieldDft</a>&lt; D &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
         </tr>
@@ -251,7 +251,7 @@ template&lt;int D&gt; </div>
 
 <p>Compute inverse (complex-to-real) DFT, overwriting the input. </p>
 <p>The resulting real array is the unaltered output of FFTW's inverse transform function.</p>
-<p>NOTE: The inverse transform generally overwrites and corrupts its input. This is the behavior of the complex-to-real (c2r) transform of the underlying FFTW library. See Sec. 2.3 of the FFTW 3 documentation at <a href="https://www.fftw.org/fftw3_doc">https://www.fftw.org/fftw3_doc</a>, One-Dimensional DFTs of <a class="el" href="namespacePscf_1_1Prdc_1_1Cpu.html#a34b8fe34ac005923d3ff229396d613ab" title="Real number type used in CPU code that uses FFTW.">Real</a> Data: "...the inverse transform 
+<p>NOTE: The inverse transform generally overwrites and corrupts its input. This is the behavior of the complex-to-real (c2r) transform of the underlying FFTW library. See Sec. 2.3 of the FFTW 3 documentation at <a href="https://www.fftw.org/fftw3_doc">https://www.fftw.org/fftw3_doc</a>, One-Dimensional DFTs of Real Data: "...the inverse transform 
 (complex to real) has the side-effect of overwriting its input 
 array, ..."</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -262,16 +262,16 @@ array, ..."</p>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8tpp_source.html#l00179">179</a> of file <a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8tpp_source.html#l00181">181</a> of file <a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="cpu_2RField_8h_source.html#l00112">Pscf::Prdc::Cpu::RField&lt; D &gt;::meshDimensions()</a>, <a class="el" href="cpu_2RFieldDft_8h_source.html#l00164">Pscf::Prdc::Cpu::RFieldDft&lt; D &gt;::meshDimensions()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="Array_8h_source.html#l00144">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="cpu_2RField_8h_source.html#l00111">Pscf::Prdc::Cpu::RField&lt; D &gt;::meshDimensions()</a>, <a class="el" href="cpu_2RFieldDft_8h_source.html#l00130">Pscf::Prdc::Cpu::RFieldDft&lt; D &gt;::meshDimensions()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="cpu_2FFT_8tpp_source.html#l00197">inverseTransformSafe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cpu_2FFT_8tpp_source.html#l00199">inverseTransformSafe()</a>.</p>
 
 </div>
 </div>
-<a id="afbb41cfcd14ccc02ef29402e72d22673" name="afbb41cfcd14ccc02ef29402e72d22673"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbb41cfcd14ccc02ef29402e72d22673">&#9670;&#160;</a></span>inverseTransformSafe()</h2>
+<a id="ab4bd7dcdc08e329cd016322c3b7caccf" name="ab4bd7dcdc08e329cd016322c3b7caccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4bd7dcdc08e329cd016322c3b7caccf">&#9670;&#160;</a></span>inverseTransformSafe()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,7 +279,7 @@ array, ..."</p>
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cuda::FFT</a>&lt; D &gt;::inverseTransformSafe </td>
+          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cpu::FFT</a>&lt; D &gt;::inverseTransformSafe </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1RFieldDft.html">RFieldDft</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
         </tr>
@@ -302,14 +302,14 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8tpp_source.html#l00197">197</a> of file <a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8tpp_source.html#l00199">199</a> of file <a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="cpu_2FFT_8tpp_source.html#l00179">inverseTransformUnsafe()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="Array_8h_source.html#l00144">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="cpu_2FFT_8tpp_source.html#l00181">inverseTransformUnsafe()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
-<a id="a9ba6d74ca90e8610679b7f6a2709ea91" name="a9ba6d74ca90e8610679b7f6a2709ea91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ba6d74ca90e8610679b7f6a2709ea91">&#9670;&#160;</a></span>forwardTransform() <span class="overload">[2/2]</span></h2>
+<a id="aec68e26bd4197dc4d90cfe7f06e31ffa" name="aec68e26bd4197dc4d90cfe7f06e31ffa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec68e26bd4197dc4d90cfe7f06e31ffa">&#9670;&#160;</a></span>forwardTransform() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -317,7 +317,7 @@ template&lt;int D&gt; </div>
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cuda::FFT</a>&lt; D &gt;::forwardTransform </td>
+          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cpu::FFT</a>&lt; D &gt;::forwardTransform </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1CField.html">CField</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
         </tr>
@@ -341,14 +341,14 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8tpp_source.html#l00214">214</a> of file <a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8tpp_source.html#l00216">216</a> of file <a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="cpu_2CField_8h_source.html#l00127">Pscf::Prdc::Cpu::CField&lt; D &gt;::meshDimensions()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="Array_8h_source.html#l00144">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="cpu_2CField_8h_source.html#l00119">Pscf::Prdc::Cpu::CField&lt; D &gt;::meshDimensions()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
-<a id="aa3761c4f005d2017c418afb24167b2f0" name="aa3761c4f005d2017c418afb24167b2f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3761c4f005d2017c418afb24167b2f0">&#9670;&#160;</a></span>inverseTransform()</h2>
+<a id="aba6db592d92059c617c272dcfc6885ff" name="aba6db592d92059c617c272dcfc6885ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba6db592d92059c617c272dcfc6885ff">&#9670;&#160;</a></span>inverseTransform()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -356,7 +356,7 @@ template&lt;int D&gt; </div>
 template&lt;int D&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cuda::FFT</a>&lt; D &gt;::inverseTransform </td>
+          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cpu::FFT</a>&lt; D &gt;::inverseTransform </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1CField.html">CField</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
         </tr>
@@ -379,14 +379,14 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8tpp_source.html#l00241">241</a> of file <a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8tpp_source.html#l00243">243</a> of file <a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Array_8h_source.html#l00159">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="cpu_2CField_8h_source.html#l00127">Pscf::Prdc::Cpu::CField&lt; D &gt;::meshDimensions()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="Array_8h_source.html#l00144">Util::Array&lt; Data &gt;::capacity()</a>, <a class="el" href="cpu_2CField_8h_source.html#l00119">Pscf::Prdc::Cpu::CField&lt; D &gt;::meshDimensions()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
-<a id="adbcb66fb872aae0f217cf805351f5e86" name="adbcb66fb872aae0f217cf805351f5e86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbcb66fb872aae0f217cf805351f5e86">&#9670;&#160;</a></span>meshDimensions()</h2>
+<a id="a48d7468b756e8f5c27ab5f1c9c78673f" name="a48d7468b756e8f5c27ab5f1c9c78673f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48d7468b756e8f5c27ab5f1c9c78673f">&#9670;&#160;</a></span>meshDimensions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -397,7 +397,7 @@ template&lt;int D&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const  &amp; <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cuda::FFT</a>&lt; D &gt;::meshDimensions </td>
+          <td class="memname"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const  &amp; <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cpu::FFT</a>&lt; D &gt;::meshDimensions </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -412,14 +412,14 @@ template&lt;int D&gt; </div>
 
 <p>Return the dimensions of the grid for which this was setup. </p>
 
-<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8h_source.html#l00263">263</a> of file <a class="el" href="cpu_2FFT_8h_source.html">cpu/FFT.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8h_source.html#l00264">264</a> of file <a class="el" href="cpu_2FFT_8h_source.html">cpu/FFT.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="cpu_2FFT_8h_source.html#l00271">hasImplicitInverse()</a>, and <a class="el" href="cpu_2FFT_8tpp_source.html#l00092">setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cpu_2FFT_8h_source.html#l00272">hasImplicitInverse()</a>, and <a class="el" href="cpu_2FFT_8tpp_source.html#l00094">setup()</a>.</p>
 
 </div>
 </div>
-<a id="aade1ec1a76821877dfa2c3f9d0de2873" name="aade1ec1a76821877dfa2c3f9d0de2873"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aade1ec1a76821877dfa2c3f9d0de2873">&#9670;&#160;</a></span>isSetup()</h2>
+<a id="a01ff2f4141c94322477b28600017a061" name="a01ff2f4141c94322477b28600017a061"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01ff2f4141c94322477b28600017a061">&#9670;&#160;</a></span>isSetup()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -430,7 +430,7 @@ template&lt;int D&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cuda::FFT</a>&lt; D &gt;::isSetup </td>
+          <td class="memname">bool <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cpu::FFT</a>&lt; D &gt;::isSetup </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -445,12 +445,12 @@ template&lt;int D&gt; </div>
 
 <p>Has this <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html" title="Fourier transform wrapper.">FFT</a> object been setup? </p>
 
-<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8h_source.html#l00256">256</a> of file <a class="el" href="cpu_2FFT_8h_source.html">cpu/FFT.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8h_source.html#l00257">257</a> of file <a class="el" href="cpu_2FFT_8h_source.html">cpu/FFT.h</a>.</p>
 
 </div>
 </div>
-<a id="a4e2b69bb68dc0475290774c8a9978f09" name="a4e2b69bb68dc0475290774c8a9978f09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e2b69bb68dc0475290774c8a9978f09">&#9670;&#160;</a></span>computeKMesh()</h2>
+<a id="a56f262676e8f79f60f07672396b8569a" name="a56f262676e8f79f60f07672396b8569a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56f262676e8f79f60f07672396b8569a">&#9670;&#160;</a></span>computeKMesh()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -461,7 +461,7 @@ template&lt;int D&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cuda::FFT</a>&lt; D &gt;::computeKMesh </td>
+          <td class="memname">void <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cpu::FFT</a>&lt; D &gt;::computeKMesh </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>rMeshDimensions</em></span>, </td>
         </tr>
@@ -494,14 +494,14 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8tpp_source.html#l00262">262</a> of file <a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8tpp_source.html#l00264">264</a> of file <a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="cpu_2RFieldDft_8tpp_source.html#l00100">Pscf::Prdc::Cpu::RFieldDft&lt; D &gt;::allocate()</a>, <a class="el" href="cpu_2WaveList_8tpp_source.html#l00050">Pscf::Prdc::Cpu::WaveList&lt; D &gt;::allocate()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00090">Pscf::Rpc::Block&lt; D &gt;::allocate()</a>, <a class="el" href="rpg_2solvers_2Block_8tpp_source.html#l00263">Pscf::Rpg::Block&lt; D &gt;::allocate()</a>, <a class="el" href="rpc_2fts_2compressor_2IntraCorrelation_8tpp_source.html#l00060">Pscf::Rpc::IntraCorrelation&lt; D &gt;::computeIntraCorrelations()</a>, <a class="el" href="rpg_2fts_2compressor_2IntraCorrelation_8tpp_source.html#l00055">Pscf::Rpg::IntraCorrelation&lt; D &gt;::computeIntraCorrelations()</a>, <a class="el" href="rpc_2fts_2analyzer_2BinaryStructureFactorGrid_8tpp_source.html#l00072">Pscf::Rpc::BinaryStructureFactorGrid&lt; D &gt;::setup()</a>, <a class="el" href="rpc_2fts_2analyzer_2FourthOrderParameter_8tpp_source.html#l00062">Pscf::Rpc::FourthOrderParameter&lt; D &gt;::setup()</a>, <a class="el" href="rpc_2fts_2analyzer_2MaxOrderParameter_8tpp_source.html#l00059">Pscf::Rpc::MaxOrderParameter&lt; D &gt;::setup()</a>, <a class="el" href="rpg_2fts_2analyzer_2BinaryStructureFactorGrid_8tpp_source.html#l00068">Pscf::Rpg::BinaryStructureFactorGrid&lt; D &gt;::setup()</a>, <a class="el" href="rpg_2fts_2analyzer_2FourthOrderParameter_8tpp_source.html#l00053">Pscf::Rpg::FourthOrderParameter&lt; D &gt;::setup()</a>, <a class="el" href="rpg_2fts_2compressor_2LrAmCompressor_8tpp_source.html#l00063">Pscf::Rpg::LrAmCompressor&lt; D &gt;::setup()</a>, <a class="el" href="rpg_2fts_2compressor_2LrCompressor_8tpp_source.html#l00073">Pscf::Rpg::LrCompressor&lt; D &gt;::setup()</a>, and <a class="el" href="rpg_2fts_2analyzer_2MaxOrderParameter_8tpp_source.html#l00052">Pscf::Rpg::MaxOrderParameter&lt; D &gt;::setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cpu_2RFieldDft_8tpp_source.html#l00100">Pscf::Prdc::Cpu::RFieldDft&lt; D &gt;::allocate()</a>, <a class="el" href="cpu_2WaveList_8tpp_source.html#l00054">Pscf::Prdc::Cpu::WaveList&lt; D &gt;::allocate()</a>, <a class="el" href="rpc_2solvers_2Block_8tpp_source.html#l00091">Pscf::Rpc::Block&lt; D &gt;::allocate()</a>, and <a class="el" href="sortWaves_8cpp_source.html#l00027">Pscf::Prdc::sortWaves()</a>.</p>
 
 </div>
 </div>
-<a id="abf723e834473fb6fbe276cbc2f5663f6" name="abf723e834473fb6fbe276cbc2f5663f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf723e834473fb6fbe276cbc2f5663f6">&#9670;&#160;</a></span>hasImplicitInverse()</h2>
+<a id="a3e7d3f1affd2dfc1db35217cb7e5eb9e" name="a3e7d3f1affd2dfc1db35217cb7e5eb9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e7d3f1affd2dfc1db35217cb7e5eb9e">&#9670;&#160;</a></span>hasImplicitInverse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -512,7 +512,7 @@ template&lt;int D&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cuda::FFT</a>&lt; D &gt;::hasImplicitInverse </td>
+          <td class="memname">bool <a class="el" href="classPscf_1_1Prdc_1_1Cpu_1_1FFT.html">Pscf::Prdc::Cpu::FFT</a>&lt; D &gt;::hasImplicitInverse </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classPscf_1_1IntVec.html">IntVec</a>&lt; D &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>wavevector</em></span>, </td>
         </tr>
@@ -540,19 +540,17 @@ template&lt;int D&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8h_source.html#l00271">271</a> of file <a class="el" href="cpu_2FFT_8h_source.html">cpu/FFT.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2FFT_8h_source.html#l00272">272</a> of file <a class="el" href="cpu_2FFT_8h_source.html">cpu/FFT.h</a>.</p>
 
-<p class="reference">References <a class="el" href="cpu_2FFT_8h_source.html#l00263">meshDimensions()</a>.</p>
+<p class="reference">References <a class="el" href="cpu_2FFT_8h_source.html#l00264">meshDimensions()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="cpu_2WaveList_8tpp_source.html#l00050">Pscf::Prdc::Cpu::WaveList&lt; D &gt;::allocate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cpu_2WaveList_8tpp_source.html#l00054">Pscf::Prdc::Cpu::WaveList&lt; D &gt;::allocate()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="cpu_2FFT_8h_source.html">cpu/FFT.h</a></li>
 <li><a class="el" href="cpu_2FFT_8tpp_source.html">cpu/FFT.tpp</a></li>
-<li><a class="el" href="cuda_2FFT_8h_source.html">cuda/FFT.h</a></li>
-<li><a class="el" href="cuda_2FFT_8tpp_source.html">cuda/FFT.tpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

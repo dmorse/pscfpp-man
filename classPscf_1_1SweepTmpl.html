@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -59,7 +59,7 @@ $(function() {
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classPscf_1_1SweepTmpl-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Pscf::SweepTmpl&lt; State &gt; Class Template Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span><div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Base__Module.html">Pscf Common</a> &raquo; <a class="el" href="group__Pscf__Sweep__Module.html">Sweep Template</a></div></div></div>
+  <div class="headertitle"><div class="title">Pscf::SweepTmpl&lt; State &gt; Class Template Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span><div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Base__Module.html">Pscf - Base Module</a> &raquo; <a class="el" href="group__Pscf__Sweep__Module.html">Sweep Template</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -73,17 +73,18 @@ Inheritance diagram for Pscf::SweepTmpl&lt; State &gt;:</div>
  <div class="center">
   <img src="classPscf_1_1SweepTmpl.png" usemap="#Pscf_3A_3ASweepTmpl_3C_20State_20_3E_map" alt=""/>
   <map id="Pscf_3A_3ASweepTmpl_3C_20State_20_3E_map" name="Pscf_3A_3ASweepTmpl_3C_20State_20_3E_map">
-<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="84,112,243,136"/>
-<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="84,56,243,80"/>
-<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="0,0,159,24"/>
-<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="169,0,328,24"/>
+<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="110,112,321,136"/>
+<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="110,56,321,80"/>
+<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="0,0,211,24"/>
+<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="221,0,432,24"/>
+<area href="classPscf_1_1Rp_1_1Sweep.html" alt="Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;" shape="rect" coords="110,224,321,248"/>
+<area href="classPscf_1_1Rpc_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space." alt="Pscf::Rpc::Sweep&lt; D &gt;" shape="rect" coords="0,280,211,304"/>
+<area href="classPscf_1_1Rpg_1_1Sweep.html" title="Solve a sequence of SCFT problems along a line in parameter space." alt="Pscf::Rpg::Sweep&lt; D &gt;" shape="rect" coords="221,280,432,304"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2352b4a01d6dcb3eb778c22381825d8b" id="r_a2352b4a01d6dcb3eb778c22381825d8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2352b4a01d6dcb3eb778c22381825d8b">~SweepTmpl</a> ()</td></tr>
-<tr class="memdesc:a2352b4a01d6dcb3eb778c22381825d8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 <tr class="memitem:adc647826663fc40402cbbf73168b222d" id="r_adc647826663fc40402cbbf73168b222d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc647826663fc40402cbbf73168b222d">readParameters</a> (std::istream &amp;in)</td></tr>
 <tr class="memdesc:adc647826663fc40402cbbf73168b222d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read ns and baseFileName parameters.  <br /></td></tr>
 <tr class="memitem:ab0bfbf0d804e157d997b65edddf58a3b" id="r_ab0bfbf0d804e157d997b65edddf58a3b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0bfbf0d804e157d997b65edddf58a3b">sweep</a> ()</td></tr>
@@ -270,6 +271,8 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a727193df8b1c170a39f6e1d68ba6ce62" id="r_a727193df8b1c170a39f6e1d68ba6ce62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a727193df8b1c170a39f6e1d68ba6ce62">SweepTmpl</a> (int <a class="el" href="#af76fb2e9fa7a94b06b98d5138ee19f65">historyCapacity</a>)</td></tr>
 <tr class="memdesc:a727193df8b1c170a39f6e1d68ba6ce62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor (protected).  <br /></td></tr>
+<tr class="memitem:a2352b4a01d6dcb3eb778c22381825d8b" id="r_a2352b4a01d6dcb3eb778c22381825d8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2352b4a01d6dcb3eb778c22381825d8b">~SweepTmpl</a> ()</td></tr>
+<tr class="memdesc:a2352b4a01d6dcb3eb778c22381825d8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 <tr class="memitem:a32eab66c048953bf5c3e4c8e2666708d" id="r_a32eab66c048953bf5c3e4c8e2666708d"><td class="memItemLeft" align="right" valign="top">State &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32eab66c048953bf5c3e4c8e2666708d">state</a> (int i)</td></tr>
 <tr class="memdesc:a32eab66c048953bf5c3e4c8e2666708d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get reference to a stored state, with i=0 being most recent.  <br /></td></tr>
 <tr class="memitem:aed59e7b51803bf2025b4a569274b8a9c" id="r_aed59e7b51803bf2025b4a569274b8a9c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed59e7b51803bf2025b4a569274b8a9c">s</a> (int i) const</td></tr>
@@ -369,29 +372,6 @@ class Pscf::SweepTmpl&lt; State &gt;</div><p>Solve a sequence of problems along 
 
 <p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00027">27</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a2352b4a01d6dcb3eb778c22381825d8b" name="a2352b4a01d6dcb3eb778c22381825d8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2352b4a01d6dcb3eb778c22381825d8b">&#9670;&#160;</a></span>~SweepTmpl()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class State&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1SweepTmpl.html">Pscf::SweepTmpl</a>&lt; State &gt;::~<a class="el" href="classPscf_1_1SweepTmpl.html">SweepTmpl</a> </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Destructor. </p>
-
-<p class="definition">Definition at line <a class="el" href="SweepTmpl_8tpp_source.html#l00035">35</a> of file <a class="el" href="SweepTmpl_8tpp_source.html">SweepTmpl.tpp</a>.</p>
-
-</div>
-</div>
 <a id="a727193df8b1c170a39f6e1d68ba6ce62" name="a727193df8b1c170a39f6e1d68ba6ce62"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a727193df8b1c170a39f6e1d68ba6ce62">&#9670;&#160;</a></span>SweepTmpl()</h2>
 
@@ -428,7 +408,38 @@ template&lt;class State&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="SweepTmpl_8tpp_source.html#l00022">22</a> of file <a class="el" href="SweepTmpl_8tpp_source.html">SweepTmpl.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00091">baseFileName_</a>, <a class="el" href="SweepTmpl_8h_source.html#l00188">historyCapacity()</a>, <a class="el" href="SweepTmpl_8h_source.html#l00088">ns_</a>, and <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>.</p>
+<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00297">baseFileName_</a>, <a class="el" href="SweepTmpl_8h_source.html#l00168">historyCapacity()</a>, <a class="el" href="SweepTmpl_8h_source.html#l00294">ns_</a>, and <a class="el" href="ParamComposite_8cpp_source.html#l00379">Util::ParamComposite::setClassName()</a>.</p>
+
+</div>
+</div>
+<a id="a2352b4a01d6dcb3eb778c22381825d8b" name="a2352b4a01d6dcb3eb778c22381825d8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2352b4a01d6dcb3eb778c22381825d8b">&#9670;&#160;</a></span>~SweepTmpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class State&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPscf_1_1SweepTmpl.html">Pscf::SweepTmpl</a>&lt; State &gt;::~<a class="el" href="classPscf_1_1SweepTmpl.html">SweepTmpl</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+<p class="definition">Definition at line <a class="el" href="SweepTmpl_8tpp_source.html#l00035">35</a> of file <a class="el" href="SweepTmpl_8tpp_source.html">SweepTmpl.tpp</a>.</p>
 
 </div>
 </div>
@@ -468,7 +479,7 @@ template&lt;class State&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classUtil_1_1ParamComposite.html#a172a3a656b5829c8d758424ad09a22a6">Util::ParamComposite</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPscf_1_1R1d_1_1LinearSweep.html#a312864e38b9920241f57a74e6171cbf9">Pscf::R1d::LinearSweep</a>, <a class="el" href="classPscf_1_1R1d_1_1Sweep.html#a780c8a845d156ee14794af2ab09b1623">Pscf::R1d::Sweep</a>, <a class="el" href="classPscf_1_1Rpc_1_1LinearSweep.html#a21119d4c1dd9f0d6e04a7a7c457f2738">Pscf::Rpc::LinearSweep&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html#a83b28b364d022da4ea8991c180043151">Pscf::Rpc::Sweep&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpg_1_1LinearSweep.html#ab8f70b3fe9afed00fbc752110167141f">Pscf::Rpg::LinearSweep&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html#a26ff716a80d44c0a2dbe2580a76e43b4">Pscf::Rpg::Sweep&lt; D &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classPscf_1_1R1d_1_1LinearSweep.html#a312864e38b9920241f57a74e6171cbf9">Pscf::R1d::LinearSweep</a>, <a class="el" href="classPscf_1_1R1d_1_1Sweep.html#a780c8a845d156ee14794af2ab09b1623">Pscf::R1d::Sweep</a>, <a class="el" href="classPscf_1_1Rp_1_1Sweep.html#addf2f7c69274671352f5d489fbfb8868">Pscf::Rp::Sweep&lt; D, T &gt;</a>, and <a class="el" href="classPscf_1_1Rp_1_1Sweep.html#addf2f7c69274671352f5d489fbfb8868">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="SweepTmpl_8tpp_source.html#l00042">42</a> of file <a class="el" href="SweepTmpl_8tpp_source.html">SweepTmpl.tpp</a>.</p>
 
@@ -504,6 +515,8 @@ template&lt;class State&gt; </div>
 <p>Iterate to solution. </p>
 
 <p class="definition">Definition at line <a class="el" href="SweepTmpl_8tpp_source.html#l00062">62</a> of file <a class="el" href="SweepTmpl_8tpp_source.html">SweepTmpl.tpp</a>.</p>
+
+<p class="reference">References <a class="el" href="Log_8cpp_source.html#l00059">Util::Log::file()</a>, <a class="el" href="SweepTmpl_8h_source.html#l00294">ns_</a>, and <a class="el" href="#a6bc4a04128d08bb23ab564bbc2a040dd">setup()</a>.</p>
 
 </div>
 </div>
@@ -546,7 +559,7 @@ template&lt;class State&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="SweepTmpl_8tpp_source.html#l00150">150</a> of file <a class="el" href="SweepTmpl_8tpp_source.html">SweepTmpl.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00105">parameterTypes_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00311">parameterTypes_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -578,7 +591,7 @@ template&lt;class State&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="SweepTmpl_8tpp_source.html#l00168">168</a> of file <a class="el" href="SweepTmpl_8tpp_source.html">SweepTmpl.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00105">parameterTypes_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00311">parameterTypes_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
@@ -610,7 +623,9 @@ template&lt;class State&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="SweepTmpl_8tpp_source.html#l00181">181</a> of file <a class="el" href="SweepTmpl_8tpp_source.html">SweepTmpl.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00105">parameterTypes_</a>, <a class="el" href="GArray_8h_source.html#l00455">Util::GArray&lt; Data &gt;::size()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00311">parameterTypes_</a>, and <a class="el" href="GArray_8h_source.html#l00450">Util::GArray&lt; Data &gt;::size()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Sweep_8tpp_source.html#l00071">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;::setSystem()</a>.</p>
 
 </div>
 </div>
@@ -648,11 +663,9 @@ template&lt;typename State&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00127">127</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00107">107</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="#a28f2f99d84d6ae3b738800e43b38b47c">checkAllocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Sweep_8tpp_source.html#l00349">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;::cleanup()</a>, and <a class="el" href="Sweep_8tpp_source.html#l00124">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;::setParameters()</a>.</p>
 
 </div>
 </div>
@@ -690,11 +703,9 @@ template&lt;typename State&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00142">142</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00122">122</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="#a068b815a618e98f8873a8ec87d952785">getSolution()</a>, and <a class="el" href="SweepTmpl_8tpp_source.html#l00252">setCoefficients()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Sweep_8tpp_source.html#l00246">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;::reset()</a>.</p>
 
 </div>
 </div>
@@ -733,9 +744,9 @@ template&lt;typename State&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00167">167</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00147">147</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Sweep_8tpp_source.html#l00349">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;::cleanup()</a>.</p>
 
 </div>
 </div>
@@ -766,7 +777,9 @@ template&lt;typename State&gt; </div>
 
 <p>Get the current number of stored previous states. </p>
 
-<p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00177">177</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00157">157</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Sweep_8tpp_source.html#l00349">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;::cleanup()</a>.</p>
 
 </div>
 </div>
@@ -798,9 +811,9 @@ template&lt;typename State&gt; </div>
 <p>Get the maximum number of stored previous states. </p>
 <p>The value of historyCapacity is a constant that is one greater than the maximum order of continuation (e.g., 3 for 2nd order continuation). The value is set by passing it as an argument to the constructor, and is constant after construction. </p>
 
-<p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00188">188</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00168">168</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SweepTmpl_8tpp_source.html#l00022">SweepTmpl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Sweep_8tpp_source.html#l00349">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;::cleanup()</a>, and <a class="el" href="SweepTmpl_8tpp_source.html#l00022">SweepTmpl()</a>.</p>
 
 </div>
 </div>
@@ -832,7 +845,7 @@ template&lt;typename State&gt; </div>
 <p>Get the number of converged solutions accepted thus far. </p>
 <p>This value is reset to zero by the initialize function, which must be called by the setup function, and is incremented by one by the accept function. </p>
 
-<p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00198">198</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00178">178</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
 
 </div>
 </div>
@@ -866,7 +879,9 @@ template&lt;class State&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="SweepTmpl_8tpp_source.html#l00199">199</a> of file <a class="el" href="SweepTmpl_8tpp_source.html">SweepTmpl.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="#a28f2f99d84d6ae3b738800e43b38b47c">checkAllocation()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Sweep_8tpp_source.html#l00134">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;::extrapolate()</a>.</p>
 
 </div>
 </div>
@@ -904,9 +919,9 @@ template&lt;typename State&gt; </div>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classPscf_1_1R1d_1_1Sweep.html#aad069f5111de6d17fa3c9dbe67ba11be">Pscf::R1d::Sweep</a>.</p>
+<p>Implemented in <a class="el" href="classPscf_1_1R1d_1_1Sweep.html#aad069f5111de6d17fa3c9dbe67ba11be">Pscf::R1d::Sweep</a>, and <a class="el" href="classPscf_1_1Rp_1_1Sweep.html#afeae02b06f11b3722c29b5e225fd7177">Pscf::Rp::Sweep&lt; D, T &gt;</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00127">state()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SweepTmpl_8tpp_source.html#l00199">initialize()</a>.</p>
 
 </div>
 </div>
@@ -938,7 +953,9 @@ template&lt;typename State&gt; </div>
 <p>Setup operation at the beginning of a sweep. </p>
 <p>The implementations of this function must call <a class="el" href="#a4f89c1b6dc890d1548eea4e1c9def426" title="Initialize variables that track history of solutions.">initialize()</a>. </p>
 
-<p>Implemented in <a class="el" href="classPscf_1_1R1d_1_1LinearSweep.html#ad62bd879554f801869a80bbecff8da1b">Pscf::R1d::LinearSweep</a>, <a class="el" href="classPscf_1_1R1d_1_1Sweep.html#acdbce6efc835bf88fd495264bce9c228">Pscf::R1d::Sweep</a>, <a class="el" href="classPscf_1_1Rpc_1_1LinearSweep.html#aaed76e1b299de32653eea3f8ebd742a0">Pscf::Rpc::LinearSweep&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html#ada5dbed3b87f0926dfa694785ed2b276">Pscf::Rpc::Sweep&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpg_1_1LinearSweep.html#a198a08334d849fd1e560f7423c3c1f33">Pscf::Rpg::LinearSweep&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html#a60916e25a0318501615c5c24cb68d47f">Pscf::Rpg::Sweep&lt; D &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classPscf_1_1R1d_1_1LinearSweep.html#ad62bd879554f801869a80bbecff8da1b">Pscf::R1d::LinearSweep</a>, <a class="el" href="classPscf_1_1R1d_1_1Sweep.html#acdbce6efc835bf88fd495264bce9c228">Pscf::R1d::Sweep</a>, <a class="el" href="classPscf_1_1Rp_1_1Sweep.html#a19ef55106eff1d45d3cffa66adf5ce92">Pscf::Rp::Sweep&lt; D, T &gt;</a>, and <a class="el" href="classPscf_1_1Rp_1_1Sweep.html#a19ef55106eff1d45d3cffa66adf5ce92">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SweepTmpl_8tpp_source.html#l00062">sweep()</a>.</p>
 
 </div>
 </div>
@@ -976,7 +993,7 @@ template&lt;typename State&gt; </div>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classPscf_1_1R1d_1_1LinearSweep.html#aae5288e8eee3c324830ce03f2c08c8b2">Pscf::R1d::LinearSweep</a>, <a class="el" href="classPscf_1_1R1d_1_1Sweep.html#aa61875f23dbfb62acb7861b29f9048e3">Pscf::R1d::Sweep</a>, <a class="el" href="classPscf_1_1Rpc_1_1LinearSweep.html#ad8d82e53a962cb4dfdeef91d5b3399dc">Pscf::Rpc::LinearSweep&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html#a90470b9cc8f924d507526bbc877fa11c">Pscf::Rpc::Sweep&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rpg_1_1LinearSweep.html#ab523fe606a89b9b3de4be8588cff4cee">Pscf::Rpg::LinearSweep&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html#aa4187e2b7fc4b87abc826dbf4a85936b">Pscf::Rpg::Sweep&lt; D &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classPscf_1_1R1d_1_1LinearSweep.html#aae5288e8eee3c324830ce03f2c08c8b2">Pscf::R1d::LinearSweep</a>, <a class="el" href="classPscf_1_1R1d_1_1Sweep.html#aa61875f23dbfb62acb7861b29f9048e3">Pscf::R1d::Sweep</a>, <a class="el" href="classPscf_1_1Rp_1_1Sweep.html#aa154992cdd6d5d9d711d36194bb749cc">Pscf::Rp::Sweep&lt; D, T &gt;</a>, and <a class="el" href="classPscf_1_1Rp_1_1Sweep.html#aa154992cdd6d5d9d711d36194bb749cc">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;</a>.</p>
 
 </div>
 </div>
@@ -1015,7 +1032,7 @@ template&lt;typename State&gt; </div>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classPscf_1_1R1d_1_1Sweep.html#a6932a173293bbda2fe26e9c2e8a2e260">Pscf::R1d::Sweep</a>, <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html#a07cddb6bc7b0794d297a921acbce6484">Pscf::Rpc::Sweep&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html#a49d3fcfb65a50c070453ad6c82809e11">Pscf::Rpg::Sweep&lt; D &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classPscf_1_1R1d_1_1Sweep.html#a6932a173293bbda2fe26e9c2e8a2e260">Pscf::R1d::Sweep</a>, <a class="el" href="classPscf_1_1Rp_1_1Sweep.html#af4c1b62b0c09a980f0bf36841c08fb92">Pscf::Rp::Sweep&lt; D, T &gt;</a>, and <a class="el" href="classPscf_1_1Rp_1_1Sweep.html#af4c1b62b0c09a980f0bf36841c08fb92">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;</a>.</p>
 
 </div>
 </div>
@@ -1055,7 +1072,9 @@ template&lt;class State&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="SweepTmpl_8tpp_source.html#l00252">252</a> of file <a class="el" href="SweepTmpl_8tpp_source.html">SweepTmpl.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00142">s()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Sweep_8tpp_source.html#l00349">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;::cleanup()</a>.</p>
 
 </div>
 </div>
@@ -1087,7 +1106,7 @@ template&lt;typename State&gt; </div>
 <p>Call current iterator to solve SCFT problem. </p>
 <p>Return 0 for sucessful solution, 1 on failure to converge. </p>
 
-<p>Implemented in <a class="el" href="classPscf_1_1R1d_1_1Sweep.html#afcdfcf319a115eecfc382ab177241484">Pscf::R1d::Sweep</a>, <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html#a067768a1c61e5ccd18ea71f8b802454b">Pscf::Rpc::Sweep&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html#a1a23b8376906206fdb134a208caef47a">Pscf::Rpg::Sweep&lt; D &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classPscf_1_1R1d_1_1Sweep.html#afcdfcf319a115eecfc382ab177241484">Pscf::R1d::Sweep</a>, <a class="el" href="classPscf_1_1Rp_1_1Sweep.html#a7b4786739c9095106ba71ea63c6fbed5">Pscf::Rp::Sweep&lt; D, T &gt;</a>, and <a class="el" href="classPscf_1_1Rp_1_1Sweep.html#a7b4786739c9095106ba71ea63c6fbed5">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;</a>.</p>
 
 </div>
 </div>
@@ -1119,7 +1138,7 @@ template&lt;typename State&gt; </div>
 <p>Reset system to previous solution after iterature failure. </p>
 <p>The implementation of this function should reset the system state to correspond to that stored in state(0). </p>
 
-<p>Implemented in <a class="el" href="classPscf_1_1R1d_1_1Sweep.html#aa4163e73209be1bc797bb19a23341b48">Pscf::R1d::Sweep</a>, <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html#a6293ecee580343d26d764642117eb0ba">Pscf::Rpc::Sweep&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html#a9646611381ee6fe4bf6d27a56329e189">Pscf::Rpg::Sweep&lt; D &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classPscf_1_1R1d_1_1Sweep.html#aa4163e73209be1bc797bb19a23341b48">Pscf::R1d::Sweep</a>, <a class="el" href="classPscf_1_1Rp_1_1Sweep.html#af964234d5ffd45c1b2fa6701be22c96d">Pscf::Rp::Sweep&lt; D, T &gt;</a>, and <a class="el" href="classPscf_1_1Rp_1_1Sweep.html#af964234d5ffd45c1b2fa6701be22c96d">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;</a>.</p>
 
 </div>
 </div>
@@ -1151,9 +1170,7 @@ template&lt;typename State&gt; </div>
 <p>Update state(0) and output data after successful solution. </p>
 <p>This function is called by accept(). The implementation of this function should copy the current system state into state(0), output any desired information about the current solution, and perform any other operations that should be performed immediately after acceptance of a converged solution. </p>
 
-<p>Implemented in <a class="el" href="classPscf_1_1R1d_1_1Sweep.html#a10fb444ef4922fa342f4809d281f3988">Pscf::R1d::Sweep</a>, <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html#a29c103178391360237d1c520382dab67">Pscf::Rpc::Sweep&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html#a0afa9ae79b260a3a1bb09ddba7380d88">Pscf::Rpg::Sweep&lt; D &gt;</a>.</p>
-
-<p class="reference">References <a class="el" href="SweepTmpl_8h_source.html#l00142">s()</a>.</p>
+<p>Implemented in <a class="el" href="classPscf_1_1R1d_1_1Sweep.html#a10fb444ef4922fa342f4809d281f3988">Pscf::R1d::Sweep</a>, <a class="el" href="classPscf_1_1Rp_1_1Sweep.html#a3c95a30c63e9f89a05f5e2dc27bab847">Pscf::Rp::Sweep&lt; D, T &gt;</a>, and <a class="el" href="classPscf_1_1Rp_1_1Sweep.html#a3c95a30c63e9f89a05f5e2dc27bab847">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;</a>.</p>
 
 </div>
 </div>
@@ -1185,7 +1202,7 @@ template&lt;class State&gt; </div>
 <p>Clean up operation at the end of a sweep. </p>
 <p>Empty default implementation. </p>
 
-<p>Reimplemented in <a class="el" href="classPscf_1_1R1d_1_1Sweep.html#acf3b82be841ca1318ab43aeb9fb13d6d">Pscf::R1d::Sweep</a>, <a class="el" href="classPscf_1_1Rpc_1_1Sweep.html#a67e4247ccb23566cac92d2363aa6f100">Pscf::Rpc::Sweep&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1Sweep.html#ae3b19c5f98370051109840e1ae398de9">Pscf::Rpg::Sweep&lt; D &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classPscf_1_1R1d_1_1Sweep.html#acf3b82be841ca1318ab43aeb9fb13d6d">Pscf::R1d::Sweep</a>, <a class="el" href="classPscf_1_1Rp_1_1Sweep.html#a6bdb22cbd692a08c9b4552d4f09d6bc2">Pscf::Rp::Sweep&lt; D, T &gt;</a>, and <a class="el" href="classPscf_1_1Rp_1_1Sweep.html#a6bdb22cbd692a08c9b4552d4f09d6bc2">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="SweepTmpl_8tpp_source.html#l00287">287</a> of file <a class="el" href="SweepTmpl_8tpp_source.html">SweepTmpl.tpp</a>.</p>
 
@@ -1216,9 +1233,9 @@ template&lt;typename State&gt; </div>
 
 <p>Number of steps. </p>
 
-<p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00088">88</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00294">294</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SweepTmpl_8tpp_source.html#l00022">SweepTmpl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SweepTmpl_8tpp_source.html#l00062">sweep()</a>, and <a class="el" href="SweepTmpl_8tpp_source.html#l00022">SweepTmpl()</a>.</p>
 
 </div>
 </div>
@@ -1246,9 +1263,9 @@ template&lt;typename State&gt; </div>
 
 <p>Base name for output files. </p>
 
-<p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00091">91</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00297">297</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SweepTmpl_8tpp_source.html#l00022">SweepTmpl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Sweep_8tpp_source.html#l00134">Pscf::Rp::Sweep&lt; D, Types&lt; D &gt; &gt;::extrapolate()</a>, and <a class="el" href="SweepTmpl_8tpp_source.html#l00022">SweepTmpl()</a>.</p>
 
 </div>
 </div>
@@ -1278,7 +1295,7 @@ template&lt;typename State&gt; </div>
 <p>This list allows other objects to add custom sweepable parameters to this object at run time, referred to as "specialized" parameter types. The method addParameterType is used to add to this list.</p>
 <p>As a general design principle, any object whose class is determined at run time using a <a class="el" href="classUtil_1_1Factory.html" title="Factory template.">Factory</a> object should use this list to add any sweepable parameters. In order to do this, the object must be a subclass of <a class="el" href="classPscf_1_1ParameterModifier.html" title="Base class allowing subclasses to define sweepable parameters.">ParameterModifier</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00105">105</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SweepTmpl_8h_source.html#l00311">311</a> of file <a class="el" href="SweepTmpl_8h_source.html">SweepTmpl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SweepTmpl_8tpp_source.html#l00168">addParameterType()</a>, <a class="el" href="SweepTmpl_8tpp_source.html#l00150">addParameterType()</a>, and <a class="el" href="SweepTmpl_8tpp_source.html#l00181">addParameterTypes()</a>.</p>
 

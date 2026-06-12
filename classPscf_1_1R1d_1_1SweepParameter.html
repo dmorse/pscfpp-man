@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -123,7 +123,7 @@ Friends</h2></td></tr>
 <div class="line">| phi_solvent | solvent volume fraction     | sId   |</div>
 <div class="line">| mu_solvent  | solvent chemical potential  | sId   |</div>
 <div class="ttc" id="aclassPscf_1_1R1d_1_1SweepParameter_html_add1c907678da20fe02ab2115b7d09555"><div class="ttname"><a href="#add1c907678da20fe02ab2115b7d09555">Pscf::R1d::SweepParameter::id</a></div><div class="ttdeci">int id(int i) const</div><div class="ttdoc">Get a id for a sub-object or element to which this is applied.</div><div class="ttdef"><b>Definition</b> <a href="r1d_2sweep_2SweepParameter_8h_source.html#l00195">r1d/sweep/SweepParameter.h:195</a></div></div>
-</div><!-- fragment --><p> The two indices for a Flory-Huggins chi parameter refer to indices in the chi matrix maintained by <a class="el" href="classPscf_1_1Interaction.html" title="Flory-Huggins excess free energy model.">Interaction</a>. Changes to element chi(i, j) automatically also update chi(j, i) for i !\ j, thus maintaining the symmetry of the matrix.</p>
+</div><!-- fragment --><p> The two indices for a Flory-Huggins chi parameter refer to indices in the chi matrix maintained by <a class="el" href="classPscf_1_1Interaction.html" title="Interaction model for complex Langevin FTS.">Interaction</a>. Changes to element chi(i, j) automatically also update chi(j, i) for i !\ j, thus maintaining the symmetry of the matrix.</p>
 <p>Each <a class="el" href="classPscf_1_1R1d_1_1SweepParameter.html" title="Class for storing data about an individual sweep parameter.">SweepParameter</a> also has a "change" value that gives the intended difference between the final and initial value of the parameter over the course of a sweep, corresponding to a change sweep parameter s over the range [0,1]. The initial value of each parameter is obtained from a query of the state of the parent system at the beginning of a sweep, and thus does not need to be supplied as part of the text format for a <a class="el" href="classPscf_1_1R1d_1_1SweepParameter.html" title="Class for storing data about an individual sweep parameter.">SweepParameter</a>.</p>
 <p>A SweepParameter&lt;D&gt; object is initialized by reading the parameter type, index or index and change value from a parameter file as a a single line. An overloaded &gt;&gt; operator is defined that allows a SweepParameter&lt;D&gt; object named "parameter" to be read from an istream named "in" using the syntax "in &gt;&gt; parameter".</p>
 <p>The text format for a parameter of a type that requires a single index id(0) is:</p>
@@ -151,11 +151,11 @@ Friends</h2></td></tr>
 
 <p>Default constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="SweepParameter_8cpp_source.html#l00030">30</a> of file <a class="el" href="SweepParameter_8cpp_source.html">SweepParameter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00030">30</a> of file <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html">r1d/sweep/SweepParameter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepParameter_8cpp_source.html#l00030">SweepParameter()</a>.</p>
+<p class="reference">References <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00030">SweepParameter()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SweepParameter_8cpp_source.html#l00260">operator&lt;&lt;</a>, <a class="el" href="SweepParameter_8cpp_source.html#l00239">operator&gt;&gt;</a>, <a class="el" href="SweepParameter_8cpp_source.html#l00030">SweepParameter()</a>, and <a class="el" href="SweepParameter_8cpp_source.html#l00044">SweepParameter()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00260">operator&lt;&lt;</a>, <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00239">operator&gt;&gt;</a>, <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00030">SweepParameter()</a>, and <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00044">SweepParameter()</a>.</p>
 
 </div>
 </div>
@@ -182,9 +182,9 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SweepParameter_8cpp_source.html#l00044">44</a> of file <a class="el" href="SweepParameter_8cpp_source.html">SweepParameter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00044">44</a> of file <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html">r1d/sweep/SweepParameter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepParameter_8cpp_source.html#l00030">SweepParameter()</a>.</p>
+<p class="reference">References <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00030">SweepParameter()</a>.</p>
 
 </div>
 </div>
@@ -278,11 +278,11 @@ Friends</h2></td></tr>
 <p>Get the <a class="el" href="structPscf_1_1ParameterType.html" title="Declaration of a specialized sweep parameter type.">ParameterType</a> object for a specialized sweep parameter. </p>
 <p>An error will result if this <a class="el" href="classPscf_1_1R1d_1_1SweepParameter.html" title="Class for storing data about an individual sweep parameter.">SweepParameter</a> is not specialized and this function is called. </p>
 
-<p class="definition">Definition at line <a class="el" href="SweepParameter_8cpp_source.html#l00127">127</a> of file <a class="el" href="SweepParameter_8cpp_source.html">SweepParameter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00127">127</a> of file <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html">r1d/sweep/SweepParameter.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="r1d_2sweep_2SweepParameter_8h_source.html#l00157">isSpecialized()</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SweepParameter_8cpp_source.html#l00152">type()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00152">type()</a>.</p>
 
 </div>
 </div>
@@ -342,7 +342,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="r1d_2sweep_2SweepParameter_8h_source.html#l00157">157</a> of file <a class="el" href="r1d_2sweep_2SweepParameter_8h_source.html">r1d/sweep/SweepParameter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SweepParameter_8cpp_source.html#l00127">parameterType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00127">parameterType()</a>.</p>
 
 </div>
 </div>
@@ -363,7 +363,7 @@ Friends</h2></td></tr>
 
 <p>Store the pre-sweep value of the corresponding parameter. </p>
 
-<p class="definition">Definition at line <a class="el" href="SweepParameter_8cpp_source.html#l00136">136</a> of file <a class="el" href="SweepParameter_8cpp_source.html">SweepParameter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00136">136</a> of file <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html">r1d/sweep/SweepParameter.cpp</a>.</p>
 
 </div>
 </div>
@@ -390,7 +390,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SweepParameter_8cpp_source.html#l00144">144</a> of file <a class="el" href="SweepParameter_8cpp_source.html">SweepParameter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00144">144</a> of file <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html">r1d/sweep/SweepParameter.cpp</a>.</p>
 
 </div>
 </div>
@@ -411,11 +411,11 @@ Friends</h2></td></tr>
 
 <p>Return a string representation of the parameter type. </p>
 
-<p class="definition">Definition at line <a class="el" href="SweepParameter_8cpp_source.html#l00152">152</a> of file <a class="el" href="SweepParameter_8cpp_source.html">SweepParameter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00152">152</a> of file <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html">r1d/sweep/SweepParameter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepParameter_8cpp_source.html#l00127">parameterType()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
+<p class="reference">References <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00127">parameterType()</a>, and <a class="el" href="global_8h_source.html#l00049">UTIL_THROW</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SweepParameter_8cpp_source.html#l00119">writeParamType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00119">writeParamType()</a>.</p>
 
 </div>
 </div>
@@ -442,11 +442,11 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SweepParameter_8cpp_source.html#l00119">119</a> of file <a class="el" href="SweepParameter_8cpp_source.html">SweepParameter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00119">119</a> of file <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html">r1d/sweep/SweepParameter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepParameter_8cpp_source.html#l00152">type()</a>.</p>
+<p class="reference">References <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00152">type()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SweepParameter_8cpp_source.html#l00260">operator&lt;&lt;</a>.</p>
+<p class="reference">Referenced by <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00260">operator&lt;&lt;</a>.</p>
 
 </div>
 </div>
@@ -484,7 +484,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="r1d_2sweep_2SweepParameter_8h_source.html#l00195">195</a> of file <a class="el" href="r1d_2sweep_2SweepParameter_8h_source.html">r1d/sweep/SweepParameter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SweepParameter_8cpp_source.html#l00260">operator&lt;&lt;</a>.</p>
+<p class="reference">Referenced by <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00260">operator&lt;&lt;</a>.</p>
 
 </div>
 </div>
@@ -648,9 +648,9 @@ template&lt;class Archive&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SweepParameter_8cpp_source.html#l00239">239</a> of file <a class="el" href="SweepParameter_8cpp_source.html">SweepParameter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00239">239</a> of file <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html">r1d/sweep/SweepParameter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SweepParameter_8cpp_source.html#l00030">SweepParameter()</a>.</p>
+<p class="reference">References <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00030">SweepParameter()</a>.</p>
 
 </div>
 </div>
@@ -690,15 +690,15 @@ template&lt;class Archive&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SweepParameter_8cpp_source.html#l00260">260</a> of file <a class="el" href="SweepParameter_8cpp_source.html">SweepParameter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00260">260</a> of file <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html">r1d/sweep/SweepParameter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="r1d_2sweep_2SweepParameter_8h_source.html#l00195">id()</a>, <a class="el" href="SweepParameter_8cpp_source.html#l00030">SweepParameter()</a>, and <a class="el" href="SweepParameter_8cpp_source.html#l00119">writeParamType()</a>.</p>
+<p class="reference">References <a class="el" href="r1d_2sweep_2SweepParameter_8h_source.html#l00195">id()</a>, <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00030">SweepParameter()</a>, and <a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html#l00119">writeParamType()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="r1d_2sweep_2SweepParameter_8h_source.html">r1d/sweep/SweepParameter.h</a></li>
-<li><a class="el" href="SweepParameter_8cpp_source.html">SweepParameter.cpp</a></li>
+<li><a class="el" href="r1d_2sweep_2SweepParameter_8cpp_source.html">r1d/sweep/SweepParameter.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

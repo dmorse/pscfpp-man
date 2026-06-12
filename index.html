@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -53,16 +53,16 @@ $(function() {
   <div class="headertitle"><div class="title">PSCF - Polymer Self-Consistent Field </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>PSCF is a software package for field-theoretic simulation of inhomogeneous equilibrium structures formed by polymer liquids with constituents that tend to phase separate. The current version of PSCF can perform either self-consistent field theory calculations or stochastic field theoretic simulations that use a partial saddle-point approximation.</p>
+<div class="textblock"><p>PSCF is a software package for field-theoretic simulation of inhomogeneous equilibrium structures formed by polymer liquids with constituents that tend to phase separate, including block polymer materials. The current version of PSCF can perform either self-consistent field theory (SCFT) calculations or stochastic field theoretic simulation (FTS) calculations that use a partial saddle-point approximation.</p>
 <p>PSCF is written primarily in C++, supplemented by CUDA to use a NVIDIA graphics processing unit if one is available. The package is only distributed in source code form, and so must be compiled by the user. PSCF is designed for a unix-like environment, and is regularly tested on Linux and Mac OS X operating systems.</p>
-<p>PSCF is free, open source software. It is distributed under the terms of the GNU General Public License as (GPL) published by the Free Software Foundation, either version 3 of the License or (at your option) any later version. See the LICENSE file or the <a href="http://www.gnu.org/licenses/">gnu web page</a> for details. Development of PSCF is currently supported by the National Science Foundation program for Cyberinfrastructure for Sustained Scientific Development (CSSI) under Grant No. 2103627.</p>
+<p>PSCF is free, open source software. It is distributed under the terms of the GNU General Public License as (GPL) published by the Free Software Foundation, either version 3 of the License or (at your option) any later version. See the LICENSE file or the <a href="http://www.gnu.org/licenses/">gnu web page</a> for details.</p>
 <p>The web manual for the most recent tagged release of PSCF is available online at  <a href="https://dmorse.github.io/pscfpp-man">https://dmorse.github.io/pscfpp-man</a> .</p>
 <h2>Table of contents:</h2>
 <ol type="1">
 <li>
 <a class="el" href="about_page.html">About</a> <ol type="1">
 <li>
-<a class="el" href="about_methods_page.html">Computational Methods</a>  </li>
+<a class="el" href="about_methods_page.html">Methods: SCFT and FTS</a>  </li>
 <li>
 <a class="el" href="about_history_page.html">Package History</a>  </li>
 <li>
@@ -70,13 +70,17 @@ $(function() {
 <li>
 <a class="el" href="about_features_page.html">Features</a>  </li>
 <li>
-<a class="el" href="about_contributors_page.html">Contributors</a>  </li>
+<a class="el" href="about_contributors_page.html">Contributors and Support</a>  </li>
+<li>
+<a class="el" href="about_citation_page.html">Citation</a>  </li>
 </ol>
 </li>
 <li>
 <a class="el" href="install_page.html">Installation</a> <ol type="1">
 <li>
-<a class="el" href="install_require_page.html">Requirements and Dependencies</a>  </li>
+<a class="el" href="install_require_page.html">System Requirements</a>  </li>
+<li>
+<a class="el" href="install_external_page.html">Installing Dependencies: GSL and FFTW</a>  </li>
 <li>
 <a class="el" href="install_source_page.html">Getting the Source Code</a>  </li>
 <li>
@@ -85,6 +89,8 @@ $(function() {
 <a class="el" href="install_environment_page.html">Environment Variables</a>  </li>
 <li>
 <a class="el" href="install_configure_page.html">Configure Script</a>  </li>
+<li>
+<a class="el" href="install_compile_page.html">Compilation</a>  </li>
 <li>
 <a class="el" href="install_inout_page.html">Out-of-Source and In-Source Builds</a>  </li>
 <li>
@@ -144,6 +150,8 @@ $(function() {
 <li>
 <a class="el" href="psfts_psa_page.html">Partial Saddle-Point Approximation</a>  </li>
 <li>
+<a class="el" href="psfts_thermoint_page.html">Thermodynamic Integration</a>  </li>
+<li>
 <a class="el" href="psfts_algorithm_page.html">Algorithms</a>  </li>
 <li>
 <a class="el" href="psfts_param_page.html">Parameter File</a>  </li>
@@ -190,7 +198,9 @@ $(function() {
 <li>
 <a class="el" href="developer_standards_page.html">Coding Standards</a>  </li>
 <li>
-<a class="el" href="developer_template_page.html">C++ Class Templates</a>  </li>
+<a class="el" href="developer_template_page.html">C++ Templates</a>  </li>
+<li>
+<a class="el" href="developer_periodic_page.html">Periodic Systems: CPU vs. GPU</a>  </li>
 <li>
 <a class="el" href="developer_param_page.html">Parameter File I/O</a>  </li>
 <li>
@@ -199,9 +209,9 @@ $(function() {
 </li>
 </ol>
 <h2>Manual Organization:</h2>
-<p>This web manual is designed to provide both thorough usage information for users who may never look at the source code, and aplication programming interface (API) documentation for those who do.</p>
+<p>This web manual is designed to provide both a user manual for users who may never look at the source code, and complete technical documentation aimed at developers.</p>
 <p><b>Users</b>: Information for users about how to install and run PSCF is provided in chapters 1-7 of the web manual, as outlined above, and via links that are accessible there.</p>
-<p><b>Developers </b>: General information about the package for developers and others who inspect the source code is given in chapter 8 of the web manul, entitled <a class="el" href="developer_page.html">Developer Information</a>. Detailed API documentation that is extracted from comments in the source code is also accessible via the "Topics", "Namespaces", "Classes", and "Files" tabs that appear at the top of every web manual page. The "Topics" tab provides a hierarchical grouping of C++ classes and functions, organized by C++ namespace and then, within each namespace, into groups of closely related classes. Clicking on a highlighted name of a class, class template, or function anywhere in the web manual normally links you to the API documentation for that entity. </p>
+<p><b>Developers </b>: General information about the package for developers and others who inspect the source code is given in chapter 8 of the web manual, entitled <a class="el" href="developer_page.html">Developer Information</a>. Detailed application programming interface (API) documentation that is extracted from formatted comments in the source code is accessible via the "Topics", "Namespaces", "Classes", and "Files" tabs that appear at the top of every web manual page. The "Topics" tab provides a hierarchical grouping of C++ classes and functions, organized into C++ namespaces and then, within each namespace, into groups of closely related classes. Clicking on a highlighted name of a class, class template, or other named entity anywhere in the web manual usually opens a page of API documentation for that entity. </p>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->

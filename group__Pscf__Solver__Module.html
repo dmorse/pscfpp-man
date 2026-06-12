@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -52,33 +52,33 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a>  </div>
-  <div class="headertitle"><div class="title">Solver Templates <div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Base__Module.html">Pscf Common</a></div></div></div>
+  <div class="headertitle"><div class="title">Solver Templates <div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Base__Module.html">Pscf - Base Module</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Templates for "solver" classes that compute statistical mechanical properties of a gas of non-interacting molecules.  
+<p>Templates for modified diffusion equation "solver" classes.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:Pscf_3A_3ABlockTmpl_3C_20QT_2C_20FT_20_3E" id="r_Pscf_3A_3ABlockTmpl_3C_20QT_2C_20FT_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1BlockTmpl.html">Pscf::BlockTmpl&lt; QT, FT &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class template for a block solver in a block copolymer.  <a href="classPscf_1_1BlockTmpl.html#details">More...</a><br /></td></tr>
-<tr class="memitem:Pscf_3A_3AMixtureTmpl_3C_20PT_2C_20ST_20_3E" id="r_Pscf_3A_3AMixtureTmpl_3C_20PT_2C_20ST_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl&lt; PT, ST &gt;</a></td></tr>
+<tr class="memitem:Pscf_3A_3AMixtureTmpl_3C_20PT_2C_20ST_2C_20WT_20_3E" id="r_Pscf_3A_3AMixtureTmpl_3C_20PT_2C_20ST_2C_20WT_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl&lt; PT, ST, WT &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solvers for a mixture of polymer and solvent species.  <a href="classPscf_1_1MixtureTmpl.html#details">More...</a><br /></td></tr>
-<tr class="memitem:Pscf_3A_3APolymerTmpl_3C_20BT_2C_20PT_20_3E" id="r_Pscf_3A_3APolymerTmpl_3C_20BT_2C_20PT_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PolymerTmpl.html">Pscf::PolymerTmpl&lt; BT, PT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template for an MDE solver and descriptor for a block polymer.  <a href="classPscf_1_1PolymerTmpl.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Pscf_3A_3APolymerTmpl_3C_20BT_2C_20PT_2C_20WT_20_3E" id="r_Pscf_3A_3APolymerTmpl_3C_20BT_2C_20PT_2C_20WT_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PolymerTmpl.html">Pscf::PolymerTmpl&lt; BT, PT, WT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descriptor and MDE solver for a block polymer.  <a href="classPscf_1_1PolymerTmpl.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Pscf_3A_3APropagatorTmpl_3C_20QT_20_3E" id="r_Pscf_3A_3APropagatorTmpl_3C_20QT_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1PropagatorTmpl.html">Pscf::PropagatorTmpl&lt; QT &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template for propagator classes.  <a href="classPscf_1_1PropagatorTmpl.html#details">More...</a><br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<p>Templates for "solver" classes that compute statistical mechanical properties of a gas of non-interacting molecules. </p>
-<p>The templates defined in this module are designed to be used as base classes for solver classes used in several different implementations of polymer field theory. Different implementations may be designed for different geometries or boundary conditions or for different hardware (e.g., CPU vs. GPU), and may use different algorithms to solve the modified diffusion equation. Source code specific to each such implementation is defined in a different implementation-level subnamespace within <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a>. By convention, code that is defined in an implementation level namespace may not use names or include headers for code defined in any other implementation-level namespace. This convention allows the use of identical names for analogous classes in different implementation-level namespaces without causing name clashes or ambiguities.</p>
-<p>The solver templates <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Template for an MDE solver and descriptor for a block polymer.">PolymerTmpl</a> and <a class="el" href="classPscf_1_1MixtureTmpl.html" title="Solvers for a mixture of polymer and solvent species.">MixtureTmpl</a> templates are each derived from a "descriptor" class that provides a description of a species or mixture but that does not provide functions or data structures required to solve single-molecule statistical mechanics problem. The descriptor classes for polymer species and mixtures are named <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">PolymerSpecies</a> and <a class="el" href="classPscf_1_1MixtureBase.html" title="Abstract descriptor for a mixture of polymer and solvent species.">MixtureBase</a>, respectively. The descriptor class for solvent species is named <a class="el" href="classPscf_1_1SolventSpecies.html" title="Descriptor for a solvent species.">SolventSpecies</a>. Source code files for these descriptor classes are in directory src/pscf/chem.</p>
-<p>To define an implementation of polymer field theory, one must define the following set of solver classes within an implementation-level subspace of <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a>:</p>
+<p>Templates for modified diffusion equation "solver" classes. </p>
+<p>The templates defined in this module are designed to be used as base classes for solver classes used in several different implementations of polymer field theory. Different implementations may be designed for different geometries or boundary conditions or for different hardware (e.g., CPU vs. GPU), and may use different algorithms to solve the modified diffusion equation. Source code specific to each such implementation is defined in a different program-level subnamespace within <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a>. By convention, code that is defined in an implementation level namespace may not use names or include headers for code defined in any other program-level namespace. This convention allows the use of identical names for analogous classes in different program-level namespaces without causing name clashes or ambiguities.</p>
+<p>The solver templates <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Descriptor and MDE solver for a block polymer.">PolymerTmpl</a> and <a class="el" href="classPscf_1_1MixtureTmpl.html" title="Solvers for a mixture of polymer and solvent species.">MixtureTmpl</a> templates are each derived from a "descriptor" class that provides a description of a species or mixture but that does not provide functions or data structures required to solve single-molecule statistical mechanics problem. The descriptor classes for polymer species and mixtures are named <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">PolymerSpecies</a> and <a class="el" href="classPscf_1_1MixtureBase.html" title="Abstract descriptor for a mixture of polymer and solvent species.">MixtureBase</a>, respectively. The descriptor class for solvent species is named <a class="el" href="classPscf_1_1SolventSpecies.html" title="Descriptor for a solvent species.">SolventSpecies</a>. Source code files for these descriptor classes are in directory src/pscf/chem.</p>
+<p>To define an implementation of polymer field theory, one must define the following set of solver classes within each program-level subspace of <a class="el" href="namespacePscf.html" title="PSCF package top-level namespace.">Pscf</a>:</p>
 <ul>
 <li>class Propagator, derived from <a class="el" href="classPscf_1_1PropagatorTmpl.html">PropagatorTmpl&lt;Propagator&gt;</a></li>
 <li>class Block, derived from <a class="el" href="classPscf_1_1BlockTmpl.html" title="Class template for a block solver in a block copolymer.">BlockTmpl&lt;Propagator&gt;</a></li>
-<li>class Polymer, derived from <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Template for an MDE solver and descriptor for a block polymer.">PolymerTmpl&lt;Block&gt;</a></li>
+<li>class Polymer, derived from <a class="el" href="classPscf_1_1PolymerTmpl.html" title="Descriptor and MDE solver for a block polymer.">PolymerTmpl&lt;Block&gt;</a></li>
 <li>class Solvent, derived from <a class="el" href="classPscf_1_1SolventSpecies.html" title="Descriptor for a solvent species.">SolventSpecies</a></li>
 <li>class Mixture, derived from <a class="el" href="classPscf_1_1MixtureTmpl.html">MixtureTmpl&lt;Polymer, Solvent&gt;</a> </li>
 </ul>

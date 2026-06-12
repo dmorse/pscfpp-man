@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSCF: Pscf::MixtureTmpl&lt; PT, ST &gt; Class Template Reference</title>
+<title>PSCF: Pscf::MixtureTmpl&lt; PT, ST, WT &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.3.3</span>
+   <div id="projectname">PSCF<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -57,8 +57,10 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classPscf_1_1MixtureTmpl-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Pscf::MixtureTmpl&lt; PT, ST &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Base__Module.html">Pscf Common</a> &raquo; <a class="el" href="group__Pscf__Solver__Module.html">Solver Templates</a></div></div></div>
+  <div class="headertitle"><div class="title">Pscf::MixtureTmpl&lt; PT, ST, WT &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pscf__NS__Module.html">Pscf namespace</a> &raquo; <a class="el" href="group__Pscf__Base__Module.html">Pscf - Base Module</a> &raquo; <a class="el" href="group__Pscf__Solver__Module.html">Solver Templates</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -67,26 +69,28 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="MixtureTmpl_8h_source.html">MixtureTmpl.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Pscf::MixtureTmpl&lt; PT, ST &gt;:</div>
+Inheritance diagram for Pscf::MixtureTmpl&lt; PT, ST, WT &gt;:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classPscf_1_1MixtureTmpl.png" usemap="#Pscf_3A_3AMixtureTmpl_3C_20PT_2C_20ST_20_3E_map" alt=""/>
-  <map id="Pscf_3A_3AMixtureTmpl_3C_20PT_2C_20ST_20_3E_map" name="Pscf_3A_3AMixtureTmpl_3C_20PT_2C_20ST_20_3E_map">
-<area href="classPscf_1_1MixtureBase.html" title="Abstract descriptor for a mixture of polymer and solvent species." alt="Pscf::MixtureBase" shape="rect" coords="0,112,249,136"/>
-<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="259,112,508,136"/>
-<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="259,56,508,80"/>
-<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="129,0,378,24"/>
-<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="388,0,637,24"/>
-<area href="classPscf_1_1Prdc_1_1MixturePrdc.html" title="Solver and descriptor for a mixture of polymers and solvents." alt="Pscf::Prdc::MixturePrdc&lt; D, PT, ST, TT &gt;" shape="rect" coords="129,224,378,248"/>
+  <img src="classPscf_1_1MixtureTmpl.png" usemap="#Pscf_3A_3AMixtureTmpl_3C_20PT_2C_20ST_2C_20WT_20_3E_map" alt=""/>
+  <map id="Pscf_3A_3AMixtureTmpl_3C_20PT_2C_20ST_2C_20WT_20_3E_map" name="Pscf_3A_3AMixtureTmpl_3C_20PT_2C_20ST_2C_20WT_20_3E_map">
+<area href="classPscf_1_1MixtureBase.html" alt="Pscf::MixtureBase&lt; double &gt;" shape="rect" coords="0,112,215,136"/>
+<area href="classUtil_1_1ParamComposite.html" title="An object that can read multiple parameters from file." alt="Util::ParamComposite" shape="rect" coords="225,112,440,136"/>
+<area href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file." alt="Util::ParamComponent" shape="rect" coords="225,56,440,80"/>
+<area href="classUtil_1_1Serializable.html" title="Abstract class for serializable objects." alt="Util::Serializable" shape="rect" coords="112,0,327,24"/>
+<area href="classUtil_1_1MpiFileIo.html" title="Identifies whether this processor may do file I/O." alt="Util::MpiFileIo" shape="rect" coords="337,0,552,24"/>
+<area href="classPscf_1_1Rp_1_1Mixture.html" alt="Pscf::Rp::Mixture&lt; D, Types&lt; D &gt; &gt;" shape="rect" coords="112,224,327,248"/>
+<area href="classPscf_1_1Rpc_1_1Mixture.html" title="Solver and descriptor for a mixture of polymers and solvents." alt="Pscf::Rpc::Mixture&lt; D &gt;" shape="rect" coords="0,280,215,304"/>
+<area href="classPscf_1_1Rpg_1_1Mixture.html" title="Solver and descriptor for a mixture of polymers and solvents." alt="Pscf::Rpg::Mixture&lt; D &gt;" shape="rect" coords="225,280,440,304"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ae710da51a26c3dee128abf9c1cec4c70" id="r_ae710da51a26c3dee128abf9c1cec4c70"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae710da51a26c3dee128abf9c1cec4c70">SolventT</a> = ST</td></tr>
-<tr class="memdesc:ae710da51a26c3dee128abf9c1cec4c70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solvent species solver type.  <br /></td></tr>
-<tr class="memitem:a616bc7ba644690cdad5507edc2969f74" id="r_a616bc7ba644690cdad5507edc2969f74"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a616bc7ba644690cdad5507edc2969f74">PolymerT</a> = PT</td></tr>
-<tr class="memdesc:a616bc7ba644690cdad5507edc2969f74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymer species solver type.  <br /></td></tr>
+<tr class="memitem:a41ee0c37adee849e200a3ea0cb243f24" id="r_a41ee0c37adee849e200a3ea0cb243f24"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41ee0c37adee849e200a3ea0cb243f24">SolventT</a> = ST</td></tr>
+<tr class="memdesc:a41ee0c37adee849e200a3ea0cb243f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solvent species solver type.  <br /></td></tr>
+<tr class="memitem:a4839c6b17334fe302ea10d41d24af36f" id="r_a4839c6b17334fe302ea10d41d24af36f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4839c6b17334fe302ea10d41d24af36f">PolymerT</a> = PT</td></tr>
+<tr class="memdesc:a4839c6b17334fe302ea10d41d24af36f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymer species solver type.  <br /></td></tr>
 <tr class="inherit_header pub_types_classUtil_1_1Serializable"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classUtil_1_1Serializable')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="classUtil_1_1Serializable.html">Util::Serializable</a></td></tr>
 <tr class="memitem:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable" id="r_aca43a1eea5ec5f13189a57892a7a6d04"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classUtil_1_1BinaryFileOArchive.html">BinaryFileOArchive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1Serializable.html#aca43a1eea5ec5f13189a57892a7a6d04">OArchive</a></td></tr>
 <tr class="memdesc:aca43a1eea5ec5f13189a57892a7a6d04 inherit pub_types_classUtil_1_1Serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of output archive used by save method.  <br /></td></tr>
@@ -95,46 +99,42 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a95c2f31b239dacdd15c4045898c5de22" id="r_a95c2f31b239dacdd15c4045898c5de22"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95c2f31b239dacdd15c4045898c5de22">MixtureTmpl</a> ()</td></tr>
-<tr class="memdesc:a95c2f31b239dacdd15c4045898c5de22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="memitem:a6326edbb0056ed7bfb760a193fe9392c" id="r_a6326edbb0056ed7bfb760a193fe9392c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6326edbb0056ed7bfb760a193fe9392c">~MixtureTmpl</a> ()</td></tr>
-<tr class="memdesc:a6326edbb0056ed7bfb760a193fe9392c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:a573ad6cc4afc7a187a10a94bcb213f88" id="r_a573ad6cc4afc7a187a10a94bcb213f88"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a573ad6cc4afc7a187a10a94bcb213f88">readParameters</a> (std::istream &amp;in)</td></tr>
-<tr class="memdesc:a573ad6cc4afc7a187a10a94bcb213f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameters from file and initialize.  <br /></td></tr>
+<tr class="memitem:a3db66b6651166429883cbff696aafb7a" id="r_a3db66b6651166429883cbff696aafb7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3db66b6651166429883cbff696aafb7a">readParameters</a> (std::istream &amp;in) override</td></tr>
+<tr class="memdesc:a3db66b6651166429883cbff696aafb7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read parameters from file and initialize.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Accessors</div></td></tr>
-<tr class="memitem:a82065970af9741682735874205e121af" id="r_a82065970af9741682735874205e121af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a616bc7ba644690cdad5507edc2969f74">PolymerT</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82065970af9741682735874205e121af">polymer</a> (int id)</td></tr>
-<tr class="memdesc:a82065970af9741682735874205e121af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a polymer solver object by non-const reference.  <br /></td></tr>
-<tr class="memitem:a217a86a2de5712edeae8b9bffc221c0e" id="r_a217a86a2de5712edeae8b9bffc221c0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a616bc7ba644690cdad5507edc2969f74">PolymerT</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a217a86a2de5712edeae8b9bffc221c0e">polymer</a> (int id) const</td></tr>
-<tr class="memdesc:a217a86a2de5712edeae8b9bffc221c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a polymer solver by const reference.  <br /></td></tr>
-<tr class="memitem:a31dceed4752d4033112b3a5c8c89f1c6" id="r_a31dceed4752d4033112b3a5c8c89f1c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1PolymerSpecies.html">PolymerSpecies</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31dceed4752d4033112b3a5c8c89f1c6">polymerSpecies</a> (int id) const final</td></tr>
-<tr class="memdesc:a31dceed4752d4033112b3a5c8c89f1c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">PolymerSpecies</a> descriptor by const reference.  <br /></td></tr>
-<tr class="memitem:a09b99a61b5fed739ed5074198af4c824" id="r_a09b99a61b5fed739ed5074198af4c824"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ae710da51a26c3dee128abf9c1cec4c70">SolventT</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09b99a61b5fed739ed5074198af4c824">solvent</a> (int id)</td></tr>
-<tr class="memdesc:a09b99a61b5fed739ed5074198af4c824"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a solvent solver object.  <br /></td></tr>
-<tr class="memitem:acead55af6d8e6310888f20e2c696dd47" id="r_acead55af6d8e6310888f20e2c696dd47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ae710da51a26c3dee128abf9c1cec4c70">SolventT</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acead55af6d8e6310888f20e2c696dd47">solvent</a> (int id) const</td></tr>
-<tr class="memdesc:acead55af6d8e6310888f20e2c696dd47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a solvent solver object by constant reference.  <br /></td></tr>
-<tr class="memitem:ab0a2be05784beba7797b55c0cc07868c" id="r_ab0a2be05784beba7797b55c0cc07868c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1SolventSpecies.html">SolventSpecies</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0a2be05784beba7797b55c0cc07868c">solventSpecies</a> (int id) const final</td></tr>
-<tr class="memdesc:ab0a2be05784beba7797b55c0cc07868c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a <a class="el" href="classPscf_1_1SolventSpecies.html" title="Descriptor for a solvent species.">SolventSpecies</a> descriptor object by const reference.  <br /></td></tr>
-<tr class="inherit_header pub_methods_classPscf_1_1MixtureBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1MixtureBase')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1MixtureBase.html">Pscf::MixtureBase</a></td></tr>
-<tr class="memitem:aa7651baaf28ab777fa92904f8568e685 inherit pub_methods_classPscf_1_1MixtureBase" id="r_aa7651baaf28ab777fa92904f8568e685"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#aa7651baaf28ab777fa92904f8568e685">MixtureBase</a> ()</td></tr>
-<tr class="memdesc:aa7651baaf28ab777fa92904f8568e685 inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="memitem:af071f78c7379f444c1ab0182c8d3b245 inherit pub_methods_classPscf_1_1MixtureBase" id="r_af071f78c7379f444c1ab0182c8d3b245"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#af071f78c7379f444c1ab0182c8d3b245">~MixtureBase</a> ()</td></tr>
-<tr class="memdesc:af071f78c7379f444c1ab0182c8d3b245 inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:a67ae5add265b2136e946302b5be48a1f inherit pub_methods_classPscf_1_1MixtureBase" id="r_a67ae5add265b2136e946302b5be48a1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#a67ae5add265b2136e946302b5be48a1f">setVmonomer</a> (double <a class="el" href="classPscf_1_1MixtureBase.html#ac6465388adfef728990487927de7164d">vMonomer</a>)</td></tr>
-<tr class="memdesc:a67ae5add265b2136e946302b5be48a1f inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new vMonomer value.  <br /></td></tr>
-<tr class="memitem:a76318e16b2490450a8012e50112ad7fa inherit pub_methods_classPscf_1_1MixtureBase" id="r_a76318e16b2490450a8012e50112ad7fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#a76318e16b2490450a8012e50112ad7fa">nMonomer</a> () const</td></tr>
-<tr class="memdesc:a76318e16b2490450a8012e50112ad7fa inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of monomer types.  <br /></td></tr>
-<tr class="memitem:a4d85fe05f9361521f095546d2052f1e1 inherit pub_methods_classPscf_1_1MixtureBase" id="r_a4d85fe05f9361521f095546d2052f1e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#a4d85fe05f9361521f095546d2052f1e1">nPolymer</a> () const</td></tr>
-<tr class="memdesc:a4d85fe05f9361521f095546d2052f1e1 inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of polymer species.  <br /></td></tr>
-<tr class="memitem:a838f62ea1f7efd296986e0c2684d99dc inherit pub_methods_classPscf_1_1MixtureBase" id="r_a838f62ea1f7efd296986e0c2684d99dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#a838f62ea1f7efd296986e0c2684d99dc">nSolvent</a> () const</td></tr>
-<tr class="memdesc:a838f62ea1f7efd296986e0c2684d99dc inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of solvent (point particle) species.  <br /></td></tr>
-<tr class="memitem:a776641dd3efaa243ebaa449dd678c630 inherit pub_methods_classPscf_1_1MixtureBase" id="r_a776641dd3efaa243ebaa449dd678c630"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#a776641dd3efaa243ebaa449dd678c630">nBlock</a> () const</td></tr>
-<tr class="memdesc:a776641dd3efaa243ebaa449dd678c630 inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get total number blocks among all polymer species.  <br /></td></tr>
-<tr class="memitem:ac6465388adfef728990487927de7164d inherit pub_methods_classPscf_1_1MixtureBase" id="r_ac6465388adfef728990487927de7164d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#ac6465388adfef728990487927de7164d">vMonomer</a> () const</td></tr>
-<tr class="memdesc:ac6465388adfef728990487927de7164d inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get monomer reference volume (set to 1.0 by default).  <br /></td></tr>
-<tr class="memitem:aef3bfb3a2854813888067ca6b07ed91f inherit pub_methods_classPscf_1_1MixtureBase" id="r_aef3bfb3a2854813888067ca6b07ed91f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#aef3bfb3a2854813888067ca6b07ed91f">isCanonical</a> () const</td></tr>
-<tr class="memdesc:aef3bfb3a2854813888067ca6b07ed91f inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this mixture being treated in canonical ensemble?  <br /></td></tr>
-<tr class="memitem:a586004320f96946bea159f8e4d639091 inherit pub_methods_classPscf_1_1MixtureBase" id="r_a586004320f96946bea159f8e4d639091"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Monomer.html">Monomer</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#a586004320f96946bea159f8e4d639091">monomer</a> (int id) const</td></tr>
-<tr class="memdesc:a586004320f96946bea159f8e4d639091 inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a <a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer type.">Monomer</a> type descriptor by const reference.  <br /></td></tr>
+<tr class="memitem:a84bfd76de615bcaadf9d63b76b3f3833" id="r_a84bfd76de615bcaadf9d63b76b3f3833"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a4839c6b17334fe302ea10d41d24af36f">PolymerT</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84bfd76de615bcaadf9d63b76b3f3833">polymer</a> (int id)</td></tr>
+<tr class="memdesc:a84bfd76de615bcaadf9d63b76b3f3833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a polymer solver object by non-const reference.  <br /></td></tr>
+<tr class="memitem:a66ef7ae78ae64f1c39c64cfa94ea6173" id="r_a66ef7ae78ae64f1c39c64cfa94ea6173"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a4839c6b17334fe302ea10d41d24af36f">PolymerT</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66ef7ae78ae64f1c39c64cfa94ea6173">polymer</a> (int id) const</td></tr>
+<tr class="memdesc:a66ef7ae78ae64f1c39c64cfa94ea6173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a polymer solver by const reference.  <br /></td></tr>
+<tr class="memitem:a85ff10cbc0b6058bde94f210102497d5" id="r_a85ff10cbc0b6058bde94f210102497d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1PolymerSpecies.html">PolymerSpecies</a>&lt; WT &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85ff10cbc0b6058bde94f210102497d5">polymerSpecies</a> (int id) const final</td></tr>
+<tr class="memdesc:a85ff10cbc0b6058bde94f210102497d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a <a class="el" href="classPscf_1_1PolymerSpecies.html" title="Descriptor for a linear or acyclic branched block polymer.">PolymerSpecies</a> descriptor by const reference.  <br /></td></tr>
+<tr class="memitem:ac714c9df62b035a7513e79f921c8c70d" id="r_ac714c9df62b035a7513e79f921c8c70d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a41ee0c37adee849e200a3ea0cb243f24">SolventT</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac714c9df62b035a7513e79f921c8c70d">solvent</a> (int id)</td></tr>
+<tr class="memdesc:ac714c9df62b035a7513e79f921c8c70d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a solvent solver object.  <br /></td></tr>
+<tr class="memitem:a285033da775af84a1681e756ad6762dc" id="r_a285033da775af84a1681e756ad6762dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a41ee0c37adee849e200a3ea0cb243f24">SolventT</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a285033da775af84a1681e756ad6762dc">solvent</a> (int id) const</td></tr>
+<tr class="memdesc:a285033da775af84a1681e756ad6762dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a solvent solver object by constant reference.  <br /></td></tr>
+<tr class="memitem:a0922282bc94ad650f74eb94fc4bcbf2b" id="r_a0922282bc94ad650f74eb94fc4bcbf2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1SolventSpecies.html">SolventSpecies</a>&lt; WT &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0922282bc94ad650f74eb94fc4bcbf2b">solventSpecies</a> (int id) const final</td></tr>
+<tr class="memdesc:a0922282bc94ad650f74eb94fc4bcbf2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a <a class="el" href="classPscf_1_1SolventSpecies.html" title="Descriptor for a solvent species.">SolventSpecies</a> descriptor object by const reference.  <br /></td></tr>
+<tr class="inherit_header pub_methods_classPscf_1_1MixtureBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classPscf_1_1MixtureBase')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classPscf_1_1MixtureBase.html">Pscf::MixtureBase&lt; double &gt;</a></td></tr>
+<tr class="memitem:a4b0f399b3e0f7bf471574d730633f92f inherit pub_methods_classPscf_1_1MixtureBase" id="r_a4b0f399b3e0f7bf471574d730633f92f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#a4b0f399b3e0f7bf471574d730633f92f">MixtureBase</a> ()</td></tr>
+<tr class="memdesc:a4b0f399b3e0f7bf471574d730633f92f inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:abe9c8accfd932e51291604047ff472a0 inherit pub_methods_classPscf_1_1MixtureBase" id="r_abe9c8accfd932e51291604047ff472a0"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#abe9c8accfd932e51291604047ff472a0">~MixtureBase</a> ()=default</td></tr>
+<tr class="memdesc:abe9c8accfd932e51291604047ff472a0 inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:aa32edc550a22cc4bc7ab5a09219569b3 inherit pub_methods_classPscf_1_1MixtureBase" id="r_aa32edc550a22cc4bc7ab5a09219569b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#aa32edc550a22cc4bc7ab5a09219569b3">setVmonomer</a> (double <a class="el" href="classPscf_1_1MixtureBase.html#a5613582db11b50fc0aa1b6d7d1d7c065">vMonomer</a>)</td></tr>
+<tr class="memdesc:aa32edc550a22cc4bc7ab5a09219569b3 inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new vMonomer value.  <br /></td></tr>
+<tr class="memitem:abfcf981439d2c9c37134b5330287cd47 inherit pub_methods_classPscf_1_1MixtureBase" id="r_abfcf981439d2c9c37134b5330287cd47"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#abfcf981439d2c9c37134b5330287cd47">nMonomer</a> () const</td></tr>
+<tr class="memdesc:abfcf981439d2c9c37134b5330287cd47 inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of monomer types.  <br /></td></tr>
+<tr class="memitem:a9a33f4262be61643d10553983a6f04c6 inherit pub_methods_classPscf_1_1MixtureBase" id="r_a9a33f4262be61643d10553983a6f04c6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#a9a33f4262be61643d10553983a6f04c6">nPolymer</a> () const</td></tr>
+<tr class="memdesc:a9a33f4262be61643d10553983a6f04c6 inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of polymer species.  <br /></td></tr>
+<tr class="memitem:a980328cdaf4a0214403e139e869f0086 inherit pub_methods_classPscf_1_1MixtureBase" id="r_a980328cdaf4a0214403e139e869f0086"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#a980328cdaf4a0214403e139e869f0086">nSolvent</a> () const</td></tr>
+<tr class="memdesc:a980328cdaf4a0214403e139e869f0086 inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of solvent (point particle) species.  <br /></td></tr>
+<tr class="memitem:af665d43a98e9c842139482432870b463 inherit pub_methods_classPscf_1_1MixtureBase" id="r_af665d43a98e9c842139482432870b463"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#af665d43a98e9c842139482432870b463">nBlock</a> () const</td></tr>
+<tr class="memdesc:af665d43a98e9c842139482432870b463 inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get total number blocks among all polymer species.  <br /></td></tr>
+<tr class="memitem:a5613582db11b50fc0aa1b6d7d1d7c065 inherit pub_methods_classPscf_1_1MixtureBase" id="r_a5613582db11b50fc0aa1b6d7d1d7c065"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#a5613582db11b50fc0aa1b6d7d1d7c065">vMonomer</a> () const</td></tr>
+<tr class="memdesc:a5613582db11b50fc0aa1b6d7d1d7c065 inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get monomer reference volume (set to 1.0 by default).  <br /></td></tr>
+<tr class="memitem:aeabe91fbe4889c309eda794df1624941 inherit pub_methods_classPscf_1_1MixtureBase" id="r_aeabe91fbe4889c309eda794df1624941"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#aeabe91fbe4889c309eda794df1624941">isCanonical</a> () const</td></tr>
+<tr class="memdesc:aeabe91fbe4889c309eda794df1624941 inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this mixture being treated in canonical ensemble?  <br /></td></tr>
+<tr class="memitem:ace81161e2fd72c83b6500a7b272c02df inherit pub_methods_classPscf_1_1MixtureBase" id="r_ace81161e2fd72c83b6500a7b272c02df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Monomer.html">Monomer</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#ace81161e2fd72c83b6500a7b272c02df">monomer</a> (int id) const</td></tr>
+<tr class="memdesc:ace81161e2fd72c83b6500a7b272c02df inherit pub_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a <a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer type.">Monomer</a> type descriptor by const reference.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classUtil_1_1ParamComposite"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classUtil_1_1ParamComposite')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComposite.html">Util::ParamComposite</a></td></tr>
 <tr class="memitem:a873eea7d2dbc19cde816d1bef602496c inherit pub_methods_classUtil_1_1ParamComposite" id="r_a873eea7d2dbc19cde816d1bef602496c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a873eea7d2dbc19cde816d1bef602496c">ParamComposite</a> ()</td></tr>
 <tr class="memdesc:a873eea7d2dbc19cde816d1bef602496c inherit pub_methods_classUtil_1_1ParamComposite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
@@ -307,18 +307,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af2787f522a78daada06b2241ce368128 inherit pub_methods_classUtil_1_1MpiFileIo" id="r_af2787f522a78daada06b2241ce368128"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1MpiFileIo.html#af2787f522a78daada06b2241ce368128">isIoProcessor</a> () const</td></tr>
 <tr class="memdesc:af2787f522a78daada06b2241ce368128 inherit pub_methods_classUtil_1_1MpiFileIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can this processor do file I/O ?  <br /></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_static_methods_classUtil_1_1ParamComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classUtil_1_1ParamComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Static Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComponent.html">Util::ParamComponent</a></td></tr>
-<tr class="memitem:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_a5350c0432130f7feba8392f5b3a75cb4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a5350c0432130f7feba8392f5b3a75cb4">initStatic</a> ()</td></tr>
-<tr class="memdesc:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize static echo member to false.  <br /></td></tr>
-<tr class="memitem:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_add72ad7add98e0b90979ee2638c7468d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#add72ad7add98e0b90979ee2638c7468d">setEcho</a> (bool <a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a>=true)</td></tr>
-<tr class="memdesc:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable echoing for all subclasses of <a class="el" href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file.">ParamComponent</a>.  <br /></td></tr>
-<tr class="memitem:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_ac5808de278115409092e94f9c72362c2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a> ()</td></tr>
-<tr class="memdesc:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get echo parameter.  <br /></td></tr>
-<tr class="inherit_header pro_methods_classPscf_1_1MixtureBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classPscf_1_1MixtureBase')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classPscf_1_1MixtureBase.html">Pscf::MixtureBase</a></td></tr>
-<tr class="memitem:aa487da532a8ffbd947a373e25d529378 inherit pro_methods_classPscf_1_1MixtureBase" id="r_aa487da532a8ffbd947a373e25d529378"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Monomer.html">Monomer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#aa487da532a8ffbd947a373e25d529378">monomer</a> (int id)</td></tr>
-<tr class="memdesc:aa487da532a8ffbd947a373e25d529378 inherit pro_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a <a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer type.">Monomer</a> type descriptor (non-const reference).  <br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-pro-types" class="groupheader"><a id="pro-types" name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr class="memitem:adeb10b57472601e9c9d33e8ddb726a8d" id="r_adeb10b57472601e9c9d33e8ddb726a8d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adeb10b57472601e9c9d33e8ddb726a8d">MixtureBaseT</a> = <a class="el" href="classPscf_1_1MixtureBase.html">MixtureBase</a>&lt;WT&gt;</td></tr>
+<tr class="memdesc:adeb10b57472601e9c9d33e8ddb726a8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for base class.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a388d2ee69ab300f2d4ef25c7119f4e00" id="r_a388d2ee69ab300f2d4ef25c7119f4e00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a388d2ee69ab300f2d4ef25c7119f4e00">MixtureTmpl</a> ()</td></tr>
+<tr class="memdesc:a388d2ee69ab300f2d4ef25c7119f4e00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:af77834e4da47491c83bb9b4d7f105c42" id="r_af77834e4da47491c83bb9b4d7f105c42"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af77834e4da47491c83bb9b4d7f105c42">~MixtureTmpl</a> () override=default</td></tr>
+<tr class="memdesc:af77834e4da47491c83bb9b4d7f105c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="inherit_header pro_methods_classPscf_1_1MixtureBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classPscf_1_1MixtureBase')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classPscf_1_1MixtureBase.html">Pscf::MixtureBase&lt; double &gt;</a></td></tr>
+<tr class="memitem:ad1d48687a6fbce527f4a5d5349c62bf1 inherit pro_methods_classPscf_1_1MixtureBase" id="r_ad1d48687a6fbce527f4a5d5349c62bf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPscf_1_1Monomer.html">Monomer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#ad1d48687a6fbce527f4a5d5349c62bf1">monomer</a> (int id)</td></tr>
+<tr class="memdesc:ad1d48687a6fbce527f4a5d5349c62bf1 inherit pro_methods_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a <a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer type.">Monomer</a> type descriptor (non-const reference).  <br /></td></tr>
 <tr class="memitem:a30752567fd7b8b93e5c8476bbe8592c5" id="r_a30752567fd7b8b93e5c8476bbe8592c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a30752567fd7b8b93e5c8476bbe8592c5">setClassName</a> (const char *<a class="el" href="classUtil_1_1ParamComposite.html#a93e3a9fd3bd01dcc3c606a7bf3112c0e">className</a>)</td></tr>
 <tr class="memdesc:a30752567fd7b8b93e5c8476bbe8592c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set class name string.  <br /></td></tr>
 <tr class="memitem:a30bf69df610c5d1bfa2d2b852425b206" id="r_a30bf69df610c5d1bfa2d2b852425b206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComposite.html#a30bf69df610c5d1bfa2d2b852425b206">setIsRequired</a> (bool <a class="el" href="classUtil_1_1ParamComposite.html#aff9ce840ca72f2c6cf3e24335a7a580c">isRequired</a>)</td></tr>
@@ -355,36 +357,46 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:a6f859f325ca7d36747d28c9677fe0bfc inherit pro_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:ae979e22ecef3a94c0e826224b3761df9 inherit pro_methods_classUtil_1_1ParamComponent" id="r_ae979e22ecef3a94c0e826224b3761df9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ae979e22ecef3a94c0e826224b3761df9">ParamComponent</a> (const <a class="el" href="classUtil_1_1ParamComponent.html">ParamComponent</a> &amp;other)</td></tr>
 <tr class="memdesc:ae979e22ecef3a94c0e826224b3761df9 inherit pro_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
-<tr class="inherit_header pro_attribs_classPscf_1_1MixtureBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classPscf_1_1MixtureBase')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classPscf_1_1MixtureBase.html">Pscf::MixtureBase</a></td></tr>
-<tr class="memitem:ae9ddd1ae7f94892789372d57cd0017df inherit pro_attribs_classPscf_1_1MixtureBase" id="r_ae9ddd1ae7f94892789372d57cd0017df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Monomer.html">Monomer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#ae9ddd1ae7f94892789372d57cd0017df">monomers_</a></td></tr>
-<tr class="memdesc:ae9ddd1ae7f94892789372d57cd0017df inherit pro_attribs_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classUtil_1_1Array.html" title="Array container class template.">Array</a> of monomer type descriptors.  <br /></td></tr>
-<tr class="memitem:a0cc32057c592c2a3d6bf1993cc763d74 inherit pro_attribs_classPscf_1_1MixtureBase" id="r_a0cc32057c592c2a3d6bf1993cc763d74"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#a0cc32057c592c2a3d6bf1993cc763d74">nMonomer_</a></td></tr>
-<tr class="memdesc:a0cc32057c592c2a3d6bf1993cc763d74 inherit pro_attribs_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of monomer types.  <br /></td></tr>
-<tr class="memitem:a39ed5039151f53c3e3f702fc2543566a inherit pro_attribs_classPscf_1_1MixtureBase" id="r_a39ed5039151f53c3e3f702fc2543566a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#a39ed5039151f53c3e3f702fc2543566a">nPolymer_</a></td></tr>
-<tr class="memdesc:a39ed5039151f53c3e3f702fc2543566a inherit pro_attribs_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of polymer species.  <br /></td></tr>
-<tr class="memitem:a5ca00188a71e6cc796e7230722abda0e inherit pro_attribs_classPscf_1_1MixtureBase" id="r_a5ca00188a71e6cc796e7230722abda0e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#a5ca00188a71e6cc796e7230722abda0e">nSolvent_</a></td></tr>
-<tr class="memdesc:a5ca00188a71e6cc796e7230722abda0e inherit pro_attribs_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of solvent species.  <br /></td></tr>
-<tr class="memitem:a3f684ad110138fad7eef099d5f4fb7d9 inherit pro_attribs_classPscf_1_1MixtureBase" id="r_a3f684ad110138fad7eef099d5f4fb7d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#a3f684ad110138fad7eef099d5f4fb7d9">nBlock_</a></td></tr>
-<tr class="memdesc:a3f684ad110138fad7eef099d5f4fb7d9 inherit pro_attribs_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of blocks total, across all polymers.  <br /></td></tr>
-<tr class="memitem:a838c0ac6b298e1dbb7f27053a8649aeb inherit pro_attribs_classPscf_1_1MixtureBase" id="r_a838c0ac6b298e1dbb7f27053a8649aeb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#a838c0ac6b298e1dbb7f27053a8649aeb">vMonomer_</a></td></tr>
-<tr class="memdesc:a838c0ac6b298e1dbb7f27053a8649aeb inherit pro_attribs_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer type.">Monomer</a> reference volume (set to 1.0 by default).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classUtil_1_1ParamComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classUtil_1_1ParamComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Static Public Member Functions inherited from <a class="el" href="classUtil_1_1ParamComponent.html">Util::ParamComponent</a></td></tr>
+<tr class="memitem:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_a5350c0432130f7feba8392f5b3a75cb4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#a5350c0432130f7feba8392f5b3a75cb4">initStatic</a> ()</td></tr>
+<tr class="memdesc:a5350c0432130f7feba8392f5b3a75cb4 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize static echo member to false.  <br /></td></tr>
+<tr class="memitem:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_add72ad7add98e0b90979ee2638c7468d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#add72ad7add98e0b90979ee2638c7468d">setEcho</a> (bool <a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a>=true)</td></tr>
+<tr class="memdesc:add72ad7add98e0b90979ee2638c7468d inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable echoing for all subclasses of <a class="el" href="classUtil_1_1ParamComponent.html" title="Abstract base class for classes that input and ouput parameters to file.">ParamComponent</a>.  <br /></td></tr>
+<tr class="memitem:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent" id="r_ac5808de278115409092e94f9c72362c2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtil_1_1ParamComponent.html#ac5808de278115409092e94f9c72362c2">echo</a> ()</td></tr>
+<tr class="memdesc:ac5808de278115409092e94f9c72362c2 inherit pub_static_methods_classUtil_1_1ParamComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get echo parameter.  <br /></td></tr>
+<tr class="inherit_header pro_attribs_classPscf_1_1MixtureBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classPscf_1_1MixtureBase')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classPscf_1_1MixtureBase.html">Pscf::MixtureBase&lt; double &gt;</a></td></tr>
+<tr class="memitem:ac307b23cf4d392273b27fdac8f7921cc inherit pro_attribs_classPscf_1_1MixtureBase" id="r_ac307b23cf4d392273b27fdac8f7921cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUtil_1_1DArray.html">DArray</a>&lt; <a class="el" href="classPscf_1_1Monomer.html">Monomer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#ac307b23cf4d392273b27fdac8f7921cc">monomers_</a></td></tr>
+<tr class="memdesc:ac307b23cf4d392273b27fdac8f7921cc inherit pro_attribs_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classUtil_1_1Array.html" title="Array container class template.">Array</a> of monomer type descriptors.  <br /></td></tr>
+<tr class="memitem:a06dab6677eddda3ca776a030b92a82a8 inherit pro_attribs_classPscf_1_1MixtureBase" id="r_a06dab6677eddda3ca776a030b92a82a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#a06dab6677eddda3ca776a030b92a82a8">nMonomer_</a></td></tr>
+<tr class="memdesc:a06dab6677eddda3ca776a030b92a82a8 inherit pro_attribs_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of monomer types.  <br /></td></tr>
+<tr class="memitem:a499b86d6a3067a892ee0875ab471bf88 inherit pro_attribs_classPscf_1_1MixtureBase" id="r_a499b86d6a3067a892ee0875ab471bf88"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#a499b86d6a3067a892ee0875ab471bf88">nPolymer_</a></td></tr>
+<tr class="memdesc:a499b86d6a3067a892ee0875ab471bf88 inherit pro_attribs_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of polymer species.  <br /></td></tr>
+<tr class="memitem:a4ee7d5dd44a4b2fca450c02dc639486c inherit pro_attribs_classPscf_1_1MixtureBase" id="r_a4ee7d5dd44a4b2fca450c02dc639486c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#a4ee7d5dd44a4b2fca450c02dc639486c">nSolvent_</a></td></tr>
+<tr class="memdesc:a4ee7d5dd44a4b2fca450c02dc639486c inherit pro_attribs_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of solvent species.  <br /></td></tr>
+<tr class="memitem:acd24cb89c256ebe94bc13237f448f08c inherit pro_attribs_classPscf_1_1MixtureBase" id="r_acd24cb89c256ebe94bc13237f448f08c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#acd24cb89c256ebe94bc13237f448f08c">nBlock_</a></td></tr>
+<tr class="memdesc:acd24cb89c256ebe94bc13237f448f08c inherit pro_attribs_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of blocks total, across all polymers.  <br /></td></tr>
+<tr class="memitem:ad21d71b73f062e68c473e41547d280e8 inherit pro_attribs_classPscf_1_1MixtureBase" id="r_ad21d71b73f062e68c473e41547d280e8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPscf_1_1MixtureBase.html#ad21d71b73f062e68c473e41547d280e8">vMonomer_</a></td></tr>
+<tr class="memdesc:ad21d71b73f062e68c473e41547d280e8 inherit pro_attribs_classPscf_1_1MixtureBase"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPscf_1_1Monomer.html" title="Descriptor for a monomer type.">Monomer</a> reference volume (set to 1.0 by default).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;class PT, class ST&gt;<br />
-class Pscf::MixtureTmpl&lt; PT, ST &gt;</div><p>Solvers for a mixture of polymer and solvent species. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class PT, class ST, typename WT = double&gt;<br />
+class Pscf::MixtureTmpl&lt; PT, ST, WT &gt;</div><p>Solvers for a mixture of polymer and solvent species. </p>
 
 <p class="definition">Definition at line <a class="el" href="MixtureTmpl_8h_source.html#l00026">26</a> of file <a class="el" href="MixtureTmpl_8h_source.html">MixtureTmpl.h</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
-<a id="ae710da51a26c3dee128abf9c1cec4c70" name="ae710da51a26c3dee128abf9c1cec4c70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae710da51a26c3dee128abf9c1cec4c70">&#9670;&#160;</a></span>SolventT</h2>
+<a id="a41ee0c37adee849e200a3ea0cb243f24" name="a41ee0c37adee849e200a3ea0cb243f24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41ee0c37adee849e200a3ea0cb243f24">&#9670;&#160;</a></span>SolventT</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class PT, class ST&gt; </div>
+template&lt;class PT, class ST, typename WT = double&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST &gt;::SolventT = ST</td>
+          <td class="memname">using <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST, WT &gt;::SolventT = ST</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -395,16 +407,16 @@ template&lt;class PT, class ST&gt; </div>
 
 </div>
 </div>
-<a id="a616bc7ba644690cdad5507edc2969f74" name="a616bc7ba644690cdad5507edc2969f74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a616bc7ba644690cdad5507edc2969f74">&#9670;&#160;</a></span>PolymerT</h2>
+<a id="a4839c6b17334fe302ea10d41d24af36f" name="a4839c6b17334fe302ea10d41d24af36f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4839c6b17334fe302ea10d41d24af36f">&#9670;&#160;</a></span>PolymerT</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class PT, class ST&gt; </div>
+template&lt;class PT, class ST, typename WT = double&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST &gt;::PolymerT = PT</td>
+          <td class="memname">using <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST, WT &gt;::PolymerT = PT</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -415,69 +427,111 @@ template&lt;class PT, class ST&gt; </div>
 
 </div>
 </div>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a95c2f31b239dacdd15c4045898c5de22" name="a95c2f31b239dacdd15c4045898c5de22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95c2f31b239dacdd15c4045898c5de22">&#9670;&#160;</a></span>MixtureTmpl()</h2>
+<a id="adeb10b57472601e9c9d33e8ddb726a8d" name="adeb10b57472601e9c9d33e8ddb726a8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeb10b57472601e9c9d33e8ddb726a8d">&#9670;&#160;</a></span>MixtureBaseT</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class PT, class ST&gt; </div>
+template&lt;class PT, class ST, typename WT = double&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST &gt;::MixtureTmpl </td>
+          <td class="memname">using <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST, WT &gt;::MixtureBaseT = <a class="el" href="classPscf_1_1MixtureBase.html">MixtureBase</a>&lt;WT&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Alias for base class. </p>
+
+<p class="definition">Definition at line <a class="el" href="MixtureTmpl_8h_source.html#l00130">130</a> of file <a class="el" href="MixtureTmpl_8h_source.html">MixtureTmpl.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a388d2ee69ab300f2d4ef25c7119f4e00" name="a388d2ee69ab300f2d4ef25c7119f4e00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a388d2ee69ab300f2d4ef25c7119f4e00">&#9670;&#160;</a></span>MixtureTmpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class PT, class ST, typename WT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST, WT &gt;::MixtureTmpl </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Constructor. </p>
 
 <p class="definition">Definition at line <a class="el" href="MixtureTmpl_8tpp_source.html#l00020">20</a> of file <a class="el" href="MixtureTmpl_8tpp_source.html">MixtureTmpl.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="MixtureBase_8cpp_source.html#l00018">Pscf::MixtureBase::MixtureBase()</a>, and <a class="el" href="ParamComposite_8cpp_source.html#l00023">Util::ParamComposite::ParamComposite()</a>.</p>
+<p class="reference">References <a class="el" href="classPscf_1_1MixtureBase.html#a4b0f399b3e0f7bf471574d730633f92f">Pscf::MixtureBase&lt; double &gt;::MixtureBase()</a>, and <a class="el" href="ParamComposite_8cpp_source.html#l00023">Util::ParamComposite::ParamComposite()</a>.</p>
 
 </div>
 </div>
-<a id="a6326edbb0056ed7bfb760a193fe9392c" name="a6326edbb0056ed7bfb760a193fe9392c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6326edbb0056ed7bfb760a193fe9392c">&#9670;&#160;</a></span>~MixtureTmpl()</h2>
+<a id="af77834e4da47491c83bb9b4d7f105c42" name="af77834e4da47491c83bb9b4d7f105c42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af77834e4da47491c83bb9b4d7f105c42">&#9670;&#160;</a></span>~MixtureTmpl()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class PT, class ST&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST &gt;::~<a class="el" href="classPscf_1_1MixtureTmpl.html">MixtureTmpl</a> </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Destructor. </p>
-
-<p class="definition">Definition at line <a class="el" href="MixtureTmpl_8tpp_source.html#l00031">31</a> of file <a class="el" href="MixtureTmpl_8tpp_source.html">MixtureTmpl.tpp</a>.</p>
-
-</div>
-</div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a573ad6cc4afc7a187a10a94bcb213f88" name="a573ad6cc4afc7a187a10a94bcb213f88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a573ad6cc4afc7a187a10a94bcb213f88">&#9670;&#160;</a></span>readParameters()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class PT, class ST&gt; </div>
+template&lt;class PT, class ST, typename WT = double&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST &gt;::readParameters </td>
+          <td class="memname"><a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST, WT &gt;::~<a class="el" href="classPscf_1_1MixtureTmpl.html">MixtureTmpl</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a3db66b6651166429883cbff696aafb7a" name="a3db66b6651166429883cbff696aafb7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3db66b6651166429883cbff696aafb7a">&#9670;&#160;</a></span>readParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class PT, class ST, typename WT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST, WT &gt;::readParameters </td>
           <td>(</td>
           <td class="paramtype">std::istream &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span></td><td>)</td>
           <td></td>
@@ -485,7 +539,7 @@ template&lt;class PT, class ST&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -500,27 +554,29 @@ template&lt;class PT, class ST&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classUtil_1_1ParamComposite.html#a172a3a656b5829c8d758424ad09a22a6">Util::ParamComposite</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPscf_1_1Prdc_1_1MixturePrdc.html#a11f14b0f0537f35fe2ba0fdae0bfb858">Pscf::Prdc::MixturePrdc&lt; D, PT, ST, TT &gt;</a>, <a class="el" href="classPscf_1_1Prdc_1_1MixturePrdc.html#a11f14b0f0537f35fe2ba0fdae0bfb858">Pscf::Prdc::MixturePrdc&lt; D, Polymer&lt; D &gt;, Solvent&lt; D &gt;, Types&lt; D &gt; &gt;</a>, <a class="el" href="classPscf_1_1R1d_1_1Mixture.html#a75210d76031336866c3405146fdc586f">Pscf::R1d::Mixture</a>, and <a class="el" href="classPscf_1_1Rpg_1_1Mixture.html#a2103242537ebf911e2bf4db38b36db79">Pscf::Rpg::Mixture&lt; D &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classPscf_1_1R1d_1_1Mixture.html#a75210d76031336866c3405146fdc586f">Pscf::R1d::Mixture</a>, <a class="el" href="classPscf_1_1Rp_1_1Mixture.html#a0debd47341bbb87c797d277124964cef">Pscf::Rp::Mixture&lt; D, T &gt;</a>, <a class="el" href="classPscf_1_1Rp_1_1Mixture.html#a0debd47341bbb87c797d277124964cef">Pscf::Rp::Mixture&lt; D &gt;</a>, <a class="el" href="classPscf_1_1Rp_1_1Mixture.html#a0debd47341bbb87c797d277124964cef">Pscf::Rp::Mixture&lt; D, Types&lt; D &gt; &gt;</a>, and <a class="el" href="classPscf_1_1Rpg_1_1Mixture.html#a2103242537ebf911e2bf4db38b36db79">Pscf::Rpg::Mixture&lt; D &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="MixtureTmpl_8tpp_source.html#l00058">58</a> of file <a class="el" href="MixtureTmpl_8tpp_source.html">MixtureTmpl.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MixtureTmpl_8tpp_source.html#l00053">53</a> of file <a class="el" href="MixtureTmpl_8tpp_source.html">MixtureTmpl.tpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MixturePrdc_8tpp_source.html#l00052">Pscf::Prdc::MixturePrdc&lt; D, PT, ST, TT &gt;::readParameters()</a>, and <a class="el" href="r1d_2solvers_2Mixture_8cpp_source.html#l00043">Pscf::R1d::Mixture::readParameters()</a>.</p>
+<p class="reference">References <a class="el" href="MixtureBase_8h_source.html#l00157">Pscf::MixtureBase&lt; double &gt;::monomers_</a>, <a class="el" href="MixtureBase_8h_source.html#l00162">Pscf::MixtureBase&lt; double &gt;::nMonomer_</a>, <a class="el" href="ParamComposite_8h_source.html#l01248">Util::ParamComposite::read()</a>, and <a class="el" href="ParamComposite_8h_source.html#l01400">Util::ParamComposite::readDArray()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="r1d_2solvers_2Mixture_8cpp_source.html#l00043">Pscf::R1d::Mixture::readParameters()</a>, and <a class="el" href="rp_2solvers_2Mixture_8tpp_source.html#l00055">Pscf::Rp::Mixture&lt; D, T &gt;::readParameters()</a>.</p>
 
 </div>
 </div>
-<a id="a82065970af9741682735874205e121af" name="a82065970af9741682735874205e121af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82065970af9741682735874205e121af">&#9670;&#160;</a></span>polymer() <span class="overload">[1/2]</span></h2>
+<a id="a84bfd76de615bcaadf9d63b76b3f3833" name="a84bfd76de615bcaadf9d63b76b3f3833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84bfd76de615bcaadf9d63b76b3f3833">&#9670;&#160;</a></span>polymer() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class PT, class ST&gt; </div>
+template&lt;class PT, class ST, typename WT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">PT &amp; <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST &gt;::polymer </td>
+          <td class="memname">PT &amp; <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST, WT &gt;::polymer </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
           <td></td>
@@ -541,27 +597,27 @@ template&lt;class PT, class ST&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="MixtureTmpl_8h_source.html#l00154">154</a> of file <a class="el" href="MixtureTmpl_8h_source.html">MixtureTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MixtureTmpl_8h_source.html#l00161">161</a> of file <a class="el" href="MixtureTmpl_8h_source.html">MixtureTmpl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="MixtureBase_8h_source.html#l00167">Pscf::MixtureBase&lt; double &gt;::nPolymer_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00057">Pscf::R1d::HomogeneousComparison::compute()</a>, <a class="el" href="r1d_2System_8cpp_source.html#l00511">Pscf::R1d::System::computeFreeEnergy()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00120">Pscf::R1d::HomogeneousComparison::output()</a>, <a class="el" href="BinaryRelaxIterator_8cpp_source.html#l00134">Pscf::R1d::BinaryRelaxIterator::solve()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00227">Pscf::R1d::NrIterator::solve()</a>, <a class="el" href="r1d_2misc_2FieldIo_8cpp_source.html#l00169">Pscf::R1d::FieldIo::writeBlockCFields()</a>, and <a class="el" href="r1d_2misc_2FieldIo_8cpp_source.html#l00217">Pscf::R1d::FieldIo::writeVertexQ()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HomogeneousComparison_8cpp_source.html#l00073">Pscf::R1d::HomogeneousComparison::compute()</a>, <a class="el" href="r1d_2system_2System_8cpp_source.html#l00505">Pscf::R1d::System::computeFreeEnergy()</a>, <a class="el" href="HomogeneousComparison_8cpp_source.html#l00146">Pscf::R1d::HomogeneousComparison::output()</a>, <a class="el" href="BinaryRelaxIterator_8cpp_source.html#l00135">Pscf::R1d::BinaryRelaxIterator::solve()</a>, <a class="el" href="NrIterator_8cpp_source.html#l00235">Pscf::R1d::NrIterator::solve()</a>, <a class="el" href="r1d_2field_2FieldIo_8cpp_source.html#l00168">Pscf::R1d::FieldIo::writeBlockCFields()</a>, and <a class="el" href="r1d_2field_2FieldIo_8cpp_source.html#l00216">Pscf::R1d::FieldIo::writeVertexQ()</a>.</p>
 
 </div>
 </div>
-<a id="a217a86a2de5712edeae8b9bffc221c0e" name="a217a86a2de5712edeae8b9bffc221c0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a217a86a2de5712edeae8b9bffc221c0e">&#9670;&#160;</a></span>polymer() <span class="overload">[2/2]</span></h2>
+<a id="a66ef7ae78ae64f1c39c64cfa94ea6173" name="a66ef7ae78ae64f1c39c64cfa94ea6173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66ef7ae78ae64f1c39c64cfa94ea6173">&#9670;&#160;</a></span>polymer() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class PT, class ST&gt; </div>
+template&lt;class PT, class ST, typename WT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">PT const  &amp; <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST &gt;::polymer </td>
+          <td class="memname">PT const  &amp; <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST, WT &gt;::polymer </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
           <td> const</td>
@@ -582,25 +638,25 @@ template&lt;class PT, class ST&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="MixtureTmpl_8h_source.html#l00161">161</a> of file <a class="el" href="MixtureTmpl_8h_source.html">MixtureTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MixtureTmpl_8h_source.html#l00168">168</a> of file <a class="el" href="MixtureTmpl_8h_source.html">MixtureTmpl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="MixtureBase_8h_source.html#l00167">Pscf::MixtureBase&lt; double &gt;::nPolymer_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
-<a id="a31dceed4752d4033112b3a5c8c89f1c6" name="a31dceed4752d4033112b3a5c8c89f1c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31dceed4752d4033112b3a5c8c89f1c6">&#9670;&#160;</a></span>polymerSpecies()</h2>
+<a id="a85ff10cbc0b6058bde94f210102497d5" name="a85ff10cbc0b6058bde94f210102497d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85ff10cbc0b6058bde94f210102497d5">&#9670;&#160;</a></span>polymerSpecies()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class PT, class ST&gt; </div>
+template&lt;class PT, class ST, typename WT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1PolymerSpecies.html">PolymerSpecies</a> const  &amp; <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST &gt;::polymerSpecies </td>
+          <td class="memname"><a class="el" href="classPscf_1_1PolymerSpecies.html">PolymerSpecies</a>&lt; WT &gt; const  &amp; <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST, WT &gt;::polymerSpecies </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
           <td> const</td>
@@ -622,29 +678,29 @@ template&lt;class PT, class ST&gt; </div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classPscf_1_1MixtureBase.html#a49c04cd87600b1817325f4652663e0b2">Pscf::MixtureBase</a>.</p>
+<p>Implements <a class="el" href="classPscf_1_1MixtureBase.html#a2cd5e6549d0d49872b5c95b3d9142e84">Pscf::MixtureBase&lt; double &gt;</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPscf_1_1Prdc_1_1MixturePrdc.html#a31dceed4752d4033112b3a5c8c89f1c6">Pscf::Prdc::MixturePrdc&lt; D, PT, ST, TT &gt;</a>, and <a class="el" href="classPscf_1_1Prdc_1_1MixturePrdc.html#a31dceed4752d4033112b3a5c8c89f1c6">Pscf::Prdc::MixturePrdc&lt; D, Polymer&lt; D &gt;, Solvent&lt; D &gt;, Types&lt; D &gt; &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classPscf_1_1Rp_1_1Mixture.html#ae2b418d64b86fab4d54c710db9e63dcc">Pscf::Rp::Mixture&lt; D, T &gt;</a>, <a class="el" href="classPscf_1_1Rp_1_1Mixture.html#ae2b418d64b86fab4d54c710db9e63dcc">Pscf::Rp::Mixture&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rp_1_1Mixture.html#ae2b418d64b86fab4d54c710db9e63dcc">Pscf::Rp::Mixture&lt; D, Types&lt; D &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="MixtureTmpl_8tpp_source.html#l00038">38</a> of file <a class="el" href="MixtureTmpl_8tpp_source.html">MixtureTmpl.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MixtureTmpl_8tpp_source.html#l00032">32</a> of file <a class="el" href="MixtureTmpl_8tpp_source.html">MixtureTmpl.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="MixtureBase_8h_source.html#l00167">Pscf::MixtureBase&lt; double &gt;::nPolymer_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
-<a id="a09b99a61b5fed739ed5074198af4c824" name="a09b99a61b5fed739ed5074198af4c824"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09b99a61b5fed739ed5074198af4c824">&#9670;&#160;</a></span>solvent() <span class="overload">[1/2]</span></h2>
+<a id="ac714c9df62b035a7513e79f921c8c70d" name="ac714c9df62b035a7513e79f921c8c70d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac714c9df62b035a7513e79f921c8c70d">&#9670;&#160;</a></span>solvent() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class PT, class ST&gt; </div>
+template&lt;class PT, class ST, typename WT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ST &amp; <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST &gt;::solvent </td>
+          <td class="memname">ST &amp; <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST, WT &gt;::solvent </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
           <td></td>
@@ -665,27 +721,27 @@ template&lt;class PT, class ST&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="MixtureTmpl_8h_source.html#l00168">168</a> of file <a class="el" href="MixtureTmpl_8h_source.html">MixtureTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MixtureTmpl_8h_source.html#l00175">175</a> of file <a class="el" href="MixtureTmpl_8h_source.html">MixtureTmpl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="MixtureBase_8h_source.html#l00172">Pscf::MixtureBase&lt; double &gt;::nSolvent_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="r1d_2System_8cpp_source.html#l00511">Pscf::R1d::System::computeFreeEnergy()</a>, and <a class="el" href="r1d_2misc_2FieldIo_8cpp_source.html#l00169">Pscf::R1d::FieldIo::writeBlockCFields()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="r1d_2system_2System_8cpp_source.html#l00505">Pscf::R1d::System::computeFreeEnergy()</a>, and <a class="el" href="r1d_2field_2FieldIo_8cpp_source.html#l00168">Pscf::R1d::FieldIo::writeBlockCFields()</a>.</p>
 
 </div>
 </div>
-<a id="acead55af6d8e6310888f20e2c696dd47" name="acead55af6d8e6310888f20e2c696dd47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acead55af6d8e6310888f20e2c696dd47">&#9670;&#160;</a></span>solvent() <span class="overload">[2/2]</span></h2>
+<a id="a285033da775af84a1681e756ad6762dc" name="a285033da775af84a1681e756ad6762dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a285033da775af84a1681e756ad6762dc">&#9670;&#160;</a></span>solvent() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class PT, class ST&gt; </div>
+template&lt;class PT, class ST, typename WT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ST const  &amp; <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST &gt;::solvent </td>
+          <td class="memname">ST const  &amp; <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST, WT &gt;::solvent </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
           <td> const</td>
@@ -706,25 +762,25 @@ template&lt;class PT, class ST&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="MixtureTmpl_8h_source.html#l00175">175</a> of file <a class="el" href="MixtureTmpl_8h_source.html">MixtureTmpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MixtureTmpl_8h_source.html#l00182">182</a> of file <a class="el" href="MixtureTmpl_8h_source.html">MixtureTmpl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="MixtureBase_8h_source.html#l00172">Pscf::MixtureBase&lt; double &gt;::nSolvent_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
-<a id="ab0a2be05784beba7797b55c0cc07868c" name="ab0a2be05784beba7797b55c0cc07868c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0a2be05784beba7797b55c0cc07868c">&#9670;&#160;</a></span>solventSpecies()</h2>
+<a id="a0922282bc94ad650f74eb94fc4bcbf2b" name="a0922282bc94ad650f74eb94fc4bcbf2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0922282bc94ad650f74eb94fc4bcbf2b">&#9670;&#160;</a></span>solventSpecies()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class PT, class ST&gt; </div>
+template&lt;class PT, class ST, typename WT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPscf_1_1SolventSpecies.html">SolventSpecies</a> const  &amp; <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST &gt;::solventSpecies </td>
+          <td class="memname"><a class="el" href="classPscf_1_1SolventSpecies.html">SolventSpecies</a>&lt; WT &gt; const  &amp; <a class="el" href="classPscf_1_1MixtureTmpl.html">Pscf::MixtureTmpl</a>&lt; PT, ST, WT &gt;::solventSpecies </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
           <td> const</td>
@@ -746,13 +802,13 @@ template&lt;class PT, class ST&gt; </div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classPscf_1_1MixtureBase.html#a0adb98dc4d6e934a61ba021c33a49b2e">Pscf::MixtureBase</a>.</p>
+<p>Implements <a class="el" href="classPscf_1_1MixtureBase.html#a1053eff0fb6bbe1107390f9369e7927c">Pscf::MixtureBase&lt; double &gt;</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPscf_1_1Prdc_1_1MixturePrdc.html#ab0a2be05784beba7797b55c0cc07868c">Pscf::Prdc::MixturePrdc&lt; D, PT, ST, TT &gt;</a>, and <a class="el" href="classPscf_1_1Prdc_1_1MixturePrdc.html#ab0a2be05784beba7797b55c0cc07868c">Pscf::Prdc::MixturePrdc&lt; D, Polymer&lt; D &gt;, Solvent&lt; D &gt;, Types&lt; D &gt; &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classPscf_1_1Rp_1_1Mixture.html#ae6b43fce270171ae3f5bd81487f6a9e1">Pscf::Rp::Mixture&lt; D, T &gt;</a>, <a class="el" href="classPscf_1_1Rp_1_1Mixture.html#ae6b43fce270171ae3f5bd81487f6a9e1">Pscf::Rp::Mixture&lt; D &gt;</a>, and <a class="el" href="classPscf_1_1Rp_1_1Mixture.html#ae6b43fce270171ae3f5bd81487f6a9e1">Pscf::Rp::Mixture&lt; D, Types&lt; D &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="MixtureTmpl_8tpp_source.html#l00048">48</a> of file <a class="el" href="MixtureTmpl_8tpp_source.html">MixtureTmpl.tpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MixtureTmpl_8tpp_source.html#l00043">43</a> of file <a class="el" href="MixtureTmpl_8tpp_source.html">MixtureTmpl.tpp</a>.</p>
 
-<p class="reference">References <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
+<p class="reference">References <a class="el" href="MixtureBase_8h_source.html#l00172">Pscf::MixtureBase&lt; double &gt;::nSolvent_</a>, and <a class="el" href="global_8h_source.html#l00068">UTIL_CHECK</a>.</p>
 
 </div>
 </div>
